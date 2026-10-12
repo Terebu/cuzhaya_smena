@@ -1,0 +1,339 @@
+[
+  {
+    "file": "days/prologue/01_ordinary.rpy",
+    "group_changes": []
+  },
+  {
+    "file": "days/prologue/02_seven_percent.rpy",
+    "group_changes": []
+  },
+  {
+    "file": "days/prologue/03_stranger.rpy",
+    "group_changes": []
+  },
+  {
+    "file": "days/prologue/04_instagram.rpy",
+    "group_changes": []
+  },
+  {
+    "file": "days/prologue/05_wrong_way.rpy",
+    "group_changes": []
+  },
+  {
+    "file": "days/prologue/06_last_stop.rpy",
+    "group_changes": []
+  },
+  {
+    "file": "days/prologue/07_summer.rpy",
+    "group_changes": []
+  },
+  {
+    "file": "days/day01/01_bus.rpy",
+    "group_changes": []
+  },
+  {
+    "file": "days/day01/02_recognition.rpy",
+    "group_changes": []
+  },
+  {
+    "file": "days/day01/03_reality.rpy",
+    "group_changes": []
+  },
+  {
+    "file": "days/day01/04_reflection.rpy",
+    "group_changes": []
+  },
+  {
+    "file": "days/day01/05_home.rpy",
+    "group_changes": []
+  },
+  {
+    "file": "days/day01/06_slavya.rpy",
+    "group_changes": [
+      17
+    ]
+  },
+  {
+    "file": "days/day01/07_uninvited.rpy",
+    "group_changes": []
+  },
+  {
+    "file": "days/day01/08_camp_walk.rpy",
+    "group_changes": [
+      7,
+      47,
+      84
+    ]
+  },
+  {
+    "file": "days/day01/09_counsellor.rpy",
+    "group_changes": [
+      57
+    ]
+  },
+  {
+    "file": "days/day01/10_soviet_home.rpy",
+    "group_changes": []
+  },
+  {
+    "file": "days/day01/11_state_machine.rpy",
+    "group_changes": [
+      11,
+      14,
+      55,
+      89
+    ]
+  },
+  {
+    "file": "days/day01/12_calculator.rpy",
+    "group_changes": [
+      11,
+      14,
+      103
+    ]
+  },
+  {
+    "file": "days/day01/13_uniform.rpy",
+    "group_changes": [
+      10
+    ]
+  },
+  {
+    "file": "days/day01/14_third_guest.rpy",
+    "group_changes": []
+  },
+  {
+    "file": "days/day01/15_two_newcomers.rpy",
+    "group_changes": []
+  },
+  {
+    "file": "days/day01/16_another_passenger.rpy",
+    "group_changes": []
+  },
+  {
+    "file": "days/day01/17_beyond_the_screen.rpy",
+    "group_changes": []
+  },
+  {
+    "file": "days/day01/18_anachronism.rpy",
+    "group_changes": []
+  },
+  {
+    "file": "days/day01/19_dining_hall.rpy",
+    "group_changes": [
+      45,
+      48,
+      60,
+      103,
+      106
+    ]
+  },
+  {
+    "file": "days/day01/20_comrade_semen.rpy",
+    "group_changes": [
+      56,
+      67
+    ]
+  },
+  {
+    "file": "days/day01/part05/21_not_a_simple_question.rpy",
+    "group_changes": [
+      23
+    ]
+  },
+  {
+    "file": "days/day01/part05/22_similar_journey.rpy",
+    "group_changes": []
+  },
+  {
+    "file": "days/day01/part05/23_familiar_story.rpy",
+    "group_changes": []
+  },
+  {
+    "file": "days/day01/part05/24_working_group.rpy",
+    "group_changes": [
+      38,
+      61
+    ]
+  },
+  {
+    "file": "days/day01/part06/25_after_lunch.rpy",
+    "group_changes": [
+      51
+    ]
+  },
+  {
+    "file": "days/day01/part06/26_new_home_path.rpy",
+    "group_changes": []
+  },
+  {
+    "file": "days/day01/part06/27_house_for_two.rpy",
+    "group_changes": [
+      93
+    ]
+  },
+  {
+    "file": "days/day01/part06/28_without_witnesses.rpy",
+    "group_changes": []
+  },
+  {
+    "file": "days/day01/part06/29_observation_log.rpy",
+    "group_changes": []
+  },
+  {
+    "file": "days/day01/part06/30_at_the_door.rpy",
+    "group_changes": []
+  },
+  {
+    "file": "days/day01/part07/31_visitors.rpy",
+    "group_changes": [
+      6,
+      13,
+      90,
+      93
+    ]
+  },
+  {
+    "file": "days/day01/part07/32_an_idea.rpy",
+    "group_changes": []
+  },
+  {
+    "file": "days/day01/part07/33_clubs_path.rpy",
+    "group_changes": [
+      52
+    ]
+  },
+  {
+    "file": "days/day01/part07/34_engineers.rpy",
+    "group_changes": [
+      6,
+      13
+    ]
+  },
+  {
+    "file": "days/day01/part07/35_calculator.rpy",
+    "group_changes": []
+  },
+  {
+    "file": "days/day01/part07/36_forty_six_years.rpy",
+    "group_changes": []
+  },
+  {
+    "file": "days/day01/part07/37_transistors.rpy",
+    "group_changes": []
+  },
+  {
+    "file": "days/day01/part07/38_five_volts.rpy",
+    "group_changes": []
+  },
+  {
+    "file": "days/day01/part07/39_future_in_pocket.rpy",
+    "group_changes": []
+  },
+  {
+    "file": "days/day01/part08/40_after_clubs.rpy",
+    "group_changes": []
+  },
+  {
+    "file": "days/day01/part08/41_confession.rpy",
+    "group_changes": []
+  },
+  {
+    "file": "days/day01/part08/42_why_you.rpy",
+    "group_changes": []
+  },
+  {
+    "file": "days/day01/part08/43_square.rpy",
+    "group_changes": [
+      48
+    ]
+  },
+  {
+    "file": "days/day01/part08/44_independent_opinion.rpy",
+    "group_changes": []
+  },
+  {
+    "file": "days/day01/part08/45_for_now.rpy",
+    "group_changes": [
+      36
+    ]
+  },
+  {
+    "file": "days/day01/part09/46_resemblance.rpy",
+    "group_changes": [
+      49
+    ]
+  },
+  {
+    "file": "days/day01/part09/47_choice.rpy",
+    "group_changes": []
+  },
+  {
+    "file": "days/day01/part09/48_a_meet.rpy",
+    "group_changes": [
+      109,
+      148,
+      170
+    ]
+  },
+  {
+    "file": "days/day01/part09/48_b_pass.rpy",
+    "group_changes": [
+      6,
+      20
+    ]
+  },
+  {
+    "file": "days/day01/part09/49_together.rpy",
+    "group_changes": []
+  },
+  {
+    "file": "days/day01/part09/50_no_saves.rpy",
+    "group_changes": []
+  },
+  {
+    "file": "days/day01/part09/51_dinner_time.rpy",
+    "group_changes": []
+  },
+  {
+    "file": "days/day01/part10/52_after_dinner.rpy",
+    "group_changes": []
+  },
+  {
+    "file": "days/day01/part10/53_library_walk.rpy",
+    "group_changes": [
+      52,
+      86,
+      95,
+      102
+    ]
+  },
+  {
+    "file": "days/day01/part10/54_librarian.rpy",
+    "group_changes": []
+  },
+  {
+    "file": "days/day01/part10/55_a_help.rpy",
+    "group_changes": []
+  },
+  {
+    "file": "days/day01/part10/55_b_search_alone.rpy",
+    "group_changes": []
+  },
+  {
+    "file": "days/day01/part10/55_choice.rpy",
+    "group_changes": []
+  },
+  {
+    "file": "days/day01/part10/56_old_books.rpy",
+    "group_changes": []
+  },
+  {
+    "file": "days/day01/part10/57_slip_of_tongue.rpy",
+    "group_changes": []
+  },
+  {
+    "file": "days/day01/part10/58_truth.rpy",
+    "group_changes": []
+  }
+]

@@ -1,0 +1,2 @@
+PASS: old part-nine save, Lena state 2, Zhenya search, scores 0/0, both save/load checkpoints and unfinished day.
+

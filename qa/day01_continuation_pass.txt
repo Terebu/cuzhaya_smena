@@ -1,0 +1,1 @@
+PASS: part-4 conversation continues through parts 5/6; home BGs, private talk, music silence, door knock/open, new sprites, save/load and open day.

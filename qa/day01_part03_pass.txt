@@ -1,0 +1,1 @@
+PASS: scenes 10-14, mirror CG, winter-to-pioneer change, horn on sound channel, open day, save/load.

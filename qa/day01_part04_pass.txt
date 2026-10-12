@@ -1,0 +1,1 @@
+PASS: scenes 15-20, updated Darya, own Semyon, cameos, original backgrounds/audio, open day, save/load.

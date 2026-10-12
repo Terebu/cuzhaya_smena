@@ -1,0 +1,1 @@
+PASS: preserved real part-six save loads with new defaults and resumes through all nine part-seven scenes.

@@ -1,0 +1,342 @@
+[
+  {
+    "number": 1,
+    "pose": "neutral",
+    "path": "mods/chuzaya_smena/sp/semen/semen_pioneer_neutral.png",
+    "original_name": "Изображение ChatGPT 11 окт. 2026 г., 01_26_21-1.png",
+    "sha256": "6d91ff62a520b1de8f1cf060123a86d46317f11430b5e2ea5560ad5effd011d0",
+    "size": [
+      941,
+      1672
+    ],
+    "bbox": [
+      76,
+      0,
+      927,
+      1672
+    ]
+  },
+  {
+    "number": 2,
+    "pose": "relaxed",
+    "path": "mods/chuzaya_smena/sp/semen/semen_pioneer_relaxed.png",
+    "original_name": "Изображение ChatGPT 11 окт. 2026 г., 01_26_22-2.png",
+    "sha256": "eb3498871f30b6bc6e359ef23684f91e1479d9a3044545142b0fe5397cd2e800",
+    "size": [
+      941,
+      1672
+    ],
+    "bbox": [
+      25,
+      0,
+      919,
+      1672
+    ]
+  },
+  {
+    "number": 3,
+    "pose": "arms_crossed",
+    "path": "mods/chuzaya_smena/sp/semen/semen_pioneer_arms_crossed.png",
+    "original_name": "Изображение ChatGPT 11 окт. 2026 г., 01_26_23-3.png",
+    "sha256": "d1d5bc08e744213cb705a027cb94c4e1600d0e52176bab45d98a27643da3294e",
+    "size": [
+      941,
+      1672
+    ],
+    "bbox": [
+      50,
+      0,
+      919,
+      1656
+    ]
+  },
+  {
+    "number": 4,
+    "pose": "wave",
+    "path": "mods/chuzaya_smena/sp/semen/semen_pioneer_wave.png",
+    "original_name": "Изображение ChatGPT 11 окт. 2026 г., 01_26_24-4.png",
+    "sha256": "dab1904c5425fccabaabfef49e65c9954306c78eba7be92152fc0f7029f4f66e",
+    "size": [
+      941,
+      1672
+    ],
+    "bbox": [
+      0,
+      0,
+      937,
+      1672
+    ]
+  },
+  {
+    "number": 5,
+    "pose": "awkward",
+    "path": "mods/chuzaya_smena/sp/semen/semen_pioneer_awkward.png",
+    "original_name": "Изображение ChatGPT 11 окт. 2026 г., 01_26_24-5.png",
+    "sha256": "2cae16314e3263500b58a79966053b9ab645012b3cba692c66628674bc3e94f7",
+    "size": [
+      941,
+      1672
+    ],
+    "bbox": [
+      50,
+      0,
+      919,
+      1672
+    ]
+  },
+  {
+    "number": 6,
+    "pose": "surprised",
+    "path": "mods/chuzaya_smena/sp/semen/semen_pioneer_surprised.png",
+    "original_name": "Изображение ChatGPT 11 окт. 2026 г., 01_26_25-6.png",
+    "sha256": "da1666842ee65da146cd08d3787ade1d4cf3a61277073e320486cb62d9e86827",
+    "size": [
+      941,
+      1672
+    ],
+    "bbox": [
+      33,
+      5,
+      927,
+      1672
+    ]
+  },
+  {
+    "number": 7,
+    "pose": "serious",
+    "path": "mods/chuzaya_smena/sp/semen/semen_pioneer_serious.png",
+    "original_name": "Изображение ChatGPT 11 окт. 2026 г., 01_26_26-7.png",
+    "sha256": "84dcd94e4b77d0daa943f8ca0480e06b282589bea774a229c5a6b7588f76ec38",
+    "size": [
+      941,
+      1672
+    ],
+    "bbox": [
+      0,
+      0,
+      917,
+      1662
+    ]
+  },
+  {
+    "number": 8,
+    "pose": "confident",
+    "path": "mods/chuzaya_smena/sp/semen/semen_pioneer_confident.png",
+    "original_name": "Изображение ChatGPT 11 окт. 2026 г., 01_26_27-8.png",
+    "sha256": "6d556b09221eec5156c7974ce655b9b5dd7d13a90a989b124a1a1fd05778fef6",
+    "size": [
+      941,
+      1672
+    ],
+    "bbox": [
+      66,
+      0,
+      927,
+      1672
+    ]
+  },
+  {
+    "number": 9,
+    "pose": "shy",
+    "path": "mods/chuzaya_smena/sp/semen/semen_pioneer_shy.png",
+    "original_name": "Изображение ChatGPT 11 окт. 2026 г., 01_26_28-9.png",
+    "sha256": "3752d54a2cd8119c9cebcb71e961ffa390f94dad26eb29b1e6e4938d523e45bc",
+    "size": [
+      941,
+      1672
+    ],
+    "bbox": [
+      25,
+      0,
+      905,
+      1655
+    ]
+  },
+  {
+    "number": 10,
+    "pose": "thinking",
+    "path": "mods/chuzaya_smena/sp/semen/semen_pioneer_thinking.png",
+    "original_name": "Изображение ChatGPT 11 окт. 2026 г., 01_26_29-10.png",
+    "sha256": "f3a62d579c4897662ac058bc9ecd291917338f2915ce48d02e72158b03da9424",
+    "size": [
+      941,
+      1672
+    ],
+    "bbox": [
+      0,
+      0,
+      923,
+      1672
+    ]
+  },
+  {
+    "number": 11,
+    "pose": "tie_touch",
+    "path": "mods/chuzaya_smena/sp/semen/semen_pioneer_tie_touch.png",
+    "original_name": "Изображение ChatGPT 11 окт. 2026 г., 15_41_00-1.png",
+    "sha256": "0c2d4699efcc4e905e3fdc7780c0406ea1aabdb1e04f0a6fb4c8488bb30bea1b",
+    "size": [
+      941,
+      1672
+    ],
+    "bbox": [
+      0,
+      7,
+      940,
+      1662
+    ]
+  },
+  {
+    "number": 12,
+    "pose": "thinking_alt",
+    "path": "mods/chuzaya_smena/sp/semen/semen_pioneer_thinking_alt.png",
+    "original_name": "Изображение ChatGPT 11 окт. 2026 г., 15_41_01-2.png",
+    "sha256": "4a9ed678083688c0b26867f1b44ab2fb565516e7df374a239c00cd2eaaf4d8ac",
+    "size": [
+      941,
+      1672
+    ],
+    "bbox": [
+      33,
+      0,
+      921,
+      1672
+    ]
+  },
+  {
+    "number": 13,
+    "pose": "startled",
+    "path": "mods/chuzaya_smena/sp/semen/semen_pioneer_startled.png",
+    "original_name": "Изображение ChatGPT 11 окт. 2026 г., 15_41_02-3.png",
+    "sha256": "dc824aeb1566559abe067bde7430fc6dac4290154a1f997ea74f96cd42a0b0bc",
+    "size": [
+      941,
+      1672
+    ],
+    "bbox": [
+      0,
+      1,
+      905,
+      1672
+    ]
+  },
+  {
+    "number": 14,
+    "pose": "explaining",
+    "path": "mods/chuzaya_smena/sp/semen/semen_pioneer_explaining.png",
+    "original_name": "Изображение ChatGPT 11 окт. 2026 г., 15_41_02-4.png",
+    "sha256": "3b930f335fdacdc24ea5b18c4786f5e2901f130205ed493a157b01c78ff51c43",
+    "size": [
+      941,
+      1672
+    ],
+    "bbox": [
+      0,
+      5,
+      935,
+      1660
+    ]
+  },
+  {
+    "number": 15,
+    "pose": "pointing",
+    "path": "mods/chuzaya_smena/sp/semen/semen_pioneer_pointing.png",
+    "original_name": "Изображение ChatGPT 11 окт. 2026 г., 15_41_03-5.png",
+    "sha256": "4c444638434913c5bc18fcafa3bc21f251f05588ff4954eb3722ab82a6a4899b",
+    "size": [
+      941,
+      1672
+    ],
+    "bbox": [
+      41,
+      0,
+      925,
+      1672
+    ]
+  },
+  {
+    "number": 16,
+    "pose": "smile",
+    "path": "mods/chuzaya_smena/sp/semen/semen_pioneer_smile.png",
+    "original_name": "Изображение ChatGPT 11 окт. 2026 г., 15_41_04-6.png",
+    "sha256": "2ff46014ed05831f35c0ec7668c88c557652b437124cc709736464a97c35419a",
+    "size": [
+      941,
+      1672
+    ],
+    "bbox": [
+      37,
+      1,
+      911,
+      1656
+    ]
+  },
+  {
+    "number": 17,
+    "pose": "peace",
+    "path": "mods/chuzaya_smena/sp/semen/semen_pioneer_peace.png",
+    "original_name": "Изображение ChatGPT 11 окт. 2026 г., 15_41_04-7.png",
+    "sha256": "8fd7b8420ee00a5d66f9cc24909e586ef1dff4ec11323a44ba0c3f3b7016d09b",
+    "size": [
+      941,
+      1672
+    ],
+    "bbox": [
+      0,
+      1,
+      927,
+      1656
+    ]
+  },
+  {
+    "number": 18,
+    "pose": "thinking_down",
+    "path": "mods/chuzaya_smena/sp/semen/semen_pioneer_thinking_down.png",
+    "original_name": "Изображение ChatGPT 11 окт. 2026 г., 15_41_05-8.png",
+    "sha256": "d2343c7a0a29ea70ea3b9ee0bbdc8660c4e814074acf0d2a958490cd65d78c75",
+    "size": [
+      941,
+      1672
+    ],
+    "bbox": [
+      50,
+      1,
+      921,
+      1660
+    ]
+  },
+  {
+    "number": 19,
+    "pose": "awkward_alt",
+    "path": "mods/chuzaya_smena/sp/semen/semen_pioneer_awkward_alt.png",
+    "original_name": "Изображение ChatGPT 11 окт. 2026 г., 15_41_06-9.png",
+    "sha256": "f87a421f0bc1383bceda42a919eaffd2807d4734a0c9eae23a930a645bfd688d",
+    "size": [
+      941,
+      1672
+    ],
+    "bbox": [
+      0,
+      0,
+      919,
+      1672
+    ]
+  },
+  {
+    "number": 20,
+    "pose": "grateful",
+    "path": "mods/chuzaya_smena/sp/semen/semen_pioneer_grateful.png",
+    "original_name": "Изображение ChatGPT 11 окт. 2026 г., 15_41_07-10.png",
+    "sha256": "92725fb8ffa161eabe01a417fd4dc5ddfde4e0424021168ac3d5e3a4fd63a62a",
+    "size": [
+      941,
+      1672
+    ],
+    "bbox": [
+      23,
+      0,
+      919,
+      1672
+    ]
+  }
+]

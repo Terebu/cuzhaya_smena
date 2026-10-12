@@ -1,0 +1,1 @@
+PASS: real pre-part-eight save, scenes 40-45, sunset actors/UI, music silence, gradual confession, Semyon/exit, open day and save/load.

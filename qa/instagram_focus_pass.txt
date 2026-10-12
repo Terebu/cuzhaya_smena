@@ -1,0 +1,1 @@
+PASS: gallery-only focus, Darya hidden across posts and save/load, one return after closing gallery.

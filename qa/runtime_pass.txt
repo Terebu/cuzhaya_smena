@@ -1,0 +1,1 @@
+PASS: prologue and day 1 parts 1-10 at 1280x720; history/save/load; music silence; actors; both friendship choices; day remains open.

@@ -1,0 +1,1 @@
+PASS: house pair, dining pair, clubs group; source scene bodies, group Darya visible, calibrated scales and positions.

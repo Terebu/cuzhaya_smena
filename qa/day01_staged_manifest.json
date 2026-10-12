@@ -1,0 +1,1727 @@
+[
+  {
+    "scene": 1,
+    "speaker": "cs_narrator",
+    "text": "Я ещё секунд десять смотрела на вывеску."
+  },
+  {
+    "scene": 1,
+    "speaker": "cs_narrator",
+    "text": "{b}«СОВЁНОК».{/b}"
+  },
+  {
+    "scene": 1,
+    "speaker": "cs_narrator",
+    "text": "Затем перевела взгляд на летнее небо."
+  },
+  {
+    "scene": 1,
+    "speaker": "cs_narrator",
+    "text": "На Дарью."
+  },
+  {
+    "scene": 1,
+    "speaker": "cs_narrator",
+    "text": "И снова на вывеску."
+  },
+  {
+    "scene": 1,
+    "speaker": "cs_ls",
+    "text": "Ну… Кажется, четыреста десятый немного отклонился от маршрута."
+  },
+  {
+    "scene": 1,
+    "speaker": "cs_da",
+    "text": "Насколько немного?"
+  },
+  {
+    "scene": 1,
+    "speaker": "cs_narrator",
+    "text": "Я расстегнула куртку."
+  },
+  {
+    "scene": 1,
+    "speaker": "cs_narrator",
+    "text": "Под ней был свитер. Под свитером — ещё один слой одежды."
+  },
+  {
+    "scene": 1,
+    "speaker": "cs_narrator",
+    "text": "Всё вполне оправданно."
+  },
+  {
+    "scene": 1,
+    "speaker": "cs_narrator",
+    "text": "Двадцать минут назад на улице стояла зима."
+  },
+  {
+    "scene": 1,
+    "speaker": "cs_ls",
+    "text": "Для начала я выехала за продуктами в январе. А приехала, судя по всему, в июль."
+  },
+  {
+    "scene": 1,
+    "speaker": "cs_ls",
+    "text": "Неплохая транспортная реформа."
+  },
+  {
+    "scene": 1,
+    "speaker": "cs_narrator",
+    "text": "Я высунула руку в открытое окно."
+  },
+  {
+    "scene": 1,
+    "speaker": "cs_narrator",
+    "text": "Жара была настоящей."
+  },
+  {
+    "scene": 1,
+    "speaker": "cs_narrator",
+    "text": "Не неисправное отопление."
+  },
+  {
+    "scene": 1,
+    "speaker": "cs_narrator",
+    "text": "Не остаточное ощущение после сна."
+  },
+  {
+    "scene": 1,
+    "speaker": "cs_narrator",
+    "text": "Тёплый воздух, запах нагретой земли, травы и хвои."
+  },
+  {
+    "scene": 1,
+    "speaker": "cs_narrator",
+    "text": "Я медленно убрала руку."
+  },
+  {
+    "scene": 1,
+    "speaker": "cs_ls",
+    "text": "Великолепно. Осталось выяснить, где принимают жалобы на перевозчика."
+  },
+  {
+    "scene": 1,
+    "speaker": "cs_narrator",
+    "text": "Дарья молчала."
+  },
+  {
+    "scene": 1,
+    "speaker": "cs_narrator",
+    "text": "Я повернулась к ней."
+  },
+  {
+    "scene": 1,
+    "speaker": "cs_ls",
+    "text": "Что?"
+  },
+  {
+    "scene": 1,
+    "speaker": "cs_da",
+    "text": "Просто пытаюсь понять, ты всегда настолько спокойно реагируешь на невозможное?"
+  },
+  {
+    "scene": 1,
+    "speaker": "cs_ls",
+    "text": "Нет. Обычно я хотя бы понимаю, что происходит."
+  },
+  {
+    "scene": 1,
+    "speaker": "cs_narrator",
+    "text": "Я стянула куртку с плеч."
+  },
+  {
+    "scene": 1,
+    "speaker": "cs_ls",
+    "text": "Сегодня решила разнообразить программу."
+  },
+  {
+    "scene": 1,
+    "speaker": "cs_narrator",
+    "text": "Автобус был пуст."
+  },
+  {
+    "scene": 1,
+    "speaker": "cs_narrator",
+    "text": "Совершенно."
+  },
+  {
+    "scene": 1,
+    "speaker": "cs_narrator",
+    "text": "Ни водителя, ни пассажиров."
+  },
+  {
+    "scene": 1,
+    "speaker": "cs_narrator",
+    "text": "Только мы вдвоём."
+  },
+  {
+    "scene": 1,
+    "speaker": "cs_narrator",
+    "text": "И вот это мне уже нравилось значительно меньше."
+  },
+  {
+    "scene": 1,
+    "speaker": "cs_narrator",
+    "text": "Я поднялась и прошла по салону к кабине."
+  },
+  {
+    "scene": 1,
+    "speaker": "cs_ls",
+    "text": "Эй?"
+  },
+  {
+    "scene": 1,
+    "speaker": "cs_narrator",
+    "text": "Тишина."
+  },
+  {
+    "scene": 1,
+    "speaker": "cs_ls",
+    "text": "Водитель?"
+  },
+  {
+    "scene": 1,
+    "speaker": "cs_narrator",
+    "text": "Никакого ответа."
+  },
+  {
+    "scene": 1,
+    "speaker": "cs_narrator",
+    "text": "Я подошла ближе."
+  },
+  {
+    "scene": 1,
+    "speaker": "cs_narrator",
+    "text": "Кабина оказалась пустой."
+  },
+  {
+    "scene": 1,
+    "speaker": "cs_narrator",
+    "text": "Ни ключей."
+  },
+  {
+    "scene": 1,
+    "speaker": "cs_narrator",
+    "text": "Ни сумки."
+  },
+  {
+    "scene": 1,
+    "speaker": "cs_narrator",
+    "text": "Ни каких-либо личных вещей."
+  },
+  {
+    "scene": 1,
+    "speaker": "cs_narrator",
+    "text": "Словно автобус самостоятельно доставил двух совершенно неподготовленных пассажирок к воротам советского пионерлагеря и решил, что его обязанности на сегодня выполнены."
+  },
+  {
+    "scene": 1,
+    "speaker": "cs_narrator",
+    "text": "Я посмотрела на приборную панель."
+  },
+  {
+    "scene": 1,
+    "speaker": "cs_narrator",
+    "text": "Затем через лобовое стекло."
+  },
+  {
+    "scene": 1,
+    "speaker": "cs_narrator",
+    "text": "Потом снова на приборную панель."
+  },
+  {
+    "scene": 1,
+    "speaker": "cs_ls",
+    "text": "Так."
+  },
+  {
+    "scene": 1,
+    "speaker": "cs_narrator",
+    "text": "Позади послышались шаги."
+  },
+  {
+    "scene": 1,
+    "speaker": "cs_da",
+    "text": "Что?"
+  },
+  {
+    "scene": 1,
+    "speaker": "cs_ls",
+    "text": "Кажется, поход за продуктами официально отменяется."
+  },
+  {
+    "scene": 1,
+    "speaker": "cs_da",
+    "text": "Смелый вывод."
+  },
+  {
+    "scene": 1,
+    "speaker": "cs_ls",
+    "text": "Спасибо. Аналитический отдел сегодня особенно хорош."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_narrator",
+    "text": "Двери автобуса оставались открытыми."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_narrator",
+    "text": "Я остановилась перед ступеньками."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_narrator",
+    "text": "Снаружи стрекотали насекомые."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_narrator",
+    "text": "Где-то вдалеке раздавались детские голоса."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_narrator",
+    "text": "В воздухе едва различимо звучала музыка."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_narrator",
+    "text": "Негромкая, старомодная, почти растворяющаяся в шелесте листвы."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_narrator",
+    "text": "И тут в голове что-то неприятно шевельнулось."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_narrator",
+    "text": "Не страх."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_narrator",
+    "text": "Пока ещё нет."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_narrator",
+    "text": "Скорее чувство узнавания."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_narrator",
+    "text": "Я посмотрела через лобовое стекло."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_narrator",
+    "text": "Две статуи возле ворот."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_narrator",
+    "text": "Кирпичные тумбы."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_narrator",
+    "text": "Металлические створки."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_narrator",
+    "text": "Дорожка, уходящая вглубь лагеря."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_narrator",
+    "text": "Всё это выглядело слишком знакомо."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_narrator",
+    "text": "Я медленно спустилась на землю."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_narrator",
+    "text": "Снаружи оказалось ещё жарче."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_narrator",
+    "text": "Под подошвами зимних ботинок хрустнула сухая земля."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_narrator",
+    "text": "Куртку я перекинула через руку."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_narrator",
+    "text": "Несколько секунд просто стояла, оглядываясь."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_narrator",
+    "text": "Дарья вышла следом."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_narrator",
+    "text": "Она, по крайней мере, выглядела менее несчастной в своей одежде."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_narrator",
+    "text": "Хотя назвать наши наряды подходящими для такой погоды было бы довольно смелым заявлением."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_narrator",
+    "text": "Я сделала несколько шагов к воротам."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_narrator",
+    "text": "Остановилась."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_narrator",
+    "text": "Прищурилась."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_ls",
+    "text": "Где-то я это уже видела."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_da",
+    "text": "Здесь?"
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_ls",
+    "text": "Нет."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_narrator",
+    "text": "Я подошла ближе."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_narrator",
+    "text": "Сердце почему-то забилось быстрее."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_ls",
+    "text": "На компьютере."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_da",
+    "text": "Что?"
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_narrator",
+    "text": "Я почти не услышала вопроса."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_narrator",
+    "text": "Смотрела на ворота."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_narrator",
+    "text": "На статуи."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_narrator",
+    "text": "На дорогу."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_narrator",
+    "text": "На лес за оградой."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_narrator",
+    "text": "На сам ракурс, с которого всё это открывалось."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_narrator",
+    "text": "Даже автобус позади стоял подозрительно знакомо."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_narrator",
+    "text": "В памяти начали всплывать образы."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_narrator",
+    "text": "Главное меню."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_narrator",
+    "text": "Музыка."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_narrator",
+    "text": "Фоны."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_narrator",
+    "text": "Диалоги."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_narrator",
+    "text": "Спрайты."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_narrator",
+    "text": "Семён."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_narrator",
+    "text": "Славя."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_narrator",
+    "text": "Алиса."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_narrator",
+    "text": "Ульяна."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_narrator",
+    "text": "Лена."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_narrator",
+    "text": "Женя."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_narrator",
+    "text": "Мику."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_narrator",
+    "text": "Ольга Дмитриевна."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_narrator",
+    "text": "Пионер."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_narrator",
+    "text": "Юля."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_narrator",
+    "text": "Я медленно повернулась к автобусу."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_narrator",
+    "text": "На маршрутной табличке по-прежнему значилось:"
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_narrator",
+    "text": "{b}410.{/b}"
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_ls",
+    "text": "Нет."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_da",
+    "text": "Лена?"
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_ls",
+    "text": "Любопытно."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_narrator",
+    "text": "Я вернулась к автобусу и ещё раз посмотрела на номер."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_narrator",
+    "text": "Четыреста десять."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_narrator",
+    "text": "Он никуда не исчез."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_narrator",
+    "text": "Я провела ладонью по лицу."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_ls",
+    "text": "Прекрасно. Просто замечательно."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_da",
+    "text": "Что случилось?"
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_narrator",
+    "text": "Я повернулась к ней."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_narrator",
+    "text": "Объяснить происходящее нормальными словами представлялось практически невозможным."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_ls",
+    "text": "В общем, есть одна игра."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_da",
+    "text": "Игра?"
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_ls",
+    "text": "Визуальная новелла."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_da",
+    "text": "Хорошо."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_ls",
+    "text": "Там один парень зимой садится в автобус номер четыреста десять."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_narrator",
+    "text": "Дарья медленно посмотрела на автобус."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_narrator",
+    "text": "Затем на меня."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_da",
+    "text": "Продолжай."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_ls",
+    "text": "Засыпает."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_narrator",
+    "text": "Она стала слушать внимательнее."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_da",
+    "text": "И?"
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_narrator",
+    "text": "Я указала на ворота."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_ls",
+    "text": "Просыпается здесь."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_narrator",
+    "text": "Несколько секунд мы молчали."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_narrator",
+    "text": "В траве стрекотал кузнечик."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_narrator",
+    "text": "Где-то за воротами раздался детский смех."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_narrator",
+    "text": "Дарья снова посмотрела на вывеску."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_da",
+    "text": "«Совёнок»…"
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_ls",
+    "text": "Именно."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_da",
+    "text": "И ты знаешь это место?"
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_narrator",
+    "text": "Я коротко усмехнулась."
+  },
+  {
+    "scene": 2,
+    "speaker": "cs_ls",
+    "text": "К сожалению, значительно лучше, чем хотелось бы."
+  },
+  {
+    "scene": 3,
+    "speaker": "cs_narrator",
+    "text": "Впервые выражение её лица заметно изменилось."
+  },
+  {
+    "scene": 3,
+    "speaker": "cs_da",
+    "text": "Насколько хорошо?"
+  },
+  {
+    "scene": 3,
+    "speaker": "cs_narrator",
+    "text": "Я начала загибать пальцы."
+  },
+  {
+    "scene": 3,
+    "speaker": "cs_ls",
+    "text": "Примерное расположение зданий. Местные жители. Распорядок дня. Некоторые события."
+  },
+  {
+    "scene": 3,
+    "speaker": "cs_narrator",
+    "text": "Я ненадолго задумалась."
+  },
+  {
+    "scene": 3,
+    "speaker": "cs_ls",
+    "text": "Люди, с которыми лучше не ссориться. И люди, которым не стоит безоговорочно доверять."
+  },
+  {
+    "scene": 3,
+    "speaker": "cs_narrator",
+    "text": "Пауза."
+  },
+  {
+    "scene": 3,
+    "speaker": "cs_ls",
+    "text": "А ещё здесь должна быть кошкодевочка."
+  },
+  {
+    "scene": 3,
+    "speaker": "cs_da",
+    "text": "Разумеется."
+  },
+  {
+    "scene": 3,
+    "speaker": "cs_ls",
+    "text": "Я серьёзно."
+  },
+  {
+    "scene": 3,
+    "speaker": "cs_da",
+    "text": "Это меня и беспокоит."
+  },
+  {
+    "scene": 3,
+    "speaker": "cs_narrator",
+    "text": "Я снова повернулась к лагерю."
+  },
+  {
+    "scene": 3,
+    "speaker": "cs_narrator",
+    "text": "Ещё несколько минут назад он выглядел просто уютным, немного старомодным местом."
+  },
+  {
+    "scene": 3,
+    "speaker": "cs_narrator",
+    "text": "Теперь всё воспринималось иначе."
+  },
+  {
+    "scene": 3,
+    "speaker": "cs_narrator",
+    "text": "Потому что я кое-что знала."
+  },
+  {
+    "scene": 3,
+    "speaker": "cs_narrator",
+    "text": "При первом прохождении «Бесконечного лета» можно довольно долго считать «Совёнок» обычным пионерлагерем, в который главный герой каким-то образом попал из будущего."
+  },
+  {
+    "scene": 3,
+    "speaker": "cs_narrator",
+    "text": "У меня такой роскоши не было."
+  },
+  {
+    "scene": 3,
+    "speaker": "cs_narrator",
+    "text": "Я помнила, что события здесь могут повторяться."
+  },
+  {
+    "scene": 3,
+    "speaker": "cs_narrator",
+    "text": "Что один и тот же человек способен оказаться в совершенно разных обстоятельствах."
+  },
+  {
+    "scene": 3,
+    "speaker": "cs_narrator",
+    "text": "Что некоторые обитатели лагеря знают куда больше, чем говорят."
+  },
+  {
+    "scene": 3,
+    "speaker": "cs_narrator",
+    "text": "И что автобус номер четыреста десять — далеко не обычный общественный транспорт."
+  },
+  {
+    "scene": 3,
+    "speaker": "cs_narrator",
+    "text": "Я медленно вдохнула."
+  },
+  {
+    "scene": 3,
+    "speaker": "cs_ls",
+    "text": "Так."
+  },
+  {
+    "scene": 3,
+    "speaker": "cs_da",
+    "text": "Что будем делать?"
+  },
+  {
+    "scene": 3,
+    "speaker": "cs_ls",
+    "text": "Для начала не паниковать."
+  },
+  {
+    "scene": 3,
+    "speaker": "cs_da",
+    "text": "Ты нервничаешь."
+  },
+  {
+    "scene": 3,
+    "speaker": "cs_ls",
+    "text": "Я заметила."
+  },
+  {
+    "scene": 3,
+    "speaker": "cs_narrator",
+    "text": "Я ещё раз посмотрела на ворота."
+  },
+  {
+    "scene": 3,
+    "speaker": "cs_ls",
+    "text": "Но пока предпочитаю считать происходящее крайне неудачно организованной экскурсией."
+  },
+  {
+    "scene": 3,
+    "speaker": "cs_narrator",
+    "text": "Дарья тихо усмехнулась."
+  },
+  {
+    "scene": 3,
+    "speaker": "cs_narrator",
+    "text": "Я стянула свитер."
+  },
+  {
+    "scene": 3,
+    "speaker": "cs_narrator",
+    "text": "Под ним осталась футболка."
+  },
+  {
+    "scene": 3,
+    "speaker": "cs_narrator",
+    "text": "Стало немного легче."
+  },
+  {
+    "scene": 3,
+    "speaker": "cs_narrator",
+    "text": "Куртку и свитер пришлось связать вместе и перекинуть через плечо."
+  },
+  {
+    "scene": 3,
+    "speaker": "cs_ls",
+    "text": "Во-вторых, нужно понять, насколько здешний лагерь соответствует тому, который я знаю."
+  },
+  {
+    "scene": 3,
+    "speaker": "cs_da",
+    "text": "Здешний?"
+  },
+  {
+    "scene": 3,
+    "speaker": "cs_ls",
+    "text": "Вот здесь начинается самое интересное."
+  },
+  {
+    "scene": 3,
+    "speaker": "cs_da",
+    "text": "Почему-то я не удивлена."
+  },
+  {
+    "scene": 3,
+    "speaker": "cs_ls",
+    "text": "Если правила те же, этот лагерь может быть не единственным."
+  },
+  {
+    "scene": 3,
+    "speaker": "cs_narrator",
+    "text": "Дарья повернулась ко мне."
+  },
+  {
+    "scene": 3,
+    "speaker": "cs_da",
+    "text": "В каком смысле?"
+  },
+  {
+    "scene": 3,
+    "speaker": "cs_narrator",
+    "text": "Я кивнула на ворота."
+  },
+  {
+    "scene": 3,
+    "speaker": "cs_ls",
+    "text": "В самом буквальном. Возможно, существует несколько таких мест. И не факт, что во всех события развиваются одинаково."
+  },
+  {
+    "scene": 3,
+    "speaker": "cs_narrator",
+    "text": "Она некоторое время молчала."
+  },
+  {
+    "scene": 3,
+    "speaker": "cs_da",
+    "text": "И ты узнала об этом из игры?"
+  },
+  {
+    "scene": 3,
+    "speaker": "cs_ls",
+    "text": "Да."
+  },
+  {
+    "scene": 3,
+    "speaker": "cs_da",
+    "text": "Которая существовала в твоём мире?"
+  },
+  {
+    "scene": 3,
+    "speaker": "cs_ls",
+    "text": "Совершенно верно."
+  },
+  {
+    "scene": 3,
+    "speaker": "cs_da",
+    "text": "А теперь мы оказались в месте, которое выглядит точно так же?"
+  },
+  {
+    "scene": 3,
+    "speaker": "cs_ls",
+    "text": "Пока совпадений достаточно для весьма неприятных выводов."
+  },
+  {
+    "scene": 3,
+    "speaker": "cs_narrator",
+    "text": "Дарья задумалась."
+  },
+  {
+    "scene": 3,
+    "speaker": "cs_da",
+    "text": "Тогда я вижу два возможных объяснения."
+  },
+  {
+    "scene": 3,
+    "speaker": "cs_ls",
+    "text": "Слушаю."
+  },
+  {
+    "scene": 3,
+    "speaker": "cs_da",
+    "text": "Либо твоя игра каким-то образом описывала место, существующее независимо от неё."
+  },
+  {
+    "scene": 3,
+    "speaker": "cs_narrator",
+    "text": "Я кивнула."
+  },
+  {
+    "scene": 3,
+    "speaker": "cs_ls",
+    "text": "А второе?"
+  },
+  {
+    "scene": 3,
+    "speaker": "cs_da",
+    "text": "Либо происходящее здесь формируется на основе того, что тебе известно."
+  },
+  {
+    "scene": 3,
+    "speaker": "cs_narrator",
+    "text": "Я замолчала."
+  },
+  {
+    "scene": 3,
+    "speaker": "cs_narrator",
+    "text": "Это предположение мне совершенно не понравилось."
+  },
+  {
+    "scene": 3,
+    "speaker": "cs_narrator",
+    "text": "Я посмотрела на лагерь."
+  },
+  {
+    "scene": 3,
+    "speaker": "cs_narrator",
+    "text": "На собственные руки."
+  },
+  {
+    "scene": 3,
+    "speaker": "cs_narrator",
+    "text": "На Дарью."
+  },
+  {
+    "scene": 3,
+    "speaker": "cs_ls",
+    "text": "Спасибо. Теперь у нас ещё и философская проблема с реальностью."
+  },
+  {
+    "scene": 3,
+    "speaker": "cs_da",
+    "text": "Ты спросила."
+  },
+  {
+    "scene": 3,
+    "speaker": "cs_ls",
+    "text": "Я уже жалею."
+  },
+  {
+    "scene": 3,
+    "speaker": "cs_narrator",
+    "text": "Она чуть пожала плечами."
+  },
+  {
+    "scene": 4,
+    "speaker": "cs_narrator",
+    "text": "И именно в этот момент мне пришло в голову кое-что ещё."
+  },
+  {
+    "scene": 4,
+    "speaker": "cs_narrator",
+    "text": "Я опустила взгляд на свои руки."
+  },
+  {
+    "scene": 4,
+    "speaker": "cs_narrator",
+    "text": "Пальцы."
+  },
+  {
+    "scene": 4,
+    "speaker": "cs_narrator",
+    "text": "Кожа."
+  },
+  {
+    "scene": 4,
+    "speaker": "cs_narrator",
+    "text": "Ноги."
+  },
+  {
+    "scene": 4,
+    "speaker": "cs_narrator",
+    "text": "Одежда оставалась моей."
+  },
+  {
+    "scene": 4,
+    "speaker": "cs_narrator",
+    "text": "Но что-то неуловимо изменилось."
+  },
+  {
+    "scene": 4,
+    "speaker": "cs_narrator",
+    "text": "Я подошла к боковому зеркалу автобуса."
+  },
+  {
+    "scene": 4,
+    "speaker": "cs_narrator",
+    "text": "Посмотрела на отражение."
+  },
+  {
+    "scene": 4,
+    "speaker": "cs_narrator",
+    "text": "Длинные фиолетовые волосы."
+  },
+  {
+    "scene": 4,
+    "speaker": "cs_narrator",
+    "text": "Зелёные глаза."
+  },
+  {
+    "scene": 4,
+    "speaker": "cs_narrator",
+    "text": "Знакомое лицо."
+  },
+  {
+    "scene": 4,
+    "speaker": "cs_narrator",
+    "text": "Моё."
+  },
+  {
+    "scene": 4,
+    "speaker": "cs_narrator",
+    "text": "Только…"
+  },
+  {
+    "scene": 4,
+    "speaker": "cs_narrator",
+    "text": "Я наклонилась ближе."
+  },
+  {
+    "scene": 4,
+    "speaker": "cs_ls",
+    "text": "Интересно."
+  },
+  {
+    "scene": 4,
+    "speaker": "cs_narrator",
+    "text": "Дарья подошла ко мне."
+  },
+  {
+    "scene": 4,
+    "speaker": "cs_da",
+    "text": "Что теперь?"
+  },
+  {
+    "scene": 4,
+    "speaker": "cs_ls",
+    "text": "Кажется, я помолодела."
+  },
+  {
+    "scene": 4,
+    "speaker": "cs_da",
+    "text": "Насколько?"
+  },
+  {
+    "scene": 4,
+    "speaker": "cs_ls",
+    "text": "Не знаю. На несколько лет, наверное."
+  },
+  {
+    "scene": 4,
+    "speaker": "cs_narrator",
+    "text": "Я коснулась щеки, затем подбородка."
+  },
+  {
+    "scene": 4,
+    "speaker": "cs_narrator",
+    "text": "Отражение повторило движения."
+  },
+  {
+    "scene": 4,
+    "speaker": "cs_ls",
+    "text": "Потрясающе. Даже косметолог не понадобился."
+  },
+  {
+    "scene": 4,
+    "speaker": "cs_da",
+    "text": "Ты уверена?"
+  },
+  {
+    "scene": 4,
+    "speaker": "cs_ls",
+    "text": "Не особенно. Но паспорт у зеркала спрашивать бесполезно."
+  },
+  {
+    "scene": 4,
+    "speaker": "cs_narrator",
+    "text": "Я ещё раз посмотрела на своё лицо."
+  },
+  {
+    "scene": 4,
+    "speaker": "cs_narrator",
+    "text": "Внешне я по-прежнему оставалась собой."
+  },
+  {
+    "scene": 4,
+    "speaker": "cs_narrator",
+    "text": "Просто черты казались чуть моложе."
+  },
+  {
+    "scene": 4,
+    "speaker": "cs_narrator",
+    "text": "Слишком мало, чтобы делать окончательные выводы."
+  },
+  {
+    "scene": 4,
+    "speaker": "cs_narrator",
+    "text": "Но достаточно, чтобы насторожиться."
+  },
+  {
+    "scene": 4,
+    "speaker": "cs_ls",
+    "text": "Если это действительно связано с игрой, такое уже подозрительно похоже на канон."
+  },
+  {
+    "scene": 4,
+    "speaker": "cs_da",
+    "text": "На что?"
+  },
+  {
+    "scene": 4,
+    "speaker": "cs_ls",
+    "text": "Долго объяснять."
+  },
+  {
+    "scene": 4,
+    "speaker": "cs_narrator",
+    "text": "Я отошла от автобуса."
+  },
+  {
+    "scene": 4,
+    "speaker": "cs_narrator",
+    "text": "И тут вспомнила о телефоне."
+  },
+  {
+    "scene": 4,
+    "speaker": "cs_narrator",
+    "text": "Достала его из кармана."
+  },
+  {
+    "scene": 4,
+    "speaker": "cs_narrator",
+    "text": "Разумеется, экран оставался чёрным."
+  },
+  {
+    "scene": 4,
+    "speaker": "cs_narrator",
+    "text": "Нажала кнопку питания."
+  },
+  {
+    "scene": 4,
+    "speaker": "cs_narrator",
+    "text": "Ничего."
+  },
+  {
+    "scene": 4,
+    "speaker": "cs_narrator",
+    "text": "Повторила попытку."
+  },
+  {
+    "scene": 4,
+    "speaker": "cs_narrator",
+    "text": "Безрезультатно."
+  },
+  {
+    "scene": 4,
+    "speaker": "cs_ls",
+    "text": "Отлично."
+  },
+  {
+    "scene": 4,
+    "speaker": "cs_narrator",
+    "text": "Я машинально принялась искать пауэрбанк."
+  },
+  {
+    "scene": 4,
+    "speaker": "cs_narrator",
+    "text": "И почти сразу вспомнила, что оставила его дома."
+  },
+  {
+    "scene": 4,
+    "speaker": "cs_narrator",
+    "text": "Разумеется."
+  },
+  {
+    "scene": 4,
+    "speaker": "cs_narrator",
+    "text": "Зачем брать внешний аккумулятор, когда собираешься всего лишь на двадцать минут в супермаркет?"
+  },
+  {
+    "scene": 4,
+    "speaker": "cs_th",
+    "text": "Молодец, Лена. Предусмотрительность на высшем уровне."
+  },
+  {
+    "scene": 4,
+    "speaker": "cs_narrator",
+    "text": "Дарья наблюдала за мной."
+  },
+  {
+    "scene": 4,
+    "speaker": "cs_da",
+    "text": "Связи нет?"
+  },
+  {
+    "scene": 4,
+    "speaker": "cs_ls",
+    "text": "Для начала неплохо было бы получить работающий телефон."
+  },
+  {
+    "scene": 4,
+    "speaker": "cs_narrator",
+    "text": "Я повертела аппарат в руке."
+  },
+  {
+    "scene": 4,
+    "speaker": "cs_ls",
+    "text": "Хотя, если он вдруг включится, первая фотография будет называться «Сходила за хлебом»."
+  },
+  {
+    "scene": 4,
+    "speaker": "cs_da",
+    "text": "У тебя странные приоритеты."
+  },
+  {
+    "scene": 4,
+    "speaker": "cs_ls",
+    "text": "У меня двести сорок семь тысяч подписчиков. Кто-то должен документировать эту катастрофу."
+  },
+  {
+    "scene": 4,
+    "speaker": "cs_narrator",
+    "text": "Я убрала телефон обратно в карман."
+  },
+  {
+    "scene": 4,
+    "speaker": "cs_narrator",
+    "text": "И вдруг остановилась."
+  },
+  {
+    "scene": 4,
+    "speaker": "cs_ls",
+    "text": "Если они вообще сейчас существуют."
+  },
+  {
+    "scene": 4,
+    "speaker": "cs_narrator",
+    "text": "Последнюю фразу я произнесла гораздо тише."
+  },
+  {
+    "scene": 4,
+    "speaker": "cs_narrator",
+    "text": "Дарья ничего не ответила."
+  },
+  {
+    "scene": 4,
+    "speaker": "cs_narrator",
+    "text": "И за это я была ей благодарна."
+  },
+  {
+    "scene": 5,
+    "speaker": "cs_narrator",
+    "text": "Потому что одно дело — рассуждать о визуальной новелле, в которую каким-то невероятным образом попала."
+  },
+  {
+    "scene": 5,
+    "speaker": "cs_narrator",
+    "text": "И совсем другое — вспомнить, что где-то осталась моя жизнь."
+  },
+  {
+    "scene": 5,
+    "speaker": "cs_narrator",
+    "text": "Квартира."
+  },
+  {
+    "scene": 5,
+    "speaker": "cs_narrator",
+    "text": "Знакомые вещи."
+  },
+  {
+    "scene": 5,
+    "speaker": "cs_narrator",
+    "text": "Работа."
+  },
+  {
+    "scene": 5,
+    "speaker": "cs_narrator",
+    "text": "Люди."
+  },
+  {
+    "scene": 5,
+    "speaker": "cs_narrator",
+    "text": "Интернет."
+  },
+  {
+    "scene": 5,
+    "speaker": "cs_narrator",
+    "text": "Моя комната."
+  },
+  {
+    "scene": 5,
+    "speaker": "cs_narrator",
+    "text": "Графический планшет."
+  },
+  {
+    "scene": 5,
+    "speaker": "cs_narrator",
+    "text": "Картины, которые я так и не закончила."
+  },
+  {
+    "scene": 5,
+    "speaker": "cs_narrator",
+    "text": "Привычный мир, в котором утром была зима, а автобусы обычно довозили людей хотя бы приблизительно до нужной остановки."
+  },
+  {
+    "scene": 5,
+    "speaker": "cs_narrator",
+    "text": "Я посмотрела на ворота."
+  },
+  {
+    "scene": 5,
+    "speaker": "cs_narrator",
+    "text": "Всё вокруг выглядело совершенно настоящим."
+  },
+  {
+    "scene": 5,
+    "speaker": "cs_narrator",
+    "text": "И от этого становилось только тревожнее."
+  },
+  {
+    "scene": 5,
+    "speaker": "cs_th",
+    "text": "Ладно."
+  },
+  {
+    "scene": 5,
+    "speaker": "cs_th",
+    "text": "Допустим, ты действительно здесь."
+  },
+  {
+    "scene": 5,
+    "speaker": "cs_th",
+    "text": "Что дальше?"
+  },
+  {
+    "scene": 5,
+    "speaker": "cs_narrator",
+    "text": "Я поправила одежду на плече."
+  },
+  {
+    "scene": 5,
+    "speaker": "cs_ls",
+    "text": "Предположим, правила хотя бы частично совпадают с игрой."
+  },
+  {
+    "scene": 5,
+    "speaker": "cs_narrator",
+    "text": "Дарья повернулась ко мне."
+  },
+  {
+    "scene": 5,
+    "speaker": "cs_da",
+    "text": "Тогда что должно произойти дальше?"
+  },
+  {
+    "scene": 5,
+    "speaker": "cs_narrator",
+    "text": "Я задумалась."
+  },
+  {
+    "scene": 5,
+    "speaker": "cs_narrator",
+    "text": "Хороший вопрос."
+  },
+  {
+    "scene": 5,
+    "speaker": "cs_narrator",
+    "text": "Очень хороший."
+  },
+  {
+    "scene": 5,
+    "speaker": "cs_narrator",
+    "text": "Я вспомнила начало новеллы."
+  },
+  {
+    "scene": 5,
+    "speaker": "cs_narrator",
+    "text": "Автобус."
+  },
+  {
+    "scene": 5,
+    "speaker": "cs_narrator",
+    "text": "Ворота."
+  },
+  {
+    "scene": 5,
+    "speaker": "cs_narrator",
+    "text": "Первую встречу."
+  },
+  {
+    "scene": 5,
+    "speaker": "cs_narrator",
+    "text": "И почти одновременно с этой мыслью за оградой послышались шаги."
+  },
+  {
+    "scene": 5,
+    "speaker": "cs_narrator",
+    "text": "Я замерла."
+  },
+  {
+    "scene": 5,
+    "speaker": "cs_narrator",
+    "text": "К нам кто-то приближался."
+  },
+  {
+    "scene": 6,
+    "speaker": "cs_narrator",
+    "text": "Дарья заметила, как изменилось моё выражение лица."
+  },
+  {
+    "scene": 6,
+    "speaker": "cs_da",
+    "text": "Ты знаешь, кто это?"
+  },
+  {
+    "scene": 6,
+    "speaker": "cs_narrator",
+    "text": "Я внимательно смотрела на силуэт за воротами."
+  },
+  {
+    "scene": 6,
+    "speaker": "cs_narrator",
+    "text": "Светлые волосы."
+  },
+  {
+    "scene": 6,
+    "speaker": "cs_narrator",
+    "text": "Белая рубашка."
+  },
+  {
+    "scene": 6,
+    "speaker": "cs_narrator",
+    "text": "Пионерская форма."
+  },
+  {
+    "scene": 6,
+    "speaker": "cs_narrator",
+    "text": "Я на секунду прикрыла глаза."
+  },
+  {
+    "scene": 6,
+    "speaker": "cs_ls",
+    "text": "Если сейчас появится блондинка с двумя косами и предложит нам помощь, я официально признаю этот день самым странным в своей жизни."
+  },
+  {
+    "scene": 6,
+    "speaker": "cs_narrator",
+    "text": "Из-за ворот вышла девушка."
+  },
+  {
+    "scene": 6,
+    "speaker": "cs_narrator",
+    "text": "Увидев нас, она остановилась."
+  },
+  {
+    "scene": 6,
+    "speaker": "cs_narrator",
+    "text": "Удивлённо моргнула."
+  },
+  {
+    "scene": 6,
+    "speaker": "cs_narrator",
+    "text": "Затем приветливо улыбнулась."
+  },
+  {
+    "scene": 6,
+    "speaker": "cs_sl",
+    "text": "Ой! Привет! Вы, наверное, только приехали?"
+  },
+  {
+    "scene": 6,
+    "speaker": "cs_narrator",
+    "text": "Я молчала."
+  },
+  {
+    "scene": 6,
+    "speaker": "cs_narrator",
+    "text": "Смотрела на её лицо."
+  },
+  {
+    "scene": 6,
+    "speaker": "cs_narrator",
+    "text": "На белую рубашку."
+  },
+  {
+    "scene": 6,
+    "speaker": "cs_narrator",
+    "text": "На красный галстук."
+  },
+  {
+    "scene": 6,
+    "speaker": "cs_narrator",
+    "text": "На две аккуратные косы."
+  },
+  {
+    "scene": 6,
+    "speaker": "cs_narrator",
+    "text": "Имя возникло в голове раньше, чем я успела что-либо произнести."
+  },
+  {
+    "scene": 6,
+    "speaker": "cs_narrator",
+    "text": "{b}Славя.{/b}"
+  },
+  {
+    "scene": 6,
+    "speaker": "cs_narrator",
+    "text": "Настоящая."
+  },
+  {
+    "scene": 6,
+    "speaker": "cs_narrator",
+    "text": "Не спрайт."
+  },
+  {
+    "scene": 6,
+    "speaker": "cs_narrator",
+    "text": "Не изображение на мониторе."
+  },
+  {
+    "scene": 6,
+    "speaker": "cs_narrator",
+    "text": "Не персонаж, состоящий из нескольких нарисованных эмоций."
+  },
+  {
+    "scene": 6,
+    "speaker": "cs_narrator",
+    "text": "Передо мной стояла настоящая девушка."
+  },
+  {
+    "scene": 6,
+    "speaker": "cs_narrator",
+    "text": "Она дышала."
+  },
+  {
+    "scene": 6,
+    "speaker": "cs_narrator",
+    "text": "Двигалась."
+  },
+  {
+    "scene": 6,
+    "speaker": "cs_narrator",
+    "text": "Смотрела прямо на нас и ждала ответа."
+  },
+  {
+    "scene": 6,
+    "speaker": "cs_narrator",
+    "text": "Я прекрасно помнила её голос из игры."
+  },
+  {
+    "scene": 6,
+    "speaker": "cs_narrator",
+    "text": "Но услышать его здесь, среди настоящего летнего леса, оказалось совсем другим ощущением."
+  },
+  {
+    "scene": 6,
+    "speaker": "cs_narrator",
+    "text": "И вот тогда до меня окончательно дошло."
+  },
+  {
+    "scene": 6,
+    "speaker": "cs_narrator",
+    "text": "Я больше не смотрела на «Совёнок» через экран компьютера."
+  },
+  {
+    "scene": 6,
+    "speaker": "cs_narrator",
+    "text": "Я стояла перед его воротами."
+  },
+  {
+    "scene": 6,
+    "speaker": "cs_narrator",
+    "text": "Я медленно повернулась к Дарье."
+  },
+  {
+    "scene": 6,
+    "speaker": "cs_ls",
+    "text": "Ну всё."
+  },
+  {
+    "scene": 6,
+    "speaker": "cs_da",
+    "text": "Что?"
+  },
+  {
+    "scene": 6,
+    "speaker": "cs_narrator",
+    "text": "Я снова посмотрела на Славю."
+  },
+  {
+    "scene": 6,
+    "speaker": "cs_narrator",
+    "text": "Потом на автобус."
+  },
+  {
+    "scene": 6,
+    "speaker": "cs_narrator",
+    "text": "И наконец произнесла с совершенно серьёзным лицом:"
+  },
+  {
+    "scene": 6,
+    "speaker": "cs_ls",
+    "text": "Поздравляю. Совпадение официально перестало быть совпадением."
+  },
+  {
+    "scene": 6,
+    "speaker": "cs_narrator",
+    "text": "Помолчала."
+  },
+  {
+    "scene": 6,
+    "speaker": "cs_ls",
+    "text": "Осталось только выяснить, предусмотрен ли здесь обратный билет."
+  }
+]

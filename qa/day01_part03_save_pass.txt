@@ -1,0 +1,1 @@
+PASS: prior part-3 save loaded and continued through scenes 15-20 with new sprites.

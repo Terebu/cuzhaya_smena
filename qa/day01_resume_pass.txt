@@ -1,0 +1,1 @@
+PASS: unfinished day save menu and save/load roundtrip; continuation screen restored.

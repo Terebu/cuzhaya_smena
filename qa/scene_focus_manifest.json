@@ -1,0 +1,299 @@
+[
+  {
+    "file": "days/prologue/01_ordinary.rpy",
+    "thought_passages": []
+  },
+  {
+    "file": "days/prologue/02_seven_percent.rpy",
+    "thought_passages": []
+  },
+  {
+    "file": "days/prologue/03_stranger.rpy",
+    "thought_passages": []
+  },
+  {
+    "file": "days/prologue/04_instagram.rpy",
+    "thought_passages": []
+  },
+  {
+    "file": "days/prologue/05_wrong_way.rpy",
+    "thought_passages": []
+  },
+  {
+    "file": "days/prologue/06_last_stop.rpy",
+    "thought_passages": []
+  },
+  {
+    "file": "days/prologue/07_summer.rpy",
+    "thought_passages": []
+  },
+  {
+    "file": "days/day01/01_bus.rpy",
+    "thought_passages": []
+  },
+  {
+    "file": "days/day01/02_recognition.rpy",
+    "thought_passages": []
+  },
+  {
+    "file": "days/day01/03_reality.rpy",
+    "thought_passages": []
+  },
+  {
+    "file": "days/day01/04_reflection.rpy",
+    "thought_passages": []
+  },
+  {
+    "file": "days/day01/05_home.rpy",
+    "thought_passages": []
+  },
+  {
+    "file": "days/day01/06_slavya.rpy",
+    "thought_passages": []
+  },
+  {
+    "file": "days/day01/07_uninvited.rpy",
+    "thought_passages": []
+  },
+  {
+    "file": "days/day01/08_camp_walk.rpy",
+    "thought_passages": []
+  },
+  {
+    "file": "days/day01/09_counsellor.rpy",
+    "thought_passages": []
+  },
+  {
+    "file": "days/day01/10_soviet_home.rpy",
+    "thought_passages": []
+  },
+  {
+    "file": "days/day01/11_state_machine.rpy",
+    "thought_passages": []
+  },
+  {
+    "file": "days/day01/12_calculator.rpy",
+    "thought_passages": []
+  },
+  {
+    "file": "days/day01/13_uniform.rpy",
+    "thought_passages": []
+  },
+  {
+    "file": "days/day01/14_third_guest.rpy",
+    "thought_passages": []
+  },
+  {
+    "file": "days/day01/15_two_newcomers.rpy",
+    "thought_passages": []
+  },
+  {
+    "file": "days/day01/16_another_passenger.rpy",
+    "thought_passages": []
+  },
+  {
+    "file": "days/day01/17_beyond_the_screen.rpy",
+    "thought_passages": []
+  },
+  {
+    "file": "days/day01/18_anachronism.rpy",
+    "thought_passages": []
+  },
+  {
+    "file": "days/day01/19_dining_hall.rpy",
+    "thought_passages": []
+  },
+  {
+    "file": "days/day01/20_comrade_semen.rpy",
+    "thought_passages": []
+  },
+  {
+    "file": "days/day01/part05/21_not_a_simple_question.rpy",
+    "thought_passages": []
+  },
+  {
+    "file": "days/day01/part05/22_similar_journey.rpy",
+    "thought_passages": []
+  },
+  {
+    "file": "days/day01/part05/23_familiar_story.rpy",
+    "thought_passages": []
+  },
+  {
+    "file": "days/day01/part05/24_working_group.rpy",
+    "thought_passages": []
+  },
+  {
+    "file": "days/day01/part06/25_after_lunch.rpy",
+    "thought_passages": []
+  },
+  {
+    "file": "days/day01/part06/26_new_home_path.rpy",
+    "thought_passages": []
+  },
+  {
+    "file": "days/day01/part06/27_house_for_two.rpy",
+    "thought_passages": []
+  },
+  {
+    "file": "days/day01/part06/28_without_witnesses.rpy",
+    "thought_passages": []
+  },
+  {
+    "file": "days/day01/part06/29_observation_log.rpy",
+    "thought_passages": []
+  },
+  {
+    "file": "days/day01/part06/30_at_the_door.rpy",
+    "thought_passages": []
+  },
+  {
+    "file": "days/day01/part07/31_visitors.rpy",
+    "thought_passages": []
+  },
+  {
+    "file": "days/day01/part07/32_an_idea.rpy",
+    "thought_passages": []
+  },
+  {
+    "file": "days/day01/part07/33_clubs_path.rpy",
+    "thought_passages": []
+  },
+  {
+    "file": "days/day01/part07/34_engineers.rpy",
+    "thought_passages": []
+  },
+  {
+    "file": "days/day01/part07/35_calculator.rpy",
+    "thought_passages": []
+  },
+  {
+    "file": "days/day01/part07/36_forty_six_years.rpy",
+    "thought_passages": []
+  },
+  {
+    "file": "days/day01/part07/37_transistors.rpy",
+    "thought_passages": []
+  },
+  {
+    "file": "days/day01/part07/38_five_volts.rpy",
+    "thought_passages": []
+  },
+  {
+    "file": "days/day01/part07/39_future_in_pocket.rpy",
+    "thought_passages": [
+      132
+    ]
+  },
+  {
+    "file": "days/day01/part08/40_after_clubs.rpy",
+    "thought_passages": [
+      17
+    ]
+  },
+  {
+    "file": "days/day01/part08/41_confession.rpy",
+    "thought_passages": [
+      14
+    ]
+  },
+  {
+    "file": "days/day01/part08/42_why_you.rpy",
+    "thought_passages": []
+  },
+  {
+    "file": "days/day01/part08/43_square.rpy",
+    "thought_passages": []
+  },
+  {
+    "file": "days/day01/part08/44_independent_opinion.rpy",
+    "thought_passages": []
+  },
+  {
+    "file": "days/day01/part08/45_for_now.rpy",
+    "thought_passages": [
+      117
+    ]
+  },
+  {
+    "file": "days/day01/part09/46_resemblance.rpy",
+    "thought_passages": []
+  },
+  {
+    "file": "days/day01/part09/47_choice.rpy",
+    "thought_passages": []
+  },
+  {
+    "file": "days/day01/part09/48_a_meet.rpy",
+    "thought_passages": []
+  },
+  {
+    "file": "days/day01/part09/48_b_pass.rpy",
+    "thought_passages": []
+  },
+  {
+    "file": "days/day01/part09/49_together.rpy",
+    "thought_passages": [
+      13,
+      37,
+      48,
+      61
+    ]
+  },
+  {
+    "file": "days/day01/part09/50_no_saves.rpy",
+    "thought_passages": [
+      8,
+      52
+    ]
+  },
+  {
+    "file": "days/day01/part09/51_dinner_time.rpy",
+    "thought_passages": [
+      11,
+      25
+    ]
+  },
+  {
+    "file": "days/day01/part10/52_after_dinner.rpy",
+    "thought_passages": [
+      15
+    ]
+  },
+  {
+    "file": "days/day01/part10/53_library_walk.rpy",
+    "thought_passages": [
+      10,
+      97,
+      117
+    ]
+  },
+  {
+    "file": "days/day01/part10/54_librarian.rpy",
+    "thought_passages": []
+  },
+  {
+    "file": "days/day01/part10/55_a_help.rpy",
+    "thought_passages": []
+  },
+  {
+    "file": "days/day01/part10/55_b_search_alone.rpy",
+    "thought_passages": []
+  },
+  {
+    "file": "days/day01/part10/55_choice.rpy",
+    "thought_passages": []
+  },
+  {
+    "file": "days/day01/part10/56_old_books.rpy",
+    "thought_passages": []
+  },
+  {
+    "file": "days/day01/part10/57_slip_of_tongue.rpy",
+    "thought_passages": []
+  },
+  {
+    "file": "days/day01/part10/58_truth.rpy",
+    "thought_passages": []
+  }
+]

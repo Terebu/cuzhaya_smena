@@ -1,0 +1,1 @@
+PASS: old part-nine save, Lena state 1, Zhenya help, scores 1/1, both save/load checkpoints and unfinished day.

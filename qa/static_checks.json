@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "manuscript_blocks": 383,
+  "implemented_blocks": 383,
+  "day01_source_blocks": 3824,
+  "day01_implemented_blocks": 3824,
+  "day01_part02_blocks": 292,
+  "day01_part03_blocks": 349,
+  "day01_part04_blocks": 378,
+  "day01_part05_blocks": 193,
+  "day01_part06_blocks": 365,
+  "day01_part07_blocks": 601,
+  "day01_part08_blocks": 394,
+  "day01_part09_blocks": 360,
+  "day01_part10_blocks": 547,
+  "scenes": [
+    {
+      "file": "01_ordinary.rpy",
+      "blocks": 34
+    },
+    {
+      "file": "02_seven_percent.rpy",
+      "blocks": 31
+    },
+    {
+      "file": "03_stranger.rpy",
+      "blocks": 37
+    },
+    {
+      "file": "04_instagram.rpy",
+      "blocks": 69
+    },
+    {
+      "file": "05_wrong_way.rpy",
+      "blocks": 86
+    },
+    {
+      "file": "06_last_stop.rpy",
+      "blocks": 59
+    },
+    {
+      "file": "07_summer.rpy",
+      "blocks": 67
+    }
+  ],
+  "literal_asset_references_checked": 64,
+  "errors": []
+}

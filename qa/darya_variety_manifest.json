@@ -1,0 +1,556 @@
+[
+  {
+    "file": "days/prologue/01_ordinary.rpy",
+    "poses": {}
+  },
+  {
+    "file": "days/prologue/02_seven_percent.rpy",
+    "poses": {}
+  },
+  {
+    "file": "days/prologue/03_stranger.rpy",
+    "poses": {
+      "cs_dasha_winter/shrug": 1
+    }
+  },
+  {
+    "file": "days/prologue/04_instagram.rpy",
+    "poses": {
+      "cs_dasha_winter/thinking": 1,
+      "cs_dasha_winter/shrug": 1
+    }
+  },
+  {
+    "file": "days/prologue/05_wrong_way.rpy",
+    "poses": {
+      "cs_dasha_winter/thinking": 3,
+      "cs_dasha_winter/shrug": 2,
+      "cs_dasha_winter/shy": 1,
+      "cs_dasha_winter/explaining": 2,
+      "cs_dasha_winter/smile": 1
+    }
+  },
+  {
+    "file": "days/prologue/06_last_stop.rpy",
+    "poses": {
+      "cs_dasha_winter/shy": 1,
+      "cs_dasha_winter/thinking": 1,
+      "cs_dasha_winter/shrug": 1
+    }
+  },
+  {
+    "file": "days/prologue/07_summer.rpy",
+    "poses": {}
+  },
+  {
+    "file": "days/day01/01_bus.rpy",
+    "poses": {
+      "cs_dasha_winter/shrug": 2,
+      "cs_dasha_winter/thinking": 1,
+      "cs_dasha_winter/explaining": 1
+    }
+  },
+  {
+    "file": "days/day01/02_recognition.rpy",
+    "poses": {
+      "cs_dasha_winter/shrug": 4,
+      "cs_dasha_winter/thinking": 4,
+      "cs_dasha_winter/explaining": 1
+    }
+  },
+  {
+    "file": "days/day01/03_reality.rpy",
+    "poses": {
+      "cs_dasha_winter/shrug": 4,
+      "cs_dasha_winter/worried": 1,
+      "cs_dasha_winter/thinking": 4,
+      "cs_dasha_winter/smile": 1,
+      "cs_dasha_winter/explaining": 1
+    }
+  },
+  {
+    "file": "days/day01/04_reflection.rpy",
+    "poses": {
+      "cs_dasha_winter/thinking": 1,
+      "cs_dasha_winter/shrug": 1
+    }
+  },
+  {
+    "file": "days/day01/05_home.rpy",
+    "poses": {
+      "cs_dasha_winter/thinking": 1
+    }
+  },
+  {
+    "file": "days/day01/06_slavya.rpy",
+    "poses": {
+      "cs_dasha_winter/explaining": 1
+    }
+  },
+  {
+    "file": "days/day01/07_uninvited.rpy",
+    "poses": {
+      "cs_dasha_winter/shrug": 2,
+      "cs_dasha_winter/explaining": 2
+    }
+  },
+  {
+    "file": "days/day01/08_camp_walk.rpy",
+    "poses": {
+      "cs_dasha_winter/shrug": 2,
+      "cs_dasha_winter/thinking": 2,
+      "cs_dasha_winter/smile": 2,
+      "cs_dasha_winter/worried": 1
+    }
+  },
+  {
+    "file": "days/day01/09_counsellor.rpy",
+    "poses": {
+      "cs_dasha_winter/shrug": 2,
+      "cs_dasha_winter/thinking": 3,
+      "cs_dasha_winter/explaining": 1
+    }
+  },
+  {
+    "file": "days/day01/10_soviet_home.rpy",
+    "poses": {
+      "cs_dasha_winter/shrug": 2,
+      "cs_dasha_winter/explaining": 1
+    }
+  },
+  {
+    "file": "days/day01/11_state_machine.rpy",
+    "poses": {
+      "cs_dasha_winter/arms_crossed": 3,
+      "cs_dasha_winter/shrug": 3,
+      "cs_dasha_winter/thinking": 1,
+      "cs_dasha_winter/explaining": 1
+    }
+  },
+  {
+    "file": "days/day01/12_calculator.rpy",
+    "poses": {
+      "cs_dasha_winter/arms_crossed": 3,
+      "cs_dasha_winter/shrug": 1
+    }
+  },
+  {
+    "file": "days/day01/13_uniform.rpy",
+    "poses": {
+      "cs_dasha_winter/arms_crossed": 1,
+      "cs_dasha_winter/hands_on_hips": 1,
+      "cs_dasha_winter/shrug": 1,
+      "cs_darya/shrug": 2,
+      "cs_darya/arms_crossed": 2,
+      "cs_darya/surprised": 1,
+      "cs_darya/worried": 1
+    }
+  },
+  {
+    "file": "days/day01/14_third_guest.rpy",
+    "poses": {
+      "cs_darya/surprised": 1,
+      "cs_darya/thinking": 1
+    }
+  },
+  {
+    "file": "days/day01/15_two_newcomers.rpy",
+    "poses": {
+      "cs_darya/shrug": 3,
+      "cs_darya/arms_crossed": 1,
+      "cs_darya/worried": 1
+    }
+  },
+  {
+    "file": "days/day01/16_another_passenger.rpy",
+    "poses": {
+      "cs_darya/surprised": 1,
+      "cs_darya/thinking": 1
+    }
+  },
+  {
+    "file": "days/day01/17_beyond_the_screen.rpy",
+    "poses": {
+      "cs_darya/shrug": 2,
+      "cs_darya/thinking": 2,
+      "cs_darya/serious": 1,
+      "cs_darya/smile": 3,
+      "cs_darya/worried": 1
+    }
+  },
+  {
+    "file": "days/day01/18_anachronism.rpy",
+    "poses": {
+      "cs_darya/shrug": 5,
+      "cs_darya/surprised": 1,
+      "cs_darya/serious": 2,
+      "cs_darya/smile": 3,
+      "cs_darya/thinking": 7,
+      "cs_darya/worried": 1
+    }
+  },
+  {
+    "file": "days/day01/19_dining_hall.rpy",
+    "poses": {
+      "cs_darya/shrug": 3,
+      "cs_darya/thinking": 2,
+      "cs_darya/smile": 2
+    }
+  },
+  {
+    "file": "days/day01/20_comrade_semen.rpy",
+    "poses": {
+      "cs_darya/shrug": 1,
+      "cs_darya/thinking": 1,
+      "cs_darya/surprised": 2
+    }
+  },
+  {
+    "file": "days/day01/part05/21_not_a_simple_question.rpy",
+    "poses": {
+      "cs_darya/shrug": 2,
+      "cs_darya/explaining": 1,
+      "cs_darya/shy_bend": 1,
+      "cs_darya/forearm_hold": 1
+    }
+  },
+  {
+    "file": "days/day01/part05/22_similar_journey.rpy",
+    "poses": {
+      "cs_darya/thinking": 1,
+      "cs_darya/explaining": 1,
+      "cs_darya/shrug": 2,
+      "cs_darya/worried": 1,
+      "cs_darya/smile": 1
+    }
+  },
+  {
+    "file": "days/day01/part05/23_familiar_story.rpy",
+    "poses": {
+      "cs_darya/forearm_hold": 1,
+      "cs_darya/explaining": 1,
+      "cs_darya/shrug": 1
+    }
+  },
+  {
+    "file": "days/day01/part05/24_working_group.rpy",
+    "poses": {
+      "cs_darya/shrug": 2,
+      "cs_darya/thinking": 2,
+      "cs_darya/smile": 2,
+      "cs_darya/worried": 1,
+      "cs_darya/amused": 1
+    }
+  },
+  {
+    "file": "days/day01/part06/25_after_lunch.rpy",
+    "poses": {
+      "cs_darya/tie_touch": 1,
+      "cs_darya/shrug": 1,
+      "cs_darya/amused": 1,
+      "cs_darya/smile": 1
+    }
+  },
+  {
+    "file": "days/day01/part06/26_new_home_path.rpy",
+    "poses": {
+      "cs_darya/shrug": 2,
+      "cs_darya/serious": 1,
+      "cs_darya/thinking": 2
+    }
+  },
+  {
+    "file": "days/day01/part06/27_house_for_two.rpy",
+    "poses": {
+      "cs_darya/shrug": 3,
+      "cs_darya/smile": 1,
+      "cs_darya/thinking": 1,
+      "cs_darya/amused": 1
+    }
+  },
+  {
+    "file": "days/day01/part06/28_without_witnesses.rpy",
+    "poses": {
+      "cs_darya/worried": 2,
+      "cs_darya/forearm_hold": 3,
+      "cs_darya/thinking": 3,
+      "cs_darya/arms_crossed": 1,
+      "cs_darya/surprised": 1,
+      "cs_darya/smile": 1
+    }
+  },
+  {
+    "file": "days/day01/part06/29_observation_log.rpy",
+    "poses": {
+      "cs_darya/thinking": 5,
+      "cs_darya/forearm_hold": 1,
+      "cs_darya/smile": 3,
+      "cs_darya/shrug": 2,
+      "cs_darya/amused": 1
+    }
+  },
+  {
+    "file": "days/day01/part06/30_at_the_door.rpy",
+    "poses": {
+      "cs_darya/serious": 1,
+      "cs_darya/shrug": 1,
+      "cs_darya/thinking": 2,
+      "cs_darya/amused": 1,
+      "cs_darya/smile": 2
+    }
+  },
+  {
+    "file": "days/day01/part07/31_visitors.rpy",
+    "poses": {
+      "cs_darya/shrug": 3,
+      "cs_darya/wave": 1,
+      "cs_darya/smile": 1,
+      "cs_darya/thinking": 1
+    }
+  },
+  {
+    "file": "days/day01/part07/32_an_idea.rpy",
+    "poses": {
+      "cs_darya/shrug": 3,
+      "cs_darya/thinking": 4,
+      "cs_darya/surprised": 1
+    }
+  },
+  {
+    "file": "days/day01/part07/33_clubs_path.rpy",
+    "poses": {
+      "cs_darya/shrug": 6,
+      "cs_darya/thinking": 2
+    }
+  },
+  {
+    "file": "days/day01/part07/34_engineers.rpy",
+    "poses": {
+      "cs_darya/shrug": 2
+    }
+  },
+  {
+    "file": "days/day01/part07/35_calculator.rpy",
+    "poses": {
+      "cs_darya/smile": 1,
+      "cs_darya/shrug": 1,
+      "cs_darya/thinking": 1,
+      "cs_darya/amused": 1
+    }
+  },
+  {
+    "file": "days/day01/part07/36_forty_six_years.rpy",
+    "poses": {
+      "cs_darya/thinking": 1,
+      "cs_darya/shrug": 1,
+      "cs_darya/amused": 1
+    }
+  },
+  {
+    "file": "days/day01/part07/37_transistors.rpy",
+    "poses": {
+      "cs_darya/amused": 1,
+      "cs_darya/shrug": 1
+    }
+  },
+  {
+    "file": "days/day01/part07/38_five_volts.rpy",
+    "poses": {
+      "cs_darya/amused": 1
+    }
+  },
+  {
+    "file": "days/day01/part07/39_future_in_pocket.rpy",
+    "poses": {
+      "cs_darya/smile": 1,
+      "cs_darya/amused": 1,
+      "cs_darya/thinking": 3,
+      "cs_darya/shrug": 3
+    }
+  },
+  {
+    "file": "days/day01/part08/40_after_clubs.rpy",
+    "poses": {
+      "cs_darya/shrug": 2,
+      "cs_darya/ear_touch": 1,
+      "cs_darya/amused": 1
+    }
+  },
+  {
+    "file": "days/day01/part08/41_confession.rpy",
+    "poses": {
+      "cs_darya/shrug": 2,
+      "cs_darya/surprise_hand": 2,
+      "cs_darya/thinking": 2,
+      "cs_darya/shy_bend": 1,
+      "cs_darya/forearm_hold": 1,
+      "cs_darya/shy_smile": 1,
+      "cs_darya/amused": 1
+    }
+  },
+  {
+    "file": "days/day01/part08/42_why_you.rpy",
+    "poses": {
+      "cs_darya/thinking": 3,
+      "cs_darya/ear_touch": 2,
+      "cs_darya/amused": 2,
+      "cs_darya/shrug": 1,
+      "cs_darya/worried": 1,
+      "cs_darya/shy_smile": 2,
+      "cs_darya/smile": 1,
+      "cs_darya/hands_on_hips": 1
+    }
+  },
+  {
+    "file": "days/day01/part08/43_square.rpy",
+    "poses": {
+      "cs_darya/shrug": 2,
+      "cs_darya/hands_on_hips": 1,
+      "cs_darya/amused": 1
+    }
+  },
+  {
+    "file": "days/day01/part08/44_independent_opinion.rpy",
+    "poses": {
+      "cs_darya/hands_on_hips": 1,
+      "cs_darya/surprised": 1,
+      "cs_darya/smile": 1
+    }
+  },
+  {
+    "file": "days/day01/part08/45_for_now.rpy",
+    "poses": {
+      "cs_darya/shy_smile": 4,
+      "cs_darya/shy_bend": 1,
+      "cs_darya/reaching": 2,
+      "cs_darya/amused": 1,
+      "cs_darya/arms_crossed": 1,
+      "cs_darya/thinking": 1,
+      "cs_darya/shrug": 1
+    }
+  },
+  {
+    "file": "days/day01/part09/46_resemblance.rpy",
+    "poses": {
+      "cs_darya/shrug": 1,
+      "cs_darya/thinking": 2,
+      "cs_darya/amused": 1
+    }
+  },
+  {
+    "file": "days/day01/part09/47_choice.rpy",
+    "poses": {
+      "cs_darya/shrug": 1
+    }
+  },
+  {
+    "file": "days/day01/part09/48_a_meet.rpy",
+    "poses": {
+      "cs_darya/shrug": 4,
+      "cs_darya/surprise_hand": 1,
+      "cs_darya/thinking": 1,
+      "cs_darya/amused": 2
+    }
+  },
+  {
+    "file": "days/day01/part09/48_b_pass.rpy",
+    "poses": {
+      "cs_darya/shrug": 2,
+      "cs_darya/thinking": 1
+    }
+  },
+  {
+    "file": "days/day01/part09/49_together.rpy",
+    "poses": {
+      "cs_darya/shrug": 1,
+      "cs_darya/thinking": 2,
+      "cs_darya/explaining": 1,
+      "cs_darya/smile": 1
+    }
+  },
+  {
+    "file": "days/day01/part09/50_no_saves.rpy",
+    "poses": {
+      "cs_darya/shrug": 1,
+      "cs_darya/thinking": 1,
+      "cs_darya/smile": 1,
+      "cs_darya/amused": 1
+    }
+  },
+  {
+    "file": "days/day01/part09/51_dinner_time.rpy",
+    "poses": {
+      "cs_darya/shrug": 1,
+      "cs_darya/thinking": 2,
+      "cs_darya/smile": 1
+    }
+  },
+  {
+    "file": "days/day01/part10/52_after_dinner.rpy",
+    "poses": {
+      "cs_darya/shrug": 2,
+      "cs_darya/thinking": 3,
+      "cs_darya/serious": 1,
+      "cs_darya/surprise_hand": 1
+    }
+  },
+  {
+    "file": "days/day01/part10/53_library_walk.rpy",
+    "poses": {
+      "cs_darya/shrug": 3,
+      "cs_darya/thinking": 2,
+      "cs_darya/explaining": 1,
+      "cs_darya/smile": 1,
+      "cs_darya/amused": 1
+    }
+  },
+  {
+    "file": "days/day01/part10/54_librarian.rpy",
+    "poses": {
+      "cs_darya/shrug": 1,
+      "cs_darya/smile": 1,
+      "cs_darya/thinking": 1
+    }
+  },
+  {
+    "file": "days/day01/part10/55_a_help.rpy",
+    "poses": {
+      "cs_darya/shrug": 1,
+      "cs_darya/thinking": 2,
+      "cs_darya/smile": 1
+    }
+  },
+  {
+    "file": "days/day01/part10/55_b_search_alone.rpy",
+    "poses": {
+      "cs_darya/shrug": 1
+    }
+  },
+  {
+    "file": "days/day01/part10/55_choice.rpy",
+    "poses": {}
+  },
+  {
+    "file": "days/day01/part10/56_old_books.rpy",
+    "poses": {
+      "cs_darya/thinking": 1,
+      "cs_darya/shrug": 1
+    }
+  },
+  {
+    "file": "days/day01/part10/57_slip_of_tongue.rpy",
+    "poses": {
+      "cs_darya/smile": 1,
+      "cs_darya/shy_bend": 1,
+      "cs_darya/arms_crossed": 1,
+      "cs_darya/thinking": 1
+    }
+  },
+  {
+    "file": "days/day01/part10/58_truth.rpy",
+    "poses": {
+      "cs_darya/shrug": 1,
+      "cs_darya/smile": 1
+    }
+  }
+]

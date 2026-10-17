@@ -1,0 +1,4612 @@
+{
+  "rows": [
+    {
+      "path": "sp/Dasha sprites/new/darya_pioneer_neutral.png",
+      "registered_name": "cs_darya neutral pioneer far",
+      "tag": "cs_darya",
+      "pose": "neutral",
+      "distance": "far",
+      "factor": 0.76507,
+      "visible_height": 1279.1999999999998,
+      "canvas": [
+        820,
+        1312
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/Dasha sprites/new/darya_pioneer_neutral.png",
+      "sha256": "f211f09fdc2f8ca09e066fac2f0a2191449f69eb1bb1fe11e17355fe7b8033de"
+    },
+    {
+      "path": "sp/Dasha sprites/new/darya_pioneer_neutral.png",
+      "registered_name": "cs_darya neutral pioneer normal",
+      "tag": "cs_darya",
+      "pose": "neutral",
+      "distance": "normal",
+      "factor": 0.93301,
+      "visible_height": 1560.0,
+      "canvas": [
+        1000,
+        1600
+      ],
+      "positions": [
+        "cs_darya_normal_right"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/Dasha sprites/new/darya_pioneer_neutral.png",
+      "sha256": "f211f09fdc2f8ca09e066fac2f0a2191449f69eb1bb1fe11e17355fe7b8033de"
+    },
+    {
+      "path": "sp/Dasha sprites/new/darya_pioneer_neutral.png",
+      "registered_name": "cs_darya neutral pioneer close",
+      "tag": "cs_darya",
+      "pose": "neutral",
+      "distance": "close",
+      "factor": 1.13828,
+      "visible_height": 1903.2,
+      "canvas": [
+        1220,
+        1952
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/Dasha sprites/new/darya_pioneer_neutral.png",
+      "sha256": "f211f09fdc2f8ca09e066fac2f0a2191449f69eb1bb1fe11e17355fe7b8033de"
+    },
+    {
+      "path": "sp/Dasha sprites/new/darya_pioneer_serious.png",
+      "registered_name": "cs_darya serious pioneer far",
+      "tag": "cs_darya",
+      "pose": "serious",
+      "distance": "far",
+      "factor": 0.78623,
+      "visible_height": 1279.1999999999998,
+      "canvas": [
+        820,
+        1312
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/Dasha sprites/new/darya_pioneer_serious.png",
+      "sha256": "1fef0ce7876e69d9b8cf5e4edccb14332177a2d52a4da964bd24523e9df9c08a"
+    },
+    {
+      "path": "sp/Dasha sprites/new/darya_pioneer_serious.png",
+      "registered_name": "cs_darya serious pioneer normal",
+      "tag": "cs_darya",
+      "pose": "serious",
+      "distance": "normal",
+      "factor": 0.95882,
+      "visible_height": 1560.0,
+      "canvas": [
+        1000,
+        1600
+      ],
+      "positions": [
+        "cs_darya_normal_center",
+        "cs_darya_normal_right"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/Dasha sprites/new/darya_pioneer_serious.png",
+      "sha256": "1fef0ce7876e69d9b8cf5e4edccb14332177a2d52a4da964bd24523e9df9c08a"
+    },
+    {
+      "path": "sp/Dasha sprites/new/darya_pioneer_serious.png",
+      "registered_name": "cs_darya serious pioneer close",
+      "tag": "cs_darya",
+      "pose": "serious",
+      "distance": "close",
+      "factor": 1.16976,
+      "visible_height": 1903.2,
+      "canvas": [
+        1220,
+        1952
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/Dasha sprites/new/darya_pioneer_serious.png",
+      "sha256": "1fef0ce7876e69d9b8cf5e4edccb14332177a2d52a4da964bd24523e9df9c08a"
+    },
+    {
+      "path": "sp/Dasha sprites/new/darya_pioneer_surprised.png",
+      "registered_name": "cs_darya surprised pioneer far",
+      "tag": "cs_darya",
+      "pose": "surprised",
+      "distance": "far",
+      "factor": 0.76507,
+      "visible_height": 1279.1999999999998,
+      "canvas": [
+        820,
+        1312
+      ],
+      "positions": [
+        "cs_darya_far_center",
+        "cs_darya_far_left"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/Dasha sprites/new/darya_pioneer_surprised.png",
+      "sha256": "56c355a405aea9ccc120a964b7cb4d24a9cf22c9837617715e15d9c1e6b27826"
+    },
+    {
+      "path": "sp/Dasha sprites/new/darya_pioneer_surprised.png",
+      "registered_name": "cs_darya surprised pioneer normal",
+      "tag": "cs_darya",
+      "pose": "surprised",
+      "distance": "normal",
+      "factor": 0.93301,
+      "visible_height": 1560.0,
+      "canvas": [
+        1000,
+        1600
+      ],
+      "positions": [
+        "cs_darya_normal_center",
+        "cs_darya_normal_right"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/Dasha sprites/new/darya_pioneer_surprised.png",
+      "sha256": "56c355a405aea9ccc120a964b7cb4d24a9cf22c9837617715e15d9c1e6b27826"
+    },
+    {
+      "path": "sp/Dasha sprites/new/darya_pioneer_surprised.png",
+      "registered_name": "cs_darya surprised pioneer close",
+      "tag": "cs_darya",
+      "pose": "surprised",
+      "distance": "close",
+      "factor": 1.13828,
+      "visible_height": 1903.2,
+      "canvas": [
+        1220,
+        1952
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/Dasha sprites/new/darya_pioneer_surprised.png",
+      "sha256": "56c355a405aea9ccc120a964b7cb4d24a9cf22c9837617715e15d9c1e6b27826"
+    },
+    {
+      "path": "sp/Dasha sprites/new/darya_pioneer_explaining.png",
+      "registered_name": "cs_darya explaining pioneer far",
+      "tag": "cs_darya",
+      "pose": "explaining",
+      "distance": "far",
+      "factor": 0.76507,
+      "visible_height": 1279.1999999999998,
+      "canvas": [
+        820,
+        1312
+      ],
+      "positions": [
+        "cs_darya_far_left",
+        "cs_darya_far_right"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/Dasha sprites/new/darya_pioneer_explaining.png",
+      "sha256": "8aa11b0dc98e573419ef86ae881aa26ae9adc43e5d2fdaa4414b0f081d02e29d"
+    },
+    {
+      "path": "sp/Dasha sprites/new/darya_pioneer_explaining.png",
+      "registered_name": "cs_darya explaining pioneer normal",
+      "tag": "cs_darya",
+      "pose": "explaining",
+      "distance": "normal",
+      "factor": 0.93301,
+      "visible_height": 1560.0,
+      "canvas": [
+        1000,
+        1600
+      ],
+      "positions": [
+        "cs_darya_normal_center",
+        "cs_darya_normal_left",
+        "cs_darya_normal_right"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/Dasha sprites/new/darya_pioneer_explaining.png",
+      "sha256": "8aa11b0dc98e573419ef86ae881aa26ae9adc43e5d2fdaa4414b0f081d02e29d"
+    },
+    {
+      "path": "sp/Dasha sprites/new/darya_pioneer_explaining.png",
+      "registered_name": "cs_darya explaining pioneer close",
+      "tag": "cs_darya",
+      "pose": "explaining",
+      "distance": "close",
+      "factor": 1.13828,
+      "visible_height": 1903.2,
+      "canvas": [
+        1220,
+        1952
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/Dasha sprites/new/darya_pioneer_explaining.png",
+      "sha256": "8aa11b0dc98e573419ef86ae881aa26ae9adc43e5d2fdaa4414b0f081d02e29d"
+    },
+    {
+      "path": "sp/Dasha sprites/new/darya_pioneer_worried.png",
+      "registered_name": "cs_darya worried pioneer far",
+      "tag": "cs_darya",
+      "pose": "worried",
+      "distance": "far",
+      "factor": 0.76968,
+      "visible_height": 1279.1999999999998,
+      "canvas": [
+        820,
+        1312
+      ],
+      "positions": [
+        "cs_darya_far_left"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/Dasha sprites/new/darya_pioneer_worried.png",
+      "sha256": "037403acd9017458bcfe4a3ac26bb11d3ca5bdc9833a7b308d2e4135f4d8aad8"
+    },
+    {
+      "path": "sp/Dasha sprites/new/darya_pioneer_worried.png",
+      "registered_name": "cs_darya worried pioneer normal",
+      "tag": "cs_darya",
+      "pose": "worried",
+      "distance": "normal",
+      "factor": 0.93863,
+      "visible_height": 1560.0,
+      "canvas": [
+        1000,
+        1600
+      ],
+      "positions": [
+        "cs_darya_normal_center",
+        "cs_darya_normal_left",
+        "cs_darya_normal_right"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/Dasha sprites/new/darya_pioneer_worried.png",
+      "sha256": "037403acd9017458bcfe4a3ac26bb11d3ca5bdc9833a7b308d2e4135f4d8aad8"
+    },
+    {
+      "path": "sp/Dasha sprites/new/darya_pioneer_worried.png",
+      "registered_name": "cs_darya worried pioneer close",
+      "tag": "cs_darya",
+      "pose": "worried",
+      "distance": "close",
+      "factor": 1.14513,
+      "visible_height": 1903.2,
+      "canvas": [
+        1220,
+        1952
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/Dasha sprites/new/darya_pioneer_worried.png",
+      "sha256": "037403acd9017458bcfe4a3ac26bb11d3ca5bdc9833a7b308d2e4135f4d8aad8"
+    },
+    {
+      "path": "sp/Dasha sprites/new/darya_pioneer_smile.png",
+      "registered_name": "cs_darya smile pioneer far",
+      "tag": "cs_darya",
+      "pose": "smile",
+      "distance": "far",
+      "factor": 0.77387,
+      "visible_height": 1279.1999999999998,
+      "canvas": [
+        820,
+        1312
+      ],
+      "positions": [
+        "cs_darya_far_center",
+        "cs_darya_far_left",
+        "cs_darya_far_right"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/Dasha sprites/new/darya_pioneer_surprised.png",
+      "sha256": "0a4ec74436b41ab7c147fe338fd970a27ba5997d5e3ef9e0b624303cd88faf95"
+    },
+    {
+      "path": "sp/Dasha sprites/new/darya_pioneer_smile.png",
+      "registered_name": "cs_darya smile pioneer normal",
+      "tag": "cs_darya",
+      "pose": "smile",
+      "distance": "normal",
+      "factor": 0.94374,
+      "visible_height": 1560.0,
+      "canvas": [
+        1000,
+        1600
+      ],
+      "positions": [
+        "cs_darya_normal_center",
+        "cs_darya_normal_left",
+        "cs_darya_normal_right"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/Dasha sprites/new/darya_pioneer_surprised.png",
+      "sha256": "0a4ec74436b41ab7c147fe338fd970a27ba5997d5e3ef9e0b624303cd88faf95"
+    },
+    {
+      "path": "sp/Dasha sprites/new/darya_pioneer_smile.png",
+      "registered_name": "cs_darya smile pioneer close",
+      "tag": "cs_darya",
+      "pose": "smile",
+      "distance": "close",
+      "factor": 1.15136,
+      "visible_height": 1903.2,
+      "canvas": [
+        1220,
+        1952
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/Dasha sprites/new/darya_pioneer_surprised.png",
+      "sha256": "0a4ec74436b41ab7c147fe338fd970a27ba5997d5e3ef9e0b624303cd88faf95"
+    },
+    {
+      "path": "sp/Dasha sprites/new/darya_pioneer_thinking.png",
+      "registered_name": "cs_darya thinking pioneer far",
+      "tag": "cs_darya",
+      "pose": "thinking",
+      "distance": "far",
+      "factor": 0.76507,
+      "visible_height": 1279.1999999999998,
+      "canvas": [
+        820,
+        1312
+      ],
+      "positions": [
+        "cs_darya_far_center",
+        "cs_darya_far_left",
+        "cs_darya_far_right"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/Dasha sprites/new/darya_pioneer_thinking.png",
+      "sha256": "3b1d64eaca09a715ec72babc3ba4cbdcc0e5a4949903828f4f88db2e1f6cedab"
+    },
+    {
+      "path": "sp/Dasha sprites/new/darya_pioneer_thinking.png",
+      "registered_name": "cs_darya thinking pioneer normal",
+      "tag": "cs_darya",
+      "pose": "thinking",
+      "distance": "normal",
+      "factor": 0.93301,
+      "visible_height": 1560.0,
+      "canvas": [
+        1000,
+        1600
+      ],
+      "positions": [
+        "cs_darya_normal_center",
+        "cs_darya_normal_left",
+        "cs_darya_normal_right"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/Dasha sprites/new/darya_pioneer_thinking.png",
+      "sha256": "3b1d64eaca09a715ec72babc3ba4cbdcc0e5a4949903828f4f88db2e1f6cedab"
+    },
+    {
+      "path": "sp/Dasha sprites/new/darya_pioneer_thinking.png",
+      "registered_name": "cs_darya thinking pioneer close",
+      "tag": "cs_darya",
+      "pose": "thinking",
+      "distance": "close",
+      "factor": 1.13828,
+      "visible_height": 1903.2,
+      "canvas": [
+        1220,
+        1952
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/Dasha sprites/new/darya_pioneer_thinking.png",
+      "sha256": "3b1d64eaca09a715ec72babc3ba4cbdcc0e5a4949903828f4f88db2e1f6cedab"
+    },
+    {
+      "path": "sp/Dasha sprites/new/darya_pioneer_wave.png",
+      "registered_name": "cs_darya wave pioneer far",
+      "tag": "cs_darya",
+      "pose": "wave",
+      "distance": "far",
+      "factor": 0.7748,
+      "visible_height": 1279.1999999999998,
+      "canvas": [
+        820,
+        1312
+      ],
+      "positions": [
+        "cs_darya_far_center"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/Dasha sprites/new/darya_pioneer_wave.png",
+      "sha256": "5ed9e0e64fe8197dbba7b149a3c226f4a740f2a3e306bf144f51ebb960f38c67"
+    },
+    {
+      "path": "sp/Dasha sprites/new/darya_pioneer_wave.png",
+      "registered_name": "cs_darya wave pioneer normal",
+      "tag": "cs_darya",
+      "pose": "wave",
+      "distance": "normal",
+      "factor": 0.94488,
+      "visible_height": 1560.0,
+      "canvas": [
+        1000,
+        1600
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/Dasha sprites/new/darya_pioneer_wave.png",
+      "sha256": "5ed9e0e64fe8197dbba7b149a3c226f4a740f2a3e306bf144f51ebb960f38c67"
+    },
+    {
+      "path": "sp/Dasha sprites/new/darya_pioneer_wave.png",
+      "registered_name": "cs_darya wave pioneer close",
+      "tag": "cs_darya",
+      "pose": "wave",
+      "distance": "close",
+      "factor": 1.15276,
+      "visible_height": 1903.2,
+      "canvas": [
+        1220,
+        1952
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/Dasha sprites/new/darya_pioneer_wave.png",
+      "sha256": "5ed9e0e64fe8197dbba7b149a3c226f4a740f2a3e306bf144f51ebb960f38c67"
+    },
+    {
+      "path": "sp/Dasha sprites/new/darya_pioneer_arms_crossed.png",
+      "registered_name": "cs_darya arms_crossed pioneer far",
+      "tag": "cs_darya",
+      "pose": "arms_crossed",
+      "distance": "far",
+      "factor": 0.76507,
+      "visible_height": 1279.1999999999998,
+      "canvas": [
+        820,
+        1312
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/Dasha sprites/new/darya_pioneer_arms_crossed.png",
+      "sha256": "e7b7021ee41887c53a7fe670b2c92653f9d47c96a7bdcdfcbfd5f2b1b44b4c8e"
+    },
+    {
+      "path": "sp/Dasha sprites/new/darya_pioneer_arms_crossed.png",
+      "registered_name": "cs_darya arms_crossed pioneer normal",
+      "tag": "cs_darya",
+      "pose": "arms_crossed",
+      "distance": "normal",
+      "factor": 0.93301,
+      "visible_height": 1560.0,
+      "canvas": [
+        1000,
+        1600
+      ],
+      "positions": [
+        "cs_darya_normal_center",
+        "cs_darya_normal_right"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/Dasha sprites/new/darya_pioneer_arms_crossed.png",
+      "sha256": "e7b7021ee41887c53a7fe670b2c92653f9d47c96a7bdcdfcbfd5f2b1b44b4c8e"
+    },
+    {
+      "path": "sp/Dasha sprites/new/darya_pioneer_arms_crossed.png",
+      "registered_name": "cs_darya arms_crossed pioneer close",
+      "tag": "cs_darya",
+      "pose": "arms_crossed",
+      "distance": "close",
+      "factor": 1.13828,
+      "visible_height": 1903.2,
+      "canvas": [
+        1220,
+        1952
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/Dasha sprites/new/darya_pioneer_arms_crossed.png",
+      "sha256": "e7b7021ee41887c53a7fe670b2c92653f9d47c96a7bdcdfcbfd5f2b1b44b4c8e"
+    },
+    {
+      "path": "sp/Dasha sprites/new/darya_pioneer_shrug.png",
+      "registered_name": "cs_darya shrug pioneer far",
+      "tag": "cs_darya",
+      "pose": "shrug",
+      "distance": "far",
+      "factor": 0.77153,
+      "visible_height": 1279.1999999999998,
+      "canvas": [
+        820,
+        1312
+      ],
+      "positions": [
+        "cs_darya_far_center",
+        "cs_darya_far_left",
+        "cs_darya_far_right"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/Dasha sprites/new/darya_pioneer_shrug.png",
+      "sha256": "8e7ed7ba09764a012694f15a245d64a9364a143acdab87e962cd97517ab739c9"
+    },
+    {
+      "path": "sp/Dasha sprites/new/darya_pioneer_shrug.png",
+      "registered_name": "cs_darya shrug pioneer normal",
+      "tag": "cs_darya",
+      "pose": "shrug",
+      "distance": "normal",
+      "factor": 0.94089,
+      "visible_height": 1560.0,
+      "canvas": [
+        1000,
+        1600
+      ],
+      "positions": [
+        "cs_darya_normal_center",
+        "cs_darya_normal_left",
+        "cs_darya_normal_right"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/Dasha sprites/new/darya_pioneer_shrug.png",
+      "sha256": "8e7ed7ba09764a012694f15a245d64a9364a143acdab87e962cd97517ab739c9"
+    },
+    {
+      "path": "sp/Dasha sprites/new/darya_pioneer_shrug.png",
+      "registered_name": "cs_darya shrug pioneer close",
+      "tag": "cs_darya",
+      "pose": "shrug",
+      "distance": "close",
+      "factor": 1.14789,
+      "visible_height": 1903.2,
+      "canvas": [
+        1220,
+        1952
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/Dasha sprites/new/darya_pioneer_shrug.png",
+      "sha256": "8e7ed7ba09764a012694f15a245d64a9364a143acdab87e962cd97517ab739c9"
+    },
+    {
+      "path": "sp/Dasha sprites/new/darya_pioneer_shy_smile.png",
+      "registered_name": "cs_darya shy_smile pioneer far",
+      "tag": "cs_darya",
+      "pose": "shy_smile",
+      "distance": "far",
+      "factor": 0.76507,
+      "visible_height": 1279.1999999999998,
+      "canvas": [
+        820,
+        1312
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/Dasha sprites/new/darya_pioneer_shy_smile.png",
+      "sha256": "5eda9f5c4c1e9fa7eda71eb0d22e2fbfc79ac17f5c37b9d489cc2a5e800d6926"
+    },
+    {
+      "path": "sp/Dasha sprites/new/darya_pioneer_shy_smile.png",
+      "registered_name": "cs_darya shy_smile pioneer normal",
+      "tag": "cs_darya",
+      "pose": "shy_smile",
+      "distance": "normal",
+      "factor": 0.93301,
+      "visible_height": 1560.0,
+      "canvas": [
+        1000,
+        1600
+      ],
+      "positions": [
+        "cs_darya_normal_center",
+        "cs_darya_normal_right"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/Dasha sprites/new/darya_pioneer_shy_smile.png",
+      "sha256": "5eda9f5c4c1e9fa7eda71eb0d22e2fbfc79ac17f5c37b9d489cc2a5e800d6926"
+    },
+    {
+      "path": "sp/Dasha sprites/new/darya_pioneer_shy_smile.png",
+      "registered_name": "cs_darya shy_smile pioneer close",
+      "tag": "cs_darya",
+      "pose": "shy_smile",
+      "distance": "close",
+      "factor": 1.13828,
+      "visible_height": 1903.2,
+      "canvas": [
+        1220,
+        1952
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/Dasha sprites/new/darya_pioneer_shy_smile.png",
+      "sha256": "5eda9f5c4c1e9fa7eda71eb0d22e2fbfc79ac17f5c37b9d489cc2a5e800d6926"
+    },
+    {
+      "path": "sp/Dasha sprites/new/darya_pioneer_ear_touch.png",
+      "registered_name": "cs_darya ear_touch pioneer far",
+      "tag": "cs_darya",
+      "pose": "ear_touch",
+      "distance": "far",
+      "factor": 0.76737,
+      "visible_height": 1279.1999999999998,
+      "canvas": [
+        820,
+        1312
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/Dasha sprites/new/darya_pioneer_ear_touch.png",
+      "sha256": "594ed4f530533fae1ba09c051336a17f0d6f709c9a45b14774f60f259da81d80"
+    },
+    {
+      "path": "sp/Dasha sprites/new/darya_pioneer_ear_touch.png",
+      "registered_name": "cs_darya ear_touch pioneer normal",
+      "tag": "cs_darya",
+      "pose": "ear_touch",
+      "distance": "normal",
+      "factor": 0.93581,
+      "visible_height": 1560.0,
+      "canvas": [
+        1000,
+        1600
+      ],
+      "positions": [
+        "cs_darya_normal_center",
+        "cs_darya_normal_right"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/Dasha sprites/new/darya_pioneer_ear_touch.png",
+      "sha256": "594ed4f530533fae1ba09c051336a17f0d6f709c9a45b14774f60f259da81d80"
+    },
+    {
+      "path": "sp/Dasha sprites/new/darya_pioneer_ear_touch.png",
+      "registered_name": "cs_darya ear_touch pioneer close",
+      "tag": "cs_darya",
+      "pose": "ear_touch",
+      "distance": "close",
+      "factor": 1.14169,
+      "visible_height": 1903.2,
+      "canvas": [
+        1220,
+        1952
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/Dasha sprites/new/darya_pioneer_ear_touch.png",
+      "sha256": "594ed4f530533fae1ba09c051336a17f0d6f709c9a45b14774f60f259da81d80"
+    },
+    {
+      "path": "sp/Dasha sprites/new/darya_pioneer_hands_on_hips.png",
+      "registered_name": "cs_darya hands_on_hips pioneer far",
+      "tag": "cs_darya",
+      "pose": "hands_on_hips",
+      "distance": "far",
+      "factor": 0.77293,
+      "visible_height": 1279.1999999999998,
+      "canvas": [
+        820,
+        1312
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/Dasha sprites/new/darya_pioneer_hands_on_hips.png",
+      "sha256": "12c591b1dac75779cd700bdc48568c26df50963fa490457b8e6c32336de560d3"
+    },
+    {
+      "path": "sp/Dasha sprites/new/darya_pioneer_hands_on_hips.png",
+      "registered_name": "cs_darya hands_on_hips pioneer normal",
+      "tag": "cs_darya",
+      "pose": "hands_on_hips",
+      "distance": "normal",
+      "factor": 0.9426,
+      "visible_height": 1560.0,
+      "canvas": [
+        1000,
+        1600
+      ],
+      "positions": [
+        "cs_darya_normal_center",
+        "cs_darya_normal_right"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/Dasha sprites/new/darya_pioneer_hands_on_hips.png",
+      "sha256": "12c591b1dac75779cd700bdc48568c26df50963fa490457b8e6c32336de560d3"
+    },
+    {
+      "path": "sp/Dasha sprites/new/darya_pioneer_hands_on_hips.png",
+      "registered_name": "cs_darya hands_on_hips pioneer close",
+      "tag": "cs_darya",
+      "pose": "hands_on_hips",
+      "distance": "close",
+      "factor": 1.14997,
+      "visible_height": 1903.2,
+      "canvas": [
+        1220,
+        1952
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/Dasha sprites/new/darya_pioneer_hands_on_hips.png",
+      "sha256": "12c591b1dac75779cd700bdc48568c26df50963fa490457b8e6c32336de560d3"
+    },
+    {
+      "path": "sp/Dasha sprites/new/darya_pioneer_hair_touch.png",
+      "registered_name": "cs_darya hair_touch pioneer far",
+      "tag": "cs_darya",
+      "pose": "hair_touch",
+      "distance": "far",
+      "factor": 0.77858,
+      "visible_height": 1279.1999999999998,
+      "canvas": [
+        820,
+        1312
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/Dasha sprites/new/darya_pioneer_hair_touch.png",
+      "sha256": "38882a9d71ca7cb5150eb8e5501e58e985c6a2e8f2a9bc61cb3945b1bb5cabfc"
+    },
+    {
+      "path": "sp/Dasha sprites/new/darya_pioneer_hair_touch.png",
+      "registered_name": "cs_darya hair_touch pioneer normal",
+      "tag": "cs_darya",
+      "pose": "hair_touch",
+      "distance": "normal",
+      "factor": 0.94948,
+      "visible_height": 1560.0,
+      "canvas": [
+        1000,
+        1600
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/Dasha sprites/new/darya_pioneer_hair_touch.png",
+      "sha256": "38882a9d71ca7cb5150eb8e5501e58e985c6a2e8f2a9bc61cb3945b1bb5cabfc"
+    },
+    {
+      "path": "sp/Dasha sprites/new/darya_pioneer_hair_touch.png",
+      "registered_name": "cs_darya hair_touch pioneer close",
+      "tag": "cs_darya",
+      "pose": "hair_touch",
+      "distance": "close",
+      "factor": 1.15837,
+      "visible_height": 1903.2,
+      "canvas": [
+        1220,
+        1952
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/Dasha sprites/new/darya_pioneer_hair_touch.png",
+      "sha256": "38882a9d71ca7cb5150eb8e5501e58e985c6a2e8f2a9bc61cb3945b1bb5cabfc"
+    },
+    {
+      "path": "sp/Dasha sprites/new/darya_pioneer_tie_touch.png",
+      "registered_name": "cs_darya tie_touch pioneer far",
+      "tag": "cs_darya",
+      "pose": "tie_touch",
+      "distance": "far",
+      "factor": 0.76875,
+      "visible_height": 1279.1999999999998,
+      "canvas": [
+        820,
+        1312
+      ],
+      "positions": [
+        "cs_darya_far_left"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/Dasha sprites/new/darya_pioneer_tie_touch.png",
+      "sha256": "98aa7e90efc5644c7dc8b31d6cd31b5db9e11b697b40d7bec8cb699a294eb0ce"
+    },
+    {
+      "path": "sp/Dasha sprites/new/darya_pioneer_tie_touch.png",
+      "registered_name": "cs_darya tie_touch pioneer normal",
+      "tag": "cs_darya",
+      "pose": "tie_touch",
+      "distance": "normal",
+      "factor": 0.9375,
+      "visible_height": 1560.0,
+      "canvas": [
+        1000,
+        1600
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/Dasha sprites/new/darya_pioneer_tie_touch.png",
+      "sha256": "98aa7e90efc5644c7dc8b31d6cd31b5db9e11b697b40d7bec8cb699a294eb0ce"
+    },
+    {
+      "path": "sp/Dasha sprites/new/darya_pioneer_tie_touch.png",
+      "registered_name": "cs_darya tie_touch pioneer close",
+      "tag": "cs_darya",
+      "pose": "tie_touch",
+      "distance": "close",
+      "factor": 1.14375,
+      "visible_height": 1903.2,
+      "canvas": [
+        1220,
+        1952
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/Dasha sprites/new/darya_pioneer_tie_touch.png",
+      "sha256": "98aa7e90efc5644c7dc8b31d6cd31b5db9e11b697b40d7bec8cb699a294eb0ce"
+    },
+    {
+      "path": "sp/Dasha sprites/new/darya_pioneer_amused.png",
+      "registered_name": "cs_darya amused pioneer far",
+      "tag": "cs_darya",
+      "pose": "amused",
+      "distance": "far",
+      "factor": 0.77107,
+      "visible_height": 1279.1999999999998,
+      "canvas": [
+        820,
+        1312
+      ],
+      "positions": [
+        "cs_darya_far_center",
+        "cs_darya_far_left",
+        "cs_darya_far_right"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/Dasha sprites/new/darya_pioneer_amused.png",
+      "sha256": "783a9e0fd2f23eca50f948ffdc545c7505ded9fdc82fc95599da43eb20f375ba"
+    },
+    {
+      "path": "sp/Dasha sprites/new/darya_pioneer_amused.png",
+      "registered_name": "cs_darya amused pioneer normal",
+      "tag": "cs_darya",
+      "pose": "amused",
+      "distance": "normal",
+      "factor": 0.94033,
+      "visible_height": 1560.0,
+      "canvas": [
+        1000,
+        1600
+      ],
+      "positions": [
+        "cs_darya_normal_center",
+        "cs_darya_normal_right"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/Dasha sprites/new/darya_pioneer_amused.png",
+      "sha256": "783a9e0fd2f23eca50f948ffdc545c7505ded9fdc82fc95599da43eb20f375ba"
+    },
+    {
+      "path": "sp/Dasha sprites/new/darya_pioneer_amused.png",
+      "registered_name": "cs_darya amused pioneer close",
+      "tag": "cs_darya",
+      "pose": "amused",
+      "distance": "close",
+      "factor": 1.1472,
+      "visible_height": 1903.2,
+      "canvas": [
+        1220,
+        1952
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/Dasha sprites/new/darya_pioneer_amused.png",
+      "sha256": "783a9e0fd2f23eca50f948ffdc545c7505ded9fdc82fc95599da43eb20f375ba"
+    },
+    {
+      "path": "sp/Dasha sprites/new/darya_pioneer_shy_bend.png",
+      "registered_name": "cs_darya shy_bend pioneer far",
+      "tag": "cs_darya",
+      "pose": "shy_bend",
+      "distance": "far",
+      "factor": 0.76507,
+      "visible_height": 1279.1999999999998,
+      "canvas": [
+        820,
+        1312
+      ],
+      "positions": [
+        "cs_darya_far_left"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/Dasha sprites/new/darya_pioneer_shy_bend.png",
+      "sha256": "cbba59d525824598c1689e82cc43ae299ef74dc727ebc5ff77bbc5f736934612"
+    },
+    {
+      "path": "sp/Dasha sprites/new/darya_pioneer_shy_bend.png",
+      "registered_name": "cs_darya shy_bend pioneer normal",
+      "tag": "cs_darya",
+      "pose": "shy_bend",
+      "distance": "normal",
+      "factor": 0.93301,
+      "visible_height": 1560.0,
+      "canvas": [
+        1000,
+        1600
+      ],
+      "positions": [
+        "cs_darya_normal_center",
+        "cs_darya_normal_right"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/Dasha sprites/new/darya_pioneer_shy_bend.png",
+      "sha256": "cbba59d525824598c1689e82cc43ae299ef74dc727ebc5ff77bbc5f736934612"
+    },
+    {
+      "path": "sp/Dasha sprites/new/darya_pioneer_shy_bend.png",
+      "registered_name": "cs_darya shy_bend pioneer close",
+      "tag": "cs_darya",
+      "pose": "shy_bend",
+      "distance": "close",
+      "factor": 1.13828,
+      "visible_height": 1903.2,
+      "canvas": [
+        1220,
+        1952
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/Dasha sprites/new/darya_pioneer_shy_bend.png",
+      "sha256": "cbba59d525824598c1689e82cc43ae299ef74dc727ebc5ff77bbc5f736934612"
+    },
+    {
+      "path": "sp/Dasha sprites/new/darya_pioneer_reaching.png",
+      "registered_name": "cs_darya reaching pioneer far",
+      "tag": "cs_darya",
+      "pose": "reaching",
+      "distance": "far",
+      "factor": 0.76507,
+      "visible_height": 1279.1999999999998,
+      "canvas": [
+        820,
+        1312
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/Dasha sprites/new/darya_pioneer_reaching.png",
+      "sha256": "384ccab7a6c0d39a3ca53f8a1cfbf7ec902f89507c70eb8b8034cfc9bc9d2dfa"
+    },
+    {
+      "path": "sp/Dasha sprites/new/darya_pioneer_reaching.png",
+      "registered_name": "cs_darya reaching pioneer normal",
+      "tag": "cs_darya",
+      "pose": "reaching",
+      "distance": "normal",
+      "factor": 0.93301,
+      "visible_height": 1560.0,
+      "canvas": [
+        1000,
+        1600
+      ],
+      "positions": [
+        "cs_darya_normal_center"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/Dasha sprites/new/darya_pioneer_reaching.png",
+      "sha256": "384ccab7a6c0d39a3ca53f8a1cfbf7ec902f89507c70eb8b8034cfc9bc9d2dfa"
+    },
+    {
+      "path": "sp/Dasha sprites/new/darya_pioneer_reaching.png",
+      "registered_name": "cs_darya reaching pioneer close",
+      "tag": "cs_darya",
+      "pose": "reaching",
+      "distance": "close",
+      "factor": 1.13828,
+      "visible_height": 1903.2,
+      "canvas": [
+        1220,
+        1952
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/Dasha sprites/new/darya_pioneer_reaching.png",
+      "sha256": "384ccab7a6c0d39a3ca53f8a1cfbf7ec902f89507c70eb8b8034cfc9bc9d2dfa"
+    },
+    {
+      "path": "sp/Dasha sprites/new/darya_pioneer_forearm_hold.png",
+      "registered_name": "cs_darya forearm_hold pioneer far",
+      "tag": "cs_darya",
+      "pose": "forearm_hold",
+      "distance": "far",
+      "factor": 0.76507,
+      "visible_height": 1279.1999999999998,
+      "canvas": [
+        820,
+        1312
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/Dasha sprites/new/darya_pioneer_forearm_hold.png",
+      "sha256": "cf64ae37f2fd2a0f1eab71fafd3d4caaf702459fc3ae248bd4c359d5381debd7"
+    },
+    {
+      "path": "sp/Dasha sprites/new/darya_pioneer_forearm_hold.png",
+      "registered_name": "cs_darya forearm_hold pioneer normal",
+      "tag": "cs_darya",
+      "pose": "forearm_hold",
+      "distance": "normal",
+      "factor": 0.93301,
+      "visible_height": 1560.0,
+      "canvas": [
+        1000,
+        1600
+      ],
+      "positions": [
+        "cs_darya_normal_center",
+        "cs_darya_normal_left",
+        "cs_darya_normal_right"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/Dasha sprites/new/darya_pioneer_forearm_hold.png",
+      "sha256": "cf64ae37f2fd2a0f1eab71fafd3d4caaf702459fc3ae248bd4c359d5381debd7"
+    },
+    {
+      "path": "sp/Dasha sprites/new/darya_pioneer_forearm_hold.png",
+      "registered_name": "cs_darya forearm_hold pioneer close",
+      "tag": "cs_darya",
+      "pose": "forearm_hold",
+      "distance": "close",
+      "factor": 1.13828,
+      "visible_height": 1903.2,
+      "canvas": [
+        1220,
+        1952
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/Dasha sprites/new/darya_pioneer_forearm_hold.png",
+      "sha256": "cf64ae37f2fd2a0f1eab71fafd3d4caaf702459fc3ae248bd4c359d5381debd7"
+    },
+    {
+      "path": "sp/Dasha sprites/new/darya_pioneer_surprise_hand.png",
+      "registered_name": "cs_darya surprise_hand pioneer far",
+      "tag": "cs_darya",
+      "pose": "surprise_hand",
+      "distance": "far",
+      "factor": 0.76507,
+      "visible_height": 1279.1999999999998,
+      "canvas": [
+        820,
+        1312
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/Dasha sprites/new/darya_pioneer_surprise_hand.png",
+      "sha256": "e793dbd644ec1d44e8613190e50b6ca2b79a01acad1f1d5bf1d66b91d1467938"
+    },
+    {
+      "path": "sp/Dasha sprites/new/darya_pioneer_surprise_hand.png",
+      "registered_name": "cs_darya surprise_hand pioneer normal",
+      "tag": "cs_darya",
+      "pose": "surprise_hand",
+      "distance": "normal",
+      "factor": 0.93301,
+      "visible_height": 1560.0,
+      "canvas": [
+        1000,
+        1600
+      ],
+      "positions": [
+        "cs_darya_normal_center",
+        "cs_darya_normal_right"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/Dasha sprites/new/darya_pioneer_surprise_hand.png",
+      "sha256": "e793dbd644ec1d44e8613190e50b6ca2b79a01acad1f1d5bf1d66b91d1467938"
+    },
+    {
+      "path": "sp/Dasha sprites/new/darya_pioneer_surprise_hand.png",
+      "registered_name": "cs_darya surprise_hand pioneer close",
+      "tag": "cs_darya",
+      "pose": "surprise_hand",
+      "distance": "close",
+      "factor": 1.13828,
+      "visible_height": 1903.2,
+      "canvas": [
+        1220,
+        1952
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/Dasha sprites/new/darya_pioneer_surprise_hand.png",
+      "sha256": "e793dbd644ec1d44e8613190e50b6ca2b79a01acad1f1d5bf1d66b91d1467938"
+    },
+    {
+      "path": "sp/winter/1.png",
+      "registered_name": "cs_dasha_winter neutral far",
+      "tag": "cs_dasha_winter",
+      "pose": "neutral",
+      "distance": "far",
+      "factor": 0.76507,
+      "visible_height": 1279.1999999999998,
+      "canvas": [
+        820,
+        1312
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/winter/1.png",
+      "sha256": "78ef13a12ff971c7ef010a9c627506360127257b62bc16c3bbc77e10cc2e116e"
+    },
+    {
+      "path": "sp/winter/1.png",
+      "registered_name": "cs_dasha_winter neutral normal",
+      "tag": "cs_dasha_winter",
+      "pose": "neutral",
+      "distance": "normal",
+      "factor": 0.93301,
+      "visible_height": 1560.0,
+      "canvas": [
+        1000,
+        1600
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/winter/1.png",
+      "sha256": "78ef13a12ff971c7ef010a9c627506360127257b62bc16c3bbc77e10cc2e116e"
+    },
+    {
+      "path": "sp/winter/1.png",
+      "registered_name": "cs_dasha_winter neutral close",
+      "tag": "cs_dasha_winter",
+      "pose": "neutral",
+      "distance": "close",
+      "factor": 1.13828,
+      "visible_height": 1903.2,
+      "canvas": [
+        1220,
+        1952
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/winter/1.png",
+      "sha256": "78ef13a12ff971c7ef010a9c627506360127257b62bc16c3bbc77e10cc2e116e"
+    },
+    {
+      "path": "sp/winter/2.png",
+      "registered_name": "cs_dasha_winter smile far",
+      "tag": "cs_dasha_winter",
+      "pose": "smile",
+      "distance": "far",
+      "factor": 0.76507,
+      "visible_height": 1279.1999999999998,
+      "canvas": [
+        820,
+        1312
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/winter/2.png",
+      "sha256": "02c450786aa4fb2c744ceac822ba377b20883812cd54c1d7f1d439fdc018822b"
+    },
+    {
+      "path": "sp/winter/2.png",
+      "registered_name": "cs_dasha_winter smile normal",
+      "tag": "cs_dasha_winter",
+      "pose": "smile",
+      "distance": "normal",
+      "factor": 0.93301,
+      "visible_height": 1560.0,
+      "canvas": [
+        1000,
+        1600
+      ],
+      "positions": [
+        "cs_darya_normal_center",
+        "cs_darya_normal_right"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/winter/2.png",
+      "sha256": "02c450786aa4fb2c744ceac822ba377b20883812cd54c1d7f1d439fdc018822b"
+    },
+    {
+      "path": "sp/winter/2.png",
+      "registered_name": "cs_dasha_winter smile close",
+      "tag": "cs_dasha_winter",
+      "pose": "smile",
+      "distance": "close",
+      "factor": 1.13828,
+      "visible_height": 1903.2,
+      "canvas": [
+        1220,
+        1952
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/winter/2.png",
+      "sha256": "02c450786aa4fb2c744ceac822ba377b20883812cd54c1d7f1d439fdc018822b"
+    },
+    {
+      "path": "sp/winter/3.png",
+      "registered_name": "cs_dasha_winter interested far",
+      "tag": "cs_dasha_winter",
+      "pose": "interested",
+      "distance": "far",
+      "factor": 0.76507,
+      "visible_height": 1279.1999999999998,
+      "canvas": [
+        820,
+        1312
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/winter/3.png",
+      "sha256": "7c16f20edad77b34f58349cc4d3b28378f366b98597b0eece563d639e3f0d5a4"
+    },
+    {
+      "path": "sp/winter/3.png",
+      "registered_name": "cs_dasha_winter interested normal",
+      "tag": "cs_dasha_winter",
+      "pose": "interested",
+      "distance": "normal",
+      "factor": 0.93301,
+      "visible_height": 1560.0,
+      "canvas": [
+        1000,
+        1600
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/winter/3.png",
+      "sha256": "7c16f20edad77b34f58349cc4d3b28378f366b98597b0eece563d639e3f0d5a4"
+    },
+    {
+      "path": "sp/winter/3.png",
+      "registered_name": "cs_dasha_winter interested close",
+      "tag": "cs_dasha_winter",
+      "pose": "interested",
+      "distance": "close",
+      "factor": 1.13828,
+      "visible_height": 1903.2,
+      "canvas": [
+        1220,
+        1952
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/winter/3.png",
+      "sha256": "7c16f20edad77b34f58349cc4d3b28378f366b98597b0eece563d639e3f0d5a4"
+    },
+    {
+      "path": "sp/winter/4.png",
+      "registered_name": "cs_dasha_winter sleep far",
+      "tag": "cs_dasha_winter",
+      "pose": "sleep",
+      "distance": "far",
+      "factor": 0.77153,
+      "visible_height": 1279.1999999999998,
+      "canvas": [
+        820,
+        1312
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/winter/4.png",
+      "sha256": "f22c4df5a99bea4bdcb253b667be2044c4c3dc0ffb683c9c9675fbe9f9b60012"
+    },
+    {
+      "path": "sp/winter/4.png",
+      "registered_name": "cs_dasha_winter sleep normal",
+      "tag": "cs_dasha_winter",
+      "pose": "sleep",
+      "distance": "normal",
+      "factor": 0.94089,
+      "visible_height": 1560.0,
+      "canvas": [
+        1000,
+        1600
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/winter/4.png",
+      "sha256": "f22c4df5a99bea4bdcb253b667be2044c4c3dc0ffb683c9c9675fbe9f9b60012"
+    },
+    {
+      "path": "sp/winter/4.png",
+      "registered_name": "cs_dasha_winter sleep close",
+      "tag": "cs_dasha_winter",
+      "pose": "sleep",
+      "distance": "close",
+      "factor": 1.14789,
+      "visible_height": 1903.2,
+      "canvas": [
+        1220,
+        1952
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/winter/4.png",
+      "sha256": "f22c4df5a99bea4bdcb253b667be2044c4c3dc0ffb683c9c9675fbe9f9b60012"
+    },
+    {
+      "path": "sp/winter/darya_winter_neutral_alt.png",
+      "registered_name": "cs_dasha_winter neutral_alt far",
+      "tag": "cs_dasha_winter",
+      "pose": "neutral_alt",
+      "distance": "far",
+      "factor": 0.76507,
+      "visible_height": 1279.1999999999998,
+      "canvas": [
+        820,
+        1312
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/winter/darya_winter_neutral_alt.png",
+      "sha256": "1174a13c46a898bcf191c2fddd88927808d887ba4acfad2dce45b3129c22155e"
+    },
+    {
+      "path": "sp/winter/darya_winter_neutral_alt.png",
+      "registered_name": "cs_dasha_winter neutral_alt normal",
+      "tag": "cs_dasha_winter",
+      "pose": "neutral_alt",
+      "distance": "normal",
+      "factor": 0.93301,
+      "visible_height": 1560.0,
+      "canvas": [
+        1000,
+        1600
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/winter/darya_winter_neutral_alt.png",
+      "sha256": "1174a13c46a898bcf191c2fddd88927808d887ba4acfad2dce45b3129c22155e"
+    },
+    {
+      "path": "sp/winter/darya_winter_neutral_alt.png",
+      "registered_name": "cs_dasha_winter neutral_alt close",
+      "tag": "cs_dasha_winter",
+      "pose": "neutral_alt",
+      "distance": "close",
+      "factor": 1.13828,
+      "visible_height": 1903.2,
+      "canvas": [
+        1220,
+        1952
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/winter/darya_winter_neutral_alt.png",
+      "sha256": "1174a13c46a898bcf191c2fddd88927808d887ba4acfad2dce45b3129c22155e"
+    },
+    {
+      "path": "sp/winter/darya_winter_wave.png",
+      "registered_name": "cs_dasha_winter wave far",
+      "tag": "cs_dasha_winter",
+      "pose": "wave",
+      "distance": "far",
+      "factor": 0.77246,
+      "visible_height": 1279.1999999999998,
+      "canvas": [
+        820,
+        1312
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/winter/darya_winter_wave.png",
+      "sha256": "38a7dca99f71b75c684d673ea51c535f873c8353b73fa3b4797a1fc89c57e2e5"
+    },
+    {
+      "path": "sp/winter/darya_winter_wave.png",
+      "registered_name": "cs_dasha_winter wave normal",
+      "tag": "cs_dasha_winter",
+      "pose": "wave",
+      "distance": "normal",
+      "factor": 0.94203,
+      "visible_height": 1560.0,
+      "canvas": [
+        1000,
+        1600
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/winter/darya_winter_wave.png",
+      "sha256": "38a7dca99f71b75c684d673ea51c535f873c8353b73fa3b4797a1fc89c57e2e5"
+    },
+    {
+      "path": "sp/winter/darya_winter_wave.png",
+      "registered_name": "cs_dasha_winter wave close",
+      "tag": "cs_dasha_winter",
+      "pose": "wave",
+      "distance": "close",
+      "factor": 1.14928,
+      "visible_height": 1903.2,
+      "canvas": [
+        1220,
+        1952
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/winter/darya_winter_wave.png",
+      "sha256": "38a7dca99f71b75c684d673ea51c535f873c8353b73fa3b4797a1fc89c57e2e5"
+    },
+    {
+      "path": "sp/winter/darya_winter_arms_crossed.png",
+      "registered_name": "cs_dasha_winter arms_crossed far",
+      "tag": "cs_dasha_winter",
+      "pose": "arms_crossed",
+      "distance": "far",
+      "factor": 0.76507,
+      "visible_height": 1279.1999999999998,
+      "canvas": [
+        820,
+        1312
+      ],
+      "positions": [
+        "cs_darya_far_center",
+        "cs_darya_far_right"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/winter/darya_winter_arms_crossed.png",
+      "sha256": "0db73a6ead3f841cbdfda910e213830a7879459bc9daea29861fa6ad0875da21"
+    },
+    {
+      "path": "sp/winter/darya_winter_arms_crossed.png",
+      "registered_name": "cs_dasha_winter arms_crossed normal",
+      "tag": "cs_dasha_winter",
+      "pose": "arms_crossed",
+      "distance": "normal",
+      "factor": 0.93301,
+      "visible_height": 1560.0,
+      "canvas": [
+        1000,
+        1600
+      ],
+      "positions": [
+        "cs_darya_normal_left",
+        "cs_darya_normal_right"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/winter/darya_winter_arms_crossed.png",
+      "sha256": "0db73a6ead3f841cbdfda910e213830a7879459bc9daea29861fa6ad0875da21"
+    },
+    {
+      "path": "sp/winter/darya_winter_arms_crossed.png",
+      "registered_name": "cs_dasha_winter arms_crossed close",
+      "tag": "cs_dasha_winter",
+      "pose": "arms_crossed",
+      "distance": "close",
+      "factor": 1.13828,
+      "visible_height": 1903.2,
+      "canvas": [
+        1220,
+        1952
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/winter/darya_winter_arms_crossed.png",
+      "sha256": "0db73a6ead3f841cbdfda910e213830a7879459bc9daea29861fa6ad0875da21"
+    },
+    {
+      "path": "sp/winter/darya_winter_shy.png",
+      "registered_name": "cs_dasha_winter shy far",
+      "tag": "cs_dasha_winter",
+      "pose": "shy",
+      "distance": "far",
+      "factor": 0.76507,
+      "visible_height": 1279.1999999999998,
+      "canvas": [
+        820,
+        1312
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/winter/darya_winter_shy.png",
+      "sha256": "eeefc841b4a403f2f26c8dd79ccf8108ba4a8d4cb39fdb240a11ee7518d4b4cd"
+    },
+    {
+      "path": "sp/winter/darya_winter_shy.png",
+      "registered_name": "cs_dasha_winter shy normal",
+      "tag": "cs_dasha_winter",
+      "pose": "shy",
+      "distance": "normal",
+      "factor": 0.93301,
+      "visible_height": 1560.0,
+      "canvas": [
+        1000,
+        1600
+      ],
+      "positions": [
+        "cs_darya_normal_center"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/winter/darya_winter_shy.png",
+      "sha256": "eeefc841b4a403f2f26c8dd79ccf8108ba4a8d4cb39fdb240a11ee7518d4b4cd"
+    },
+    {
+      "path": "sp/winter/darya_winter_shy.png",
+      "registered_name": "cs_dasha_winter shy close",
+      "tag": "cs_dasha_winter",
+      "pose": "shy",
+      "distance": "close",
+      "factor": 1.13828,
+      "visible_height": 1903.2,
+      "canvas": [
+        1220,
+        1952
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/winter/darya_winter_shy.png",
+      "sha256": "eeefc841b4a403f2f26c8dd79ccf8108ba4a8d4cb39fdb240a11ee7518d4b4cd"
+    },
+    {
+      "path": "sp/winter/darya_winter_explaining.png",
+      "registered_name": "cs_dasha_winter explaining far",
+      "tag": "cs_dasha_winter",
+      "pose": "explaining",
+      "distance": "far",
+      "factor": 0.76507,
+      "visible_height": 1279.1999999999998,
+      "canvas": [
+        820,
+        1312
+      ],
+      "positions": [
+        "cs_darya_far_center",
+        "cs_darya_far_right"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/winter/darya_winter_explaining.png",
+      "sha256": "0cced4f232be076b40c7455b3f071dd1f8a573ea86cb4b63c7291a5ddd0ec2f9"
+    },
+    {
+      "path": "sp/winter/darya_winter_explaining.png",
+      "registered_name": "cs_dasha_winter explaining normal",
+      "tag": "cs_dasha_winter",
+      "pose": "explaining",
+      "distance": "normal",
+      "factor": 0.93301,
+      "visible_height": 1560.0,
+      "canvas": [
+        1000,
+        1600
+      ],
+      "positions": [
+        "cs_darya_normal_center",
+        "cs_darya_normal_right"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/winter/darya_winter_explaining.png",
+      "sha256": "0cced4f232be076b40c7455b3f071dd1f8a573ea86cb4b63c7291a5ddd0ec2f9"
+    },
+    {
+      "path": "sp/winter/darya_winter_explaining.png",
+      "registered_name": "cs_dasha_winter explaining close",
+      "tag": "cs_dasha_winter",
+      "pose": "explaining",
+      "distance": "close",
+      "factor": 1.13828,
+      "visible_height": 1903.2,
+      "canvas": [
+        1220,
+        1952
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/winter/darya_winter_explaining.png",
+      "sha256": "0cced4f232be076b40c7455b3f071dd1f8a573ea86cb4b63c7291a5ddd0ec2f9"
+    },
+    {
+      "path": "sp/winter/darya_winter_thinking.png",
+      "registered_name": "cs_dasha_winter thinking far",
+      "tag": "cs_dasha_winter",
+      "pose": "thinking",
+      "distance": "far",
+      "factor": 0.77107,
+      "visible_height": 1279.1999999999998,
+      "canvas": [
+        820,
+        1312
+      ],
+      "positions": [
+        "cs_darya_far_center"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/winter/darya_winter_thinking.png",
+      "sha256": "7f216430d3c530fe47207fd0ba9ebfaad42c9a246f167bcf306bc8a123bb8d43"
+    },
+    {
+      "path": "sp/winter/darya_winter_thinking.png",
+      "registered_name": "cs_dasha_winter thinking normal",
+      "tag": "cs_dasha_winter",
+      "pose": "thinking",
+      "distance": "normal",
+      "factor": 0.94033,
+      "visible_height": 1560.0,
+      "canvas": [
+        1000,
+        1600
+      ],
+      "positions": [
+        "cs_darya_normal_center",
+        "cs_darya_normal_right"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/winter/darya_winter_thinking.png",
+      "sha256": "7f216430d3c530fe47207fd0ba9ebfaad42c9a246f167bcf306bc8a123bb8d43"
+    },
+    {
+      "path": "sp/winter/darya_winter_thinking.png",
+      "registered_name": "cs_dasha_winter thinking close",
+      "tag": "cs_dasha_winter",
+      "pose": "thinking",
+      "distance": "close",
+      "factor": 1.1472,
+      "visible_height": 1903.2,
+      "canvas": [
+        1220,
+        1952
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/winter/darya_winter_thinking.png",
+      "sha256": "7f216430d3c530fe47207fd0ba9ebfaad42c9a246f167bcf306bc8a123bb8d43"
+    },
+    {
+      "path": "sp/winter/darya_winter_shrug.png",
+      "registered_name": "cs_dasha_winter shrug far",
+      "tag": "cs_dasha_winter",
+      "pose": "shrug",
+      "distance": "far",
+      "factor": 0.76507,
+      "visible_height": 1279.1999999999998,
+      "canvas": [
+        820,
+        1312
+      ],
+      "positions": [
+        "cs_darya_far_center",
+        "cs_darya_far_right"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/winter/darya_winter_shrug.png",
+      "sha256": "7ec41f55d8106889e68e6d77a6c500c44b07a1d1031aa766411d490596bff51a"
+    },
+    {
+      "path": "sp/winter/darya_winter_shrug.png",
+      "registered_name": "cs_dasha_winter shrug normal",
+      "tag": "cs_dasha_winter",
+      "pose": "shrug",
+      "distance": "normal",
+      "factor": 0.93301,
+      "visible_height": 1560.0,
+      "canvas": [
+        1000,
+        1600
+      ],
+      "positions": [
+        "cs_darya_normal_center",
+        "cs_darya_normal_left",
+        "cs_darya_normal_right"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/winter/darya_winter_shrug.png",
+      "sha256": "7ec41f55d8106889e68e6d77a6c500c44b07a1d1031aa766411d490596bff51a"
+    },
+    {
+      "path": "sp/winter/darya_winter_shrug.png",
+      "registered_name": "cs_dasha_winter shrug close",
+      "tag": "cs_dasha_winter",
+      "pose": "shrug",
+      "distance": "close",
+      "factor": 1.13828,
+      "visible_height": 1903.2,
+      "canvas": [
+        1220,
+        1952
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/winter/darya_winter_shrug.png",
+      "sha256": "7ec41f55d8106889e68e6d77a6c500c44b07a1d1031aa766411d490596bff51a"
+    },
+    {
+      "path": "sp/winter/darya_winter_hands_on_hips.png",
+      "registered_name": "cs_dasha_winter hands_on_hips far",
+      "tag": "cs_dasha_winter",
+      "pose": "hands_on_hips",
+      "distance": "far",
+      "factor": 0.76507,
+      "visible_height": 1279.1999999999998,
+      "canvas": [
+        820,
+        1312
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/winter/darya_winter_hands_on_hips.png",
+      "sha256": "ecc5f03cabc1a033b76de2a35160851232f9a023077fefb272a2c6b54ed79cf4"
+    },
+    {
+      "path": "sp/winter/darya_winter_hands_on_hips.png",
+      "registered_name": "cs_dasha_winter hands_on_hips normal",
+      "tag": "cs_dasha_winter",
+      "pose": "hands_on_hips",
+      "distance": "normal",
+      "factor": 0.93301,
+      "visible_height": 1560.0,
+      "canvas": [
+        1000,
+        1600
+      ],
+      "positions": [
+        "cs_darya_normal_left"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/winter/darya_winter_hands_on_hips.png",
+      "sha256": "ecc5f03cabc1a033b76de2a35160851232f9a023077fefb272a2c6b54ed79cf4"
+    },
+    {
+      "path": "sp/winter/darya_winter_hands_on_hips.png",
+      "registered_name": "cs_dasha_winter hands_on_hips close",
+      "tag": "cs_dasha_winter",
+      "pose": "hands_on_hips",
+      "distance": "close",
+      "factor": 1.13828,
+      "visible_height": 1903.2,
+      "canvas": [
+        1220,
+        1952
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/winter/darya_winter_hands_on_hips.png",
+      "sha256": "ecc5f03cabc1a033b76de2a35160851232f9a023077fefb272a2c6b54ed79cf4"
+    },
+    {
+      "path": "sp/winter/darya_winter_worried.png",
+      "registered_name": "cs_dasha_winter worried far",
+      "tag": "cs_dasha_winter",
+      "pose": "worried",
+      "distance": "far",
+      "factor": 0.76507,
+      "visible_height": 1279.1999999999998,
+      "canvas": [
+        820,
+        1312
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/winter/darya_winter_worried.png",
+      "sha256": "4ac64cec8abfaebb8af374c4ce14adeebbab9f7063af558b2444dee7e7dd0bcf"
+    },
+    {
+      "path": "sp/winter/darya_winter_worried.png",
+      "registered_name": "cs_dasha_winter worried normal",
+      "tag": "cs_dasha_winter",
+      "pose": "worried",
+      "distance": "normal",
+      "factor": 0.93301,
+      "visible_height": 1560.0,
+      "canvas": [
+        1000,
+        1600
+      ],
+      "positions": [
+        "cs_darya_normal_center"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/winter/darya_winter_worried.png",
+      "sha256": "4ac64cec8abfaebb8af374c4ce14adeebbab9f7063af558b2444dee7e7dd0bcf"
+    },
+    {
+      "path": "sp/winter/darya_winter_worried.png",
+      "registered_name": "cs_dasha_winter worried close",
+      "tag": "cs_dasha_winter",
+      "pose": "worried",
+      "distance": "close",
+      "factor": 1.13828,
+      "visible_height": 1903.2,
+      "canvas": [
+        1220,
+        1952
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/winter/darya_winter_worried.png",
+      "sha256": "4ac64cec8abfaebb8af374c4ce14adeebbab9f7063af558b2444dee7e7dd0bcf"
+    },
+    {
+      "path": "sp/winter/darya_winter_walking.png",
+      "registered_name": "cs_dasha_winter walking far",
+      "tag": "cs_dasha_winter",
+      "pose": "walking",
+      "distance": "far",
+      "factor": 0.76737,
+      "visible_height": 1279.1999999999998,
+      "canvas": [
+        820,
+        1312
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/winter/darya_winter_walking.png",
+      "sha256": "8badba1428776b8a40d11918ba0a85a9b711a8413d12151a79d379b2ee7ad3e0"
+    },
+    {
+      "path": "sp/winter/darya_winter_walking.png",
+      "registered_name": "cs_dasha_winter walking normal",
+      "tag": "cs_dasha_winter",
+      "pose": "walking",
+      "distance": "normal",
+      "factor": 0.93581,
+      "visible_height": 1560.0,
+      "canvas": [
+        1000,
+        1600
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/winter/darya_winter_walking.png",
+      "sha256": "8badba1428776b8a40d11918ba0a85a9b711a8413d12151a79d379b2ee7ad3e0"
+    },
+    {
+      "path": "sp/winter/darya_winter_walking.png",
+      "registered_name": "cs_dasha_winter walking close",
+      "tag": "cs_dasha_winter",
+      "pose": "walking",
+      "distance": "close",
+      "factor": 1.14169,
+      "visible_height": 1903.2,
+      "canvas": [
+        1220,
+        1952
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/winter/darya_winter_walking.png",
+      "sha256": "8badba1428776b8a40d11918ba0a85a9b711a8413d12151a79d379b2ee7ad3e0"
+    },
+    {
+      "path": "sp/semen/semen_pioneer_neutral.png",
+      "registered_name": "cs_semen neutral pioneer far",
+      "tag": "cs_semen",
+      "pose": "neutral",
+      "distance": "far",
+      "factor": 0.77488,
+      "visible_height": 1295.6,
+      "canvas": [
+        820,
+        1312
+      ],
+      "positions": [
+        "cs_semen_far_center",
+        "cs_semen_far_right"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/semen/semen_pioneer_neutral.png",
+      "sha256": "6d91ff62a520b1de8f1cf060123a86d46317f11430b5e2ea5560ad5effd011d0"
+    },
+    {
+      "path": "sp/semen/semen_pioneer_neutral.png",
+      "registered_name": "cs_semen neutral pioneer normal",
+      "tag": "cs_semen",
+      "pose": "neutral",
+      "distance": "normal",
+      "factor": 0.94498,
+      "visible_height": 1580.0,
+      "canvas": [
+        1000,
+        1600
+      ],
+      "positions": [
+        "cs_semen_normal_left"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/semen/semen_pioneer_neutral.png",
+      "sha256": "6d91ff62a520b1de8f1cf060123a86d46317f11430b5e2ea5560ad5effd011d0"
+    },
+    {
+      "path": "sp/semen/semen_pioneer_neutral.png",
+      "registered_name": "cs_semen neutral pioneer close",
+      "tag": "cs_semen",
+      "pose": "neutral",
+      "distance": "close",
+      "factor": 1.15287,
+      "visible_height": 1927.6,
+      "canvas": [
+        1220,
+        1952
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/semen/semen_pioneer_neutral.png",
+      "sha256": "6d91ff62a520b1de8f1cf060123a86d46317f11430b5e2ea5560ad5effd011d0"
+    },
+    {
+      "path": "sp/semen/semen_pioneer_relaxed.png",
+      "registered_name": "cs_semen relaxed pioneer far",
+      "tag": "cs_semen",
+      "pose": "relaxed",
+      "distance": "far",
+      "factor": 0.77488,
+      "visible_height": 1295.6,
+      "canvas": [
+        820,
+        1312
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/semen/semen_pioneer_relaxed.png",
+      "sha256": "eb3498871f30b6bc6e359ef23684f91e1479d9a3044545142b0fe5397cd2e800"
+    },
+    {
+      "path": "sp/semen/semen_pioneer_relaxed.png",
+      "registered_name": "cs_semen relaxed pioneer normal",
+      "tag": "cs_semen",
+      "pose": "relaxed",
+      "distance": "normal",
+      "factor": 0.94498,
+      "visible_height": 1580.0,
+      "canvas": [
+        1000,
+        1600
+      ],
+      "positions": [
+        "cs_semen_normal_left"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/semen/semen_pioneer_relaxed.png",
+      "sha256": "eb3498871f30b6bc6e359ef23684f91e1479d9a3044545142b0fe5397cd2e800"
+    },
+    {
+      "path": "sp/semen/semen_pioneer_relaxed.png",
+      "registered_name": "cs_semen relaxed pioneer close",
+      "tag": "cs_semen",
+      "pose": "relaxed",
+      "distance": "close",
+      "factor": 1.15287,
+      "visible_height": 1927.6,
+      "canvas": [
+        1220,
+        1952
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/semen/semen_pioneer_relaxed.png",
+      "sha256": "eb3498871f30b6bc6e359ef23684f91e1479d9a3044545142b0fe5397cd2e800"
+    },
+    {
+      "path": "sp/semen/semen_pioneer_arms_crossed.png",
+      "registered_name": "cs_semen arms_crossed pioneer far",
+      "tag": "cs_semen",
+      "pose": "arms_crossed",
+      "distance": "far",
+      "factor": 0.78237,
+      "visible_height": 1295.6,
+      "canvas": [
+        820,
+        1312
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/semen/semen_pioneer_arms_crossed.png",
+      "sha256": "d1d5bc08e744213cb705a027cb94c4e1600d0e52176bab45d98a27643da3294e"
+    },
+    {
+      "path": "sp/semen/semen_pioneer_arms_crossed.png",
+      "registered_name": "cs_semen arms_crossed pioneer normal",
+      "tag": "cs_semen",
+      "pose": "arms_crossed",
+      "distance": "normal",
+      "factor": 0.95411,
+      "visible_height": 1580.0,
+      "canvas": [
+        1000,
+        1600
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/semen/semen_pioneer_arms_crossed.png",
+      "sha256": "d1d5bc08e744213cb705a027cb94c4e1600d0e52176bab45d98a27643da3294e"
+    },
+    {
+      "path": "sp/semen/semen_pioneer_arms_crossed.png",
+      "registered_name": "cs_semen arms_crossed pioneer close",
+      "tag": "cs_semen",
+      "pose": "arms_crossed",
+      "distance": "close",
+      "factor": 1.16401,
+      "visible_height": 1927.6,
+      "canvas": [
+        1220,
+        1952
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/semen/semen_pioneer_arms_crossed.png",
+      "sha256": "d1d5bc08e744213cb705a027cb94c4e1600d0e52176bab45d98a27643da3294e"
+    },
+    {
+      "path": "sp/semen/semen_pioneer_wave.png",
+      "registered_name": "cs_semen wave pioneer far",
+      "tag": "cs_semen",
+      "pose": "wave",
+      "distance": "far",
+      "factor": 0.77488,
+      "visible_height": 1295.6,
+      "canvas": [
+        820,
+        1312
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/semen/semen_pioneer_wave.png",
+      "sha256": "dab1904c5425fccabaabfef49e65c9954306c78eba7be92152fc0f7029f4f66e"
+    },
+    {
+      "path": "sp/semen/semen_pioneer_wave.png",
+      "registered_name": "cs_semen wave pioneer normal",
+      "tag": "cs_semen",
+      "pose": "wave",
+      "distance": "normal",
+      "factor": 0.94498,
+      "visible_height": 1580.0,
+      "canvas": [
+        1000,
+        1600
+      ],
+      "positions": [
+        "cs_semen_normal_left"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/semen/semen_pioneer_wave.png",
+      "sha256": "dab1904c5425fccabaabfef49e65c9954306c78eba7be92152fc0f7029f4f66e"
+    },
+    {
+      "path": "sp/semen/semen_pioneer_wave.png",
+      "registered_name": "cs_semen wave pioneer close",
+      "tag": "cs_semen",
+      "pose": "wave",
+      "distance": "close",
+      "factor": 1.15287,
+      "visible_height": 1927.6,
+      "canvas": [
+        1220,
+        1952
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/semen/semen_pioneer_wave.png",
+      "sha256": "dab1904c5425fccabaabfef49e65c9954306c78eba7be92152fc0f7029f4f66e"
+    },
+    {
+      "path": "sp/semen/semen_pioneer_awkward.png",
+      "registered_name": "cs_semen awkward pioneer far",
+      "tag": "cs_semen",
+      "pose": "awkward",
+      "distance": "far",
+      "factor": 0.77488,
+      "visible_height": 1295.6,
+      "canvas": [
+        820,
+        1312
+      ],
+      "positions": [
+        "cs_semen_far_right"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/semen/semen_pioneer_awkward.png",
+      "sha256": "2cae16314e3263500b58a79966053b9ab645012b3cba692c66628674bc3e94f7"
+    },
+    {
+      "path": "sp/semen/semen_pioneer_awkward.png",
+      "registered_name": "cs_semen awkward pioneer normal",
+      "tag": "cs_semen",
+      "pose": "awkward",
+      "distance": "normal",
+      "factor": 0.94498,
+      "visible_height": 1580.0,
+      "canvas": [
+        1000,
+        1600
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/semen/semen_pioneer_awkward.png",
+      "sha256": "2cae16314e3263500b58a79966053b9ab645012b3cba692c66628674bc3e94f7"
+    },
+    {
+      "path": "sp/semen/semen_pioneer_awkward.png",
+      "registered_name": "cs_semen awkward pioneer close",
+      "tag": "cs_semen",
+      "pose": "awkward",
+      "distance": "close",
+      "factor": 1.15287,
+      "visible_height": 1927.6,
+      "canvas": [
+        1220,
+        1952
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/semen/semen_pioneer_awkward.png",
+      "sha256": "2cae16314e3263500b58a79966053b9ab645012b3cba692c66628674bc3e94f7"
+    },
+    {
+      "path": "sp/semen/semen_pioneer_surprised.png",
+      "registered_name": "cs_semen surprised pioneer far",
+      "tag": "cs_semen",
+      "pose": "surprised",
+      "distance": "far",
+      "factor": 0.7772,
+      "visible_height": 1295.6,
+      "canvas": [
+        820,
+        1312
+      ],
+      "positions": [
+        "cs_semen_far_right"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/semen/semen_pioneer_surprised.png",
+      "sha256": "da1666842ee65da146cd08d3787ade1d4cf3a61277073e320486cb62d9e86827"
+    },
+    {
+      "path": "sp/semen/semen_pioneer_surprised.png",
+      "registered_name": "cs_semen surprised pioneer normal",
+      "tag": "cs_semen",
+      "pose": "surprised",
+      "distance": "normal",
+      "factor": 0.94781,
+      "visible_height": 1580.0,
+      "canvas": [
+        1000,
+        1600
+      ],
+      "positions": [
+        "cs_semen_normal_left"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/semen/semen_pioneer_surprised.png",
+      "sha256": "da1666842ee65da146cd08d3787ade1d4cf3a61277073e320486cb62d9e86827"
+    },
+    {
+      "path": "sp/semen/semen_pioneer_surprised.png",
+      "registered_name": "cs_semen surprised pioneer close",
+      "tag": "cs_semen",
+      "pose": "surprised",
+      "distance": "close",
+      "factor": 1.15633,
+      "visible_height": 1927.6,
+      "canvas": [
+        1220,
+        1952
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/semen/semen_pioneer_surprised.png",
+      "sha256": "da1666842ee65da146cd08d3787ade1d4cf3a61277073e320486cb62d9e86827"
+    },
+    {
+      "path": "sp/semen/semen_pioneer_serious.png",
+      "registered_name": "cs_semen serious pioneer far",
+      "tag": "cs_semen",
+      "pose": "serious",
+      "distance": "far",
+      "factor": 0.77954,
+      "visible_height": 1295.6,
+      "canvas": [
+        820,
+        1312
+      ],
+      "positions": [
+        "cs_semen_far_center",
+        "cs_semen_far_right"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/semen/semen_pioneer_serious.png",
+      "sha256": "84dcd94e4b77d0daa943f8ca0480e06b282589bea774a229c5a6b7588f76ec38"
+    },
+    {
+      "path": "sp/semen/semen_pioneer_serious.png",
+      "registered_name": "cs_semen serious pioneer normal",
+      "tag": "cs_semen",
+      "pose": "serious",
+      "distance": "normal",
+      "factor": 0.95066,
+      "visible_height": 1580.0,
+      "canvas": [
+        1000,
+        1600
+      ],
+      "positions": [
+        "cs_semen_normal_left",
+        "cs_semen_normal_right"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/semen/semen_pioneer_serious.png",
+      "sha256": "84dcd94e4b77d0daa943f8ca0480e06b282589bea774a229c5a6b7588f76ec38"
+    },
+    {
+      "path": "sp/semen/semen_pioneer_serious.png",
+      "registered_name": "cs_semen serious pioneer close",
+      "tag": "cs_semen",
+      "pose": "serious",
+      "distance": "close",
+      "factor": 1.15981,
+      "visible_height": 1927.6,
+      "canvas": [
+        1220,
+        1952
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/semen/semen_pioneer_serious.png",
+      "sha256": "84dcd94e4b77d0daa943f8ca0480e06b282589bea774a229c5a6b7588f76ec38"
+    },
+    {
+      "path": "sp/semen/semen_pioneer_confident.png",
+      "registered_name": "cs_semen confident pioneer far",
+      "tag": "cs_semen",
+      "pose": "confident",
+      "distance": "far",
+      "factor": 0.77488,
+      "visible_height": 1295.6,
+      "canvas": [
+        820,
+        1312
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/semen/semen_pioneer_confident.png",
+      "sha256": "6d556b09221eec5156c7974ce655b9b5dd7d13a90a989b124a1a1fd05778fef6"
+    },
+    {
+      "path": "sp/semen/semen_pioneer_confident.png",
+      "registered_name": "cs_semen confident pioneer normal",
+      "tag": "cs_semen",
+      "pose": "confident",
+      "distance": "normal",
+      "factor": 0.94498,
+      "visible_height": 1580.0,
+      "canvas": [
+        1000,
+        1600
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/semen/semen_pioneer_confident.png",
+      "sha256": "6d556b09221eec5156c7974ce655b9b5dd7d13a90a989b124a1a1fd05778fef6"
+    },
+    {
+      "path": "sp/semen/semen_pioneer_confident.png",
+      "registered_name": "cs_semen confident pioneer close",
+      "tag": "cs_semen",
+      "pose": "confident",
+      "distance": "close",
+      "factor": 1.15287,
+      "visible_height": 1927.6,
+      "canvas": [
+        1220,
+        1952
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/semen/semen_pioneer_confident.png",
+      "sha256": "6d556b09221eec5156c7974ce655b9b5dd7d13a90a989b124a1a1fd05778fef6"
+    },
+    {
+      "path": "sp/semen/semen_pioneer_shy.png",
+      "registered_name": "cs_semen shy pioneer far",
+      "tag": "cs_semen",
+      "pose": "shy",
+      "distance": "far",
+      "factor": 0.78284,
+      "visible_height": 1295.6,
+      "canvas": [
+        820,
+        1312
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/semen/semen_pioneer_shy.png",
+      "sha256": "3752d54a2cd8119c9cebcb71e961ffa390f94dad26eb29b1e6e4938d523e45bc"
+    },
+    {
+      "path": "sp/semen/semen_pioneer_shy.png",
+      "registered_name": "cs_semen shy pioneer normal",
+      "tag": "cs_semen",
+      "pose": "shy",
+      "distance": "normal",
+      "factor": 0.95468,
+      "visible_height": 1580.0,
+      "canvas": [
+        1000,
+        1600
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/semen/semen_pioneer_shy.png",
+      "sha256": "3752d54a2cd8119c9cebcb71e961ffa390f94dad26eb29b1e6e4938d523e45bc"
+    },
+    {
+      "path": "sp/semen/semen_pioneer_shy.png",
+      "registered_name": "cs_semen shy pioneer close",
+      "tag": "cs_semen",
+      "pose": "shy",
+      "distance": "close",
+      "factor": 1.16471,
+      "visible_height": 1927.6,
+      "canvas": [
+        1220,
+        1952
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/semen/semen_pioneer_shy.png",
+      "sha256": "3752d54a2cd8119c9cebcb71e961ffa390f94dad26eb29b1e6e4938d523e45bc"
+    },
+    {
+      "path": "sp/semen/semen_pioneer_thinking.png",
+      "registered_name": "cs_semen thinking pioneer far",
+      "tag": "cs_semen",
+      "pose": "thinking",
+      "distance": "far",
+      "factor": 0.77488,
+      "visible_height": 1295.6,
+      "canvas": [
+        820,
+        1312
+      ],
+      "positions": [
+        "cs_semen_far_center",
+        "cs_semen_far_right"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/semen/semen_pioneer_thinking.png",
+      "sha256": "f3a62d579c4897662ac058bc9ecd291917338f2915ce48d02e72158b03da9424"
+    },
+    {
+      "path": "sp/semen/semen_pioneer_thinking.png",
+      "registered_name": "cs_semen thinking pioneer normal",
+      "tag": "cs_semen",
+      "pose": "thinking",
+      "distance": "normal",
+      "factor": 0.94498,
+      "visible_height": 1580.0,
+      "canvas": [
+        1000,
+        1600
+      ],
+      "positions": [
+        "cs_semen_normal_left"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/semen/semen_pioneer_thinking.png",
+      "sha256": "f3a62d579c4897662ac058bc9ecd291917338f2915ce48d02e72158b03da9424"
+    },
+    {
+      "path": "sp/semen/semen_pioneer_thinking.png",
+      "registered_name": "cs_semen thinking pioneer close",
+      "tag": "cs_semen",
+      "pose": "thinking",
+      "distance": "close",
+      "factor": 1.15287,
+      "visible_height": 1927.6,
+      "canvas": [
+        1220,
+        1952
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/semen/semen_pioneer_thinking.png",
+      "sha256": "f3a62d579c4897662ac058bc9ecd291917338f2915ce48d02e72158b03da9424"
+    },
+    {
+      "path": "sp/semen/semen_pioneer_tie_touch.png",
+      "registered_name": "cs_semen tie_touch pioneer far",
+      "tag": "cs_semen",
+      "pose": "tie_touch",
+      "distance": "far",
+      "factor": 0.78284,
+      "visible_height": 1295.6,
+      "canvas": [
+        820,
+        1312
+      ],
+      "positions": [
+        "cs_semen_far_right"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/semen/semen_pioneer_tie_touch.png",
+      "sha256": "0c2d4699efcc4e905e3fdc7780c0406ea1aabdb1e04f0a6fb4c8488bb30bea1b"
+    },
+    {
+      "path": "sp/semen/semen_pioneer_tie_touch.png",
+      "registered_name": "cs_semen tie_touch pioneer normal",
+      "tag": "cs_semen",
+      "pose": "tie_touch",
+      "distance": "normal",
+      "factor": 0.95468,
+      "visible_height": 1580.0,
+      "canvas": [
+        1000,
+        1600
+      ],
+      "positions": [
+        "cs_semen_normal_right"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/semen/semen_pioneer_tie_touch.png",
+      "sha256": "0c2d4699efcc4e905e3fdc7780c0406ea1aabdb1e04f0a6fb4c8488bb30bea1b"
+    },
+    {
+      "path": "sp/semen/semen_pioneer_tie_touch.png",
+      "registered_name": "cs_semen tie_touch pioneer close",
+      "tag": "cs_semen",
+      "pose": "tie_touch",
+      "distance": "close",
+      "factor": 1.16471,
+      "visible_height": 1927.6,
+      "canvas": [
+        1220,
+        1952
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/semen/semen_pioneer_tie_touch.png",
+      "sha256": "0c2d4699efcc4e905e3fdc7780c0406ea1aabdb1e04f0a6fb4c8488bb30bea1b"
+    },
+    {
+      "path": "sp/semen/semen_pioneer_thinking_alt.png",
+      "registered_name": "cs_semen thinking_alt pioneer far",
+      "tag": "cs_semen",
+      "pose": "thinking_alt",
+      "distance": "far",
+      "factor": 0.77488,
+      "visible_height": 1295.6,
+      "canvas": [
+        820,
+        1312
+      ],
+      "positions": [
+        "cs_semen_far_right"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/semen/semen_pioneer_thinking_alt.png",
+      "sha256": "4a9ed678083688c0b26867f1b44ab2fb565516e7df374a239c00cd2eaaf4d8ac"
+    },
+    {
+      "path": "sp/semen/semen_pioneer_thinking_alt.png",
+      "registered_name": "cs_semen thinking_alt pioneer normal",
+      "tag": "cs_semen",
+      "pose": "thinking_alt",
+      "distance": "normal",
+      "factor": 0.94498,
+      "visible_height": 1580.0,
+      "canvas": [
+        1000,
+        1600
+      ],
+      "positions": [
+        "cs_semen_normal_left",
+        "cs_semen_normal_right"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/semen/semen_pioneer_thinking_alt.png",
+      "sha256": "4a9ed678083688c0b26867f1b44ab2fb565516e7df374a239c00cd2eaaf4d8ac"
+    },
+    {
+      "path": "sp/semen/semen_pioneer_thinking_alt.png",
+      "registered_name": "cs_semen thinking_alt pioneer close",
+      "tag": "cs_semen",
+      "pose": "thinking_alt",
+      "distance": "close",
+      "factor": 1.15287,
+      "visible_height": 1927.6,
+      "canvas": [
+        1220,
+        1952
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/semen/semen_pioneer_thinking_alt.png",
+      "sha256": "4a9ed678083688c0b26867f1b44ab2fb565516e7df374a239c00cd2eaaf4d8ac"
+    },
+    {
+      "path": "sp/semen/semen_pioneer_startled.png",
+      "registered_name": "cs_semen startled pioneer far",
+      "tag": "cs_semen",
+      "pose": "startled",
+      "distance": "far",
+      "factor": 0.77534,
+      "visible_height": 1295.6,
+      "canvas": [
+        820,
+        1312
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/semen/semen_pioneer_startled.png",
+      "sha256": "dc824aeb1566559abe067bde7430fc6dac4290154a1f997ea74f96cd42a0b0bc"
+    },
+    {
+      "path": "sp/semen/semen_pioneer_startled.png",
+      "registered_name": "cs_semen startled pioneer normal",
+      "tag": "cs_semen",
+      "pose": "startled",
+      "distance": "normal",
+      "factor": 0.94554,
+      "visible_height": 1580.0,
+      "canvas": [
+        1000,
+        1600
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/semen/semen_pioneer_startled.png",
+      "sha256": "dc824aeb1566559abe067bde7430fc6dac4290154a1f997ea74f96cd42a0b0bc"
+    },
+    {
+      "path": "sp/semen/semen_pioneer_startled.png",
+      "registered_name": "cs_semen startled pioneer close",
+      "tag": "cs_semen",
+      "pose": "startled",
+      "distance": "close",
+      "factor": 1.15356,
+      "visible_height": 1927.6,
+      "canvas": [
+        1220,
+        1952
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/semen/semen_pioneer_startled.png",
+      "sha256": "dc824aeb1566559abe067bde7430fc6dac4290154a1f997ea74f96cd42a0b0bc"
+    },
+    {
+      "path": "sp/semen/semen_pioneer_explaining.png",
+      "registered_name": "cs_semen explaining pioneer far",
+      "tag": "cs_semen",
+      "pose": "explaining",
+      "distance": "far",
+      "factor": 0.78284,
+      "visible_height": 1295.6,
+      "canvas": [
+        820,
+        1312
+      ],
+      "positions": [
+        "cs_semen_far_center"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/semen/semen_pioneer_explaining.png",
+      "sha256": "3b930f335fdacdc24ea5b18c4786f5e2901f130205ed493a157b01c78ff51c43"
+    },
+    {
+      "path": "sp/semen/semen_pioneer_explaining.png",
+      "registered_name": "cs_semen explaining pioneer normal",
+      "tag": "cs_semen",
+      "pose": "explaining",
+      "distance": "normal",
+      "factor": 0.95468,
+      "visible_height": 1580.0,
+      "canvas": [
+        1000,
+        1600
+      ],
+      "positions": [
+        "cs_semen_normal_left"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/semen/semen_pioneer_explaining.png",
+      "sha256": "3b930f335fdacdc24ea5b18c4786f5e2901f130205ed493a157b01c78ff51c43"
+    },
+    {
+      "path": "sp/semen/semen_pioneer_explaining.png",
+      "registered_name": "cs_semen explaining pioneer close",
+      "tag": "cs_semen",
+      "pose": "explaining",
+      "distance": "close",
+      "factor": 1.16471,
+      "visible_height": 1927.6,
+      "canvas": [
+        1220,
+        1952
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/semen/semen_pioneer_explaining.png",
+      "sha256": "3b930f335fdacdc24ea5b18c4786f5e2901f130205ed493a157b01c78ff51c43"
+    },
+    {
+      "path": "sp/semen/semen_pioneer_pointing.png",
+      "registered_name": "cs_semen pointing pioneer far",
+      "tag": "cs_semen",
+      "pose": "pointing",
+      "distance": "far",
+      "factor": 0.77488,
+      "visible_height": 1295.6,
+      "canvas": [
+        820,
+        1312
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/semen/semen_pioneer_pointing.png",
+      "sha256": "4c444638434913c5bc18fcafa3bc21f251f05588ff4954eb3722ab82a6a4899b"
+    },
+    {
+      "path": "sp/semen/semen_pioneer_pointing.png",
+      "registered_name": "cs_semen pointing pioneer normal",
+      "tag": "cs_semen",
+      "pose": "pointing",
+      "distance": "normal",
+      "factor": 0.94498,
+      "visible_height": 1580.0,
+      "canvas": [
+        1000,
+        1600
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/semen/semen_pioneer_pointing.png",
+      "sha256": "4c444638434913c5bc18fcafa3bc21f251f05588ff4954eb3722ab82a6a4899b"
+    },
+    {
+      "path": "sp/semen/semen_pioneer_pointing.png",
+      "registered_name": "cs_semen pointing pioneer close",
+      "tag": "cs_semen",
+      "pose": "pointing",
+      "distance": "close",
+      "factor": 1.15287,
+      "visible_height": 1927.6,
+      "canvas": [
+        1220,
+        1952
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/semen/semen_pioneer_pointing.png",
+      "sha256": "4c444638434913c5bc18fcafa3bc21f251f05588ff4954eb3722ab82a6a4899b"
+    },
+    {
+      "path": "sp/semen/semen_pioneer_smile.png",
+      "registered_name": "cs_semen smile pioneer far",
+      "tag": "cs_semen",
+      "pose": "smile",
+      "distance": "far",
+      "factor": 0.78284,
+      "visible_height": 1295.6,
+      "canvas": [
+        820,
+        1312
+      ],
+      "positions": [
+        "cs_semen_far_center",
+        "cs_semen_far_right"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/semen/semen_pioneer_smile.png",
+      "sha256": "2ff46014ed05831f35c0ec7668c88c557652b437124cc709736464a97c35419a"
+    },
+    {
+      "path": "sp/semen/semen_pioneer_smile.png",
+      "registered_name": "cs_semen smile pioneer normal",
+      "tag": "cs_semen",
+      "pose": "smile",
+      "distance": "normal",
+      "factor": 0.95468,
+      "visible_height": 1580.0,
+      "canvas": [
+        1000,
+        1600
+      ],
+      "positions": [
+        "cs_semen_normal_left",
+        "cs_semen_normal_right"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/semen/semen_pioneer_smile.png",
+      "sha256": "2ff46014ed05831f35c0ec7668c88c557652b437124cc709736464a97c35419a"
+    },
+    {
+      "path": "sp/semen/semen_pioneer_smile.png",
+      "registered_name": "cs_semen smile pioneer close",
+      "tag": "cs_semen",
+      "pose": "smile",
+      "distance": "close",
+      "factor": 1.16471,
+      "visible_height": 1927.6,
+      "canvas": [
+        1220,
+        1952
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/semen/semen_pioneer_smile.png",
+      "sha256": "2ff46014ed05831f35c0ec7668c88c557652b437124cc709736464a97c35419a"
+    },
+    {
+      "path": "sp/semen/semen_pioneer_peace.png",
+      "registered_name": "cs_semen peace pioneer far",
+      "tag": "cs_semen",
+      "pose": "peace",
+      "distance": "far",
+      "factor": 0.78284,
+      "visible_height": 1295.6,
+      "canvas": [
+        820,
+        1312
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/semen/semen_pioneer_peace.png",
+      "sha256": "8fd7b8420ee00a5d66f9cc24909e586ef1dff4ec11323a44ba0c3f3b7016d09b"
+    },
+    {
+      "path": "sp/semen/semen_pioneer_peace.png",
+      "registered_name": "cs_semen peace pioneer normal",
+      "tag": "cs_semen",
+      "pose": "peace",
+      "distance": "normal",
+      "factor": 0.95468,
+      "visible_height": 1580.0,
+      "canvas": [
+        1000,
+        1600
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/semen/semen_pioneer_peace.png",
+      "sha256": "8fd7b8420ee00a5d66f9cc24909e586ef1dff4ec11323a44ba0c3f3b7016d09b"
+    },
+    {
+      "path": "sp/semen/semen_pioneer_peace.png",
+      "registered_name": "cs_semen peace pioneer close",
+      "tag": "cs_semen",
+      "pose": "peace",
+      "distance": "close",
+      "factor": 1.16471,
+      "visible_height": 1927.6,
+      "canvas": [
+        1220,
+        1952
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/semen/semen_pioneer_peace.png",
+      "sha256": "8fd7b8420ee00a5d66f9cc24909e586ef1dff4ec11323a44ba0c3f3b7016d09b"
+    },
+    {
+      "path": "sp/semen/semen_pioneer_thinking_down.png",
+      "registered_name": "cs_semen thinking_down pioneer far",
+      "tag": "cs_semen",
+      "pose": "thinking_down",
+      "distance": "far",
+      "factor": 0.78095,
+      "visible_height": 1295.6,
+      "canvas": [
+        820,
+        1312
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/semen/semen_pioneer_thinking_down.png",
+      "sha256": "d2343c7a0a29ea70ea3b9ee0bbdc8660c4e814074acf0d2a958490cd65d78c75"
+    },
+    {
+      "path": "sp/semen/semen_pioneer_thinking_down.png",
+      "registered_name": "cs_semen thinking_down pioneer normal",
+      "tag": "cs_semen",
+      "pose": "thinking_down",
+      "distance": "normal",
+      "factor": 0.95238,
+      "visible_height": 1580.0,
+      "canvas": [
+        1000,
+        1600
+      ],
+      "positions": [
+        "cs_semen_normal_left"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/semen/semen_pioneer_thinking_down.png",
+      "sha256": "d2343c7a0a29ea70ea3b9ee0bbdc8660c4e814074acf0d2a958490cd65d78c75"
+    },
+    {
+      "path": "sp/semen/semen_pioneer_thinking_down.png",
+      "registered_name": "cs_semen thinking_down pioneer close",
+      "tag": "cs_semen",
+      "pose": "thinking_down",
+      "distance": "close",
+      "factor": 1.1619,
+      "visible_height": 1927.6,
+      "canvas": [
+        1220,
+        1952
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/semen/semen_pioneer_thinking_down.png",
+      "sha256": "d2343c7a0a29ea70ea3b9ee0bbdc8660c4e814074acf0d2a958490cd65d78c75"
+    },
+    {
+      "path": "sp/semen/semen_pioneer_awkward_alt.png",
+      "registered_name": "cs_semen awkward_alt pioneer far",
+      "tag": "cs_semen",
+      "pose": "awkward_alt",
+      "distance": "far",
+      "factor": 0.77488,
+      "visible_height": 1295.6,
+      "canvas": [
+        820,
+        1312
+      ],
+      "positions": [
+        "cs_semen_far_right"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/semen/semen_pioneer_awkward_alt.png",
+      "sha256": "f87a421f0bc1383bceda42a919eaffd2807d4734a0c9eae23a930a645bfd688d"
+    },
+    {
+      "path": "sp/semen/semen_pioneer_awkward_alt.png",
+      "registered_name": "cs_semen awkward_alt pioneer normal",
+      "tag": "cs_semen",
+      "pose": "awkward_alt",
+      "distance": "normal",
+      "factor": 0.94498,
+      "visible_height": 1580.0,
+      "canvas": [
+        1000,
+        1600
+      ],
+      "positions": [
+        "cs_semen_normal_left",
+        "cs_semen_normal_right"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/semen/semen_pioneer_awkward_alt.png",
+      "sha256": "f87a421f0bc1383bceda42a919eaffd2807d4734a0c9eae23a930a645bfd688d"
+    },
+    {
+      "path": "sp/semen/semen_pioneer_awkward_alt.png",
+      "registered_name": "cs_semen awkward_alt pioneer close",
+      "tag": "cs_semen",
+      "pose": "awkward_alt",
+      "distance": "close",
+      "factor": 1.15287,
+      "visible_height": 1927.6,
+      "canvas": [
+        1220,
+        1952
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/semen/semen_pioneer_awkward_alt.png",
+      "sha256": "f87a421f0bc1383bceda42a919eaffd2807d4734a0c9eae23a930a645bfd688d"
+    },
+    {
+      "path": "sp/semen/semen_pioneer_grateful.png",
+      "registered_name": "cs_semen grateful pioneer far",
+      "tag": "cs_semen",
+      "pose": "grateful",
+      "distance": "far",
+      "factor": 0.77488,
+      "visible_height": 1295.6,
+      "canvas": [
+        820,
+        1312
+      ],
+      "positions": [
+        "cs_semen_far_right"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/semen/semen_pioneer_grateful.png",
+      "sha256": "92725fb8ffa161eabe01a417fd4dc5ddfde4e0424021168ac3d5e3a4fd63a62a"
+    },
+    {
+      "path": "sp/semen/semen_pioneer_grateful.png",
+      "registered_name": "cs_semen grateful pioneer normal",
+      "tag": "cs_semen",
+      "pose": "grateful",
+      "distance": "normal",
+      "factor": 0.94498,
+      "visible_height": 1580.0,
+      "canvas": [
+        1000,
+        1600
+      ],
+      "positions": [
+        "cs_semen_normal_right"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/semen/semen_pioneer_grateful.png",
+      "sha256": "92725fb8ffa161eabe01a417fd4dc5ddfde4e0424021168ac3d5e3a4fd63a62a"
+    },
+    {
+      "path": "sp/semen/semen_pioneer_grateful.png",
+      "registered_name": "cs_semen grateful pioneer close",
+      "tag": "cs_semen",
+      "pose": "grateful",
+      "distance": "close",
+      "factor": 1.15287,
+      "visible_height": 1927.6,
+      "canvas": [
+        1220,
+        1952
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/semen/semen_pioneer_grateful.png",
+      "sha256": "92725fb8ffa161eabe01a417fd4dc5ddfde4e0424021168ac3d5e3a4fd63a62a"
+    },
+    {
+      "path": "sp/zhenya/zhenya_pioneer_normal.png",
+      "registered_name": "cs_zhenya normal pioneer far",
+      "tag": "cs_zhenya",
+      "pose": "normal",
+      "distance": "far",
+      "factor": 0.75,
+      "visible_height": 1230.0,
+      "canvas": [
+        820,
+        1312
+      ],
+      "positions": [
+        "cs_darya_far_left"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/zhenya/zhenya_pioneer_normal.png",
+      "sha256": "6f770066cdefcc6130bc6864cb4d2bcb3420dedf10e9e704b598d1464015dd43"
+    },
+    {
+      "path": "sp/zhenya/zhenya_pioneer_normal.png",
+      "registered_name": "cs_zhenya normal pioneer normal",
+      "tag": "cs_zhenya",
+      "pose": "normal",
+      "distance": "normal",
+      "factor": 0.91463,
+      "visible_height": 1500.0,
+      "canvas": [
+        1000,
+        1600
+      ],
+      "positions": [
+        "cs_darya_normal_left"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/zhenya/zhenya_pioneer_normal.png",
+      "sha256": "6f770066cdefcc6130bc6864cb4d2bcb3420dedf10e9e704b598d1464015dd43"
+    },
+    {
+      "path": "sp/zhenya/zhenya_pioneer_normal.png",
+      "registered_name": "cs_zhenya normal pioneer close",
+      "tag": "cs_zhenya",
+      "pose": "normal",
+      "distance": "close",
+      "factor": 1.11585,
+      "visible_height": 1830.0,
+      "canvas": [
+        1220,
+        1952
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/zhenya/zhenya_pioneer_normal.png",
+      "sha256": "6f770066cdefcc6130bc6864cb4d2bcb3420dedf10e9e704b598d1464015dd43"
+    },
+    {
+      "path": "sp/zhenya/zhenya_pioneer_thinking.png",
+      "registered_name": "cs_zhenya thinking pioneer far",
+      "tag": "cs_zhenya",
+      "pose": "thinking",
+      "distance": "far",
+      "factor": 0.74909,
+      "visible_height": 1230.0,
+      "canvas": [
+        820,
+        1312
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/zhenya/zhenya_pioneer_thinking.png",
+      "sha256": "3a01d2b5db42518cda9d9e97ac3c60904390e8db374dc598bc22256fdf488435"
+    },
+    {
+      "path": "sp/zhenya/zhenya_pioneer_thinking.png",
+      "registered_name": "cs_zhenya thinking pioneer normal",
+      "tag": "cs_zhenya",
+      "pose": "thinking",
+      "distance": "normal",
+      "factor": 0.91352,
+      "visible_height": 1500.0,
+      "canvas": [
+        1000,
+        1600
+      ],
+      "positions": [
+        "cs_darya_normal_left"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/zhenya/zhenya_pioneer_thinking.png",
+      "sha256": "3a01d2b5db42518cda9d9e97ac3c60904390e8db374dc598bc22256fdf488435"
+    },
+    {
+      "path": "sp/zhenya/zhenya_pioneer_thinking.png",
+      "registered_name": "cs_zhenya thinking pioneer close",
+      "tag": "cs_zhenya",
+      "pose": "thinking",
+      "distance": "close",
+      "factor": 1.11449,
+      "visible_height": 1830.0,
+      "canvas": [
+        1220,
+        1952
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/zhenya/zhenya_pioneer_thinking.png",
+      "sha256": "3a01d2b5db42518cda9d9e97ac3c60904390e8db374dc598bc22256fdf488435"
+    },
+    {
+      "path": "sp/zhenya/zhenya_pioneer_explaining.png",
+      "registered_name": "cs_zhenya explaining pioneer far",
+      "tag": "cs_zhenya",
+      "pose": "explaining",
+      "distance": "far",
+      "factor": 0.74863,
+      "visible_height": 1230.0,
+      "canvas": [
+        820,
+        1312
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/zhenya/zhenya_pioneer_explaining.png",
+      "sha256": "d7f8d87f84a1a98390a28e26453d9ec53b6885f8e542b14cca2d77f71f8672c6"
+    },
+    {
+      "path": "sp/zhenya/zhenya_pioneer_explaining.png",
+      "registered_name": "cs_zhenya explaining pioneer normal",
+      "tag": "cs_zhenya",
+      "pose": "explaining",
+      "distance": "normal",
+      "factor": 0.91296,
+      "visible_height": 1500.0,
+      "canvas": [
+        1000,
+        1600
+      ],
+      "positions": [
+        "cs_darya_normal_left"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/zhenya/zhenya_pioneer_explaining.png",
+      "sha256": "d7f8d87f84a1a98390a28e26453d9ec53b6885f8e542b14cca2d77f71f8672c6"
+    },
+    {
+      "path": "sp/zhenya/zhenya_pioneer_explaining.png",
+      "registered_name": "cs_zhenya explaining pioneer close",
+      "tag": "cs_zhenya",
+      "pose": "explaining",
+      "distance": "close",
+      "factor": 1.11382,
+      "visible_height": 1830.0,
+      "canvas": [
+        1220,
+        1952
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/zhenya/zhenya_pioneer_explaining.png",
+      "sha256": "d7f8d87f84a1a98390a28e26453d9ec53b6885f8e542b14cca2d77f71f8672c6"
+    },
+    {
+      "path": "sp/zhenya/zhenya_pioneer_arms_crossed.png",
+      "registered_name": "cs_zhenya arms_crossed pioneer far",
+      "tag": "cs_zhenya",
+      "pose": "arms_crossed",
+      "distance": "far",
+      "factor": 0.74772,
+      "visible_height": 1230.0,
+      "canvas": [
+        820,
+        1312
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/zhenya/zhenya_pioneer_arms_crossed.png",
+      "sha256": "ec92b3438ac907658bca66dc9966d28f5798a6a9d8879356e5bbbd2e49101941"
+    },
+    {
+      "path": "sp/zhenya/zhenya_pioneer_arms_crossed.png",
+      "registered_name": "cs_zhenya arms_crossed pioneer normal",
+      "tag": "cs_zhenya",
+      "pose": "arms_crossed",
+      "distance": "normal",
+      "factor": 0.91185,
+      "visible_height": 1500.0,
+      "canvas": [
+        1000,
+        1600
+      ],
+      "positions": [
+        "cs_darya_normal_left"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/zhenya/zhenya_pioneer_arms_crossed.png",
+      "sha256": "ec92b3438ac907658bca66dc9966d28f5798a6a9d8879356e5bbbd2e49101941"
+    },
+    {
+      "path": "sp/zhenya/zhenya_pioneer_arms_crossed.png",
+      "registered_name": "cs_zhenya arms_crossed pioneer close",
+      "tag": "cs_zhenya",
+      "pose": "arms_crossed",
+      "distance": "close",
+      "factor": 1.11246,
+      "visible_height": 1830.0,
+      "canvas": [
+        1220,
+        1952
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/zhenya/zhenya_pioneer_arms_crossed.png",
+      "sha256": "ec92b3438ac907658bca66dc9966d28f5798a6a9d8879356e5bbbd2e49101941"
+    },
+    {
+      "path": "sp/zhenya/zhenya_pioneer_thoughtful.png",
+      "registered_name": "cs_zhenya thoughtful pioneer far",
+      "tag": "cs_zhenya",
+      "pose": "thoughtful",
+      "distance": "far",
+      "factor": 0.75,
+      "visible_height": 1230.0,
+      "canvas": [
+        820,
+        1312
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/zhenya/zhenya_pioneer_thoughtful.png",
+      "sha256": "d34fcefba3bab71426ea9a7f74c7839656adf7ee26dba02ba06169296ab569e9"
+    },
+    {
+      "path": "sp/zhenya/zhenya_pioneer_thoughtful.png",
+      "registered_name": "cs_zhenya thoughtful pioneer normal",
+      "tag": "cs_zhenya",
+      "pose": "thoughtful",
+      "distance": "normal",
+      "factor": 0.91463,
+      "visible_height": 1500.0,
+      "canvas": [
+        1000,
+        1600
+      ],
+      "positions": [
+        "cs_darya_normal_left"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/zhenya/zhenya_pioneer_thoughtful.png",
+      "sha256": "d34fcefba3bab71426ea9a7f74c7839656adf7ee26dba02ba06169296ab569e9"
+    },
+    {
+      "path": "sp/zhenya/zhenya_pioneer_thoughtful.png",
+      "registered_name": "cs_zhenya thoughtful pioneer close",
+      "tag": "cs_zhenya",
+      "pose": "thoughtful",
+      "distance": "close",
+      "factor": 1.11585,
+      "visible_height": 1830.0,
+      "canvas": [
+        1220,
+        1952
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/zhenya/zhenya_pioneer_thoughtful.png",
+      "sha256": "d34fcefba3bab71426ea9a7f74c7839656adf7ee26dba02ba06169296ab569e9"
+    },
+    {
+      "path": "sp/zhenya/zhenya_pioneer_glasses_touch.png",
+      "registered_name": "cs_zhenya glasses_touch pioneer far",
+      "tag": "cs_zhenya",
+      "pose": "glasses_touch",
+      "distance": "far",
+      "factor": 0.75692,
+      "visible_height": 1230.0,
+      "canvas": [
+        820,
+        1312
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/zhenya/zhenya_pioneer_glasses_touch.png",
+      "sha256": "e446fba57abed260b25c0434f7d76bfe7ac0cd778dfc182514a1bd716b5e6ad5"
+    },
+    {
+      "path": "sp/zhenya/zhenya_pioneer_glasses_touch.png",
+      "registered_name": "cs_zhenya glasses_touch pioneer normal",
+      "tag": "cs_zhenya",
+      "pose": "glasses_touch",
+      "distance": "normal",
+      "factor": 0.92308,
+      "visible_height": 1500.0,
+      "canvas": [
+        1000,
+        1600
+      ],
+      "positions": [
+        "cs_darya_normal_left"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/zhenya/zhenya_pioneer_glasses_touch.png",
+      "sha256": "e446fba57abed260b25c0434f7d76bfe7ac0cd778dfc182514a1bd716b5e6ad5"
+    },
+    {
+      "path": "sp/zhenya/zhenya_pioneer_glasses_touch.png",
+      "registered_name": "cs_zhenya glasses_touch pioneer close",
+      "tag": "cs_zhenya",
+      "pose": "glasses_touch",
+      "distance": "close",
+      "factor": 1.12615,
+      "visible_height": 1830.0,
+      "canvas": [
+        1220,
+        1952
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/zhenya/zhenya_pioneer_glasses_touch.png",
+      "sha256": "e446fba57abed260b25c0434f7d76bfe7ac0cd778dfc182514a1bd716b5e6ad5"
+    },
+    {
+      "path": "sp/zhenya/zhenya_pioneer_angry.png",
+      "registered_name": "cs_zhenya angry pioneer far",
+      "tag": "cs_zhenya",
+      "pose": "angry",
+      "distance": "far",
+      "factor": 0.75,
+      "visible_height": 1230.0,
+      "canvas": [
+        820,
+        1312
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/zhenya/zhenya_pioneer_angry.png",
+      "sha256": "60b66db0cd41eab112eb16287f17a9ceeed11888b52ba28a196045c816af866c"
+    },
+    {
+      "path": "sp/zhenya/zhenya_pioneer_angry.png",
+      "registered_name": "cs_zhenya angry pioneer normal",
+      "tag": "cs_zhenya",
+      "pose": "angry",
+      "distance": "normal",
+      "factor": 0.91463,
+      "visible_height": 1500.0,
+      "canvas": [
+        1000,
+        1600
+      ],
+      "positions": [
+        "cs_darya_normal_left"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/zhenya/zhenya_pioneer_angry.png",
+      "sha256": "60b66db0cd41eab112eb16287f17a9ceeed11888b52ba28a196045c816af866c"
+    },
+    {
+      "path": "sp/zhenya/zhenya_pioneer_angry.png",
+      "registered_name": "cs_zhenya angry pioneer close",
+      "tag": "cs_zhenya",
+      "pose": "angry",
+      "distance": "close",
+      "factor": 1.11585,
+      "visible_height": 1830.0,
+      "canvas": [
+        1220,
+        1952
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/zhenya/zhenya_pioneer_angry.png",
+      "sha256": "60b66db0cd41eab112eb16287f17a9ceeed11888b52ba28a196045c816af866c"
+    },
+    {
+      "path": "sp/zhenya/zhenya_pioneer_shy.png",
+      "registered_name": "cs_zhenya shy pioneer far",
+      "tag": "cs_zhenya",
+      "pose": "shy",
+      "distance": "far",
+      "factor": 0.75092,
+      "visible_height": 1230.0,
+      "canvas": [
+        820,
+        1312
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/zhenya/zhenya_pioneer_shy.png",
+      "sha256": "7d11484aae681f4adedbb97086172dc3ab0ebd5d82be094ea76325d4776b9035"
+    },
+    {
+      "path": "sp/zhenya/zhenya_pioneer_shy.png",
+      "registered_name": "cs_zhenya shy pioneer normal",
+      "tag": "cs_zhenya",
+      "pose": "shy",
+      "distance": "normal",
+      "factor": 0.91575,
+      "visible_height": 1500.0,
+      "canvas": [
+        1000,
+        1600
+      ],
+      "positions": [
+        "cs_darya_normal_left"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/zhenya/zhenya_pioneer_shy.png",
+      "sha256": "7d11484aae681f4adedbb97086172dc3ab0ebd5d82be094ea76325d4776b9035"
+    },
+    {
+      "path": "sp/zhenya/zhenya_pioneer_shy.png",
+      "registered_name": "cs_zhenya shy pioneer close",
+      "tag": "cs_zhenya",
+      "pose": "shy",
+      "distance": "close",
+      "factor": 1.11722,
+      "visible_height": 1830.0,
+      "canvas": [
+        1220,
+        1952
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/zhenya/zhenya_pioneer_shy.png",
+      "sha256": "7d11484aae681f4adedbb97086172dc3ab0ebd5d82be094ea76325d4776b9035"
+    },
+    {
+      "path": "sp/zhenya/zhenya_pioneer_shrug.png",
+      "registered_name": "cs_zhenya shrug pioneer far",
+      "tag": "cs_zhenya",
+      "pose": "shrug",
+      "distance": "far",
+      "factor": 0.74772,
+      "visible_height": 1230.0,
+      "canvas": [
+        820,
+        1312
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/zhenya/zhenya_pioneer_shrug.png",
+      "sha256": "e4f3dda4d0c247e34036b67ce186fa1dfb45716dcef7d465b0daf96a8f2715b9"
+    },
+    {
+      "path": "sp/zhenya/zhenya_pioneer_shrug.png",
+      "registered_name": "cs_zhenya shrug pioneer normal",
+      "tag": "cs_zhenya",
+      "pose": "shrug",
+      "distance": "normal",
+      "factor": 0.91185,
+      "visible_height": 1500.0,
+      "canvas": [
+        1000,
+        1600
+      ],
+      "positions": [
+        "cs_darya_normal_left"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/zhenya/zhenya_pioneer_shrug.png",
+      "sha256": "e4f3dda4d0c247e34036b67ce186fa1dfb45716dcef7d465b0daf96a8f2715b9"
+    },
+    {
+      "path": "sp/zhenya/zhenya_pioneer_shrug.png",
+      "registered_name": "cs_zhenya shrug pioneer close",
+      "tag": "cs_zhenya",
+      "pose": "shrug",
+      "distance": "close",
+      "factor": 1.11246,
+      "visible_height": 1830.0,
+      "canvas": [
+        1220,
+        1952
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/zhenya/zhenya_pioneer_shrug.png",
+      "sha256": "e4f3dda4d0c247e34036b67ce186fa1dfb45716dcef7d465b0daf96a8f2715b9"
+    },
+    {
+      "path": "sp/viola/viola_medical_thoughtful.png",
+      "registered_name": "cs custom thoughtful medical far",
+      "tag": "cs",
+      "pose": "thoughtful",
+      "distance": "far",
+      "factor": 0.76875,
+      "visible_height": 1279.1999999999998,
+      "canvas": [
+        820,
+        1312
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/viola/viola_medical_thoughtful.png",
+      "sha256": "1f9584dff75b1412cefd9fe32d3cc4b1303b459d19aa6d9af216c3dfbf7b56ea"
+    },
+    {
+      "path": "sp/viola/viola_medical_thoughtful.png",
+      "registered_name": "cs custom thoughtful medical normal",
+      "tag": "cs",
+      "pose": "thoughtful",
+      "distance": "normal",
+      "factor": 0.9375,
+      "visible_height": 1560.0,
+      "canvas": [
+        1000,
+        1600
+      ],
+      "positions": [
+        "cs_viola_normal_left"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/viola/viola_medical_thoughtful.png",
+      "sha256": "1f9584dff75b1412cefd9fe32d3cc4b1303b459d19aa6d9af216c3dfbf7b56ea"
+    },
+    {
+      "path": "sp/viola/viola_medical_thoughtful.png",
+      "registered_name": "cs custom thoughtful medical close",
+      "tag": "cs",
+      "pose": "thoughtful",
+      "distance": "close",
+      "factor": 1.14375,
+      "visible_height": 1903.2,
+      "canvas": [
+        1220,
+        1952
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/viola/viola_medical_thoughtful.png",
+      "sha256": "1f9584dff75b1412cefd9fe32d3cc4b1303b459d19aa6d9af216c3dfbf7b56ea"
+    },
+    {
+      "path": "sp/viola/viola_medical_arms_crossed.png",
+      "registered_name": "cs custom arms_crossed medical far",
+      "tag": "cs",
+      "pose": "arms_crossed",
+      "distance": "far",
+      "factor": 0.76553,
+      "visible_height": 1279.1999999999998,
+      "canvas": [
+        820,
+        1312
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/viola/viola_medical_arms_crossed.png",
+      "sha256": "f34691a06ca8c5ecc1ce46f4637938a3e69bfed982bb3ed588665a5b0257cac6"
+    },
+    {
+      "path": "sp/viola/viola_medical_arms_crossed.png",
+      "registered_name": "cs custom arms_crossed medical normal",
+      "tag": "cs",
+      "pose": "arms_crossed",
+      "distance": "normal",
+      "factor": 0.93357,
+      "visible_height": 1560.0,
+      "canvas": [
+        1000,
+        1600
+      ],
+      "positions": [
+        "cs_viola_normal_left"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/viola/viola_medical_arms_crossed.png",
+      "sha256": "f34691a06ca8c5ecc1ce46f4637938a3e69bfed982bb3ed588665a5b0257cac6"
+    },
+    {
+      "path": "sp/viola/viola_medical_arms_crossed.png",
+      "registered_name": "cs custom arms_crossed medical close",
+      "tag": "cs",
+      "pose": "arms_crossed",
+      "distance": "close",
+      "factor": 1.13896,
+      "visible_height": 1903.2,
+      "canvas": [
+        1220,
+        1952
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/viola/viola_medical_arms_crossed.png",
+      "sha256": "f34691a06ca8c5ecc1ce46f4637938a3e69bfed982bb3ed588665a5b0257cac6"
+    },
+    {
+      "path": "sp/viola/viola_medical_explaining.png",
+      "registered_name": "cs custom explaining medical far",
+      "tag": "cs",
+      "pose": "explaining",
+      "distance": "far",
+      "factor": 0.76507,
+      "visible_height": 1279.1999999999998,
+      "canvas": [
+        820,
+        1312
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/viola/viola_medical_explaining.png",
+      "sha256": "f16bc30dbe4fa9ab7fb5de12947cc3fa3ec9a3760b1b7ed976c408b180fc6e4e"
+    },
+    {
+      "path": "sp/viola/viola_medical_explaining.png",
+      "registered_name": "cs custom explaining medical normal",
+      "tag": "cs",
+      "pose": "explaining",
+      "distance": "normal",
+      "factor": 0.93301,
+      "visible_height": 1560.0,
+      "canvas": [
+        1000,
+        1600
+      ],
+      "positions": [
+        "cs_viola_normal_left"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/viola/viola_medical_explaining.png",
+      "sha256": "f16bc30dbe4fa9ab7fb5de12947cc3fa3ec9a3760b1b7ed976c408b180fc6e4e"
+    },
+    {
+      "path": "sp/viola/viola_medical_explaining.png",
+      "registered_name": "cs custom explaining medical close",
+      "tag": "cs",
+      "pose": "explaining",
+      "distance": "close",
+      "factor": 1.13828,
+      "visible_height": 1903.2,
+      "canvas": [
+        1220,
+        1952
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/viola/viola_medical_explaining.png",
+      "sha256": "f16bc30dbe4fa9ab7fb5de12947cc3fa3ec9a3760b1b7ed976c408b180fc6e4e"
+    },
+    {
+      "path": "sp/viola/viola_medical_stern.png",
+      "registered_name": "cs custom stern medical far",
+      "tag": "cs",
+      "pose": "stern",
+      "distance": "far",
+      "factor": 0.76875,
+      "visible_height": 1279.1999999999998,
+      "canvas": [
+        820,
+        1312
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/viola/viola_medical_stern.png",
+      "sha256": "d2c08a2fe26d1bcc5f1a0c77b31782a19f159a519e0bcb5e50e453b0cf8dbdcd"
+    },
+    {
+      "path": "sp/viola/viola_medical_stern.png",
+      "registered_name": "cs custom stern medical normal",
+      "tag": "cs",
+      "pose": "stern",
+      "distance": "normal",
+      "factor": 0.9375,
+      "visible_height": 1560.0,
+      "canvas": [
+        1000,
+        1600
+      ],
+      "positions": [
+        "cs_viola_normal_left"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/viola/viola_medical_stern.png",
+      "sha256": "d2c08a2fe26d1bcc5f1a0c77b31782a19f159a519e0bcb5e50e453b0cf8dbdcd"
+    },
+    {
+      "path": "sp/viola/viola_medical_stern.png",
+      "registered_name": "cs custom stern medical close",
+      "tag": "cs",
+      "pose": "stern",
+      "distance": "close",
+      "factor": 1.14375,
+      "visible_height": 1903.2,
+      "canvas": [
+        1220,
+        1952
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/viola/viola_medical_stern.png",
+      "sha256": "d2c08a2fe26d1bcc5f1a0c77b31782a19f159a519e0bcb5e50e453b0cf8dbdcd"
+    },
+    {
+      "path": "sp/viola/viola_medical_amused.png",
+      "registered_name": "cs custom amused medical far",
+      "tag": "cs",
+      "pose": "amused",
+      "distance": "far",
+      "factor": 0.76599,
+      "visible_height": 1279.1999999999998,
+      "canvas": [
+        820,
+        1312
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/viola/viola_medical_amused.png",
+      "sha256": "e2567e70883cd42a61f4ee88e73bb626a938a0a833ce6a75aeecc96f2ff3fb49"
+    },
+    {
+      "path": "sp/viola/viola_medical_amused.png",
+      "registered_name": "cs custom amused medical normal",
+      "tag": "cs",
+      "pose": "amused",
+      "distance": "normal",
+      "factor": 0.93413,
+      "visible_height": 1560.0,
+      "canvas": [
+        1000,
+        1600
+      ],
+      "positions": [
+        "cs_viola_normal_left"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/viola/viola_medical_amused.png",
+      "sha256": "e2567e70883cd42a61f4ee88e73bb626a938a0a833ce6a75aeecc96f2ff3fb49"
+    },
+    {
+      "path": "sp/viola/viola_medical_amused.png",
+      "registered_name": "cs custom amused medical close",
+      "tag": "cs",
+      "pose": "amused",
+      "distance": "close",
+      "factor": 1.13964,
+      "visible_height": 1903.2,
+      "canvas": [
+        1220,
+        1952
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/viola/viola_medical_amused.png",
+      "sha256": "e2567e70883cd42a61f4ee88e73bb626a938a0a833ce6a75aeecc96f2ff3fb49"
+    },
+    {
+      "path": "sp/viola/viola_medical_eyes_closed.png",
+      "registered_name": "cs custom eyes_closed medical far",
+      "tag": "cs",
+      "pose": "eyes_closed",
+      "distance": "far",
+      "factor": 0.76507,
+      "visible_height": 1279.1999999999998,
+      "canvas": [
+        820,
+        1312
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/viola/viola_medical_eyes_closed.png",
+      "sha256": "80615327a7bc90fa7241487d6ba71f89d45fcbe5d84a355617e648e4fc398b85"
+    },
+    {
+      "path": "sp/viola/viola_medical_eyes_closed.png",
+      "registered_name": "cs custom eyes_closed medical normal",
+      "tag": "cs",
+      "pose": "eyes_closed",
+      "distance": "normal",
+      "factor": 0.93301,
+      "visible_height": 1560.0,
+      "canvas": [
+        1000,
+        1600
+      ],
+      "positions": [
+        "cs_viola_normal_left"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/viola/viola_medical_eyes_closed.png",
+      "sha256": "80615327a7bc90fa7241487d6ba71f89d45fcbe5d84a355617e648e4fc398b85"
+    },
+    {
+      "path": "sp/viola/viola_medical_eyes_closed.png",
+      "registered_name": "cs custom eyes_closed medical close",
+      "tag": "cs",
+      "pose": "eyes_closed",
+      "distance": "close",
+      "factor": 1.13828,
+      "visible_height": 1903.2,
+      "canvas": [
+        1220,
+        1952
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/viola/viola_medical_eyes_closed.png",
+      "sha256": "80615327a7bc90fa7241487d6ba71f89d45fcbe5d84a355617e648e4fc398b85"
+    },
+    {
+      "path": "sp/viola/viola_medical_serious.png",
+      "registered_name": "cs custom serious medical far",
+      "tag": "cs",
+      "pose": "serious",
+      "distance": "far",
+      "factor": 0.76507,
+      "visible_height": 1279.1999999999998,
+      "canvas": [
+        820,
+        1312
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/viola/viola_medical_serious.png",
+      "sha256": "6cc537af93f2b6dd77f643384557739f2ecfb392dfa4fdca0b286351949895d9"
+    },
+    {
+      "path": "sp/viola/viola_medical_serious.png",
+      "registered_name": "cs custom serious medical normal",
+      "tag": "cs",
+      "pose": "serious",
+      "distance": "normal",
+      "factor": 0.93301,
+      "visible_height": 1560.0,
+      "canvas": [
+        1000,
+        1600
+      ],
+      "positions": [
+        "cs_viola_normal_left"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/viola/viola_medical_serious.png",
+      "sha256": "6cc537af93f2b6dd77f643384557739f2ecfb392dfa4fdca0b286351949895d9"
+    },
+    {
+      "path": "sp/viola/viola_medical_serious.png",
+      "registered_name": "cs custom serious medical close",
+      "tag": "cs",
+      "pose": "serious",
+      "distance": "close",
+      "factor": 1.13828,
+      "visible_height": 1903.2,
+      "canvas": [
+        1220,
+        1952
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/viola/viola_medical_serious.png",
+      "sha256": "6cc537af93f2b6dd77f643384557739f2ecfb392dfa4fdca0b286351949895d9"
+    },
+    {
+      "path": "sp/viola/viola_medical_angry.png",
+      "registered_name": "cs custom angry medical far",
+      "tag": "cs",
+      "pose": "angry",
+      "distance": "far",
+      "factor": 0.76829,
+      "visible_height": 1279.1999999999998,
+      "canvas": [
+        820,
+        1312
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/viola/viola_medical_angry.png",
+      "sha256": "76c8135b67ae37f86bb8cb83f1e81085825d7d8eaa69f27a4d9c9d4a7444bf50"
+    },
+    {
+      "path": "sp/viola/viola_medical_angry.png",
+      "registered_name": "cs custom angry medical normal",
+      "tag": "cs",
+      "pose": "angry",
+      "distance": "normal",
+      "factor": 0.93694,
+      "visible_height": 1560.0,
+      "canvas": [
+        1000,
+        1600
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/viola/viola_medical_angry.png",
+      "sha256": "76c8135b67ae37f86bb8cb83f1e81085825d7d8eaa69f27a4d9c9d4a7444bf50"
+    },
+    {
+      "path": "sp/viola/viola_medical_angry.png",
+      "registered_name": "cs custom angry medical close",
+      "tag": "cs",
+      "pose": "angry",
+      "distance": "close",
+      "factor": 1.14306,
+      "visible_height": 1903.2,
+      "canvas": [
+        1220,
+        1952
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/viola/viola_medical_angry.png",
+      "sha256": "76c8135b67ae37f86bb8cb83f1e81085825d7d8eaa69f27a4d9c9d4a7444bf50"
+    },
+    {
+      "path": "sp/viola/viola_medical_surprised.png",
+      "registered_name": "cs custom surprised medical far",
+      "tag": "cs",
+      "pose": "surprised",
+      "distance": "far",
+      "factor": 0.76507,
+      "visible_height": 1279.1999999999998,
+      "canvas": [
+        820,
+        1312
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/viola/viola_medical_surprised.png",
+      "sha256": "fe7b42562ac2550339cf6fdf05428010bbcfd6a24ab76a4dd484fc84b6da2be1"
+    },
+    {
+      "path": "sp/viola/viola_medical_surprised.png",
+      "registered_name": "cs custom surprised medical normal",
+      "tag": "cs",
+      "pose": "surprised",
+      "distance": "normal",
+      "factor": 0.93301,
+      "visible_height": 1560.0,
+      "canvas": [
+        1000,
+        1600
+      ],
+      "positions": [
+        "cs_viola_normal_left"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/viola/viola_medical_surprised.png",
+      "sha256": "fe7b42562ac2550339cf6fdf05428010bbcfd6a24ab76a4dd484fc84b6da2be1"
+    },
+    {
+      "path": "sp/viola/viola_medical_surprised.png",
+      "registered_name": "cs custom surprised medical close",
+      "tag": "cs",
+      "pose": "surprised",
+      "distance": "close",
+      "factor": 1.13828,
+      "visible_height": 1903.2,
+      "canvas": [
+        1220,
+        1952
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/viola/viola_medical_surprised.png",
+      "sha256": "fe7b42562ac2550339cf6fdf05428010bbcfd6a24ab76a4dd484fc84b6da2be1"
+    },
+    {
+      "path": "sp/viola/viola_medical_warm_smile.png",
+      "registered_name": "cs custom warm_smile medical far",
+      "tag": "cs",
+      "pose": "warm_smile",
+      "distance": "far",
+      "factor": 0.76507,
+      "visible_height": 1279.1999999999998,
+      "canvas": [
+        820,
+        1312
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/viola/viola_medical_warm_smile.png",
+      "sha256": "72c1dad4e25cf457cd5192d18dd16abb6c43de9d420edd04cba16f04da9b3f14"
+    },
+    {
+      "path": "sp/viola/viola_medical_warm_smile.png",
+      "registered_name": "cs custom warm_smile medical normal",
+      "tag": "cs",
+      "pose": "warm_smile",
+      "distance": "normal",
+      "factor": 0.93301,
+      "visible_height": 1560.0,
+      "canvas": [
+        1000,
+        1600
+      ],
+      "positions": [
+        "cs_viola_normal_left"
+      ],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/viola/viola_medical_warm_smile.png",
+      "sha256": "72c1dad4e25cf457cd5192d18dd16abb6c43de9d420edd04cba16f04da9b3f14"
+    },
+    {
+      "path": "sp/viola/viola_medical_warm_smile.png",
+      "registered_name": "cs custom warm_smile medical close",
+      "tag": "cs",
+      "pose": "warm_smile",
+      "distance": "close",
+      "factor": 1.13828,
+      "visible_height": 1903.2,
+      "canvas": [
+        1220,
+        1952
+      ],
+      "positions": [],
+      "source_size": [
+        941,
+        1672
+      ],
+      "effective_png": "sp/viola/viola_medical_warm_smile.png",
+      "sha256": "72c1dad4e25cf457cd5192d18dd16abb6c43de9d420edd04cba16f04da9b3f14"
+    }
+  ],
+  "unregistered_pngs": [
+    "sp/Dasha sprites/1.png",
+    "sp/Dasha sprites/10.png",
+    "sp/Dasha sprites/2.png",
+    "sp/Dasha sprites/3.png",
+    "sp/Dasha sprites/4.png",
+    "sp/Dasha sprites/5.png",
+    "sp/Dasha sprites/6.png",
+    "sp/Dasha sprites/7.png",
+    "sp/Dasha sprites/8.png",
+    "sp/Dasha sprites/9.png",
+    "sp/winter/dasha_sheet.png"
+  ],
+  "canvas_overflow": [],
+  "lena_sokolova": "POV; no standalone sprite used",
+  "aliases": "Existing numeric/legacy aliases kept for saved scripts; all current camp Darya shows use cs_darya, winter uses cs_dasha_winter"
+}

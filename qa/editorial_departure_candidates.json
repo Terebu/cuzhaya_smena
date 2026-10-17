@@ -1,0 +1,1154 @@
+[
+  {
+    "file": "days/day01/01_bus.rpy",
+    "line": 47,
+    "speaker": "cs_narrator",
+    "text": "Я повернулась к ней."
+  },
+  {
+    "file": "days/day01/02_recognition.rpy",
+    "line": 41,
+    "speaker": "cs_narrator",
+    "text": "Дарья вышла следом."
+  },
+  {
+    "file": "days/day01/02_recognition.rpy",
+    "line": 90,
+    "speaker": "cs_narrator",
+    "text": "Я медленно повернулась к автобусу."
+  },
+  {
+    "file": "days/day01/02_recognition.rpy",
+    "line": 103,
+    "speaker": "cs_narrator",
+    "text": "Я вернулась к автобусу и ещё раз посмотрела на номер."
+  },
+  {
+    "file": "days/day01/02_recognition.rpy",
+    "line": 109,
+    "speaker": "cs_narrator",
+    "text": "Я повернулась к ней."
+  },
+  {
+    "file": "days/day01/03_reality.rpy",
+    "line": 29,
+    "speaker": "cs_narrator",
+    "text": "Я снова повернулась к лагерю."
+  },
+  {
+    "file": "days/day01/03_reality.rpy",
+    "line": 82,
+    "speaker": "cs_narrator",
+    "text": "Дарья повернулась ко мне."
+  },
+  {
+    "file": "days/day01/05_home.rpy",
+    "line": 28,
+    "speaker": "cs_narrator",
+    "text": "Дарья повернулась ко мне."
+  },
+  {
+    "file": "days/day01/06_slavya.rpy",
+    "line": 21,
+    "speaker": "cs_narrator",
+    "text": "Из-за ворот вышла девушка."
+  },
+  {
+    "file": "days/day01/06_slavya.rpy",
+    "line": 61,
+    "speaker": "cs_narrator",
+    "text": "Я медленно повернулась к Дарье."
+  },
+  {
+    "file": "days/day01/07_uninvited.rpy",
+    "line": 86,
+    "speaker": "cs_narrator",
+    "text": "Славя повернулась к ней."
+  },
+  {
+    "file": "days/day01/07_uninvited.rpy",
+    "line": 175,
+    "speaker": "cs_narrator",
+    "text": "Славя развернулась к воротам."
+  },
+  {
+    "file": "days/day01/08_camp_walk.rpy",
+    "line": 99,
+    "speaker": "cs_narrator",
+    "text": "Я повернулась к ней."
+  },
+  {
+    "file": "days/day01/09_counsellor.rpy",
+    "line": 61,
+    "speaker": "cs_narrator",
+    "text": "Из домика вышла женщина."
+  },
+  {
+    "file": "days/day01/09_counsellor.rpy",
+    "line": 191,
+    "speaker": "cs_narrator",
+    "text": "Я повернулась к ней."
+  },
+  {
+    "file": "days/day01/10_soviet_home.rpy",
+    "line": 103,
+    "speaker": "cs_narrator",
+    "text": "Я повернулась к вожатой."
+  },
+  {
+    "file": "days/day01/11_state_machine.rpy",
+    "line": 45,
+    "speaker": "cs_narrator",
+    "text": "Я повернулась к Ольге Дмитриевне."
+  },
+  {
+    "file": "days/day01/11_state_machine.rpy",
+    "line": 76,
+    "speaker": "cs_narrator",
+    "text": "Я медленно повернулась к Дарье."
+  },
+  {
+    "file": "days/day01/11_state_machine.rpy",
+    "line": 106,
+    "speaker": "cs_narrator",
+    "text": "Она подошла к шкафу, достала что-то из ящика и повернулась к Славе."
+  },
+  {
+    "file": "days/day01/11_state_machine.rpy",
+    "line": 115,
+    "speaker": "cs_narrator",
+    "text": "Она развернулась и вышла."
+  },
+  {
+    "file": "days/day01/13_uniform.rpy",
+    "line": 60,
+    "speaker": "cs_narrator",
+    "text": "Я вышла из-за импровизированной перегородки, поправляя рубашку."
+  },
+  {
+    "file": "days/day01/13_uniform.rpy",
+    "line": 127,
+    "speaker": "cs_narrator",
+    "text": "Вышла Дарья."
+  },
+  {
+    "file": "days/day01/13_uniform.rpy",
+    "line": 159,
+    "speaker": "cs_narrator",
+    "text": "Я повернулась к Ольге Дмитриевне."
+  },
+  {
+    "file": "days/day01/16_another_passenger.rpy",
+    "line": 55,
+    "speaker": "cs_narrator",
+    "text": "Я повернулась к Дарье."
+  },
+  {
+    "file": "days/day01/16_another_passenger.rpy",
+    "line": 86,
+    "speaker": "cs_narrator",
+    "text": "Я направилась к двери."
+  },
+  {
+    "file": "days/day01/17_beyond_the_screen.rpy",
+    "line": 102,
+    "speaker": "cs_narrator",
+    "text": "Я повернулась к ней."
+  },
+  {
+    "file": "days/day01/18_anachronism.rpy",
+    "line": 31,
+    "speaker": "cs_narrator",
+    "text": "Дарья медленно повернула ко мне голову."
+  },
+  {
+    "file": "days/day01/part05/21_not_a_simple_question.rpy",
+    "line": 37,
+    "speaker": "cs_narrator",
+    "text": "Она направилась к столу у окна."
+  },
+  {
+    "file": "days/day01/part05/22_similar_journey.rpy",
+    "line": 81,
+    "speaker": "cs_da",
+    "text": "Мы не видели, как он вышел. Когда пошли смотреть, его уже не было."
+  },
+  {
+    "file": "days/day01/part05/22_similar_journey.rpy",
+    "line": 82,
+    "speaker": "cs_narrator",
+    "text": "Я чуть повернулась к ней."
+  },
+  {
+    "file": "days/day01/part05/24_working_group.rpy",
+    "line": 98,
+    "speaker": "cs_narrator",
+    "text": "Она ещё раз оглядела стол и пошла дальше."
+  },
+  {
+    "file": "days/day01/part06/25_after_lunch.rpy",
+    "line": 53,
+    "speaker": "cs_narrator",
+    "text": "Я повернулась к нему."
+  },
+  {
+    "file": "days/day01/part06/27_house_for_two.rpy",
+    "line": 108,
+    "speaker": "cs_narrator",
+    "text": "Она направилась к двери."
+  },
+  {
+    "file": "days/day01/part06/30_at_the_door.rpy",
+    "line": 50,
+    "speaker": "cs_narrator",
+    "text": "Потом обе направились к нашему домику."
+  },
+  {
+    "file": "days/day01/part07/31_visitors.rpy",
+    "line": 115,
+    "speaker": "cs_narrator",
+    "text": "Алиса повернулась к нам."
+  },
+  {
+    "file": "days/day01/part07/33_clubs_path.rpy",
+    "line": 44,
+    "speaker": "cs_narrator",
+    "text": "Мы свернули за один из домиков."
+  },
+  {
+    "file": "days/day01/part07/34_engineers.rpy",
+    "line": 21,
+    "speaker": "cs_narrator",
+    "text": "Оба повернулись к нам."
+  },
+  {
+    "file": "days/day01/part07/38_five_volts.rpy",
+    "line": 9,
+    "speaker": "cs_narrator",
+    "text": "Шурик снова вернулся к вопросу питания."
+  },
+  {
+    "file": "days/day01/part07/39_future_in_pocket.rpy",
+    "line": 116,
+    "speaker": "cs_narrator",
+    "text": "Мы с Дарьей направились к двери."
+  },
+  {
+    "file": "days/day01/part07/39_future_in_pocket.rpy",
+    "line": 163,
+    "speaker": "cs_narrator",
+    "text": "Я вышла на крыльцо."
+  },
+  {
+    "file": "days/day01/part08/42_why_you.rpy",
+    "line": 5,
+    "speaker": "cs_narrator",
+    "text": "Когда они скрылись за поворотом, Дарья снова посмотрела на меня."
+  },
+  {
+    "file": "days/day01/part08/42_why_you.rpy",
+    "line": 131,
+    "speaker": "cs_narrator",
+    "text": "Я повернулась к ней."
+  },
+  {
+    "file": "days/day01/part08/43_square.rpy",
+    "line": 35,
+    "speaker": "cs_narrator",
+    "text": "Я повернулась к ней."
+  },
+  {
+    "file": "days/day01/part08/44_independent_opinion.rpy",
+    "line": 24,
+    "speaker": "cs_ls",
+    "text": "Как считаешь, из меня вышел бы нормальный человек для свидания?"
+  },
+  {
+    "file": "days/day01/part08/44_independent_opinion.rpy",
+    "line": 27,
+    "speaker": "cs_narrator",
+    "text": "Потом медленно повернулся к Дарье."
+  },
+  {
+    "file": "days/day01/part08/44_independent_opinion.rpy",
+    "line": 57,
+    "speaker": "cs_narrator",
+    "text": "Я повернулась к ней."
+  },
+  {
+    "file": "days/day01/part08/44_independent_opinion.rpy",
+    "line": 71,
+    "speaker": "cs_narrator",
+    "text": "Я медленно повернулась к Дарье."
+  },
+  {
+    "file": "days/day01/part08/45_for_now.rpy",
+    "line": 53,
+    "speaker": "cs_narrator",
+    "text": "Он пошёл в сторону домиков."
+  },
+  {
+    "file": "days/day01/part08/45_for_now.rpy",
+    "line": 75,
+    "speaker": "cs_narrator",
+    "text": "Мы направились к дорожке."
+  },
+  {
+    "file": "days/day01/part08/45_for_now.rpy",
+    "line": 77,
+    "speaker": "cs_narrator",
+    "text": "Она повернулась ко мне."
+  },
+  {
+    "file": "days/day01/part08/45_for_now.rpy",
+    "line": 150,
+    "speaker": "cs_narrator",
+    "text": "Я повернулась к ней."
+  },
+  {
+    "file": "days/day01/part09/46_resemblance.rpy",
+    "line": 49,
+    "speaker": "cs_narrator",
+    "text": "Мы свернули за один из домиков."
+  },
+  {
+    "file": "days/day01/part09/48_a_meet.rpy",
+    "line": 287,
+    "speaker": "cs_narrator",
+    "text": "Она снова тихо рассмеялась и направилась к библиотеке."
+  },
+  {
+    "file": "days/day01/part09/48_b_pass.rpy",
+    "line": 37,
+    "speaker": "cs_narrator",
+    "text": "Дарья пошла рядом со мной."
+  },
+  {
+    "file": "days/day01/part09/50_no_saves.rpy",
+    "line": 52,
+    "speaker": "cs_narrator",
+    "text": "Я повернулась к ней."
+  },
+  {
+    "file": "days/day01/part09/51_dinner_time.rpy",
+    "line": 31,
+    "speaker": "cs_narrator",
+    "text": "Мы направились к столовой."
+  },
+  {
+    "file": "days/day01/part09/51_dinner_time.rpy",
+    "line": 61,
+    "speaker": "cs_narrator",
+    "text": "Мы свернули к столовой."
+  },
+  {
+    "file": "days/day01/part10/52_after_dinner.rpy",
+    "line": 90,
+    "speaker": "cs_narrator",
+    "text": "Мы направились к выходу."
+  },
+  {
+    "file": "days/day01/part10/53_library_walk.rpy",
+    "line": 59,
+    "speaker": "cs_narrator",
+    "text": "Мы свернули к библиотеке."
+  },
+  {
+    "file": "days/day01/part10/54_librarian.rpy",
+    "line": 173,
+    "speaker": "cs_narrator",
+    "text": "Женя вздохнула и вернулась к столу."
+  },
+  {
+    "file": "days/day01/part10/55_b_search_alone.rpy",
+    "line": 12,
+    "speaker": "cs_narrator",
+    "text": "Я повернулась к Дарье."
+  },
+  {
+    "file": "days/day01/part10/57_slip_of_tongue.rpy",
+    "line": 67,
+    "speaker": "cs_th",
+    "text": "Соколова снова успешно раскрыла лишнюю информацию."
+  },
+  {
+    "file": "days/day01/part10/57_slip_of_tongue.rpy",
+    "line": 68,
+    "speaker": "cs_narrator",
+    "text": "Дарья медленно повернулась ко мне."
+  },
+  {
+    "file": "days/day01/part11/59_scene.rpy",
+    "line": 29,
+    "speaker": "cs_ls",
+    "text": "Сегодня утром я вышла из дома за продуктами. В Москве. Там была зима. Села в автобус четыреста десятого маршрута, познакомилась с Дашей. Потом мы заснули. Проснулись уже возле ваших ворот."
+  },
+  {
+    "file": "days/day01/part11/59_scene.rpy",
+    "line": 46,
+    "speaker": "cs_narrator",
+    "text": "Женя повернулась к ней."
+  },
+  {
+    "file": "days/day01/part11/61_scene.rpy",
+    "line": 19,
+    "speaker": "cs_narrator",
+    "text": "Женя проверила дверь, пожелала нам спокойной ночи и пошла к домикам. Я смотрела ей вслед, пока Дарья не тронула меня за рукав."
+  },
+  {
+    "file": "days/day01/part11/62_scene.rpy",
+    "line": 53,
+    "speaker": "cs_narrator",
+    "text": "Я повернулась к ней."
+  },
+  {
+    "file": "days/day02/part01/02_scene.rpy",
+    "line": 56,
+    "speaker": "cs_narrator",
+    "text": "Вернулась к кровати Дарьи."
+  },
+  {
+    "file": "days/day02/part01/02_scene.rpy",
+    "line": 118,
+    "speaker": "cs_narrator",
+    "text": "Я снова направилась к двери."
+  },
+  {
+    "file": "days/day02/part01/03_scene.rpy",
+    "line": 53,
+    "speaker": "cs_narrator",
+    "text": "Несколько раз повернула корпус."
+  },
+  {
+    "file": "days/day02/part01/04_scene.rpy",
+    "line": 65,
+    "speaker": "cs_narrator",
+    "text": "Затем свернула к столовой."
+  },
+  {
+    "file": "days/day02/part01/04_scene.rpy",
+    "line": 375,
+    "speaker": "cs_narrator",
+    "text": "Она пошла дальше по дорожке."
+  },
+  {
+    "file": "days/day02/part01/05_scene.rpy",
+    "line": 29,
+    "speaker": "cs_narrator",
+    "text": "Кто-то вышел на крыльцо."
+  },
+  {
+    "file": "days/day02/part01/05_scene.rpy",
+    "line": 49,
+    "speaker": "cs_narrator",
+    "text": "Я свернула к воротам."
+  },
+  {
+    "file": "days/day02/part01/06_scene.rpy",
+    "line": 34,
+    "speaker": "cs_narrator",
+    "text": "Я свернула к домику Ольги Дмитриевны."
+  },
+  {
+    "file": "days/day02/part01/06_scene.rpy",
+    "line": 395,
+    "speaker": "cs_narrator",
+    "text": "Я развернулась к своему домику."
+  },
+  {
+    "file": "days/day02/part01/08_scene.rpy",
+    "line": 141,
+    "speaker": "cs_narrator",
+    "text": "Я повернулась к ней."
+  },
+  {
+    "file": "days/day02/part01/09_scene.rpy",
+    "line": 157,
+    "speaker": "cs_narrator",
+    "text": "Мы направились к площади."
+  },
+  {
+    "file": "days/day02/part01/10_scene.rpy",
+    "line": 63,
+    "speaker": "cs_narrator",
+    "text": "Я повернулась к ней."
+  },
+  {
+    "file": "days/day02/part01/10_scene.rpy",
+    "line": 238,
+    "speaker": "cs_narrator",
+    "text": "Я направилась к нему."
+  },
+  {
+    "file": "days/day02/part01/12_scene.rpy",
+    "line": 144,
+    "speaker": "cs_narrator",
+    "text": "Мы обе одновременно повернулись к нему."
+  },
+  {
+    "file": "days/day02/part01/12_scene.rpy",
+    "line": 650,
+    "speaker": "cs_narrator",
+    "text": "Тёзка попрощалась и направилась к выходу."
+  },
+  {
+    "file": "days/day02/part01/13_scene.rpy",
+    "line": 55,
+    "speaker": "cs_narrator",
+    "text": "Дарья тоже повернулась к нему."
+  },
+  {
+    "file": "days/day02/part01/13_scene.rpy",
+    "line": 180,
+    "speaker": "cs_narrator",
+    "text": "Я повернулась к ней."
+  },
+  {
+    "file": "days/day02/part01/14_scene.rpy",
+    "line": 189,
+    "speaker": "cs_narrator",
+    "text": "Затем направились к выходу."
+  },
+  {
+    "file": "days/day02/part02/15_scene.rpy",
+    "line": 415,
+    "speaker": "cs_narrator",
+    "text": "Я повернулась к ней."
+  },
+  {
+    "file": "days/day02/part02/16_scene.rpy",
+    "line": 181,
+    "speaker": "cs_narrator",
+    "text": "Она повернулась ко мне."
+  },
+  {
+    "file": "days/day02/part02/17_scene.rpy",
+    "line": 73,
+    "speaker": "cs_narrator",
+    "text": "Та немедленно раскрылась."
+  },
+  {
+    "file": "days/day02/part02/17_scene.rpy",
+    "line": 165,
+    "speaker": "cs_narrator",
+    "text": "Я медленно повернулась к ней."
+  },
+  {
+    "file": "days/day02/part02/19_a_scene.rpy",
+    "line": 108,
+    "speaker": "cs_narrator",
+    "text": "Она повернулась к нам."
+  },
+  {
+    "file": "days/day02/part02/19_b_scene.rpy",
+    "line": 64,
+    "speaker": "cs_narrator",
+    "text": "Мы попрощались и направились к двери."
+  },
+  {
+    "file": "days/day02/part02/20_scene.rpy",
+    "line": 336,
+    "speaker": "cs_narrator",
+    "text": "Мы направились к остальным."
+  },
+  {
+    "file": "days/day02/part03/21_scene.rpy",
+    "line": 167,
+    "speaker": "cs_narrator",
+    "text": "Дарья повернулась ко мне."
+  },
+  {
+    "file": "days/day02/part03/22_scene.rpy",
+    "line": 40,
+    "speaker": "cs_narrator",
+    "text": "Алиса слушала с видом человека, который уже пожалел, что не ушёл раньше."
+  },
+  {
+    "file": "days/day02/part03/22_scene.rpy",
+    "line": 140,
+    "speaker": "cs_narrator",
+    "text": "Мы повернулись к ней."
+  },
+  {
+    "file": "days/day02/part03/22_scene.rpy",
+    "line": 164,
+    "speaker": "cs_narrator",
+    "text": "Я повернулась к ней."
+  },
+  {
+    "file": "days/day02/part03/22_scene.rpy",
+    "line": 193,
+    "speaker": "cs_narrator",
+    "text": "Кто-то направился к кружкам."
+  },
+  {
+    "file": "days/day02/part03/23_scene.rpy",
+    "line": 287,
+    "speaker": "cs_narrator",
+    "text": "Я повернулась к Дарье."
+  },
+  {
+    "file": "days/day02/part03/24_a_scene.rpy",
+    "line": 151,
+    "speaker": "cs_narrator",
+    "text": "Мы направились к хозяйственному помещению возле площади."
+  },
+  {
+    "file": "days/day02/part03/24_b_scene.rpy",
+    "line": 153,
+    "speaker": "cs_narrator",
+    "text": "Она направилась к кладовой."
+  },
+  {
+    "file": "days/day02/part03/25_scene.rpy",
+    "line": 36,
+    "speaker": "cs_narrator",
+    "text": "Мы направились к клубам."
+  },
+  {
+    "file": "days/day02/part04/27_scene.rpy",
+    "line": 137,
+    "speaker": "cs_narrator",
+    "text": "Он кивнул и направился к площади."
+  },
+  {
+    "file": "days/day02/part04/30_scene.rpy",
+    "line": 120,
+    "speaker": "cs_narrator",
+    "text": "Я повернулась к Даше."
+  },
+  {
+    "file": "days/day02/part04/30_scene.rpy",
+    "line": 192,
+    "speaker": "cs_narrator",
+    "text": "Дарья повернулась ко мне."
+  },
+  {
+    "file": "days/day02/part04/30_scene.rpy",
+    "line": 209,
+    "speaker": "cs_narrator",
+    "text": "Я повернулась к Даше."
+  },
+  {
+    "file": "days/day02/part04/31_a_scene.rpy",
+    "line": 77,
+    "speaker": "cs_narrator",
+    "text": "Я медленно повернулась к ней."
+  },
+  {
+    "file": "days/day02/part04/31_b_scene.rpy",
+    "line": 43,
+    "speaker": "cs_narrator",
+    "text": "Мы направились к выходу."
+  },
+  {
+    "file": "days/day02/part04/31_scene.rpy",
+    "line": 29,
+    "speaker": "cs_narrator",
+    "text": "Виола вернулась к столу."
+  },
+  {
+    "file": "days/day02/part04/31_scene.rpy",
+    "line": 34,
+    "speaker": "cs_narrator",
+    "text": "Я уже направилась к двери."
+  },
+  {
+    "file": "days/day02/part04/33_scene.rpy",
+    "line": 57,
+    "speaker": "cs_narrator",
+    "text": "Когда мы вернулись к клубам, Семён уже ждал возле рабочего стола."
+  },
+  {
+    "file": "days/day02/part05/34_scene.rpy",
+    "line": 90,
+    "speaker": "cs_narrator",
+    "text": "И вернулась к рисунку."
+  },
+  {
+    "file": "days/day02/part05/35_a_scene.rpy",
+    "line": 34,
+    "speaker": "cs_narrator",
+    "text": "Повернулась к Семёну."
+  },
+  {
+    "file": "days/day02/part05/35_b_scene.rpy",
+    "line": 42,
+    "speaker": "cs_narrator",
+    "text": "А я вернулась к рисунку гитары."
+  },
+  {
+    "file": "days/day02/part05/36_scene.rpy",
+    "line": 130,
+    "speaker": "cs_narrator",
+    "text": "Я повернулась к ней."
+  },
+  {
+    "file": "days/day02/part05/36_scene.rpy",
+    "line": 176,
+    "speaker": "cs_narrator",
+    "text": "Я повернулась к нему."
+  },
+  {
+    "file": "days/day02/part05/36_scene.rpy",
+    "line": 190,
+    "speaker": "cs_narrator",
+    "text": "Мы направились к площади."
+  },
+  {
+    "file": "days/day02/part05/37_scene.rpy",
+    "line": 49,
+    "speaker": "cs_narrator",
+    "text": "Он повернулся ко мне."
+  },
+  {
+    "file": "days/day02/part05/38_scene.rpy",
+    "line": 72,
+    "speaker": "cs_narrator",
+    "text": "Я медленно повернулась к ней."
+  },
+  {
+    "file": "days/day02/part05/39_scene.rpy",
+    "line": 182,
+    "speaker": "cs_narrator",
+    "text": "Семён со Славей уже ушли по своим делам."
+  },
+  {
+    "file": "days/day02/part06/41_b_scene.rpy",
+    "line": 53,
+    "speaker": "cs_sy",
+    "text": "Ладно. Главное, чтобы не получилось так, что мы ушли искать выход, а потом сами потерялись."
+  },
+  {
+    "file": "days/day02/part06/44_scene.rpy",
+    "line": 256,
+    "speaker": "cs_narrator",
+    "text": "Мы направились к воротам."
+  },
+  {
+    "file": "days/day02/part06/45_scene.rpy",
+    "line": 106,
+    "speaker": "cs_ls",
+    "text": "Мы шли по ней достаточно долго. И дважды вернулись к одной и той же отметке, хотя ни разу не разворачивались."
+  },
+  {
+    "file": "days/day02/part06/46_scene.rpy",
+    "line": 66,
+    "speaker": "cs_da",
+    "text": "Лучше написать, что мы дважды вернулись к одной точке, двигаясь вперёд. Это мы действительно наблюдали."
+  },
+  {
+    "file": "days/day02/part06/46_scene.rpy",
+    "line": 155,
+    "speaker": "cs_narrator",
+    "text": "Он попрощался и пошёл своей дорогой."
+  },
+  {
+    "file": "days/day02/part06/46_scene.rpy",
+    "line": 251,
+    "speaker": "cs_narrator",
+    "text": "Просто пошла рядом."
+  },
+  {
+    "file": "days/day02/part07/47_scene.rpy",
+    "line": 60,
+    "speaker": "cs_narrator",
+    "text": "Она медленно повернулась ко мне."
+  },
+  {
+    "file": "days/day02/part07/47_scene.rpy",
+    "line": 107,
+    "speaker": "cs_narrator",
+    "text": "И пошла чуть впереди, обходя выступавший из травы камень."
+  },
+  {
+    "file": "days/day02/part07/48_scene.rpy",
+    "line": 196,
+    "speaker": "cs_narrator",
+    "text": "Мы медленно направились к медпункту."
+  },
+  {
+    "file": "days/day02/part07/50_scene.rpy",
+    "line": 110,
+    "speaker": "cs_narrator",
+    "text": "Я повернулась к Даше."
+  },
+  {
+    "file": "days/day02/part07/52_scene.rpy",
+    "line": 109,
+    "speaker": "cs_narrator",
+    "text": "Дарья сделала ещё шаг и повернулась ко мне."
+  },
+  {
+    "file": "days/day02/part07/53_scene.rpy",
+    "line": 60,
+    "speaker": "cs_narrator",
+    "text": "Медленно повернула ко мне голову."
+  },
+  {
+    "file": "days/day02/part07/53_scene.rpy",
+    "line": 90,
+    "speaker": "cs_narrator",
+    "text": "Мы направились к ней."
+  },
+  {
+    "file": "days/day02/part08/54_scene.rpy",
+    "line": 158,
+    "speaker": "cs_narrator",
+    "text": "И направилась к лавочке."
+  },
+  {
+    "file": "days/day02/part08/55_scene.rpy",
+    "line": 231,
+    "speaker": "cs_narrator",
+    "text": "Я повернулась к ней."
+  },
+  {
+    "file": "days/day02/part08/56_scene.rpy",
+    "line": 53,
+    "speaker": "cs_sy",
+    "text": "Особенно о том, как мы второй раз вернулись к кусту."
+  },
+  {
+    "file": "days/day02/part08/56_scene.rpy",
+    "line": 59,
+    "speaker": "cs_narrator",
+    "text": "Он повернулся ко мне."
+  },
+  {
+    "file": "days/day02/part08/57_scene.rpy",
+    "line": 26,
+    "speaker": "cs_narrator",
+    "text": "Разговор постепенно вернулся к обычным лагерным делам."
+  },
+  {
+    "file": "days/day02/part08/57_scene.rpy",
+    "line": 124,
+    "speaker": "cs_ls",
+    "text": "За то, что сегодня пошёл с нами к воротам. И не стал отмахиваться от наших предположений."
+  },
+  {
+    "file": "days/day02/part08/58_a_scene.rpy",
+    "line": 57,
+    "speaker": "cs_narrator",
+    "text": "И направилась к Жене."
+  },
+  {
+    "file": "days/day02/part08/58_a_scene.rpy",
+    "line": 200,
+    "speaker": "cs_narrator",
+    "text": "Женя пошла дальше."
+  },
+  {
+    "file": "days/day02/part08/58_a_scene.rpy",
+    "line": 227,
+    "speaker": "cs_narrator",
+    "text": "Я вернулась к лавочке."
+  },
+  {
+    "file": "days/day02/part08/58_b_scene.rpy",
+    "line": 35,
+    "speaker": "cs_narrator",
+    "text": "Я повернулась к Дарье."
+  },
+  {
+    "file": "days/day02/part08/59_scene.rpy",
+    "line": 101,
+    "speaker": "cs_narrator",
+    "text": "Он махнул рукой и направился к клубам."
+  },
+  {
+    "file": "days/day02/part08/59_scene.rpy",
+    "line": 163,
+    "speaker": "cs_narrator",
+    "text": "Я повернулась к ней."
+  },
+  {
+    "file": "days/day02/part09/60_scene.rpy",
+    "line": 363,
+    "speaker": "cs_narrator",
+    "text": "Мы направились к зданию."
+  },
+  {
+    "file": "days/day02/part09/61_scene.rpy",
+    "line": 368,
+    "speaker": "cs_narrator",
+    "text": "Я медленно повернулась к ней."
+  },
+  {
+    "file": "days/day02/part09/63_scene.rpy",
+    "line": 41,
+    "speaker": "cs_narrator",
+    "text": "Я медленно повернулась к Дарье."
+  },
+  {
+    "file": "days/day02/part09/63_scene.rpy",
+    "line": 292,
+    "speaker": "cs_th",
+    "text": "Сфотографировала бы какую-нибудь ерунду, отправила знакомым и пошла дальше."
+  },
+  {
+    "file": "days/day02/part09/63_scene.rpy",
+    "line": 297,
+    "speaker": "cs_narrator",
+    "text": "Женя уже направилась к столам."
+  },
+  {
+    "file": "days/day02/part09/64_a_scene.rpy",
+    "line": 34,
+    "speaker": "cs_mz",
+    "text": "Нет, приказ немедленно покинуть столовую."
+  },
+  {
+    "file": "days/day02/part09/64_b_scene.rpy",
+    "line": 88,
+    "speaker": "cs_narrator",
+    "text": "Женя вернулась к ужину."
+  },
+  {
+    "file": "days/day02/part09/64_d2_scene.rpy",
+    "line": 102,
+    "speaker": "cs_narrator",
+    "text": "Она вернулась к ужину."
+  },
+  {
+    "file": "days/day02/part09/64_d_scene.rpy",
+    "line": 113,
+    "speaker": "cs_narrator",
+    "text": "Затем всё-таки повернула книгу так, чтобы я могла прочитать название."
+  },
+  {
+    "file": "days/day02/part09/64_e_scene.rpy",
+    "line": 594,
+    "speaker": "cs_narrator",
+    "text": "Семён попрощался и отправился к выходу."
+  },
+  {
+    "file": "days/day02/part09/64_e_scene.rpy",
+    "line": 640,
+    "speaker": "cs_narrator",
+    "text": "Женя направилась к выходу."
+  },
+  {
+    "file": "days/day02/part09/64_e_scene.rpy",
+    "line": 656,
+    "speaker": "cs_narrator",
+    "text": "И направились к выходу."
+  },
+  {
+    "file": "days/day02/part09/64_scene.rpy",
+    "line": 236,
+    "speaker": "cs_narrator",
+    "text": "Я повернулась к ней."
+  },
+  {
+    "file": "days/day02/part09/65_scene.rpy",
+    "line": 534,
+    "speaker": "cs_narrator",
+    "text": "Она улыбнулась и вернулась к подготовке."
+  },
+  {
+    "file": "days/day02/part10/00_flow.rpy",
+    "line": 26,
+    "speaker": "cs_narrator",
+    "text": "Мы с Дарьей направились к площади: музыкальный вечер вот-вот должен был начаться."
+  },
+  {
+    "file": "days/day02/part10/66_scene.rpy",
+    "line": 29,
+    "speaker": "cs_narrator",
+    "text": "Она повернулась ко мне."
+  },
+  {
+    "file": "days/day02/part10/66_scene.rpy",
+    "line": 52,
+    "speaker": "cs_narrator",
+    "text": "Мы направились к домику."
+  },
+  {
+    "file": "days/day02/part10/69_concert.rpy",
+    "line": 12,
+    "speaker": "cs_narrator",
+    "text": "Мы вернулись к местам у края первого ряда. Отсюда сцену было видно целиком."
+  },
+  {
+    "file": "days/day02/part10/69_scene.rpy",
+    "line": 80,
+    "speaker": "cs_th",
+    "text": "Сегодня просто вернула книгу."
+  },
+  {
+    "file": "days/day02/part10/69_scene.rpy",
+    "line": 91,
+    "speaker": "cs_narrator",
+    "text": "Мы направились к площади."
+  },
+  {
+    "file": "days/day02/part10/70_scene.rpy",
+    "line": 98,
+    "speaker": "cs_narrator",
+    "text": "Она направилась к нашему домику."
+  },
+  {
+    "file": "days/day02/part10/71_scene.rpy",
+    "line": 107,
+    "speaker": "cs_th",
+    "text": "Кажется, отдых действительно пошёл мне на пользу."
+  },
+  {
+    "file": "days/day02/part10/72_scene.rpy",
+    "line": 101,
+    "speaker": "cs_narrator",
+    "text": "Повернулась к Даше."
+  },
+  {
+    "file": "days/day02/part10/73_scene.rpy",
+    "line": 13,
+    "speaker": "cs_narrator",
+    "text": "Повернулась к Дарье."
+  },
+  {
+    "file": "days/day02/part10/74_scene.rpy",
+    "line": 137,
+    "speaker": "cs_narrator",
+    "text": "Дарья повернулась ко мне."
+  },
+  {
+    "file": "days/day02/reading_interlude/59_01_scene.rpy",
+    "line": 177,
+    "speaker": "cs_narrator",
+    "text": "Дарья направилась к домикам."
+  },
+  {
+    "file": "days/day02/reading_interlude/59_01_scene.rpy",
+    "line": 185,
+    "speaker": "cs_narrator",
+    "text": "И направилась к двери."
+  },
+  {
+    "file": "days/day02/reading_interlude/59_03_scene.rpy",
+    "line": 128,
+    "speaker": "cs_narrator",
+    "text": "И вернулась к странице."
+  },
+  {
+    "file": "days/day02/reading_interlude/59_04a_scene.rpy",
+    "line": 94,
+    "speaker": "cs_narrator",
+    "text": "Она направилась к своему столу."
+  },
+  {
+    "file": "days/day02/reading_interlude/59_04a_scene.rpy",
+    "line": 101,
+    "speaker": "cs_narrator",
+    "text": "Я вернулась к книге."
+  },
+  {
+    "file": "days/day02/reading_interlude/59_04b_scene.rpy",
+    "line": 101,
+    "speaker": "cs_narrator",
+    "text": "И вернулась за стол."
+  },
+  {
+    "file": "days/day02/reading_interlude/59_04c_scene.rpy",
+    "line": 152,
+    "speaker": "cs_narrator",
+    "text": "Она направилась к своему столу."
+  },
+  {
+    "file": "days/day02/reading_interlude/59_04c_scene.rpy",
+    "line": 202,
+    "speaker": "cs_narrator",
+    "text": "И вернулась к работе."
+  },
+  {
+    "file": "days/day02/reading_interlude/59_04c_scene.rpy",
+    "line": 207,
+    "speaker": "cs_narrator",
+    "text": "И снова принялась читать."
+  },
+  {
+    "file": "days/day02/reading_interlude/59_05_scene.rpy",
+    "line": 213,
+    "speaker": "cs_narrator",
+    "text": "Вернулась ко мне."
+  },
+  {
+    "file": "days/day02/reading_interlude/59_05_scene.rpy",
+    "line": 244,
+    "speaker": "cs_narrator",
+    "text": "И вернулась к чтению."
+  },
+  {
+    "file": "days/day02/reading_interlude/59_06_scene.rpy",
+    "line": 170,
+    "speaker": "cs_narrator",
+    "text": "Дарья повернулась ко мне."
+  },
+  {
+    "file": "days/day02/reading_interlude/59_07a_scene.rpy",
+    "line": 56,
+    "speaker": "cs_narrator",
+    "text": "И вернулась к своему столу."
+  },
+  {
+    "file": "days/day02/reading_interlude/59_07b_scene.rpy",
+    "line": 135,
+    "speaker": "cs_narrator",
+    "text": "Она вернулась к работе."
+  },
+  {
+    "file": "days/day02/reading_interlude/59_07c_scene.rpy",
+    "line": 282,
+    "speaker": "cs_narrator",
+    "text": "Женя вернулась за свой стол."
+  },
+  {
+    "file": "days/day02/reading_interlude/59_08_scene.rpy",
+    "line": 230,
+    "speaker": "cs_narrator",
+    "text": "Она вернулась к бумагам."
+  },
+  {
+    "file": "days/day02/reading_interlude/59_08_scene.rpy",
+    "line": 362,
+    "speaker": "cs_narrator",
+    "text": "Повернулась к Жене."
+  },
+  {
+    "file": "days/day02/reading_interlude/59_08_scene.rpy",
+    "line": 368,
+    "speaker": "cs_narrator",
+    "text": "Мы направились к выходу."
+  },
+  {
+    "file": "days/day02/reading_interlude/59_10_scene.rpy",
+    "line": 11,
+    "speaker": "cs_narrator",
+    "text": "По дороге мы ненадолго свернули к нашему домику."
+  },
+  {
+    "file": "days/prologue/02_seven_percent.rpy",
+    "line": 17,
+    "speaker": "cs_narrator",
+    "text": "Именно поэтому в то утро я вышла из дома совершенно без какого-либо плана."
+  },
+  {
+    "file": "days/prologue/03_stranger.rpy",
+    "line": 56,
+    "speaker": "cs_narrator",
+    "text": "Я отвернулась к окну."
+  },
+  {
+    "file": "days/prologue/05_wrong_way.rpy",
+    "line": 27,
+    "speaker": "cs_narrator",
+    "text": "Девушка рядом повернулась к окну."
+  },
+  {
+    "file": "days/prologue/05_wrong_way.rpy",
+    "line": 63,
+    "speaker": "cs_narrator",
+    "text": "Я снова отвернулась к окну."
+  }
+]

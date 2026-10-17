@@ -1,10 +1,17 @@
 # -*- coding: utf-8 -*-
 label cs_day01_42:
     $ save_name = "Чужая смена — День 1: Почему именно ты?"
+    # cs_director_begin: entry frame; explicit scene plan
+    $ cs_frame_focus(["cs_darya"])
+    with cs_sprite_change
+    # cs_director_end
     cs_narrator "Мы отошли от середины дорожки, пропуская двух пионеров с мячом."
     cs_narrator "Когда они скрылись за поворотом, Дарья снова посмотрела на меня."
     # cs_darya_variety: reaction
     show cs_darya thinking pioneer normal at cs_darya_normal_center
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_da "Можно теперь я спрошу?"
     cs_ls "Конечно."
     cs_da "Почему я?"
@@ -26,6 +33,9 @@ label cs_day01_42:
     cs_ls "И ещё ты очень красивая."
     # cs_darya_variety: reaction
     show cs_darya ear_touch pioneer normal at cs_darya_normal_center
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_narrator "Дарья приподняла бровь."
     cs_da "А вот теперь звучит убедительнее."
     cs_ls "Между прочим, я очень долго составляла эту речь."
@@ -33,12 +43,18 @@ label cs_day01_42:
     cs_ls "Не обесценивай труд начинающего оратора."
     # cs_darya_variety: reaction
     show cs_darya amused pioneer normal at cs_darya_normal_center
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_narrator "Она рассмеялась."
     cs_narrator "Я тоже улыбнулась."
     cs_narrator "Но затем снова стала серьёзной."
     cs_ls "Есть ещё одна причина."
     # cs_darya_variety: reaction
     show cs_darya thinking pioneer normal at cs_darya_normal_center
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_da "Какая?"
     cs_narrator "Я посмотрела на деревья."
     cs_ls "Мы обе оказались здесь совершенно случайно."
@@ -52,6 +68,9 @@ label cs_day01_42:
     cs_ls "Но ты пока почти ничего об этом месте не знаешь. И всё равно держишься."
     # cs_darya_variety: reaction
     show cs_darya shrug pioneer normal at cs_darya_normal_center
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_narrator "Дарья пожала плечами."
     cs_da "А что мне ещё остаётся?"
     cs_ls "Вот именно."
@@ -59,6 +78,9 @@ label cs_day01_42:
     cs_ls "Мне нравится, что ты не пытаешься изображать человека, у которого на всё есть ответы."
     # cs_darya_variety: reaction
     show cs_darya thinking pioneer normal at cs_darya_normal_center
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_narrator "Она задумалась."
     cs_da "Мне кажется, у нас обеих сейчас ответов меньше, чем вопросов."
     cs_ls "Поэтому и предлагаю пока заниматься вопросами."
@@ -68,6 +90,9 @@ label cs_day01_42:
     cs_narrator "Затем Дарья спросила:"
     # cs_darya_variety: reaction
     show cs_darya worried pioneer normal at cs_darya_normal_center
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_da "А если я не отвечу тебе взаимностью?"
     cs_narrator "Я посмотрела на неё."
     cs_ls "Тогда не ответишь."
@@ -77,18 +102,27 @@ label cs_day01_42:
     cs_ls "Продолжим искать способ вернуться домой. Ходить на обед. Спорить из-за того, кто забыл закрыть дверь в домик."
     # cs_darya_variety: reaction
     show cs_darya shy_smile pioneer normal at cs_darya_normal_center
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_narrator "Она улыбнулась."
     cs_ls "Ты не обязана мне ничем только потому, что я решила признаться."
     cs_narrator "Дарья опустила взгляд."
     cs_narrator "Потом снова посмотрела на меня."
     # cs_darya_variety: reaction
     show cs_darya smile pioneer normal at cs_darya_normal_center
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_da "Спасибо."
     cs_ls "За что?"
     cs_da "За то, что не торопишь."
     cs_ls "Я сегодня и так уже достаточно поторопилась. Особенно когда понесла телефон в кружок электроники."
     # cs_darya_variety: reaction
     show cs_darya amused pioneer normal at cs_darya_normal_center
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_narrator "Она снова рассмеялась."
     cs_narrator "Но на этот раз улыбка не исчезла сразу."
     stop music fadeout 3.0
@@ -102,6 +136,9 @@ label cs_day01_42:
     cs_narrator "Она продолжила:"
     # cs_darya_variety: reaction
     show cs_darya shy_smile pioneer normal at cs_darya_normal_center
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_da "Мне с тобой интересно. И я рада, что мы оказались здесь не поодиночке."
     pause 0.7
     cs_narrator "Пауза."
@@ -111,6 +148,9 @@ label cs_day01_42:
     cs_ls "Поняла."
     # cs_darya_variety: reaction
     show cs_darya ear_touch pioneer normal at cs_darya_normal_center
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_da "Правда?"
     cs_ls "Да."
     cs_narrator "Я слегка улыбнулась."
@@ -118,6 +158,9 @@ label cs_day01_42:
     cs_narrator "Дарья покачала головой."
     # cs_darya_variety: reaction
     show cs_darya hands_on_hips pioneer normal at cs_darya_normal_center
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_da "Ты неисправима."
     cs_ls "Есть такое."
     cs_narrator "Мы снова пошли по дорожке."

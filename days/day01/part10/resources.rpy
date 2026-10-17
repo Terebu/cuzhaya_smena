@@ -12,9 +12,17 @@ init 20 python:
 
 label cs_day01_dinner_bridge:
     $ save_name = u"Чужая смена — День 1: Ужин"
-    scene bg ext_dining_hall_near_sunset with Dissolve(1.0)
+    $ cs_director_scene("bg ext_dining_hall_near_sunset")
+    scene bg ext_dining_hall_near_sunset
+    with Dissolve(1.0)
+    # cs_director_begin: entry frame; explicit scene plan
+    $ cs_frame_focus([])
+    with cs_sprite_change
+    # cs_director_end
     cs_narrator "У дверей столовой уже собирались пионеры. Мы с Дарьей присоединились к ним."
-    scene bg int_dining_hall_sunset with Dissolve(1.0)
+    $ cs_director_scene("bg int_dining_hall_sunset")
+    scene bg int_dining_hall_sunset
+    with Dissolve(1.0)
     play ambience cs_day_dining_full fadeout 1.0 fadein 1.5
     cs_narrator "Мы взяли подносы и нашли свободный стол. После всех разговоров за день обычный ужин оказался удивительно приятной паузой."
     window hide dissolve

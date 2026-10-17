@@ -2,8 +2,14 @@
 # Source: source/day01_staged.md.
 label cs_day01_02:
     $ save_name = u"Чужая смена — День 1: Знакомое место"
-    scene bg ext_bus with dissolve
+    $ cs_director_scene("bg ext_bus")
+    scene bg ext_bus
+    with dissolve
     $ renpy.music.set_volume(0.65, delay=2.0, channel="ambience")
+    # cs_director_begin: entry frame; explicit scene plan
+    $ cs_frame_focus(["cs_dasha_winter"])
+    with cs_sprite_change
+    # cs_director_end
     cs_narrator "Двери автобуса оставались открытыми."
     cs_narrator "Я остановилась перед ступеньками."
     cs_narrator "Снаружи стрекотали насекомые."
@@ -20,7 +26,9 @@ label cs_day01_02:
     cs_narrator "Металлические створки."
     cs_narrator "Дорожка, уходящая вглубь лагеря."
     cs_narrator "Всё это выглядело слишком знакомо."
-    scene bg ext_camp_entrance_day with Dissolve(1.5)
+    $ cs_director_scene("bg ext_camp_entrance_day")
+    scene bg ext_camp_entrance_day
+    with Dissolve(1.5)
     cs_narrator "Я медленно спустилась на землю."
     label cs_check_day01_outside:
     cs_narrator "Снаружи оказалось ещё жарче."
@@ -29,6 +37,9 @@ label cs_day01_02:
     cs_narrator "Несколько секунд просто стояла, оглядываясь."
     # cs_darya_stage: present in story
     show cs_dasha_winter shrug normal at cs_darya_normal_center
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_narrator "Дарья вышла следом."
     cs_narrator "Она, по крайней мере, выглядела менее несчастной в своей одежде."
     cs_narrator "Хотя назвать наши наряды подходящими для такой погоды было бы довольно смелым заявлением."
@@ -38,6 +49,9 @@ label cs_day01_02:
     cs_ls "Где-то я это уже видела."
     # cs_darya_stage: present in story
     show cs_dasha_winter thinking normal at cs_darya_normal_center
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_da "Здесь?"
     cs_ls "Нет."
     cs_narrator "Я подошла ближе."
@@ -47,7 +61,15 @@ label cs_day01_02:
     play music cs_day_music_unknown fadeout 2.0 fadein 3.0
     # cs_darya_stage: present in story
     show cs_dasha_winter explaining normal at cs_darya_normal_center
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_da "Что?"
+    # cs_director_begin: REFLECTIVE_SHOT: Recognition of game scenery and bus number
+    $ cs_reflective_focus()
+    with cs_sprite_change
+    label cs_director_check_4205df3c28:
+    # cs_director_end
     cs_narrator "Я почти не услышала вопроса."
     cs_narrator "Смотрела на ворота."
     cs_narrator "На статуи."
@@ -77,9 +99,17 @@ label cs_day01_02:
     cs_narrator "{b}410.{/b}"
     stop music fadeout 1.5
     pause 1.5
+    # cs_director_begin: Return to direct interaction: Recognition of game scenery and bus number
+    $ cs_frame_focus(["cs_dasha_winter"])
+    with cs_sprite_change
+    label cs_director_check_93ae1e4b14:
+    # cs_director_end
     cs_ls "Нет."
     # cs_darya_stage: present in story
     show cs_dasha_winter thinking normal at cs_darya_normal_center
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_da "Лена?"
     cs_ls "Любопытно."
     cs_narrator "Я вернулась к автобусу и ещё раз посмотрела на номер."
@@ -95,17 +125,26 @@ label cs_day01_02:
     cs_ls "Визуальная новелла."
     # cs_darya_stage: present in story
     show cs_dasha_winter shrug normal at cs_darya_normal_center
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_da "Хорошо."
     cs_ls "Там один парень зимой садится в автобус номер четыреста десять."
     cs_narrator "Дарья медленно посмотрела на автобус."
     cs_narrator "Затем на меня."
     # cs_darya_stage: present in story
     show cs_dasha_winter shrug normal at cs_darya_normal_center
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_da "Продолжай."
     cs_ls "Засыпает."
     cs_narrator "Она стала слушать внимательнее."
     # cs_darya_stage: present in story
     show cs_dasha_winter thinking normal at cs_darya_normal_center
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_da "И?"
     cs_narrator "Я указала на ворота."
     cs_ls "Просыпается здесь."
@@ -117,10 +156,16 @@ label cs_day01_02:
     cs_narrator "Дарья снова посмотрела на вывеску."
     # cs_darya_stage: present in story
     show cs_dasha_winter shrug normal at cs_darya_normal_center
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_da "«Совёнок»…"
     cs_ls "Именно."
     # cs_darya_stage: present in story
     show cs_dasha_winter thinking normal at cs_darya_normal_center
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_da "И ты знаешь это место?"
     cs_narrator "Я коротко усмехнулась."
     cs_ls "К сожалению, значительно лучше, чем хотелось бы."

@@ -115,10 +115,7 @@ label cs_day01_part10:
     jump cs_day01_part11_pending
 
 label cs_day01_part11_pending:
-    hide screen cs_phone
-    window hide dissolve
-    show screen cs_day01_pending
-    label cs_check_day01_part10_pending:
-    $ renpy.checkpoint()
-    $ renpy.pause(hard=True)
-    jump cs_check_day01_part10_pending
+    jump cs_day01_part11
+
+label cs_check_day01_part10_pending:
+    jump cs_day01_part11

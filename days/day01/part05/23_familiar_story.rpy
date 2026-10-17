@@ -5,9 +5,16 @@ label cs_day01_23:
     $ renpy.music.set_volume(0.3,delay=1.0,channel="music")
     play music cs_day_music_think fadeout 2.0 fadein 2.5
     label cs_check_day01_part05_story:
+    # cs_director_begin: entry frame; explicit scene plan
+    $ cs_frame_focus(["cs_darya", "cs_semen"])
+    with cs_sprite_change
+    # cs_director_end
     cs_narrator "Несколько минут мы ели молча."
     cs_narrator "Потом Семён посмотрел на меня."
     show cs_semen serious pioneer normal at cs_semen_normal_right
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_sy "Ты сказала, что знаешь этот лагерь."
     cs_narrator "Я отложила ложку."
     cs_ls "Да."
@@ -25,6 +32,9 @@ label cs_day01_23:
     cs_narrator "Я впервые за весь обед пожалела, что у меня настолько хорошо получалось говорить ровным голосом."
     cs_narrator "Наверное, от этого объяснение звучало ещё хуже."
     show cs_darya forearm_hold pioneer normal at cs_darya_normal_left
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_da "Она назвала Славю по имени, прежде чем та представилась. И знала, куда идти к вожатой."
     cs_sy "Это ничего не доказывает."
     cs_ls "Согласна. Поэтому я и не предлагаю тебе сразу поверить."
@@ -41,6 +51,9 @@ label cs_day01_23:
     cs_narrator "Дарья чуть расслабила плечи."
     # cs_darya_variety: reaction
     show cs_darya explaining pioneer normal at cs_darya_normal_left
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_da "То есть ты можешь ошибаться даже в том, что хорошо помнишь."
     cs_ls "Да."
     cs_narrator "Семён провёл ладонью по лицу."
@@ -53,6 +66,9 @@ label cs_day01_23:
     cs_sy "Мне нужно подумать."
     # cs_darya_variety: reaction
     show cs_darya shrug pioneer normal at cs_darya_normal_left
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_da "Нам всем нужно."
     cs_narrator "Я кивнула."
     cs_ls "И не обязательно решать всё за один обед."

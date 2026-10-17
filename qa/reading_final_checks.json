@@ -1,0 +1,58 @@
+{
+  "status": "PASS",
+  "completed_at": "2026-10-16T00:59:34.188783",
+  "native_tests": {
+    "cs_reading_zero_pass.txt": {
+      "result": "PASS",
+      "modified": "2026-10-16T00:13:53.880873"
+    },
+    "cs_reading_one_pass.txt": {
+      "result": "PASS",
+      "modified": "2026-10-16T00:15:53.609893"
+    },
+    "cs_reading_all_pass.txt": {
+      "result": "PASS",
+      "modified": "2026-10-16T00:18:08.667297"
+    },
+    "choice_action_probe_pass.txt": {
+      "result": "PASS",
+      "modified": "2026-10-16T00:39:51.450356"
+    },
+    "full_staging_pass.txt": {
+      "result": "PASS",
+      "modified": "2026-10-16T00:56:01.336580"
+    }
+  },
+  "runtime_sprite_audit": {
+    "dialogue_checks": 10572,
+    "cg_checks": 450,
+    "errors": []
+  },
+  "registry": {
+    "images": 192,
+    "audio": 30,
+    "missing_audio": [],
+    "missing_images": []
+  },
+  "lint": {
+    "exit_code": 0,
+    "report": "qa/lint_reading_interlude.txt",
+    "known_base_game_warnings": true
+  },
+  "independent_text_verification": {
+    "day02_scene_files": 98,
+    "day02_source_blocks": 6720,
+    "allowed_continuity_additions": 19,
+    "prologue_blocks": 383,
+    "day01_blocks": 3962
+  },
+  "static_staging": {
+    "scene_files_staged": 172,
+    "automatic_long_private_shots": 0,
+    "sprite_distances_registered": 219,
+    "new_story_menus": [],
+    "new_friendship_mutations": [],
+    "map_flag_writes_in_interlude": []
+  },
+  "day02_closed": false
+}

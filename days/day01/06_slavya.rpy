@@ -4,6 +4,10 @@ label cs_day01_06:
     $ save_name = u"Чужая смена — День 1: Девушка с двумя косами"
     $ renpy.music.set_volume(0.4, delay=1.0, channel="music")
     play music cs_day_music_mystery fadeout 2.0 fadein 2.0
+    # cs_director_begin: entry frame; explicit scene plan
+    $ cs_frame_focus(["cs_dasha_winter"])
+    with cs_sprite_change
+    # cs_director_end
     cs_narrator "Дарья заметила, как изменилось моё выражение лица."
     cs_da "Ты знаешь, кто это?"
     cs_narrator "Я внимательно смотрела на силуэт за воротами."
@@ -15,13 +19,22 @@ label cs_day01_06:
     show sl normal pioneer at cs_actor_left
     # cs_composition: regroup
     show cs_dasha_winter thinking normal at cs_darya_normal_right
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_narrator "Из-за ворот вышла девушка."
     cs_narrator "Увидев нас, она остановилась."
     show sl surprise pioneer at cs_actor_left
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_narrator "Удивлённо моргнула."
     cs_narrator "Затем приветливо улыбнулась."
     stop music fadeout 1.5
     show sl smile pioneer at cs_actor_left
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     label cs_check_day01_slavya:
     cs_sl "Ой! Привет! Вы, наверное, только приехали?"
     pause 1.5
@@ -53,6 +66,9 @@ label cs_day01_06:
     cs_ls "Ну всё."
     # cs_darya_stage: present in story
     show cs_dasha_winter explaining normal at cs_darya_normal_right
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_da "Что?"
     cs_narrator "Я снова посмотрела на Славю."
     cs_narrator "Потом на автобус."
@@ -61,5 +77,8 @@ label cs_day01_06:
     cs_narrator "Помолчала."
     cs_ls "Осталось только выяснить, предусмотрен ли здесь обратный билет."
     show sl normal pioneer at cs_actor_left
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     pause 1.0
     return

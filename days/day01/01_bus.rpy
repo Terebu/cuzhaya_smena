@@ -2,7 +2,9 @@
 # Source: source/day01_staged.md.
 label cs_day01_01:
     $ save_name = u"Чужая смена — День 1: Отклонение от маршрута"
-    scene bg int_bus with Dissolve(1.2)
+    $ cs_director_scene("bg int_bus")
+    scene bg int_bus
+    with Dissolve(1.2)
     window show dissolve
     $ renpy.music.set_volume(0.65, delay=1.0, channel="music")
     play music cs_day_music_think fadeout 2.0 fadein 3.0
@@ -11,6 +13,13 @@ label cs_day01_01:
     label cs_check_day01_bus:
     # cs_darya_stage: present in story
     show cs_dasha_winter shrug normal at cs_darya_normal_center
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
+    # cs_director_begin: entry frame; explicit scene plan
+    $ cs_frame_focus(["cs_dasha_winter"])
+    with cs_sprite_change
+    # cs_director_end
     cs_narrator "Я ещё секунд десять смотрела на вывеску."
     cs_narrator "{b}«СОВЁНОК».{/b}"
     cs_narrator "Затем перевела взгляд на летнее небо."
@@ -19,6 +28,9 @@ label cs_day01_01:
     cs_ls "Ну… Кажется, четыреста десятый немного отклонился от маршрута."
     # cs_darya_stage: present in story
     show cs_dasha_winter thinking normal at cs_darya_normal_center
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_da "Насколько немного?"
     cs_narrator "Я расстегнула куртку."
     cs_narrator "Под ней был свитер. Под свитером — ещё один слой одежды."
@@ -66,10 +78,16 @@ label cs_day01_01:
     cs_narrator "Позади послышались шаги."
     # cs_darya_stage: present in story
     show cs_dasha_winter explaining normal at cs_darya_normal_center
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_da "Что?"
     cs_ls "Кажется, поход за продуктами официально отменяется."
     # cs_darya_stage: present in story
     show cs_dasha_winter shrug normal at cs_darya_normal_center
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_da "Смелый вывод."
     cs_ls "Спасибо. Аналитический отдел сегодня особенно хорош."
     stop music fadeout 2.0

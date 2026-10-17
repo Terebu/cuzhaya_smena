@@ -1,0 +1,716 @@
+[
+  {
+    "file": "days/day01/01_bus.rpy",
+    "transitions": 4,
+    "redundant_commands_removed": 0,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 0
+  },
+  {
+    "file": "days/day01/02_recognition.rpy",
+    "transitions": 9,
+    "redundant_commands_removed": 0,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 0
+  },
+  {
+    "file": "days/day01/03_reality.rpy",
+    "transitions": 10,
+    "redundant_commands_removed": 1,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 0
+  },
+  {
+    "file": "days/day01/04_reflection.rpy",
+    "transitions": 2,
+    "redundant_commands_removed": 0,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 0
+  },
+  {
+    "file": "days/day01/05_home.rpy",
+    "transitions": 1,
+    "redundant_commands_removed": 0,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 0
+  },
+  {
+    "file": "days/day01/06_slavya.rpy",
+    "transitions": 5,
+    "redundant_commands_removed": 0,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 0
+  },
+  {
+    "file": "days/day01/07_uninvited.rpy",
+    "transitions": 16,
+    "redundant_commands_removed": 0,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 0
+  },
+  {
+    "file": "days/day01/08_camp_walk.rpy",
+    "transitions": 10,
+    "redundant_commands_removed": 0,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 0
+  },
+  {
+    "file": "days/day01/09_counsellor.rpy",
+    "transitions": 16,
+    "redundant_commands_removed": 2,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 0
+  },
+  {
+    "file": "days/day01/10_soviet_home.rpy",
+    "transitions": 7,
+    "redundant_commands_removed": 0,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 1
+  },
+  {
+    "file": "days/day01/11_state_machine.rpy",
+    "transitions": 13,
+    "redundant_commands_removed": 5,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 0
+  },
+  {
+    "file": "days/day01/12_calculator.rpy",
+    "transitions": 8,
+    "redundant_commands_removed": 5,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 0
+  },
+  {
+    "file": "days/day01/13_uniform.rpy",
+    "transitions": 13,
+    "redundant_commands_removed": 1,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 0
+  },
+  {
+    "file": "days/day01/14_third_guest.rpy",
+    "transitions": 3,
+    "redundant_commands_removed": 0,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 1
+  },
+  {
+    "file": "days/day01/15_two_newcomers.rpy",
+    "transitions": 12,
+    "redundant_commands_removed": 1,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 0
+  },
+  {
+    "file": "days/day01/16_another_passenger.rpy",
+    "transitions": 6,
+    "redundant_commands_removed": 0,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 1
+  },
+  {
+    "file": "days/day01/17_beyond_the_screen.rpy",
+    "transitions": 9,
+    "redundant_commands_removed": 0,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 0
+  },
+  {
+    "file": "days/day01/18_anachronism.rpy",
+    "transitions": 19,
+    "redundant_commands_removed": 0,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 1
+  },
+  {
+    "file": "days/day01/19_dining_hall.rpy",
+    "transitions": 12,
+    "redundant_commands_removed": 6,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 0
+  },
+  {
+    "file": "days/day01/20_comrade_semen.rpy",
+    "transitions": 10,
+    "redundant_commands_removed": 2,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 2
+  },
+  {
+    "file": "days/day01/part05/21_not_a_simple_question.rpy",
+    "transitions": 11,
+    "redundant_commands_removed": 0,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 0
+  },
+  {
+    "file": "days/day01/part05/22_similar_journey.rpy",
+    "transitions": 11,
+    "redundant_commands_removed": 0,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 0
+  },
+  {
+    "file": "days/day01/part05/23_familiar_story.rpy",
+    "transitions": 4,
+    "redundant_commands_removed": 0,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 0
+  },
+  {
+    "file": "days/day01/part05/24_working_group.rpy",
+    "transitions": 17,
+    "redundant_commands_removed": 2,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 0
+  },
+  {
+    "file": "days/day01/part06/25_after_lunch.rpy",
+    "transitions": 15,
+    "redundant_commands_removed": 1,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 1
+  },
+  {
+    "file": "days/day01/part06/26_new_home_path.rpy",
+    "transitions": 6,
+    "redundant_commands_removed": 0,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 0
+  },
+  {
+    "file": "days/day01/part06/27_house_for_two.rpy",
+    "transitions": 8,
+    "redundant_commands_removed": 0,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 1
+  },
+  {
+    "file": "days/day01/part06/28_without_witnesses.rpy",
+    "transitions": 11,
+    "redundant_commands_removed": 0,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 0
+  },
+  {
+    "file": "days/day01/part06/29_observation_log.rpy",
+    "transitions": 12,
+    "redundant_commands_removed": 0,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 0
+  },
+  {
+    "file": "days/day01/part06/30_at_the_door.rpy",
+    "transitions": 7,
+    "redundant_commands_removed": 0,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 0
+  },
+  {
+    "file": "days/day01/part07/31_visitors.rpy",
+    "transitions": 16,
+    "redundant_commands_removed": 6,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 0
+  },
+  {
+    "file": "days/day01/part07/32_an_idea.rpy",
+    "transitions": 8,
+    "redundant_commands_removed": 0,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 0
+  },
+  {
+    "file": "days/day01/part07/33_clubs_path.rpy",
+    "transitions": 5,
+    "redundant_commands_removed": 0,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 0
+  },
+  {
+    "file": "days/day01/part07/34_engineers.rpy",
+    "transitions": 10,
+    "redundant_commands_removed": 4,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 0
+  },
+  {
+    "file": "days/day01/part07/35_calculator.rpy",
+    "transitions": 9,
+    "redundant_commands_removed": 0,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 0
+  },
+  {
+    "file": "days/day01/part07/36_forty_six_years.rpy",
+    "transitions": 19,
+    "redundant_commands_removed": 0,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 0
+  },
+  {
+    "file": "days/day01/part07/37_transistors.rpy",
+    "transitions": 8,
+    "redundant_commands_removed": 0,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 0
+  },
+  {
+    "file": "days/day01/part07/38_five_volts.rpy",
+    "transitions": 5,
+    "redundant_commands_removed": 0,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 0
+  },
+  {
+    "file": "days/day01/part07/39_future_in_pocket.rpy",
+    "transitions": 16,
+    "redundant_commands_removed": 0,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 1
+  },
+  {
+    "file": "days/day01/part08/40_after_clubs.rpy",
+    "transitions": 3,
+    "redundant_commands_removed": 0,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 1
+  },
+  {
+    "file": "days/day01/part08/41_confession.rpy",
+    "transitions": 10,
+    "redundant_commands_removed": 0,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 1
+  },
+  {
+    "file": "days/day01/part08/42_why_you.rpy",
+    "transitions": 13,
+    "redundant_commands_removed": 0,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 0
+  },
+  {
+    "file": "days/day01/part08/43_square.rpy",
+    "transitions": 10,
+    "redundant_commands_removed": 0,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 0
+  },
+  {
+    "file": "days/day01/part08/44_independent_opinion.rpy",
+    "transitions": 12,
+    "redundant_commands_removed": 0,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 0
+  },
+  {
+    "file": "days/day01/part08/45_for_now.rpy",
+    "transitions": 14,
+    "redundant_commands_removed": 0,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 1
+  },
+  {
+    "file": "days/day01/part09/46_resemblance.rpy",
+    "transitions": 6,
+    "redundant_commands_removed": 0,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 1
+  },
+  {
+    "file": "days/day01/part09/47_choice.rpy",
+    "transitions": 1,
+    "redundant_commands_removed": 0,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 0
+  },
+  {
+    "file": "days/day01/part09/48_a_meet.rpy",
+    "transitions": 31,
+    "redundant_commands_removed": 10,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 1
+  },
+  {
+    "file": "days/day01/part09/48_b_pass.rpy",
+    "transitions": 7,
+    "redundant_commands_removed": 1,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 1
+  },
+  {
+    "file": "days/day01/part09/49_together.rpy",
+    "transitions": 4,
+    "redundant_commands_removed": 0,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 0
+  },
+  {
+    "file": "days/day01/part09/50_no_saves.rpy",
+    "transitions": 3,
+    "redundant_commands_removed": 0,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 1
+  },
+  {
+    "file": "days/day01/part09/51_dinner_time.rpy",
+    "transitions": 3,
+    "redundant_commands_removed": 0,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 1
+  },
+  {
+    "file": "days/day01/part10/52_after_dinner.rpy",
+    "transitions": 6,
+    "redundant_commands_removed": 0,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 1
+  },
+  {
+    "file": "days/day01/part10/53_library_walk.rpy",
+    "transitions": 5,
+    "redundant_commands_removed": 0,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 0
+  },
+  {
+    "file": "days/day01/part10/54_librarian.rpy",
+    "transitions": 16,
+    "redundant_commands_removed": 3,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 1
+  },
+  {
+    "file": "days/day01/part10/55_a_help.rpy",
+    "transitions": 18,
+    "redundant_commands_removed": 4,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 0
+  },
+  {
+    "file": "days/day01/part10/55_b_search_alone.rpy",
+    "transitions": 3,
+    "redundant_commands_removed": 1,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 0
+  },
+  {
+    "file": "days/day01/part10/55_choice.rpy",
+    "transitions": 0,
+    "redundant_commands_removed": 0,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 0
+  },
+  {
+    "file": "days/day01/part10/56_old_books.rpy",
+    "transitions": 15,
+    "redundant_commands_removed": 3,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 0
+  },
+  {
+    "file": "days/day01/part10/57_slip_of_tongue.rpy",
+    "transitions": 13,
+    "redundant_commands_removed": 1,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 0
+  },
+  {
+    "file": "days/day01/part10/58_truth.rpy",
+    "transitions": 22,
+    "redundant_commands_removed": 4,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 1
+  },
+  {
+    "file": "days/day01/part10/resources.rpy",
+    "transitions": 0,
+    "redundant_commands_removed": 0,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 0
+  },
+  {
+    "file": "days/day01/part11/59_scene.rpy",
+    "transitions": 15,
+    "redundant_commands_removed": 0,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 0
+  },
+  {
+    "file": "days/day01/part11/60_scene.rpy",
+    "transitions": 13,
+    "redundant_commands_removed": 0,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 0
+  },
+  {
+    "file": "days/day01/part11/61_scene.rpy",
+    "transitions": 13,
+    "redundant_commands_removed": 0,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 0
+  },
+  {
+    "file": "days/day01/part11/62_scene.rpy",
+    "transitions": 9,
+    "redundant_commands_removed": 0,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 0
+  },
+  {
+    "file": "days/day01/part11/63_scene.rpy",
+    "transitions": 0,
+    "redundant_commands_removed": 0,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 0
+  },
+  {
+    "file": "days/day01/part11/64_scene.rpy",
+    "transitions": 0,
+    "redundant_commands_removed": 0,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 0
+  },
+  {
+    "file": "days/day02/part01/01_scene.rpy",
+    "transitions": 0,
+    "redundant_commands_removed": 0,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 0
+  },
+  {
+    "file": "days/day02/part01/02_scene.rpy",
+    "transitions": 2,
+    "redundant_commands_removed": 0,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 0
+  },
+  {
+    "file": "days/day02/part01/03_scene.rpy",
+    "transitions": 0,
+    "redundant_commands_removed": 0,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 0
+  },
+  {
+    "file": "days/day02/part01/04_scene.rpy",
+    "transitions": 9,
+    "redundant_commands_removed": 8,
+    "thought_clear_blocks_replaced": 2,
+    "long_private_shots": 1
+  },
+  {
+    "file": "days/day02/part01/05_scene.rpy",
+    "transitions": 1,
+    "redundant_commands_removed": 0,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 0
+  },
+  {
+    "file": "days/day02/part01/06_scene.rpy",
+    "transitions": 18,
+    "redundant_commands_removed": 18,
+    "thought_clear_blocks_replaced": 2,
+    "long_private_shots": 0
+  },
+  {
+    "file": "days/day02/part01/07_scene.rpy",
+    "transitions": 2,
+    "redundant_commands_removed": 0,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 0
+  },
+  {
+    "file": "days/day02/part01/08_scene.rpy",
+    "transitions": 4,
+    "redundant_commands_removed": 4,
+    "thought_clear_blocks_replaced": 2,
+    "long_private_shots": 0
+  },
+  {
+    "file": "days/day02/part01/09_scene.rpy",
+    "transitions": 5,
+    "redundant_commands_removed": 7,
+    "thought_clear_blocks_replaced": 1,
+    "long_private_shots": 0
+  },
+  {
+    "file": "days/day02/part01/10_scene.rpy",
+    "transitions": 8,
+    "redundant_commands_removed": 15,
+    "thought_clear_blocks_replaced": 4,
+    "long_private_shots": 0
+  },
+  {
+    "file": "days/day02/part01/11_scene.rpy",
+    "transitions": 8,
+    "redundant_commands_removed": 20,
+    "thought_clear_blocks_replaced": 2,
+    "long_private_shots": 1
+  },
+  {
+    "file": "days/day02/part01/12_scene.rpy",
+    "transitions": 21,
+    "redundant_commands_removed": 76,
+    "thought_clear_blocks_replaced": 3,
+    "long_private_shots": 1
+  },
+  {
+    "file": "days/day02/part01/13_scene.rpy",
+    "transitions": 12,
+    "redundant_commands_removed": 32,
+    "thought_clear_blocks_replaced": 4,
+    "long_private_shots": 1
+  },
+  {
+    "file": "days/day02/part01/14_scene.rpy",
+    "transitions": 6,
+    "redundant_commands_removed": 16,
+    "thought_clear_blocks_replaced": 2,
+    "long_private_shots": 2
+  },
+  {
+    "file": "days/day02/part02/15_scene.rpy",
+    "transitions": 13,
+    "redundant_commands_removed": 38,
+    "thought_clear_blocks_replaced": 8,
+    "long_private_shots": 3
+  },
+  {
+    "file": "days/day02/part02/16_scene.rpy",
+    "transitions": 19,
+    "redundant_commands_removed": 38,
+    "thought_clear_blocks_replaced": 3,
+    "long_private_shots": 0
+  },
+  {
+    "file": "days/day02/part02/17_scene.rpy",
+    "transitions": 11,
+    "redundant_commands_removed": 29,
+    "thought_clear_blocks_replaced": 3,
+    "long_private_shots": 1
+  },
+  {
+    "file": "days/day02/part02/18_scene.rpy",
+    "transitions": 9,
+    "redundant_commands_removed": 11,
+    "thought_clear_blocks_replaced": 1,
+    "long_private_shots": 0
+  },
+  {
+    "file": "days/day02/part02/19_a_scene.rpy",
+    "transitions": 13,
+    "redundant_commands_removed": 26,
+    "thought_clear_blocks_replaced": 1,
+    "long_private_shots": 0
+  },
+  {
+    "file": "days/day02/part02/19_b_scene.rpy",
+    "transitions": 2,
+    "redundant_commands_removed": 4,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 0
+  },
+  {
+    "file": "days/day02/part02/20_scene.rpy",
+    "transitions": 10,
+    "redundant_commands_removed": 14,
+    "thought_clear_blocks_replaced": 2,
+    "long_private_shots": 0
+  },
+  {
+    "file": "days/day02/part03/21_scene.rpy",
+    "transitions": 7,
+    "redundant_commands_removed": 8,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 0
+  },
+  {
+    "file": "days/day02/part03/22_scene.rpy",
+    "transitions": 7,
+    "redundant_commands_removed": 14,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 1
+  },
+  {
+    "file": "days/day02/part03/23_scene.rpy",
+    "transitions": 9,
+    "redundant_commands_removed": 28,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 1
+  },
+  {
+    "file": "days/day02/part03/24_a_scene.rpy",
+    "transitions": 17,
+    "redundant_commands_removed": 46,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 1
+  },
+  {
+    "file": "days/day02/part03/24_b_scene.rpy",
+    "transitions": 4,
+    "redundant_commands_removed": 14,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 0
+  },
+  {
+    "file": "days/day02/part03/25_scene.rpy",
+    "transitions": 5,
+    "redundant_commands_removed": 16,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 1
+  },
+  {
+    "file": "days/prologue/01_ordinary.rpy",
+    "transitions": 0,
+    "redundant_commands_removed": 0,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 0
+  },
+  {
+    "file": "days/prologue/02_seven_percent.rpy",
+    "transitions": 0,
+    "redundant_commands_removed": 0,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 0
+  },
+  {
+    "file": "days/prologue/03_stranger.rpy",
+    "transitions": 1,
+    "redundant_commands_removed": 0,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 1
+  },
+  {
+    "file": "days/prologue/04_instagram.rpy",
+    "transitions": 4,
+    "redundant_commands_removed": 0,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 0
+  },
+  {
+    "file": "days/prologue/05_wrong_way.rpy",
+    "transitions": 9,
+    "redundant_commands_removed": 0,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 1
+  },
+  {
+    "file": "days/prologue/06_last_stop.rpy",
+    "transitions": 3,
+    "redundant_commands_removed": 0,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 1
+  },
+  {
+    "file": "days/prologue/07_summer.rpy",
+    "transitions": 0,
+    "redundant_commands_removed": 0,
+    "thought_clear_blocks_replaced": 0,
+    "long_private_shots": 0
+  }
+]

@@ -2,7 +2,7 @@
 import re,json
 from pathlib import Path
 ROOT=Path(__file__).resolve().parent.parent
-ACTORS={'sl','mt','dv','us','sh','el','un','mz','cs_semen'}
+ACTORS={'sl','mt','dv','us','sh','el','un','mz','cs_semen','cs_zhenya'}
 SHOW=re.compile(r'^(\s*)show (\w+) (.*)$')
 others={};actor_commands={};darya=None;report=[]
 def position(command):
@@ -23,7 +23,7 @@ def arrange(command):
     return command
 files=list((ROOT/'days/prologue').glob('[0-9][0-9]_*.rpy'))+list((ROOT/'days/day01').rglob('[0-9][0-9]_*.rpy'))
 for path in sorted(files,key=lambda p:(0 if 'prologue' in p.parts else 1,int(p.name[:2]),p.name)):
-    if path.name.startswith('00'):continue
+    if path.name.startswith('00') or path.name.endswith('_scene.rpy'):continue
     raw=path.read_text(encoding='utf8').splitlines();lines=[];skip=False
     for line in raw:
         if line.strip()=='# cs_composition: regroup':skip=True;continue
@@ -48,7 +48,7 @@ for path in sorted(files,key=lambda p:(0 if 'prologue' in p.parts else 1,int(p.n
             elif side=='center' or side in occupied:side='right' if 'left' in occupied else 'left'
             if tag not in others or others[tag]!=side:changed=True
             clean=re.sub(r' with .*$', '',stripped)
-            transform=('cs_semen_'+('far' if ' far ' in clean else 'normal')+'_'+side) if tag=='cs_semen' else ('cs_actor_far_'+side if len(others)>=2 and ' far' in clean else 'cs_actor_right' if side=='right' else 'cs_actor_left')
+            transform=('cs_semen_'+('far' if ' far ' in clean else 'normal')+'_'+side) if tag=='cs_semen' else ('cs_darya_normal_'+side) if tag=='cs_zhenya' else ('cs_actor_far_'+side if len(others)>=2 and ' far' in clean else 'cs_actor_right' if side=='right' else 'cs_actor_left')
             clean=re.sub(r' at \w+',' at '+transform,clean)
             if ' at ' not in clean:clean+=' at '+transform
             line=indent+clean

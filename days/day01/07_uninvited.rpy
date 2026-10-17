@@ -6,12 +6,22 @@ label cs_day01_07:
     window show dissolve
     $ renpy.music.set_volume(0.35, delay=1.5, channel="ambience")
     show sl smile pioneer at cs_actor_left
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     label cs_check_day01_part02_gate:
+    # cs_director_begin: entry frame; explicit scene plan
+    $ cs_frame_focus(["sl", "cs_dasha_winter"])
+    with cs_sprite_change
+    # cs_director_end
     cs_narrator "Славя несколько секунд смотрела на меня с тем выражением, которое обычно появляется у человека, когда незнакомка совершенно неожиданно называет его по имени."
     cs_narrator "А ведь она даже представиться не успела."
     cs_narrator "Я слегка подняла руку."
     cs_ls "Привет. Тебя ведь Славя зовут?"
     show sl surprise pioneer at cs_actor_left
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_narrator "Она моргнула."
     cs_sl "Да… Славя."
     cs_narrator "Я кивнула, словно только что успешно проверила научную гипотезу."
@@ -20,10 +30,16 @@ label cs_day01_07:
     cs_ls "Ничего. Мысли вслух."
     # cs_darya_stage: present in story
     show cs_dasha_winter shrug normal at cs_darya_normal_right
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_da "Очень убедительно."
     cs_narrator "Я незаметно ткнула её локтем."
     cs_narrator "Славя перевела взгляд с меня на Дарью, затем обратно."
     show sl normal pioneer at cs_actor_left
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_sl "Вы только приехали?"
     cs_ls "Ага. Буквально только что."
     cs_narrator "Я обернулась и указала на автобус."
@@ -32,6 +48,9 @@ label cs_day01_07:
     cs_narrator "На мгновение мне показалось, что она удивилась сильнее, чем следовало."
     # cs_camp_emotion: text reaction
     show sl surprise pioneer at cs_actor_left
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_sl "На автобусе?"
     cs_ls "Угу. Причём поездка получилась весьма познавательной."
     cs_narrator "Я подняла куртку."
@@ -40,6 +59,9 @@ label cs_day01_07:
     cs_narrator "На фоне зелёной травы и летнего солнца он смотрелся особенно нелепо."
     cs_ls "Выехали мы зимой. Приехали летом. Очень удобно, если планируешь отпуск без предварительного согласования."
     show sl surprise pioneer at cs_actor_left
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_narrator "Славя внимательно посмотрела на наши вещи."
     cs_narrator "Затем на автобус."
     cs_sl "Но сейчас же июль."
@@ -53,15 +75,24 @@ label cs_day01_07:
     pause 0.6
     # cs_camp_emotion: text reaction
     show sl shy pioneer at cs_actor_left
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_sl "Ну… нет."
     cs_ls "Вот и я пока не могу подобрать подходящий регион."
     cs_narrator "Дарья поправила сумку на плече."
     # cs_darya_variety: reaction
     show cs_dasha_winter explaining normal at cs_darya_normal_right
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_da "Мы обе уснули в автобусе."
     cs_narrator "Славя повернулась к ней."
     # cs_camp_emotion: text reaction
     show sl surprise pioneer at cs_actor_left
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_sl "Обе?"
     cs_da "Да."
     cs_sl "И проснулись уже здесь?"
@@ -78,6 +109,9 @@ label cs_day01_07:
     cs_narrator "Словно автобус был совершенно естественной частью местного пейзажа."
     # cs_camp_emotion: text reaction
     show sl normal pioneer at cs_actor_left
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_sl "Может быть, водитель просто отошёл?"
     cs_ls "Возможно."
     cs_narrator "Я пожала плечами."
@@ -87,10 +121,16 @@ label cs_day01_07:
     cs_ls "Да, понимаю. Сейчас я выгляжу как человек, которому желательно сначала измерить температуру."
     # cs_darya_variety: reaction
     show cs_dasha_winter shrug normal at cs_darya_normal_right
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_da "И проверить голову."
     cs_ls "Спасибо за поддержку."
     cs_da "Всегда пожалуйста."
     show sl laugh pioneer at cs_actor_left
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_narrator "Славя неожиданно тихо рассмеялась."
     cs_narrator "И почему-то именно это меня удивило."
     cs_narrator "Одно дело — видеть её на экране компьютера."
@@ -99,6 +139,9 @@ label cs_day01_07:
     cs_narrator "Потом заставила себя вернуться к разговору."
     cs_ls "В общем, если всё здесь хотя бы примерно соответствует моим предположениям, нам нужно к Ольге Дмитриевне."
     show sl surprise pioneer at cs_actor_left
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_sl "К Ольге Дмитриевне?"
     cs_narrator "И тут я поняла, что только что допустила небольшую ошибку."
     cs_narrator "Второй раз подряд назвала человека, которого вроде бы не должна знать."
@@ -120,10 +163,16 @@ label cs_day01_07:
     cs_narrator "Впрочем, её можно было понять."
     cs_ls "Пока предлагаю считать это необъяснённым обстоятельством."
     show sl normal pioneer at cs_actor_left
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_narrator "Она ещё несколько секунд смотрела на нас."
     cs_narrator "Но в конце концов желание помочь, кажется, победило любопытство."
     # cs_camp_emotion: text reaction
     show sl smile pioneer at cs_actor_left
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_sl "Хорошо. Тогда давайте я отведу вас к вожатой!"
     $ renpy.music.set_volume(0.35, delay=2.0, channel="music")
     cs_ls "Вот. Именно такое предложение я и надеялась услышать."
@@ -142,6 +191,9 @@ label cs_day01_07:
     cs_narrator "Я едва заметно усмехнулась."
     # cs_darya_stage: present in story
     show cs_dasha_winter explaining normal at cs_darya_normal_right
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_da "Что?"
     cs_ls "Ничего. Вспомнила местную систему здравоохранения."
     cs_narrator "Я кивнула в сторону Слави."

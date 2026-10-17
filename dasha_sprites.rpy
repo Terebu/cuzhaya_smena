@@ -14,7 +14,7 @@ init -4 python:
         y = int(canvas_h - bottom * factor)
         canvas = im.Composite((canvas_w, canvas_h), (x, y), im.FactorScale(entry["path"], factor))
         # Apply the scene's sunset lighting to custom actors too, retaining full PNGs.
-        return ConditionSwitch("persistent.sprite_time == 'sunset'", im.MatrixColor(canvas, im.matrix.tint(1.0, 0.87, 0.78)), "True", canvas)
+        return ConditionSwitch("persistent.sprite_time == 'sunset'", im.MatrixColor(canvas, im.matrix.tint(1.0, 0.87, 0.78)), "persistent.sprite_time == 'night'", im.MatrixColor(canvas, im.matrix.tint(0.75, 0.80, 1.0)), "True", canvas)
 
     for cs_costume, cs_entries in cs_dasha_metadata.items():
         for cs_entry in cs_entries:

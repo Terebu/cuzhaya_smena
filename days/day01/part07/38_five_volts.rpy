@@ -6,8 +6,15 @@ label cs_day01_38:
     $ renpy.music.set_volume(0.25,delay=1.0,channel="ambience")
     if renpy.music.get_playing(channel="ambience") != "sound/ambiences/clubs_inside_day.ogg":
         play ambience "sound/ambiences/clubs_inside_day.ogg" fadeout 1.5 fadein 2.0
+    # cs_director_begin: entry frame; explicit scene plan
+    $ cs_frame_focus(["cs_darya", "sh", "el"])
+    with cs_sprite_change
+    # cs_director_end
     cs_narrator "Шурик снова вернулся к вопросу питания."
     show sh serious pioneer far at cs_actor_far_left
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_sh "Пять вольт, говоришь?"
     cs_ls "Для стандартного режима зарядки — да."
     cs_sh "Стабилизированный источник мы собрать можем."
@@ -19,6 +26,9 @@ label cs_day01_38:
     cs_ls "Именно. И я не хочу рисковать телефоном, пока мы не проверим всё на другом устройстве или эквивалентной нагрузке."
     cs_narrator "Электроник посмотрел на меня."
     show el surprise pioneer far at cs_actor_far_right
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_el "Настолько он тебе дорог?"
     cs_narrator "Я взяла смартфон в руку."
     cs_narrator "Несколько секунд рассматривала тёмный экран."
@@ -65,11 +75,20 @@ label cs_day01_38:
     cs_sh "Почему?"
     cs_ls "Завтра принесу. Сегодня оно останется у меня."
     show el smile pioneer far at cs_actor_far_right
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_narrator "Электроник усмехнулся."
     show el surprise pioneer far at cs_actor_far_right
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_el "Совсем нам не доверяешь?"
     cs_ls "Пока мы знакомы около получаса. Предлагаю не торопить развитие отношений."
     show cs_darya amused pioneer far at cs_darya_far_center
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_narrator "Дарья тихо рассмеялась."
     cs_narrator "Шурик кивнул."
     cs_sh "Ладно. Тогда завтра приходи."

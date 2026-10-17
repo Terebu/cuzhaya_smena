@@ -6,7 +6,9 @@ label cs_day01_10:
     hide screen cs_phone
     $ day_time()
     $ persistent.sprite_time = "day"
-    scene bg int_house_of_mt_day with Dissolve(1.5)
+    $ cs_director_scene("bg int_house_of_mt_day")
+    scene bg int_house_of_mt_day
+    with Dissolve(1.5)
     play ambience cs_day_cabin fadeout 1.0 fadein 2.0
     window show dissolve
     $ renpy.music.set_volume(0.45, delay=1.0, channel="ambience")
@@ -14,10 +16,25 @@ label cs_day01_10:
         $ renpy.music.set_volume(0.5, delay=1.0, channel="music")
         play music cs_day_music_think fadeout 1.5 fadein 2.0
     show mt normal pioneer at cs_actor_left
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     label cs_check_day01_part03_inside:
     # cs_darya_stage: present in story
     show cs_dasha_winter shrug normal at cs_darya_normal_right
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
+    # cs_director_begin: entry frame; explicit scene plan
+    $ cs_frame_focus(["mt", "sl", "cs_dasha_winter"])
+    with cs_sprite_change
+    # cs_director_end
     cs_narrator "Мы с Дарьей вошли в домик."
+    # cs_director_begin: REFLECTIVE_SHOT: Counsellor cabin and historic objects
+    $ cs_reflective_focus()
+    with cs_sprite_change
+    label cs_director_check_2c552e9788:
+    # cs_director_end
     cs_narrator "И вот здесь ощущение путешествия во времени стало особенно отчётливым."
     cs_narrator "Никаких пластиковых окон."
     cs_narrator "Никаких зарядных устройств."
@@ -33,14 +50,25 @@ label cs_day01_10:
     cs_narrator "И тут мой взгляд остановился на плакате."
     cs_narrator "Фантомас."
     cs_narrator "Я несколько секунд смотрела на знакомое лицо."
+    # cs_director_begin: Return to direct interaction: Counsellor cabin and historic objects
+    $ cs_frame_focus(["mt", "cs_dasha_winter"])
+    with cs_sprite_change
+    label cs_director_check_a45e77b705:
+    # cs_director_end
     cs_narrator "Потом совершенно серьёзно указала на него пальцем."
     cs_ls "Этого человека в реальности не было. Самозванец."
     show mt surprise pioneer at cs_actor_left
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_narrator "Ольга Дмитриевна замерла."
     cs_narrator "Дарья посмотрела на плакат."
     cs_narrator "Потом на меня."
     # cs_darya_stage: present in story
     show cs_dasha_winter explaining normal at cs_darya_normal_right
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_da "Что?"
     cs_narrator "Я перешла на русский."
     cs_ls "Этого человека не существовало. Подозрительный тип. Я бы за ним присматривала."
@@ -51,6 +79,9 @@ label cs_day01_10:
     cs_ls "Не смейся. Если ночью он начнёт разгуливать по лагерю, я предупреждала."
     # cs_darya_stage: present in story
     show cs_dasha_winter shrug normal at cs_darya_normal_right
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_da "Пять минут назад ты рассказывала о множественных реальностях."
     cs_ls "Одно другому не мешает."
     stop music fadeout 2.0
@@ -69,6 +100,11 @@ label cs_day01_10:
     cs_mt "Какой ещё план?"
     cs_ls "Неважно. Неудачная попытка объяснить погоду."
     cs_narrator "Я замолчала."
+    # cs_director_begin: REFLECTIVE_SHOT: History versus present reality
+    $ cs_reflective_focus()
+    with cs_sprite_change
+    label cs_director_check_53a69c5550:
+    # cs_director_end
     cs_narrator "Точно."
     cs_narrator "Для меня всё это было историей."
     cs_narrator "Для неё — обычной жизнью."
@@ -82,9 +118,17 @@ label cs_day01_10:
     cs_narrator "Не в историческом парке."
     cs_narrator "А в стране, которая для меня давно перестала существовать."
     cs_th "Хотя сначала неплохо бы установить дату."
+    # cs_director_begin: Return to direct interaction: History versus present reality
+    $ cs_frame_focus(["mt", "cs_dasha_winter"])
+    with cs_sprite_change
+    label cs_director_check_96e1923c75:
+    # cs_director_end
     cs_narrator "Я повернулась к вожатой."
     cs_ls "Ольга Дмитриевна, а какой сейчас год?"
     show mt surprise pioneer at cs_actor_left
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_narrator "Она посмотрела на меня с ещё большим подозрением."
     cs_mt "Ты серьёзно?"
     cs_ls "К сожалению."
@@ -102,6 +146,9 @@ label cs_day01_10:
     cs_ls "Думаю, к этому вопросу лучше вернуться чуть позже."
     # cs_camp_emotion: text reaction
     show mt sad pioneer at cs_actor_left
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_mt "Лена…"
     cs_ls "Серьёзно. Мне бы для начала перестать выглядеть как человек, который заблудился по дороге на зимнюю рыбалку."
     cs_narrator "Я слегка приподняла ногу."

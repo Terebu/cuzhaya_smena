@@ -1,0 +1,376 @@
+45:Сцена 6: помощь Славе +1 cs_friend_sl. Сцена 11: совместный рисунок +1 cs_friend_un и cs_day02_un_joined = True. Сцена 17: прослушивание +1 cs_friend_mi. Сцена 23: помощь с карточками +1 cs_friend_mz. Во второй ветви каждого меню очки остаются прежними. Значение choice устанавливать вместе с начислением и проверять при повторном входе label; обычный rollback должен откатывать и выбор, и прибавку. Не использовать persistent для защиты от rollback.
+47:Сцена 29 выполняется только при cs_met_un and cs_friend_un >= 2 and cs_day02_un_joined. В остальных прохождениях перейти от общей сцены 28 к 30. Сцена 24 при cs_friend_mz >= 2 содержит приглашение Жени; иначе нейтральное напоминание о книге. После условных вставок общий текст не предполагает, что игрок их видел.
+51:День 1 Добро пожаловать в Совёнок
+53:Часть 11 Перед отбоем
+55:Сцена 59 Короткая версия
+57:[BG: bg int_library_day. Продолжить сцену 58 без затемнения. MUSIC: into_the_unknown затихает за 3 секунды; дальше слышны только тихий библиотечный эмбиент и шелест страниц. Женя за столом, Дарья рядом со стулом Лены.]
+111:Сцена 60 Человек за столом
+113:[BG без смены. MUSIC: just_think, fadein 2.5, тихо. Женя остаётся сдержанной независимо от cs_friend_mz.]
+141:[ЕСЛИ cs_friend_mz >= 1:]
+149:[ИНАЧЕ:]
+155:[ОБЪЕДИНЕНИЕ. Очки не начисляются.]
+179:Сцена 61 На крыльце библиотеки
+181:[BG: cs_library_exterior_sunset, dissolve 1.0. AMBIENCE: ambience_camp_center_evening. MUSIC: just_think постепенно затихает. Женя выходит следом, закрывает библиотеку и уходит по своим делам.]
+191:[УСЛОВНЫЙ ЭПИЗОД: только при cs_met_un == True и cs_friend_un >= 1. Это короткое продолжение знакомства, без нового меню и без прибавки очков.]
+239:[ПРИ НЕВЫПОЛНЕННОМ УСЛОВИИ: весь эпизод с Тихоновой пропустить. Никакого ожидания, рисунка или обещания карандашей.]
+241:Сцена 62 Дорога к домику
+243:[BG: cs_camp_path_sunset → cs_house_lena_darya_ext_night. Время постепенно переходит в ночь. MUSIC: a_promise_from_distant_days, тихо.]
+281:Сцена 63 Вещи на своих местах
+283:[BG: cs_house_lena_darya_int_night. Тёплый свет лампы. MUSIC: a_promise_from_distant_days продолжить. Переодевание и умывание обозначить короткими затемнениями; новых костюмных спрайтов не требуется.]
+321:Сцена 64 Спокойной ночи
+323:[BG тот же. Телефон на тумбочке, экран чёрный. MUSIC постепенно затихает. После выключения света — только ночной эмбиент.]
+363:[Затемнение. День 1 завершён.]
+367:День 2 Учимся здесь жить
+369:Часть 1 Самый обыкновенный завтрак
+371:Сцена 1 Утро без будильника
+373:[CODEX: label cs_day02_01; save_name = «Чужая смена — День 2 — Утро без будильника».]
+375:[BG: scene cs_house_lena_darya_int_day with Dissolve(1.0).]
+377:[AMBIENCE: play ambience ambience_int_cabin_day; файл sound/ambiences/int_cabin_day.ogg. При смене fadeout 1.0, fadein 1.5; volume 0.25.]
+379:[MUSIC: play music music_list["my_daily_life"]; fadeout 2.0 / fadein 2.0 только при смене; volume 0.24.]
+381:[SPRITES на входе: никого; голоса вне кадра до указанного show.]
+383:[ПОСТАНОВКА И ВЫХОД: До умывания Дарья за кадром, без костюмного спрайта. После фразы о галстуке обе уже в форме: show cs_darya neutral pioneer normal at cs_darya_normal_right with dissolve. Первые реплики без музыки; my_daily_life включить после шутки о жалобе. SFX скрипа шкафа не придумывать; передать текстом. Выход: play sound sfx_open_door_1; hide cs_darya with dissolve.]
+405:Мысли Лены: Шкаф, галстук, завтрак. Если перечислить это вслух, получится совершенно нормальное утро. Только вчера я просыпалась в своей комнате и могла написать кому угодно. Сегодня мне даже некому сообщить, что я жива.
+409:[SPRITE: после попытки включить телефон show cs_darya worried pioneer normal at cs_darya_normal_right with dissolve.]
+423:Мысли Лены: Можно сейчас спросить, почему именно спокойнее. Можно получить ответ, которого ей ещё не хочется давать. А можно хотя бы раз не разбирать хорошую реплику до винтика.
+429:[SPRITE: show cs_darya amused pioneer normal at cs_darya_normal_right with dissolve.]
+443:Сцена 2 Знакомая дорожка
+445:[CODEX: label cs_day02_02; save_name = «Чужая смена — День 2 — Знакомая дорожка».]
+447:[BG: scene cs_house_lena_darya_ext_day with Dissolve(1.0).]
+449:[AMBIENCE: play ambience ambience_camp_center_day; файл sound/ambiences/camp_center_day.ogg. При смене fadeout 1.0, fadein 1.5; volume 0.25.]
+451:[MUSIC: ПРОДОЛЖИТЬ music_list["my_daily_life"]; fadeout 2.0 / fadein 2.0 только при смене; volume 0.24.]
+453:[SPRITES на входе: show cs_darya neutral pioneer normal at cs_darya_normal_right with dissolve.]
+455:[ПОСТАНОВКА И ВЫХОД: У умывальников scene bg ext_washstand_day with Dissolve(1.0); затем scene cs_camp_path_day; затем scene bg ext_square_day. Сохранить дневной эмбиент. После каждого scene снова показать Дарью справа. При появлении Семёна show cs_semen wave pioneer normal at cs_semen_normal_left with dissolve; после приветствия заменить на neutral. Выход: следующая scene очищает обоих.]
+495:[SPRITE: show cs_semen smile pioneer normal at cs_semen_normal_left with dissolve.]
+501:Мысли Лены: Я сказала «если» и услышала, как оно царапнуло. Вчера было «завтра». Одно короткое слово разрешало ждать почти без сомнений. Теперь завтра наступило, и обещаний у него не оказалось.
+509:Мысли Лены: Не надо начинать каждое утро с проверки, насколько я одна. Сегодня ответ виден без всяких измерений.
+513:Сцена 3 Третий поднос
+515:[CODEX: label cs_day02_03; save_name = «Чужая смена — День 2 — Третий поднос».]
+517:[BG: scene bg int_dining_hall_day with Dissolve(1.0).]
+519:[AMBIENCE: play ambience ambience_dining_hall_full; файл sound/ambiences/dining_hall_full.ogg. При смене fadeout 1.0, fadein 1.5; volume 0.25.]
+521:[MUSIC: play music music_list["everyday_theme"]; fadeout 2.0 / fadein 2.0 только при смене; volume 0.24.]
+523:[SPRITES на входе: show cs_darya neutral pioneer normal at cs_darya_normal_right with dissolve; show cs_semen neutral pioneer normal at cs_semen_normal_left with dissolve.]
+525:[ПОСТАНОВКА И ВЫХОД: Перспектива разговора за столом: спрайты условно обозначают собеседников, не анимировать сидение у нарисованных стульев. На реплике о подносе show cs_semen relaxed pioneer normal at cs_semen_normal_left. В конце hide cs_semen; hide cs_darya; перейти на площадь без дополнительного горна.]
+567:Мысли Лены: Не очень красиво — наслаждаться завтраком, пока дома, возможно, уже волнуются. Но если я сейчас откажусь от каши из солидарности со своей пропажей, домой это меня не вернёт. Только голодной сделает.
+583:[Переход к утреннему сбору.]
+585:Часть 2 Небольшое поручение
+587:Сцена 4 Линейка
+589:[CODEX: label cs_day02_04; save_name = «Чужая смена — День 2 — Линейка».]
+591:[BG: scene bg ext_square_day with Dissolve(1.0).]
+593:[AMBIENCE: play ambience ambience_camp_center_day; файл sound/ambiences/camp_center_day.ogg. При смене fadeout 1.0, fadein 1.5; volume 0.25.]
+595:[MUSIC: play music music_list["my_daily_life"]; fadeout 2.0 / fadein 2.0 только при смене; volume 0.24.]
+597:[SPRITES на входе: show mt normal pioneer at cs_day_mt_center with dissolve.]
+599:[ПОСТАНОВКА И ВЫХОД: Дарья и Семён стоят рядом за кадром; для её тихих реплик убрать mt и показать Дарью справа, перед обращением вожатой скрыть Дарью и вернуть mt в центр. На общем объявлении никаких повторных знакомств. В конце hide mt with dissolve.]
+635:[SPRITE: show mt smile pioneer at cs_day_mt_center with dissolve.]
+641:Мысли Лены: Поручение звучало подозрительно похоже на нормальную работу. Никто не спрашивал, из какого я века. Никому не требовалось срочно признать, что они живут в игре. Нужен был человек, который способен написать слова и не потерять карандаш.
+653:Сцена 5 Полчаса до клуба
+655:[CODEX: label cs_day02_05; save_name = «Чужая смена — День 2 — Полчаса до клуба».]
+657:[BG: scene cs_camp_path_day with Dissolve(1.0).]
+659:[AMBIENCE: play ambience ambience_camp_center_day; файл sound/ambiences/camp_center_day.ogg. При смене fadeout 1.0, fadein 1.5; volume 0.25.]
+661:[MUSIC: ПРОДОЛЖИТЬ music_list["my_daily_life"]; fadeout 2.0 / fadein 2.0 только при смене; volume 0.24.]
+663:[SPRITES на входе: show sl normal pioneer at cs_actor_left with dissolve; show cs_darya neutral pioneer normal at cs_darya_normal_right with dissolve.]
+665:[ПОСТАНОВКА И ВЫХОД: Семён несёт коробку за кадром. Во время его шутки hide sl; show cs_semen awkward pioneer normal at cs_semen_normal_left; затем hide cs_semen; вернуть sl normal слева. Переход к навесу: hide sl; hide cs_darya; scene bg ext_clubs_day; показать их снова. Нельзя оставить участников поверх следующего фона без повторного show.]
+685:Мысли Лены: Славя попросила помощи и сразу получила четыре свободные руки. Я бы дома сначала изобразила занятость, потом поинтересовалась сроками. Здесь уже несу бумагу и почему-то не чувствую себя обманутой.
+699:[SPRITE: show sl smile pioneer at cs_actor_left with dissolve.]
+703:Мысли Лены: Могли. Это полезно помнить, даже если никто не собирается отказывать. Иначе очень быстро начинаешь считать чужую доброжелательность приказом.
+723:Сцена 6 Подготовить место
+725:[CODEX: label cs_day02_06; save_name = «Чужая смена — День 2 — Подготовить место».]
+727:[BG: scene bg ext_clubs_day with Dissolve(1.0).]
+729:[AMBIENCE: play ambience ambience_camp_center_day; файл sound/ambiences/camp_center_day.ogg. При смене fadeout 1.0, fadein 1.5; volume 0.25.]
+731:[MUSIC: ПРОДОЛЖИТЬ music_list["my_daily_life"]; fadeout 2.0 / fadein 2.0 только при смене; volume 0.24.]
+733:[SPRITES на входе: show sl normal pioneer at cs_actor_left with dissolve; show cs_darya neutral pioneer normal at cs_darya_normal_right with dissolve.]
+735:[ПОСТАНОВКА И ВЫХОД: Перед меню Славя слева, Дарья справа. В А show sl smile pioneer; в Б normal. После общего эпизода с локтем hide sl with dissolve — она уходит по делам. На приглашении Электроника show el smile pioneer at cs_actor_left. Вход в клуб: play sound sfx_open_door_clubs; следующая scene очищает кадр.]
+737:[ВАРИАНТ А: cs_friend_sl += 1 ровно один раз.]
+757:[ВАРИАНТ Б: очки без изменений.]
+769:[ОБЩАЯ СЦЕНА после обеих ветвей.]
+779:Мысли Лены: Надо было посмотреть сразу. Но когда неприятность выглядит маленькой, я сначала пытаюсь убедить её исчезнуть без моего участия.
+781:[SPRITE: show cs_darya thinking pioneer normal at cs_darya_normal_right with dissolve.]
+797:[ОБЪЕДИНЕНИЕ. Из клуба выходит Электроник и приглашает всех внутрь.]
+799:Часть 3 Пять вольт без чуда
+801:Сцена 7 На рабочем столе
+803:[CODEX: label cs_day02_07; save_name = «Чужая смена — День 2 — На рабочем столе».]
+805:[BG: scene bg int_clubs_male_day with Dissolve(1.0).]
+807:[AMBIENCE: play ambience ambience_clubs_inside_day; файл sound/ambiences/clubs_inside_day.ogg. При смене fadeout 1.0, fadein 1.5; volume 0.25.]
+809:[MUSIC: play music music_list["smooth_machine"]; fadeout 2.0 / fadein 2.0 только при смене; volume 0.24.]
+811:[SPRITES на входе: show el normal pioneer at cs_actor_left with dissolve; show cs_darya neutral pioneer normal at cs_darya_normal_right with dissolve.]
+813:[ПОСТАНОВКА И ВЫХОД: Шурик и Семён у стола за кадром. Перед вопросом Семёна hide el; show cs_semen surprised pioneer normal at cs_semen_normal_left. После его вопроса hide cs_semen; показать sh serious слева. Не включать экран телефона и не показывать интерфейс phone.rpy.]
+851:Мысли Лены: Мне хотелось быть девушкой из будущего, которая знает достаточно, чтобы всех спасти. На деле я знала, как выглядит зарядка из магазина. Вчера эти знания казались почти инструкцией. Сегодня лежали рядом с лупой и выглядели гораздо скромнее.
+853:[SPRITE: hide el with dissolve; show sh serious pioneer at cs_actor_left with dissolve. Дарья справа; Семён присутствует за кадром.]
+863:Сцена 8 Что именно не получается
+865:[CODEX: label cs_day02_08; save_name = «Чужая смена — День 2 — Что именно не получается».]
+867:[BG: ПРОДОЛЖИТЬ текущий фон без scene.]
+869:[AMBIENCE: ПРОДОЛЖИТЬ ambience_clubs_inside_day; файл sound/ambiences/clubs_inside_day.ogg. При смене fadeout 1.0, fadein 1.5; volume 0.25.]
+871:[MUSIC: ПРОДОЛЖИТЬ music_list["smooth_machine"]; fadeout 2.0 / fadein 2.0 только при смене; volume 0.24.]
+873:[SPRITES на входе: show sh serious pioneer at cs_actor_left with dissolve; show cs_darya neutral pioneer normal at cs_darya_normal_right with dissolve.]
+875:[ПОСТАНОВКА И ВЫХОД: Фон сохранить. На извинении Электроника hide sh; show el normal pioneer at cs_actor_left; после копирования измерений hide el; show sh serious pioneer at cs_actor_left. Уменьшить music до 0.18 в разговоре о риске. Дарья serious справа. В конце оставить sh и cs_darya; не затемнять.]
+877:[Музыку приглушить. Никакого подключения открытых проводов к смартфону, вскрытия корпуса или прямого питания аккумулятора.]
+909:Мысли Лены: Ну скажи, что можно хоть как-нибудь. Что я приехала из будущего не для того, чтобы смотреть на чёрный прямоугольник. Что мне нужен всего один экран, несколько знакомых лиц, любая вещь, которая докажет: прежняя жизнь не исчезла вместе с автобусом.
+923:[SPRITE: show cs_darya serious pioneer normal at cs_darya_normal_right with dissolve.]
+929:Мысли Лены: Неудача выглядела бы хуже, если бы здесь что-нибудь сгорело. Понимать это и не расстраиваться — два разных умения. Вторым я пока не владела.
+933:Сцена 9 Забрать телефон
+935:[CODEX: label cs_day02_09; save_name = «Чужая смена — День 2 — Забрать телефон».]
+937:[BG: ПРОДОЛЖИТЬ текущий фон без scene.]
+939:[AMBIENCE: play ambience ambience_clubs_inside_day; файл sound/ambiences/clubs_inside_day.ogg. При смене fadeout 1.0, fadein 1.5; volume 0.25.]
+941:[MUSIC: play music music_list["just_think"]; fadeout 2.0 / fadein 2.0 только при смене; volume 0.24.]
+943:[SPRITES на входе: show sh serious pioneer at cs_actor_left with dissolve; show cs_darya neutral pioneer normal at cs_darya_normal_right with dissolve.]
+945:[ПОСТАНОВКА И ВЫХОД: При выходе play sound sfx_open_door_clubs; scene bg ext_clubs_day with Dissolve(1.0); play ambience ambience_camp_center_day fadeout 1.0 fadein 1.5. show cs_semen serious pioneer normal слева; show cs_darya neutral справа. Источник питания остаётся в клубе, телефон и копия измерений у Лены. В конце оставить Дарью справа и Семёна слева; Дарья уходит только в сцене 10 после вопроса о времени.]
+947:[MUSIC: just_think. После ухода — bg ext_clubs_day.]
+989:Мысли Лены: Она не сказала, что всё обязательно получится. И не потребовала посмотреть на хорошую сторону. Просто предложила выбор и позволила мне выбрать стол с бумагой.
+1001:Мысли Лены: Можно не превращать каждое поражение в характеристику всего дня. Посмотрим, получится ли у меня хотя бы это.
+1007:Часть 4 Бумажная версия
+1009:Сцена 10 Чистый лист
+1011:[CODEX: label cs_day02_10; save_name = «Чужая смена — День 2 — Чистый лист».]
+1013:[BG: scene bg ext_clubs_day with Dissolve(1.0).]
+1015:[AMBIENCE: play ambience ambience_camp_center_day; файл sound/ambiences/camp_center_day.ogg. При смене fadeout 1.0, fadein 1.5; volume 0.25.]
+1017:[MUSIC: play music music_list["my_daily_life"]; fadeout 2.0 / fadein 2.0 только при смене; volume 0.24.]
+1019:[SPRITES на входе: show cs_semen neutral pioneer normal at cs_semen_normal_left with dissolve.]
+1021:[ПОСТАНОВКА И ВЫХОД: Новая scene допустима как смена точки зрения на навес, без нового перезапуска my_daily_life, если он уже идёт. Дарья в начале подходит справа; на «пошла уточнять» hide cs_darya with dissolve. Семён остаётся слева. Рисунок и бумагу обозначать текстом, не новым вымышленным инвентарным screen.]
+1059:Мысли Лены: Удивительно, что я спокойно принимаю от него советы по композиции. Вчера я ещё сравнивала его с человеком из чужой истории. Теперь у него был карандаш, кривое «М» на пробном листе и совершенно практический вопрос.
+1069:Мысли Лены: Домашний стол был удобнее. Но там редко кто-нибудь сидел напротив и ждал, пока я закончу свою линию.
+1073:Сцена 11 Книга под мышкой
+1075:[CODEX: label cs_day02_11; save_name = «Чужая смена — День 2 — Книга под мышкой».]
+1077:[BG: ПРОДОЛЖИТЬ текущий фон без scene.]
+1079:[AMBIENCE: play ambience ambience_camp_center_day; файл sound/ambiences/camp_center_day.ogg. При смене fadeout 1.0, fadein 1.5; volume 0.25.]
+1081:[MUSIC: ПРОДОЛЖИТЬ music_list["my_daily_life"]; fadeout 2.0 / fadein 2.0 только при смене; volume 0.24.]
+1083:[SPRITES на входе: show un normal pioneer at cs_actor_left with dissolve.]
+1085:[ПОСТАНОВКА И ВЫХОД: При появлении Тихоновой hide cs_semen; show un normal pioneer at cs_actor_left. Семён продолжает работу за кадром. В А show un smile pioneer; установить cs_day02_un_joined = True, закончить рамку и hide un до возвращения Дарьи. В Б hide un сразу после прощания. В конце обе ветви оставляют un скрытой и возвращают cs_semen neutral слева.]
+1087:[Лена Тихонова проходит мимо по обычным лагерным делам. MENU: «Пригласить Лену порисовать вместе» / «Продолжить вдвоём с Семёном». Встреча возможна при любом результате дня 1; способ обращения зависит от cs_met_un.]
+1091:[ЕСЛИ cs_met_un:]
+1097:[ИНАЧЕ:]
+1109:$ cs_met_un = True после представления, независимо от следующего выбора.
+1111:Мысли Лены: Она смотрит на лист, а я уже готова решить, что ей хочется сесть рядом. Потом обидеться, если не сядет. Может, просто спросить и оставить ей возможность ответить?
+1123:Мысли Лены: В её ответе появилось больше уверенности, чем в приветствии. Хорошо бы не спугнуть её немедленным «так ты художница!». Человек имеет право сначала сказать, что умеет держать карандаш.
+1125:[SPRITE: show un normal pioneer at cs_actor_left with dissolve. Перед меню оставить паузу 0.5; не менять эмоцию на shy без причины.]
+1133:[ВАРИАНТ А: «Пригласить Лену порисовать вместе». cs_friend_un += 1; cs_day02_un_joined = True; cs_day02_un_choice = "draw".]
+1153:[ВАРИАНТ Б: «Продолжить вдвоём с Семёном». Очки без изменений; cs_day02_un_joined = False; cs_day02_un_choice = "continue".]
+1163:[ОБЪЕДИНЕНИЕ. Если Тихонова осталась, она заканчивает рамку и уходит до возвращения Дарьи; её участие не требуется дальнейшими сценами.]
+1165:Сцена 12 Время и место
+1167:[CODEX: label cs_day02_12; save_name = «Чужая смена — День 2 — Время и место».]
+1169:[BG: ПРОДОЛЖИТЬ текущий фон без scene.]
+1171:[AMBIENCE: play ambience ambience_camp_center_day; файл sound/ambiences/camp_center_day.ogg. При смене fadeout 1.0, fadein 1.5; volume 0.25.]
+1173:[MUSIC: ПРОДОЛЖИТЬ music_list["my_daily_life"]; fadeout 2.0 / fadein 2.0 только при смене; volume 0.24.]
+1175:[SPRITES на входе: show cs_darya neutral pioneer normal at cs_darya_normal_right with dissolve; show cs_semen neutral pioneer normal at cs_semen_normal_left with dissolve.]
+1177:[ПОСТАНОВКА И ВЫХОД: Дарья возвращается: show cs_darya explaining pioneer normal справа; затем amused на реплике о ложках. Семён smile слева. Перед передачей объявления hide cs_semen; show sl smile pioneer слева. После передачи hide sl; hide cs_darya. Карандаши, кроме одного для дневного рисунка, возвращены в коробку; один остаётся с разрешения Слави до вечера.]
+1217:Мысли Лены: Я могла бы ещё час поправлять лист. Утолщать линии, выравнивать края, придумывать оправдание каждой ноте. Но уже сейчас было понятно, куда и когда приходить. Пожалуй, иногда вещь действительно готова, даже если я ещё могу найти к ней претензии.
+1229:[CODEX: строку с именем Тихоновой показывать только при cs_day02_un_joined; в нейтральной ветви перечислить Лену, Дарью и Семёна.]
+1235:Часть 5 Перерыв на обед
+1237:Сцена 13 Тарелка и локоть
+1239:[CODEX: label cs_day02_13; save_name = «Чужая смена — День 2 — Тарелка и локоть».]
+1241:[BG: scene bg int_dining_hall_day with Dissolve(1.0).]
+1243:[AMBIENCE: play ambience ambience_dining_hall_full; файл sound/ambiences/dining_hall_full.ogg. При смене fadeout 1.0, fadein 1.5; volume 0.25.]
+1245:[MUSIC: play music music_list["everyday_theme"]; fadeout 2.0 / fadein 2.0 только при смене; volume 0.24.]
+1247:[SPRITES на входе: show cs_darya neutral pioneer normal at cs_darya_normal_right with dissolve; show us normal pioneer at cs_actor_left with dissolve.]
+1249:[ПОСТАНОВКА И ВЫХОД: Семён сидит за кадром. Для его реплики hide us; show cs_semen neutral pioneer normal слева; затем скрыть Семёна и вернуть us grin слева. На осмотре локтя show cs_darya worried справа. Ульяна не сопровождает девушек в медпункт. Выход: hide us; hide cs_darya; scene ext_aidpost в следующей сцене.]
+1281:[SPRITE: show us grin pioneer at cs_actor_left with dissolve. Семён скрыт, отвечает из-за стола; Дарья справа.]
+1285:Мысли Лены: У неё любой вопрос решается предложением поиграть. Наверное, я тоже выгляжу примерно так, когда предлагаю сначала всё записать. Только футбол хотя бы не требует красиво складывать лист.
+1309:Сцена 14 Без подвига
+1311:[CODEX: label cs_day02_14; save_name = «Чужая смена — День 2 — Без подвига».]
+1313:[BG: scene bg ext_aidpost_day with Dissolve(1.0).]
+1315:[AMBIENCE: play ambience ambience_camp_center_day; файл sound/ambiences/camp_center_day.ogg. При смене fadeout 1.0, fadein 1.5; volume 0.25.]
+1317:[MUSIC: play music music_list["my_daily_life"]; fadeout 2.0 / fadein 2.0 только при смене; volume 0.24.]
+1319:[SPRITES на входе: show cs_darya neutral pioneer normal at cs_darya_normal_right with dissolve.]
+1321:[ПОСТАНОВКА И ВЫХОД: После двух наружных строк play sound sfx_open_door_1; scene bg int_aidpost_day with Dissolve(1.0); play ambience ambience_medstation_inside_day fadeout 1.0 fadein 1.5; show cs normal at cs_actor_left; show cs_darya neutral справа. cs — штатный тег Виолы, не Соколовой. После обработки hide cs; hide cs_darya; play sound sfx_open_door_1.]
+1345:Мысли Лены: Сейчас она скажет что-нибудь двусмысленное, а я приготовила ответ ещё до того, как открылась дверь. Отличный способ разговаривать с человеком: заранее обидеться на реплику, которой он не произносил.
+1353:[SPRITE: show cs smile at cs_actor_left with dissolve.]
+1357:Мысли Лены: Локоть оказался вполне обычным локтем. Я сама уже не понимала, зачем ждала от каждой знакомой комнаты подтверждения своей теории. Тут человеку хватало повязки.
+1369:Сцена 15 Несколько минут в тени
+1371:[CODEX: label cs_day02_15; save_name = «Чужая смена — День 2 — Несколько минут в тени».]
+1373:[BG: scene bg ext_aidpost_day with Dissolve(1.0).]
+1375:[AMBIENCE: play ambience ambience_camp_center_day; файл sound/ambiences/camp_center_day.ogg. При смене fadeout 1.0, fadein 1.5; volume 0.25.]
+1377:[MUSIC: ПРОДОЛЖИТЬ music_list["my_daily_life"]; fadeout 2.0 / fadein 2.0 только при смене; volume 0.24.]
+1379:[SPRITES на входе: show cs_darya neutral pioneer normal at cs_darya_normal_right with dissolve.]
+1381:[ПОСТАНОВКА И ВЫХОД: Дарья neutral справа, на серьёзном разговоре serious, после шутки amused. Семён не появляется: его новое поручение известно из прощания после обеда. В конце hide cs_darya; scene cs_camp_path_day; show cs_darya neutral справа; музыка продолжается.]
+1391:Мысли Лены: Я могла бы сказать «сама бы справилась». Это правда. Но зачем произносить её именно сейчас, когда Даша всего лишь заметила, что мне неприятно? Иногда я защищаю самостоятельность так усердно, будто за помощь потом выставят счёт.
+1401:[SPRITE: show cs_darya serious pioneer normal at cs_darya_normal_right with dissolve.]
+1409:Мысли Лены: Вот сейчас станет неловко. Нормально. Я же сама попросила честный ответ. Не надо немедленно улучшать вопрос так, чтобы она могла сказать только приятное.
+1435:Часть 6 Там где слышно музыку
+1437:Сцена 16 Открытая дверь
+1439:[CODEX: label cs_day02_16; save_name = «Чужая смена — День 2 — Открытая дверь».]
+1441:[BG: scene bg ext_musclub_day with Dissolve(1.0).]
+1443:[AMBIENCE: play ambience ambience_camp_center_day; файл sound/ambiences/camp_center_day.ogg. При смене fadeout 1.0, fadein 1.5; volume 0.25.]
+1445:[MUSIC: stop music fadeout 2.0. Далее без фонового OST до указанного конца номера.]
+1447:[SPRITES на входе: show cs_darya neutral pioneer normal at cs_darya_normal_right with dissolve.]
+1449:[ПОСТАНОВКА И ВЫХОД: У двери только Дарья справа. После стука передать открытый проём без звука закрытой двери; scene bg int_musclub_day with Dissolve(1.0); play ambience ambience_music_club_day fadeout 1.0 fadein 1.5; show mi normal pioneer слева; show cs_darya neutral справа. stop music fadeout 2.0; живую фразу описать текстом. К концу mi smile, Дарья neutral; фон остаётся для 17.]
+1483:Мысли Лены: В игре её быстрая речь казалась особенностью, которую удобно узнавать. Здесь я едва успевала ответить на первый вопрос, а она уже предлагала нам место и извинялась за провод. В этом было больше волнения, чем желания занимать весь разговор.
+1487:[SPRITE: show mi normal pioneer at cs_actor_left with dissolve; show cs_darya smile pioneer normal at cs_darya_normal_right with dissolve.]
+1495:Сцена 17 Один слушатель тоже полезен
+1497:[CODEX: label cs_day02_17; save_name = «Чужая смена — День 2 — Один слушатель тоже полезен».]
+1499:[BG: ПРОДОЛЖИТЬ текущий фон без scene.]
+1501:[AMBIENCE: ПРОДОЛЖИТЬ ambience_music_club_day; файл sound/ambiences/music_club_day.ogg. При смене fadeout 1.0, fadein 1.5; volume 0.25.]
+1503:[MUSIC: stop music fadeout 2.0. Далее без фонового OST до указанного конца номера.]
+1505:[SPRITES на входе: show mi normal pioneer at cs_actor_left with dissolve; show cs_darya neutral pioneer normal at cs_darya_normal_right with dissolve.]
+1507:[ПОСТАНОВКА И ВЫХОД: В обеих ветвях тот же фон и ambience; OST не включать. В А перед музыкальным фрагментом window hide dissolve; pause 1.0; window show dissolve. После него mi shy, затем smile на обсуждении. В Б mi normal и краткий осмотр без оценивания мелодии. В конце обе ветви оставляют mi и Дарью на плане.]
+1509:[MENU: «Послушать репетицию до конца» / «Осмотреть кружок и не задерживать Мику». Новый счётчик cs_friend_mi.]
+1511:Мысли Лены: Я знаю, как раздражает чужое «ну, покажи», когда работа ещё не готова. Мику сейчас сама предложит или не предложит. Слушать — не значит требовать немедленный законченный концерт.
+1521:Мысли Лены: Главное — потом не сказать «красиво» из желания закончить неловкость. Если остаюсь, надо действительно слушать. Даже если гораздо приятнее смотреть, как Даша убирает волосы за ухо.
+1523:[CODEX: выбор реализовать здесь; в ветви А слушаем с разрешения Мику, в Б осматриваем кружок без оценки номера.]
+1533:[ВАРИАНТ А: cs_friend_mi += 1 ровно один раз.]
+1551:[ВАРИАНТ Б: очки без изменений.]
+1561:[ОБЪЕДИНЕНИЕ.]
+1563:Сцена 18 Рыжая гитаристка
+1565:[CODEX: label cs_day02_18; save_name = «Чужая смена — День 2 — Рыжая гитаристка».]
+1567:[BG: ПРОДОЛЖИТЬ текущий фон без scene.]
+1569:[AMBIENCE: ПРОДОЛЖИТЬ ambience_music_club_day; файл sound/ambiences/music_club_day.ogg. При смене fadeout 1.0, fadein 1.5; volume 0.25.]
+1571:[MUSIC: stop music fadeout 2.0. Далее без фонового OST до указанного конца номера.]
+1573:[SPRITES на входе: show dv normal pioneer at cs_actor_left with dissolve; show cs_darya neutral pioneer normal at cs_darya_normal_right with dissolve.]
+1575:[ПОСТАНОВКА И ВЫХОД: Вход Алисы: play sound sfx_open_door_1; hide mi; show dv normal pioneer слева. Мику остаётся у инструмента за кадром. Для совместного разбора hide cs_darya; show mi normal pioneer at cs_actor_right; Алиса слева. Когда девушки выходят, hide dv; hide mi; scene bg ext_musclub_day; play ambience ambience_camp_center_day; show cs_darya smile справа. После прекращения репетиции можно play music music_list["i_want_to_play"] fadein 2.0 на короткий выход; в 19 заменить на get_to_know_me_better.]
+1603:[SPRITE: show dv normal pioneer at cs_actor_left with dissolve. Мику скрыть на время разговора Алисы с посетителями; она остаётся у инструмента за кадром.]
+1605:Мысли Лены: Вот и вся знаменитая рыжая гитаристка: ей тоже не хочется, чтобы за неё составили расписание. Не самая загадочная черта. Я почему-то легче понимаю её, когда перестаю ждать эффектного появления.
+1633:Часть 7 Час без поручений
+1635:Сцена 19 Даша выбирает дорогу
+1637:[CODEX: label cs_day02_19; save_name = «Чужая смена — День 2 — Даша выбирает дорогу».]
+1639:[BG: scene cs_camp_path_day with Dissolve(1.0).]
+1641:[AMBIENCE: play ambience ambience_camp_center_day; файл sound/ambiences/camp_center_day.ogg. При смене fadeout 1.0, fadein 1.5; volume 0.25.]
+1643:[MUSIC: play music music_list["get_to_know_me_better"]; fadeout 2.0 / fadein 2.0 только при смене; volume 0.24.]
+1645:[SPRITES на входе: show cs_darya neutral pioneer normal at cs_darya_normal_right with dissolve.]
+1647:[ПОСТАНОВКА И ВЫХОД: На подходе к скамейке hide cs_darya; scene bg ext_square_day with Dissolve(1.0); show cs_darya neutral pioneer normal справа. Использовать условный диалоговый портрет; не пытаться разместить ростовой PNG на нарисованной лавке. В конце сохранить кадр.]
+1681:Мысли Лены: И опять я успела отбиться от заботы, которой мне ещё не предложили. Удивительная скорость реакции. Может, всё-таки ответить на вопрос без маленького суда над собой?
+1689:[SPRITE: show cs_darya thinking pioneer normal at cs_darya_normal_right with dissolve.]
+1709:Сцена 20 Не только соседка
+1711:[CODEX: label cs_day02_20; save_name = «Чужая смена — День 2 — Не только соседка».]
+1713:[BG: ПРОДОЛЖИТЬ текущий фон без scene.]
+1715:[AMBIENCE: ПРОДОЛЖИТЬ ambience_camp_center_day; файл sound/ambiences/camp_center_day.ogg. При смене fadeout 1.0, fadein 1.5; volume 0.25.]
+1717:[MUSIC: ПРОДОЛЖИТЬ music_list["get_to_know_me_better"]; fadeout 2.0 / fadein 2.0 только при смене; volume 0.24.]
+1719:[SPRITES на входе: show cs_darya neutral pioneer normal at cs_darya_normal_right with dissolve.]
+1721:[ПОСТАНОВКА И ВЫХОД: Фон и музыка продолжаются. Дарья thinking на разговоре о молчании, amused на комиссии, shy_smile на взаимном признании. Не запускать романтический маршрут и не прибавлять дружбу другим персонажам. Пауза 0.7 после «мне тоже сейчас хорошо». В конце оставить shy_smile.]
+1749:Мысли Лены: «Мне тоже хорошо» — не договор и не обещание. Я это прекрасно понимаю. Оттого, что понимаю, приятнее не становится меньше. Только хочется немедленно закрепить услышанное, будто без следующего вопроса оно исчезнет.
+1759:[SPRITE: show cs_darya amused pioneer normal at cs_darya_normal_right with dissolve.]
+1781:Сцена 21 Запасной выход для мыслей
+1783:[CODEX: label cs_day02_21; save_name = «Чужая смена — День 2 — Запасной выход для мыслей».]
+1785:[BG: ПРОДОЛЖИТЬ текущий фон без scene.]
+1787:[AMBIENCE: ПРОДОЛЖИТЬ ambience_camp_center_day; файл sound/ambiences/camp_center_day.ogg. При смене fadeout 1.0, fadein 1.5; volume 0.25.]
+1789:[MUSIC: ПРОДОЛЖИТЬ music_list["get_to_know_me_better"]; fadeout 2.0 / fadein 2.0 только при смене; volume 0.24.]
+1791:[SPRITES на входе: show cs_darya neutral pioneer normal at cs_darya_normal_right with dissolve.]
+1793:[ПОСТАНОВКА И ВЫХОД: Дарья neutral, затем thinking и мягкая улыбка. Для настоящей улыбки можно show cs_dasha_pioneer 6 normal справа; при следующей эмоции hide cs_dasha_pioneer, вернуть cs_darya — у двух регистраций разные теги. В конце hide cs_darya; hide cs_dasha_pioneer; перейти к библиотеке. Лист с рисунком остаётся у Лены.]
+1831:Мысли Лены: Неприятно признавать, насколько легко я вычёркиваю половину собственной жизни, если она не продвигает меня к ответу. Потом удивляюсь, почему в голове всё время допрос и тупик.
+1841:[SPRITE: show cs_darya smile pioneer normal at cs_darya_normal_right with dissolve.]
+1849:Часть 8 У библиотечного стола
+1851:Сцена 22 Возвращённый карандаш
+1853:[CODEX: label cs_day02_22; save_name = «Чужая смена — День 2 — Возвращённый карандаш».]
+1855:[BG: scene bg ext_library_day with Dissolve(1.0).]
+1857:[AMBIENCE: play ambience ambience_camp_center_day; файл sound/ambiences/camp_center_day.ogg. При смене fadeout 1.0, fadein 1.5; volume 0.25.]
+1859:[MUSIC: play music music_list["just_think"]; fadeout 2.0 / fadein 2.0 только при смене; volume 0.24.]
+1861:[SPRITES на входе: show cs_darya neutral pioneer normal at cs_darya_normal_right with dissolve.]
+1863:[ПОСТАНОВКА И ВЫХОД: После наружного перехода play sound sfx_open_door_1; scene bg int_library_day; play ambience ambience_library_day fadeout 1.0 fadein 1.5; show mz normal glasses pioneer слева; show cs_darya neutral справа. Женя не снимает очки. По окончании выбора книги кадр сохраняется.]
+1893:Мысли Лены: Вчера Женя была для меня человеком, которому срочно надо рассказать невозможное. Сегодня она выбирала Даше книгу. Вообще-то это и было её занятие до нашего появления. Забавно, сколько усилий требуется, чтобы заметить очевидное.
+1901:[SPRITE: show mz normal glasses pioneer at cs_actor_left with dissolve.]
+1905:Мысли Лены: Она не поверила в будущее. И всё равно разрешила сесть. Было бы неплохо перестать считать каждый её нормальный ответ промежуточным шагом к признанию моей правоты.
+1911:Сцена 23 Не дёргать за каждое молчание
+1913:[CODEX: label cs_day02_23; save_name = «Чужая смена — День 2 — Не дёргать за каждое молчание».]
+1915:[BG: ПРОДОЛЖИТЬ текущий фон без scene.]
+1917:[AMBIENCE: ПРОДОЛЖИТЬ ambience_library_day; файл sound/ambiences/library_day.ogg. При смене fadeout 1.0, fadein 1.5; volume 0.25.]
+1919:[MUSIC: ПРОДОЛЖИТЬ music_list["just_think"]; fadeout 2.0 / fadein 2.0 только при смене; volume 0.24.]
+1921:[SPRITES на входе: show mz normal glasses pioneer at cs_actor_left with dissolve; show cs_darya neutral pioneer normal at cs_darya_normal_right with dissolve.]
+1923:[ПОСТАНОВКА И ВЫХОД: Фон, музыка, ambience сохраняются. В А mz normal, Дарья за кадром читает: hide cs_darya на сортировке; после работы вернуть справа. В Б Дарья thinking справа, Женя слева. При карточке с неверным номером не angry, а mz normal. В конце обе ветви — mz normal слева, Дарья neutral справа.]
+1925:[MENU: «Помочь проверить карточки возвращённых книг» / «Почитать рядом с Дашей». Очки Жени начисляются только за первую ветвь.]
+1929:Мысли Лены: Можно предложить помощь. Только не для того, чтобы потом получить доверие за хорошее поведение. Вчера я так радовалась, что она меня слушает, что почти не замечала, чем её заняла.
+1941:[SPRITE: show mz normal glasses pioneer at cs_actor_left with dissolve. Не использовать angry: её ответ деловой.]
+1945:Мысли Лены: Она не обязана присоединяться ко всему, что я предложила. Может просто читать. И я тоже могу просто читать, если сейчас не хочу брать чужую работу.
+1949:[ВАРИАНТ А: cs_friend_mz += 1 ровно один раз.]
+1969:[ВАРИАНТ Б: очки без изменений.]
+1977:[ОБЪЕДИНЕНИЕ.]
+1979:Сцена 24 Разрешение прийти снова
+1981:[CODEX: label cs_day02_24; save_name = «Чужая смена — День 2 — Разрешение прийти снова».]
+1983:[BG: ПРОДОЛЖИТЬ текущий фон без scene.]
+1985:[AMBIENCE: ПРОДОЛЖИТЬ ambience_library_day; файл sound/ambiences/library_day.ogg. При смене fadeout 1.0, fadein 1.5; volume 0.25.]
+1987:[MUSIC: ПРОДОЛЖИТЬ music_list["just_think"]; fadeout 2.0 / fadein 2.0 только при смене; volume 0.24.]
+1989:[SPRITES на входе: show mz normal glasses pioneer at cs_actor_left with dissolve; show cs_darya neutral pioneer normal at cs_darya_normal_right with dissolve.]
+1991:[ПОСТАНОВКА И ВЫХОД: Для приглашения при дружбе >=2 mz normal glasses pioneer, короткая пауза 0.5, без театрального смущения. На извинении сохранить normal. У двери hide cs_darya; hide mz; play sound sfx_open_door_1. Книга взята Дарьей в обеих ветвях.]
+1997:[ЕСЛИ cs_friend_mz >= 2:]
+2005:[ИНАЧЕ:]
+2011:[ОБЪЕДИНЕНИЕ.]
+2019:Мысли Лены: Мне опять хотелось задержаться и спросить, что она теперь думает о нас. Ответ ведь наверняка стал бы мягче: сегодня я вела себя прилично. Но тогда вся эта тишина превратилась бы в ожидание оценки.
+2033:[SPRITE: show cs_darya neutral pioneer normal at cs_darya_normal_right with dissolve.]
+2051:Часть 9 Ужин и объявление
+2053:Сцена 25 Всё таки видно издалека
+2055:[CODEX: label cs_day02_25; save_name = «Чужая смена — День 2 — Всё таки видно издалека».]
+2057:[BG: scene cs_camp_path_sunset with Dissolve(1.0).]
+2059:[AMBIENCE: play ambience ambience_camp_center_evening; файл sound/ambiences/camp_center_evening.ogg. При смене fadeout 1.0, fadein 1.5; volume 0.25.]
+2061:[MUSIC: play music music_list["my_daily_life"]; fadeout 2.0 / fadein 2.0 только при смене; volume 0.24.]
+2063:[SPRITES на входе: show cs_darya neutral pioneer normal at cs_darya_normal_right with dissolve.]
+2065:[ПОСТАНОВКА И ВЫХОД: Установить sunset. play sound sfx_dinner_horn_processed ровно один раз на подходе, не повторять в 26. После дорожки scene bg ext_dining_hall_near_sunset; показать Дарью. Для Ульяны hide cs_darya; show us grin слева; после её ухода hide us; вернуть Дарью. При появлении Семёна показать smile слева. Выход очищается сценой столовой.]
+2095:Мысли Лены: «Домой» вылетело так легко, что я услышала его только после. Сейчас я имела в виду деревянный домик за поворотом. От этого не стало ни страшнее, ни спокойнее. Просто оказалось, что голова уже научилась называть место, где лежат мои вещи.
+2099:Мысли Лены: Лист начал работать без меня. Ему не требовалось, чтобы автор стояла рядом и объясняла ветки. Достаточно слов, которые мы наконец написали крупно.
+2101:[SPRITE: show cs_darya amused pioneer normal at cs_darya_normal_right with dissolve.]
+2115:Сцена 26 Вопрос который можно отложить
+2117:[CODEX: label cs_day02_26; save_name = «Чужая смена — День 2 — Вопрос который можно отложить».]
+2119:[BG: scene bg int_dining_hall_sunset with Dissolve(1.0).]
+2121:[AMBIENCE: play ambience ambience_dining_hall_full; файл sound/ambiences/dining_hall_full.ogg. При смене fadeout 1.0, fadein 1.5; volume 0.25.]
+2123:[MUSIC: play music music_list["everyday_theme"]; fadeout 2.0 / fadein 2.0 только при смене; volume 0.24.]
+2125:[SPRITES на входе: show cs_darya neutral pioneer normal at cs_darya_normal_right with dissolve; show cs_semen neutral pioneer normal at cs_semen_normal_left with dissolve.]
+2127:[ПОСТАНОВКА И ВЫХОД: На вопросе о возвращении cs_semen serious, Дарья thinking. После договорённости Семён relaxed, Дарья neutral. Эмбиент dining_hall_full, не camp_center_evening внутри здания. В конце hide cs_semen; hide cs_darya. Нет второго сигнала на ужин.]
+2153:Мысли Лены: Вот оно. То, что я сама пыталась не формулировать за завтраком. Если мне хорошо на скамейке, значит ли это, что я меньше хочу вернуться? Очень удобный способ запретить себе всё, что не выглядит поиском выхода.
+2161:[SPRITE: show cs_semen serious pioneer normal at cs_semen_normal_left with dissolve.]
+2181:Сцена 27 После посуды
+2183:[CODEX: label cs_day02_27; save_name = «Чужая смена — День 2 — После посуды».]
+2185:[BG: scene bg ext_dining_hall_near_sunset with Dissolve(1.0).]
+2187:[AMBIENCE: play ambience ambience_camp_center_evening; файл sound/ambiences/camp_center_evening.ogg. При смене fadeout 1.0, fadein 1.5; volume 0.25.]
+2189:[MUSIC: ПРОДОЛЖИТЬ music_list["my_daily_life"]; fadeout 2.0 / fadein 2.0 только при смене; volume 0.24.]
+2191:[SPRITES на входе: show cs_darya neutral pioneer normal at cs_darya_normal_right with dissolve.]
+2193:[ПОСТАНОВКА И ВЫХОД: После столовой показать Дарью справа; Семёна не показывать — он помогает с лавками. На возвращении домой scene cs_house_lena_darya_ext_sunset; затем scene cs_house_lena_darya_int_sunset; ambience_int_cabin_evening. Дарья в форме: tie_touch, затем shy_smile. После выхода scene cs_camp_path_sunset; ambience_camp_center_evening; затем scene bg ext_square_sunset. Книга остаётся в домике. Все эти переходы в порядке текста, не сразу подряд до реплик.]
+2223:[SPRITE: show cs_darya shy_smile pioneer normal at cs_darya_normal_right with dissolve.]
+2227:Мысли Лены: Есть огромная разница между желанием сказать приятное и желанием немедленно узнать, как оно подействовало. Сейчас мне очень хотелось второго. Я могла хотя бы не выдавать это за заботу о галстуке.
+2235:Мысли Лены: Вчера собирала доказательства, что этот домик чужой. Сегодня проверяю, чтобы из него ничего не унесло сквозняком. Привычка возникает быстрее, чем я успеваю решить, имею ли на неё право.
+2245:Часть 10 Музыка на площади
+2247:Сцена 28 Место на скамейке
+2249:[CODEX: label cs_day02_28; save_name = «Чужая смена — День 2 — Место на скамейке».]
+2251:[BG: scene bg ext_square_sunset with Dissolve(1.0).]
+2253:[AMBIENCE: play ambience ambience_camp_center_evening; файл sound/ambiences/camp_center_evening.ogg. При смене fadeout 1.0, fadein 1.5; volume 0.25.]
+2255:[MUSIC: stop music fadeout 2.0. Далее без фонового OST до указанного конца номера.]
+2257:[SPRITES на входе: show cs_darya neutral pioneer normal at cs_darya_normal_right with dissolve.]
+2259:[ПОСТАНОВКА И ВЫХОД: stop music fadeout 2.0. Дарья справа; для короткого общего плана hide cs_darya; show mi normal pioneer far at cs_actor_far_left; show dv normal pioneer far at cs_actor_far_right. Потом hide mi; hide dv; вернуть Дарью справа. Семён несёт лавку за кадром. В конце сохранить ambience и фон.]
+2285:[SPRITE: show cs_darya amused pioneer normal at cs_darya_normal_right with dissolve.]
+2289:Мысли Лены: Дома я бы уже смотрела, откуда удобнее снять. Следила за светом, выбирала, какую часть выложить, думала о том, что скажут. Здесь даже фотографию сделать нельзя. И мне почему-то не хочется уходить.
+2305:Сцена 29 Свой рисунок
+2307:[ВХОД: if cs_met_un and cs_friend_un >= 2 and cs_day02_un_joined. Иначе сразу сцена 30.]
+2309:[CODEX: label cs_day02_29; save_name = «Чужая смена — День 2 — Свой рисунок».]
+2311:[BG: ПРОДОЛЖИТЬ текущий фон без scene.]
+2313:[AMBIENCE: ПРОДОЛЖИТЬ ambience_camp_center_evening; файл sound/ambiences/camp_center_evening.ogg. При смене fadeout 1.0, fadein 1.5; volume 0.25.]
+2315:[MUSIC: stop music fadeout 2.0. Далее без фонового OST до указанного конца номера.]
+2317:[SPRITES на входе: show un normal pioneer at cs_actor_left with dissolve; show cs_darya neutral pioneer normal at cs_darya_normal_right with dissolve.]
+2319:[ПОСТАНОВКА И ВЫХОД: Условие проверять до любого show un. Если ложно, вся сцена пропускается. Если истинно, Тихонова normal слева, Дарья neutral справа; к завершению un smile. После поворота к выступлению hide un with dissolve: она остаётся слушателем за кадром. Дарья справа; фон и звук не меняются.]
+2321:[Короткая условная вставка: cs_met_un == True и cs_friend_un >= 2. Без меню, без прибавки очков. В остальных прохождениях продолжить общий вечер.]
+2351:Мысли Лены: Сейчас очень легко сказать «всё прекрасно» и закрыть разговор. Только она показывает мне не просьбу похвалить. Она сама видит место, которое хочет исправить. Можно хотя бы спросить, что именно не получается.
+2361:[SPRITE: show un smile pioneer at cs_actor_left with dissolve.]
+2369:Мысли Лены: Хорошо, что я не пыталась немедленно сделать её разговорчивой. У неё уже было достаточно слов, чтобы показать рисунок и договориться о следующем. Больше сейчас никому не требовалось.
+2375:[ОБЪЕДИНЕНИЕ. Тихонова не становится обязательной участницей последующих реплик; после вставки внимание возвращается к Дарье и музыке.]
+2377:Сцена 30 Без камеры
+2379:[CODEX: label cs_day02_30; save_name = «Чужая смена — День 2 — Без камеры».]
+2381:[BG: ПРОДОЛЖИТЬ текущий фон без scene.]
+2383:[AMBIENCE: ПРОДОЛЖИТЬ ambience_camp_center_evening; файл sound/ambiences/camp_center_evening.ogg. При смене fadeout 1.0, fadein 1.5; volume 0.25.]
+2385:[MUSIC: stop music fadeout 2.0. Далее без фонового OST до указанного конца номера.]
+2387:[SPRITES на входе: show cs_darya neutral pioneer normal at cs_darya_normal_right with dissolve.]
+2389:[ПОСТАНОВКА И ВЫХОД: На музыкальном плане hide cs_darya; show mi normal pioneer far слева; show dv normal pioneer far справа. После начала песни hide mi; hide dv; show cs_darya neutral normal справа для тихого разговора. Музыка OST выключена; живое исполнение описано, либо используется заранее утверждённая запись. После завершения номера play music music_list["lets_be_friends"] fadein 2.0 на громкости 0.22. На финальной улыбке cs_darya shy_smile. Затем перейти к ночному плану.]
+2415:Мысли Лены: Если я вернусь, здесь не окажется ни одного нового кадра. Придётся объяснять словами. У меня будет телефон с фотографиями до автобуса и день, который не сможет подтвердить галерея.
+2423:[SPRITE: show cs_darya thinking pioneer normal at cs_darya_normal_right with dissolve. На этих репликах артисты остаются за кадром; музыка не превращается в озвучку диалога.]
+2425:Мысли Лены: Это звучало просто. Не надо было соглашаться навсегда, отказываться от телефона или немедленно становиться человеком, который живёт одним моментом. Надо было на несколько минут оставить карман в покое.
+2445:Часть 11 Второй вечер
+2447:Сцена 31 До поворота
+2449:[CODEX: label cs_day02_31; save_name = «Чужая смена — День 2 — До поворота».]
+2451:[BG: scene bg ext_square_night with Dissolve(1.0).]
+2453:[AMBIENCE: play ambience ambience_camp_center_night; файл sound/ambiences/camp_center_night.ogg. При смене fadeout 1.0, fadein 1.5; volume 0.25.]
+2455:[MUSIC: play music music_list["a_promise_from_distant_days"]; fadeout 2.0 / fadein 2.0 только при смене; volume 0.24.]
+2457:[SPRITES на входе: show cs_darya neutral pioneer normal at cs_darya_normal_right with dissolve; show cs_semen neutral pioneer normal at cs_semen_normal_left with dissolve.]
+2459:[ПОСТАНОВКА И ВЫХОД: Установить night. После первых реплик scene cs_camp_path_night with Dissolve(1.0); повторно показать Семёна и Дарью на своих местах. У развилки show cs_semen wave слева; после прощания hide cs_semen with dissolve. Далее scene cs_house_lena_darya_ext_night; Дарья справа, затем hide cs_darya перед входом.]
+2493:Мысли Лены: Я хотела сказать что-то смешное про рабочую группу. Потом подумала, что он произнёс это не ради моего остроумия. Иногда человеку нужен ответ без украшений.
+2503:[SPRITE: show cs_semen relaxed pioneer normal at cs_semen_normal_left with dissolve.]
+2513:Сцена 32 Рисунок на столе
+2515:[CODEX: label cs_day02_32; save_name = «Чужая смена — День 2 — Рисунок на столе».]
+2517:[BG: scene cs_house_lena_darya_int_night with Dissolve(1.0).]
+2519:[AMBIENCE: play ambience ambience_int_cabin_night; файл sound/ambiences/int_cabin_night.ogg. При смене fadeout 1.0, fadein 1.5; volume 0.25.]
+2521:[MUSIC: play music music_list["get_to_know_me_better"]; fadeout 2.0 / fadein 2.0 только при смене; volume 0.24.]
+2523:[SPRITES на входе: никого; голоса вне кадра до указанного show.]
+2525:[ПОСТАНОВКА И ВЫХОД: play sound sfx_open_door_1 перед входом. Внутри ambience_int_cabin_night. Умывание и переодевание — window hide; scene black with dissolve; pause 0.6; scene cs_house_lena_darya_int_night with dissolve; window show. Спрайты после переодевания не показывать. Телефон, лист и рисунок описаны текстом; геройские портреты не требуются.]
+2557:Мысли Лены: «Хороший день» звучит почти неприлично рядом с «домой не вернулись». Но если не записать первое, второе займёт весь лист. А потом я сама поверю, что здесь было только ожидание.
+2573:Мысли Лены: Я никогда не видела себя в такие моменты со стороны. Обычно после законченной работы сразу открывала следующую и находила, что ещё исправить. Сегодня рядом оказался человек, который заметил, что я довольна, раньше меня.
+2587:Сцена 33 Завтра тоже вместе
+2589:[CODEX: label cs_day02_33; save_name = «Чужая смена — День 2 — Завтра тоже вместе».]
+2591:[BG: ПРОДОЛЖИТЬ текущий фон без scene.]
+2593:[AMBIENCE: ПРОДОЛЖИТЬ ambience_int_cabin_night; файл sound/ambiences/int_cabin_night.ogg. При смене fadeout 1.0, fadein 1.5; volume 0.25.]
+2595:[MUSIC: ПРОДОЛЖИТЬ music_list["get_to_know_me_better"]; fadeout 2.0 / fadein 2.0 только при смене; volume 0.24.]
+2597:[SPRITES на входе: никого; голоса вне кадра до указанного show.]
+2599:[ПОСТАНОВКА И ВЫХОД: Продолжить кадр комнаты без спрайтов. Если заранее проверена авторская CG сидящих за столом, показать её только на разговоре за столом и вернуть комнату перед чтением/сном. При выключении лампы stop music fadeout 4.0; scene black with Dissolve(2.0); ambience оставить ещё 2.0 секунды, затем stop ambience fadeout 3.0. После последнего пожелания ночи установить cs_day02_done = True; перейти к существующему экрану завершения демо, без несуществующего имени screen.]
+2619:Мысли Лены: Не двигайся так, будто тебя поймали. Она взяла за руку, а не потребовала объяснить, кем мы будем через неделю. Можно просто ответить на то, что происходит сейчас.
+2629:[SPRITE: в варианте без CG show cs_darya shy_smile pioneer normal at cs_darya_normal_right with dissolve. Если героини уже переоделись, весь разговор идёт без спрайта на фоне комнаты; не показывать пионерскую форму после переодевания.]
+2637:Мысли Лены: В моей голове уже стояли десятки следующих вопросов. Как она понимает «вместе», не передумает ли утром, нужно ли что-нибудь сказать важнее. Я посмотрела на наши руки и впервые за вечер решила, что следующий вопрос вполне может подождать.
+2665:[Музыка и эмбиент медленно затихают. Затемнение. День 2 завершён. Для демоверсии — конечный экран с возможностью сохранить игру и вернуться в меню; без хоррорного тизера.]
+2677:День 2 у Лены и Дарьи соответствует дню 3 у Семёна. Семён остаётся другом и участником совместного поиска ответов; отдельного романтического маршрута у него нет. Окончание второго дня не означает конец лагерной смены.

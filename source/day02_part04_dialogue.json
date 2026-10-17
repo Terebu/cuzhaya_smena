@@ -1,0 +1,3506 @@
+[
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "В кружке ничего не изменилось."
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Точнее, изменилось всё, что вчера ещё лежало на столе в относительно упорядоченном виде."
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Теперь его поверхность занимали провода, измерительные приборы и небольшая самодельная конструкция, которую я не рискнула бы назвать зарядным устройством без соответствующего заключения специалистов."
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Шурик сидел за столом, сосредоточенно рассматривая показания прибора."
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Электроник стоял рядом."
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Услышав дверь, оба повернулись."
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_el",
+    "text": "О, привет! Мы как раз тебя вспоминали!"
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я посмотрела на стол."
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Потом на них."
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_ls",
+    "text": "Надеюсь, исключительно в рамках научной деятельности."
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_el",
+    "text": "Ага. Мы тут кое-что собрали!"
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Шурик указал на небольшой блок."
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_sh",
+    "text": "Источник питания. Напряжение регулируется, под нагрузкой работает стабильно."
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я подошла ближе."
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_ls",
+    "text": "Уже неплохо."
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Электроник улыбнулся."
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_el",
+    "text": "Мы вчера ещё немного посидели. Хотели попробовать сделать переходник, но с разъёмом ничего не получилось."
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я достала телефон."
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Положила на свободный участок стола."
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_ls",
+    "text": "Ожидаемо."
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Семён заглянул через моё плечо."
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_sy",
+    "text": "И что теперь?"
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Шурик посмотрел на телефон."
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_sh",
+    "text": "Нужно понять, как правильно подключить питание. Сам разъём мне незнаком, а вскрывать устройство Лена запретила."
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_ls",
+    "text": "И продолжает запрещать."
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_el",
+    "text": "Мы даже не собирались!"
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Шурик посмотрел на него."
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Электроник немного помолчал."
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_el",
+    "text": "Ну, почти."
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я усмехнулась."
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_ls",
+    "text": "Приятно иметь дело с откровенными людьми."
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Дарья подошла к столу."
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_da",
+    "text": "Получается, проблема уже не в том, чтобы найти электричество?"
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_sh",
+    "text": "Именно. Электричество есть. А вот безопасного способа подать его на это устройство пока нет."
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Он указал на порт смартфона."
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_sh",
+    "text": "Если подключить неправильно, можно испортить то, что находится внутри."
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я кивнула."
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_ls",
+    "text": "Поэтому никаких опытов непосредственно на телефоне."
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_sy",
+    "text": "Может, подходящий провод где-нибудь найдётся?"
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я покачала головой."
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_ls",
+    "text": "Сомневаюсь. Этот тип разъёма появился намного позже вашего оборудования."
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Шурик нахмурился."
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_sh",
+    "text": "Тогда придётся искать другое решение."
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я посмотрела на телефон."
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Чёрный экран."
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Ни одного признака жизни."
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_th",
+    "text": "Ну что, Соколова."
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_th",
+    "text": "Научно-техническая революция откладывается."
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "И всё же я не чувствовала особенного разочарования."
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Вчера мне казалось, что отсутствие зарядки — почти неразрешимая проблема."
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Сегодня хотя бы стало понятно, из каких частей она состоит."
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Есть источник питания."
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Есть устройство."
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Между ними нет подходящего подключения."
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Задача неприятная."
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Но вполне определённая."
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_ls",
+    "text": "Ладно. Торопиться не будем."
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Электроник удивился."
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_el",
+    "text": "А ты не расстроилась?"
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я пожала плечами."
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_ls",
+    "text": "Немного. Но лучше ещё один день без телефона, чем окончательно испорченный телефон."
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Шурик одобрительно кивнул."
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_sh",
+    "text": "Вот именно."
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Дарья посмотрела на меня."
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_da",
+    "text": "Значит, пока ничего?"
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_ls",
+    "text": "Пока ничего."
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я взяла смартфон."
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_ls",
+    "text": "Но заявка остаётся открытой."
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Электроник рассмеялся."
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_el",
+    "text": "Обязательно что-нибудь придумаем!"
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я улыбнулась."
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_ls",
+    "text": "Только без героических подвигов с проводами."
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_sh",
+    "text": "Договорились."
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Мы ещё немного поговорили об инструментах, после чего стало ясно, что сегодня нам больше нечего здесь делать."
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Семён вспомнил об объявлении."
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_sy",
+    "text": "Кстати, надо бы уточнить у Ольги Дмитриевны время музыкального вечера."
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я кивнула."
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_ls",
+    "text": "Хорошая мысль."
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_sy",
+    "text": "Я тогда схожу к ней, а вы пока можете подготовить рисунок."
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_da",
+    "text": "Только не потеряй папку."
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_sy",
+    "text": "Не потеряю."
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_ls",
+    "text": "Напоминаю, товарищ Семён: утрата государственного художественного имущества карается общественным порицанием."
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Он усмехнулся."
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_sy",
+    "text": "Очень страшно."
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я улыбнулась."
+  },
+  {
+    "scene": 26,
+    "suffix": "",
+    "speaker": "cs_ls",
+    "text": "Мы ещё не утвердили полный перечень санкций."
+  },
+  {
+    "scene": 27,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Мы вышли на крыльцо."
+  },
+  {
+    "scene": 27,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Солнце уже поднялось достаточно высоко."
+  },
+  {
+    "scene": 27,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Воздух стал заметно теплее."
+  },
+  {
+    "scene": 27,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я машинально поправила галстук."
+  },
+  {
+    "scene": 27,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "И только теперь почувствовала неприятное жжение на локте."
+  },
+  {
+    "scene": 27,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Посмотрела вниз."
+  },
+  {
+    "scene": 27,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "На коже виднелась небольшая царапина."
+  },
+  {
+    "scene": 27,
+    "suffix": "",
+    "speaker": "cs_th",
+    "text": "А это ещё откуда?"
+  },
+  {
+    "scene": 27,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я вспомнила, как возле входа в кружок задела рукой шероховатый край деревянного косяка."
+  },
+  {
+    "scene": 27,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Тогда даже не обратила внимания."
+  },
+  {
+    "scene": 27,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Теперь же царапина напоминала о себе."
+  },
+  {
+    "scene": 27,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Дарья заметила, куда я смотрю."
+  },
+  {
+    "scene": 27,
+    "suffix": "",
+    "speaker": "cs_da",
+    "text": "Лен, ты поцарапалась?"
+  },
+  {
+    "scene": 27,
+    "suffix": "",
+    "speaker": "cs_ls",
+    "text": "Похоже на то."
+  },
+  {
+    "scene": 27,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Она подошла ближе."
+  },
+  {
+    "scene": 27,
+    "suffix": "",
+    "speaker": "cs_da",
+    "text": "Покажи."
+  },
+  {
+    "scene": 27,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я повернула руку."
+  },
+  {
+    "scene": 27,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Дарья осмотрела повреждение."
+  },
+  {
+    "scene": 27,
+    "suffix": "",
+    "speaker": "cs_da",
+    "text": "Небольшая. Но лучше обработать."
+  },
+  {
+    "scene": 27,
+    "suffix": "",
+    "speaker": "cs_ls",
+    "text": "Организм, конечно, предпочёл бы просто забыть о её существовании."
+  },
+  {
+    "scene": 27,
+    "suffix": "",
+    "speaker": "cs_da",
+    "text": "А ты предпочла бы потом вспоминать, где именно её получила?"
+  },
+  {
+    "scene": 27,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я задумалась."
+  },
+  {
+    "scene": 27,
+    "suffix": "",
+    "speaker": "cs_ls",
+    "text": "Аргумент принят."
+  },
+  {
+    "scene": 27,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Семён посмотрел на нас."
+  },
+  {
+    "scene": 27,
+    "suffix": "",
+    "speaker": "cs_sy",
+    "text": "В медпункт сходите?"
+  },
+  {
+    "scene": 27,
+    "suffix": "",
+    "speaker": "cs_da",
+    "text": "Думаю, да."
+  },
+  {
+    "scene": 27,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я подняла взгляд."
+  },
+  {
+    "scene": 27,
+    "suffix": "",
+    "speaker": "cs_th",
+    "text": "Медпункт."
+  },
+  {
+    "scene": 27,
+    "suffix": "",
+    "speaker": "cs_th",
+    "text": "Точно."
+  },
+  {
+    "scene": 27,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "И сразу вспомнила знакомый интерьер из игры."
+  },
+  {
+    "scene": 27,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Белые шкафы."
+  },
+  {
+    "scene": 27,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Кушетка."
+  },
+  {
+    "scene": 27,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Рабочий стол."
+  },
+  {
+    "scene": 27,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "И медсестра, которая умела разговаривать так, что даже Семён иногда терялся."
+  },
+  {
+    "scene": 27,
+    "suffix": "",
+    "speaker": "cs_th",
+    "text": "Виола."
+  },
+  {
+    "scene": 27,
+    "suffix": "",
+    "speaker": "cs_th",
+    "text": "Ну здравствуйте."
+  },
+  {
+    "scene": 27,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Семён тем временем взял папку с бумагой и карандашами, оставленную у нашего рабочего стола."
+  },
+  {
+    "scene": 27,
+    "suffix": "",
+    "speaker": "cs_sy",
+    "text": "Я тогда уточню время выступления и подожду вас возле клубов."
+  },
+  {
+    "scene": 27,
+    "suffix": "",
+    "speaker": "cs_ls",
+    "text": "Только бумагу не потеряй."
+  },
+  {
+    "scene": 27,
+    "suffix": "",
+    "speaker": "cs_sy",
+    "text": "Я уже понял."
+  },
+  {
+    "scene": 27,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Дарья улыбнулась."
+  },
+  {
+    "scene": 27,
+    "suffix": "",
+    "speaker": "cs_da",
+    "text": "Скоро вернёмся."
+  },
+  {
+    "scene": 27,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Он кивнул и направился к площади."
+  },
+  {
+    "scene": 27,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я посмотрела на Дашу."
+  },
+  {
+    "scene": 27,
+    "suffix": "",
+    "speaker": "cs_ls",
+    "text": "Ну что, идём знакомиться с местной медициной?"
+  },
+  {
+    "scene": 27,
+    "suffix": "",
+    "speaker": "cs_da",
+    "text": "Идём обрабатывать твою руку."
+  },
+  {
+    "scene": 27,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я улыбнулась."
+  },
+  {
+    "scene": 27,
+    "suffix": "",
+    "speaker": "cs_ls",
+    "text": "Формулировка менее торжественная, но вполне точная."
+  },
+  {
+    "scene": 27,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Мы свернули на дорожку, ведущую к медпункту."
+  },
+  {
+    "scene": 28,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Дорожка постепенно становилась тише."
+  },
+  {
+    "scene": 28,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Чем дальше мы отходили от площади, тем меньше слышалось голосов."
+  },
+  {
+    "scene": 28,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "По обе стороны росли деревья."
+  },
+  {
+    "scene": 28,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Между стволами виднелись кусты, залитые солнечным светом."
+  },
+  {
+    "scene": 28,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я шла немного впереди."
+  },
+  {
+    "scene": 28,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Дарья держалась рядом."
+  },
+  {
+    "scene": 28,
+    "suffix": "",
+    "speaker": "cs_da",
+    "text": "Ты знаешь дорогу?"
+  },
+  {
+    "scene": 28,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я кивнула."
+  },
+  {
+    "scene": 28,
+    "suffix": "",
+    "speaker": "cs_ls",
+    "text": "Примерно."
+  },
+  {
+    "scene": 28,
+    "suffix": "",
+    "speaker": "cs_da",
+    "text": "По игре?"
+  },
+  {
+    "scene": 28,
+    "suffix": "",
+    "speaker": "cs_ls",
+    "text": "Отчасти. Хотя за эти два дня уже успела немного запомнить, где что находится."
+  },
+  {
+    "scene": 28,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Она посмотрела на меня."
+  },
+  {
+    "scene": 28,
+    "suffix": "",
+    "speaker": "cs_da",
+    "text": "Тебя всё ещё не пугает, насколько многое здесь совпадает?"
+  },
+  {
+    "scene": 28,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я помолчала."
+  },
+  {
+    "scene": 28,
+    "suffix": "",
+    "speaker": "cs_ls",
+    "text": "Пугает."
+  },
+  {
+    "scene": 28,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Это прозвучало серьёзнее, чем я собиралась."
+  },
+  {
+    "scene": 28,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Дарья немного замедлила шаг."
+  },
+  {
+    "scene": 28,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я посмотрела на неё."
+  },
+  {
+    "scene": 28,
+    "suffix": "",
+    "speaker": "cs_ls",
+    "text": "Просто если каждый раз останавливаться и удивляться знакомому зданию, мы до вечера даже столовую не обойдём."
+  },
+  {
+    "scene": 28,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Она слегка улыбнулась."
+  },
+  {
+    "scene": 28,
+    "suffix": "",
+    "speaker": "cs_da",
+    "text": "Тоже верно."
+  },
+  {
+    "scene": 28,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я посмотрела вперёд."
+  },
+  {
+    "scene": 28,
+    "suffix": "",
+    "speaker": "cs_th",
+    "text": "Хотя на самом деле дело не только в зданиях."
+  },
+  {
+    "scene": 28,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Окружающие люди имели знакомые лица."
+  },
+  {
+    "scene": 28,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Знакомые имена."
+  },
+  {
+    "scene": 28,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Иногда даже говорили вещи, которые вполне могли бы оказаться в оригинальной новелле."
+  },
+  {
+    "scene": 28,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Но при этом постоянно делали что-нибудь неожиданное."
+  },
+  {
+    "scene": 28,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Женя оказалась наблюдательнее, чем я предполагала."
+  },
+  {
+    "scene": 28,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Славя спокойно шутила в ответ."
+  },
+  {
+    "scene": 28,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Мику с искренним интересом расспрашивала нас о музыке."
+  },
+  {
+    "scene": 28,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "А Дарья…"
+  },
+  {
+    "scene": 28,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я посмотрела на неё."
+  },
+  {
+    "scene": 28,
+    "suffix": "",
+    "speaker": "cs_th",
+    "text": "А про Дашу я вообще почти ничего не знала."
+  },
+  {
+    "scene": 28,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Вчера она была незнакомкой из автобуса."
+  },
+  {
+    "scene": 28,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Сегодня — человеком, с которым я уже делила домик, планы и довольно необычные обстоятельства."
+  },
+  {
+    "scene": 28,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "И всё равно каждый новый разговор открывал в ней что-то, чего я раньше не замечала."
+  },
+  {
+    "scene": 28,
+    "suffix": "",
+    "speaker": "cs_th",
+    "text": "Может, именно так и надо относиться ко всему лагерю."
+  },
+  {
+    "scene": 28,
+    "suffix": "",
+    "speaker": "cs_th",
+    "text": "Не пытаться угадать чужое поведение."
+  },
+  {
+    "scene": 28,
+    "suffix": "",
+    "speaker": "cs_th",
+    "text": "А просто узнавать людей."
+  },
+  {
+    "scene": 28,
+    "suffix": "",
+    "speaker": "cs_da",
+    "text": "Лен?"
+  },
+  {
+    "scene": 28,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я повернулась."
+  },
+  {
+    "scene": 28,
+    "suffix": "",
+    "speaker": "cs_ls",
+    "text": "Да?"
+  },
+  {
+    "scene": 28,
+    "suffix": "",
+    "speaker": "cs_da",
+    "text": "Ты опять задумалась."
+  },
+  {
+    "scene": 28,
+    "suffix": "",
+    "speaker": "cs_ls",
+    "text": "Есть немного."
+  },
+  {
+    "scene": 28,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Она кивнула вперёд."
+  },
+  {
+    "scene": 28,
+    "suffix": "",
+    "speaker": "cs_da",
+    "text": "Кажется, пришли."
+  },
+  {
+    "scene": 28,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "За деревьями показалось небольшое здание."
+  },
+  {
+    "scene": 28,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "На фасаде располагалась знакомая вывеска."
+  },
+  {
+    "scene": 28,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Медпункт."
+  },
+  {
+    "scene": 28,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я остановилась."
+  },
+  {
+    "scene": 28,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Несколько секунд рассматривала его."
+  },
+  {
+    "scene": 28,
+    "suffix": "",
+    "speaker": "cs_th",
+    "text": "Вот он."
+  },
+  {
+    "scene": 28,
+    "suffix": "",
+    "speaker": "cs_th",
+    "text": "Ещё одно место, которое раньше существовало для меня только на экране."
+  },
+  {
+    "scene": 28,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Дарья посмотрела на дверь."
+  },
+  {
+    "scene": 28,
+    "suffix": "",
+    "speaker": "cs_da",
+    "text": "Надеюсь, здесь кто-нибудь есть."
+  },
+  {
+    "scene": 28,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я поправила галстук."
+  },
+  {
+    "scene": 28,
+    "suffix": "",
+    "speaker": "cs_ls",
+    "text": "Сейчас узнаем."
+  },
+  {
+    "scene": 28,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Мы поднялись на крыльцо."
+  },
+  {
+    "scene": 28,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я постучала."
+  },
+  {
+    "scene": 28,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Изнутри послышался женский голос:"
+  },
+  {
+    "scene": 28,
+    "suffix": "",
+    "speaker": "cs_vi",
+    "text": "Входите."
+  },
+  {
+    "scene": 28,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я открыла дверь."
+  },
+  {
+    "scene": 29,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Внутри было прохладнее, чем на улице."
+  },
+  {
+    "scene": 29,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Пахло лекарствами и чем-то резким, напоминавшим антисептик."
+  },
+  {
+    "scene": 29,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Белые шкафчики."
+  },
+  {
+    "scene": 29,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Кушетка."
+  },
+  {
+    "scene": 29,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Стол."
+  },
+  {
+    "scene": 29,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Медицинские принадлежности."
+  },
+  {
+    "scene": 29,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "И за столом сидела женщина в белом халате."
+  },
+  {
+    "scene": 29,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Она что-то записывала в журнал."
+  },
+  {
+    "scene": 29,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Услышав наши шаги, подняла глаза."
+  },
+  {
+    "scene": 29,
+    "suffix": "",
+    "speaker": "cs_th",
+    "text": "Виола."
+  },
+  {
+    "scene": 29,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я узнала её сразу."
+  },
+  {
+    "scene": 29,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Впрочем, после знакомства с остальными жителями «Совёнка» это уже не должно было удивлять."
+  },
+  {
+    "scene": 29,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Она посмотрела сначала на меня, потом на Дарью."
+  },
+  {
+    "scene": 29,
+    "suffix": "",
+    "speaker": "cs_vi",
+    "text": "Доброе утро, девочки. С чем пожаловали?"
+  },
+  {
+    "scene": 29,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я невольно улыбнулась."
+  },
+  {
+    "scene": 29,
+    "suffix": "",
+    "speaker": "cs_ls",
+    "text": "Доброе. У нас небольшое происшествие."
+  },
+  {
+    "scene": 29,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Виола отложила ручку."
+  },
+  {
+    "scene": 29,
+    "suffix": "",
+    "speaker": "cs_vi",
+    "text": "Надеюсь, действительно небольшое."
+  },
+  {
+    "scene": 29,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я показала локоть."
+  },
+  {
+    "scene": 29,
+    "suffix": "",
+    "speaker": "cs_ls",
+    "text": "Несанкционированное взаимодействие с деревянным дверным косяком."
+  },
+  {
+    "scene": 29,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Виола посмотрела на руку."
+  },
+  {
+    "scene": 29,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Затем на меня."
+  },
+  {
+    "scene": 29,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Уголки её губ слегка приподнялись."
+  },
+  {
+    "scene": 29,
+    "suffix": "",
+    "speaker": "cs_vi",
+    "text": "И кто победил?"
+  },
+  {
+    "scene": 29,
+    "suffix": "",
+    "speaker": "cs_ls",
+    "text": "Судя по состоянию косяка, он."
+  },
+  {
+    "scene": 29,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Дарья негромко рассмеялась."
+  },
+  {
+    "scene": 29,
+    "suffix": "",
+    "speaker": "cs_vi",
+    "text": "Ну-ка, иди сюда."
+  },
+  {
+    "scene": 29,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я подошла к столу."
+  },
+  {
+    "scene": 29,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Она внимательно осмотрела повреждение."
+  },
+  {
+    "scene": 29,
+    "suffix": "",
+    "speaker": "cs_vi",
+    "text": "Обычная царапина. Глубокой не выглядит. Где задела?"
+  },
+  {
+    "scene": 29,
+    "suffix": "",
+    "speaker": "cs_ls",
+    "text": "У кружка электроники."
+  },
+  {
+    "scene": 29,
+    "suffix": "",
+    "speaker": "cs_vi",
+    "text": "Понятно. Давай обработаем."
+  },
+  {
+    "scene": 29,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Она подготовила необходимые принадлежности."
+  },
+  {
+    "scene": 29,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я села на стул."
+  },
+  {
+    "scene": 29,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Дарья осталась рядом."
+  },
+  {
+    "scene": 29,
+    "suffix": "",
+    "speaker": "cs_da",
+    "text": "Я ей сразу сказала, что лучше зайти."
+  },
+  {
+    "scene": 29,
+    "suffix": "",
+    "speaker": "cs_vi",
+    "text": "И правильно сказала."
+  },
+  {
+    "scene": 29,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я посмотрела на Дашу."
+  },
+  {
+    "scene": 29,
+    "suffix": "",
+    "speaker": "cs_ls",
+    "text": "Кажется, медицинский совет единогласно поддержал твоё предложение."
+  },
+  {
+    "scene": 29,
+    "suffix": "",
+    "speaker": "cs_da",
+    "text": "Бывает."
+  },
+  {
+    "scene": 29,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Виола усмехнулась и начала обрабатывать царапину."
+  },
+  {
+    "scene": 29,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я немного поморщилась."
+  },
+  {
+    "scene": 29,
+    "suffix": "",
+    "speaker": "cs_vi",
+    "text": "Щиплет?"
+  },
+  {
+    "scene": 29,
+    "suffix": "",
+    "speaker": "cs_ls",
+    "text": "Есть такое."
+  },
+  {
+    "scene": 29,
+    "suffix": "",
+    "speaker": "cs_vi",
+    "text": "Потерпишь. Ничего страшного."
+  },
+  {
+    "scene": 29,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я кивнула."
+  },
+  {
+    "scene": 29,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Через некоторое время она закончила."
+  },
+  {
+    "scene": 29,
+    "suffix": "",
+    "speaker": "cs_vi",
+    "text": "Всё. Держи в чистоте. Если начнёт воспаляться или появятся другие жалобы, приходи."
+  },
+  {
+    "scene": 29,
+    "suffix": "",
+    "speaker": "cs_ls",
+    "text": "Спасибо."
+  },
+  {
+    "scene": 29,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Виола посмотрела на Дарью."
+  },
+  {
+    "scene": 29,
+    "suffix": "",
+    "speaker": "cs_vi",
+    "text": "А у тебя всё в порядке?"
+  },
+  {
+    "scene": 29,
+    "suffix": "",
+    "speaker": "cs_da",
+    "text": "Да, спасибо. Я за компанию."
+  },
+  {
+    "scene": 29,
+    "suffix": "",
+    "speaker": "cs_vi",
+    "text": "Ну и хорошо."
+  },
+  {
+    "scene": 29,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Она убрала принадлежности."
+  },
+  {
+    "scene": 29,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Затем посмотрела на нас внимательнее."
+  },
+  {
+    "scene": 29,
+    "suffix": "",
+    "speaker": "cs_vi",
+    "text": "Вы ведь те самые новенькие?"
+  },
+  {
+    "scene": 29,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я кивнула."
+  },
+  {
+    "scene": 29,
+    "suffix": "",
+    "speaker": "cs_ls",
+    "text": "Лена Соколова. А это Даша."
+  },
+  {
+    "scene": 29,
+    "suffix": "",
+    "speaker": "cs_da",
+    "text": "Дарья. Очень приятно."
+  },
+  {
+    "scene": 29,
+    "suffix": "",
+    "speaker": "cs_vi",
+    "text": "Виола. Можно просто по имени."
+  },
+  {
+    "scene": 29,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я слегка улыбнулась."
+  },
+  {
+    "scene": 29,
+    "suffix": "",
+    "speaker": "cs_ls",
+    "text": "Так даже удобнее."
+  },
+  {
+    "scene": 29,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Виола осмотрела мою пионерскую форму."
+  },
+  {
+    "scene": 29,
+    "suffix": "",
+    "speaker": "cs_vi",
+    "text": "Уже успели освоиться?"
+  },
+  {
+    "scene": 29,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я задумалась."
+  },
+  {
+    "scene": 29,
+    "suffix": "",
+    "speaker": "cs_ls",
+    "text": "Частично."
+  },
+  {
+    "scene": 29,
+    "suffix": "",
+    "speaker": "cs_vi",
+    "text": "Это как?"
+  },
+  {
+    "scene": 29,
+    "suffix": "",
+    "speaker": "cs_ls",
+    "text": "Столовую нашли. Домик получили. С местной электротехникой познакомились. Теперь вот изучаем медицинское обеспечение."
+  },
+  {
+    "scene": 29,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Виола рассмеялась."
+  },
+  {
+    "scene": 29,
+    "suffix": "",
+    "speaker": "cs_vi",
+    "text": "Насыщенная программа."
+  },
+  {
+    "scene": 29,
+    "suffix": "",
+    "speaker": "cs_da",
+    "text": "И это только начало второго дня."
+  },
+  {
+    "scene": 29,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Виола приподняла бровь."
+  },
+  {
+    "scene": 29,
+    "suffix": "",
+    "speaker": "cs_vi",
+    "text": "Тогда постарайтесь хотя бы до обеда больше ничего себе не повредить."
+  },
+  {
+    "scene": 29,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я кивнула."
+  },
+  {
+    "scene": 29,
+    "suffix": "",
+    "speaker": "cs_ls",
+    "text": "Приложим все усилия."
+  },
+  {
+    "scene": 29,
+    "suffix": "",
+    "speaker": "cs_th",
+    "text": "Надо же."
+  },
+  {
+    "scene": 29,
+    "suffix": "",
+    "speaker": "cs_th",
+    "text": "Пока медицинская комиссия настроена исключительно доброжелательно."
+  },
+  {
+    "scene": 29,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я уже собиралась подняться, когда взгляд случайно зацепился за изображение на стене."
+  },
+  {
+    "scene": 29,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "И вот тут мне стало не до шуток."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я медленно повернула голову."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "На стене висел анатомический плакат."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Странный."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Очень странный."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "На нём было изображено маленькое существо с необычной формой головы и непропорциональным телом."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Не совсем привычная анатомическая иллюстрация."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Но дело было даже не в этом."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я уже видела этот рисунок."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_th",
+    "text": "Подожди."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_th",
+    "text": "Только не говори, что он действительно здесь."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я поднялась со стула."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Подошла ближе."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Присмотрелась."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Чем дольше я рассматривала изображение, тем отчётливее вспоминала обсуждения этого плаката среди поклонников оригинальной новеллы."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_th",
+    "text": "Алёшенька."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_th",
+    "text": "Кыштымский карлик."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_th",
+    "text": "Девяносто шестой год."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я медленно выдохнула."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_ls",
+    "text": "Вот это уже интересно."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Дарья подошла ближе."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_da",
+    "text": "Что там?"
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я указала на плакат."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_ls",
+    "text": "Узнаёшь?"
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Она несколько секунд рассматривала изображение."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_da",
+    "text": "Не особенно. А должна?"
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я покачала головой."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_ls",
+    "text": "Не обязательно."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Виола заметила наш интерес."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_vi",
+    "text": "Что-то не так?"
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я посмотрела на неё."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Затем снова на плакат."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_ls",
+    "text": "Можно спросить, откуда он у вас?"
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Виола подошла ближе."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_vi",
+    "text": "Этот?"
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_ls",
+    "text": "Да."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Она немного задумалась."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_vi",
+    "text": "Честно говоря, точно не знаю. Он здесь висел ещё до того, как я начала работать."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_ls",
+    "text": "А что на нём изображено?"
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Виола посмотрела на рисунок."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_vi",
+    "text": "Странная анатомическая иллюстрация. Не самое удачное пособие, если спрашиваешь моё мнение."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я снова уставилась на изображение."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_th",
+    "text": "Вот ведь."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "В обычной игре такой плакат можно было принять за шутку художников."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "За пасхалку."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "За случайную деталь фона."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Мельком посмотреть."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Улыбнуться."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "И забыть."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Но сейчас я стояла в настоящем помещении."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Перед настоящей стеной."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "И смотрела на изображение, которое, по моим воспоминаниям, напоминало историю из будущего относительно здешнего времени."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я повернулась к Даше."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_ls",
+    "text": "Помнишь, мы говорили о том, что здесь не всё обязательно соответствует обычному прошлому?"
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Она кивнула."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_da",
+    "text": "Да."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_ls",
+    "text": "Кажется, появился ещё один повод так думать."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Виола посмотрела на меня."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_vi",
+    "text": "Почему?"
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я некоторое время молчала."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_th",
+    "text": "Ну вот."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_th",
+    "text": "Опять этот момент."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_th",
+    "text": "Сказать правду?"
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_th",
+    "text": "Начать объяснять человеку историю, которая ещё не произошла?"
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_th",
+    "text": "Или наконец научиться сначала оценивать собственные слова?"
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я посмотрела на Виолу."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_ls",
+    "text": "Есть одно изображение, которое я помню по истории девяностых годов. Этот рисунок его очень напоминает."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Виола нахмурилась."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_vi",
+    "text": "Каких девяностых?"
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я посмотрела на неё."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_ls",
+    "text": "Тысяча девятьсот девяностых."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Несколько секунд она молчала."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Затем осторожно произнесла:"
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_vi",
+    "text": "До них ещё десять лет."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я кивнула."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_ls",
+    "text": "Именно."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Дарья посмотрела на меня."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "В её взгляде читалось знакомое предупреждение."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_th",
+    "text": "Лен, только не начинай снова."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я едва заметно выдохнула."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_ls",
+    "text": "Но я могу ошибаться. Возможно, это просто похожий рисунок."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Виола приподняла бровь."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_vi",
+    "text": "Вот это уже разумнее."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я усмехнулась."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_ls",
+    "text": "Иногда получается."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Она посмотрела на плакат ещё раз."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_vi",
+    "text": "А почему ты вообще знаешь что-то о девяностых годах?"
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я немного помолчала."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_ls",
+    "text": "Потому что у нас с Дашей довольно необычная история приезда."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_vi",
+    "text": "Ольга Дмитриевна уже намекала, что с вами не всё просто."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я кивнула."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_ls",
+    "text": "Тогда, думаю, не буду окончательно портить впечатление подробностями."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Виола тихо рассмеялась."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_vi",
+    "text": "Смотри сама."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Она скрестила руки."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_vi",
+    "text": "Только я бы не стала строить большую теорию по одному старому плакату."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я посмотрела на неё."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "И впервые за разговор улыбнулась совершенно искренне."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_ls",
+    "text": "Согласна."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Дарья повернулась ко мне."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Кажется, она ожидала продолжения спора."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Но его не последовало."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я ещё раз взглянула на изображение."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_th",
+    "text": "Плакат существует."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_th",
+    "text": "Похож на знакомый рисунок."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_th",
+    "text": "Но это пока всё, что мы действительно знаем."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Никаких доказательств временных петель."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Никакой уверенности, что перед нами изображён именно Алёшенька."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Только ещё одна странность."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "И ещё один вопрос."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я мысленно добавила его к списку наблюдений."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_th",
+    "text": "Домой вернусь — надо будет перечитать всё, что помню об этой истории."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Потом остановила себя."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_th",
+    "text": "Если вернусь."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Неприятная мысль."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Но вполне честная."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я повернулась к Даше."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Она всё ещё стояла рядом."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_da",
+    "text": "Ты в порядке?"
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я кивнула."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_ls",
+    "text": "Да. Просто задумалась."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Она чуть улыбнулась."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_da",
+    "text": "Кажется, это становится твоим главным занятием в лагере."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_ls",
+    "text": "После пробежек и посещения столовой."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Дарья тихо рассмеялась."
+  },
+  {
+    "scene": 30,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "И я почувствовала, как напряжение немного отпускает."
+  },
+  {
+    "scene": 31,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Виола вернулась к столу."
+  },
+  {
+    "scene": 31,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Начала убирать принадлежности после обработки моей руки."
+  },
+  {
+    "scene": 31,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я посмотрела на неё."
+  },
+  {
+    "scene": 31,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Потом на шкаф, возле которого стояла небольшая коробка с запечатанными упаковками бинтов."
+  },
+  {
+    "scene": 31,
+    "suffix": "",
+    "speaker": "cs_vi",
+    "text": "Ладно, девочки. С рукой всё в порядке. Если больше ничего не беспокоит, можете идти."
+  },
+  {
+    "scene": 31,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я уже направилась к двери."
+  },
+  {
+    "scene": 31,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Но заметила, что Виола одной рукой придерживает коробку, пытаясь открыть шкаф."
+  },
+  {
+    "scene": 31,
+    "suffix": "",
+    "speaker": "cs_th",
+    "text": "Может, помочь?"
+  },
+  {
+    "scene": 31,
+    "suffix": "",
+    "speaker": "cs_th",
+    "text": "В конце концов, человек только что потратил время на мою царапину."
+  },
+  {
+    "scene": 31,
+    "suffix": "a",
+    "speaker": "cs_narrator",
+    "text": "Я остановилась."
+  },
+  {
+    "scene": 31,
+    "suffix": "a",
+    "speaker": "cs_ls",
+    "text": "Виола, помочь?"
+  },
+  {
+    "scene": 31,
+    "suffix": "a",
+    "speaker": "cs_narrator",
+    "text": "Она подняла голову."
+  },
+  {
+    "scene": 31,
+    "suffix": "a",
+    "speaker": "cs_vi",
+    "text": "С чем?"
+  },
+  {
+    "scene": 31,
+    "suffix": "a",
+    "speaker": "cs_narrator",
+    "text": "Я указала на коробку."
+  },
+  {
+    "scene": 31,
+    "suffix": "a",
+    "speaker": "cs_ls",
+    "text": "Убрать это в шкаф."
+  },
+  {
+    "scene": 31,
+    "suffix": "a",
+    "speaker": "cs_narrator",
+    "text": "Виола посмотрела на упаковки."
+  },
+  {
+    "scene": 31,
+    "suffix": "a",
+    "speaker": "cs_vi",
+    "text": "Если не трудно. Только ничего не вскрывай. Просто поставь закрытые пачки на верхнюю полку."
+  },
+  {
+    "scene": 31,
+    "suffix": "a",
+    "speaker": "cs_ls",
+    "text": "Принято."
+  },
+  {
+    "scene": 31,
+    "suffix": "a",
+    "speaker": "cs_narrator",
+    "text": "Я взяла коробку."
+  },
+  {
+    "scene": 31,
+    "suffix": "a",
+    "speaker": "cs_narrator",
+    "text": "Она оказалась довольно лёгкой."
+  },
+  {
+    "scene": 31,
+    "suffix": "a",
+    "speaker": "cs_narrator",
+    "text": "Дарья придержала дверцу шкафа."
+  },
+  {
+    "scene": 31,
+    "suffix": "a",
+    "speaker": "cs_narrator",
+    "text": "Мы аккуратно поставили упаковки на место."
+  },
+  {
+    "scene": 31,
+    "suffix": "a",
+    "speaker": "cs_vi",
+    "text": "Спасибо. А то с утра всё никак руки не доходили."
+  },
+  {
+    "scene": 31,
+    "suffix": "a",
+    "speaker": "cs_da",
+    "text": "Не за что."
+  },
+  {
+    "scene": 31,
+    "suffix": "a",
+    "speaker": "cs_narrator",
+    "text": "Я закрыла шкаф."
+  },
+  {
+    "scene": 31,
+    "suffix": "a",
+    "speaker": "cs_narrator",
+    "text": "Посмотрела на Виолу."
+  },
+  {
+    "scene": 31,
+    "suffix": "a",
+    "speaker": "cs_ls",
+    "text": "Медицинское обеспечение лагеря успешно реорганизовано."
+  },
+  {
+    "scene": 31,
+    "suffix": "a",
+    "speaker": "cs_narrator",
+    "text": "Виола усмехнулась."
+  },
+  {
+    "scene": 31,
+    "suffix": "a",
+    "speaker": "cs_vi",
+    "text": "Всего-то несколько пачек бинтов."
+  },
+  {
+    "scene": 31,
+    "suffix": "a",
+    "speaker": "cs_ls",
+    "text": "Большие преобразования начинаются с малого."
+  },
+  {
+    "scene": 31,
+    "suffix": "a",
+    "speaker": "cs_narrator",
+    "text": "Она рассмеялась."
+  },
+  {
+    "scene": 31,
+    "suffix": "a",
+    "speaker": "cs_vi",
+    "text": "Ты всегда так разговариваешь?"
+  },
+  {
+    "scene": 31,
+    "suffix": "a",
+    "speaker": "cs_narrator",
+    "text": "Я задумалась."
+  },
+  {
+    "scene": 31,
+    "suffix": "a",
+    "speaker": "cs_ls",
+    "text": "К сожалению для окружающих, довольно часто."
+  },
+  {
+    "scene": 31,
+    "suffix": "a",
+    "speaker": "cs_da",
+    "text": "Подтверждаю."
+  },
+  {
+    "scene": 31,
+    "suffix": "a",
+    "speaker": "cs_narrator",
+    "text": "Я медленно повернулась к ней."
+  },
+  {
+    "scene": 31,
+    "suffix": "a",
+    "speaker": "cs_ls",
+    "text": "У нас здесь какая-то организованная система свидетельских показаний?"
+  },
+  {
+    "scene": 31,
+    "suffix": "a",
+    "speaker": "cs_narrator",
+    "text": "Дарья улыбнулась."
+  },
+  {
+    "scene": 31,
+    "suffix": "a",
+    "speaker": "cs_da",
+    "text": "Просто сообщаю факты."
+  },
+  {
+    "scene": 31,
+    "suffix": "a",
+    "speaker": "cs_narrator",
+    "text": "Виола покачала головой."
+  },
+  {
+    "scene": 31,
+    "suffix": "a",
+    "speaker": "cs_narrator",
+    "text": "Но теперь смотрела на нас заметно теплее."
+  },
+  {
+    "scene": 31,
+    "suffix": "a",
+    "speaker": "cs_vi",
+    "text": "Ну что ж. Заходите, если понадобится помощь. Только постарайтесь без новых царапин."
+  },
+  {
+    "scene": 31,
+    "suffix": "a",
+    "speaker": "cs_narrator",
+    "text": "Я кивнула."
+  },
+  {
+    "scene": 31,
+    "suffix": "a",
+    "speaker": "cs_ls",
+    "text": "Это уже сложнее, но попробуем."
+  },
+  {
+    "scene": 31,
+    "suffix": "b",
+    "speaker": "cs_narrator",
+    "text": "Я посмотрела на шкаф."
+  },
+  {
+    "scene": 31,
+    "suffix": "b",
+    "speaker": "cs_narrator",
+    "text": "Затем на Виолу."
+  },
+  {
+    "scene": 31,
+    "suffix": "b",
+    "speaker": "cs_narrator",
+    "text": "Она уже занялась своими делами."
+  },
+  {
+    "scene": 31,
+    "suffix": "b",
+    "speaker": "cs_th",
+    "text": "Пожалуй, не стоит задерживать человека без необходимости."
+  },
+  {
+    "scene": 31,
+    "suffix": "b",
+    "speaker": "cs_narrator",
+    "text": "Я подошла к двери."
+  },
+  {
+    "scene": 31,
+    "suffix": "b",
+    "speaker": "cs_ls",
+    "text": "Спасибо за помощь. И извини, что отвлекли."
+  },
+  {
+    "scene": 31,
+    "suffix": "b",
+    "speaker": "cs_narrator",
+    "text": "Виола подняла глаза."
+  },
+  {
+    "scene": 31,
+    "suffix": "b",
+    "speaker": "cs_vi",
+    "text": "Это моя работа."
+  },
+  {
+    "scene": 31,
+    "suffix": "b",
+    "speaker": "cs_narrator",
+    "text": "Она улыбнулась."
+  },
+  {
+    "scene": 31,
+    "suffix": "b",
+    "speaker": "cs_vi",
+    "text": "Только в следующий раз будь осторожнее."
+  },
+  {
+    "scene": 31,
+    "suffix": "b",
+    "speaker": "cs_ls",
+    "text": "Постараюсь."
+  },
+  {
+    "scene": 31,
+    "suffix": "b",
+    "speaker": "cs_narrator",
+    "text": "Дарья тоже попрощалась."
+  },
+  {
+    "scene": 31,
+    "suffix": "b",
+    "speaker": "cs_da",
+    "text": "До свидания."
+  },
+  {
+    "scene": 31,
+    "suffix": "b",
+    "speaker": "cs_vi",
+    "text": "До свидания, девочки."
+  },
+  {
+    "scene": 31,
+    "suffix": "b",
+    "speaker": "cs_narrator",
+    "text": "Мы направились к выходу."
+  },
+  {
+    "scene": 32,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Мы вышли из медпункта."
+  },
+  {
+    "scene": 32,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Солнечный свет после прохладного помещения показался особенно ярким."
+  },
+  {
+    "scene": 32,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я остановилась на крыльце."
+  },
+  {
+    "scene": 32,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Посмотрела на обработанный локоть."
+  },
+  {
+    "scene": 32,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Потом на дверь."
+  },
+  {
+    "scene": 32,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "И наконец на Дарью."
+  },
+  {
+    "scene": 32,
+    "suffix": "",
+    "speaker": "cs_ls",
+    "text": "Интересное заведение."
+  },
+  {
+    "scene": 32,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Она усмехнулась."
+  },
+  {
+    "scene": 32,
+    "suffix": "",
+    "speaker": "cs_da",
+    "text": "Медпункт?"
+  },
+  {
+    "scene": 32,
+    "suffix": "",
+    "speaker": "cs_ls",
+    "text": "Угу."
+  },
+  {
+    "scene": 32,
+    "suffix": "",
+    "speaker": "cs_da",
+    "text": "А мне понравилось. Виола вполне приятная."
+  },
+  {
+    "scene": 32,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я кивнула."
+  },
+  {
+    "scene": 32,
+    "suffix": "",
+    "speaker": "cs_ls",
+    "text": "И наблюдательная."
+  },
+  {
+    "scene": 32,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Мы спустились с крыльца."
+  },
+  {
+    "scene": 32,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Несколько секунд шли молча."
+  },
+  {
+    "scene": 32,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Потом Дарья спросила:"
+  },
+  {
+    "scene": 32,
+    "suffix": "",
+    "speaker": "cs_da",
+    "text": "Ты действительно думаешь, что тот рисунок связан с историей из девяностых?"
+  },
+  {
+    "scene": 32,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я задумалась."
+  },
+  {
+    "scene": 32,
+    "suffix": "",
+    "speaker": "cs_ls",
+    "text": "Не знаю."
+  },
+  {
+    "scene": 32,
+    "suffix": "",
+    "speaker": "cs_da",
+    "text": "Но узнала его?"
+  },
+  {
+    "scene": 32,
+    "suffix": "",
+    "speaker": "cs_ls",
+    "text": "Мне показалось, что узнала."
+  },
+  {
+    "scene": 32,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Она посмотрела на меня внимательнее."
+  },
+  {
+    "scene": 32,
+    "suffix": "",
+    "speaker": "cs_da",
+    "text": "А разве это не то же самое, что ты говорила о других людях в лагере?"
+  },
+  {
+    "scene": 32,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я замедлила шаг."
+  },
+  {
+    "scene": 32,
+    "suffix": "",
+    "speaker": "cs_ls",
+    "text": "В каком смысле?"
+  },
+  {
+    "scene": 32,
+    "suffix": "",
+    "speaker": "cs_da",
+    "text": "Ты видишь что-то похожее на то, что помнишь по игре. И сразу начинаешь думать, что знаешь, что это такое."
+  },
+  {
+    "scene": 32,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я остановилась."
+  },
+  {
+    "scene": 32,
+    "suffix": "",
+    "speaker": "cs_th",
+    "text": "Вот ведь."
+  },
+  {
+    "scene": 32,
+    "suffix": "",
+    "speaker": "cs_th",
+    "text": "Опять она права."
+  },
+  {
+    "scene": 32,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я посмотрела в сторону медпункта."
+  },
+  {
+    "scene": 32,
+    "suffix": "",
+    "speaker": "cs_ls",
+    "text": "Да. Похоже, я опять тороплюсь с выводами."
+  },
+  {
+    "scene": 32,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Дарья улыбнулась."
+  },
+  {
+    "scene": 32,
+    "suffix": "",
+    "speaker": "cs_da",
+    "text": "Ничего страшного. Просто лучше сначала разобраться."
+  },
+  {
+    "scene": 32,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я кивнула."
+  },
+  {
+    "scene": 32,
+    "suffix": "",
+    "speaker": "cs_ls",
+    "text": "Тогда запишем как наблюдение, а не как доказательство."
+  },
+  {
+    "scene": 32,
+    "suffix": "",
+    "speaker": "cs_da",
+    "text": "Вот это уже разумнее."
+  },
+  {
+    "scene": 32,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я посмотрела на неё."
+  },
+  {
+    "scene": 32,
+    "suffix": "",
+    "speaker": "cs_ls",
+    "text": "Ты ведь понимаешь, что постепенно превращаешься в руководителя нашей исследовательской группы?"
+  },
+  {
+    "scene": 32,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Она тихо рассмеялась."
+  },
+  {
+    "scene": 32,
+    "suffix": "",
+    "speaker": "cs_da",
+    "text": "А ты кем будешь?"
+  },
+  {
+    "scene": 32,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я задумалась."
+  },
+  {
+    "scene": 32,
+    "suffix": "",
+    "speaker": "cs_ls",
+    "text": "Специалистом по обнаружению подозрительных плакатов."
+  },
+  {
+    "scene": 32,
+    "suffix": "",
+    "speaker": "cs_da",
+    "text": "Очень узкая специальность."
+  },
+  {
+    "scene": 32,
+    "suffix": "",
+    "speaker": "cs_ls",
+    "text": "Зато востребованная именно здесь."
+  },
+  {
+    "scene": 32,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Дарья покачала головой."
+  },
+  {
+    "scene": 32,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Но улыбаться не перестала."
+  },
+  {
+    "scene": 32,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Мы свернули на дорожку к клубам."
+  },
+  {
+    "scene": 33,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Когда мы вернулись к клубам, Семён уже ждал возле рабочего стола."
+  },
+  {
+    "scene": 33,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Папка лежала перед ним."
+  },
+  {
+    "scene": 33,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Рядом находились карандаши."
+  },
+  {
+    "scene": 33,
+    "suffix": "",
+    "speaker": "cs_th",
+    "text": "Отлично."
+  },
+  {
+    "scene": 33,
+    "suffix": "",
+    "speaker": "cs_th",
+    "text": "Художественное имущество пережило отсутствие руководства."
+  },
+  {
+    "scene": 33,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Он заметил нас."
+  },
+  {
+    "scene": 33,
+    "suffix": "",
+    "speaker": "cs_sy",
+    "text": "А вот и вы. Всё нормально?"
+  },
+  {
+    "scene": 33,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я показала локоть."
+  },
+  {
+    "scene": 33,
+    "suffix": "",
+    "speaker": "cs_ls",
+    "text": "Медицинская помощь оказана. Пациентка допущена к выполнению общественно полезных работ."
+  },
+  {
+    "scene": 33,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Семён усмехнулся."
+  },
+  {
+    "scene": 33,
+    "suffix": "",
+    "speaker": "cs_sy",
+    "text": "Тогда хорошо."
+  },
+  {
+    "scene": 33,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Дарья подошла к столу."
+  },
+  {
+    "scene": 33,
+    "suffix": "",
+    "speaker": "cs_da",
+    "text": "Узнал время выступления?"
+  },
+  {
+    "scene": 33,
+    "suffix": "",
+    "speaker": "cs_sy",
+    "text": "Да. Ольга Дмитриевна сказала, что всё начнётся после ужина. Точное время пока лучше не писать, она ещё уточнит расписание."
+  },
+  {
+    "scene": 33,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я кивнула."
+  },
+  {
+    "scene": 33,
+    "suffix": "",
+    "speaker": "cs_ls",
+    "text": "Тогда пока сделаем основную композицию."
+  },
+  {
+    "scene": 33,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Семён посмотрел на нас."
+  },
+  {
+    "scene": 33,
+    "suffix": "",
+    "speaker": "cs_sy",
+    "text": "Кстати, что-нибудь ещё интересное узнали?"
+  },
+  {
+    "scene": 33,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я вспомнила плакат."
+  },
+  {
+    "scene": 33,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Виолу."
+  },
+  {
+    "scene": 33,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Наш разговор с Дашей."
+  },
+  {
+    "scene": 33,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "И собственное обещание не превращать каждую необычную деталь в невероятную теорию."
+  },
+  {
+    "scene": 33,
+    "suffix": "",
+    "speaker": "cs_ls",
+    "text": "Нашли одну странность в медпункте."
+  },
+  {
+    "scene": 33,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Семён приподнял бровь."
+  },
+  {
+    "scene": 33,
+    "suffix": "",
+    "speaker": "cs_sy",
+    "text": "Какую?"
+  },
+  {
+    "scene": 33,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я немного подумала."
+  },
+  {
+    "scene": 33,
+    "suffix": "",
+    "speaker": "cs_ls",
+    "text": "На стене висит рисунок, который напоминает мне изображение из более поздней истории. Но я пока не уверена, что это одно и то же."
+  },
+  {
+    "scene": 33,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Он задумался."
+  },
+  {
+    "scene": 33,
+    "suffix": "",
+    "speaker": "cs_sy",
+    "text": "То есть ещё одно совпадение?"
+  },
+  {
+    "scene": 33,
+    "suffix": "",
+    "speaker": "cs_ls",
+    "text": "Возможно."
+  },
+  {
+    "scene": 33,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Дарья кивнула."
+  },
+  {
+    "scene": 33,
+    "suffix": "",
+    "speaker": "cs_da",
+    "text": "Пока мы решили ничего не утверждать без проверки."
+  },
+  {
+    "scene": 33,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Семён посмотрел на неё."
+  },
+  {
+    "scene": 33,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Потом на меня."
+  },
+  {
+    "scene": 33,
+    "suffix": "",
+    "speaker": "cs_sy",
+    "text": "По-моему, правильно."
+  },
+  {
+    "scene": 33,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я улыбнулась."
+  },
+  {
+    "scene": 33,
+    "suffix": "",
+    "speaker": "cs_ls",
+    "text": "Удивительное единодушие."
+  },
+  {
+    "scene": 33,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Он рассмеялся."
+  },
+  {
+    "scene": 33,
+    "suffix": "",
+    "speaker": "cs_sy",
+    "text": "Теперь можно всё-таки заняться объявлением?"
+  },
+  {
+    "scene": 33,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я посмотрела на лежавший перед нами лист."
+  },
+  {
+    "scene": 33,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Белая бумага."
+  },
+  {
+    "scene": 33,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Обычные карандаши."
+  },
+  {
+    "scene": 33,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Никаких технологий будущего."
+  },
+  {
+    "scene": 33,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Никаких загадочных артефактов."
+  },
+  {
+    "scene": 33,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Просто задание, которое нужно выполнить."
+  },
+  {
+    "scene": 33,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я села."
+  },
+  {
+    "scene": 33,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Взяла карандаш."
+  },
+  {
+    "scene": 33,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Несколько секунд рассматривала чистый лист."
+  },
+  {
+    "scene": 33,
+    "suffix": "",
+    "speaker": "cs_th",
+    "text": "Пожалуй, Семён прав."
+  },
+  {
+    "scene": 33,
+    "suffix": "",
+    "speaker": "cs_th",
+    "text": "За сегодняшнее утро мы и так успели собрать достаточно вопросов."
+  },
+  {
+    "scene": 33,
+    "suffix": "",
+    "speaker": "cs_th",
+    "text": "Теперь можно сделать что-нибудь, на что действительно способны повлиять."
+  },
+  {
+    "scene": 33,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я провела первую линию."
+  },
+  {
+    "scene": 33,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Затем вторую."
+  },
+  {
+    "scene": 33,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Дарья придвинула ко мне лист с наброском надписи."
+  },
+  {
+    "scene": 33,
+    "suffix": "",
+    "speaker": "cs_da",
+    "text": "А если название сделать вот здесь?"
+  },
+  {
+    "scene": 33,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я посмотрела."
+  },
+  {
+    "scene": 33,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Кивнула."
+  },
+  {
+    "scene": 33,
+    "suffix": "",
+    "speaker": "cs_ls",
+    "text": "Да. Так будет лучше."
+  },
+  {
+    "scene": 33,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Семён сел с другой стороны стола."
+  },
+  {
+    "scene": 33,
+    "suffix": "",
+    "speaker": "cs_sy",
+    "text": "А мне что делать?"
+  },
+  {
+    "scene": 33,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я подняла взгляд."
+  },
+  {
+    "scene": 33,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Улыбнулась."
+  },
+  {
+    "scene": 33,
+    "suffix": "",
+    "speaker": "cs_ls",
+    "text": "Для начала не мешать художнику."
+  },
+  {
+    "scene": 33,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Он закатил глаза."
+  },
+  {
+    "scene": 33,
+    "suffix": "",
+    "speaker": "cs_sy",
+    "text": "Прекрасно."
+  },
+  {
+    "scene": 33,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Я рассмеялась."
+  },
+  {
+    "scene": 33,
+    "suffix": "",
+    "speaker": "cs_ls",
+    "text": "Ладно. Поможешь с крупными буквами."
+  },
+  {
+    "scene": 33,
+    "suffix": "",
+    "speaker": "cs_sy",
+    "text": "Вот это уже больше похоже на работу."
+  },
+  {
+    "scene": 33,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Мы принялись за дело."
+  },
+  {
+    "scene": 33,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Где-то за стеной клубов продолжали возиться с проводами Шурик и Электроник."
+  },
+  {
+    "scene": 33,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "В медпункте Виола занималась своими обычными обязанностями."
+  },
+  {
+    "scene": 33,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "А на площади пионеры готовились к вечернему мероприятию."
+  },
+  {
+    "scene": 33,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Лагерь жил."
+  },
+  {
+    "scene": 33,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "Совершенно независимо от того, сколько странностей мне удастся обнаружить за день."
+  },
+  {
+    "scene": 33,
+    "suffix": "",
+    "speaker": "cs_narrator",
+    "text": "И, пожалуй, сейчас это казалось самым важным."
+  },
+  {
+    "scene": 33,
+    "suffix": "",
+    "speaker": "cs_th",
+    "text": "«Совёнок» не собирался останавливаться, пока я разбираюсь с его загадками."
+  },
+  {
+    "scene": 33,
+    "suffix": "",
+    "speaker": "cs_th",
+    "text": "Значит, придётся учиться жить здесь параллельно с расследованием."
+  }
+]

@@ -1,0 +1,414 @@
+[
+  {
+    "file": "days/day01/09_counsellor.rpy",
+    "line": 39,
+    "speaker": "cs_mt",
+    "text": "Да?",
+    "visible": [
+      "cs_dasha_winter",
+      "sl"
+    ]
+  },
+  {
+    "file": "days/day01/09_counsellor.rpy",
+    "line": 48,
+    "speaker": "cs_mt",
+    "text": "Какие ещё девушки?",
+    "visible": [
+      "cs_dasha_winter",
+      "sl"
+    ]
+  },
+  {
+    "file": "days/day01/part06/30_at_the_door.rpy",
+    "line": 75,
+    "speaker": "cs_dv",
+    "text": "Эй, новенькие! Вы там живые?",
+    "visible": [
+      "cs_darya"
+    ]
+  },
+  {
+    "file": "days/day01/part06/30_at_the_door.rpy",
+    "line": 85,
+    "speaker": "cs_us",
+    "text": "Алиса, я же говорила, они странные!",
+    "visible": [
+      "cs_darya"
+    ]
+  },
+  {
+    "file": "days/day01/part09/48_a_meet.rpy",
+    "line": 192,
+    "speaker": "cs_sy",
+    "text": "Лена!",
+    "visible": [
+      "cs_darya",
+      "un"
+    ]
+  },
+  {
+    "file": "days/day01/part10/56_old_books.rpy",
+    "line": 114,
+    "speaker": "cs_da",
+    "text": "Ну что?",
+    "visible": []
+  },
+  {
+    "file": "days/day01/part10/56_old_books.rpy",
+    "line": 118,
+    "speaker": "cs_da",
+    "text": "Получается, подтверждение?",
+    "visible": []
+  },
+  {
+    "file": "days/day02/part01/02_scene.rpy",
+    "line": 98,
+    "speaker": "cs_da",
+    "text": "Лен…",
+    "visible": []
+  },
+  {
+    "file": "days/day02/part01/02_scene.rpy",
+    "line": 102,
+    "speaker": "cs_da",
+    "text": "Ты всегда так рано встаёшь?",
+    "visible": []
+  },
+  {
+    "file": "days/day02/part01/02_scene.rpy",
+    "line": 105,
+    "speaker": "cs_da",
+    "text": "Добровольно?",
+    "visible": []
+  },
+  {
+    "file": "days/day02/part01/02_scene.rpy",
+    "line": 108,
+    "speaker": "cs_da",
+    "text": "Удивительная женщина.",
+    "visible": []
+  },
+  {
+    "file": "days/day02/part01/02_scene.rpy",
+    "line": 111,
+    "speaker": "cs_da",
+    "text": "Только не уходи за территорию лагеря одна.",
+    "visible": []
+  },
+  {
+    "file": "days/day02/part01/02_scene.rpy",
+    "line": 115,
+    "speaker": "cs_da",
+    "text": "Обещаешь?",
+    "visible": []
+  },
+  {
+    "file": "days/day02/part01/02_scene.rpy",
+    "line": 119,
+    "speaker": "cs_da",
+    "text": "Тогда хорошей пробежки.",
+    "visible": []
+  },
+  {
+    "file": "days/day02/part01/02_scene.rpy",
+    "line": 123,
+    "speaker": "cs_da",
+    "text": "И не пытайся заодно разобраться со всеми загадками лагеря.",
+    "visible": []
+  },
+  {
+    "file": "days/day02/part01/02_scene.rpy",
+    "line": 126,
+    "speaker": "cs_da",
+    "text": "Лена…",
+    "visible": []
+  },
+  {
+    "file": "days/day02/part01/04_scene.rpy",
+    "line": 178,
+    "speaker": "cs_mt",
+    "text": "Лена?",
+    "visible": []
+  },
+  {
+    "file": "days/day02/part01/07_scene.rpy",
+    "line": 72,
+    "speaker": "cs_da",
+    "text": "Вернулась?",
+    "visible": []
+  },
+  {
+    "file": "days/day02/part01/07_scene.rpy",
+    "line": 76,
+    "speaker": "cs_da",
+    "text": "Ты вся вспотела.",
+    "visible": []
+  },
+  {
+    "file": "days/day02/part01/07_scene.rpy",
+    "line": 79,
+    "speaker": "cs_da",
+    "text": "Давно бегала?",
+    "visible": []
+  },
+  {
+    "file": "days/day02/part01/07_scene.rpy",
+    "line": 82,
+    "speaker": "cs_da",
+    "text": "Каких?",
+    "visible": []
+  },
+  {
+    "file": "days/day02/part01/07_scene.rpy",
+    "line": 85,
+    "speaker": "cs_da",
+    "text": "И что они сказали?",
+    "visible": []
+  },
+  {
+    "file": "days/day02/part01/07_scene.rpy",
+    "line": 88,
+    "speaker": "cs_da",
+    "text": "Вполне разумный вопрос.",
+    "visible": []
+  },
+  {
+    "file": "days/day02/part01/07_scene.rpy",
+    "line": 110,
+    "speaker": "cs_da",
+    "text": "А больше ничего не случилось?",
+    "visible": []
+  },
+  {
+    "file": "days/day02/part01/07_scene.rpy",
+    "line": 115,
+    "speaker": "cs_da",
+    "text": "Что?",
+    "visible": []
+  },
+  {
+    "file": "days/day02/part01/07_scene.rpy",
+    "line": 119,
+    "speaker": "cs_da",
+    "text": "В каком смысле?",
+    "visible": []
+  },
+  {
+    "file": "days/day02/part01/07_scene.rpy",
+    "line": 122,
+    "speaker": "cs_da",
+    "text": "Ты ходила туда?",
+    "visible": []
+  },
+  {
+    "file": "days/day02/part01/07_scene.rpy",
+    "line": 124,
+    "speaker": "cs_da",
+    "text": "За территорию выходила?",
+    "visible": []
+  },
+  {
+    "file": "days/day02/part01/07_scene.rpy",
+    "line": 130,
+    "speaker": "cs_da",
+    "text": "Спасибо.",
+    "visible": []
+  },
+  {
+    "file": "days/day02/part01/07_scene.rpy",
+    "line": 134,
+    "speaker": "cs_da",
+    "text": "А может, он просто уехал?",
+    "visible": []
+  },
+  {
+    "file": "days/day02/part01/07_scene.rpy",
+    "line": 137,
+    "speaker": "cs_da",
+    "text": "Но куда?",
+    "visible": []
+  },
+  {
+    "file": "days/day02/part01/07_scene.rpy",
+    "line": 144,
+    "speaker": "cs_da",
+    "text": "И ты согласилась?",
+    "visible": []
+  },
+  {
+    "file": "days/day02/part01/07_scene.rpy",
+    "line": 147,
+    "speaker": "cs_da",
+    "text": "Я не против посмотреть. Но давай не будем сразу уходить далеко по дороге.",
+    "visible": []
+  },
+  {
+    "file": "days/day02/part01/07_scene.rpy",
+    "line": 150,
+    "speaker": "cs_da",
+    "text": "И ещё…",
+    "visible": []
+  },
+  {
+    "file": "days/day02/part01/07_scene.rpy",
+    "line": 153,
+    "speaker": "cs_da",
+    "text": "Ты ведь хотела сегодня снова пойти к Шурику и Электронику.",
+    "visible": []
+  },
+  {
+    "file": "days/day02/part01/07_scene.rpy",
+    "line": 156,
+    "speaker": "cs_da",
+    "text": "Тогда сначала завтрак. Потом клубы. А с дорогой решим, когда будем знать, сколько у нас времени.",
+    "visible": []
+  },
+  {
+    "file": "days/day02/part01/07_scene.rpy",
+    "line": 160,
+    "speaker": "cs_da",
+    "text": "Ты вчера обещала мне обычный завтрак.",
+    "visible": []
+  },
+  {
+    "file": "days/day02/part01/07_scene.rpy",
+    "line": 164,
+    "speaker": "cs_da",
+    "text": "Желательно без внезапных расследований за столом.",
+    "visible": []
+  },
+  {
+    "file": "days/day02/part01/07_scene.rpy",
+    "line": 167,
+    "speaker": "cs_da",
+    "text": "Опять «постараюсь»?",
+    "visible": []
+  },
+  {
+    "file": "days/day02/part01/07_scene.rpy",
+    "line": 171,
+    "speaker": "cs_da",
+    "text": "Ладно. Тогда хотя бы сначала умойся.",
+    "visible": []
+  },
+  {
+    "file": "days/day02/part02/18_scene.rpy",
+    "line": 39,
+    "speaker": "cs_da",
+    "text": "Вот. Уже забыла.",
+    "visible": [
+      "mi"
+    ]
+  },
+  {
+    "file": "days/day02/part02/18_scene.rpy",
+    "line": 182,
+    "speaker": "cs_da",
+    "text": "Правда? Я половину забыла.",
+    "visible": [
+      "mi"
+    ]
+  },
+  {
+    "file": "days/day02/part02/18_scene.rpy",
+    "line": 185,
+    "speaker": "cs_da",
+    "text": "Кажется, раньше я играла быстрее.",
+    "visible": [
+      "mi"
+    ]
+  },
+  {
+    "file": "days/day02/part02/18_scene.rpy",
+    "line": 209,
+    "speaker": "cs_da",
+    "text": "Ну что, обещание не смеяться выполнила?",
+    "visible": [
+      "mi"
+    ]
+  },
+  {
+    "file": "days/day02/part02/18_scene.rpy",
+    "line": 212,
+    "speaker": "cs_da",
+    "text": "Настолько плохо?",
+    "visible": [
+      "mi"
+    ]
+  },
+  {
+    "file": "days/day02/part02/18_scene.rpy",
+    "line": 216,
+    "speaker": "cs_da",
+    "text": "Даже с ошибками?",
+    "visible": [
+      "mi"
+    ]
+  },
+  {
+    "file": "days/day02/part02/18_scene.rpy",
+    "line": 220,
+    "speaker": "cs_da",
+    "text": "Спасибо.",
+    "visible": [
+      "mi"
+    ]
+  },
+  {
+    "file": "days/day02/part02/20_scene.rpy",
+    "line": 333,
+    "speaker": "cs_mt",
+    "text": "Ребята, не задерживаемся! Начинаем!",
+    "visible": [
+      "cs_darya"
+    ]
+  },
+  {
+    "file": "days/day02/part04/26_scene.rpy",
+    "line": 70,
+    "speaker": "cs_sy",
+    "text": "И что теперь?",
+    "visible": [
+      "el",
+      "sh"
+    ]
+  },
+  {
+    "file": "days/day02/part04/28_scene.rpy",
+    "line": 150,
+    "speaker": "cs_vi",
+    "text": "Входите.",
+    "visible": [
+      "cs_darya"
+    ]
+  },
+  {
+    "file": "days/day02/part06/45_scene.rpy",
+    "line": 36,
+    "speaker": "cs_mt",
+    "text": "Лена! Семён! Дарья!",
+    "visible": [
+      "cs_darya",
+      "cs_semen"
+    ]
+  },
+  {
+    "file": "days/day02/part07/49_scene.rpy",
+    "line": 48,
+    "speaker": "cs_vi",
+    "text": "Входите!",
+    "visible": [
+      "cs_darya"
+    ]
+  },
+  {
+    "file": "days/day02/part10/69_concert.rpy",
+    "line": 54,
+    "speaker": "cs_mt",
+    "text": "Ну что, все готовы? Девочки, вам слово.",
+    "visible": [
+      "cs_darya"
+    ]
+  }
+]

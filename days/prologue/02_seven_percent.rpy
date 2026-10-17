@@ -2,10 +2,16 @@
 # Source: source/prologue.md. Dialogue is preserved verbatim.
 label cs_scene_02:
     $ save_name = u"Чужая смена — Семь процентов"
-    scene cs_street with fade
+    $ cs_director_scene("cs_street")
+    scene cs_street
+    with fade
     stop music fadeout 2.0
     play ambience cs_wind fadein 1.5
     window show dissolve
+    # cs_director_begin: entry frame; explicit scene plan
+    $ cs_frame_focus([])
+    with cs_sprite_change
+    # cs_director_end
     cs_narrator "Зимой город вообще становился гораздо приятнее."
     cs_narrator "Людей меньше."
     cs_narrator "Все куда-то торопятся."
@@ -31,7 +37,9 @@ label cs_scene_02:
     cs_narrator "И провести остаток выходного так, как его должен проводить любой цивилизованный человек."
     cs_narrator "Не разговаривая ни с кем."
     hide screen cs_phone
-    scene cs_stop with dissolve
+    $ cs_director_scene("cs_stop")
+    scene cs_stop
+    with dissolve
     play sound cs_bus_stop
     cs_narrator "На остановке стоял автобус."
     cs_narrator "{b}410.{/b}"

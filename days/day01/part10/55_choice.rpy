@@ -2,6 +2,10 @@
 label cs_day01_55:
     $ save_name = "Чужая смена — День 1: Развилка — знакомство с Женей"
     label cs_check_day01_part10_choice_text:
+    # cs_director_begin: entry frame; explicit scene plan
+    $ cs_frame_focus([])
+    with cs_sprite_change
+    # cs_director_end
     cs_narrator "Я посмотрела на стопку книг."
     cs_narrator "Затем на Женю."
     cs_narrator "Она уже собиралась приступить к сортировке."

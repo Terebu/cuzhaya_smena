@@ -10,6 +10,7 @@ init 20 python:
     cs_mt = DynamicCharacter("u'Ольга Дмитриевна' if cs_olga_seen else u'Женский голос'", color="#00ea32", what_style="normal_prolog", ctc="ctc_animation", ctc_position="fixed")
 
 label cs_day01:
+    call cs_day_title(1)
     $ day_time()
     $ persistent.sprite_time = "day"
     call cs_day01_01

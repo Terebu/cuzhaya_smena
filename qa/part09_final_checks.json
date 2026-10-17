@@ -1,0 +1,48 @@
+{
+  "zero": {
+    "status": "PASS",
+    "modified": 1792026329.6842568
+  },
+  "zhenya": {
+    "status": "PASS",
+    "modified": 1792026401.4653645
+  },
+  "zhenya_one": {
+    "status": "PASS",
+    "modified": 1792026463.7321198
+  },
+  "seats": {
+    "status": "PASS",
+    "modified": 1792026526.4652002
+  },
+  "miku": {
+    "status": "PASS",
+    "modified": 1792026590.9328766
+  },
+  "all": {
+    "status": "PASS",
+    "modified": 1792026667.661213
+  },
+  "registry": {
+    "images": 191,
+    "audio": 30,
+    "missing_audio": [],
+    "missing_images": []
+  },
+  "source_comparison": {
+    "status": "PASS",
+    "scenes": 77,
+    "source_blocks": 5549,
+    "continuity_additions": 13,
+    "assets_preserved": 15,
+    "errors": []
+  },
+  "lint": {
+    "exit_code": 0,
+    "existing_warnings": "Legacy non-ASCII names and base game warnings."
+  },
+  "full_from_prologue": {
+    "run_this_iteration": false,
+    "updated_testcase": true
+  }
+}

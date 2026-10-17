@@ -5,9 +5,18 @@ label cs_day01_45:
     $ renpy.music.set_volume(0.35,delay=1.5,channel="ambience")
     if renpy.music.get_playing(channel="ambience") != "sound/ambiences/camp_center_evening.ogg":
         play ambience "sound/ambiences/camp_center_evening.ogg" fadeout 2.0 fadein 2.0
+    # cs_director_begin: entry frame; explicit scene plan
+    $ cs_frame_focus(["cs_darya", "cs_semen"])
+    with cs_sprite_change
+    # cs_director_end
     cs_narrator "Некоторое время мы просто сидели втроём."
     cs_narrator "Семён смотрел на площадь."
     cs_narrator "Дарья — на деревья, за которыми медленно опускалось солнце."
+    # cs_director_begin: REFLECTIVE_SHOT: Private recap of the first day
+    $ cs_reflective_focus()
+    with cs_sprite_change
+    label cs_director_check_e8872f2cc8:
+    # cs_director_end
     cs_narrator "А я пыталась понять, как умудрилась за один день пережить столько всего."
     cs_narrator "Утром — зимняя Москва."
     cs_narrator "Днём — автобус, неизвестный лагерь, знакомые лица и советская пионерская форма."
@@ -16,26 +25,51 @@ label cs_day01_45:
     cs_th "Молодец, Соколова."
     cs_th "Планировала купить продукты."
     cs_th "Вместо этого решила разобраться с собственной личной жизнью."
+    # cs_director_begin: Return to direct interaction: Private recap of the first day
+    $ cs_frame_focus(["cs_darya", "cs_semen"])
+    with cs_sprite_change
+    label cs_director_check_0efe28b612:
+    # cs_director_end
     cs_narrator "Семён поднялся."
     show cs_semen relaxed pioneer normal at cs_semen_normal_left
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_sy "Ладно, я пойду. Ольга Дмитриевна ещё просила кое-что сделать."
     cs_ls "Трудовая дисциплина прежде всего."
     cs_narrator "Он покачал головой."
     show cs_semen thinking_alt pioneer normal at cs_semen_normal_left
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_sy "Ты когда-нибудь перестанешь так разговаривать?"
     cs_ls "Никаких гарантий."
     # cs_darya_variety: reaction
     show cs_darya shy_smile pioneer normal at cs_darya_normal_right
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_narrator "Дарья улыбнулась."
     cs_narrator "Семён махнул рукой."
     show cs_semen smile pioneer normal at cs_semen_normal_left
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_sy "Увидимся."
     cs_ls "Увидимся."
-    hide cs_semen with Dissolve(0.6)
+    # cs_presence_keep: hide cs_semen
     # cs_composition: regroup
     show cs_darya shy_smile pioneer normal at cs_darya_normal_center
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     label cs_check_day01_part08_semen_leaves:
     cs_narrator "Он пошёл в сторону домиков."
+    # cs_director_begin: Physical departure in the authored scene
+    $ cs_actor_exit(["cs_semen"])
+    with cs_sprite_leave
+    label cs_director_check_3ebe2866f8:
+    # cs_director_end
     cs_narrator "Мы с Дарьей тоже поднялись со скамейки."
     $ renpy.music.set_volume(0.28,delay=1.0,channel="music")
     play music "sound/music/a_promise_from_distant_days.ogg" fadeout 2.0 fadein 3.0
@@ -43,6 +77,9 @@ label cs_day01_45:
     cs_ls "Не слишком тебя смутила?"
     # cs_darya_variety: reaction
     show cs_darya shy_bend pioneer normal at cs_darya_normal_center
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_da "Немного."
     cs_ls "Извини."
     cs_narrator "Она покачала головой."
@@ -50,6 +87,9 @@ label cs_day01_45:
     cs_ls "Я сама не ожидала."
     # cs_darya_variety: reaction
     show cs_darya shy_smile pioneer normal at cs_darya_normal_center
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_narrator "Дарья тихо усмехнулась."
     cs_narrator "Мы направились к дорожке."
     cs_narrator "Через несколько шагов я осторожно коснулась её плеча."
@@ -59,6 +99,9 @@ label cs_day01_45:
     cs_narrator "Затем на меня."
     # cs_darya_variety: reaction
     show cs_darya reaching pioneer normal at cs_darya_normal_center
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_da "Сейчас можно."
     label cs_check_day01_part08_hug:
     cs_narrator "Я мягко приобняла её за плечи."
@@ -67,12 +110,18 @@ label cs_day01_45:
     cs_narrator "Мы прошли так несколько шагов."
     # cs_darya_variety: reaction
     show cs_darya shy_smile pioneer normal at cs_darya_normal_center
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_narrator "Потом Дарья посмотрела на меня с лёгкой улыбкой."
     cs_da "Только не делай из этого событие государственного масштаба."
     cs_narrator "Я немедленно приняла серьёзный вид."
     cs_ls "Постановление ЦК о совместной прогулке уже подготовлено."
     # cs_darya_variety: reaction
     show cs_darya amused pioneer normal at cs_darya_normal_center
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_narrator "Она рассмеялась."
     cs_da "Лена!"
     cs_ls "Хорошо. Отзываю постановление."
@@ -81,6 +130,9 @@ label cs_day01_45:
     cs_narrator "Через некоторое время Дарья негромко произнесла:"
     # cs_darya_variety: reaction
     show cs_darya arms_crossed pioneer normal at cs_darya_normal_center
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_da "И не думай, что я уже на всё согласилась."
     cs_narrator "Я посмотрела на неё."
     cs_ls "Даже не собиралась."
@@ -89,6 +141,9 @@ label cs_day01_45:
     cs_narrator "Она кивнула."
     # cs_darya_variety: reaction
     show cs_darya reaching pioneer normal at cs_darya_normal_center
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_da "Тогда хорошо."
     cs_narrator "Я тоже кивнула."
     cs_narrator "И на этот раз не стала ничего добавлять."
@@ -105,6 +160,9 @@ label cs_day01_45:
     cs_narrator "Дарья вдруг посмотрела на меня."
     # cs_darya_variety: reaction
     show cs_darya thinking pioneer normal at cs_darya_normal_center
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_da "Лен?"
     cs_ls "М?"
     cs_da "Спасибо, что сказала."
@@ -112,16 +170,19 @@ label cs_day01_45:
     cs_ls "Не за что."
     # cs_darya_variety: reaction
     show cs_darya shy_smile pioneer normal at cs_darya_normal_center
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_narrator "Она улыбнулась."
     cs_narrator "И мы продолжили идти."
-    # cs_focus: camera
-    hide cs_darya with Dissolve(0.25)
     cs_th "Кажется, впервые за весь день мне не хотелось ничего проверять, объяснять или выяснять."
     cs_th "Просто идти рядом."
     cs_th "Неплохое завершение дня."
     cs_th "Хотя до отбоя ещё далеко."
+    $ cs_director_scene("cs_camp_path_sunset")
     scene cs_camp_path_sunset
     show cs_darya shrug pioneer normal at cs_darya_normal_center
+    $ cs_presence_stage()
     with Dissolve(1.5)
     label cs_check_day01_part08_walk:
     return

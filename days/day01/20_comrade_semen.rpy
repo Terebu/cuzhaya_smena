@@ -2,12 +2,21 @@
 # Source: source/day01_part04.md.
 label cs_day01_20:
     $ save_name = u"Чужая смена — День 1: Товарищ Семён"
-    scene bg int_dining_hall_people_day with Dissolve(1.5)
+    $ cs_director_scene("bg int_dining_hall_people_day")
+    scene bg int_dining_hall_people_day
+    with Dissolve(1.5)
     $ renpy.music.set_volume(0.45, delay=1.0, channel="ambience")
     if renpy.music.get_playing(channel="ambience") != cs_day_dining_full:
         play ambience cs_day_dining_full fadeout 1.0 fadein 2.0
     # cs_darya_stage: present in story
     show cs_darya shrug pioneer normal at cs_darya_normal_center
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
+    # cs_director_begin: entry frame; explicit scene plan
+    $ cs_frame_focus(["cs_darya"])
+    with cs_sprite_change
+    # cs_director_end
     cs_narrator "Столовая встретила нас гулом голосов."
     cs_narrator "Звенела посуда."
     cs_narrator "Кто-то смеялся."
@@ -44,29 +53,42 @@ label cs_day01_20:
     cs_narrator "Всё это были сведения, которые сейчас категорически не стоило произносить вслух."
     # cs_darya_stage: present in story
     show cs_darya thinking pioneer normal at cs_darya_normal_center
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_da "Он?"
     cs_narrator "Я кивнула."
     cs_ls "Ага."
     # cs_darya_stage: present in story
     show cs_darya surprised pioneer normal at cs_darya_normal_center
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_da "Тот самый Семён?"
     cs_ls "Он самый."
     show mt normal pioneer at cs_actor_left
     # cs_composition: regroup
     show cs_darya surprised pioneer normal at cs_darya_normal_right
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_narrator "Ольга Дмитриевна помахала ему рукой."
     # cs_camp_emotion: text reaction
     show mt smile pioneer at cs_actor_left
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     label cs_check_darya_semen_focus:
     cs_mt "Семён! Познакомься. У нас ещё две новенькие."
-    show mt normal pioneer far at cs_actor_left
     show cs_semen neutral pioneer far at cs_semen_far_right
     # cs_composition: regroup
     show mt normal pioneer far at cs_actor_far_left
     # cs_composition: regroup
-    show cs_darya surprised pioneer far at cs_darya_far_center
     # cs_darya_stage: present in story
     show cs_darya surprised pioneer far at cs_darya_far_center
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_narrator "Парень медленно поднялся."
     label cs_check_day01_part04_semen:
     cs_narrator "Мне пришлось приложить некоторое усилие, чтобы не улыбнуться."
@@ -79,6 +101,9 @@ label cs_day01_20:
     cs_narrator "Он пожал её."
     # cs_camp_emotion: text reaction
     show cs_semen awkward pioneer far at cs_semen_far_right
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     label cs_check_camp_semen_awkward:
     cs_sy "Семён."
     cs_narrator "Несколько секунд я смотрела ему в глаза."
@@ -91,9 +116,15 @@ label cs_day01_20:
     cs_ls "Слушай."
     # cs_camp_emotion: text reaction
     show cs_semen serious pioneer far at cs_semen_far_right
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_sy "Да?"
     cs_ls "Очень странный вопрос."
     show cs_semen thinking pioneer far at cs_semen_far_right
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_narrator "Он слегка напрягся."
     cs_sy "Какой?"
     cs_narrator "Я указала большим пальцем через плечо, примерно в сторону ворот."
@@ -102,6 +133,9 @@ label cs_day01_20:
     stop music fadeout 1.0
     pause 1.5
     show cs_semen surprised pioneer far at cs_semen_far_right
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_narrator "Его лицо изменилось мгновенно."
     cs_narrator "Словно я только что произнесла пароль от чего-то, о существовании чего он предпочёл бы никому не рассказывать."
     cs_narrator "Семён застыл."

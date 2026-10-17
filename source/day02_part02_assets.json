@@ -1,0 +1,18 @@
+[
+  {
+    "path": "cg/music_club/cg_darya_piano_day.png",
+    "sha256": "cf1eb3aa6b096750896d5194df3b7734daa208b75a4a6143cd926a2f44e4a606"
+  },
+  {
+    "path": "cg/music_club/cg_miku_piano_day.png",
+    "sha256": "62475efb09960e9ecd7b6be81c19d2f2cd958deda005deefa6b7aa0dbb41322b"
+  },
+  {
+    "path": "audio/music/music_club/The_Unfinished_Lullaby.mp3",
+    "sha256": "8a6589d3845db8b788b265ce2b1861fdae52465eccf76b44e1c8750e3389ae60"
+  },
+  {
+    "path": "fonts/NotoSansCJKjp-Regular.otf",
+    "sha256": "68a3fc98800b2a27b371f2fb79991daf3633bd89309d4ffaa6946fd587f375b5"
+  }
+]

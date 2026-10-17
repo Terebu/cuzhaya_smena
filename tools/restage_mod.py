@@ -1,6 +1,6 @@
-"""Reapply user asset overrides, complete emotion palette and camera focus in order."""
+"""Reapply the unified current staging without resurrecting old hide/show rules."""
 import runpy
 from pathlib import Path
 HERE=Path(__file__).resolve().parent
-for script in ('integrate_camp_paths.py','stage_darya_variety.py','stage_composition.py','stage_speaker_visibility.py','stage_phone_focus.py','stage_scene_focus.py'):
+for script in ('stage_all_sprites.py','inventory_custom_sprites.py'):
     runpy.run_path(str(HERE/script),run_name='__main__')

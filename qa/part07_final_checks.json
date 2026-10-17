@@ -1,0 +1,40 @@
+{
+  "cs_part07_leave": {
+    "status": "PASS",
+    "modified": 1792014952.7732837
+  },
+  "cs_part07_talk": {
+    "status": "PASS",
+    "modified": 1792015089.349362
+  },
+  "cs_part07_talk_neutral": {
+    "status": "PASS",
+    "modified": 1792015316.7481446
+  },
+  "cs_morning_viola_cg_1": {
+    "status": "PASS",
+    "modified": 1792014496.9257915
+  },
+  "cs_morning_viola_cg_0": {
+    "status": "PASS",
+    "modified": 1792014615.38731
+  },
+  "cs_full_mod_staging": {
+    "status": "PASS",
+    "modified": 1792015977.4241295
+  },
+  "lint": {
+    "exit_code": 0,
+    "note": "Existing non-ASCII filename warnings remain; no new script or resource errors."
+  },
+  "registry": {
+    "images": 186,
+    "audio": 30,
+    "missing_audio": [],
+    "missing_images": []
+  },
+  "geometry": {
+    "checked": 73,
+    "errors": []
+  }
+}

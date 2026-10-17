@@ -5,7 +5,16 @@ label cs_day01_04:
     $ renpy.music.set_volume(0.65, delay=1.0, channel="music")
     play music cs_day_music_think fadeout 2.0 fadein 2.0
     $ renpy.music.set_volume(0.65, delay=2.0, channel="ambience")
+    # cs_director_begin: entry frame; explicit scene plan
+    $ cs_frame_focus([])
+    with cs_sprite_change
+    # cs_director_end
     cs_narrator "И именно в этот момент мне пришло в голову кое-что ещё."
+    # cs_director_begin: Hands and bus mirror
+    $ cs_frame_focus([])
+    with cs_sprite_change
+    label cs_director_check_08af6135f7:
+    # cs_director_end
     cs_narrator "Я опустила взгляд на свои руки."
     cs_narrator "Пальцы."
     cs_narrator "Кожа."
@@ -22,9 +31,17 @@ label cs_day01_04:
     cs_narrator "Только…"
     cs_narrator "Я наклонилась ближе."
     cs_ls "Интересно."
+    # cs_director_begin: Conversation at the mirror
+    $ cs_frame_focus(["cs_dasha_winter"])
+    with cs_sprite_change
+    label cs_director_check_94e3b0b768:
+    # cs_director_end
     cs_narrator "Дарья подошла ко мне."
     # cs_darya_stage: present in story
     show cs_dasha_winter thinking normal at cs_darya_normal_center
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_da "Что теперь?"
     cs_ls "Кажется, я помолодела."
     cs_da "Насколько?"
@@ -66,6 +83,9 @@ label cs_day01_04:
     cs_ls "Хотя, если он вдруг включится, первая фотография будет называться «Сходила за хлебом»."
     # cs_darya_stage: present in story
     show cs_dasha_winter shrug normal at cs_darya_normal_center
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_da "У тебя странные приоритеты."
     cs_ls "У меня двести сорок семь тысяч подписчиков. Кто-то должен документировать эту катастрофу."
     hide screen cs_phone

@@ -1,0 +1,153 @@
+1 Утро без будильника
+[BG: scene cs_house_lena_darya_int_day with Dissolve(1.0).]
+[SPRITES на входе: никого; голоса вне кадра до указанного show.]
+[ПОСТАНОВКА И ВЫХОД: До умывания Дарья за кадром, без костюмного спрайта. После фразы о галстуке обе уже в форме: show cs_darya neutral pioneer normal at cs_darya_normal_right with dissolve. Первые реплики без музыки; my_daily_life включить после шутки о жалобе. SFX скрипа шкафа не придумывать; передать текстом. Выход: play sound sfx_open_door_1; hide cs_darya with dissolve.]
+2 Знакомая дорожка
+[BG: scene cs_house_lena_darya_ext_day with Dissolve(1.0).]
+[SPRITES на входе: show cs_darya neutral pioneer normal at cs_darya_normal_right with dissolve.]
+[ПОСТАНОВКА И ВЫХОД: У умывальников scene bg ext_washstand_day with Dissolve(1.0); затем scene cs_camp_path_day; затем scene bg ext_square_day. Сохранить дневной эмбиент. После каждого scene снова показать Дарью справа. При появлении Семёна show cs_semen wave pioneer normal at cs_semen_normal_left with dissolve; после приветствия заменить на neutral. Выход: следующая scene очищает обоих.]
+3 Третий поднос
+[BG: scene bg int_dining_hall_day with Dissolve(1.0).]
+[SPRITES на входе: show cs_darya neutral pioneer normal at cs_darya_normal_right with dissolve; show cs_semen neutral pioneer normal at cs_semen_normal_left with dissolve.]
+[ПОСТАНОВКА И ВЫХОД: Перспектива разговора за столом: спрайты условно обозначают собеседников, не анимировать сидение у нарисованных стульев. На реплике о подносе show cs_semen relaxed pioneer normal at cs_semen_normal_left. В конце hide cs_semen; hide cs_darya; перейти на площадь без дополнительного горна.]
+4 Линейка
+[BG: scene bg ext_square_day with Dissolve(1.0).]
+[SPRITES на входе: show mt normal pioneer at cs_day_mt_center with dissolve.]
+[ПОСТАНОВКА И ВЫХОД: Дарья и Семён стоят рядом за кадром; для её тихих реплик убрать mt и показать Дарью справа, перед обращением вожатой скрыть Дарью и вернуть mt в центр. На общем объявлении никаких повторных знакомств. В конце hide mt with dissolve.]
+5 Полчаса до клуба
+[BG: scene cs_camp_path_day with Dissolve(1.0).]
+[SPRITES на входе: show sl normal pioneer at cs_actor_left with dissolve; show cs_darya neutral pioneer normal at cs_darya_normal_right with dissolve.]
+[ПОСТАНОВКА И ВЫХОД: Семён несёт коробку за кадром. Во время его шутки hide sl; show cs_semen awkward pioneer normal at cs_semen_normal_left; затем hide cs_semen; вернуть sl normal слева. Переход к навесу: hide sl; hide cs_darya; scene bg ext_clubs_day; показать их снова. Нельзя оставить участников поверх следующего фона без повторного show.]
+6 Подготовить место
+[BG: scene bg ext_clubs_day with Dissolve(1.0).]
+[SPRITES на входе: show sl normal pioneer at cs_actor_left with dissolve; show cs_darya neutral pioneer normal at cs_darya_normal_right with dissolve.]
+[ПОСТАНОВКА И ВЫХОД: Перед меню Славя слева, Дарья справа. В А show sl smile pioneer; в Б normal. После общего эпизода с локтем hide sl with dissolve — она уходит по делам. На приглашении Электроника show el smile pioneer at cs_actor_left. Вход в клуб: play sound sfx_open_door_clubs; следующая scene очищает кадр.]
+[ВАРИАНТ А: cs_friend_sl += 1 ровно один раз.]
+[ВАРИАНТ Б: очки без изменений.]
+[ОБЪЕДИНЕНИЕ. Из клуба выходит Электроник и приглашает всех внутрь.]
+7 На рабочем столе
+[BG: scene bg int_clubs_male_day with Dissolve(1.0).]
+[SPRITES на входе: show el normal pioneer at cs_actor_left with dissolve; show cs_darya neutral pioneer normal at cs_darya_normal_right with dissolve.]
+[ПОСТАНОВКА И ВЫХОД: Шурик и Семён у стола за кадром. Перед вопросом Семёна hide el; show cs_semen surprised pioneer normal at cs_semen_normal_left. После его вопроса hide cs_semen; показать sh serious слева. Не включать экран телефона и не показывать интерфейс phone.rpy.]
+8 Что именно не получается
+[BG: ПРОДОЛЖИТЬ текущий фон без scene.]
+[SPRITES на входе: show sh serious pioneer at cs_actor_left with dissolve; show cs_darya neutral pioneer normal at cs_darya_normal_right with dissolve.]
+[ПОСТАНОВКА И ВЫХОД: Фон сохранить. На извинении Электроника hide sh; show el normal pioneer at cs_actor_left; после копирования измерений hide el; show sh serious pioneer at cs_actor_left. Уменьшить music до 0.18 в разговоре о риске. Дарья serious справа. В конце оставить sh и cs_darya; не затемнять.]
+9 Забрать телефон
+[BG: ПРОДОЛЖИТЬ текущий фон без scene.]
+[SPRITES на входе: show sh serious pioneer at cs_actor_left with dissolve; show cs_darya neutral pioneer normal at cs_darya_normal_right with dissolve.]
+[ПОСТАНОВКА И ВЫХОД: При выходе play sound sfx_open_door_clubs; scene bg ext_clubs_day with Dissolve(1.0); play ambience ambience_camp_center_day fadeout 1.0 fadein 1.5. show cs_semen serious pioneer normal слева; show cs_darya neutral справа. Источник питания остаётся в клубе, телефон и копия измерений у Лены. В конце оставить Дарью справа и Семёна слева; Дарья уходит только в сцене 10 после вопроса о времени.]
+10 Чистый лист
+[BG: scene bg ext_clubs_day with Dissolve(1.0).]
+[SPRITES на входе: show cs_semen neutral pioneer normal at cs_semen_normal_left with dissolve.]
+[ПОСТАНОВКА И ВЫХОД: Новая scene допустима как смена точки зрения на навес, без нового перезапуска my_daily_life, если он уже идёт. Дарья в начале подходит справа; на «пошла уточнять» hide cs_darya with dissolve. Семён остаётся слева. Рисунок и бумагу обозначать текстом, не новым вымышленным инвентарным screen.]
+11 Книга под мышкой
+[BG: ПРОДОЛЖИТЬ текущий фон без scene.]
+[SPRITES на входе: show un normal pioneer at cs_actor_left with dissolve.]
+[ПОСТАНОВКА И ВЫХОД: При появлении Тихоновой hide cs_semen; show un normal pioneer at cs_actor_left. Семён продолжает работу за кадром. В А show un smile pioneer; установить cs_day02_un_joined = True, закончить рамку и hide un до возвращения Дарьи. В Б hide un сразу после прощания. В конце обе ветви оставляют un скрытой и возвращают cs_semen neutral слева.]
+[ЕСЛИ cs_met_un:]
+[ИНАЧЕ:]
+[ВАРИАНТ А: «Пригласить Лену порисовать вместе». cs_friend_un += 1; cs_day02_un_joined = True; cs_day02_un_choice = "draw".]
+[ВАРИАНТ Б: «Продолжить вдвоём с Семёном». Очки без изменений; cs_day02_un_joined = False; cs_day02_un_choice = "continue".]
+[ОБЪЕДИНЕНИЕ. Если Тихонова осталась, она заканчивает рамку и уходит до возвращения Дарьи; её участие не требуется дальнейшими сценами.]
+12 Время и место
+[BG: ПРОДОЛЖИТЬ текущий фон без scene.]
+[SPRITES на входе: show cs_darya neutral pioneer normal at cs_darya_normal_right with dissolve; show cs_semen neutral pioneer normal at cs_semen_normal_left with dissolve.]
+[ПОСТАНОВКА И ВЫХОД: Дарья возвращается: show cs_darya explaining pioneer normal справа; затем amused на реплике о ложках. Семён smile слева. Перед передачей объявления hide cs_semen; show sl smile pioneer слева. После передачи hide sl; hide cs_darya. Карандаши, кроме одного для дневного рисунка, возвращены в коробку; один остаётся с разрешения Слави до вечера.]
+13 Тарелка и локоть
+[BG: scene bg int_dining_hall_day with Dissolve(1.0).]
+[SPRITES на входе: show cs_darya neutral pioneer normal at cs_darya_normal_right with dissolve; show us normal pioneer at cs_actor_left with dissolve.]
+[ПОСТАНОВКА И ВЫХОД: Семён сидит за кадром. Для его реплики hide us; show cs_semen neutral pioneer normal слева; затем скрыть Семёна и вернуть us grin слева. На осмотре локтя show cs_darya worried справа. Ульяна не сопровождает девушек в медпункт. Выход: hide us; hide cs_darya; scene ext_aidpost в следующей сцене.]
+14 Без подвига
+[BG: scene bg ext_aidpost_day with Dissolve(1.0).]
+[SPRITES на входе: show cs_darya neutral pioneer normal at cs_darya_normal_right with dissolve.]
+[ПОСТАНОВКА И ВЫХОД: После двух наружных строк play sound sfx_open_door_1; scene bg int_aidpost_day with Dissolve(1.0); play ambience ambience_medstation_inside_day fadeout 1.0 fadein 1.5; show cs normal at cs_actor_left; show cs_darya neutral справа. cs — штатный тег Виолы, не Соколовой. После обработки hide cs; hide cs_darya; play sound sfx_open_door_1.]
+15 Несколько минут в тени
+[BG: scene bg ext_aidpost_day with Dissolve(1.0).]
+[SPRITES на входе: show cs_darya neutral pioneer normal at cs_darya_normal_right with dissolve.]
+[ПОСТАНОВКА И ВЫХОД: Дарья neutral справа, на серьёзном разговоре serious, после шутки amused. Семён не появляется: его новое поручение известно из прощания после обеда. В конце hide cs_darya; scene cs_camp_path_day; show cs_darya neutral справа; музыка продолжается.]
+16 Открытая дверь
+[BG: scene bg ext_musclub_day with Dissolve(1.0).]
+[SPRITES на входе: show cs_darya neutral pioneer normal at cs_darya_normal_right with dissolve.]
+[ПОСТАНОВКА И ВЫХОД: У двери только Дарья справа. После стука передать открытый проём без звука закрытой двери; scene bg int_musclub_day with Dissolve(1.0); play ambience ambience_music_club_day fadeout 1.0 fadein 1.5; show mi normal pioneer слева; show cs_darya neutral справа. stop music fadeout 2.0; живую фразу описать текстом. К концу mi smile, Дарья neutral; фон остаётся для 17.]
+17 Один слушатель тоже полезен
+[BG: ПРОДОЛЖИТЬ текущий фон без scene.]
+[SPRITES на входе: show mi normal pioneer at cs_actor_left with dissolve; show cs_darya neutral pioneer normal at cs_darya_normal_right with dissolve.]
+[ПОСТАНОВКА И ВЫХОД: В обеих ветвях тот же фон и ambience; OST не включать. В А перед музыкальным фрагментом window hide dissolve; pause 1.0; window show dissolve. После него mi shy, затем smile на обсуждении. В Б mi normal и краткий осмотр без оценивания мелодии. В конце обе ветви оставляют mi и Дарью на плане.]
+[MENU: «Послушать репетицию до конца» / «Осмотреть кружок и не задерживать Мику». Новый счётчик cs_friend_mi.]
+[ВАРИАНТ А: cs_friend_mi += 1 ровно один раз.]
+[ВАРИАНТ Б: очки без изменений.]
+[ОБЪЕДИНЕНИЕ.]
+18 Рыжая гитаристка
+[BG: ПРОДОЛЖИТЬ текущий фон без scene.]
+[SPRITES на входе: show dv normal pioneer at cs_actor_left with dissolve; show cs_darya neutral pioneer normal at cs_darya_normal_right with dissolve.]
+[ПОСТАНОВКА И ВЫХОД: Вход Алисы: play sound sfx_open_door_1; hide mi; show dv normal pioneer слева. Мику остаётся у инструмента за кадром. Для совместного разбора hide cs_darya; show mi normal pioneer at cs_actor_right; Алиса слева. Когда девушки выходят, hide dv; hide mi; scene bg ext_musclub_day; play ambience ambience_camp_center_day; show cs_darya smile справа. После прекращения репетиции можно play music music_list["i_want_to_play"] fadein 2.0 на короткий выход; в 19 заменить на get_to_know_me_better.]
+19 Даша выбирает дорогу
+[BG: scene cs_camp_path_day with Dissolve(1.0).]
+[SPRITES на входе: show cs_darya neutral pioneer normal at cs_darya_normal_right with dissolve.]
+[ПОСТАНОВКА И ВЫХОД: На подходе к скамейке hide cs_darya; scene bg ext_square_day with Dissolve(1.0); show cs_darya neutral pioneer normal справа. Использовать условный диалоговый портрет; не пытаться разместить ростовой PNG на нарисованной лавке. В конце сохранить кадр.]
+20 Не только соседка
+[BG: ПРОДОЛЖИТЬ текущий фон без scene.]
+[SPRITES на входе: show cs_darya neutral pioneer normal at cs_darya_normal_right with dissolve.]
+[ПОСТАНОВКА И ВЫХОД: Фон и музыка продолжаются. Дарья thinking на разговоре о молчании, amused на комиссии, shy_smile на взаимном признании. Не запускать романтический маршрут и не прибавлять дружбу другим персонажам. Пауза 0.7 после «мне тоже сейчас хорошо». В конце оставить shy_smile.]
+21 Запасной выход для мыслей
+[BG: ПРОДОЛЖИТЬ текущий фон без scene.]
+[SPRITES на входе: show cs_darya neutral pioneer normal at cs_darya_normal_right with dissolve.]
+[ПОСТАНОВКА И ВЫХОД: Дарья neutral, затем thinking и мягкая улыбка. Для настоящей улыбки можно show cs_dasha_pioneer 6 normal справа; при следующей эмоции hide cs_dasha_pioneer, вернуть cs_darya — у двух регистраций разные теги. В конце hide cs_darya; hide cs_dasha_pioneer; перейти к библиотеке. Лист с рисунком остаётся у Лены.]
+22 Возвращённый карандаш
+[BG: scene bg ext_library_day with Dissolve(1.0).]
+[SPRITES на входе: show cs_darya neutral pioneer normal at cs_darya_normal_right with dissolve.]
+[ПОСТАНОВКА И ВЫХОД: После наружного перехода play sound sfx_open_door_1; scene bg int_library_day; play ambience ambience_library_day fadeout 1.0 fadein 1.5; show mz normal glasses pioneer слева; show cs_darya neutral справа. Женя не снимает очки. По окончании выбора книги кадр сохраняется.]
+23 Не дёргать за каждое молчание
+[BG: ПРОДОЛЖИТЬ текущий фон без scene.]
+[SPRITES на входе: show mz normal glasses pioneer at cs_actor_left with dissolve; show cs_darya neutral pioneer normal at cs_darya_normal_right with dissolve.]
+[ПОСТАНОВКА И ВЫХОД: Фон, музыка, ambience сохраняются. В А mz normal, Дарья за кадром читает: hide cs_darya на сортировке; после работы вернуть справа. В Б Дарья thinking справа, Женя слева. При карточке с неверным номером не angry, а mz normal. В конце обе ветви — mz normal слева, Дарья neutral справа.]
+[MENU: «Помочь проверить карточки возвращённых книг» / «Почитать рядом с Дашей». Очки Жени начисляются только за первую ветвь.]
+[ВАРИАНТ А: cs_friend_mz += 1 ровно один раз.]
+[ВАРИАНТ Б: очки без изменений.]
+[ОБЪЕДИНЕНИЕ.]
+24 Разрешение прийти снова
+[BG: ПРОДОЛЖИТЬ текущий фон без scene.]
+[SPRITES на входе: show mz normal glasses pioneer at cs_actor_left with dissolve; show cs_darya neutral pioneer normal at cs_darya_normal_right with dissolve.]
+[ПОСТАНОВКА И ВЫХОД: Для приглашения при дружбе >=2 mz normal glasses pioneer, короткая пауза 0.5, без театрального смущения. На извинении сохранить normal. У двери hide cs_darya; hide mz; play sound sfx_open_door_1. Книга взята Дарьей в обеих ветвях.]
+[ЕСЛИ cs_friend_mz >= 2:]
+[ИНАЧЕ:]
+[ОБЪЕДИНЕНИЕ.]
+25 Всё таки видно издалека
+[BG: scene cs_camp_path_sunset with Dissolve(1.0).]
+[SPRITES на входе: show cs_darya neutral pioneer normal at cs_darya_normal_right with dissolve.]
+[ПОСТАНОВКА И ВЫХОД: Установить sunset. play sound sfx_dinner_horn_processed ровно один раз на подходе, не повторять в 26. После дорожки scene bg ext_dining_hall_near_sunset; показать Дарью. Для Ульяны hide cs_darya; show us grin слева; после её ухода hide us; вернуть Дарью. При появлении Семёна показать smile слева. Выход очищается сценой столовой.]
+26 Вопрос который можно отложить
+[BG: scene bg int_dining_hall_sunset with Dissolve(1.0).]
+[SPRITES на входе: show cs_darya neutral pioneer normal at cs_darya_normal_right with dissolve; show cs_semen neutral pioneer normal at cs_semen_normal_left with dissolve.]
+[ПОСТАНОВКА И ВЫХОД: На вопросе о возвращении cs_semen serious, Дарья thinking. После договорённости Семён relaxed, Дарья neutral. Эмбиент dining_hall_full, не camp_center_evening внутри здания. В конце hide cs_semen; hide cs_darya. Нет второго сигнала на ужин.]
+27 После посуды
+[BG: scene bg ext_dining_hall_near_sunset with Dissolve(1.0).]
+[SPRITES на входе: show cs_darya neutral pioneer normal at cs_darya_normal_right with dissolve.]
+[ПОСТАНОВКА И ВЫХОД: После столовой показать Дарью справа; Семёна не показывать — он помогает с лавками. На возвращении домой scene cs_house_lena_darya_ext_sunset; затем scene cs_house_lena_darya_int_sunset; ambience_int_cabin_evening. Дарья в форме: tie_touch, затем shy_smile. После выхода scene cs_camp_path_sunset; ambience_camp_center_evening; затем scene bg ext_square_sunset. Книга остаётся в домике. Все эти переходы в порядке текста, не сразу подряд до реплик.]
+28 Место на скамейке
+[BG: scene bg ext_square_sunset with Dissolve(1.0).]
+[SPRITES на входе: show cs_darya neutral pioneer normal at cs_darya_normal_right with dissolve.]
+[ПОСТАНОВКА И ВЫХОД: stop music fadeout 2.0. Дарья справа; для короткого общего плана hide cs_darya; show mi normal pioneer far at cs_actor_far_left; show dv normal pioneer far at cs_actor_far_right. Потом hide mi; hide dv; вернуть Дарью справа. Семён несёт лавку за кадром. В конце сохранить ambience и фон.]
+29 Свой рисунок
+[BG: ПРОДОЛЖИТЬ текущий фон без scene.]
+[SPRITES на входе: show un normal pioneer at cs_actor_left with dissolve; show cs_darya neutral pioneer normal at cs_darya_normal_right with dissolve.]
+[ПОСТАНОВКА И ВЫХОД: Условие проверять до любого show un. Если ложно, вся сцена пропускается. Если истинно, Тихонова normal слева, Дарья neutral справа; к завершению un smile. После поворота к выступлению hide un with dissolve: она остаётся слушателем за кадром. Дарья справа; фон и звук не меняются.]
+[Короткая условная вставка: cs_met_un == True и cs_friend_un >= 2. Без меню, без прибавки очков. В остальных прохождениях продолжить общий вечер.]
+[ОБЪЕДИНЕНИЕ. Тихонова не становится обязательной участницей последующих реплик; после вставки внимание возвращается к Дарье и музыке.]
+30 Без камеры
+[BG: ПРОДОЛЖИТЬ текущий фон без scene.]
+[SPRITES на входе: show cs_darya neutral pioneer normal at cs_darya_normal_right with dissolve.]
+[ПОСТАНОВКА И ВЫХОД: На музыкальном плане hide cs_darya; show mi normal pioneer far слева; show dv normal pioneer far справа. После начала песни hide mi; hide dv; show cs_darya neutral normal справа для тихого разговора. Музыка OST выключена; живое исполнение описано, либо используется заранее утверждённая запись. После завершения номера play music music_list["lets_be_friends"] fadein 2.0 на громкости 0.22. На финальной улыбке cs_darya shy_smile. Затем перейти к ночному плану.]
+31 До поворота
+[BG: scene bg ext_square_night with Dissolve(1.0).]
+[SPRITES на входе: show cs_darya neutral pioneer normal at cs_darya_normal_right with dissolve; show cs_semen neutral pioneer normal at cs_semen_normal_left with dissolve.]
+[ПОСТАНОВКА И ВЫХОД: Установить night. После первых реплик scene cs_camp_path_night with Dissolve(1.0); повторно показать Семёна и Дарью на своих местах. У развилки show cs_semen wave слева; после прощания hide cs_semen with dissolve. Далее scene cs_house_lena_darya_ext_night; Дарья справа, затем hide cs_darya перед входом.]
+32 Рисунок на столе
+[BG: scene cs_house_lena_darya_int_night with Dissolve(1.0).]
+[SPRITES на входе: никого; голоса вне кадра до указанного show.]
+[ПОСТАНОВКА И ВЫХОД: play sound sfx_open_door_1 перед входом. Внутри ambience_int_cabin_night. Умывание и переодевание — window hide; scene black with dissolve; pause 0.6; scene cs_house_lena_darya_int_night with dissolve; window show. Спрайты после переодевания не показывать. Телефон, лист и рисунок описаны текстом; геройские портреты не требуются.]
+33 Завтра тоже вместе
+[BG: ПРОДОЛЖИТЬ текущий фон без scene.]
+[SPRITES на входе: никого; голоса вне кадра до указанного show.]
+[ПОСТАНОВКА И ВЫХОД: Продолжить кадр комнаты без спрайтов. Если заранее проверена авторская CG сидящих за столом, показать её только на разговоре за столом и вернуть комнату перед чтением/сном. При выключении лампы stop music fadeout 4.0; scene black with Dissolve(2.0); ambience оставить ещё 2.0 секунды, затем stop ambience fadeout 3.0. После последнего пожелания ночи установить cs_day02_done = True; перейти к существующему экрану завершения демо, без несуществующего имени screen.]

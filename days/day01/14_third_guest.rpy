@@ -2,11 +2,23 @@
 # Source: source/day01_part03.md.
 label cs_day01_14:
     $ save_name = u"Чужая смена — День 1: Третий лишний"
-    hide sl
+    # cs_presence_keep: hide sl
     show mt normal pioneer at cs_actor_left
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     $ renpy.music.set_volume(0.3, delay=1.0, channel="music")
     play music cs_day_music_unknown fadeout 1.5 fadein 3.0
     $ renpy.music.set_volume(0.28, delay=1.0, channel="ambience")
+    # cs_director_begin: entry frame; explicit scene plan
+    $ cs_frame_focus(["mt", "cs_darya"])
+    with cs_sprite_change
+    # cs_director_end
+    # cs_director_begin: REFLECTIVE_SHOT: Camp seen through the window and absent protagonist
+    $ cs_reflective_focus()
+    with cs_sprite_change
+    label cs_director_check_894164c81a:
+    # cs_director_end
     cs_narrator "За стеклом виднелся залитый солнцем лагерь."
     cs_narrator "Где-то там уже жили все те люди, которых я знала как персонажей."
     cs_narrator "Алиса."
@@ -24,15 +36,26 @@ label cs_day01_14:
     cs_th "Или вместе с ним?"
     cs_narrator "Я подошла к окну."
     cs_narrator "На площади вдали мелькали пионеры."
+    # cs_director_begin: Return to direct interaction: Camp seen through the window and absent protagonist
+    $ cs_frame_focus(["mt", "cs_darya"])
+    with cs_sprite_change
+    label cs_director_check_1b254a9f1e:
+    # cs_director_end
     cs_ls "Если сейчас ещё и Семён где-нибудь ходит…"
     cs_narrator "Дарья встала рядом."
     # cs_darya_stage: present in story
     show cs_darya surprised pioneer normal at cs_darya_normal_right
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_da "Что?"
     cs_narrator "Я посмотрела на неё."
     cs_ls "Тогда нас здесь уже минимум трое, кто не должен здесь находиться."
     # cs_darya_stage: present in story
     show cs_darya thinking pioneer normal at cs_darya_normal_right
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_da "А если его нет?"
     cs_ls "Тогда ещё интереснее."
     cs_da "Почему?"

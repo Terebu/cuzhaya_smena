@@ -1,80 +1,20 @@
-"""Generate independent native tests for both choices and real saved continuation."""
 from pathlib import Path
-ROOT=Path(__file__).resolve().parent.parent
-helper='''# -*- coding: utf-8 -*-
-label cs_qa_load_actual_part08:
-    $ renpy.load("cs-preserved-part08")
-    return
-'''
-for branch,option,points in [('meet','Остановиться и познакомиться',1),('pass','Извиниться и пройти дальше',0)]:
-    extra='''    click until label cs_check_day01_part09_trio
-    pause 1.5
-    assert renpy.showing("un") and renpy.showing("cs_semen") and renpy.showing("cs_darya")
-    assert cs_un_name_known
-    $ cs_qa_capture("part09_three_people")
-''' if points else ''
-    helper+=f'''
-testcase cs_day01_part09_{branch}:
-    pause 1.0
-    $ renpy.set_physical_size((1280,720))
-    $ _preferences.text_cps = 0
-    $ _test.timeout = 30.0
-    assert renpy.can_load("cs-preserved-part08")
-    run Start("cs_qa_load_actual_part08")
-    pause 0.6
-    assert cs_day01_part08_done and not cs_day01_part09_done
-    run Jump("cs_check_day01_part08_pending")
-    pause 0.8
-    assert renpy.showing("cs_camp_path_sunset") and renpy.showing("cs_darya")
-    assert persistent.sprite_time == "sunset"
-    # Finish the saved-screen dissolve before judging the new composition.
-    click
-    click
-    pause 0.8
-    $ cs_qa_capture("part09_centered_start_{branch}")
-    click until label cs_check_day01_part09_choice
-    pause 0.8
-    $ cs_qa_capture("part09_menu_{branch}")
-    "{option}"
-{extra}    click until label cs_check_day01_part09_merge
-    pause 0.8
-    assert cs_friend_un == {points} and cs_met_un == {bool(points)}
-    assert cs_part09_choice == "{branch}"
-    assert not renpy.showing("un") and not renpy.showing("cs_semen")
-    $ renpy.take_screenshot()
-    $ renpy.save("cs-part09-branch-{branch}")
-    $ cs_friend_un = 99
-    $ renpy.load("cs-part09-branch-{branch}")
-    pause 0.6
-    assert cs_friend_un == {points} and cs_met_un == {bool(points)}
-    click until label cs_check_day01_part09_introspection
-    pause 0.8
-    assert not renpy.showing("cs_darya")
-    assert renpy.showing("cs_camp_path_sunset")
-    $ cs_qa_capture("part09_thoughts_{branch}")
-    click until label cs_check_day01_part09_returns
-    pause 0.8
-    assert renpy.showing("cs_darya")
-    $ cs_qa_capture("part09_back_to_darya_{branch}")
-    click until label cs_check_day01_part09_pending
-    pause 0.8
-    assert cs_day01_part09_done
-    assert cs_friend_un == {points} and cs_met_un == {bool(points)}
-    assert renpy.get_screen("cs_day01_pending") is not None
-    assert renpy.get_screen("main_menu") is None
-    $ renpy.take_screenshot()
-    $ renpy.save("cs-part09-end-{branch}")
-    $ cs_friend_un = 99
-    $ cs_day01_part09_done = False
-    $ renpy.load("cs-part09-end-{branch}")
-    pause 0.6
-    assert cs_day01_part09_done and cs_friend_un == {points}
-    assert renpy.music.get_playing(channel="music") == cs_day_music_everyday
-    $ cs_qa_capture("part09_open_day_{branch}")
-    python:
-        import os
-        with open(os.path.join(config.gamedir,"mods/chuzaya_smena/qa/part09_{branch}_pass.txt"),"w") as cs_f:
-            cs_f.write("PASS: old part-eight save, {branch} branch, {points} point, merge, introspection, both save/load checkpoints and unfinished day.\\n")
-    run Quit(confirm=False)
-'''
-(ROOT/'qa/day01_part09_test.rpy').write_text(helper,encoding='utf8')
+R=Path(__file__).resolve().parent.parent
+profiles={'zero':(0,0,0,0,0,0),'zhenya':(2,0,0,0,0,0),'zhenya_one':(1,0,0,0,0,0),'seats':(0,1,0,2,0,0),'miku':(0,0,1,0,0,0),'all':(2,1,1,2,2,2)}
+out=['# -*- coding: utf-8 -*-']
+for profile,scores in profiles.items():
+ mz,sl,mi,se,vi,un=scores;name='cs_part09_'+profile
+ out+=['testcase '+name+':','    pause 1.0','    $ renpy.set_physical_size((1280,720))','    $ _preferences.text_cps = 0','    $ _test.timeout = 50.0','    $ _test.force = True','    run Start("cs_qa_part09_load")','    pause 0.5','    $ cs_friend_mz,cs_friend_sl,cs_friend_mi,cs_friend_se,cs_friend_viola,cs_friend_un = '+repr(scores),'    $ cs_qa_part09_scores = '+repr(scores),'    $ cs_qa_part09_visits = []','    $ cs_mz_map_lead = False','    $ cs_sl_good_seats = False','    $ cs_mi_intro_revised = False','    $ cs_helped_sl_day2 = '+str(profile=='all'),'    $ cs_qa_global_audit = True','    $ cs_qa_part09_audit = True','    run Jump("cs_day02_part09_start")','    click until label cs_check_part09_s60','    pause 0.5','    assert cs_lena_elbow_bandaged and cs_lena_no_sport_day2','    assert renpy.showing("cs_darya") and not renpy.showing("cs_semen")','    click until label cs_check_part09_zhenya_greeting','    pause 0.5','    assert renpy.showing("cs_zhenya") and renpy.showing("cs_darya")','    $ cs_qa_capture("'+name+'_greeting")']
+ if mz>=2:out+=['    click until label cs_check_part09_map_lead','    pause 0.5','    assert cs_mz_map_lead','    $ cs_qa_capture("'+name+'_lead")','    $ renpy.take_screenshot()','    $ renpy.save("'+name+'-lead")','    $ cs_mz_map_lead = False','    $ renpy.load("'+name+'-lead")','    pause 0.5','    assert cs_mz_map_lead']
+ out+=['    click until label cs_check_part09_dinner','    pause 0.5','    assert renpy.showing("cs_zhenya") == '+str(mz>=1),'    assert renpy.music.get_playing() is None','    $ cs_qa_capture("'+name+'_dinner")','    click until label cs_check_part09_semen','    pause 0.5','    assert renpy.showing("cs_semen") and renpy.showing("cs_darya")','    assert renpy.showing("cs_zhenya") == '+str(mz>=1),'    $ cs_qa_capture("'+name+'_semen")','    click until label cs_check_part09_semen_left','    pause 0.5','    assert not renpy.showing("cs_semen")','    assert renpy.showing("cs_zhenya") == '+str(mz>=1),'    click until label cs_check_part09_square','    pause 0.5','    assert persistent.timeofday == "sunset"','    assert not renpy.showing("cs_zhenya") and not renpy.showing("cs_semen")','    click until label cs_check_part09_seats','    pause 0.5','    assert cs_sl_good_seats == '+str(sl>=1),'    assert not renpy.showing("sl")','    $ cs_qa_capture("'+name+'_seats")','    click until label cs_check_part09_pending','    pause 3.0','    assert cs_day02_part09_complete and not cs_day02_done','    assert cs_mz_map_lead == '+str(mz>=2),'    assert cs_sl_good_seats == '+str(sl>=1),'    assert cs_mi_intro_revised == '+str(mi>=1),'    assert renpy.get_screen("cs_day02_concert_wait_screen") is not None','    assert renpy.showing("cs_darya") and not renpy.showing("mi") and not renpy.showing("sl")','    assert renpy.music.get_playing() is None','    assert ("cs_day02_62" in cs_qa_part09_visits) == '+str(mz>=2),'    assert __import__("__builtin__").all(cs_qa_part09_visits.count(x) == 1 for x in ("cs_day02_60","cs_day02_61","cs_day02_63","cs_day02_64","cs_day02_65"))','    assert (cs_friend_mz,cs_friend_sl,cs_friend_mi,cs_friend_se,cs_friend_viola,cs_friend_un) == cs_qa_part09_scores','    $ cs_qa_capture("'+name+'_end")','    $ renpy.take_screenshot()','    $ renpy.save("'+name+'-end")','    $ cs_sl_good_seats = not cs_sl_good_seats','    $ renpy.load("'+name+'-end")','    pause 0.5','    assert cs_sl_good_seats == '+str(sl>=1),'    $ open(config.gamedir + "/mods/chuzaya_smena/qa/'+name+'_pass.txt", "w").write("PASS")','    run Quit(confirm=False)','']
+test='\n'.join(out)
+test=test.replace('renpy.showing("cs_zhenya") ==','bool(renpy.showing("cs_zhenya")) ==')
+if (R/'source/day02_part09_dinner_revised.md').exists():
+ test=test.replace('    assert renpy.music.get_playing() is None\n    $ cs_qa_capture("cs_part09_', '    assert renpy.music.get_playing() == "sound/music/my_daily_life.ogg"\n    $ cs_qa_capture("cs_part09_')
+test=test.replace('    click until label cs_check_part09_dinner\n    pause 0.5','    click until label cs_check_part09_dinner\n    pause 2.5')
+test=test.replace('    click until label cs_check_part09_seats','    click until label cs_check_part09_slavya\n    pause 0.5\n    assert renpy.showing("sl") and renpy.showing("cs_darya")\n    $ cs_qa_capture("part09_slavya_composition")\n    click until label cs_check_part09_seats')
+for profile in ('miku','all'):
+ marker='    $ cs_qa_capture("cs_part09_'+profile+'_seats")'
+ test=test.replace(marker,marker+'\n    click until label cs_check_part09_miku\n    pause 0.5\n    assert renpy.showing("mi") and renpy.showing("cs_darya") and not renpy.showing("sl")\n    $ cs_qa_capture("cs_part09_'+profile+'_miku")')
+(R/'qa/part09_routes_test.rpy').write_text(test,encoding='utf8')
+print('Six friendship combinations, old-save continuity and event/final save-load checks generated')

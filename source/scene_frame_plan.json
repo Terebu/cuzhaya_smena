@@ -1,0 +1,2900 @@
+{
+  "days/day01/01_bus.rpy": {
+    "initial": [
+      "cs_dasha_winter"
+    ],
+    "events": []
+  },
+  "days/day01/02_recognition.rpy": {
+    "initial": [
+      "cs_dasha_winter"
+    ],
+    "events": [
+      {
+        "anchor": "Я почти не услышала вопроса.",
+        "kind": "reflective",
+        "tags": [],
+        "when": "before",
+        "reason": "REFLECTIVE_SHOT: Recognition of game scenery and bus number",
+        "occurrence": 1,
+        "id": "4205df3c28"
+      },
+      {
+        "anchor": "Нет.",
+        "kind": "focus",
+        "tags": [
+          "cs_dasha_winter"
+        ],
+        "when": "before",
+        "reason": "Return to direct interaction: Recognition of game scenery and bus number",
+        "occurrence": 2,
+        "id": "93ae1e4b14"
+      }
+    ]
+  },
+  "days/day01/03_reality.rpy": {
+    "initial": [
+      "cs_dasha_winter"
+    ],
+    "events": [
+      {
+        "anchor": "Я снова повернулась к лагерю.",
+        "kind": "reflective",
+        "tags": [],
+        "when": "before",
+        "reason": "REFLECTIVE_SHOT: Rules of the remembered game",
+        "occurrence": 1,
+        "id": "73161bfb32"
+      },
+      {
+        "anchor": "Я медленно вдохнула.",
+        "kind": "focus",
+        "tags": [
+          "cs_dasha_winter"
+        ],
+        "when": "before",
+        "reason": "Return to direct interaction: Rules of the remembered game",
+        "occurrence": 1,
+        "id": "9a7409ab4c"
+      }
+    ]
+  },
+  "days/day01/04_reflection.rpy": {
+    "initial": [],
+    "events": [
+      {
+        "anchor": "Я опустила взгляд на свои руки.",
+        "kind": "focus",
+        "tags": [],
+        "when": "before",
+        "reason": "Hands and bus mirror",
+        "occurrence": 1,
+        "id": "08af6135f7"
+      },
+      {
+        "anchor": "Дарья подошла ко мне.",
+        "kind": "focus",
+        "tags": [
+          "cs_dasha_winter"
+        ],
+        "when": "before",
+        "reason": "Conversation at the mirror",
+        "occurrence": 1,
+        "id": "94e3b0b768"
+      }
+    ]
+  },
+  "days/day01/05_home.rpy": {
+    "initial": [
+      "cs_dasha_winter"
+    ],
+    "events": [
+      {
+        "anchor": "Потому что одно дело — рассуждать о визуальной новелле, в которую каким-то невероятным образом попала.",
+        "kind": "reflective",
+        "tags": [],
+        "when": "before",
+        "reason": "REFLECTIVE_SHOT: Moscow and the life left behind",
+        "occurrence": 1,
+        "id": "d3d42e530a"
+      },
+      {
+        "anchor": "Я поправила одежду на плече.",
+        "kind": "focus",
+        "tags": [
+          "cs_dasha_winter"
+        ],
+        "when": "before",
+        "reason": "Return to direct interaction: Moscow and the life left behind",
+        "occurrence": 1,
+        "id": "4b1ab5b0ff"
+      },
+      {
+        "anchor": "Я задумалась.",
+        "kind": "reflective",
+        "tags": [],
+        "when": "before",
+        "reason": "REFLECTIVE_SHOT: Remembering the beginning of the novel",
+        "occurrence": 1,
+        "id": "81ca1cb78b"
+      }
+    ]
+  },
+  "days/day01/06_slavya.rpy": {
+    "initial": [
+      "cs_dasha_winter"
+    ],
+    "events": []
+  },
+  "days/day01/07_uninvited.rpy": {
+    "initial": [
+      "sl",
+      "cs_dasha_winter"
+    ],
+    "events": []
+  },
+  "days/day01/08_camp_walk.rpy": {
+    "initial": [
+      "cs_dasha_winter"
+    ],
+    "events": [
+      {
+        "anchor": "И вот здесь ощущение нереальности стало ещё сильнее.",
+        "kind": "reflective",
+        "tags": [],
+        "when": "before",
+        "reason": "REFLECTIVE_SHOT: Living camp panorama",
+        "occurrence": 1,
+        "id": "4a3e545105"
+      },
+      {
+        "anchor": "Дарья заметила моё движение.",
+        "kind": "focus",
+        "tags": [
+          "sl",
+          "cs_dasha_winter"
+        ],
+        "when": "before",
+        "reason": "Return to direct interaction: Living camp panorama",
+        "occurrence": 1,
+        "id": "9a119efd1d"
+      },
+      {
+        "anchor": "Я смотрела по сторонам, испытывая странную смесь любопытства и очень нехорошего предчувствия.",
+        "kind": "reflective",
+        "tags": [],
+        "when": "before",
+        "reason": "REFLECTIVE_SHOT: Map remembered as real space",
+        "occurrence": 1,
+        "id": "a51ccf619e"
+      },
+      {
+        "anchor": "Я приблизилась к Дарье.",
+        "kind": "focus",
+        "tags": [
+          "sl",
+          "cs_dasha_winter"
+        ],
+        "when": "before",
+        "reason": "Return to direct interaction: Map remembered as real space",
+        "occurrence": 1,
+        "id": "f4a4f32b11"
+      }
+    ]
+  },
+  "days/day01/09_counsellor.rpy": {
+    "initial": [
+      "sl",
+      "cs_dasha_winter"
+    ],
+    "events": []
+  },
+  "days/day01/10_soviet_home.rpy": {
+    "initial": [
+      "mt",
+      "sl",
+      "cs_dasha_winter"
+    ],
+    "events": [
+      {
+        "anchor": "И вот здесь ощущение путешествия во времени стало особенно отчётливым.",
+        "kind": "reflective",
+        "tags": [],
+        "when": "before",
+        "reason": "REFLECTIVE_SHOT: Counsellor cabin and historic objects",
+        "occurrence": 1,
+        "id": "2c552e9788"
+      },
+      {
+        "anchor": "Потом совершенно серьёзно указала на него пальцем.",
+        "kind": "focus",
+        "tags": [
+          "mt",
+          "cs_dasha_winter"
+        ],
+        "when": "before",
+        "reason": "Return to direct interaction: Counsellor cabin and historic objects",
+        "occurrence": 1,
+        "id": "a45e77b705"
+      },
+      {
+        "anchor": "Точно.",
+        "kind": "reflective",
+        "tags": [],
+        "when": "before",
+        "reason": "REFLECTIVE_SHOT: History versus present reality",
+        "occurrence": 1,
+        "id": "53a69c5550"
+      },
+      {
+        "anchor": "Я повернулась к вожатой.",
+        "kind": "focus",
+        "tags": [
+          "mt",
+          "cs_dasha_winter"
+        ],
+        "when": "before",
+        "reason": "Return to direct interaction: History versus present reality",
+        "occurrence": 1,
+        "id": "96e1923c75"
+      }
+    ]
+  },
+  "days/day01/11_state_machine.rpy": {
+    "initial": [
+      "mt",
+      "sl",
+      "cs_dasha_winter"
+    ],
+    "events": [
+      {
+        "anchor": "Она развернулась и вышла.",
+        "kind": "absent",
+        "tags": [
+          "sl"
+        ],
+        "when": "after",
+        "reason": "Physical departure in the authored scene",
+        "occurrence": 1,
+        "id": "9074a78b49"
+      },
+      {
+        "anchor": "И только сейчас, когда появилась хотя бы минута ничего не делать, мозг начал нормально переваривать происходящее.",
+        "kind": "reflective",
+        "tags": [],
+        "when": "before",
+        "reason": "Private reflection before the next topic",
+        "occurrence": 1,
+        "id": "8b6ec3e77c"
+      }
+    ]
+  },
+  "days/day01/12_calculator.rpy": {
+    "initial": [
+      "mt",
+      "cs_dasha_winter"
+    ],
+    "events": []
+  },
+  "days/day01/13_uniform.rpy": {
+    "initial": [
+      "sl",
+      "cs_dasha_winter"
+    ],
+    "events": []
+  },
+  "days/day01/14_third_guest.rpy": {
+    "initial": [
+      "mt",
+      "cs_darya"
+    ],
+    "events": [
+      {
+        "anchor": "За стеклом виднелся залитый солнцем лагерь.",
+        "kind": "reflective",
+        "tags": [],
+        "when": "before",
+        "reason": "REFLECTIVE_SHOT: Camp seen through the window and absent protagonist",
+        "occurrence": 1,
+        "id": "894164c81a"
+      },
+      {
+        "anchor": "Если сейчас ещё и Семён где-нибудь ходит…",
+        "kind": "focus",
+        "tags": [
+          "mt",
+          "cs_darya"
+        ],
+        "when": "before",
+        "reason": "Return to direct interaction: Camp seen through the window and absent protagonist",
+        "occurrence": 1,
+        "id": "1b254a9f1e"
+      }
+    ]
+  },
+  "days/day01/15_two_newcomers.rpy": {
+    "initial": [
+      "mt",
+      "cs_darya"
+    ],
+    "events": []
+  },
+  "days/day01/16_another_passenger.rpy": {
+    "initial": [
+      "mt",
+      "cs_darya"
+    ],
+    "events": [
+      {
+        "anchor": "Семён.",
+        "kind": "reflective",
+        "tags": [],
+        "when": "before",
+        "reason": "REFLECTIVE_SHOT: Unanswered question about another passenger",
+        "occurrence": 2,
+        "id": "ce7afeb1d8"
+      }
+    ]
+  },
+  "days/day01/17_beyond_the_screen.rpy": {
+    "initial": [
+      "cs_darya"
+    ],
+    "events": [
+      {
+        "anchor": "Я посмотрела на проходящих мимо ребят.",
+        "kind": "reflective",
+        "tags": [],
+        "when": "before",
+        "reason": "REFLECTIVE_SHOT: Camp without modern devices",
+        "occurrence": 1,
+        "id": "8e5548a32d"
+      },
+      {
+        "anchor": "М-да.",
+        "kind": "focus",
+        "tags": [
+          "cs_darya"
+        ],
+        "when": "before",
+        "reason": "Return to direct interaction: Camp without modern devices",
+        "occurrence": 1,
+        "id": "cbaf0ce5ec"
+      },
+      {
+        "anchor": "Мы прошли мимо нескольких домиков.",
+        "kind": "reflective",
+        "tags": [],
+        "when": "before",
+        "reason": "REFLECTIVE_SHOT: World extending beyond painted backgrounds",
+        "occurrence": 1,
+        "id": "a2b3df439b"
+      },
+      {
+        "anchor": "Я приблизилась к Дарье.",
+        "kind": "focus",
+        "tags": [
+          "mt",
+          "cs_darya"
+        ],
+        "when": "before",
+        "reason": "Return to direct interaction: World extending beyond painted backgrounds",
+        "occurrence": 1,
+        "id": "96adca2052"
+      }
+    ]
+  },
+  "days/day01/18_anachronism.rpy": {
+    "initial": [
+      "cs_darya"
+    ],
+    "events": []
+  },
+  "days/day01/19_dining_hall.rpy": {
+    "initial": [
+      "mt",
+      "cs_darya"
+    ],
+    "events": [
+      {
+        "anchor": "Она стояла возле стены и о чём-то разговаривала с девочкой заметно ниже ростом.",
+        "kind": "focus",
+        "tags": [
+          "dv",
+          "cs_darya"
+        ],
+        "when": "before",
+        "reason": "Focus on the girls outside the canteen",
+        "occurrence": 1,
+        "id": "5d95593d1c"
+      },
+      {
+        "anchor": "Девочки! В столовую, обедать!",
+        "kind": "focus",
+        "tags": [
+          "mt",
+          "cs_darya"
+        ],
+        "when": "before",
+        "reason": "Return to the counsellor calling the newcomers",
+        "occurrence": 1,
+        "id": "366768875a"
+      }
+    ]
+  },
+  "days/day01/20_comrade_semen.rpy": {
+    "initial": [
+      "cs_darya"
+    ],
+    "events": []
+  },
+  "days/day01/part05/21_not_a_simple_question.rpy": {
+    "initial": [
+      "cs_darya",
+      "cs_semen",
+      "mt"
+    ],
+    "events": [
+      {
+        "anchor": "Она направилась к столу у окна.",
+        "kind": "absent",
+        "tags": [
+          "mt"
+        ],
+        "when": "after",
+        "reason": "Physical departure in the authored scene",
+        "occurrence": 1,
+        "id": "2b08382bad"
+      }
+    ]
+  },
+  "days/day01/part05/22_similar_journey.rpy": {
+    "initial": [
+      "cs_darya",
+      "cs_semen"
+    ],
+    "events": []
+  },
+  "days/day01/part05/23_familiar_story.rpy": {
+    "initial": [
+      "cs_darya",
+      "cs_semen"
+    ],
+    "events": []
+  },
+  "days/day01/part05/24_working_group.rpy": {
+    "initial": [
+      "cs_darya",
+      "cs_semen"
+    ],
+    "events": [
+      {
+        "anchor": "Она ещё раз оглядела стол и пошла дальше.",
+        "kind": "absent",
+        "tags": [
+          "mt"
+        ],
+        "when": "after",
+        "reason": "Physical departure in the authored scene",
+        "occurrence": 1,
+        "id": "40706f08b7"
+      }
+    ]
+  },
+  "days/day01/part06/25_after_lunch.rpy": {
+    "initial": [
+      "cs_semen",
+      "cs_darya"
+    ],
+    "events": []
+  },
+  "days/day01/part06/26_new_home_path.rpy": {
+    "initial": [
+      "sl",
+      "cs_darya"
+    ],
+    "events": [
+      {
+        "anchor": "Мы свернули на дорожку между домиками.",
+        "kind": "reflective",
+        "tags": [],
+        "when": "before",
+        "reason": "REFLECTIVE_SHOT: Camp paths and independent world",
+        "occurrence": 1,
+        "id": "3da2ea974f"
+      },
+      {
+        "anchor": "Дарья заметила, что я замедлила шаг.",
+        "kind": "focus",
+        "tags": [
+          "sl",
+          "cs_darya"
+        ],
+        "when": "before",
+        "reason": "Return to direct interaction: Camp paths and independent world",
+        "occurrence": 1,
+        "id": "ffe656a9cf"
+      }
+    ]
+  },
+  "days/day01/part06/27_house_for_two.rpy": {
+    "initial": [
+      "sl",
+      "cs_darya"
+    ],
+    "events": [
+      {
+        "anchor": "Дверь закрылась.",
+        "kind": "absent",
+        "tags": [
+          "sl"
+        ],
+        "when": "after",
+        "reason": "Physical departure in the authored scene",
+        "occurrence": 1,
+        "id": "1633c67ed0"
+      }
+    ]
+  },
+  "days/day01/part06/28_without_witnesses.rpy": {
+    "initial": [
+      "cs_darya"
+    ],
+    "events": [
+      {
+        "anchor": "Я подошла к окну.",
+        "kind": "reflective",
+        "tags": [],
+        "when": "before",
+        "reason": "REFLECTIVE_SHOT: Window panorama and impossible holiday",
+        "occurrence": 1,
+        "id": "e7ca17439e"
+      },
+      {
+        "anchor": "Дарья присела на кровать.",
+        "kind": "focus",
+        "tags": [
+          "cs_darya"
+        ],
+        "when": "before",
+        "reason": "Return to direct interaction: Window panorama and impossible holiday",
+        "occurrence": 1,
+        "id": "4632a5ff8a"
+      }
+    ]
+  },
+  "days/day01/part06/29_observation_log.rpy": {
+    "initial": [
+      "cs_darya"
+    ],
+    "events": []
+  },
+  "days/day01/part06/30_at_the_door.rpy": {
+    "initial": [
+      "cs_darya"
+    ],
+    "events": []
+  },
+  "days/day01/part07/31_visitors.rpy": {
+    "initial": [
+      "dv",
+      "us",
+      "cs_darya"
+    ],
+    "events": []
+  },
+  "days/day01/part07/32_an_idea.rpy": {
+    "initial": [
+      "cs_darya"
+    ],
+    "events": [
+      {
+        "anchor": "Несколько секунд смотрела в потолок.",
+        "kind": "reflective",
+        "tags": [],
+        "when": "before",
+        "reason": "REFLECTIVE_SHOT: Ceiling and dead phone; not lying as a hide trigger",
+        "occurrence": 1,
+        "id": "89b9017019"
+      },
+      {
+        "anchor": "И вдруг села.",
+        "kind": "focus",
+        "tags": [
+          "cs_darya"
+        ],
+        "when": "before",
+        "reason": "Return to direct interaction: Ceiling and dead phone; not lying as a hide trigger",
+        "occurrence": 1,
+        "id": "8a2addb5a7"
+      }
+    ]
+  },
+  "days/day01/part07/33_clubs_path.rpy": {
+    "initial": [
+      "cs_darya"
+    ],
+    "events": []
+  },
+  "days/day01/part07/34_engineers.rpy": {
+    "initial": [
+      "sh",
+      "el",
+      "cs_darya"
+    ],
+    "events": [
+      {
+        "anchor": "Я перевела взгляд на рабочий стол.",
+        "kind": "reflective",
+        "tags": [],
+        "when": "before",
+        "reason": "REFLECTIVE_SHOT: Electronics workbench focus",
+        "occurrence": 1,
+        "id": "1f82f2504d"
+      },
+      {
+        "anchor": "Пока скорее за консультацией.",
+        "kind": "focus",
+        "tags": [
+          "sh",
+          "el",
+          "cs_darya"
+        ],
+        "when": "before",
+        "reason": "Return to direct interaction: Electronics workbench focus",
+        "occurrence": 1,
+        "id": "4fcbe05cb6"
+      }
+    ]
+  },
+  "days/day01/part07/35_calculator.rpy": {
+    "initial": [
+      "cs_darya",
+      "sh",
+      "el"
+    ],
+    "events": []
+  },
+  "days/day01/part07/36_forty_six_years.rpy": {
+    "initial": [
+      "cs_darya",
+      "sh",
+      "el"
+    ],
+    "events": []
+  },
+  "days/day01/part07/37_transistors.rpy": {
+    "initial": [
+      "cs_darya",
+      "sh",
+      "el"
+    ],
+    "events": []
+  },
+  "days/day01/part07/38_five_volts.rpy": {
+    "initial": [
+      "cs_darya",
+      "sh",
+      "el"
+    ],
+    "events": []
+  },
+  "days/day01/part07/39_future_in_pocket.rpy": {
+    "initial": [
+      "cs_darya",
+      "sh",
+      "el"
+    ],
+    "events": [
+      {
+        "anchor": "Молодец, Лена.",
+        "kind": "reflective",
+        "tags": [],
+        "when": "before",
+        "reason": "Independent recap after the electronics errand",
+        "occurrence": 1,
+        "id": "103eb8e099"
+      }
+    ]
+  },
+  "days/day01/part08/40_after_clubs.rpy": {
+    "initial": [
+      "cs_darya"
+    ],
+    "events": []
+  },
+  "days/day01/part08/41_confession.rpy": {
+    "initial": [
+      "cs_darya"
+    ],
+    "events": []
+  },
+  "days/day01/part08/42_why_you.rpy": {
+    "initial": [
+      "cs_darya"
+    ],
+    "events": []
+  },
+  "days/day01/part08/43_square.rpy": {
+    "initial": [
+      "cs_darya"
+    ],
+    "events": []
+  },
+  "days/day01/part08/44_independent_opinion.rpy": {
+    "initial": [
+      "cs_darya",
+      "cs_semen"
+    ],
+    "events": []
+  },
+  "days/day01/part08/45_for_now.rpy": {
+    "initial": [
+      "cs_darya",
+      "cs_semen"
+    ],
+    "events": [
+      {
+        "anchor": "Он пошёл в сторону домиков.",
+        "kind": "absent",
+        "tags": [
+          "cs_semen"
+        ],
+        "when": "after",
+        "reason": "Physical departure in the authored scene",
+        "occurrence": 1,
+        "id": "3ebe2866f8"
+      },
+      {
+        "anchor": "А я пыталась понять, как умудрилась за один день пережить столько всего.",
+        "kind": "reflective",
+        "tags": [],
+        "when": "before",
+        "reason": "REFLECTIVE_SHOT: Private recap of the first day",
+        "occurrence": 1,
+        "id": "e8872f2cc8"
+      },
+      {
+        "anchor": "Семён поднялся.",
+        "kind": "focus",
+        "tags": [
+          "cs_darya",
+          "cs_semen"
+        ],
+        "when": "before",
+        "reason": "Return to direct interaction: Private recap of the first day",
+        "occurrence": 1,
+        "id": "0efe28b612"
+      }
+    ]
+  },
+  "days/day01/part09/46_resemblance.rpy": {
+    "initial": [
+      "cs_darya"
+    ],
+    "events": []
+  },
+  "days/day01/part09/47_choice.rpy": {
+    "initial": [
+      "un",
+      "cs_darya"
+    ],
+    "events": []
+  },
+  "days/day01/part09/48_a_meet.rpy": {
+    "initial": [
+      "un",
+      "cs_darya"
+    ],
+    "events": [
+      {
+        "anchor": "Он продолжил путь по своим делам.",
+        "kind": "absent",
+        "tags": [
+          "cs_semen"
+        ],
+        "when": "after",
+        "reason": "Physical departure in the authored scene",
+        "occurrence": 1,
+        "id": "f193d944d5"
+      },
+      {
+        "anchor": "Она снова тихо рассмеялась и направилась к библиотеке.",
+        "kind": "absent",
+        "tags": [
+          "un"
+        ],
+        "when": "after",
+        "reason": "Physical departure in the authored scene",
+        "occurrence": 1,
+        "id": "8c1a65871c"
+      }
+    ]
+  },
+  "days/day01/part09/48_b_pass.rpy": {
+    "initial": [
+      "un",
+      "cs_darya"
+    ],
+    "events": [
+      {
+        "anchor": "Девушка направилась дальше, в сторону библиотеки.",
+        "kind": "absent",
+        "tags": [
+          "un"
+        ],
+        "when": "after",
+        "reason": "Physical departure in the authored scene",
+        "occurrence": 1,
+        "id": "ef7eca6473"
+      },
+      {
+        "anchor": "Я поправила галстук.",
+        "kind": "reflective",
+        "tags": [],
+        "when": "before",
+        "reason": "Independent reflection after declining the acquaintance",
+        "occurrence": 1,
+        "id": "e99f943927"
+      }
+    ]
+  },
+  "days/day01/part09/49_together.rpy": {
+    "initial": [
+      "cs_darya"
+    ],
+    "events": []
+  },
+  "days/day01/part09/50_no_saves.rpy": {
+    "initial": [
+      "cs_darya"
+    ],
+    "events": [
+      {
+        "anchor": "Отсюда открывался вид на деревья и несколько домиков, освещённых вечерним солнцем.",
+        "kind": "focus",
+        "tags": [],
+        "when": "before",
+        "reason": "Panorama and independent reflection",
+        "occurrence": 1,
+        "id": "b323b7e93a"
+      },
+      {
+        "anchor": "Дарья заметила моё выражение лица.",
+        "kind": "focus",
+        "tags": [
+          "cs_darya"
+        ],
+        "when": "before",
+        "reason": "Resume the uninterrupted conversation",
+        "occurrence": 1,
+        "id": "961dd14276"
+      },
+      {
+        "anchor": "А я вдруг подумала, что, возможно, именно в этом и заключается самая большая разница между игрой и происходящим.",
+        "kind": "reflective",
+        "tags": [],
+        "when": "before",
+        "reason": "REFLECTIVE_SHOT: Difference between game choices and real consequences",
+        "occurrence": 1,
+        "id": "031e208f3c"
+      }
+    ]
+  },
+  "days/day01/part09/51_dinner_time.rpy": {
+    "initial": [
+      "cs_darya"
+    ],
+    "events": [
+      {
+        "anchor": "Вокруг постепенно оживал лагерь.",
+        "kind": "reflective",
+        "tags": [],
+        "when": "before",
+        "reason": "REFLECTIVE_SHOT: Evening camp before looking back at Darya",
+        "occurrence": 1,
+        "id": "368a2a6837"
+      },
+      {
+        "anchor": "Я посмотрела на Дарью.",
+        "kind": "focus",
+        "tags": [
+          "cs_darya"
+        ],
+        "when": "before",
+        "reason": "Return to direct interaction: Evening camp before looking back at Darya",
+        "occurrence": 1,
+        "id": "ac2ec6714a"
+      }
+    ]
+  },
+  "days/day01/part10/52_after_dinner.rpy": {
+    "initial": [
+      "cs_darya"
+    ],
+    "events": []
+  },
+  "days/day01/part10/53_library_walk.rpy": {
+    "initial": [
+      "cs_darya"
+    ],
+    "events": []
+  },
+  "days/day01/part10/54_librarian.rpy": {
+    "initial": [
+      "cs_zhenya",
+      "cs_darya"
+    ],
+    "events": [
+      {
+        "anchor": "Женя вздохнула и вернулась к столу.",
+        "kind": "focus",
+        "tags": [
+          "cs_darya"
+        ],
+        "when": "after",
+        "reason": "Zhenya works at the desk offscreen",
+        "occurrence": 1,
+        "id": "4d6f0716e1"
+      }
+    ]
+  },
+  "days/day01/part10/55_a_help.rpy": {
+    "initial": [
+      "cs_zhenya",
+      "cs_darya"
+    ],
+    "events": []
+  },
+  "days/day01/part10/55_b_search_alone.rpy": {
+    "initial": [
+      "cs_zhenya",
+      "cs_darya"
+    ],
+    "events": []
+  },
+  "days/day01/part10/55_choice.rpy": {
+    "initial": [],
+    "events": []
+  },
+  "days/day01/part10/56_old_books.rpy": {
+    "initial": [],
+    "events": [
+      {
+        "anchor": "Я медленно прошла вдоль книжных полок.",
+        "kind": "reflective",
+        "tags": [],
+        "when": "before",
+        "reason": "REFLECTIVE_SHOT: Book dates and shelf focus",
+        "occurrence": 1,
+        "id": "3ce72e702a"
+      },
+      {
+        "anchor": "Я посмотрела на Дарью.",
+        "kind": "focus",
+        "tags": [
+          "cs_darya"
+        ],
+        "when": "before",
+        "reason": "Return to direct interaction: Book dates and shelf focus",
+        "occurrence": 1,
+        "id": "a3c480bd39"
+      },
+      {
+        "anchor": "Я взяла верхний.",
+        "kind": "reflective",
+        "tags": [],
+        "when": "before",
+        "reason": "REFLECTIVE_SHOT: Checking publication dates",
+        "occurrence": 1,
+        "id": "1bec142f87"
+      },
+      {
+        "anchor": "Ну что?",
+        "kind": "focus",
+        "tags": [
+          "cs_darya"
+        ],
+        "when": "before",
+        "reason": "Return to direct interaction: Checking publication dates",
+        "occurrence": 1,
+        "id": "214c14521a"
+      },
+      {
+        "anchor": "Женя подняла взгляд.",
+        "kind": "focus",
+        "tags": [
+          "cs_darya",
+          "cs_zhenya"
+        ],
+        "when": "before",
+        "reason": "Librarian rejoins the conversation",
+        "occurrence": 1,
+        "id": "47edd071d3"
+      },
+      {
+        "anchor": "Женя подняла голову.",
+        "kind": "focus",
+        "tags": [
+          "cs_darya",
+          "cs_zhenya"
+        ],
+        "when": "before",
+        "reason": "Zhenya looks up and joins the book conversation",
+        "occurrence": 1,
+        "id": "b16e3d0836"
+      }
+    ]
+  },
+  "days/day01/part10/57_slip_of_tongue.rpy": {
+    "initial": [
+      "cs_darya",
+      "cs_zhenya"
+    ],
+    "events": []
+  },
+  "days/day01/part10/58_truth.rpy": {
+    "initial": [
+      "cs_darya",
+      "cs_zhenya"
+    ],
+    "events": []
+  },
+  "days/day01/part10/resources.rpy": {
+    "initial": [],
+    "events": []
+  },
+  "days/day01/part11/59_scene.rpy": {
+    "initial": [
+      "cs_zhenya",
+      "cs_darya"
+    ],
+    "events": []
+  },
+  "days/day01/part11/60_scene.rpy": {
+    "initial": [
+      "cs_darya",
+      "cs_zhenya"
+    ],
+    "events": []
+  },
+  "days/day01/part11/61_scene.rpy": {
+    "initial": [
+      "cs_zhenya",
+      "cs_darya"
+    ],
+    "events": [
+      {
+        "anchor": "Женя проверила дверь, пожелала нам спокойной ночи и пошла к домикам. Я смотрела ей вслед, пока Дарья не тронула меня за рукав.",
+        "kind": "absent",
+        "tags": [
+          "cs_zhenya"
+        ],
+        "when": "after",
+        "reason": "Physical departure in the authored scene",
+        "occurrence": 1,
+        "id": "73461dc812"
+      },
+      {
+        "anchor": "Мы улыбнулись друг другу. Продолжать разговор только ради того, чтобы он не закончился, было уже необязательно.",
+        "kind": "absent",
+        "tags": [
+          "un"
+        ],
+        "when": "after",
+        "reason": "Tikhonova farewell at the branch of the paths",
+        "occurrence": 1,
+        "id": "08c2c7b38c"
+      }
+    ]
+  },
+  "days/day01/part11/62_scene.rpy": {
+    "initial": [
+      "cs_darya"
+    ],
+    "events": []
+  },
+  "days/day01/part11/63_scene.rpy": {
+    "initial": [
+      "cs_darya"
+    ],
+    "events": []
+  },
+  "days/day01/part11/64_scene.rpy": {
+    "initial": [
+      "cs_darya"
+    ],
+    "events": [
+      {
+        "anchor": "Я всё ещё не понимала, где мы оказались и что будет дальше. Но рубашка лежала на стуле, дверь была закрыта, а рядом спал человек, с которым утром предстояло идти в столовую.",
+        "kind": "reflective",
+        "tags": [],
+        "when": "before",
+        "reason": "Final private thought after goodnight",
+        "occurrence": 1,
+        "id": "a1a1ceb800"
+      }
+    ]
+  },
+  "days/day02/part01/01_scene.rpy": {
+    "initial": [],
+    "events": []
+  },
+  "days/day02/part01/02_scene.rpy": {
+    "initial": [],
+    "events": [
+      {
+        "anchor": "Вернулась к кровати Дарьи.",
+        "kind": "focus",
+        "tags": [
+          "cs_darya"
+        ],
+        "when": "before",
+        "reason": "Face-to-face before the run; lying down does not hide Darya",
+        "occurrence": 1,
+        "id": "33c14ca943",
+        "images": [
+          "cs_darya neutral pioneer normal"
+        ]
+      },
+      {
+        "anchor": "Она слегка улыбнулась, не открывая глаз.",
+        "kind": "focus",
+        "tags": [
+          "cs_darya"
+        ],
+        "when": "before",
+        "reason": "Sleepy smile during continuous dialogue",
+        "occurrence": 1,
+        "id": "a0b7342a26",
+        "images": [
+          "cs_darya shy_smile pioneer normal"
+        ]
+      },
+      {
+        "anchor": "Только не уходи за территорию лагеря одна.",
+        "kind": "focus",
+        "tags": [
+          "cs_darya"
+        ],
+        "when": "before",
+        "reason": "Serious warning in the waking dialogue",
+        "occurrence": 1,
+        "id": "b79045dfe5",
+        "images": [
+          "cs_darya worried pioneer normal"
+        ]
+      },
+      {
+        "anchor": "Я закрыла дверь настолько осторожно, насколько позволяли старые петли.",
+        "kind": "absent",
+        "tags": [
+          "cs_darya"
+        ],
+        "when": "after",
+        "reason": "Lena leaves the cabin; Darya stays inside",
+        "occurrence": 1,
+        "id": "d7c88fa410"
+      }
+    ]
+  },
+  "days/day02/part01/03_scene.rpy": {
+    "initial": [],
+    "events": []
+  },
+  "days/day02/part01/04_scene.rpy": {
+    "initial": [],
+    "events": [
+      {
+        "anchor": "Она пошла дальше по дорожке.",
+        "kind": "absent",
+        "tags": [
+          "mt"
+        ],
+        "when": "after",
+        "reason": "Physical departure in the authored scene",
+        "occurrence": 1,
+        "id": "cd3f6ba0fb"
+      }
+    ]
+  },
+  "days/day02/part01/05_scene.rpy": {
+    "initial": [],
+    "events": []
+  },
+  "days/day02/part01/06_scene.rpy": {
+    "initial": [],
+    "events": [
+      {
+        "anchor": "Я продолжила путь.",
+        "kind": "absent",
+        "tags": [
+          "cs_semen"
+        ],
+        "when": "before",
+        "reason": "Lena leaves Semen on the camp path",
+        "occurrence": 1,
+        "id": "519facaa9c"
+      }
+    ]
+  },
+  "days/day02/part01/07_scene.rpy": {
+    "initial": [],
+    "events": [
+      {
+        "anchor": "Дарья всё ещё лежала, но уже не спала.",
+        "kind": "focus",
+        "tags": [
+          "cs_darya"
+        ],
+        "when": "before",
+        "reason": "Return indoors: Darya participates despite lying down",
+        "occurrence": 1,
+        "id": "95df4f349e",
+        "images": [
+          "cs_darya neutral pioneer normal"
+        ]
+      },
+      {
+        "anchor": "Дарья тихо рассмеялась.",
+        "kind": "focus",
+        "tags": [
+          "cs_darya"
+        ],
+        "when": "before",
+        "reason": "Warm reaction during the uninterrupted morning conversation",
+        "occurrence": 1,
+        "id": "d495fc5820",
+        "images": [
+          "cs_darya amused pioneer normal"
+        ]
+      },
+      {
+        "anchor": "Её улыбка исчезла.",
+        "kind": "focus",
+        "tags": [
+          "cs_darya"
+        ],
+        "when": "before",
+        "reason": "Bus disappearance is a serious subject",
+        "occurrence": 1,
+        "id": "aedf775c9a",
+        "images": [
+          "cs_darya worried pioneer normal"
+        ]
+      },
+      {
+        "anchor": "Хороший план.",
+        "kind": "focus",
+        "tags": [
+          "cs_darya"
+        ],
+        "when": "before",
+        "reason": "Morning plans agreed",
+        "occurrence": 1,
+        "id": "27f52f7702",
+        "images": [
+          "cs_darya neutral pioneer normal"
+        ]
+      },
+      {
+        "anchor": "Я посмотрела на своё отражение в небольшом зеркале.",
+        "kind": "reflective",
+        "tags": [],
+        "when": "before",
+        "reason": "Mirror focus after the conversation",
+        "occurrence": 1,
+        "id": "7b10da8ab9"
+      }
+    ]
+  },
+  "days/day02/part01/08_scene.rpy": {
+    "initial": [
+      "cs_darya"
+    ],
+    "events": []
+  },
+  "days/day02/part01/09_scene.rpy": {
+    "initial": [
+      "cs_darya"
+    ],
+    "events": []
+  },
+  "days/day02/part01/10_scene.rpy": {
+    "initial": [
+      "cs_darya"
+    ],
+    "events": []
+  },
+  "days/day02/part01/11_scene.rpy": {
+    "initial": [
+      "cs_semen",
+      "cs_darya"
+    ],
+    "events": []
+  },
+  "days/day02/part01/12_scene.rpy": {
+    "initial": [
+      "un",
+      "cs_darya"
+    ],
+    "events": [
+      {
+        "anchor": "Тёзка попрощалась и направилась к выходу.",
+        "kind": "absent",
+        "tags": [
+          "un"
+        ],
+        "when": "after",
+        "reason": "Physical departure in the authored scene",
+        "occurrence": 1,
+        "id": "aa1b67bd6c"
+      }
+    ]
+  },
+  "days/day02/part01/13_scene.rpy": {
+    "initial": [
+      "cs_semen",
+      "cs_darya"
+    ],
+    "events": [
+      {
+        "anchor": "Вот ещё одна деталь, которую нельзя потерять.",
+        "kind": "reflective",
+        "tags": [],
+        "when": "before",
+        "reason": "REFLECTIVE_SHOT: Remembered chronology and missing notebook",
+        "occurrence": 1,
+        "id": "f9be118425"
+      },
+      {
+        "anchor": "Дарья заметила моё движение.",
+        "kind": "focus",
+        "tags": [
+          "cs_darya",
+          "cs_semen"
+        ],
+        "when": "before",
+        "reason": "Return to direct interaction: Remembered chronology and missing notebook",
+        "occurrence": 1,
+        "id": "1fda380022"
+      }
+    ]
+  },
+  "days/day02/part01/14_scene.rpy": {
+    "initial": [
+      "cs_semen",
+      "cs_darya"
+    ],
+    "events": []
+  },
+  "days/day02/part02/15_scene.rpy": {
+    "initial": [
+      "cs_darya"
+    ],
+    "events": []
+  },
+  "days/day02/part02/16_scene.rpy": {
+    "initial": [
+      "mi",
+      "cs_darya"
+    ],
+    "events": []
+  },
+  "days/day02/part02/17_scene.rpy": {
+    "initial": [
+      "mi",
+      "cs_darya"
+    ],
+    "events": []
+  },
+  "days/day02/part02/18_scene.rpy": {
+    "initial": [
+      "mi",
+      "cs_darya"
+    ],
+    "events": [
+      {
+        "anchor": "Мелодия закончилась негромким аккордом.",
+        "kind": "focus",
+        "tags": [
+          "mi",
+          "cs_darya"
+        ],
+        "when": "before",
+        "reason": "Return from piano CG to both interlocutors",
+        "occurrence": 1,
+        "id": "748577bc95",
+        "images": [
+          "cs_darya shy_smile pioneer normal"
+        ]
+      }
+    ]
+  },
+  "days/day02/part02/19_a_scene.rpy": {
+    "initial": [
+      "mi",
+      "cs_darya"
+    ],
+    "events": []
+  },
+  "days/day02/part02/19_b_scene.rpy": {
+    "initial": [
+      "mi",
+      "cs_darya"
+    ],
+    "events": []
+  },
+  "days/day02/part02/20_scene.rpy": {
+    "initial": [
+      "cs_darya"
+    ],
+    "events": []
+  },
+  "days/day02/part03/21_scene.rpy": {
+    "initial": [
+      "cs_darya"
+    ],
+    "events": []
+  },
+  "days/day02/part03/22_scene.rpy": {
+    "initial": [
+      "cs_darya"
+    ],
+    "events": []
+  },
+  "days/day02/part03/23_scene.rpy": {
+    "initial": [
+      "sl",
+      "cs_darya"
+    ],
+    "events": []
+  },
+  "days/day02/part03/24_a_scene.rpy": {
+    "initial": [
+      "sl",
+      "cs_darya"
+    ],
+    "events": []
+  },
+  "days/day02/part03/24_b_scene.rpy": {
+    "initial": [
+      "sl",
+      "cs_darya"
+    ],
+    "events": [
+      {
+        "anchor": "Она направилась к кладовой.",
+        "kind": "absent",
+        "tags": [
+          "sl"
+        ],
+        "when": "after",
+        "reason": "Physical departure in the authored scene",
+        "occurrence": 1,
+        "id": "026413f428"
+      }
+    ]
+  },
+  "days/day02/part03/25_scene.rpy": {
+    "initial": [
+      "cs_semen",
+      "cs_darya"
+    ],
+    "events": []
+  },
+  "days/day02/part04/26_scene.rpy": {
+    "initial": [
+      "sh",
+      "el"
+    ],
+    "events": [
+      {
+        "anchor": "Семён заглянул через моё плечо.",
+        "kind": "focus",
+        "tags": [
+          "sh",
+          "el",
+          "cs_semen"
+        ],
+        "when": "before",
+        "reason": "Semen joins the technical question",
+        "occurrence": 1,
+        "id": "401d38087f"
+      },
+      {
+        "anchor": "Дарья подошла к столу.",
+        "kind": "focus",
+        "tags": [
+          "sh",
+          "cs_semen",
+          "cs_darya"
+        ],
+        "when": "before",
+        "reason": "Reverse shot for Darya, Shurik and Semen",
+        "occurrence": 1,
+        "id": "72aa9a23cc"
+      },
+      {
+        "anchor": "Я посмотрела на телефон.",
+        "kind": "reflective",
+        "tags": [],
+        "when": "before",
+        "reason": "Phone inspection after the technical discussion",
+        "occurrence": 1,
+        "id": "22177c15d9"
+      },
+      {
+        "anchor": "Ладно. Торопиться не будем.",
+        "kind": "focus",
+        "tags": [
+          "sh",
+          "el",
+          "cs_darya"
+        ],
+        "when": "before",
+        "reason": "Return to engineers and Darya",
+        "occurrence": 1,
+        "id": "8513a3bcf0"
+      },
+      {
+        "anchor": "Семён вспомнил об объявлении.",
+        "kind": "focus",
+        "tags": [
+          "cs_semen",
+          "cs_darya"
+        ],
+        "when": "before",
+        "reason": "Companions plan the next errand",
+        "occurrence": 1,
+        "id": "9b8b3479e0"
+      },
+      {
+        "anchor": "Шурик нахмурился.",
+        "kind": "focus",
+        "tags": [
+          "sh",
+          "cs_semen",
+          "cs_darya"
+        ],
+        "when": "before",
+        "reason": "Keep the technical reverse shot limited to three",
+        "occurrence": 1,
+        "id": "97a03e8a73"
+      },
+      {
+        "anchor": "Дарья посмотрела на меня.",
+        "kind": "focus",
+        "tags": [
+          "sh",
+          "el",
+          "cs_darya"
+        ],
+        "when": "before",
+        "reason": "Darya concludes the technical conversation; Semen listens offscreen",
+        "occurrence": 1,
+        "id": "c04cb9832e"
+      }
+    ]
+  },
+  "days/day02/part04/27_scene.rpy": {
+    "initial": [
+      "cs_semen",
+      "cs_darya"
+    ],
+    "events": [
+      {
+        "anchor": "Он кивнул и направился к площади.",
+        "kind": "absent",
+        "tags": [
+          "cs_semen"
+        ],
+        "when": "after",
+        "reason": "Physical departure in the authored scene",
+        "occurrence": 1,
+        "id": "3d08506588"
+      }
+    ]
+  },
+  "days/day02/part04/28_scene.rpy": {
+    "initial": [
+      "cs_darya"
+    ],
+    "events": [
+      {
+        "anchor": "Я посмотрела вперёд.",
+        "kind": "reflective",
+        "tags": [],
+        "when": "before",
+        "reason": "REFLECTIVE_SHOT: Game characters versus people; restore at Darya",
+        "occurrence": 1,
+        "id": "b04206e46a"
+      },
+      {
+        "anchor": "Я посмотрела на неё.",
+        "kind": "focus",
+        "tags": [
+          "cs_darya"
+        ],
+        "when": "before",
+        "reason": "Return to direct interaction: Game characters versus people; restore at Darya",
+        "occurrence": 2,
+        "id": "68ee94beab"
+      }
+    ]
+  },
+  "days/day02/part04/29_scene.rpy": {
+    "initial": [
+      "cs",
+      "cs_darya"
+    ],
+    "events": []
+  },
+  "days/day02/part04/30_scene.rpy": {
+    "initial": [
+      "cs",
+      "cs_darya"
+    ],
+    "events": [
+      {
+        "anchor": "Я медленно повернула голову.",
+        "kind": "reflective",
+        "tags": [],
+        "when": "before",
+        "reason": "REFLECTIVE_SHOT: Anatomical poster and remembered dates",
+        "occurrence": 1,
+        "id": "c2a563ebcd"
+      },
+      {
+        "anchor": "Вот это уже интересно.",
+        "kind": "focus",
+        "tags": [
+          "cs",
+          "cs_darya"
+        ],
+        "when": "before",
+        "reason": "Return to direct interaction: Anatomical poster and remembered dates",
+        "occurrence": 1,
+        "id": "5752982251"
+      },
+      {
+        "anchor": "Я снова уставилась на изображение.",
+        "kind": "reflective",
+        "tags": [],
+        "when": "before",
+        "reason": "REFLECTIVE_SHOT: Easter egg versus real object",
+        "occurrence": 1,
+        "id": "b13f77739b"
+      },
+      {
+        "anchor": "Я повернулась к Даше.",
+        "kind": "focus",
+        "tags": [
+          "cs",
+          "cs_darya"
+        ],
+        "when": "before",
+        "reason": "Return to direct interaction: Easter egg versus real object",
+        "occurrence": 1,
+        "id": "0a71aca9ab"
+      },
+      {
+        "anchor": "Я ещё раз взглянула на изображение.",
+        "kind": "reflective",
+        "tags": [],
+        "when": "before",
+        "reason": "REFLECTIVE_SHOT: Evidence and uncertainty about returning home",
+        "occurrence": 1,
+        "id": "ffc2b3a354"
+      },
+      {
+        "anchor": "Я повернулась к Даше.",
+        "kind": "focus",
+        "tags": [
+          "cs",
+          "cs_darya"
+        ],
+        "when": "before",
+        "reason": "Return to direct interaction: Evidence and uncertainty about returning home",
+        "occurrence": 2,
+        "id": "fcda4f0e22"
+      }
+    ]
+  },
+  "days/day02/part04/31_a_scene.rpy": {
+    "initial": [
+      "cs",
+      "cs_darya"
+    ],
+    "events": []
+  },
+  "days/day02/part04/31_b_scene.rpy": {
+    "initial": [
+      "cs",
+      "cs_darya"
+    ],
+    "events": []
+  },
+  "days/day02/part04/31_scene.rpy": {
+    "initial": [
+      "cs",
+      "cs_darya"
+    ],
+    "events": []
+  },
+  "days/day02/part04/32_scene.rpy": {
+    "initial": [
+      "cs_darya"
+    ],
+    "events": []
+  },
+  "days/day02/part04/33_scene.rpy": {
+    "initial": [
+      "cs_semen",
+      "cs_darya"
+    ],
+    "events": []
+  },
+  "days/day02/part05/34_scene.rpy": {
+    "initial": [],
+    "events": []
+  },
+  "days/day02/part05/35_a_scene.rpy": {
+    "initial": [],
+    "events": []
+  },
+  "days/day02/part05/35_b_scene.rpy": {
+    "initial": [],
+    "events": []
+  },
+  "days/day02/part05/35_scene.rpy": {
+    "initial": [],
+    "events": []
+  },
+  "days/day02/part05/36_scene.rpy": {
+    "initial": [],
+    "events": []
+  },
+  "days/day02/part05/37_scene.rpy": {
+    "initial": [
+      "sl",
+      "cs_semen",
+      "cs_darya"
+    ],
+    "events": [
+      {
+        "anchor": "Она попрощалась и продолжила путь.",
+        "kind": "absent",
+        "tags": [
+          "cs"
+        ],
+        "when": "after",
+        "reason": "Physical departure in the authored scene",
+        "occurrence": 1,
+        "id": "58d8c2533e"
+      },
+      {
+        "anchor": "Семён и Славя направились в сторону клубов.",
+        "kind": "absent",
+        "tags": [
+          "cs_semen",
+          "sl"
+        ],
+        "when": "after",
+        "reason": "Physical departure in the authored scene",
+        "occurrence": 1,
+        "id": "c2919cc19c"
+      },
+      {
+        "anchor": "В этот момент мимо площади проходила Виола.",
+        "kind": "focus",
+        "tags": [
+          "cs",
+          "cs_darya"
+        ],
+        "when": "before",
+        "reason": "Viola and Darya conversation; others remain offscreen",
+        "occurrence": 1,
+        "id": "6b17943bf8"
+      },
+      {
+        "anchor": "Она попрощалась и продолжила путь.",
+        "kind": "focus",
+        "tags": [
+          "cs",
+          "cs_darya"
+        ],
+        "when": "before",
+        "reason": "Farewell frame before the actual departure",
+        "occurrence": 1,
+        "id": "2cc41ac75c"
+      },
+      {
+        "anchor": "Семён тем временем собрал оставшиеся материалы.",
+        "kind": "focus",
+        "tags": [
+          "sl",
+          "cs_semen",
+          "cs_darya"
+        ],
+        "when": "before",
+        "reason": "Return to the group after Viola leaves",
+        "occurrence": 1,
+        "id": "2ec2b9e143"
+      }
+    ]
+  },
+  "days/day02/part05/38_scene.rpy": {
+    "initial": [
+      "cs_darya"
+    ],
+    "events": []
+  },
+  "days/day02/part05/39_scene.rpy": {
+    "initial": [
+      "cs_darya"
+    ],
+    "events": []
+  },
+  "days/day02/part06/40_scene.rpy": {
+    "initial": [
+      "cs_darya"
+    ],
+    "events": []
+  },
+  "days/day02/part06/41_a_scene.rpy": {
+    "initial": [
+      "cs_semen",
+      "cs_darya"
+    ],
+    "events": []
+  },
+  "days/day02/part06/41_b_scene.rpy": {
+    "initial": [
+      "cs_semen",
+      "cs_darya"
+    ],
+    "events": []
+  },
+  "days/day02/part06/41_scene.rpy": {
+    "initial": [
+      "cs_semen",
+      "cs_darya"
+    ],
+    "events": []
+  },
+  "days/day02/part06/42_scene.rpy": {
+    "initial": [
+      "cs_semen",
+      "cs_darya"
+    ],
+    "events": []
+  },
+  "days/day02/part06/43_scene.rpy": {
+    "initial": [
+      "cs_semen",
+      "cs_darya"
+    ],
+    "events": []
+  },
+  "days/day02/part06/44_scene.rpy": {
+    "initial": [
+      "cs_semen",
+      "cs_darya"
+    ],
+    "events": []
+  },
+  "days/day02/part06/45_scene.rpy": {
+    "initial": [
+      "cs_semen",
+      "cs_darya"
+    ],
+    "events": [
+      {
+        "anchor": "Она направилась обратно к площади.",
+        "kind": "absent",
+        "tags": [
+          "mt"
+        ],
+        "when": "after",
+        "reason": "Physical departure in the authored scene",
+        "occurrence": 1,
+        "id": "6f05e1023d"
+      },
+      {
+        "anchor": "Я ещё раз посмотрела на дорогу.",
+        "kind": "reflective",
+        "tags": [],
+        "when": "before",
+        "reason": "REFLECTIVE_SHOT: Road and unproven knowledge of the counsellor",
+        "occurrence": 1,
+        "id": "6e6ed1e2e7"
+      }
+    ]
+  },
+  "days/day02/part06/46_scene.rpy": {
+    "initial": [
+      "cs_semen",
+      "cs_darya"
+    ],
+    "events": [
+      {
+        "anchor": "Он попрощался и пошёл своей дорогой.",
+        "kind": "absent",
+        "tags": [
+          "cs_semen"
+        ],
+        "when": "after",
+        "reason": "Physical departure in the authored scene",
+        "occurrence": 1,
+        "id": "785ee06518"
+      },
+      {
+        "anchor": "Я достала сложенный листок.",
+        "kind": "reflective",
+        "tags": [],
+        "when": "before",
+        "reason": "REFLECTIVE_SHOT: Writing the actual observations",
+        "occurrence": 1,
+        "id": "c9c5bc3879"
+      },
+      {
+        "anchor": "Сделать вывод, который не будет выглядеть как фантазия человека, слишком много игравшего в визуальные новеллы.",
+        "kind": "focus",
+        "tags": [
+          "cs_darya",
+          "cs_semen"
+        ],
+        "when": "before",
+        "reason": "Return to direct interaction: Writing the actual observations",
+        "occurrence": 1,
+        "id": "df8261df49"
+      }
+    ]
+  },
+  "days/day02/part07/47_scene.rpy": {
+    "initial": [
+      "cs_darya"
+    ],
+    "events": [
+      {
+        "anchor": "Лагерь продолжал жить обычной жизнью.",
+        "kind": "reflective",
+        "tags": [],
+        "when": "before",
+        "reason": "REFLECTIVE_SHOT: Camp panorama and repeated road result",
+        "occurrence": 1,
+        "id": "26d6918502"
+      },
+      {
+        "anchor": "Я посмотрела на Дарью.",
+        "kind": "focus",
+        "tags": [
+          "cs_darya"
+        ],
+        "when": "before",
+        "reason": "Return to direct interaction: Camp panorama and repeated road result",
+        "occurrence": 1,
+        "id": "f19bef7987"
+      }
+    ]
+  },
+  "days/day02/part07/48_scene.rpy": {
+    "initial": [
+      "cs_darya"
+    ],
+    "events": []
+  },
+  "days/day02/part07/49_scene.rpy": {
+    "initial": [
+      "cs_darya"
+    ],
+    "events": []
+  },
+  "days/day02/part07/50_scene.rpy": {
+    "initial": [
+      "cs",
+      "cs_darya"
+    ],
+    "events": []
+  },
+  "days/day02/part07/51_a_scene.rpy": {
+    "initial": [
+      "cs",
+      "cs_darya"
+    ],
+    "events": []
+  },
+  "days/day02/part07/51_b_scene.rpy": {
+    "initial": [
+      "cs",
+      "cs_darya"
+    ],
+    "events": []
+  },
+  "days/day02/part07/52_scene.rpy": {
+    "initial": [
+      "cs_darya"
+    ],
+    "events": []
+  },
+  "days/day02/part07/53_scene.rpy": {
+    "initial": [
+      "cs_darya"
+    ],
+    "events": []
+  },
+  "days/day02/part08/54_scene.rpy": {
+    "initial": [
+      "cs_darya"
+    ],
+    "events": []
+  },
+  "days/day02/part08/55_scene.rpy": {
+    "initial": [],
+    "events": []
+  },
+  "days/day02/part08/56_scene.rpy": {
+    "initial": [
+      "cs_semen",
+      "cs_darya"
+    ],
+    "events": [
+      {
+        "anchor": "И посмотрела вперёд.",
+        "kind": "reflective",
+        "tags": [],
+        "when": "before",
+        "reason": "REFLECTIVE_SHOT: Square panorama and three displaced people",
+        "occurrence": 1,
+        "id": "b4cefde74c"
+      },
+      {
+        "anchor": "Семён первым нарушил молчание.",
+        "kind": "focus",
+        "tags": [
+          "cs_darya",
+          "cs_semen"
+        ],
+        "when": "before",
+        "reason": "Return to direct interaction: Square panorama and three displaced people",
+        "occurrence": 1,
+        "id": "57427f3ded"
+      }
+    ]
+  },
+  "days/day02/part08/57_scene.rpy": {
+    "initial": [
+      "cs_semen",
+      "cs_darya"
+    ],
+    "events": []
+  },
+  "days/day02/part08/58_a_scene.rpy": {
+    "initial": [
+      "cs_semen",
+      "cs_darya"
+    ],
+    "events": [
+      {
+        "anchor": "Женя пошла дальше.",
+        "kind": "absent",
+        "tags": [
+          "cs_zhenya"
+        ],
+        "when": "after",
+        "reason": "Physical departure in the authored scene",
+        "occurrence": 1,
+        "id": "cfa97b59ef"
+      }
+    ]
+  },
+  "days/day02/part08/58_b_scene.rpy": {
+    "initial": [
+      "cs_semen",
+      "cs_darya"
+    ],
+    "events": [
+      {
+        "anchor": "Я ещё раз посмотрела на уходящую Женю.",
+        "kind": "absent",
+        "tags": [
+          "cs_zhenya"
+        ],
+        "when": "after",
+        "reason": "Physical departure in the authored scene",
+        "occurrence": 1,
+        "id": "3d94979afb"
+      }
+    ]
+  },
+  "days/day02/part08/58_scene.rpy": {
+    "initial": [
+      "cs_semen",
+      "cs_darya"
+    ],
+    "events": []
+  },
+  "days/day02/part08/59_scene.rpy": {
+    "initial": [
+      "cs_semen",
+      "cs_darya"
+    ],
+    "events": [
+      {
+        "anchor": "Он махнул рукой и направился к клубам.",
+        "kind": "absent",
+        "tags": [
+          "cs_semen"
+        ],
+        "when": "after",
+        "reason": "Physical departure in the authored scene",
+        "occurrence": 1,
+        "id": "76550c8595"
+      },
+      {
+        "anchor": "Впереди снова показалась знакомая дорожка.",
+        "kind": "reflective",
+        "tags": [],
+        "when": "before",
+        "reason": "REFLECTIVE_SHOT: Evening panorama and people beyond the game",
+        "occurrence": 1,
+        "id": "2d636a7bba"
+      }
+    ]
+  },
+  "days/day02/part09/60_scene.rpy": {
+    "initial": [
+      "cs_darya"
+    ],
+    "events": []
+  },
+  "days/day02/part09/61_scene.rpy": {
+    "initial": [
+      "cs_darya"
+    ],
+    "events": []
+  },
+  "days/day02/part09/62_scene.rpy": {
+    "initial": [
+      "cs_zhenya",
+      "cs_darya"
+    ],
+    "events": []
+  },
+  "days/day02/part09/63_scene.rpy": {
+    "initial": [
+      "cs_zhenya",
+      "cs_darya"
+    ],
+    "events": []
+  },
+  "days/day02/part09/64_a_scene.rpy": {
+    "initial": [
+      "cs_zhenya",
+      "cs_darya"
+    ],
+    "events": []
+  },
+  "days/day02/part09/64_b_scene.rpy": {
+    "initial": [
+      "cs_zhenya",
+      "cs_darya"
+    ],
+    "events": []
+  },
+  "days/day02/part09/64_c_scene.rpy": {
+    "initial": [
+      "cs_zhenya",
+      "cs_darya"
+    ],
+    "events": [
+      {
+        "anchor": "Мы отошли к свободному столику возле окна.",
+        "kind": "focus",
+        "tags": [
+          "cs_darya"
+        ],
+        "when": "before",
+        "reason": "Girls choose a separate table; Zhenya remains at her own table",
+        "occurrence": 1,
+        "id": "d3d3e02a81"
+      }
+    ]
+  },
+  "days/day02/part09/64_d1_scene.rpy": {
+    "initial": [
+      "cs_zhenya",
+      "cs_darya"
+    ],
+    "events": []
+  },
+  "days/day02/part09/64_d2_scene.rpy": {
+    "initial": [
+      "cs_zhenya",
+      "cs_darya"
+    ],
+    "events": []
+  },
+  "days/day02/part09/64_d_scene.rpy": {
+    "initial": [
+      "cs_zhenya",
+      "cs_darya"
+    ],
+    "events": [
+      {
+        "anchor": "А я рассматривала собственную тарелку.",
+        "kind": "reflective",
+        "tags": [],
+        "when": "before",
+        "reason": "REFLECTIVE_SHOT: Dinner plate and Moscow memory",
+        "occurrence": 1,
+        "id": "fa8d03b9db"
+      },
+      {
+        "anchor": "Женя заметила, что я снова задумалась.",
+        "kind": "focus",
+        "tags": [
+          "cs_darya",
+          "cs_zhenya"
+        ],
+        "when": "before",
+        "reason": "Return to direct interaction: Dinner plate and Moscow memory",
+        "occurrence": 1,
+        "id": "5c4ae70de0"
+      }
+    ]
+  },
+  "days/day02/part09/64_e_scene.rpy": {
+    "initial": [
+      "cs_zhenya",
+      "cs_darya"
+    ],
+    "events": [
+      {
+        "anchor": "Семён попрощался и отправился к выходу.",
+        "kind": "absent",
+        "tags": [
+          "cs_semen"
+        ],
+        "when": "after",
+        "reason": "Physical departure in the authored scene",
+        "occurrence": 1,
+        "id": "85a673846b"
+      },
+      {
+        "anchor": "Женя направилась к выходу.",
+        "kind": "absent",
+        "tags": [
+          "cs_zhenya"
+        ],
+        "when": "after",
+        "reason": "Physical departure in the authored scene",
+        "occurrence": 1,
+        "id": "f7de979cc9"
+      },
+      {
+        "anchor": "Ещё вчера мы обсуждали, почему все трое оказались в этом лагере.",
+        "kind": "reflective",
+        "tags": [],
+        "when": "before",
+        "reason": "REFLECTIVE_SHOT: Independent events beyond the known story",
+        "occurrence": 1,
+        "id": "8bd08eb62b"
+      },
+      {
+        "anchor": "Женя закрыла книгу и взяла поднос.",
+        "kind": "focus",
+        "tags": [
+          "cs_darya",
+          "cs_zhenya"
+        ],
+        "when": "before",
+        "reason": "Return to direct interaction: Independent events beyond the known story",
+        "occurrence": 1,
+        "id": "dca7850d0d"
+      },
+      {
+        "anchor": "Дарья аккуратно помогла мне поднять поднос.",
+        "kind": "focus",
+        "tags": [
+          "cs_darya"
+        ],
+        "when": "before",
+        "reason": "Common dialogue return after both dinner branches",
+        "occurrence": 1,
+        "id": "9d0dc580fc"
+      }
+    ],
+    "initial_if": "cs_friend_mz >= 1",
+    "initial_else": [
+      "cs_darya"
+    ]
+  },
+  "days/day02/part09/64_scene.rpy": {
+    "initial": [
+      "cs_darya"
+    ],
+    "events": []
+  },
+  "days/day02/part09/65_scene.rpy": {
+    "initial": [
+      "cs_darya"
+    ],
+    "events": [
+      {
+        "anchor": "Славя отправилась помогать остальным.",
+        "kind": "absent",
+        "tags": [
+          "sl"
+        ],
+        "when": "after",
+        "reason": "Physical departure in the authored scene",
+        "occurrence": 1,
+        "id": "da24651655"
+      },
+      {
+        "anchor": "Она помахала нам и поспешила обратно.",
+        "kind": "absent",
+        "tags": [
+          "mi"
+        ],
+        "when": "after",
+        "reason": "Physical departure in the authored scene",
+        "occurrence": 1,
+        "id": "c732427990"
+      },
+      {
+        "anchor": "Она улыбнулась и вернулась к подготовке.",
+        "kind": "focus",
+        "tags": [
+          "cs_darya"
+        ],
+        "when": "after",
+        "reason": "Miku returns to stage; audience viewpoint",
+        "occurrence": 1,
+        "id": "ff17e6298b"
+      },
+      {
+        "anchor": "На сценической площадке кто-то передвигал стул.",
+        "kind": "reflective",
+        "tags": [],
+        "when": "before",
+        "reason": "REFLECTIVE_SHOT: Watching the prepared stage and completed work",
+        "occurrence": 1,
+        "id": "975cacab44"
+      },
+      {
+        "anchor": "Дарья посмотрела на меня.",
+        "kind": "focus",
+        "tags": [
+          "cs_darya"
+        ],
+        "when": "before",
+        "reason": "Return to direct interaction: Watching the prepared stage and completed work",
+        "occurrence": 1,
+        "id": "cb07c17dfa"
+      },
+      {
+        "anchor": "Впереди уже собирались остальные зрители.",
+        "kind": "reflective",
+        "tags": [],
+        "when": "before",
+        "reason": "Conversation ended; attention turns to the stage",
+        "occurrence": 1,
+        "id": "45c6fdba52"
+      }
+    ]
+  },
+  "days/day02/part10/00_flow.rpy": {
+    "initial": [
+      "cs_darya"
+    ],
+    "events": []
+  },
+  "days/day02/part10/66_scene.rpy": {
+    "initial": [
+      "cs_darya"
+    ],
+    "events": []
+  },
+  "days/day02/part10/67_scene.rpy": {
+    "initial": [
+      "cs_darya",
+      "cs_zhenya"
+    ],
+    "events": [
+      {
+        "anchor": "Я открыла книгу.",
+        "kind": "focus",
+        "tags": [],
+        "when": "before",
+        "reason": "Last pages, independent reading",
+        "occurrence": 1,
+        "id": "ed66cb23a2"
+      },
+      {
+        "anchor": "Дарья заметила, что я перестала читать.",
+        "kind": "focus",
+        "tags": [
+          "cs_darya"
+        ],
+        "when": "before",
+        "reason": "Darya starts talking, seated portrait remains",
+        "occurrence": 1,
+        "id": "cc185e76a2"
+      }
+    ]
+  },
+  "days/day02/part10/68_scene.rpy": {
+    "initial": [
+      "cs_darya",
+      "cs_zhenya"
+    ],
+    "events": []
+  },
+  "days/day02/part10/68a_scene.rpy": {
+    "initial": [
+      "cs_darya",
+      "cs_zhenya"
+    ],
+    "events": []
+  },
+  "days/day02/part10/68b_scene.rpy": {
+    "initial": [
+      "cs_darya",
+      "cs_zhenya"
+    ],
+    "events": []
+  },
+  "days/day02/part10/68c_scene.rpy": {
+    "initial": [
+      "cs_darya",
+      "cs_zhenya"
+    ],
+    "events": []
+  },
+  "days/day02/part10/69_concert.rpy": {
+    "initial": [
+      "cs_darya"
+    ],
+    "events": [
+      {
+        "anchor": "Вот и договорились. Хорошего вечера.",
+        "kind": "focus",
+        "tags": [
+          "cs_darya"
+        ],
+        "when": "after",
+        "reason": "Viola goes back to audience; no new treatment",
+        "occurrence": 1,
+        "id": "5a4b095373"
+      },
+      {
+        "anchor": "Тогда после. Только это будет быстрый набросок.",
+        "kind": "focus",
+        "tags": [
+          "cs_darya"
+        ],
+        "when": "after",
+        "reason": "Tikhonova resumes drawing offscreen",
+        "occurrence": 1,
+        "id": "ab2534ea89"
+      },
+      {
+        "anchor": "Ну как? Удалось хоть немного отдохнуть от наших исследований?",
+        "kind": "focus",
+        "tags": [
+          "cs_darya",
+          "cs_semen"
+        ],
+        "when": "before",
+        "reason": "Semen talks to the girls after the concert",
+        "occurrence": 1,
+        "id": "515c9e8f55"
+      },
+      {
+        "anchor": "Вот… Я обещала показать.",
+        "kind": "focus",
+        "tags": [
+          "cs_darya",
+          "un"
+        ],
+        "when": "before",
+        "reason": "Close viewpoint on the sketch, others remain offscreen",
+        "occurrence": 1,
+        "id": "cf54d8590f"
+      }
+    ]
+  },
+  "days/day02/part10/69_scene.rpy": {
+    "initial": [
+      "cs_darya",
+      "cs_zhenya"
+    ],
+    "events": []
+  },
+  "days/day02/part10/70_scene.rpy": {
+    "initial": [
+      "cs_darya"
+    ],
+    "events": [
+      {
+        "anchor": "Она направилась к нашему домику.",
+        "kind": "absent",
+        "tags": [
+          "cs_darya"
+        ],
+        "when": "after",
+        "reason": "Physical departure in the authored scene",
+        "occurrence": 1,
+        "id": "c7fd37f7e0"
+      }
+    ]
+  },
+  "days/day02/part10/71_scene.rpy": {
+    "initial": [
+      "cs_darya"
+    ],
+    "events": [
+      {
+        "anchor": "До домика я дошла без приключений.",
+        "kind": "focus",
+        "tags": [],
+        "when": "before",
+        "reason": "Darya is already inside, not at the exterior door",
+        "occurrence": 1,
+        "id": "7b1f7bfa91"
+      }
+    ]
+  },
+  "days/day02/part10/72_scene.rpy": {
+    "initial": [
+      "cs_darya"
+    ],
+    "events": []
+  },
+  "days/day02/part10/73_scene.rpy": {
+    "initial": [
+      "cs_darya"
+    ],
+    "events": []
+  },
+  "days/day02/part10/74_scene.rpy": {
+    "initial": [
+      "cs_darya"
+    ],
+    "events": [
+      {
+        "anchor": "Некоторое время просто смотрела в потолок.",
+        "kind": "focus",
+        "tags": [],
+        "when": "before",
+        "reason": "Private night reflection, not the sleeping pose itself",
+        "occurrence": 1,
+        "id": "b11badd71b"
+      },
+      {
+        "anchor": "Я повернула голову.",
+        "kind": "focus",
+        "tags": [
+          "cs_darya"
+        ],
+        "when": "before",
+        "reason": "Lena addresses Darya, both lying down",
+        "occurrence": 1,
+        "id": "4862310767"
+      },
+      {
+        "anchor": "Завтра мы снова будем искать ответы.",
+        "kind": "focus",
+        "tags": [],
+        "when": "before",
+        "reason": "Conversation ended; final independent thoughts before sleep",
+        "occurrence": 1,
+        "id": "d61a0c0e86"
+      }
+    ]
+  },
+  "days/day02/reading_interlude/59_01_scene.rpy": {
+    "initial": [
+      "cs_darya"
+    ],
+    "events": [
+      {
+        "anchor": "Дарья направилась к домикам.",
+        "kind": "absent",
+        "tags": [
+          "cs_darya"
+        ],
+        "when": "after",
+        "reason": "Physical departure in the authored scene",
+        "occurrence": 1,
+        "id": "af997fb038"
+      }
+    ]
+  },
+  "days/day02/reading_interlude/59_02_scene.rpy": {
+    "initial": [],
+    "events": []
+  },
+  "days/day02/reading_interlude/59_03_scene.rpy": {
+    "initial": [],
+    "events": []
+  },
+  "days/day02/reading_interlude/59_04a_scene.rpy": {
+    "initial": [
+      "cs_zhenya"
+    ],
+    "events": [
+      {
+        "anchor": "Она направилась к своему столу.",
+        "kind": "focus",
+        "tags": [],
+        "when": "after",
+        "reason": "Zhenya returns to desk; Lena reads",
+        "occurrence": 1,
+        "id": "059ae39e0c"
+      }
+    ]
+  },
+  "days/day02/reading_interlude/59_04b_scene.rpy": {
+    "initial": [
+      "cs_zhenya"
+    ],
+    "events": [
+      {
+        "anchor": "И вернулась за стол.",
+        "kind": "focus",
+        "tags": [],
+        "when": "after",
+        "reason": "Zhenya returns to desk; Lena reads",
+        "occurrence": 1,
+        "id": "f2371b7c05"
+      }
+    ]
+  },
+  "days/day02/reading_interlude/59_04c_scene.rpy": {
+    "initial": [
+      "cs_zhenya"
+    ],
+    "events": [
+      {
+        "anchor": "И вернулась к работе.",
+        "kind": "focus",
+        "tags": [],
+        "when": "after",
+        "reason": "Conversation finished; independent reading",
+        "occurrence": 1,
+        "id": "985d025ca4"
+      }
+    ]
+  },
+  "days/day02/reading_interlude/59_05_scene.rpy": {
+    "initial": [],
+    "events": [
+      {
+        "anchor": "Даша подошла к библиотекарше.",
+        "kind": "focus",
+        "tags": [],
+        "when": "before",
+        "reason": "Reader viewpoint while Darya goes to the distant desk",
+        "occurrence": 1,
+        "id": "1c69659476"
+      }
+    ]
+  },
+  "days/day02/reading_interlude/59_06_scene.rpy": {
+    "initial": [
+      "cs_darya"
+    ],
+    "events": [
+      {
+        "anchor": "Мне было спокойно.",
+        "kind": "focus",
+        "tags": [],
+        "when": "before",
+        "reason": "Both read independently; Lena recalls Moscow",
+        "occurrence": 1,
+        "id": "493862e91a"
+      },
+      {
+        "anchor": "И услышала голос Жени.",
+        "kind": "focus",
+        "tags": [
+          "cs_darya",
+          "cs_zhenya"
+        ],
+        "when": "before",
+        "reason": "Return to the table conversation",
+        "occurrence": 1,
+        "id": "1915709574"
+      }
+    ]
+  },
+  "days/day02/reading_interlude/59_07a_scene.rpy": {
+    "initial": [
+      "cs_zhenya",
+      "cs_darya"
+    ],
+    "events": [
+      {
+        "anchor": "И вернулась к своему столу.",
+        "kind": "focus",
+        "tags": [
+          "cs_darya"
+        ],
+        "when": "after",
+        "reason": "Zhenya finishes conversation and resumes work",
+        "occurrence": 1,
+        "id": "8d8b719ab8"
+      }
+    ]
+  },
+  "days/day02/reading_interlude/59_07b_scene.rpy": {
+    "initial": [
+      "cs_zhenya",
+      "cs_darya"
+    ],
+    "events": [
+      {
+        "anchor": "Она вернулась к работе.",
+        "kind": "focus",
+        "tags": [
+          "cs_darya"
+        ],
+        "when": "after",
+        "reason": "Zhenya finishes conversation and resumes work",
+        "occurrence": 1,
+        "id": "9f19b77133"
+      }
+    ]
+  },
+  "days/day02/reading_interlude/59_07c_scene.rpy": {
+    "initial": [
+      "cs_zhenya",
+      "cs_darya"
+    ],
+    "events": [
+      {
+        "anchor": "Женя вернулась за свой стол.",
+        "kind": "focus",
+        "tags": [
+          "cs_darya"
+        ],
+        "when": "after",
+        "reason": "Zhenya finishes conversation and resumes work",
+        "occurrence": 1,
+        "id": "d73dcb29fc"
+      }
+    ]
+  },
+  "days/day02/reading_interlude/59_08_scene.rpy": {
+    "initial": [
+      "cs_darya"
+    ],
+    "events": []
+  },
+  "days/day02/reading_interlude/59_09_scene.rpy": {
+    "initial": [
+      "cs_darya"
+    ],
+    "events": [
+      {
+        "anchor": "Впереди уже виднелись пионеры, собиравшиеся у крыльца.",
+        "kind": "reflective",
+        "tags": [],
+        "when": "before",
+        "reason": "REFLECTIVE_SHOT: Evening camp and accepting quietness",
+        "occurrence": 1,
+        "id": "39ee63d976"
+      }
+    ]
+  },
+  "days/day02/reading_interlude/59_10_scene.rpy": {
+    "initial": [
+      "cs_darya"
+    ],
+    "events": []
+  },
+  "days/prologue/01_ordinary.rpy": {
+    "initial": [],
+    "events": []
+  },
+  "days/prologue/02_seven_percent.rpy": {
+    "initial": [],
+    "events": []
+  },
+  "days/prologue/03_stranger.rpy": {
+    "initial": [],
+    "events": [
+      {
+        "anchor": "Я отвернулась к окну.",
+        "kind": "reflective",
+        "tags": [],
+        "when": "before",
+        "reason": "Attention turns from the stranger to the bus window",
+        "occurrence": 1,
+        "id": "b35e64725d"
+      }
+    ]
+  },
+  "days/prologue/04_instagram.rpy": {
+    "initial": [],
+    "events": [
+      {
+        "anchor": "На ней я стояла возле красного Mitsubishi в лесу.",
+        "kind": "focus",
+        "tags": [],
+        "when": "before",
+        "reason": "Phone gallery occupies the visual focus",
+        "occurrence": 1,
+        "id": "c9bb96bb14"
+      },
+      {
+        "anchor": "На этом наша социальная активность закончилась.",
+        "kind": "reflective",
+        "tags": [],
+        "when": "before",
+        "reason": "The brief conversation is over",
+        "occurrence": 1,
+        "id": "9530346d03"
+      }
+    ]
+  },
+  "days/prologue/05_wrong_way.rpy": {
+    "initial": [
+      "cs_dasha_winter"
+    ],
+    "events": [
+      {
+        "anchor": "Я смотрела в окно, иногда переводя взгляд на пустые сиденья.",
+        "kind": "focus",
+        "tags": [],
+        "when": "before",
+        "reason": "Long road/window viewpoint",
+        "occurrence": 1,
+        "id": "b0c436238c"
+      },
+      {
+        "anchor": "Девушка рядом повернулась к окну.",
+        "kind": "focus",
+        "tags": [
+          "cs_dasha_winter"
+        ],
+        "when": "before",
+        "reason": "Return to shared conversation",
+        "occurrence": 1,
+        "id": "b9e621bd8a"
+      },
+      {
+        "anchor": "Я снова отвернулась к окну.",
+        "kind": "focus",
+        "tags": [],
+        "when": "before",
+        "reason": "Independent reflection during the bus ride",
+        "occurrence": 1,
+        "id": "bbd8b52c96"
+      },
+      {
+        "anchor": "Мой взгляд снова остановился на девушке рядом.",
+        "kind": "focus",
+        "tags": [
+          "cs_dasha_winter"
+        ],
+        "when": "before",
+        "reason": "Darya becomes the subject of attention again",
+        "occurrence": 1,
+        "id": "b43e26ff23"
+      }
+    ]
+  },
+  "days/prologue/06_last_stop.rpy": {
+    "initial": [],
+    "events": []
+  },
+  "days/prologue/07_summer.rpy": {
+    "initial": [],
+    "events": []
+  }
+}

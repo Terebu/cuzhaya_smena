@@ -1,0 +1,9 @@
+[
+  {
+    "file": "days/day02/part06/44_scene.rpy",
+    "old": "cs_darya smile pioneer far / normal",
+    "new": "cs_darya thinking pioneer far / normal",
+    "count": 2,
+    "reason": "Serious discussion of the repeated road experiment; no smiling V gesture"
+  }
+]

@@ -1,0 +1,2307 @@
+[
+  {
+    "scene": 60,
+    "speaker": "cs_narrator",
+    "text": "Мы успели пройти всего несколько десятков метров, когда над лагерем раздался горн."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_narrator",
+    "text": "Я невольно вздрогнула."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_narrator",
+    "text": "Не сильно."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_narrator",
+    "text": "Но достаточно, чтобы на секунду остановиться."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_ls",
+    "text": "О!"
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_narrator",
+    "text": "Дарья повернулась."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_da",
+    "text": "Что?"
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_narrator",
+    "text": "Я посмотрела в сторону столовой."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_narrator",
+    "text": "Потом на солнце."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_ls",
+    "text": "Кажется, ужин."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_da",
+    "text": "Ты уже научилась различать сигналы?"
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_narrator",
+    "text": "Я задумалась."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_ls",
+    "text": "Этот особенно легко. Желудок переводит синхронно."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_narrator",
+    "text": "Она рассмеялась."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_narrator",
+    "text": "Я посмотрела на неё."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_narrator",
+    "text": "Потом на дорожку."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_narrator",
+    "text": "И вдруг в голове всплыла мелодия."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_narrator",
+    "text": "Старая."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_narrator",
+    "text": "Нелепая."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_narrator",
+    "text": "До боли знакомая."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_narrator",
+    "text": "Такая, которую не слышала уже несколько лет, но почему-то могла вспомнить практически мгновенно."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_th",
+    "text": "О нет."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_th",
+    "text": "Только не это."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_narrator",
+    "text": "Я начала тихо напевать."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_narrator",
+    "text": "Сначала едва слышно."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_narrator",
+    "text": "Потом немного увереннее."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_ls",
+    "text": "Котлетки с макарешками…"
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_narrator",
+    "text": "Остановилась."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_narrator",
+    "text": "Подняла палец."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_ls",
+    "text": "Нет, с пюрешкой!"
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_narrator",
+    "text": "Дарья посмотрела на меня."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_narrator",
+    "text": "Несколько секунд молчала."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_da",
+    "text": "Лена."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_narrator",
+    "text": "Я повернулась."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_ls",
+    "text": "М?"
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_da",
+    "text": "Ты сейчас серьёзно?"
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_narrator",
+    "text": "Я широко улыбнулась."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_ls",
+    "text": "Абсолютно."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_narrator",
+    "text": "Она засмеялась."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_da",
+    "text": "Это же какая-то старая интернетная песенка?"
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_ls",
+    "text": "Именно!"
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_narrator",
+    "text": "Я торжественно кивнула."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_ls",
+    "text": "Культурное наследие русскоязычного интернета."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_da",
+    "text": "А я уж подумала, что тебе после падения всё-таки стоит ещё раз показаться Виоле."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_narrator",
+    "text": "Я посмотрела на неё."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_ls",
+    "text": "Попрошу не оскорблять народное творчество."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_narrator",
+    "text": "Дарья рассмеялась."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_narrator",
+    "text": "Я продолжила напевать мелодию, уже без слов."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_narrator",
+    "text": "Осторожно покачала головой в такт."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_narrator",
+    "text": "И неожиданно вспомнила совершенно другое время."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_narrator",
+    "text": "Старые сайты."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_narrator",
+    "text": "Видео с отвратительным качеством изображения."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_narrator",
+    "text": "Шутки, смысл которых невозможно было объяснить человеку, не заставшему их появления."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_narrator",
+    "text": "Записи, которые пересылали друзьям просто потому, что кто-то однажды решил сделать нечто максимально бессмысленное."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_th",
+    "text": "Господи."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_th",
+    "text": "Сколько же всего было."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_narrator",
+    "text": "Я остановилась."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_narrator",
+    "text": "Приложила здоровую ладонь к щеке."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_ls",
+    "text": "Ой."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_narrator",
+    "text": "Дарья моментально насторожилась."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_da",
+    "text": "Что? Болит?"
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_narrator",
+    "text": "Я покачала головой."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_ls",
+    "text": "Нет. Просто олдскулы свело."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_narrator",
+    "text": "Она несколько секунд смотрела на меня."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_narrator",
+    "text": "Потом медленно улыбнулась."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_da",
+    "text": "Ты неисправима."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_ls",
+    "text": "Представляешь, меня морально отбросило лет на пятнадцать назад."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_narrator",
+    "text": "Дарья задумалась."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_da",
+    "text": "В начало десятых?"
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_narrator",
+    "text": "Я кивнула."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_ls",
+    "text": "Угу."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_narrator",
+    "text": "Она усмехнулась."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_da",
+    "text": "Ты ведь сама из двадцать шестого года."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_ls",
+    "text": "Именно поэтому и ностальгирую."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_narrator",
+    "text": "Я посмотрела сквозь деревья на лагерь."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_narrator",
+    "text": "Здесь всё выглядело так, будто время остановилось ещё раньше."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_narrator",
+    "text": "Ни интернета."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_narrator",
+    "text": "Ни смартфонов."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_narrator",
+    "text": "Ни привычных мне сервисов."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_narrator",
+    "text": "Даже музыку нельзя было просто включить в наушниках по дороге."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_narrator",
+    "text": "И всё равно в голове неожиданно всплывали воспоминания не о последних годах, а о том старом интернете, который я застала ещё подростком."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_da",
+    "text": "А что тебе в нём так нравилось?"
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_narrator",
+    "text": "Я задумалась."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_ls",
+    "text": "Наверное, ощущение, что люди делали всякую ерунду просто потому, что им было весело."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_da",
+    "text": "Сейчас тоже делают."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_ls",
+    "text": "Конечно. Просто тогда всё казалось каким-то менее серьёзным."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_narrator",
+    "text": "Я слегка улыбнулась."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_ls",
+    "text": "Видео могли снять на что угодно. Монтаж был ужасный. Звук иногда такой, что хотелось пожаловаться на нарушение Женевской конвенции."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_narrator",
+    "text": "Дарья засмеялась."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_da",
+    "text": "Но ты всё равно смотрела?"
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_ls",
+    "text": "Разумеется."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_narrator",
+    "text": "Я немного помолчала."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_ls",
+    "text": "А потом даже производство глупостей стало профессиональным."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_da",
+    "text": "Технический прогресс."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_ls",
+    "text": "Не все его последствия одинаково полезны человечеству."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_narrator",
+    "text": "Она рассмеялась."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_narrator",
+    "text": "Я посмотрела на неё."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_th",
+    "text": "Надо же."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_th",
+    "text": "Мы сейчас идём по советскому лагерю и обсуждаем интернет начала десятых."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_th",
+    "text": "Неизвестно, сколько нам ещё здесь находиться."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_th",
+    "text": "А я внезапно скучаю по старым мемам."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_narrator",
+    "text": "Мозг — удивительная штука."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_da",
+    "text": "Пойдём уже. А то твоя культурная программа закончится без ужина."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_narrator",
+    "text": "Я посмотрела в сторону столовой."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_ls",
+    "text": "Справедливо."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_narrator",
+    "text": "Мы направились к зданию."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_narrator",
+    "text": "На этот раз обычным шагом."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_narrator",
+    "text": "Без подпрыгиваний."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_narrator",
+    "text": "Без попыток ускориться."
+  },
+  {
+    "scene": 60,
+    "speaker": "cs_narrator",
+    "text": "И с совершенно искренним намерением больше сегодня не встречаться с корнями деревьев."
+  },
+  {
+    "scene": 61,
+    "speaker": "cs_narrator",
+    "text": "Возле столовой уже собирались пионеры."
+  },
+  {
+    "scene": 61,
+    "speaker": "cs_narrator",
+    "text": "Кто-то торопился занять место."
+  },
+  {
+    "scene": 61,
+    "speaker": "cs_narrator",
+    "text": "Кто-то продолжал разговор на крыльце."
+  },
+  {
+    "scene": 61,
+    "speaker": "cs_narrator",
+    "text": "А несколько девочек стояли чуть поодаль, споря о том, кто будет сидеть ближе к музыкальному выступлению."
+  },
+  {
+    "scene": 61,
+    "speaker": "cs_narrator",
+    "text": "Я невольно улыбнулась."
+  },
+  {
+    "scene": 61,
+    "speaker": "cs_th",
+    "text": "Вечер ещё не начался, а подготовка уже идёт полным ходом."
+  },
+  {
+    "scene": 61,
+    "speaker": "cs_narrator",
+    "text": "Мы поднялись по ступенькам."
+  },
+  {
+    "scene": 61,
+    "speaker": "cs_narrator",
+    "text": "И почти сразу я увидела знакомую фигуру."
+  },
+  {
+    "scene": 61,
+    "speaker": "cs_narrator",
+    "text": "Тёмные волосы."
+  },
+  {
+    "scene": 61,
+    "speaker": "cs_narrator",
+    "text": "Очки."
+  },
+  {
+    "scene": 61,
+    "speaker": "cs_narrator",
+    "text": "Книга под мышкой."
+  },
+  {
+    "scene": 61,
+    "speaker": "cs_narrator",
+    "text": "Выражение лица человека, который предпочёл бы сейчас находиться где-нибудь в тишине."
+  },
+  {
+    "scene": 61,
+    "speaker": "cs_th",
+    "text": "Женя."
+  },
+  {
+    "scene": 61,
+    "speaker": "cs_narrator",
+    "text": "Я замедлила шаг."
+  },
+  {
+    "scene": 61,
+    "speaker": "cs_narrator",
+    "text": "Дарья тоже посмотрела в её сторону."
+  },
+  {
+    "scene": 61,
+    "speaker": "cs_da",
+    "text": "Видишь?"
+  },
+  {
+    "scene": 61,
+    "speaker": "cs_narrator",
+    "text": "Я кивнула."
+  },
+  {
+    "scene": 61,
+    "speaker": "cs_ls",
+    "text": "Вижу."
+  },
+  {
+    "scene": 61,
+    "speaker": "cs_da",
+    "text": "Только давай без нового заседания библиотечной комиссии."
+  },
+  {
+    "scene": 61,
+    "speaker": "cs_narrator",
+    "text": "Я посмотрела на неё с самым серьёзным выражением лица."
+  },
+  {
+    "scene": 61,
+    "speaker": "cs_ls",
+    "text": "Сегодня я исключительно законопослушная гражданка."
+  },
+  {
+    "scene": 61,
+    "speaker": "cs_narrator",
+    "text": "Дарья посмотрела на перевязанный локоть."
+  },
+  {
+    "scene": 61,
+    "speaker": "cs_da",
+    "text": "Которая уже дважды посетила медпункт."
+  },
+  {
+    "scene": 61,
+    "speaker": "cs_ls",
+    "text": "Одно другому не противоречит."
+  },
+  {
+    "scene": 61,
+    "speaker": "cs_narrator",
+    "text": "Она усмехнулась."
+  },
+  {
+    "scene": 61,
+    "speaker": "cs_narrator",
+    "text": "Мы подошли ближе."
+  },
+  {
+    "scene": 61,
+    "speaker": "cs_narrator",
+    "text": "Женя подняла взгляд от книги."
+  },
+  {
+    "scene": 61,
+    "speaker": "cs_mz",
+    "text": "А, Соколова. Я тебя как раз хотела увидеть."
+  },
+  {
+    "scene": 61,
+    "speaker": "cs_narrator",
+    "text": "Я остановилась."
+  },
+  {
+    "scene": 61,
+    "speaker": "cs_th",
+    "text": "О."
+  },
+  {
+    "scene": 61,
+    "speaker": "cs_th",
+    "text": "Вот это уже неожиданно."
+  },
+  {
+    "scene": 61,
+    "speaker": "cs_ls",
+    "text": "Меня?"
+  },
+  {
+    "scene": 61,
+    "speaker": "cs_mz",
+    "text": "Нет, твою повязку. Конечно, тебя."
+  },
+  {
+    "scene": 61,
+    "speaker": "cs_narrator",
+    "text": "Я медленно улыбнулась."
+  },
+  {
+    "scene": 61,
+    "speaker": "cs_ls",
+    "text": "Какая тёплая встреча."
+  },
+  {
+    "scene": 61,
+    "speaker": "cs_narrator",
+    "text": "Женя закатила глаза."
+  },
+  {
+    "scene": 61,
+    "speaker": "cs_narrator",
+    "text": "Но уголки губ слегка дрогнули."
+  },
+  {
+    "scene": 61,
+    "speaker": "cs_mz",
+    "text": "Только не начинай."
+  },
+  {
+    "scene": 61,
+    "speaker": "cs_narrator",
+    "text": "Женя узнала нас и слегка кивнула."
+  },
+  {
+    "scene": 61,
+    "speaker": "cs_mz",
+    "text": "Привет. Опять куда-то торопитесь?"
+  },
+  {
+    "scene": 61,
+    "speaker": "cs_ls",
+    "text": "На ужин. Сегодня исключительно мирные намерения."
+  },
+  {
+    "scene": 61,
+    "speaker": "cs_mz",
+    "text": "Звучит подозрительно."
+  },
+  {
+    "scene": 61,
+    "speaker": "cs_narrator",
+    "text": "Я улыбнулась."
+  },
+  {
+    "scene": 61,
+    "speaker": "cs_ls",
+    "text": "Твоё доверие меня вдохновляет."
+  },
+  {
+    "scene": 61,
+    "speaker": "cs_narrator",
+    "text": "Женя мельком посмотрела на нас."
+  },
+  {
+    "scene": 61,
+    "speaker": "cs_mz",
+    "text": "Привет."
+  },
+  {
+    "scene": 61,
+    "speaker": "cs_ls",
+    "text": "Привет."
+  },
+  {
+    "scene": 61,
+    "speaker": "cs_narrator",
+    "text": "Я невольно посмотрела на книгу под её мышкой."
+  },
+  {
+    "scene": 61,
+    "speaker": "cs_th",
+    "text": "Похоже, библиотечная деятельность продолжается даже после закрытия рабочего дня."
+  },
+  {
+    "scene": 61,
+    "speaker": "cs_narrator",
+    "text": "Женя уже собиралась вернуться к чтению, поэтому я не стала задерживать её ненужными вопросами."
+  },
+  {
+    "scene": 61,
+    "speaker": "cs_narrator",
+    "text": "Затем Женя заметила мой локоть."
+  },
+  {
+    "scene": 61,
+    "speaker": "cs_narrator",
+    "text": "Посмотрела на повязку."
+  },
+  {
+    "scene": 61,
+    "speaker": "cs_mz",
+    "text": "А это что?"
+  },
+  {
+    "scene": 61,
+    "speaker": "cs_narrator",
+    "text": "Я подняла руку."
+  },
+  {
+    "scene": 61,
+    "speaker": "cs_ls",
+    "text": "Результат исследования местной дорожной инфраструктуры."
+  },
+  {
+    "scene": 61,
+    "speaker": "cs_narrator",
+    "text": "Женя нахмурилась."
+  },
+  {
+    "scene": 61,
+    "speaker": "cs_mz",
+    "text": "Чего?"
+  },
+  {
+    "scene": 61,
+    "speaker": "cs_da",
+    "text": "Лена споткнулась о корень и упала."
+  },
+  {
+    "scene": 61,
+    "speaker": "cs_mz",
+    "text": "А."
+  },
+  {
+    "scene": 61,
+    "speaker": "cs_narrator",
+    "text": "Она снова посмотрела на меня."
+  },
+  {
+    "scene": 61,
+    "speaker": "cs_mz",
+    "text": "Тогда понятно."
+  },
+  {
+    "scene": 61,
+    "speaker": "cs_narrator",
+    "text": "Я возмущённо подняла здоровую руку."
+  },
+  {
+    "scene": 61,
+    "speaker": "cs_ls",
+    "text": "Почему всем сразу становится понятно?!"
+  },
+  {
+    "scene": 61,
+    "speaker": "cs_narrator",
+    "text": "Женя поправила очки."
+  },
+  {
+    "scene": 61,
+    "speaker": "cs_mz",
+    "text": "Потому что ты вчера успела устроить достаточно шума в библиотеке, чтобы я примерно представляла твою способность находить неприятности."
+  },
+  {
+    "scene": 61,
+    "speaker": "cs_narrator",
+    "text": "Дарья негромко рассмеялась."
+  },
+  {
+    "scene": 61,
+    "speaker": "cs_narrator",
+    "text": "Я медленно повернулась к ней."
+  },
+  {
+    "scene": 61,
+    "speaker": "cs_ls",
+    "text": "Вижу, против меня снова формируется коалиция."
+  },
+  {
+    "scene": 61,
+    "speaker": "cs_da",
+    "text": "Никто не виноват, что вы обе пришли к одинаковым выводам."
+  },
+  {
+    "scene": 61,
+    "speaker": "cs_narrator",
+    "text": "Женя усмехнулась."
+  },
+  {
+    "scene": 61,
+    "speaker": "cs_mz",
+    "text": "Просто в следующий раз смотри под ноги."
+  },
+  {
+    "scene": 61,
+    "speaker": "cs_narrator",
+    "text": "Я вздохнула."
+  },
+  {
+    "scene": 61,
+    "speaker": "cs_ls",
+    "text": "Этот совет сегодня популярнее любой музыкальной композиции."
+  },
+  {
+    "scene": 61,
+    "speaker": "cs_narrator",
+    "text": "Изнутри столовой донёсся голос, приглашавший проходить к раздаче."
+  },
+  {
+    "scene": 61,
+    "speaker": "cs_narrator",
+    "text": "Женя закрыла книгу."
+  },
+  {
+    "scene": 61,
+    "speaker": "cs_mz",
+    "text": "Ладно, идём. А то потом в очереди застрянем."
+  },
+  {
+    "scene": 61,
+    "speaker": "cs_narrator",
+    "text": "Мы направились внутрь."
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_narrator",
+    "text": "Уже возле очереди Женя вдруг остановилась."
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_narrator",
+    "text": "Посмотрела на меня."
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_narrator",
+    "text": "Потом на Дарью."
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_narrator",
+    "text": "И немного понизила голос."
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_mz",
+    "text": "Соколова, насчёт твоего вчерашнего рассказа."
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_narrator",
+    "text": "Я насторожилась."
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_ls",
+    "text": "Какого именно?"
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_narrator",
+    "text": "Она посмотрела на меня поверх очков."
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_mz",
+    "text": "Ты вчера успела рассказать достаточно странного. Но я имею в виду автобус и то, что ты не понимаешь, где оказался лагерь."
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_narrator",
+    "text": "Я перестала улыбаться."
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_th",
+    "text": "Вот теперь интересно."
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_ls",
+    "text": "Да?"
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_narrator",
+    "text": "Женя немного помолчала."
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_mz",
+    "text": "Я не говорю, что поверила тебе."
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_narrator",
+    "text": "Я кивнула."
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_ls",
+    "text": "Понимаю."
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_mz",
+    "text": "Но ты спрашивала, можно ли посмотреть какие-нибудь старые карты окрестностей."
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_narrator",
+    "text": "Я вспомнила наш разговор на площади."
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_ls",
+    "text": "Да."
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_mz",
+    "text": "Я подумала, что в библиотеке могут быть не только книги. Там есть несколько коробок со старыми каталогами и разными материалами, которые давно никто не разбирал."
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_narrator",
+    "text": "Я посмотрела на неё внимательнее."
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_ls",
+    "text": "И ты предлагаешь поискать там?"
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_mz",
+    "text": "Предлагаю сначала проверить, что в них вообще есть."
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_narrator",
+    "text": "Она поправила очки."
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_mz",
+    "text": "Я сама давно собиралась разобрать этот угол. А тут хотя бы повод появился."
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_narrator",
+    "text": "Я несколько секунд молчала."
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_th",
+    "text": "Надо же."
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_th",
+    "text": "Она действительно запомнила."
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_th",
+    "text": "И не просто запомнила."
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_th",
+    "text": "Сама подумала, где можно начать поиски."
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_narrator",
+    "text": "Дарья посмотрела на Женю."
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_da",
+    "text": "Ты знаешь, могут ли там быть схемы дороги к лагерю?"
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_narrator",
+    "text": "Женя покачала головой."
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_mz",
+    "text": "Не знаю. И не собираюсь обещать, что мы найдём что-нибудь полезное."
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_narrator",
+    "text": "Пауза."
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_mz",
+    "text": "Но могут оказаться старые справочники, планы территории или документы, оставшиеся от предыдущих смен."
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_narrator",
+    "text": "Я кивнула."
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_ls",
+    "text": "Даже это уже больше, чем у нас есть сейчас."
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_narrator",
+    "text": "Женя посмотрела на меня."
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_mz",
+    "text": "Только давай без очередной лекции про будущее перед всей библиотекой."
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_narrator",
+    "text": "Я улыбнулась."
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_ls",
+    "text": "Торжественно обещаю обойтись без выступления."
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_mz",
+    "text": "И ничего самостоятельно не вытаскивать из шкафов."
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_ls",
+    "text": "Хорошо."
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_mz",
+    "text": "И не устраивать там научные эксперименты."
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_narrator",
+    "text": "Я задумалась."
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_ls",
+    "text": "А вот это уже ограничение академической свободы."
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_narrator",
+    "text": "Она прищурилась."
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_narrator",
+    "text": "Я тут же подняла здоровую руку."
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_ls",
+    "text": "Шучу. Всё поняла."
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_narrator",
+    "text": "Дарья тихо рассмеялась."
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_narrator",
+    "text": "Женя вздохнула."
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_narrator",
+    "text": "Но на этот раз тоже улыбнулась."
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_mz",
+    "text": "Тогда приходи завтра, когда библиотека будет открыта. Если я успею закончить обычные дела, посмотрим вместе."
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_narrator",
+    "text": "Я посмотрела на неё."
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_ls",
+    "text": "Спасибо, Женя."
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_narrator",
+    "text": "Она слегка удивилась."
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_mz",
+    "text": "За что?"
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_ls",
+    "text": "За то, что решила помочь."
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_narrator",
+    "text": "Женя ненадолго отвела взгляд."
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_mz",
+    "text": "Я же сказала, что сама хотела разобраться с каталогами."
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_narrator",
+    "text": "Я улыбнулась."
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_ls",
+    "text": "Конечно."
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_narrator",
+    "text": "Она снова посмотрела на меня."
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_mz",
+    "text": "И не делай такое лицо."
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_ls",
+    "text": "Какое?"
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_mz",
+    "text": "Будто я только что согласилась участвовать в твоей безумной экспедиции."
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_narrator",
+    "text": "Я немного подумала."
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_ls",
+    "text": "А разве нет?"
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_mz",
+    "text": "Лена."
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_ls",
+    "text": "Всё, молчу."
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_narrator",
+    "text": "Но внутри я уже мысленно записывала новое обстоятельство."
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_th",
+    "text": "Библиотека."
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_th",
+    "text": "Старые каталоги."
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_th",
+    "text": "Возможно, какие-нибудь планы местности."
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_narrator",
+    "text": "Это ещё не было ответом."
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_narrator",
+    "text": "Даже не обещанием ответа."
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_narrator",
+    "text": "Но впервые за день кто-то из местных сам предложил помочь нам разобраться."
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_narrator",
+    "text": "Не потому, что поверил невероятной истории."
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_narrator",
+    "text": "А потому, что мы успели немного узнать друг друга."
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_th",
+    "text": "Пожалуй, вот зачем вообще нужна дружба."
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_th",
+    "text": "Не для того, чтобы кто-то соглашался с каждой твоей теорией."
+  },
+  {
+    "scene": 62,
+    "speaker": "cs_th",
+    "text": "А чтобы человек был готов уделить тебе время."
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_narrator",
+    "text": "Очередь постепенно продвигалась."
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_narrator",
+    "text": "Я посмотрела на раздачу."
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_narrator",
+    "text": "Затем на тарелки впереди."
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_narrator",
+    "text": "И внезапно замерла."
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_th",
+    "text": "Нет."
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_th",
+    "text": "Не может быть."
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_narrator",
+    "text": "Картофельное пюре."
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_narrator",
+    "text": "Котлеты."
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_narrator",
+    "text": "Я медленно повернулась к Дарье."
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_narrator",
+    "text": "Она сразу заметила выражение моего лица."
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_da",
+    "text": "Что?"
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_narrator",
+    "text": "Я подняла здоровую руку."
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_ls",
+    "text": "Даша."
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_da",
+    "text": "Что?"
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_narrator",
+    "text": "Я указала на раздачу."
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_ls",
+    "text": "Ты видишь?"
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_narrator",
+    "text": "Она посмотрела."
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_da",
+    "text": "Котлеты?"
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_narrator",
+    "text": "Я кивнула."
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_ls",
+    "text": "С пюрешкой."
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_narrator",
+    "text": "Дарья несколько секунд смотрела на меня."
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_narrator",
+    "text": "Потом закрыла глаза."
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_narrator",
+    "text": "И начала смеяться."
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_da",
+    "text": "Ты серьёзно?"
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_ls",
+    "text": "Абсолютно!"
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_narrator",
+    "text": "Я снова посмотрела на тарелки."
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_th",
+    "text": "Вот ведь."
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_th",
+    "text": "Сначала вспомнила старый мем по дороге."
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_th",
+    "text": "А теперь ужин решил буквально воспроизвести его содержание."
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_th",
+    "text": "Какова вероятность?"
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_narrator",
+    "text": "Женя обернулась."
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_mz",
+    "text": "Что у вас опять?"
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_narrator",
+    "text": "Я посмотрела на неё."
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_ls",
+    "text": "Небольшое культурное совпадение."
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_narrator",
+    "text": "Она нахмурилась."
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_mz",
+    "text": "Какое ещё совпадение?"
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_ls",
+    "text": "Просто у меня дома была одна старая шуточная песенка. Про котлеты и пюре."
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_narrator",
+    "text": "Женя посмотрела на раздачу."
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_narrator",
+    "text": "Потом на меня."
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_mz",
+    "text": "И?"
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_narrator",
+    "text": "Я развела руками."
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_ls",
+    "text": "И теперь вот они."
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_narrator",
+    "text": "Она несколько секунд молчала."
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_mz",
+    "text": "Соколова, это обычный ужин."
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_narrator",
+    "text": "Я кивнула."
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_ls",
+    "text": "Именно поэтому совпадение особенно прекрасно."
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_narrator",
+    "text": "Женя вздохнула."
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_mz",
+    "text": "У тебя очень странные представления о прекрасном."
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_narrator",
+    "text": "Дарья улыбнулась."
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_da",
+    "text": "Она сегодня вспоминает старый интернет."
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_narrator",
+    "text": "Женя посмотрела на нас обеих."
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_mz",
+    "text": "Старый что?"
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_narrator",
+    "text": "Я на секунду замерла."
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_th",
+    "text": "Ах да."
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_th",
+    "text": "Разные культурные контексты."
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_ls",
+    "text": "Долгая история."
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_mz",
+    "text": "Я так и думала."
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_narrator",
+    "text": "Она взяла поднос."
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_mz",
+    "text": "Может, сначала поедим?"
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_narrator",
+    "text": "Я торжественно кивнула."
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_ls",
+    "text": "Разумное предложение."
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_narrator",
+    "text": "Мы подошли к раздаче."
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_narrator",
+    "text": "Получили ужин."
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_narrator",
+    "text": "И я некоторое время просто рассматривала тарелку."
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_narrator",
+    "text": "Картофельное пюре."
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_narrator",
+    "text": "Котлета."
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_narrator",
+    "text": "Совершенно обычная еда."
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_narrator",
+    "text": "В совершенно необычном месте."
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_th",
+    "text": "А ведь дома я могла бы даже не обратить внимания."
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_th",
+    "text": "Сфотографировала бы какую-нибудь ерунду, отправила знакомым и пошла дальше."
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_th",
+    "text": "А здесь даже телефон не включить."
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_narrator",
+    "text": "Я невольно улыбнулась."
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_th",
+    "text": "Может, это и к лучшему."
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_th",
+    "text": "Некоторые вещи можно просто запомнить."
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_narrator",
+    "text": "Женя уже направилась к столам."
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_narrator",
+    "text": "Дарья легко коснулась моего плеча."
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_da",
+    "text": "Лен."
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_narrator",
+    "text": "Я повернулась."
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_da",
+    "text": "Ты собираешься ужинать или продолжишь изучать котлету?"
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_narrator",
+    "text": "Я задумалась."
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_ls",
+    "text": "Полагаю, научная экспертиза завершена."
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_narrator",
+    "text": "Она засмеялась."
+  },
+  {
+    "scene": 63,
+    "speaker": "cs_narrator",
+    "text": "И мы отправились искать свободные места."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_narrator",
+    "text": "Когда мы вышли из столовой, солнце уже клонилось к деревьям."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_narrator",
+    "text": "Воздух стал прохладнее."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_narrator",
+    "text": "На площади заметно прибавилось народу."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_narrator",
+    "text": "Несколько скамеек стояли перед небольшим местом, отведённым для выступления."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_narrator",
+    "text": "Кто-то разговаривал."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_narrator",
+    "text": "Кто-то рассаживался."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_narrator",
+    "text": "Издалека доносились обрывки звуков гитары."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_narrator",
+    "text": "Я посмотрела в сторону музыки."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_th",
+    "text": "Ага."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_th",
+    "text": "Значит, подготовка почти закончена."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_narrator",
+    "text": "Дарья остановилась рядом."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_da",
+    "text": "Куда сядем?"
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_narrator",
+    "text": "Я осмотрела скамейки."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_ls",
+    "text": "Желательно туда, откуда хорошо видно."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_narrator",
+    "text": "Посмотрела на локоть."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_ls",
+    "text": "И куда можно дойти без преодоления полосы препятствий."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_narrator",
+    "text": "Она рассмеялась."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_da",
+    "text": "После сегодняшнего это разумное требование."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_narrator",
+    "text": "В этот момент к нам подошла Славя."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_sl",
+    "text": "Лена! Даша! А я вас как раз искала."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_narrator",
+    "text": "Я удивилась."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_ls",
+    "text": "Что-то случилось?"
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_sl",
+    "text": "Нет, всё хорошо. Просто хотела показать вам места, которые мы оставили возле края первого ряда."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_narrator",
+    "text": "Она указала на две свободные скамейки."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_sl",
+    "text": "Там удобнее сидеть, и Лене не придётся протискиваться через остальных с больной рукой."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_narrator",
+    "text": "Я посмотрела на неё."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_ls",
+    "text": "Ты специально подумала об этом?"
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_narrator",
+    "text": "Славя немного смутилась."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_sl",
+    "text": "Ну, вы ведь утром помогли с материалами. Да и ты сегодня поранилась. Я решила, что так будет удобнее."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_narrator",
+    "text": "Дарья улыбнулась."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_da",
+    "text": "Спасибо, Славя."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_ls",
+    "text": "Правда, спасибо."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_narrator",
+    "text": "Славя улыбнулась в ответ."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_sl",
+    "text": "Не за что. Только далеко не уходите, скоро начинаем."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_sl",
+    "text": "Девочки, привет! Уже пришли на концерт?"
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_da",
+    "text": "Да. Как раз выбираем, где сесть."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_sl",
+    "text": "Тогда лучше поторопиться. Скоро начнём, а свободных мест становится меньше."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_narrator",
+    "text": "Я посмотрела на скамейки."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_ls",
+    "text": "Поняла. Спасибо."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_sl",
+    "text": "Не за что!"
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_narrator",
+    "text": "Мы выбрали два свободных места немного сбоку."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_narrator",
+    "text": "Оттуда было хорошо видно площадку для выступления, хотя сидели мы дальше от музыкантов."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_narrator",
+    "text": "Славя отправилась помогать остальным."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_narrator",
+    "text": "Я осторожно села."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_narrator",
+    "text": "Дарья устроилась рядом."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_narrator",
+    "text": "На сценической площадке кто-то передвигал стул."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_narrator",
+    "text": "Послышался тихий звук гитарной струны."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_narrator",
+    "text": "Я огляделась."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_th",
+    "text": "И всё-таки наш плакат сработал."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_th",
+    "text": "Люди пришли."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_th",
+    "text": "Места приготовили."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_th",
+    "text": "Музыканты готовятся."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_th",
+    "text": "Удивительное чувство: сделать что-то небольшое, а потом увидеть результат в реальной жизни."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_narrator",
+    "text": "Дарья посмотрела на меня."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_da",
+    "text": "Довольна?"
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_narrator",
+    "text": "Я повернулась."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_ls",
+    "text": "Очень."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_narrator",
+    "text": "Она улыбнулась."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_da",
+    "text": "Даже без компьютера?"
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_narrator",
+    "text": "Я рассмеялась."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_ls",
+    "text": "Представь себе."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_narrator",
+    "text": "В этот момент из-за площадки показалась Мику."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_narrator",
+    "text": "Она держала папку с нотами."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_narrator",
+    "text": "Осматривалась, словно кого-то искала."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_narrator",
+    "text": "Увидев нас, Мику сразу оживилась."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_mi",
+    "text": "Лена! Даша! Вы пришли!"
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_narrator",
+    "text": "Я помахала здоровой рукой."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_ls",
+    "text": "Конечно. Мы же обещали."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_narrator",
+    "text": "Мику подошла ближе."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_mi",
+    "text": "Я сегодня ещё раз попробовала то вступление, о котором мы утром говорили. Помните? Где я слишком долго повторяла одну фразу?"
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_narrator",
+    "text": "Дарья улыбнулась."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_da",
+    "text": "Помню. Ты сократила её?"
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_narrator",
+    "text": "Мику энергично кивнула."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_mi",
+    "text": "Да! И теперь переход звучит гораздо лучше. По крайней мере, мне так кажется. Алиса тоже сказала, что так интереснее."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_narrator",
+    "text": "Я улыбнулась."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_ls",
+    "text": "Тогда тем более хочется послушать."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_narrator",
+    "text": "Мику посмотрела на нас обеих."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_mi",
+    "text": "Только не судите слишком строго! Я всё равно немного волнуюсь."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_da",
+    "text": "Всё будет хорошо."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_narrator",
+    "text": "Мику улыбнулась."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_mi",
+    "text": "Спасибо. Ладно, мне пора готовиться!"
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_narrator",
+    "text": "Она помахала нам и поспешила обратно."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_narrator",
+    "text": "Мику заметила нас среди зрителей."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_narrator",
+    "text": "Приветливо помахала рукой."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_narrator",
+    "text": "Я ответила."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_narrator",
+    "text": "Она улыбнулась и вернулась к подготовке."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_narrator",
+    "text": "Я посмотрела на Дарью."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_narrator",
+    "text": "Она следила за тем, как Мику исчезает за площадкой."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_ls",
+    "text": "Ну что, готова?"
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_da",
+    "text": "К чему?"
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_ls",
+    "text": "К первому настоящему концерту в «Совёнке»."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_narrator",
+    "text": "Она задумалась."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_da",
+    "text": "Думаю, да."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_narrator",
+    "text": "Я кивнула."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_narrator",
+    "text": "А затем немного понизила голос."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_ls",
+    "text": "Кстати, если Мику начнёт играть что-нибудь знакомое, постарайся не подсказывать мне заранее. Хочу сама услышать."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_narrator",
+    "text": "Дарья улыбнулась."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_da",
+    "text": "Хорошо."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_narrator",
+    "text": "Мы устроились поудобнее."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_narrator",
+    "text": "Впереди уже собирались остальные зрители."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_narrator",
+    "text": "Я осторожно положила перебинтованную руку на колени."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_narrator",
+    "text": "Дарья сидела рядом."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_narrator",
+    "text": "Никаких новых расследований."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_narrator",
+    "text": "Никаких поисков выхода."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_narrator",
+    "text": "И, очень хотелось надеяться, никаких неожиданных встреч с медицинским персоналом."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_th",
+    "text": "Просто музыка."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_th",
+    "text": "Обычный вечер."
+  },
+  {
+    "scene": 65,
+    "speaker": "cs_th",
+    "text": "Хотя бы на час."
+  }
+]

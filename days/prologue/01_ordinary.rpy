@@ -2,13 +2,20 @@
 # Source: source/prologue.md. Dialogue is preserved verbatim.
 label cs_scene_01:
     $ save_name = u"Чужая смена — Обычный человек"
-    scene cs_room with Dissolve(1.2)
+    $ cs_director_scene("cs_room")
+    scene cs_room
+    with Dissolve(1.2)
     play music cs_music_calm fadein 2.0
+    call cs_opening_credits
     window show dissolve
     label cs_check_room:
+    # cs_director_begin: entry frame; explicit scene plan
+    $ cs_frame_focus([])
+    with cs_sprite_change
+    # cs_director_end
     cs_narrator "Меня зовут {b}Лена Соколова{/b}."
-    cs_narrator "Если верить интернету, я охуеть какая интересная личность."
-    cs_narrator "Двести с лишним тысяч подписчиков в Instagram. Фотографии ночных улиц, разбитых машин, японских масок, мастерских, картин и каких-то совершенно ебанутых импровизированных фотосессий."
+    cs_narrator "Если верить интернету, я невероятно интересная личность."
+    cs_narrator "Двести с лишним тысяч подписчиков в Instagram. Фотографии ночных улиц, разбитых машин, японских масок, мастерских, картин и каких-то совершенно безумных импровизированных фотосессий."
     cs_narrator "Иногда я публикую что-нибудь настолько странное, что половина комментариев сводится к одному вопросу:"
     cs_th "«Лена, с тобой всё нормально?»"
     cs_narrator "Да."
@@ -41,6 +48,8 @@ label cs_scene_01:
     cs_narrator "Удобная система."
     cs_narrator "Никто никому не мешает."
     window hide dissolve
-    scene black with Dissolve(1.0)
+    $ cs_director_scene("black")
+    scene black
+    with Dissolve(1.0)
     pause 0.6
     return

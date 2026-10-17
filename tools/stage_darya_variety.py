@@ -10,7 +10,7 @@ SAY=re.compile(r'^\s+(cs_da|cs_narrator|cs_ls|cs_th|cs_sy|cs_sl|cs_mt|cs_dv|cs_u
 report=[];current=None
 for folder in ('days/prologue','days/day01'):
     for path in sorted((ROOT/folder).rglob('[0-9][0-9]_*.rpy'),key=lambda p:int(p.name[:2])):
-        if path.name.startswith('00'):continue
+        if path.name.startswith('00') or path.name.endswith('_scene.rpy'):continue
         raw=path.read_text(encoding='utf8').splitlines();lines=[];skip=False
         for line in raw:
             if '# cs_focus_suppressed: ' in line:line=line.replace('# cs_focus_suppressed: ','')

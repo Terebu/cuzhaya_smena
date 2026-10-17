@@ -106,8 +106,14 @@ part08_expected=[b['text'] for s in json.loads((root/'source/day01_part08_dialog
 day_expected.extend(part08_expected)
 part09_expected=[b['text'] for s in json.loads((root/'source/day01_part09_dialogue.json').read_text(encoding='utf8')) for b in s['blocks'] if 'text' in b]
 day_expected.extend(part09_expected)
-part10_expected=[b['text'] for s in json.loads((root/'source/day01_part10_dialogue.json').read_text(encoding='utf8')) for b in s['blocks'] if 'text' in b]
+part10_expected=[b['text'] for s in json.loads((root/'source/day01_part10_dialogue_after_part11.json').read_text(encoding='utf8')) for b in s['blocks'] if 'text' in b]
 day_expected.extend(part10_expected)
+part11_expected=[]
+for b in json.loads((root/'source/day02_dialogue_catalog.json').read_text(encoding='utf8')):
+    if b['day']==1:part11_expected.append(b['text'])
+    if b['day']==1 and b['scene']==62 and b['text'].startswith('По дороге мы почти'):part11_expected.append('По дороге мы заглянули к Ольге Дмитриевне и забрали оставленные у неё зимние куртки и сапоги. До нашего домика вещи донесли вместе.')
+    if b['day']==1 and b['scene']==63 and b['text']=='Что там?':part11_expected.append('Отдельно я записала вопрос: откуда Ольга Дмитриевна знала мою фамилию до знакомства? Ответа пока не было.')
+day_expected.extend(part11_expected)
 if day_actual != day_expected: errors.append('Day 1 differs from the staged manuscript')
 metadata = json.loads((root/'sp/dasha_metadata.json').read_text(encoding='utf8'))
 metadata['semen'] = json.loads((root/'sp/semen_metadata.json').read_text(encoding='utf8'))

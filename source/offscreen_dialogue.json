@@ -1,0 +1,68 @@
+[
+  {
+    "file": "days/day01/09_counsellor.rpy",
+    "speaker": "cs_mt",
+    "text": "Да?",
+    "reason": "Reviewed offscreen voice, call from a distance, or public announcement"
+  },
+  {
+    "file": "days/day01/09_counsellor.rpy",
+    "speaker": "cs_mt",
+    "text": "Какие ещё девушки?",
+    "reason": "Reviewed offscreen voice, call from a distance, or public announcement"
+  },
+  {
+    "file": "days/day01/part06/30_at_the_door.rpy",
+    "speaker": "cs_dv",
+    "text": "Эй, новенькие! Вы там живые?",
+    "reason": "Reviewed offscreen voice, call from a distance, or public announcement"
+  },
+  {
+    "file": "days/day01/part06/30_at_the_door.rpy",
+    "speaker": "cs_us",
+    "text": "Алиса, я же говорила, они странные!",
+    "reason": "Reviewed offscreen voice, call from a distance, or public announcement"
+  },
+  {
+    "file": "days/day01/part09/48_a_meet.rpy",
+    "speaker": "cs_sy",
+    "text": "Лена!",
+    "reason": "Reviewed offscreen voice, call from a distance, or public announcement"
+  },
+  {
+    "file": "days/day02/part01/04_scene.rpy",
+    "speaker": "cs_mt",
+    "text": "Лена?",
+    "reason": "Reviewed offscreen voice, call from a distance, or public announcement"
+  },
+  {
+    "file": "days/day02/part02/20_scene.rpy",
+    "speaker": "cs_mt",
+    "text": "Ребята, не задерживаемся! Начинаем!",
+    "reason": "Reviewed offscreen voice, call from a distance, or public announcement"
+  },
+  {
+    "file": "days/day02/part04/28_scene.rpy",
+    "speaker": "cs_vi",
+    "text": "Входите.",
+    "reason": "Reviewed offscreen voice, call from a distance, or public announcement"
+  },
+  {
+    "file": "days/day02/part06/45_scene.rpy",
+    "speaker": "cs_mt",
+    "text": "Лена! Семён! Дарья!",
+    "reason": "Reviewed offscreen voice, call from a distance, or public announcement"
+  },
+  {
+    "file": "days/day02/part07/49_scene.rpy",
+    "speaker": "cs_vi",
+    "text": "Входите!",
+    "reason": "Reviewed offscreen voice, call from a distance, or public announcement"
+  },
+  {
+    "file": "days/day02/part10/69_concert.rpy",
+    "speaker": "cs_mt",
+    "text": "Ну что, все готовы? Девочки, вам слово.",
+    "reason": "Reviewed offscreen voice, call from a distance, or public announcement"
+  }
+]

@@ -5,6 +5,10 @@ label cs_scene_04:
     show cs_bus_city at cs_bus_ride zorder -10 with dissolve
     #stop ambience fadeout 2.0
     play music cs_music_After_Hours fadein 1.0
+    # cs_director_begin: entry frame; explicit scene plan
+    $ cs_frame_focus([])
+    with cs_sprite_change
+    # cs_director_end
     cs_narrator "Я достала телефон."
     cs_narrator "Открыла Instagram."
     show screen cs_phone(5, "profile")
@@ -12,9 +16,18 @@ label cs_scene_04:
     cs_narrator "За ночь прибавилось ещё около восьмисот человек."
     cs_narrator "Последняя фотография снова попала в рекомендации."
     # cs_phone_focus: camera
-    hide cs_dasha_winter with Dissolve(0.25)
+    # cs_presence_keep: hide cs_dasha_winter
+    show cs_dasha_winter shrug normal at cs_darya_normal_right
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     show screen cs_instagram_post("cs_instagram_oni") with dissolve
     label cs_check_instagram_oni:
+    # cs_director_begin: Phone gallery occupies the visual focus
+    $ cs_frame_focus([])
+    with cs_sprite_change
+    label cs_director_check_c9bb96bb14:
+    # cs_director_end
     cs_narrator "На ней я стояла возле красного Mitsubishi в лесу."
     cs_narrator "Грязная с ног до головы."
     cs_narrator "В огромном худи."
@@ -49,6 +62,9 @@ label cs_scene_04:
     hide screen cs_instagram_post with dissolve
     # cs_phone_focus: camera
     show cs_dasha_winter shrug normal at cs_darya_normal_center
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     show screen cs_phone(5, "battery")
     label cs_check_battery5:
     cs_ls "Молодец, Лена. Просто молодец."
@@ -76,7 +92,7 @@ label cs_scene_04:
     play sound cs_phone_error
     label cs_check_phone_off:
     cs_narrator "Несколько секунд я смотрела на собственное отражение в чёрном экране."
-    cs_ls "Заебись."
+    cs_ls "Просто замечательно."
     cs_narrator "Красноволосая девушка рядом чуть повернула голову."
     cs_narrator "Мне показалось, что уголки её губ дрогнули."
     cs_narrator "Я посмотрела на неё."
@@ -92,16 +108,27 @@ label cs_scene_04:
     cs_narrator "Потом на меня."
     # cs_darya_stage: present in story
     show cs_dasha_winter thinking normal at cs_darya_normal_center
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_da "Он сам выбирал автобус?"
     cs_narrator "Я замолчала."
     cs_narrator "Посмотрела на неё."
     cs_ls "Нет."
     # cs_darya_stage: present in story
     show cs_dasha_winter shrug normal at cs_darya_normal_center
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_da "Тогда, наверное, не он."
     cs_narrator "Я невольно усмехнулась."
     cs_ls "Ладно. Один ноль в твою пользу."
     cs_narrator "Она тихо хмыкнула и снова отвернулась."
+    # cs_director_begin: The brief conversation is over
+    $ cs_reflective_focus()
+    with cs_sprite_change
+    label cs_director_check_9530346d03:
+    # cs_director_end
     cs_narrator "На этом наша социальная активность закончилась."
     cs_narrator "Меня полностью устраивало."
     return

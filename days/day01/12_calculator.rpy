@@ -5,16 +5,24 @@ label cs_day01_12:
     $ renpy.music.set_volume(0.5, delay=1.0, channel="music")
     play music cs_day_music_think fadeout 1.5 fadein 2.0
     $ renpy.music.set_volume(0.45, delay=1.0, channel="ambience")
-    hide sl
-    hide mt
+    # cs_presence_keep: hide sl
     # cs_composition: regroup
-    show cs_dasha_winter arms_crossed far at cs_darya_far_center
     show mt normal pioneer at cs_actor_left
     # cs_composition: regroup
     show cs_dasha_winter arms_crossed far at cs_darya_far_right
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     show screen cs_phone(mode="off", phone_x=820, phone_width=260)
     # cs_darya_stage: present in story
     show cs_dasha_winter arms_crossed normal at cs_darya_normal_right
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
+    # cs_director_begin: entry frame; explicit scene plan
+    $ cs_frame_focus(["mt", "cs_dasha_winter"])
+    with cs_sprite_change
+    # cs_director_end
     cs_narrator "Я медленно достала телефон."
     label cs_check_day01_part03_phone_off:
     cs_narrator "Экран всё ещё оставался чёрным."
@@ -27,6 +35,9 @@ label cs_day01_12:
     cs_narrator "Ольга Дмитриевна заметила устройство."
     # cs_camp_emotion: text reaction
     show mt surprise pioneer at cs_actor_left
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_mt "Что это у тебя?"
     hide screen cs_phone
     cs_narrator "Я моментально убрала телефон."
@@ -43,12 +54,18 @@ label cs_day01_12:
     cs_ls "Передовые технологии. Минимализм."
     # cs_darya_variety: reaction
     show cs_dasha_winter shrug normal at cs_darya_normal_right
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_da "Ты могла просто его не доставать."
     cs_ls "Согласна. К сожалению, решение принято, отмене не подлежит."
     cs_narrator "Я убрала смартфон поглубже в карман."
     cs_ls "Предлагаю считать его очень скучным калькулятором."
     # cs_camp_emotion: text reaction
     show mt sad pioneer at cs_actor_left
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_mt "Лена…"
     cs_ls "Поверьте, подробное объяснение сейчас только добавит вопросов."
     cs_narrator "Она внимательно посмотрела на меня."
@@ -65,6 +82,9 @@ label cs_day01_12:
     cs_ls "Не была."
     # cs_darya_variety: reaction
     show cs_dasha_winter arms_crossed normal at cs_darya_normal_right
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_narrator "Она скрестила руки."
     cs_mt "Тогда откуда всё знаешь?"
     cs_narrator "Я посмотрела ей прямо в глаза."
@@ -82,6 +102,9 @@ label cs_day01_12:
     cs_ls "Я знаю это место."
     # cs_camp_emotion: text reaction
     show mt surprise pioneer at cs_actor_left
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_mt "Откуда?"
     cs_ls "Не отсюда."
     cs_mt "Это как понимать?"
@@ -93,16 +116,16 @@ label cs_day01_12:
     cs_narrator "Но тут открылась дверь."
     $ renpy.music.set_volume(0.65, channel="sound")
     play sound cs_day_sfx_door
-    show mt normal pioneer far at cs_actor_left
-    show sl smile pioneer far at cs_actor_right
     # cs_composition: regroup
     show mt normal pioneer far at cs_actor_far_left
     # cs_composition: regroup
     show sl smile pioneer far at cs_actor_far_right
     # cs_composition: regroup
-    show cs_dasha_winter arms_crossed far at cs_darya_far_center
     # cs_darya_stage: present in story
     show cs_dasha_winter arms_crossed far at cs_darya_far_center
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_sl "Нашла!"
     stop music fadeout 1.5
     return

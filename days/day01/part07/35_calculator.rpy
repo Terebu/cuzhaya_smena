@@ -1,29 +1,48 @@
 # -*- coding: utf-8 -*-
 label cs_day01_35:
     $ save_name = "Чужая смена — День 1: Очень необычный калькулятор"
+    # cs_director_begin: entry frame; explicit scene plan
+    $ cs_frame_focus(["cs_darya", "sh", "el"])
+    with cs_sprite_change
+    # cs_director_end
     cs_narrator "Я достала смартфон."
     cs_narrator "Аккуратно положила его на свободный участок стола."
     cs_narrator "Оба парня замолчали."
     cs_narrator "Электроник первым наклонился ближе."
     show el surprise pioneer far at cs_actor_far_right
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_el "Это что?"
     cs_narrator "Я посмотрела на Дарью."
     # cs_darya_variety: reaction
     show cs_darya smile pioneer far at cs_darya_far_center
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_narrator "Она уже едва заметно улыбалась."
     cs_th "Ладно."
     cs_th "Проверенная легенда."
     cs_ls "Калькулятор."
     cs_narrator "Дарья прикрыла глаза."
     show cs_darya shrug pioneer far at cs_darya_far_center
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_da "Лен."
     cs_ls "Что?"
     show cs_darya thinking pioneer far at cs_darya_far_center
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_da "Ты опять?"
     cs_ls "Не мешай легенде."
     cs_narrator "Шурик внимательно осмотрел устройство."
     cs_narrator "Но трогать пока не стал."
     show sh serious pioneer far at cs_actor_far_left
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_sh "Где у него кнопки?"
     cs_ls "Хороший вопрос."
     cs_sh "И экран?"
@@ -47,6 +66,9 @@ label cs_day01_35:
     cs_narrator "Я посмотрела на него."
     cs_ls "Начинаю подозревать, что легенда разваливается."
     show cs_darya amused pioneer far at cs_darya_far_center
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_narrator "Дарья тихо рассмеялась."
     cs_narrator "Шурик протянул руку к телефону."
     cs_sh "Можно посмотреть?"
@@ -65,8 +87,14 @@ label cs_day01_35:
     cs_sh "Почему?"
     cs_ls "Потому что я пришла за помощью, а не на демонстрацию того, как аккуратно разобрать моё имущество."
     show el smile pioneer far at cs_actor_far_right
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_narrator "Электроник усмехнулся."
     show el surprise pioneer far at cs_actor_far_right
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_el "Боишься, что сломаем?"
     cs_ls "Мне нравится думать, что это устройство ещё послужит."
     cs_narrator "Шурик осторожно вернул телефон на стол."
@@ -86,6 +114,9 @@ label cs_day01_35:
     cs_ls "Потому что сначала нужно разобраться с подключением. И обеспечить стабильное питание."
     cs_narrator "Электроник наклонился ближе."
     show el smile pioneer far at cs_actor_far_right
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_el "Никогда такого разъёма не видел."
     cs_ls "Я почему-то не удивлена."
     cs_narrator "Шурик посмотрел на меня."

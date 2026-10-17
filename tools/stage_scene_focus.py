@@ -6,7 +6,7 @@ SAY=re.compile(r'^(\s*)(cs_\w+) (".*")$')
 files=list((ROOT/'days/prologue').glob('[0-9][0-9]_*.rpy'))+list((ROOT/'days/day01').rglob('[0-9][0-9]_*.rpy'))
 manifest=[];current=None;others=set()
 for path in sorted(files,key=lambda p:(0 if 'prologue' in p.parts else 1,int(p.name[:2]),p.name)):
-    if path.name.startswith('00'):continue
+    if path.name.startswith('00') or path.name.endswith('_scene.rpy'):continue
     number=int(path.name[:2])
     group_scene='prologue' not in path.parts and (7<=number<=27 or number in (29,31,33,34,35,36,37,38,43,44,46,47,48,54,55,56,57,58))
     quiet_scene='prologue' not in path.parts and number in (49,50,51,52,53)
@@ -44,12 +44,12 @@ for path in sorted(files,key=lambda p:(0 if 'prologue' in p.parts else 1,int(p.n
         if hidden and current and dialogue and dialogue[2] not in ('cs_narrator','cs_th'):
             out += [indent+'# cs_focus: camera',indent+current+' with Dissolve(0.25)'];hidden=False
         if stripped.startswith('scene '):current=None;hidden=False;others=set()
-        actor=re.match(r'show (sl|mt|dv|us|sh|el|un|mz|cs_semen)\b',stripped)
+        actor=re.match(r'show (sl|mt|dv|us|sh|el|un|mz|cs_semen|cs_zhenya)\b',stripped)
         if actor:
             others.add(actor[1])
             if hidden and current:
                 out += [indent+'# cs_focus: camera',indent+current+' with Dissolve(0.25)'];hidden=False
-        gone=re.match(r'hide (sl|mt|dv|us|sh|el|un|mz|cs_semen)\b',stripped)
+        gone=re.match(r'hide (sl|mt|dv|us|sh|el|un|mz|cs_semen|cs_zhenya)\b',stripped)
         if gone:others.discard(gone[1])
         if re.match(r'hide cs_(darya|dasha_winter)(\s|$)',stripped):current=None;hidden=False
         show=re.match(r'show (cs_darya|cs_dasha_winter) ',stripped)

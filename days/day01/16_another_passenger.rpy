@@ -3,6 +3,10 @@
 label cs_day01_16:
     $ save_name = u"Чужая смена — День 1: Ещё один пассажир"
     stop music fadeout 2.0
+    # cs_director_begin: entry frame; explicit scene plan
+    $ cs_frame_focus(["mt", "cs_darya"])
+    with cs_sprite_change
+    # cs_director_end
     cs_narrator "Ольга Дмитриевна уже собиралась закончить разговор, но вдруг словно что-то вспомнила."
     cs_mt "Кстати, вы не первые новенькие."
     cs_narrator "Я подняла взгляд."
@@ -27,12 +31,18 @@ label cs_day01_16:
     cs_ls "Говорю, интересное совпадение."
     # cs_darya_stage: present in story
     show cs_darya surprised pioneer normal at cs_darya_normal_right
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_da "Это тот самый?"
     cs_narrator "Я едва заметно кивнула."
     cs_ls "Тот самый."
     cs_narrator "Ольга Дмитриевна нахмурилась."
     # cs_camp_emotion: text reaction
     show mt surprise pioneer at cs_actor_left
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_mt "Вы знакомы?"
     cs_ls "Нет."
     cs_mt "Тогда откуда ты знаешь, кто он?"
@@ -41,12 +51,18 @@ label cs_day01_16:
     cs_narrator "Повисла тишина."
     # cs_camp_emotion: text reaction
     show mt angry pioneer at cs_actor_left
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_mt "Ты опять за своё?"
     cs_ls "Сама не в восторге."
     cs_narrator "Я повернулась к Дарье."
     cs_ls "Значит, Семён уже сутки здесь."
     # cs_darya_stage: present in story
     show cs_darya thinking pioneer normal at cs_darya_normal_right
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_da "Это важно?"
     cs_ls "Очень."
     cs_da "Почему?"
@@ -57,15 +73,26 @@ label cs_day01_16:
     cs_narrator "Ольга Дмитриевна посмотрела на меня ещё подозрительнее."
     # cs_camp_emotion: text reaction
     show mt surprise pioneer at cs_actor_left
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_mt "Какой ещё истории?"
     cs_ls "Длинной. И местами весьма запутанной."
     cs_narrator "Я взглянула на часы в комнате."
     cs_ls "Обед ведь скоро?"
     # cs_camp_emotion: text reaction
     show mt smile pioneer at cs_actor_left
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_mt "Да. Пойдёмте, заодно познакомлю вас с остальными."
     cs_ls "Вот и замечательно."
     cs_narrator "Я направилась к двери."
+    # cs_director_begin: REFLECTIVE_SHOT: Unanswered question about another passenger
+    $ cs_reflective_focus()
+    with cs_sprite_change
+    label cs_director_check_ce7afeb1d8:
+    # cs_director_end
     cs_th "Семён."
     cs_th "Значит, он действительно здесь."
     cs_th "В таком случае моя теория о том, что мы прибыли вместо него, только что отправилась в архив."

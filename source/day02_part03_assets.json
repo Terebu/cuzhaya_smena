@@ -1,0 +1,18 @@
+[
+  {
+    "path": "bg/storage/ext_storage_day.png",
+    "sha256": "da92ec6175abfcfb314dff23d97a248c6ee8f7c06e1ea8f22b37aacd280906d4"
+  },
+  {
+    "path": "bg/storage/int_storage_day.png",
+    "sha256": "06a58a77f9c12634d5f9b2a1407c1e4a2ebe9b094ba7dd37e8a48983eebc10fe"
+  },
+  {
+    "path": "cg/square/cg_morning_lineup_day.png",
+    "sha256": "af59beea5ca31f68f0ac3eab5557b59d9421b7221e2e9fbd1de2562f6cd110d0"
+  },
+  {
+    "path": "cg/event/cg_poster_planning_day.png",
+    "sha256": "b2cb7f07396a1e9d5dafa71b0d1e1fc96317675ddba7dfe333a539b41461c398"
+  }
+]

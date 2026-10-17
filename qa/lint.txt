@@ -1,4 +1,4 @@
-﻿Ren'Py 7.4.11.2266 lint report, generated at: Mon Oct 12 01:49:05 2026
+﻿Ren'Py 7.4.11.2266 lint report, generated at: Mon Oct 12 23:27:46 2026
 
 game/resources.rpyc:141 Image cg d2_mt_undressed uses file 'images/cg/d2_mt_undressed.jpg', which is not loadable.
 
@@ -136,11 +136,13 @@ game/tl/spanish/scenario/zhenya.rpyc:10014 One or more text tags were left open 
 mods/chuzaya_smena/cg/сп_ьфыл_oni.png contains non-ASCII characters in its filename.
 (ZIP file distributions can only reliably include ASCII filenames.)
 
+mods/cuzhaya_smena/cg/сп_ьфыл_oni.png contains non-ASCII characters in its filename.
+
 
 Statistics:
 
-The game contains 28,243 dialogue blocks, containing 217,736 words and
-1,321,895 characters, for an average of 7.7 words and 47 characters per block.
+The game contains 28,996 dialogue blocks, containing 225,567 words and
+1,371,730 characters, for an average of 7.8 words and 47 characters per block.
 
 The chinese translation contains 24,033 dialogue blocks, containing 24,334
 words and 394,066 characters, for an average of 1.0 words and 16 characters
@@ -173,7 +175,7 @@ The turkish translation contains 24,033 dialogue blocks, containing 177,307
 words and 1,233,834 characters, for an average of 7.4 words and 51 characters
 per block.
 
-The game contains 49 menus, 1,788 images, and 30 screens.
+The game contains 53 menus, 1,793 images, and 31 screens.
 
 
 Lint is not a substitute for thorough testing. Remember to update Ren'Py

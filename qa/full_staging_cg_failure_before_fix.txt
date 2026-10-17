@@ -1,0 +1,84 @@
+
+Full traceback:
+  File "game/mods/chuzaya_smena/scriot.rpy", line 32, in script call
+    call cs_day01
+  File "game/mods/chuzaya_smena/days/day02/00_flow.rpy", line 149, in script call
+    call cs_day02_34
+  File "game/mods/chuzaya_smena/days/day02/part05/34_scene.rpy", line 36, in script
+    cs_narrator "Первую линию я провела вполне уверенно."
+  File "D:\stean\steamapps\common\Everlasting Summer/renpy/ast.py", line 721, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "D:\stean\steamapps\common\Everlasting Summer/renpy/exports.py", line 1419, in say
+    who(what, *args, **kwargs)
+  File "D:\stean\steamapps\common\Everlasting Summer/renpy/character.py", line 1249, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+  File "D:\stean\steamapps\common\Everlasting Summer/renpy/character.py", line 901, in do_display
+    **display_args)
+  File "D:\stean\steamapps\common\Everlasting Summer/renpy/character.py", line 641, in display_say
+    c("show_done", interact=interact, type=type, **cb_args)
+  File "game/mods/chuzaya_smena/qa/global_sprite_audit.rpy", line 29, in cs_qa_global_images
+    raise Exception("Portraits over full-screen CG: %r" % full_cgs)
+Exception: Portraits over full-screen CG: [u'cs_cg_poster_planning_day']
+
+While running game code:
+  File "game/mods/chuzaya_smena/scriot.rpy", line 32, in script call
+    call cs_day01
+  File "game/mods/chuzaya_smena/days/day02/00_flow.rpy", line 149, in script call
+    call cs_day02_34
+  File "game/mods/chuzaya_smena/days/day02/part05/34_scene.rpy", line 36, in script
+    cs_narrator "Первую линию я провела вполне уверенно."
+  File "game/mods/chuzaya_smena/qa/global_sprite_audit.rpy", line 29, in cs_qa_global_images
+    raise Exception("Portraits over full-screen CG: %r" % full_cgs)
+Exception: Portraits over full-screen CG: [u'cs_cg_poster_planning_day']
+
+Full traceback:
+  File "D:\stean\steamapps\common\Everlasting Summer/renpy/bootstrap.py", line 331, in bootstrap
+    renpy.main.main()
+  File "D:\stean\steamapps\common\Everlasting Summer/renpy/main.py", line 733, in main
+    run(restart)
+  File "D:\stean\steamapps\common\Everlasting Summer/renpy/main.py", line 148, in run
+    renpy.execution.run_context(True)
+  File "D:\stean\steamapps\common\Everlasting Summer/renpy/execution.py", line 922, in run_context
+    context.run()
+  File "game/mods/chuzaya_smena/scriot.rpy", line 32, in script call
+    call cs_day01
+  File "game/mods/chuzaya_smena/days/day02/00_flow.rpy", line 149, in script call
+    call cs_day02_34
+  File "game/mods/chuzaya_smena/days/day02/part05/34_scene.rpy", line 36, in script
+    cs_narrator "Первую линию я провела вполне уверенно."
+  File "game/mods/chuzaya_smena/scriot.rpy", line 32, in script call
+    call cs_day01
+  File "game/mods/chuzaya_smena/days/day02/00_flow.rpy", line 149, in script call
+    call cs_day02_34
+  File "game/mods/chuzaya_smena/days/day02/part05/34_scene.rpy", line 36, in script
+    cs_narrator "Первую линию я провела вполне уверенно."
+  File "D:\stean\steamapps\common\Everlasting Summer/renpy/ast.py", line 721, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "D:\stean\steamapps\common\Everlasting Summer/renpy/exports.py", line 1419, in say
+    who(what, *args, **kwargs)
+  File "D:\stean\steamapps\common\Everlasting Summer/renpy/character.py", line 1249, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+  File "D:\stean\steamapps\common\Everlasting Summer/renpy/character.py", line 901, in do_display
+    **display_args)
+  File "D:\stean\steamapps\common\Everlasting Summer/renpy/character.py", line 641, in display_say
+    c("show_done", interact=interact, type=type, **cb_args)
+  File "game/mods/chuzaya_smena/qa/global_sprite_audit.rpy", line 29, in cs_qa_global_images
+    raise Exception("Portraits over full-screen CG: %r" % full_cgs)
+Exception: Portraits over full-screen CG: [u'cs_cg_poster_planning_day']
+
+While running game code:
+  File "game/mods/chuzaya_smena/scriot.rpy", line 32, in script call
+    call cs_day01
+  File "game/mods/chuzaya_smena/days/day02/00_flow.rpy", line 149, in script call
+    call cs_day02_34
+  File "game/mods/chuzaya_smena/days/day02/part05/34_scene.rpy", line 36, in script
+    cs_narrator "Первую линию я провела вполне уверенно."
+  File "game/mods/chuzaya_smena/scriot.rpy", line 32, in script call
+    call cs_day01
+  File "game/mods/chuzaya_smena/days/day02/00_flow.rpy", line 149, in script call
+    call cs_day02_34
+  File "game/mods/chuzaya_smena/days/day02/part05/34_scene.rpy", line 36, in script
+    cs_narrator "Первую линию я провела вполне уверенно."
+  File "game/mods/chuzaya_smena/qa/global_sprite_audit.rpy", line 29, in cs_qa_global_images
+    raise Exception("Portraits over full-screen CG: %r" % full_cgs)
+Exception: Portraits over full-screen CG: [u'cs_cg_poster_planning_day']

@@ -4,6 +4,10 @@ label cs_scene_06:
     $ save_name = u"Чужая смена — Последняя остановка"
     show cs_bus_winter at cs_bus_ride zorder -10 with Dissolve(1.5)
     stop music fadeout 2.0
+    # cs_director_begin: entry frame; explicit scene plan
+    $ cs_frame_focus([])
+    with cs_sprite_change
+    # cs_director_end
     cs_narrator "Автобус качнуло на повороте."
     cs_narrator "За стеклом промелькнул дорожный знак."
     cs_narrator "Я попыталась прочитать надпись."
@@ -30,15 +34,24 @@ label cs_scene_06:
     cs_narrator "Она чуть повернула голову."
     # cs_darya_variety: reaction
     show cs_dasha_winter shy normal at cs_darya_normal_center
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_da "Немного."
     cs_ls "Аналогично."
     # cs_darya_stage: present in story
     show cs_dasha_winter thinking normal at cs_darya_normal_center
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_da "Долго ещё ехать?"
     cs_narrator "Я посмотрела на зимний лес."
     cs_ls "Понятия не имею."
     # cs_darya_stage: present in story
     show cs_dasha_winter shrug normal at cs_darya_normal_center
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_da "Обнадёживает."
     cs_ls "Я стараюсь."
     cs_narrator "Мы обе ненадолго замолчали."
@@ -57,7 +70,9 @@ label cs_scene_06:
     cs_narrator "Ровное."
     cs_narrator "Медленное."
     cs_narrator "Рядом сидела Дарья."
-    scene cs_sleep_winter with Dissolve(1.5)
+    $ cs_director_scene("cs_sleep_winter")
+    scene cs_sleep_winter
+    with Dissolve(1.5)
     label cs_check_cg_winter:
     cs_narrator "За окном был зимний лес."
     cs_narrator "Ничего необычного."
@@ -75,7 +90,9 @@ label cs_scene_06:
     cs_th "Надо будет спросить у водителя..."
     cs_th "...где мы вообще..."
     window hide dissolve
-    scene black with Dissolve(3.0)
+    $ cs_director_scene("black")
+    scene black
+    with Dissolve(3.0)
     stop ambience fadeout 3.0
     pause 3.0
     window hide dissolve

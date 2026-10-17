@@ -3,12 +3,18 @@ label cs_day01_46:
     $ save_name = "Чужая смена — День 1: Неожиданное сходство"
     $ sunset_time()
     $ persistent.sprite_time = "sunset"
+    $ cs_director_scene("cs_camp_path_sunset")
     scene cs_camp_path_sunset
     show cs_darya shrug pioneer normal at cs_darya_normal_center
+    $ cs_presence_stage()
     with Dissolve(0.7)
     $ renpy.music.set_volume(0.35,delay=1.5,channel="ambience")
     if renpy.music.get_playing(channel="ambience") != "sound/ambiences/camp_center_evening.ogg":
         play ambience "sound/ambiences/camp_center_evening.ogg" fadeout 2.0 fadein 2.0
+    # cs_director_begin: entry frame; explicit scene plan
+    $ cs_frame_focus(["cs_darya"])
+    with cs_sprite_change
+    # cs_director_end
     cs_narrator "Мы с Дарьей продолжали идти по дорожке."
     cs_narrator "После разговора на площади между нами установилось какое-то новое, непривычное спокойствие."
     cs_narrator "Я больше не пыталась придумать удачную шутку."
@@ -25,6 +31,9 @@ label cs_day01_46:
     cs_narrator "Дарья сразу заметила."
     # cs_darya_variety: reaction
     show cs_darya thinking pioneer normal at cs_darya_normal_center
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_da "Что?"
     cs_ls "Ничего."
     cs_da "У тебя опять такое выражение лица."
@@ -34,6 +43,9 @@ label cs_day01_46:
     cs_ls "Прошу занести в протокол. Подозреваемая впервые за день довольна происходящим."
     # cs_darya_variety: reaction
     show cs_darya amused pioneer normal at cs_darya_normal_center
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_narrator "Дарья рассмеялась."
     cs_da "Ты когда-нибудь перестанешь разговаривать протоколами?"
     cs_ls "Не исключено. Но пока экспериментальная программа продолжается."
@@ -42,6 +54,9 @@ label cs_day01_46:
     cs_ls "Ой, извини!"
     # cs_speaker: present
     show un normal pioneer at cs_actor_left zorder 10
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_un "Извини…"
     cs_narrator "Мы произнесли это почти одновременно."
     cs_narrator "Я подняла глаза."
@@ -49,6 +64,9 @@ label cs_day01_46:
     show un normal pioneer at cs_actor_left zorder 10
     # cs_composition: regroup
     show cs_darya amused pioneer normal at cs_darya_normal_right
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_narrator "Передо мной стояла девушка с фиолетовыми волосами, собранными в два хвоста."
     cs_narrator "Зелёные глаза."
     cs_narrator "Светлая кожа."
@@ -76,6 +94,9 @@ label cs_day01_46:
     cs_narrator "Потом обратно."
     # cs_darya_variety: reaction
     show cs_darya thinking pioneer normal at cs_darya_normal_right
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_da "Лен?"
     cs_narrator "Я не ответила сразу."
     cs_narrator "Потому что вспомнила кое-что ещё."
@@ -96,6 +117,9 @@ label cs_day01_46:
     cs_narrator "Девушка осторожно произнесла:"
     # cs_speaker: present
     show un normal pioneer at cs_actor_left zorder 10
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
     cs_un "Всё нормально?"
     cs_narrator "Я кивнула."
     cs_ls "Да. Просто задумалась."

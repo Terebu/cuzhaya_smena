@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-image cs_camp_path_day = im.Scale("mods/chuzaya_smena/bg/camp_street/camp_path_day.png", 1920, 1080)
-image cs_camp_path_sunset = im.Scale("mods/chuzaya_smena/bg/camp_street/camp_path_sunset.png", 1920, 1080)
-image cs_camp_path_night = im.Scale("mods/chuzaya_smena/bg/camp_street/camp_path_night.png", 1920, 1080)
+image cs_camp_path_day = im.Scale(cs_root + "bg/camp_street/camp_path_day.png", 1920, 1080)
+image cs_camp_path_sunset = im.Scale(cs_root + "bg/camp_street/camp_path_sunset.png", 1920, 1080)
+image cs_camp_path_night = im.Scale(cs_root + "bg/camp_street/camp_path_night.png", 1920, 1080)
 
 transform cs_darya_normal_center:
     xalign 0.5

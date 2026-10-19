@@ -2,7 +2,7 @@
 # Full source PNGs, proportional virtual distances, one common visible baseline.
 init -4 python:
     import json
-    with renpy.file("mods/chuzaya_smena/sp/dasha_metadata.json") as cs_meta_file:
+    with renpy.file(cs_root + "sp/dasha_metadata.json") as cs_meta_file:
         cs_dasha_metadata = json.load(cs_meta_file)
 
     def cs_dasha_image(entry, distance, visible_height=1560.0):
@@ -12,7 +12,7 @@ init -4 python:
         canvas_w, canvas_h = int(1000 * ratio), int(1600 * ratio)
         x = int(canvas_w / 2.0 - (left + right) / 2.0 * factor)
         y = int(canvas_h - bottom * factor)
-        canvas = im.Composite((canvas_w, canvas_h), (x, y), im.FactorScale(entry["path"], factor))
+        canvas = im.Composite((canvas_w, canvas_h), (x, y), im.FactorScale(cs_path(entry["path"]), factor))
         # Apply the scene's sunset lighting to custom actors too, retaining full PNGs.
         return ConditionSwitch("persistent.sprite_time == 'sunset'", im.MatrixColor(canvas, im.matrix.tint(1.0, 0.87, 0.78)), "persistent.sprite_time == 'night'", im.MatrixColor(canvas, im.matrix.tint(0.75, 0.80, 1.0)), "True", canvas)
 

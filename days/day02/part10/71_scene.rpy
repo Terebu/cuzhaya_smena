@@ -6,20 +6,12 @@ label cs_day02_71:
     $ cs_part10_live = True
     $ cs_director_scene("cs_house_lena_darya_ext_night")
     scene cs_house_lena_darya_ext_night
-    show cs_darya shrug pioneer normal at cs_darya_normal_right
-    $ cs_presence_stage()
     with Dissolve(0.8)
-    play music "sound/music/a_promise_from_distant_days.ogg" fadeout 2.0 fadein 3.0
     $ renpy.music.set_volume(0.12, channel="music")
     label cs_check_finale_71:
     # cs_director_begin: entry frame; explicit scene plan
-    $ cs_frame_focus(["cs_darya"])
-    with cs_sprite_change
-    # cs_director_end
-    # cs_director_begin: Darya is already inside, not at the exterior door
     $ cs_frame_focus([])
     with cs_sprite_change
-    label cs_director_check_7b1f7bfa91:
     # cs_director_end
     cs_narrator "До домика я дошла без приключений."
     cs_narrator "Что после сегодняшнего дня само по себе заслуживало небольшого праздника."

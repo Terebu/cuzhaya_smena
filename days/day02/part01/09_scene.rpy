@@ -156,7 +156,7 @@ label cs_day02_09:
     # cs_global_transition
     with cs_sprite_change
     cs_da "Спасибо. Очень великодушно."
-    cs_narrator "Мы направились к площади."
+    cs_narrator "Мы направились обратно к домику."
     # cs_presence_keep: hide cs_darya
     # cs_presence_keep: hide cs_dasha_pioneer
     # cs_presence_keep: hide cs_semen

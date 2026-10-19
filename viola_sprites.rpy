@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Custom and original Viola share the existing cs tag. Original names stay valid.
 init -2 python:
-    with renpy.file("mods/chuzaya_smena/sp/viola/metadata.json") as cs_vfile:
+    with renpy.file(cs_root + "sp/viola/metadata.json") as cs_vfile:
         cs_vmeta = json.load(cs_vfile)
     for cs_ventry in cs_vmeta:
         for cs_vdistance in ("normal", "far", "close"):
@@ -22,7 +22,7 @@ transform cs_viola_close_left:
     yanchor 1.0
     ypos 1.72
 
-image cs_cg_lena_darya_help_viola_day = im.Scale("mods/chuzaya_smena/cg/viola/cg_lena_darya_help_viola_day.png", 1920, 1080)
+image cs_cg_lena_darya_help_viola_day = im.Scale(cs_root + "cg/viola/cg_lena_darya_help_viola_day.png", 1920, 1080)
 
 transform cs_viola_normal_right:
     xalign 0.97

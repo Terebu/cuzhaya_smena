@@ -9,4 +9,4 @@ default cs_part05_cast = []
 default cs_part05_cg = False
 default cs_part05_live = False
 
-image cs_cg_lena_darya_hand_in_hand_day = im.Scale("mods/chuzaya_smena/cg/lena_n_dasha/cg_lena_darya_hand_in_hand_day.png", 1920, 1080)
+image cs_cg_lena_darya_hand_in_hand_day = im.Scale(cs_root + "cg/lena_n_dasha/cg_lena_darya_hand_in_hand_day.png", 1920, 1080)

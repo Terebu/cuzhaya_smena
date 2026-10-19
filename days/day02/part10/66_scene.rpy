@@ -53,14 +53,13 @@ label cs_day02_66:
     cs_narrator "Я кивнула."
     cs_ls "Договорились."
     cs_narrator "Мы направились к домику."
-    $ cs_director_scene("cs_house_lena_darya_int_day")
-    scene cs_house_lena_darya_int_day at cs_house_full_frame
+    $ cs_director_scene("cs_house_lena_darya_int_sunset")
+    scene cs_house_lena_darya_int_sunset at cs_house_full_frame
     show cs_darya shrug pioneer normal at cs_darya_normal_right
     $ cs_presence_stage()
     with Dissolve(0.8)
     cs_narrator "Внутри я сразу подошла к тумбочке."
     cs_narrator "Книга лежала там, где я её оставила перед ужином."
-    cs_narrator "Рядом лежала книга Дарьи."
     cs_narrator "Я взяла свой экземпляр, проверила закладку и осторожно прижала его к боку здоровой рукой."
     $ cs_reading_book_location = "lena_hand"
     cs_th "Не так уж много страниц."
@@ -82,8 +81,8 @@ label cs_day02_66:
     cs_da "Не за что. Только постарайся не растягивать прощание с Женей на полчаса."
     cs_narrator "Я усмехнулась."
     cs_ls "Никаких торжественных церемоний."
-    $ cs_director_scene("cs_house_lena_darya_ext_day")
-    scene cs_house_lena_darya_ext_day
+    $ cs_director_scene("cs_house_lena_darya_ext_sunset")
+    scene cs_house_lena_darya_ext_sunset
     show cs_darya shrug pioneer normal at cs_darya_normal_right
     $ cs_presence_stage()
     with Dissolve(0.8)

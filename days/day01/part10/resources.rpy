@@ -4,8 +4,8 @@ default cs_met_mz = False
 default cs_part10_choice = None
 default cs_day01_part10_done = False
 
-image cs_library_exterior_sunset = im.Scale("mods/chuzaya_smena/bg/lib/library_exterior_sunset.png", 1920, 1080)
-image cs_library_exterior_night = im.Scale("mods/chuzaya_smena/bg/lib/library_exterior_night.png", 1920, 1080)
+image cs_library_exterior_sunset = im.Scale(cs_root + "bg/lib/library_exterior_sunset.png", 1920, 1080)
+image cs_library_exterior_night = im.Scale(cs_root + "bg/lib/library_exterior_night.png", 1920, 1080)
 
 init 20 python:
     cs_mz = Character(u"Женя", color="#d6baff", what_style="normal_prolog", ctc="ctc_animation", ctc_position="fixed")

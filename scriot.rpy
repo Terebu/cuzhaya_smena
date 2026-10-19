@@ -8,6 +8,7 @@ default cs_active = False
 default cs_darya_known = False
 
 label chuzhaya_smena_start:
+    $ cs_reset_state()
     $ cs_active = True
     $ cs_darya_known = False
     $ cs_slavya_known = False
@@ -21,6 +22,7 @@ label chuzhaya_smena_start:
     stop ambience fadeout 1.0
     $ renpy.music.set_volume(1.0, channel="music")
     $ renpy.music.set_volume(1.0, channel="ambience")
+    $ renpy.music.set_volume(1.0, channel="sound")
     scene black with dissolve
     call cs_scene_01
     call cs_scene_02

@@ -46,7 +46,7 @@ label cs_day02_70:
     cs_da "Мне тоже."
     cs_narrator "Я посмотрела на сцену."
     cs_narrator "Потом на неё."
-    cs_ls "Забавно. Утром мы ещё видели, как Мику разбиралась с отдельными кусочками мелодии."
+    cs_ls "Забавно. Утром Мику только готовилась к этому выступлению."
     if cs_mi_intro_revised == True:
         cs_narrator "Дарья кивнула."
         show cs_darya shrug pioneer normal at cs_darya_normal_right

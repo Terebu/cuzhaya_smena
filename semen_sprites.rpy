@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # User-supplied full PNGs. Same proportional distance system as Darya.
 init -3 python:
-    with renpy.file("mods/chuzaya_smena/sp/semen_metadata.json") as cs_semen_file:
+    with renpy.file(cs_root + "sp/semen_metadata.json") as cs_semen_file:
         cs_semen_metadata = json.load(cs_semen_file)
     for cs_entry in cs_semen_metadata:
         for cs_distance in ("far", "normal", "close"):

@@ -1,1 +1,0 @@
-PASS: prologue and day 1 parts 1-11 and all day 2 at 1280x720; history/save/load; music silence; actors; both friendship choices; demo ends after second night.

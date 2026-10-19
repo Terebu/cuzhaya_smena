@@ -106,46 +106,13 @@ label cs_day01_17:
     with cs_sprite_change
     label cs_director_check_96adca2052:
     # cs_director_end
-    cs_narrator "Я приблизилась к Дарье."
-    cs_ls "Знаешь, это очень неприятное ощущение."
+    cs_narrator "Я поравнялась с Дарьей."
     # cs_darya_stage: present in story
     show cs_darya thinking pioneer normal at cs_darya_normal_center
     $ cs_presence_stage()
     # cs_global_transition
     with cs_sprite_change
-    cs_da "Какое?"
-    cs_ls "Когда знаешь место, в котором никогда не была."
-    cs_narrator "Она посмотрела вперёд."
-    # cs_darya_stage: present in story
-    show cs_darya shrug pioneer normal at cs_darya_normal_center
-    $ cs_presence_stage()
-    # cs_global_transition
-    with cs_sprite_change
-    cs_da "Мне это чувство знакомо."
-    cs_narrator "Я повернулась к ней."
-    cs_narrator "И тут же вспомнила, с кем именно разговариваю."
-    cs_ls "А. Ну да."
-    # cs_darya_variety: reaction
-    show cs_darya smile pioneer normal at cs_darya_normal_center
-    $ cs_presence_stage()
-    # cs_global_transition
-    with cs_sprite_change
-    cs_narrator "Дарья слегка усмехнулась."
-    # cs_darya_stage: present in story
-    show cs_darya smile pioneer normal at cs_darya_normal_center
-    $ cs_presence_stage()
-    # cs_global_transition
-    with cs_sprite_change
-    cs_da "Именно."
-    cs_narrator "Несколько секунд мы шли молча."
-    cs_ls "У тебя хотя бы есть опыт существования внутри довольно запутанной истории."
-    # cs_darya_stage: present in story
-    show cs_darya worried pioneer normal at cs_darya_normal_center
-    $ cs_presence_stage()
-    # cs_global_transition
-    with cs_sprite_change
-    cs_da "Не уверена, что это преимущество."
-    cs_ls "Сейчас выясним."
+    cs_narrator "Она тоже смотрела по сторонам, и по её лицу было видно: мысли у неё примерно те же."
     cs_narrator "Я бросила взгляд на Ольгу Дмитриевну, которая шла немного впереди."
     cs_narrator "Она выглядела совершенно спокойно."
     cs_th "Две странные девушки. Неизвестный автобус. Непонятные объяснения."

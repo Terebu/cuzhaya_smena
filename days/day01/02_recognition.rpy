@@ -7,7 +7,7 @@ label cs_day01_02:
     with dissolve
     $ renpy.music.set_volume(0.65, delay=2.0, channel="ambience")
     # cs_director_begin: entry frame; explicit scene plan
-    $ cs_frame_focus(["cs_dasha_winter"])
+    $ cs_frame_focus([])
     with cs_sprite_change
     # cs_director_end
     cs_narrator "Двери автобуса оставались открытыми."

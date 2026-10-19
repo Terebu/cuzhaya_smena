@@ -1,9 +1,0 @@
-{
-  "status": "PASS",
-  "scenes": 39,
-  "manuscript_paragraphs": 602,
-  "implemented_paragraphs": 602,
-  "continuity_additions": 3,
-  "assets_preserved": 14,
-  "errors": []
-}

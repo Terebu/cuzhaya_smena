@@ -100,15 +100,7 @@ label cs_day02_13:
     # cs_presence_keep: hide el
     # cs_presence_keep: hide cs
     $ cs_breakfast_cast = []
-    show cs_semen thinking pioneer normal at cs_semen_normal_left
-    show cs_darya thinking pioneer normal at cs_darya_normal_right
     $ cs_breakfast_cast = ["cs_semen", "cs_darya"]
-    $ cs_presence_stage()
-    # cs_global_transition
-    with cs_sprite_change
-    cs_da "Может, автобус просто уехал?"
-    cs_sy "Но куда?"
-    cs_narrator "Дарья пожала плечами."
     # cs_presence_keep: hide cs_dasha_pioneer
     # cs_presence_keep: hide cs_zhenya
     # cs_presence_keep: hide mz

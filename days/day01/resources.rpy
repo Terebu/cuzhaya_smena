@@ -3,7 +3,7 @@ init 25 python:
     cs_day_music_think = "sound/music/just_think.ogg"
     cs_day_music_unknown = "sound/music/into_the_unknown.ogg"
     # Dictionary entry exists, but this installation omits the actual file.
-    cs_day_music_doubt = music_list["doubt_everyone"] if renpy.loadable(music_list["doubt_everyone"]) else "sound/music/waltz_of_doubts.ogg"
+    cs_day_music_doubt = music_list.get("doubt_everyone", "") if renpy.loadable(music_list.get("doubt_everyone", "")) else "sound/music/waltz_of_doubts.ogg"
     cs_day_music_home = "sound/music/a_promise_from_distant_days.ogg"
     cs_day_music_mystery = "sound/music/mystery_girl.ogg"
     cs_day_music_friends = "sound/music/lets_be_friends.ogg"
@@ -17,7 +17,7 @@ init 25 python:
     cs_day_sfx_horn = "sound/sfx/dinner_horn_processed.ogg"
     cs_day_dining_full = "sound/ambiences/dining_hall_full.ogg"
 
-image cs_lena_pioneer_mirror = im.Scale("mods/chuzaya_smena/cg/cg_lena_pioneer_mirror.png", 1920, 1080)
+image cs_lena_pioneer_mirror = im.Scale(cs_root + "cg/cg_lena_pioneer_mirror.png", 1920, 1080)
 
 transform cs_day_dasha_right:
     xalign 0.9

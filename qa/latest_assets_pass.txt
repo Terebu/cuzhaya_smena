@@ -1,1 +1,0 @@
-PASS: thirty new full sprites rendered; 54 registered sprites with distances; house BGs; legacy winter aliases retained.

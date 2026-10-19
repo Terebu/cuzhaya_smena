@@ -1,1 +1,0 @@
-PASS: scenes 30-39, original actors/assets, quiet segment, 1980 revelation, exit, open day and save/load.

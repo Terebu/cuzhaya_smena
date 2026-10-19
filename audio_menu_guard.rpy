@@ -12,5 +12,9 @@ init 35 python:
     def cs_menu_audio_at_line(event, **kwargs):
         if event == "begin":
             cs_silence_menu_audio()
+    def cs_restore_audio():
+        # Scenes lower individual channels; give them back before leaving the mod.
+        for channel in ("music", "ambience", "sound"):
+            renpy.music.set_volume(1.0, channel=channel)
     config.all_character_callbacks.append(cs_menu_audio_at_line)
     config.after_load_callbacks.append(cs_silence_menu_audio)

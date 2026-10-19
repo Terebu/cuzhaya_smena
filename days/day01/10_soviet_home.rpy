@@ -51,7 +51,7 @@ label cs_day01_10:
     cs_narrator "Фантомас."
     cs_narrator "Я несколько секунд смотрела на знакомое лицо."
     # cs_director_begin: Return to direct interaction: Counsellor cabin and historic objects
-    $ cs_frame_focus(["mt", "cs_dasha_winter"])
+    $ cs_frame_focus(["mt", "sl", "cs_dasha_winter"])
     with cs_sprite_change
     label cs_director_check_a45e77b705:
     # cs_director_end
@@ -70,7 +70,7 @@ label cs_day01_10:
     # cs_global_transition
     with cs_sprite_change
     cs_da "Что?"
-    cs_narrator "Я перешла на русский."
+    cs_narrator "Я повторила, уже спокойнее и понятнее."
     cs_ls "Этого человека не существовало. Подозрительный тип. Я бы за ним присматривала."
     cs_mt "Это актёр."
     cs_ls "Именно так подозрительные люди обычно и объясняют своё появление."
@@ -108,7 +108,7 @@ label cs_day01_10:
     cs_narrator "Точно."
     cs_narrator "Для меня всё это было историей."
     cs_narrator "Для неё — обычной жизнью."
-    cs_narrator "Я посмотрела на календарь."
+    cs_narrator "Я посмотрела на отрывной календарь: крупное число и месяц, а года нигде не было."
     cs_narrator "Затем на журналы."
     cs_narrator "На оформление комнаты."
     cs_narrator "На одежду Слави."
@@ -119,7 +119,7 @@ label cs_day01_10:
     cs_narrator "А в стране, которая для меня давно перестала существовать."
     cs_th "Хотя сначала неплохо бы установить дату."
     # cs_director_begin: Return to direct interaction: History versus present reality
-    $ cs_frame_focus(["mt", "cs_dasha_winter"])
+    $ cs_frame_focus(["mt", "sl", "cs_dasha_winter"])
     with cs_sprite_change
     label cs_director_check_96e1923c75:
     # cs_director_end

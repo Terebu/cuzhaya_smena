@@ -64,6 +64,7 @@ screen cs_day02_complete_screen():
             spacing 18
             text "День 2 — Без лишних слов" size 36
             text "Лагерь засыпает. Третий день — впереди." size 25
+            text "Это конец доступного вертикального среза." size 22
             textbutton "Сохранить игру" action ShowMenu("save")
             textbutton "Загрузить игру" action ShowMenu("load")
-            textbutton "Главное меню" action MainMenu()
+            textbutton "Главное меню" action [Function(cs_restore_audio), MainMenu()]

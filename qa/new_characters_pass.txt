@@ -1,1 +1,0 @@
-PASS: 20 named full PNGs rendered; normal and far pairs, Darya close.

@@ -69,8 +69,6 @@ label cs_day01_33:
     play sound "sound/sfx/knock_door7_polite.ogg"
     cs_narrator "Я постучала."
     cs_narrator "Изнутри послышалось:"
-    show el smile pioneer far at cs_actor_right
-    # cs_composition: regroup
     show cs_darya thinking pioneer normal at cs_darya_normal_left
     $ cs_presence_stage()
     # cs_global_transition

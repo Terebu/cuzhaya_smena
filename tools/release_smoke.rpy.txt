@@ -1,0 +1,98 @@
+# -*- coding: utf-8 -*-
+init 90 python:
+    def cs_validate_asset_portability():
+        import json
+        manifest = json.load(renpy.file(cs_resolve_asset("qa_asset_manifest.json")))
+        for rel in manifest:
+            path = cs_resolve_asset(rel)
+            if not renpy.loadable(path):
+                raise Exception("Unreachable asset: " + path)
+            with renpy.file(path) as f:
+                if not f.read(1): raise Exception("Empty asset: " + path)
+        with renpy.file(cs_resolve_asset("sp/dasha_metadata.json")) as f:
+            metadata = json.load(f)
+        for entries in metadata.values():
+            for entry in entries:
+                assert renpy.loadable(cs_resolve_asset(entry["path"]))
+        assert renpy.has_image("cs_darya shrug pioneer normal")
+        assert renpy.has_image("cs_semen neutral pioneer normal")
+        assert renpy.has_image("cs_zhenya normal pioneer normal")
+        assert renpy.has_image("cs custom serious medical normal")
+        with open(config.basedir + "/asset_validation.json", "w") as f:
+            json.dump(dict(count=len(manifest),root=cs_asset_prefix,searchpath=config.searchpath),f)
+
+screen cs_asset_portability_caption():
+    text "{font=[cs_japanese_font]}おはようございます。{/font}":
+        xpos 80
+        ypos 80
+        color "#ffffff"
+        outlines [(2, "#000000", 0, 0)]
+
+label cs_asset_portability_demo:
+    $ cs_active = True
+    $ set_mode_adv()
+    $ day_time()
+    $ persistent.sprite_time = "day"
+    $ cs_validate_asset_portability()
+    scene cs_room
+    show cs_darya shrug pioneer normal at cs_darya_normal_center
+    play music cs_music_calm
+    show screen cs_asset_portability_caption
+    pause
+    hide screen cs_asset_portability_caption
+    scene cs_cg_darya_piano_day
+    pause
+    label cs_asset_portability_end:
+    pause
+    return
+
+testcase cs_asset_portability:
+    pause 1.0
+    $ _preferences.text_cps = 0
+    $ _test.force = True
+    $ _test.timeout = 30.0
+    run Start("cs_asset_portability_demo")
+    pause 2.0
+    $ renpy.screenshot(config.basedir + "/asset_sprite.png")
+    click
+    pause 2.0
+    $ renpy.screenshot(config.basedir + "/asset_cg.png")
+    click until label cs_asset_portability_end
+    run Quit(confirm=False)
+
+testcase cs_asset_real_start:
+    pause 1.0
+    $ persistent.font_size = "small"
+    $ _preferences.text_cps = 0
+    $ _test.force = True
+    $ _test.timeout = 30.0
+    run Start("chuzhaya_smena_start")
+    click until label cs_check_room
+    pause 1.0
+    click
+    pause 1.0
+    $ renpy.screenshot(config.basedir + "/real_start.png")
+    run Quit(confirm=False)
+
+
+testcase cs_release_smoke:
+    pause 1.0
+    $ persistent.font_size = "small"
+    $ _preferences.text_cps = 0
+    $ _test.force = True
+    $ _test.timeout = 45.0
+    run ShowMenu("mods")
+    pause 0.5
+    $ renpy.screenshot(config.basedir + "/release_menu.png")
+    "Чужая смена"
+    click until label cs_check_battery7
+    pause 1.0
+    $ renpy.screenshot(config.basedir + "/release_second_scene.png")
+    run Jump("cs_asset_portability_demo")
+    pause 2.0
+    $ renpy.screenshot(config.basedir + "/release_sprite.png")
+    click
+    pause 2.0
+    $ renpy.screenshot(config.basedir + "/release_cg.png")
+    click until label cs_asset_portability_end
+    run Quit(confirm=False)

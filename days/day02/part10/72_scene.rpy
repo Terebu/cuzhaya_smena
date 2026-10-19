@@ -19,7 +19,7 @@ label cs_day02_72:
     $ cs_presence_stage()
     # cs_global_transition
     with cs_sprite_change
-    cs_da "Ну что, как тебе разговор с Женей?"
+    cs_da "Ну что, как тебе вечер в библиотеке?"
     cs_narrator "Я задумалась."
     cs_ls "Хорошо."
     show cs_darya thinking pioneer normal at cs_darya_normal_right
@@ -150,7 +150,7 @@ label cs_day02_72:
     cs_narrator "Я на секунду вспомнила дорогу."
     cs_narrator "Разговор перед исследованием."
     if cs_friend_se >= 2:
-        cs_narrator "Семёна, который сам предложил помощь после концерта."
+        cs_narrator "Семёна, который сам предложил помощь перед концертом."
     else:
         cs_narrator "Семёна, который выслушал нас и прошёл с нами дорогу."
     cs_th "Да."

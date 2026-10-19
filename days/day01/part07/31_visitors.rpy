@@ -127,14 +127,16 @@ label cs_day01_31:
     # cs_global_transition
     with cs_sprite_change
     cs_da "Пока."
-    # cs_presence_keep: hide dv
-    # cs_composition: regroup
-    # cs_presence_keep: hide us
     # cs_composition: regroup
     show cs_darya shrug pioneer normal at cs_darya_normal_center
     $ cs_presence_stage()
     with None
     play sound "sound/sfx/close_door_1.ogg"
+    # cs_director_begin: Alisa and Ulyana have left; the door is closed
+    $ cs_actor_exit(["dv", "us"])
+    with cs_sprite_leave
+    label cs_director_check_c31a0001e1:
+    # cs_director_end
     cs_narrator "Я закрыла дверь."
     cs_narrator "Несколько секунд мы с Дарьей молчали."
     cs_narrator "Затем она произнесла:"

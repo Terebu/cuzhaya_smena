@@ -12,4 +12,4 @@ transform cs_semen_sitting_left:
     yanchor 1.0
     ypos 1.60
 
-image cs_cg_lena_semen_guess_who_day = im.Scale("mods/chuzaya_smena/cg/lena_n_semen/cg_lena_semen_guess_who_day.png", 1920, 1080)
+image cs_cg_lena_semen_guess_who_day = im.Scale(cs_root + "cg/lena_n_semen/cg_lena_semen_guess_who_day.png", 1920, 1080)

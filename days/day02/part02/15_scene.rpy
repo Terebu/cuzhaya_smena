@@ -201,7 +201,7 @@ label cs_day02_15:
     cs_mi "Доброе утро!"
     cs_narrator "Я ответила почти автоматически:"
     label cs_check_part02_japanese:
-    cs_ls "{font=mods/chuzaya_smena/fonts/NotoSansCJKjp-Regular.otf}おはようございます。元気ですか？{/font}"
+    cs_ls "{font=[cs_root]fonts/NotoSansCJKjp-Regular.otf}おはようございます。元気ですか？{/font}"
     cs_th "Доброе утро. Как дела?"
     cs_narrator "Мику остановилась."
     cs_narrator "На мгновение она даже перестала улыбаться."
@@ -239,7 +239,7 @@ label cs_day02_15:
     $ cs_presence_stage()
     # cs_global_transition
     with cs_sprite_change
-    cs_mi "{font=mods/chuzaya_smena/fonts/NotoSansCJKjp-Regular.otf}えっ、日本語が話せるの？{/font}"
+    cs_mi "{font=[cs_root]fonts/NotoSansCJKjp-Regular.otf}えっ、日本語が話せるの？{/font}"
     cs_th "Ой, ты говоришь по-японски?"
     cs_narrator "Я улыбнулась."
     # cs_presence_keep: hide cs_dasha_pioneer
@@ -261,7 +261,7 @@ label cs_day02_15:
     $ cs_presence_stage()
     # cs_global_transition
     with cs_sprite_change
-    cs_ls "{font=mods/chuzaya_smena/fonts/NotoSansCJKjp-Regular.otf}少しだけ。{/font}"
+    cs_ls "{font=[cs_root]fonts/NotoSansCJKjp-Regular.otf}少しだけ。{/font}"
     cs_th "Немного."
     cs_narrator "И тут Мику действительно заговорила быстрее."
     cs_narrator "Слишком быстро."
@@ -288,7 +288,7 @@ label cs_day02_15:
     $ cs_presence_stage()
     # cs_global_transition
     with cs_sprite_change
-    cs_ls "Подожди. {font=mods/chuzaya_smena/fonts/NotoSansCJKjp-Regular.otf}ゆっくり話してくれる？{/font}"
+    cs_ls "Подожди. {font=[cs_root]fonts/NotoSansCJKjp-Regular.otf}ゆっくり話してくれる？{/font}"
     cs_th "Можешь говорить помедленнее?"
     cs_narrator "Мику остановилась."
     cs_narrator "Потом рассмеялась."

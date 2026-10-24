@@ -1,0 +1,236 @@
+"""Real-engine choice matrix, camera probes, and menu save/load checks."""
+from pathlib import Path
+R=Path(__file__).resolve().parent.parent
+out='''# -*- coding: utf-8 -*-
+init 97 python:
+    import json as cs_p7_json
+    renpy.cs_p7_fast = False
+    cs_p7_old_say = config.say_arguments_callback
+    cs_p7_old_labels = config.label_callback
+    cs_p7_old_menu_args = config.menu_arguments_callback
+    def cs_p7_say(who,*args,**kwargs):
+        if cs_p7_old_say:
+            args,kwargs=cs_p7_old_say(who,*args,**kwargs)
+        if renpy.cs_p7_fast:
+            kwargs["interact"]=False
+        return args,kwargs
+    def cs_p7_menu(items,*args,**kwargs):
+        choices=[(label,value) for label,value in items if value is not None]
+        value=choices[0 if renpy.cs_p7_yes else -1][1]
+        return value() if callable(value) else value
+    def cs_p7_menu_args(*args,**kwargs):
+        if cs_p7_old_menu_args:
+            args,kwargs=cs_p7_old_menu_args(*args,**kwargs)
+        if renpy.cs_p7_fast:
+            store.menu=cs_p7_menu
+        return args,kwargs
+    def cs_p7_labels(name,abnormal):
+        if cs_p7_old_labels:
+            cs_p7_old_labels(name,abnormal)
+        if renpy.cs_p7_fast and name in ("cs_day03_122","cs_day03_124","cs_day03_126","cs_check_day03_127_darya_left","cs_check_day03_128_library"):
+            renpy.cs_p7_pending=name
+    def cs_p7_character(event,**kwargs):
+        if event=="show_done" and renpy.cs_p7_fast and renpy.cs_p7_pending:
+            name=renpy.cs_p7_pending
+            renpy.cs_p7_pending=None
+            renpy.pause(0.4,hard=True)
+            cs_p6_capture(name)
+            if name=="cs_day03_122":
+                assert renpy.showing("cs_zhenya") and not renpy.showing("cs_darya")
+            if name=="cs_check_day03_127_darya_left":
+                assert not renpy.showing("cs_darya") and cs_director_states.get("cs_darya")=="ABSENT"
+    config.say_arguments_callback=cs_p7_say
+    config.label_callback=cs_p7_labels
+    config.menu_arguments_callback=cs_p7_menu_args
+    config.all_character_callbacks.append(cs_p7_character)
+
+label cs_qa_p7_start:
+    $ cs_reset_state()
+    $ cs_active = cs_darya_known = True
+    $ cs_day03_part06_done = cs_day03_lunch_arrived = cs_day03_lunch_horn_played = True
+    $ cs_friend_un = renpy.cs_p7_un
+    $ cs_friend_mz = renpy.cs_p7_mz
+    $ cs_met_un = cs_un_name_known = True
+    $ cs_un_sketch_invite_day3 = renpy.cs_p7_invite
+    $ cs_un_day3_art_talk = renpy.cs_p7_art
+    $ cs_mz_book_requested_day3 = renpy.cs_p7_book
+    $ cs_sl_poster_collected_day3 = bool(renpy.cs_p7_poster)
+    $ cs_day03_poster_location = renpy.cs_p7_poster
+    $ cs_mz_catalog_checked_day3 = cs_mz_map_lead = renpy.cs_p7_book
+    $ cs_lena_elbow_injury_day2 = 2
+    $ cs_lena_elbow_bandaged = cs_lena_no_sport_day2 = True
+    $ renpy.cs_p7_pending = None
+    $ set_mode_adv()
+    $ day_time()
+    $ persistent.sprite_time = "day"
+    $ cs_director_scene("bg int_dining_hall_people_day")
+    scene bg int_dining_hall_people_day
+    show cs_zhenya normal pioneer normal at cs_darya_normal_left
+    show cs_darya shrug pioneer normal at cs_darya_normal_right
+    $ cs_presence_stage()
+    jump cs_day03_part07
+
+label cs_qa_p7_camera:
+    $ cs_reset_state()
+    $ cs_active = cs_darya_known = True
+    $ set_mode_adv()
+    $ day_time()
+    scene bg int_house_of_mt_day
+    show cs_darya shrug pioneer normal at cs_darya_normal_right
+    $ cs_presence_stage()
+    label cs_check_p7_camera_solo:
+    cs_narrator "Одна в кадре."
+    $ renpy.cs_p7_solo_y = renpy.get_image_bounds("cs_darya")[1:]
+    show un normal pioneer at cs_actor_left
+    $ cs_presence_stage()
+    label cs_check_p7_camera_group:
+    cs_narrator "Два собеседника."
+    $ cs_actor_exit(["un"])
+    with cs_sprite_leave
+    label cs_check_p7_camera_return:
+    cs_narrator "Снова одна."
+    scene bg int_bus
+    show cs_dasha_winter neutral normal at cs_darya_normal_right
+    $ cs_presence_stage()
+    label cs_check_p7_camera_winter:
+    cs_narrator "Зимний спрайт."
+    label cs_check_p7_camera_end:
+    cs_narrator "Конец проверки."
+    return
+
+label cs_qa_p7_guard:
+    $ cs_reset_state()
+    $ cs_active = cs_darya_known = cs_un_name_known = True
+    $ set_mode_adv()
+    $ day_time()
+    scene bg int_dining_hall_people_day
+    call cs_day03_un_lunch_choice
+    call cs_day03_un_lunch_choice
+    label cs_check_p7_guard_end:
+    cs_narrator "Конец проверки."
+    return
+
+label cs_qa_p7_attention:
+    $ cs_reset_state()
+    $ cs_active = cs_darya_known = True
+    $ set_mode_adv()
+    $ day_time()
+    $ cs_director_scene("cs_camp_path_day")
+    scene cs_camp_path_day
+    show cs_darya shrug pioneer normal at cs_darya_normal_right
+    show cs_semen neutral pioneer normal at cs_semen_normal_left
+    $ cs_presence_stage()
+    cs_sy "В общем разговоре Даша остаётся слушателем."
+    cs_th "Короткая мысль не меняет кадр."
+    label cs_check_p7_attention_group:
+    cs_narrator "Разговор продолжается."
+    $ cs_pov_begin()
+    with cs_sprite_leave
+    label cs_check_p7_attention_inside:
+    cs_th "Лена надолго задумалась; собеседники остаются рядом, вне кадра."
+    $ cs_pov_end()
+    with cs_sprite_change
+    label cs_check_p7_attention_return:
+    cs_da "Вернулись к разговору."
+    $ cs_actor_exit(["cs_darya"])
+    $ cs_pov_begin()
+    $ cs_pov_end()
+    label cs_check_p7_attention_absent:
+    cs_narrator "Ушедшая Даша не возвращается из памяти кадра."
+    return
+'''
+setup='''    pause 0.5
+    $ persistent.font_size = "small"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps = 0
+    $ _preferences.transitions = 2
+    $ _test.force = True
+    $ _test.timeout = 120.0
+'''
+cases=[(0,0,False,False,False,None,True),(1,1,False,False,True,'darya_folder',False),(2,3,True,True,True,'darya_folder',True),(2,3,True,True,False,'house',False),(1,1,False,True,False,None,True)]
+for i,(un,mz,invite,art,book,poster,yes) in enumerate(cases):
+ out+='\ntestcase cs_day03_p7_%d:\n'%i+setup
+ vals=dict(un=un,mz=mz,invite=invite,art=art,book=book,poster=poster,yes=yes)
+ out+=''.join('    $ renpy.cs_p7_%s = %r\n'%(k,v) for k,v in vals.items())
+ out+='    $ renpy.cs_p6_case = "p7_%d"\n    $ renpy.cs_p7_fast = True\n'%i
+ out+='''    run Start("cs_qa_p7_start")
+    click until label cs_check_day03_part07_complete
+    pause 0.5
+    assert cs_day03_part07_done and cs_mz_book_requested_day3
+    assert not cs_reading_book_borrowed
+    assert cs_day03_darya_destination == "music_club"
+    assert not renpy.showing("cs_darya") and not renpy.showing("un")
+    assert cs_lena_elbow_injury_day2 == 2 and cs_lena_no_sport_day2 and cs_lena_elbow_bandaged
+'''
+ out+='    assert cs_friend_un == %d and cs_friend_mz == %d\n'%(un+int(yes),mz)
+ out+='    assert cs_un_day3_lunch_together == %r and cs_un_sketch_plan_discussed_day3 == %r\n'%(yes,invite and yes)
+ out+='    assert cs_day03_poster_location == %r\n'%poster
+ out+='    $ cs_p6_capture("complete")\n    $ open(config.basedir+"/p7_%d_PASS.txt","w").write("PASS")\n    run Quit(confirm=False)\n'%i
+out+='\ntestcase cs_day03_p7_camera:\n'+setup+'''    $ renpy.cs_p6_case = "p7_camera"
+    run Start("cs_qa_p7_camera")
+    pause 0.5
+    assert abs(renpy.get_image_bounds("cs_darya")[0] + renpy.get_image_bounds("cs_darya")[2]/2.0 - 960) < 1
+    $ renpy.cs_p7_before = renpy.get_image_bounds("cs_darya")[1:]
+    $ cs_p6_capture("solo")
+    click until label cs_check_p7_camera_group
+    pause 0.5
+    assert renpy.get_image_bounds("cs_darya")[1:] == renpy.cs_p7_before
+    $ cs_p6_capture("group")
+    click until label cs_check_p7_camera_return
+    pause 0.5
+    assert abs(renpy.get_image_bounds("cs_darya")[0] + renpy.get_image_bounds("cs_darya")[2]/2.0 - 960) < 1
+    assert renpy.get_image_bounds("cs_darya")[1:] == renpy.cs_p7_before
+    $ cs_p6_capture("return")
+    click until label cs_check_p7_camera_winter
+    pause 0.5
+    assert abs(renpy.get_image_bounds("cs_dasha_winter")[0] + renpy.get_image_bounds("cs_dasha_winter")[2]/2.0 - 960) < 1
+    $ cs_p6_capture("winter")
+    $ open(config.basedir+"/p7_camera_PASS.txt","w").write("PASS")
+    run Quit(confirm=False)
+'''
+out+='\ntestcase cs_day03_p7_guard:\n'+setup+'''    $ renpy.cs_p6_case = "p7_guard"
+    run Start("cs_qa_p7_guard")
+    pause 0.5
+    $ renpy.take_screenshot()
+    $ renpy.save("p7_menu")
+    $ renpy.load("p7_menu")
+    pause 0.5
+    "Предложить Лене Тихоновой пообедать вместе"
+    click until label cs_check_day03_125_result
+    assert cs_friend_un == 1 and cs_un_day3_lunch_awarded
+    pause 0.5
+    "Предложить Лене Тихоновой пообедать вместе"
+    click until label cs_check_p7_guard_end
+    assert cs_friend_un == 1 and cs_un_day3_lunch_awarded
+    $ cs_p6_capture("repeat_guard")
+    $ open(config.basedir+"/p7_guard_PASS.txt","w").write("PASS")
+    run Quit(confirm=False)
+'''
+out+='\ntestcase cs_day03_p7_attention:\n'+setup+'''    $ renpy.cs_p6_case = "p7_attention"
+    run Start("cs_qa_p7_attention")
+    click until label cs_check_p7_attention_group
+    pause 0.4
+    assert renpy.showing("cs_darya") and renpy.showing("cs_semen")
+    $ renpy.cs_p7_attention_bounds = renpy.get_image_bounds("cs_darya")
+    $ cs_p6_capture("listening")
+    click until label cs_check_p7_attention_inside
+    pause 0.4
+    assert not renpy.showing("cs_darya") and not renpy.showing("cs_semen")
+    assert cs_director_states["cs_darya"] == "PRESENT_OFFSCREEN"
+    $ cs_p6_capture("inward")
+    $ renpy.take_screenshot()
+    $ renpy.save("p7_inward")
+    $ renpy.load("p7_inward")
+    pause 0.4
+    assert not renpy.showing("cs_darya")
+    click until label cs_check_p7_attention_return
+    pause 0.4
+    assert renpy.showing("cs_darya") and renpy.get_image_bounds("cs_darya") == renpy.cs_p7_attention_bounds
+    $ cs_p6_capture("return")
+    click until label cs_check_p7_attention_absent
+    assert not renpy.showing("cs_darya")
+    $ open(config.basedir+"/p7_attention_PASS.txt","w").write("PASS")
+    run Quit(confirm=False)
+'''
+(R/'tools/day03_part07_test.rpy.txt').write_text(out,encoding='utf8')
+print('Generated 5 route cases, camera and real menu-save/reward-guard tests.')

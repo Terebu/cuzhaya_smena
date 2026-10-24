@@ -42,6 +42,9 @@ label cs_day02_46:
     with cs_sprite_change
     label cs_director_check_c9c5bc3879:
     # cs_director_end
+    # cs_inward_beat_2: attention turns inward
+    $ cs_pov_begin()
+    with cs_sprite_leave
     cs_narrator "Я достала сложенный листок."
     cs_narrator "Развернула."
     cs_narrator "И начала записывать."
@@ -62,6 +65,9 @@ label cs_day02_46:
     label cs_director_check_df8261df49:
     # cs_director_end
     cs_narrator "Сделать вывод, который не будет выглядеть как фантазия человека, слишком много игравшего в визуальные новеллы."
+    # Return to the same conversation, with the same cast and placement.
+    $ cs_pov_end()
+    with cs_sprite_change
     cs_ls "Что записать в качестве заключения?"
     cs_narrator "Семён задумался."
     show cs_semen thinking pioneer normal at cs_semen_normal_left

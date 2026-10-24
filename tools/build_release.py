@@ -17,14 +17,15 @@ def copy_asset(src,dst):
         except OSError:pass
     return shutil.copy2(src,dst)
 
-def engine_run(engine, args, log):
+def engine_run(engine, args, log, timeout=240):
     env=os.environ.copy();env.update(SDL_VIDEODRIVER='windows',SDL_AUDIODRIVER='directsound',RENPY_RENDERER='gl2',RENPY_SKIP_SPLASHSCREEN='1')
     cmd=[str(engine/'lib/windows-x86_64/python.exe'),str(engine/'Everlasting Summer.py'),str(engine)]+args+['--savedir',str(engine/'isolated_saves')]
     with Path(log).open('wb') as stream:
-        result=subprocess.run(cmd,cwd=engine,env=env,stdout=stream,stderr=subprocess.STDOUT,timeout=240)
+        result=subprocess.run(cmd,cwd=engine,env=env,stdout=stream,stderr=subprocess.STDOUT,timeout=timeout)
     if result.returncode:raise RuntimeError('Engine failed (%s), see %s'%(result.returncode,log))
 
 def build(output):
+    subprocess.run([__import__('sys').executable,str(ROOT/'tools/stabilize_mod_calls.py')],check=True,cwd=ROOT)
     output=Path(output).resolve()
     if output.exists():raise ValueError('Existing release is preserved. Choose a new directory: '+str(output))
     if not output.parent.is_dir():raise ValueError('Release parent directory must already exist.')

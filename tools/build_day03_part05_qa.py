@@ -1,0 +1,228 @@
+from pathlib import Path
+R=Path(__file__).resolve().parent.parent
+out='''# -*- coding: utf-8 -*-
+init 95 python:
+    def cs_p5_capture(name):
+        renpy.screenshot(config.basedir + "/p5_%s_%s.png" % (renpy.cs_p5_case,name))
+    def cs_p5_opaque(tag):
+        d=renpy.game.context().scene_lists.get_displayable_by_tag("master",tag)
+        return d is not None and getattr(getattr(d,"state",None),"alpha",1.0)>=0.999
+
+label cs_qa_day03_p5:
+    $ cs_reset_state()
+    $ cs_active = True
+    $ cs_darya_known = True
+    $ cs_friend_sl = 0 if renpy.cs_p5_real else renpy.cs_p5_sl
+    $ cs_friend_se = 3
+    $ cs_sl_poster_saved_day3 = False if renpy.cs_p5_real else bool(renpy.cs_p5_saved)
+    $ cs_sl_poster_collected_day3 = bool(renpy.cs_p5_collected)
+    $ cs_day03_poster_location = "house" if cs_sl_poster_collected_day3 else "slavya" if cs_sl_poster_saved_day3 else None
+    $ cs_mz_map_lead = bool(renpy.cs_p5_map)
+    $ cs_mz_book_requested_day3 = bool(renpy.cs_p5_book)
+    $ cs_day03_library_visit_time = "late_morning" if cs_mz_map_lead else "after_lunch" if cs_mz_book_requested_day3 else None
+    $ cs_viola_spare_bandage = True
+    $ cs_lena_elbow_bandaged = True
+    $ cs_lena_elbow_injury_day2 = 2
+    $ cs_lena_no_sport_day2 = True
+    $ cs_day03_viola_check_done = True
+    $ set_mode_adv()
+    $ day_time()
+    $ persistent.sprite_time = "day"
+    if renpy.cs_p5_real:
+        call cs_day02_24
+        call cs_day03_78a
+    label cs_check_p5_fixture:
+    if renpy.cs_p5_legacy:
+        $ cs_day03_part04_done = True
+        $ cs_day03_part05_route = "library" if cs_mz_map_lead else "square"
+        jump cs_day03_part05_pending
+    call cs_day03_103
+    $ cs_day03_part04_done = True
+    jump cs_day03_part05
+
+'''
+# friendship, choice, saved poster, previously collected, map lead, book, legacy, real prior events
+cases=[(0,False,False,False,False,False,False,False),(0,True,False,True,True,True,False,False),(1,False,True,False,False,True,False,False),(1,True,True,True,True,False,False,False),(2,False,False,False,True,False,False,False),(2,True,True,False,False,False,False,False),(1,True,True,False,True,True,False,True),(1,False,True,False,False,False,True,False)]
+for n,(sl,help,saved,collected,map,book,legacy,real) in enumerate(cases):
+ t=f'''testcase cs_day03_p5_{n}:
+    pause 0.5
+    $ renpy.cs_p5_case = {n}
+    $ renpy.cs_p5_sl = {sl}
+    $ renpy.cs_p5_help = {help}
+    $ renpy.cs_p5_saved = {saved}
+    $ renpy.cs_p5_collected = {collected}
+    $ renpy.cs_p5_map = {map}
+    $ renpy.cs_p5_book = {book}
+    $ renpy.cs_p5_legacy = {legacy}
+    $ renpy.cs_p5_real = {real}
+    $ persistent.font_size = "small"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps = 0
+    $ _test.force = True
+    $ _test.timeout = 60.0
+    run Start("cs_qa_day03_p5")
+'''
+ if real:t+='''    "Предложить Славе помощь с материалами"
+    click until label cs_check_p5_fixture
+    assert cs_friend_sl == 1 and cs_sl_poster_saved_day3 and cs_day03_poster_location == "slavya"
+'''
+ t+='''    click until label cs_check_day03_104
+    pause 0.4
+    assert cs_day03_part05_legacy_entry == renpy.cs_p5_legacy
+    assert cs_day03_part05_started and renpy.showing("cs_darya")
+    assert not renpy.showing("cs") and not renpy.showing("cs_semen")
+    assert renpy.music.get_playing() == "sound/music/my_daily_life.ogg"
+    $ cs_p5_capture("start")
+    click until label cs_check_day03_105
+    pause 0.4
+    assert renpy.showing("mt") and renpy.showing("cs_darya")
+    $ cs_p5_capture("counsellor")
+    click until label cs_check_day03_105_documents
+    assert cs_day03_documents_location == "darya" and not cs_day03_documents_delivered
+    click until label cs_check_day03_106_mt_left
+    pause 0.4
+    assert not renpy.showing("mt") and renpy.showing("cs_darya")
+    $ cs_p5_capture("counsellor_left")
+    click until label cs_check_day03_107_exterior
+    pause 0.4
+    assert renpy.showing("cs_ext_administration_day") and renpy.showing("cs_darya")
+    $ cs_p5_capture("administration_exterior")
+    click until label cs_check_day03_107_administration
+    pause 0.4
+    assert renpy.showing("cs_int_administration_day") and not any(renpy.showing(t) for t in cs_presence_tags)
+    $ cs_p5_capture("administration")
+    click until label cs_check_day03_107_delivered
+    assert cs_day03_documents_delivered and cs_day03_documents_location == "administration"
+    click until label cs_check_day03_107_back
+    pause 0.4
+    assert renpy.showing("cs_darya") and not renpy.showing("mt")
+    click until label cs_check_day03_108
+    pause 0.4
+    assert renpy.showing("sl") and renpy.showing("cs_darya")
+    $ renpy.cs_p5_sl_bounds = renpy.get_image_bounds("sl")
+    $ renpy.cs_p5_da_bounds = renpy.get_image_bounds("cs_darya")
+    $ cs_p5_capture("slavya")
+    click until label cs_day03_109
+    pause 0.4
+    $ renpy.take_screenshot()
+    $ renpy.save("p5_before_choice")
+    $ renpy.load("p5_before_choice")
+    pause 0.4
+    assert cs_friend_sl == renpy.cs_p5_sl and not cs_sl_day3_awarded
+    click until label cs_check_day03_109_menu
+    $ cs_p5_capture("choice")
+'''
+ if help:t+='''    "Помочь Славе закончить учёт инвентаря"
+    click until label cs_check_day03_109_seated
+    pause 0.4
+    assert renpy.get_image_bounds("sl")[1:] == renpy.cs_p5_sl_bounds[1:]
+    assert renpy.get_image_bounds("cs_darya")[1:] == renpy.cs_p5_da_bounds[1:]
+    assert renpy.showing("sl") and renpy.showing("cs_darya")
+    $ cs_p5_capture("seated_inventory")
+'''
+ else:t+='''    "Извиниться и отправиться по своим делам"
+'''
+ t+='''    click until label cs_check_day03_109_result
+    assert cs_friend_sl == renpy.cs_p5_sl + int(renpy.cs_p5_help)
+    assert cs_sl_day3_awarded == renpy.cs_p5_help
+    $ renpy.take_screenshot()
+    $ renpy.save("p5_award")
+    $ renpy.load("p5_award")
+    pause 0.4
+    assert cs_friend_sl == renpy.cs_p5_sl + int(renpy.cs_p5_help)
+'''
+ if saved and not collected:t+='''    click until label cs_check_day03_110_poster_received
+    pause 0.4
+    assert cs_sl_poster_collected_day3 and cs_day03_poster_location == "darya_folder"
+    assert renpy.showing("sl") and renpy.showing("cs_darya")
+    $ cs_p5_capture("poster")
+'''
+ t+='''    click until label cs_check_day03_110_result
+    pause 0.4
+    assert not renpy.showing("sl") and renpy.showing("cs_darya")
+    assert cs_sl_poster_collected_day3 == (renpy.cs_p5_collected or renpy.cs_p5_saved)
+    assert cs_day03_poster_location == ("house" if renpy.cs_p5_collected else "darya_folder" if renpy.cs_p5_saved else None)
+    assert cs_day03_documents_location == "administration"
+    click until label cs_check_day03_111_semen
+    pause 0.4
+    assert renpy.showing("cs_semen") and renpy.showing("cs_darya") and not renpy.showing("sl")
+    assert cs_p5_opaque("cs_semen")
+    $ cs_p5_capture("semen")
+    click until label cs_check_day03_111_boundary
+    assert cs_semen_privacy_respected_day3 and cs_friend_se == 3
+    click until label cs_check_day03_111_semen_left
+    pause 0.4
+    assert not renpy.showing("cs_semen")
+    $ cs_p5_capture("semen_left")
+    click until label cs_check_day03_112_reflection
+    pause 0.4
+    assert not any(renpy.showing(t) for t in cs_presence_tags)
+    $ cs_p5_capture("reflection")
+    click until label cs_check_day03_112_dialogue
+    pause 0.4
+    assert renpy.showing("cs_darya") and not renpy.showing("cs_semen")
+    $ cs_p5_capture("dialogue_restored")
+    click until label cs_check_day03_part05_complete
+    pause 0.4
+    assert cs_day03_part05_done and cs_day03_part04_done
+    assert cs_day03_part06_route == ("library" if renpy.cs_p5_map else "music")
+    assert cs_mz_book_requested_day3 == renpy.cs_p5_book and cs_mz_map_lead == renpy.cs_p5_map
+    assert cs_day03_library_visit_time == ("late_morning" if renpy.cs_p5_map else "after_lunch" if renpy.cs_p5_book else None)
+    assert cs_friend_sl == renpy.cs_p5_sl + int(renpy.cs_p5_help) and cs_friend_se == 3
+    assert cs_lena_elbow_injury_day2 == 2 and cs_lena_elbow_bandaged and cs_lena_no_sport_day2 and cs_viola_spare_bandage
+    assert cs_day03_documents_delivered and cs_day03_documents_location == "administration"
+    assert cs_semen_privacy_respected_day3
+    $ cs_p5_capture("next_part")
+    $ open(config.basedir + "/p5_%s_PASS.txt" % renpy.cs_p5_case,"w").write("PASS")
+    $ cs_reset_state()
+    assert not cs_day03_part05_done and not cs_sl_day3_awarded and not cs_sl_poster_collected_day3
+    assert cs_day03_documents_location is None and not cs_day03_documents_delivered and not cs_semen_privacy_respected_day3
+    run Quit(confirm=False)
+
+'''
+ out+=t
+out+='''label cs_qa_day03_p5_guard:
+    $ cs_reset_state()
+    $ cs_active = True
+    $ cs_darya_known = True
+    $ cs_friend_sl = 1
+    $ cs_sl_poster_saved_day3 = True
+    $ cs_day03_poster_location = "slavya"
+    $ set_mode_adv()
+    $ day_time()
+    scene bg ext_clubs_day
+    show sl smile pioneer at cs_actor_left
+    show cs_darya neutral pioneer normal at cs_darya_normal_right
+    $ cs_presence_stage()
+    call cs_day03_slavya_inventory_choice
+    label cs_check_p5_guard_second:
+    call cs_day03_slavya_inventory_choice
+    call cs_day03_110
+    label cs_check_p5_guard_poster:
+    cs_narrator "Контроль полученной папки."
+    $ cs_day03_poster_location = "house"
+    call cs_day03_110
+    label cs_check_p5_guard_done:
+    cs_narrator "Проверка завершена."
+    return
+
+testcase cs_day03_p5_guard:
+    pause 0.5
+    $ persistent.font_size = "small"
+    $ _preferences.text_cps = 0
+    $ _test.force = True
+    $ _test.timeout = 60.0
+    run Start("cs_qa_day03_p5_guard")
+    "Помочь Славе закончить учёт инвентаря"
+    click until label cs_check_p5_guard_second
+    "Помочь Славе закончить учёт инвентаря"
+    click until label cs_check_p5_guard_poster
+    assert cs_friend_sl == 2 and cs_sl_day3_awarded
+    assert cs_sl_poster_collected_day3 and cs_day03_poster_location == "darya_folder"
+    click until label cs_check_p5_guard_done
+    assert cs_day03_poster_location == "house" and cs_friend_sl == 2
+    $ open(config.basedir + "/p5_guard_PASS.txt","w").write("PASS")
+    run Quit(confirm=False)
+'''
+(R/'tools/day03_part05_test.rpy.txt').write_text(out,encoding='utf8')
+print('QA template ready:',len(cases)+1,'cases')

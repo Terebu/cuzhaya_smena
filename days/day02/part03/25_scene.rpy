@@ -138,8 +138,12 @@ label cs_day02_25:
     with Dissolve(0.8)
     cs_narrator "Возле клубов мы нашли стол под навесом."
     cs_narrator "Я положила карандаши рядом."
+    # Finish the portrait exit against the ordinary background first.
+    $ cs_frame_focus([])
+    with cs_sprite_leave
     $ cs_director_scene("cs_cg_poster_planning_day")
     scene cs_cg_poster_planning_day
+    label cs_check_poster_25_enter:
     # cs_presence_keep: hide cs_darya
     # cs_presence_keep: hide cs_dasha_winter
     # cs_presence_keep: hide cs_dasha_pioneer
@@ -233,6 +237,7 @@ label cs_day02_25:
     $ cs_part03_cast = ["cs_semen", "cs_darya"]
     $ cs_presence_stage()
     with Dissolve(0.8)
+    label cs_check_poster_25_restored:
     cs_narrator "Семён подошёл к двери."
     # cs_presence_keep: hide cs_dasha_winter
     # cs_presence_keep: hide cs_dasha_pioneer

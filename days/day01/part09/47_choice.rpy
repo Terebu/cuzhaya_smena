@@ -22,7 +22,7 @@ label cs_day01_47:
             "Извиниться и пройти дальше":
                 $ cs_part09_choice = "pass"
     if cs_part09_choice == "meet":
-        call cs_day01_48_a
+        call cs_day01_48_a from cs_return_7f510a0f65d2e1805289
     else:
-        call cs_day01_48_b
+        call cs_day01_48_b from cs_return_bcb7eaa58b095bf186f6
     return

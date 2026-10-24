@@ -1,0 +1,48 @@
+# -*- coding: utf-8 -*-
+label cs_qa_day03_entry_frames:
+    $ cs_reset_state()
+    $ cs_active = True
+    $ cs_darya_known = True
+    $ set_mode_adv()
+    $ day_time()
+    $ persistent.sprite_time = "day"
+    call cs_day03_83
+    return
+
+testcase cs_day03_entry_frames:
+    pause 0.5
+    $ persistent.font_size = "small"
+    $ _preferences.text_cps = 0
+    $ renpy.set_physical_size((1280,720))
+    $ _test.force = True
+    $ _test.transition_timeout = 0
+    run Start("cs_qa_day03_entry_frames")
+    click until label cs_check_day03_83_enter
+    pause 0.035
+    $ renpy.screenshot(config.basedir + "/entry_0.png")
+    $ open(config.basedir + "/entry_bounds.txt","a").write(repr(renpy.get_image_bounds("cs_darya"))+"\n")
+    pause 0.035
+    $ renpy.screenshot(config.basedir + "/entry_1.png")
+    $ open(config.basedir + "/entry_bounds.txt","a").write(repr(renpy.get_image_bounds("cs_darya"))+"\n")
+    pause 0.035
+    $ renpy.screenshot(config.basedir + "/entry_2.png")
+    $ open(config.basedir + "/entry_bounds.txt","a").write(repr(renpy.get_image_bounds("cs_darya"))+"\n")
+    pause 0.035
+    $ renpy.screenshot(config.basedir + "/entry_3.png")
+    $ open(config.basedir + "/entry_bounds.txt","a").write(repr(renpy.get_image_bounds("cs_darya"))+"\n")
+    pause 0.035
+    $ renpy.screenshot(config.basedir + "/entry_4.png")
+    $ open(config.basedir + "/entry_bounds.txt","a").write(repr(renpy.get_image_bounds("cs_darya"))+"\n")
+    pause 0.035
+    $ renpy.screenshot(config.basedir + "/entry_5.png")
+    $ open(config.basedir + "/entry_bounds.txt","a").write(repr(renpy.get_image_bounds("cs_darya"))+"\n")
+    pause 0.035
+    $ renpy.screenshot(config.basedir + "/entry_6.png")
+    $ open(config.basedir + "/entry_bounds.txt","a").write(repr(renpy.get_image_bounds("cs_darya"))+"\n")
+    pause 0.035
+    $ renpy.screenshot(config.basedir + "/entry_7.png")
+    $ open(config.basedir + "/entry_bounds.txt","a").write(repr(renpy.get_image_bounds("cs_darya"))+"\n")
+    pause 0.5
+    $ renpy.screenshot(config.basedir + "/entry_normal.png")
+    $ open(config.basedir + "/entry_PASS.txt","w").write("PASS")
+    run Quit(confirm=False)

@@ -1,0 +1,63 @@
+# -*- coding: utf-8 -*-
+label cs_qa_p5_old_wait:
+    $ cs_reset_state()
+    $ cs_active = True
+    $ cs_darya_known = True
+    $ cs_day03_part04_done = True
+    $ cs_day03_viola_check_done = True
+    $ cs_day03_part05_route = "library"
+    $ cs_friend_sl = 1
+    $ cs_sl_poster_saved_day3 = True
+    $ cs_day03_poster_location = "slavya"
+    $ cs_mz_map_lead = True
+    $ cs_mz_book_requested_day3 = True
+    $ cs_day03_library_visit_time = "late_morning"
+    $ cs_viola_spare_bandage = True
+    $ cs_lena_elbow_bandaged = True
+    $ cs_lena_elbow_injury_day2 = 2
+    $ cs_lena_no_sport_day2 = True
+    $ set_mode_adv()
+    $ day_time()
+    scene cs_camp_path_day
+    show cs_darya shy_smile pioneer normal at cs_darya_normal_right
+    $ cs_presence_stage()
+    jump cs_day03_part05_pending
+
+testcase cs_p5_make_old_save:
+    pause 0.5
+    $ persistent.font_size = "small"
+    $ _test.force = True
+    $ _test.timeout = 60.0
+    run Start("cs_qa_p5_old_wait")
+    pause 0.5
+    assert cs_day03_part04_done and not hasattr(renpy.store,"cs_day03_part05_done")
+    $ renpy.take_screenshot()
+    $ renpy.save("p5_cross_version")
+    $ open(config.basedir + "/p5_old_save_PASS.txt","w").write("PASS")
+    run Quit(confirm=False)
+
+testcase cs_p5_load_old_save:
+    pause 0.5
+    $ _preferences.text_cps = 0
+    $ _test.force = True
+    $ _test.timeout = 60.0
+    $ renpy.load("p5_cross_version")
+    pause 0.4
+    $ open(config.basedir + "/p5_cross_load_state.txt","w").write(str((cs_day03_part05_started,cs_day03_part05_legacy_entry,bool(renpy.get_screen("cs_day03_part04_wait_screen")))))
+    $ renpy.screenshot(config.basedir + "/p5_cross_at_load.png")
+    assert cs_day03_part05_started
+    assert cs_day03_part05_legacy_entry and renpy.showing("cs_camp_path_day")
+    assert cs_day03_viola_check_done and cs_day03_part04_done
+    assert cs_friend_sl == 1 and not cs_sl_day3_awarded
+    click until label cs_check_day03_109_menu
+    "Помочь Славе закончить учёт инвентаря"
+    click until label cs_check_day03_part05_complete
+    pause 0.4
+    assert cs_day03_part05_done and cs_friend_sl == 2
+    assert cs_sl_poster_collected_day3 and cs_day03_poster_location == "darya_folder"
+    assert cs_day03_part06_route == "library" and cs_mz_book_requested_day3
+    assert cs_day03_documents_delivered and cs_day03_documents_location == "administration"
+    assert cs_lena_elbow_injury_day2 == 2 and cs_lena_no_sport_day2 and cs_viola_spare_bandage
+    $ renpy.screenshot(config.basedir + "/p5_cross_version_loaded.png")
+    $ open(config.basedir + "/p5_cross_save_PASS.txt","w").write("PASS")
+    run Quit(confirm=False)

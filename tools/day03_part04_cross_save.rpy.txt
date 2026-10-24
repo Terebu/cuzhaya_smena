@@ -1,0 +1,55 @@
+# -*- coding: utf-8 -*-
+label cs_qa_p4_old_wait:
+    $ cs_reset_state()
+    $ cs_active = True
+    $ cs_darya_known = True
+    $ cs_day03_part03_done = True
+    $ cs_friend_viola = 2
+    $ cs_viola_spare_bandage = True
+    $ cs_mz_map_lead = True
+    $ cs_day03_library_visit_time = "late_morning"
+    $ cs_lena_elbow_bandaged = True
+    $ cs_lena_elbow_injury_day2 = 2
+    $ cs_lena_no_sport_day2 = True
+    $ set_mode_adv()
+    $ day_time()
+    scene cs_camp_path_day
+    show cs_darya shy_smile pioneer normal at cs_darya_normal_right
+    $ cs_presence_stage()
+    $ cs_reflective_focus()
+    jump cs_day03_part04_pending
+
+testcase cs_p4_make_old_save:
+    pause 0.5
+    $ persistent.font_size = "small"
+    $ _test.force = True
+    $ _test.timeout = 60.0
+    run Start("cs_qa_p4_old_wait")
+    pause 0.5
+    assert cs_day03_part03_done and not hasattr(renpy.store,"cs_day03_part04_done")
+    $ renpy.take_screenshot()
+    $ renpy.save("p4_cross_version")
+    $ open(config.basedir + "/p4_old_save_PASS.txt","w").write("PASS")
+    run Quit(confirm=False)
+
+testcase cs_p4_load_old_save:
+    pause 0.5
+    $ _preferences.text_cps = 0
+    $ _test.force = True
+    $ _test.timeout = 60.0
+    $ renpy.load("p4_cross_version")
+    click until label cs_check_day03_97_aidpost
+    pause 0.4
+    assert not renpy.showing("cs_semen") and renpy.showing("cs_darya")
+    assert cs_viola_friend_before_day3 == 2 and not cs_viola_day3_awarded
+    click until label cs_check_day03_101_menu
+    "Поблагодарить и не задерживать Виолу"
+    click until label cs_check_day03_part04_complete
+    pause 0.4
+    assert cs_day03_part04_done and cs_friend_viola == 2
+    assert cs_viola_spare_bandage and cs_viola_day3_bonus_seen
+    assert cs_day03_part05_route == "library"
+    assert cs_lena_elbow_injury_day2 == 2 and cs_lena_no_sport_day2
+    $ renpy.screenshot(config.basedir + "/p4_cross_version_loaded.png")
+    $ open(config.basedir + "/p4_cross_save_PASS.txt","w").write("PASS")
+    run Quit(confirm=False)

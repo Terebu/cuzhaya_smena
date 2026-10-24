@@ -21,6 +21,9 @@ label cs_day01_54:
     cs_narrator "Деревом."
     cs_narrator "Старой краской."
     cs_narrator "И чем-то ещё, что бывает только в библиотеках с длинными рядами книжных полок."
+    # cs_authored_pov_0: Lena examines the room, not her companions
+    $ cs_frame_focus([])
+    with cs_sprite_change
     cs_narrator "Я огляделась."
     cs_narrator "Несколько стеллажей."
     cs_narrator "Читательские столы."
@@ -33,6 +36,9 @@ label cs_day01_54:
     cs_th "Поисковая система версии тысяча девятьсот восьмидесятого года."
     cs_th "Индексация ручная."
     cs_th "Время ответа — зависит от настроения библиотекаря."
+    # cs_authored_pov_1: Lena finds the librarian at her desk
+    $ cs_frame_focus(["cs_zhenya"])
+    with cs_sprite_change
     cs_narrator "За столом сидела девушка в очках."
     cs_narrator "Она читала книгу, придерживая страницу пальцем."
     cs_narrator "Услышав дверь, подняла глаза."
@@ -48,6 +54,9 @@ label cs_day01_54:
     cs_mz "Здравствуйте. Что-то хотели?"
     cs_narrator "Я шагнула вперёд."
     cs_ls "Добрый вечер."
+    # cs_authored_pov_2: Darya joins the greeting; keep both throughout the conversation
+    $ cs_frame_focus(["cs_zhenya", "cs_darya"])
+    with cs_sprite_change
     cs_narrator "Дарья поздоровалась следом."
     cs_narrator "Женя посмотрела на часы."
     # cs_speaker: present

@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "manuscript_blocks": 523,
+  "implemented_blocks": 526,
+  "replacements": {
+    "Ничего. Просто подумала, что утро пока проходит surprisingly прилично.": "Ничего. Просто подумала, что утро пока проходит подозрительно прилично.",
+    "Дарья записывала результаты.": "Я записывала результаты здоровой рукой.",
+    "Мы направились к площади.": "Мы вышли на лагерную дорожку."
+  },
+  "continuity_additions": [
+    [
+      "cs_narrator",
+      "Потом мы поменялись: Даша называла количество, а я записывала здоровой рукой. Запечатанные материалы оставались в коробках."
+    ],
+    [
+      "cs_vi",
+      "Вчерашняя запасная повязка у тебя? Пусть пока остаётся в сумке. Если что-то будет беспокоить, приходи ко мне."
+    ],
+    [
+      "cs_ls",
+      "Да, она со мной. Спасибо."
+    ]
+  ],
+  "prior_viola_awards": [
+    "cs_day02_viola_choice: cs_viola_day2_awarded",
+    "cs_day02_viola_second_choice: cs_viola_second_day2_awarded"
+  ],
+  "friendship_max_before": 2,
+  "friendship_max_after": 3,
+  "existing_inventory": "cs_viola_spare_bandage: already issued at day2 concert for friendship>=2; day3 skips a second packet and retains personal conversation",
+  "retired_part3": "134 ending blocks replaced by scene96; named checkpoints retained"
+}

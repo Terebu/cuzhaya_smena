@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "manuscript_blocks": 770,
+  "runtime_blocks": 810,
+  "editorial_replacements": {
+    "Я уже отложила пару книг. Ты вчера говорила, что тебе интереснее истории про людей, чем просто приключения.": 1,
+    "Ты ведь вчера быстро закончила книгу.": 1,
+    "Женя рассмеялась уже открыто.": 1
+  },
+  "mz_reward_sites": [
+    "days/day01/part10/55_choice.rpy",
+    "days/day02/00_flow.rpy",
+    "days/day03/part03/00_flow.rpy"
+  ],
+  "max_mz_at_lunch": 3,
+  "checks": [
+    "Unique labels/defaults",
+    "One guarded UN menu reward",
+    "No passive friendship awards",
+    "Independent MI and DV event conditions",
+    "Actual book selected once, remains in library",
+    "Art/preference/returned-book continuity",
+    "Poster holder preserved",
+    "Injury, bandage and documents unchanged",
+    "Day3 remains open"
+  ]
+}

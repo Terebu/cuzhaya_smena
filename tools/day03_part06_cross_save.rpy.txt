@@ -1,0 +1,59 @@
+# -*- coding: utf-8 -*-
+label cs_qa_p6_old_wait:
+    $ cs_reset_state()
+    $ cs_active = cs_darya_known = True
+    $ cs_day03_part05_done = cs_day03_part04_done = True
+    $ cs_friend_mi = cs_friend_un = 1
+    $ cs_met_un = cs_un_name_known = True
+    $ cs_mz_map_lead = cs_mz_book_requested_day3 = True
+    $ cs_day03_library_visit_time = "late_morning"
+    $ cs_sl_poster_collected_day3 = True
+    $ cs_day03_poster_location = "darya_folder"
+    $ cs_day03_documents_delivered = True
+    $ cs_day03_documents_location = "administration"
+    $ cs_viola_spare_bandage = cs_lena_elbow_bandaged = cs_lena_no_sport_day2 = True
+    $ cs_lena_elbow_injury_day2 = 2
+    $ set_mode_adv()
+    $ day_time()
+    scene cs_camp_path_day
+    show cs_darya neutral pioneer normal at cs_darya_normal_right
+    jump cs_day03_part06_pending
+
+testcase cs_p6_make_old_save:
+    pause 0.5
+    $ persistent.font_size = "small"
+    $ _test.force = True
+    $ _test.timeout = 60.0
+    run Start("cs_qa_p6_old_wait")
+    pause 0.5
+    assert bool(renpy.get_screen("cs_day03_part05_wait_screen"))
+    $ renpy.take_screenshot()
+    $ renpy.save("p6_cross_version")
+    $ open(config.basedir + "/p6_old_save_PASS.txt","w").write("PASS")
+    run Quit(confirm=False)
+
+testcase cs_p6_load_old_save:
+    pause 0.5
+    $ _preferences.text_cps = 0
+    $ _test.force = True
+    $ _test.timeout = 60.0
+    $ renpy.load("p6_cross_version")
+    pause 0.5
+    assert cs_day03_part06_started and not bool(renpy.get_screen("cs_day03_part05_wait_screen"))
+    assert cs_friend_mi == 1 and cs_friend_un == 1 and cs_friend_dv == 0
+    assert cs_day03_poster_location == "darya_folder" and cs_mz_map_lead and cs_mz_book_requested_day3
+    click until label cs_check_day03_115_menu
+    "Послушать оба варианта и обсудить их с Мику"
+    click until label cs_check_day03_117_menu
+    "Спросить Алису о её игре и честно обсудить звучание"
+    click until label cs_check_day03_119_menu
+    "Спросить Лену о её рисунке и поделиться опытом"
+    click until label cs_check_day03_part06_complete
+    pause 0.5
+    assert cs_friend_mi == 2 and cs_friend_dv == 1 and cs_friend_un == 2
+    assert cs_mz_catalog_checked_day3 and cs_mz_book_requested_day3 and cs_day03_library_visit_time == "after_lunch"
+    assert cs_day03_poster_location == "darya_folder" and cs_day03_documents_location == "administration"
+    assert cs_lena_elbow_injury_day2 == 2 and cs_lena_no_sport_day2 and cs_viola_spare_bandage
+    $ renpy.screenshot(config.basedir + "/p6_cross_version_loaded.png")
+    $ open(config.basedir + "/p6_cross_save_PASS.txt","w").write("PASS")
+    run Quit(confirm=False)

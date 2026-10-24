@@ -6,7 +6,7 @@ label cs_scene_01:
     scene cs_room
     with Dissolve(1.2)
     play music cs_music_calm fadein 2.0
-    call cs_opening_credits
+    call cs_opening_credits from cs_return_dce1c27902b5324a574c
     window show dissolve
     label cs_check_room:
     # cs_director_begin: entry frame; explicit scene plan

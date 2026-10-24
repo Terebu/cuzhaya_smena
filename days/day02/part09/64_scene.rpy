@@ -242,5 +242,5 @@ label cs_day02_64:
     cs_narrator "Она улыбнулась."
     cs_narrator "Женя вздохнула."
     cs_narrator "Но на этот раз не стала немедленно возвращаться к книге."
-    call cs_day02_dinner_branches
+    call cs_day02_dinner_branches from cs_return_3f20a08780bac7be0bc1
     return

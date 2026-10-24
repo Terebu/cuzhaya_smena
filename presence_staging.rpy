@@ -6,6 +6,10 @@ default cs_director_location_key = None
 default cs_director_people = {}
 default cs_director_states = {}
 default cs_reflective_shot = False
+default cs_pov_return_cast = []
+default cs_pov_return_location = None
+init -9 python:
+    cs_state_defaults.update(cs_pov_return_cast=[], cs_pov_return_location=None)
 init -10 python:
     import re
     cs_presence_tags = ("cs_darya", "cs_dasha_winter", "cs_dasha_pioneer", "cs_dasha_full", "cs_dasha", "cs_semen", "cs_zhenya", "mz", "un", "mi", "dv", "sl", "us", "mt", "sh", "el", "cs")
@@ -32,7 +36,7 @@ init -10 python:
                 current = renpy.game.context().scene_lists.get_displayable_by_tag("master", tag)
                 placement = current.get_placement()
                 state = getattr(current, "state", None)
-                positions = [Transform(xpos=placement[0], ypos=placement[1],
+                positions = [Transform(alpha=1.0, xpos=placement[0], ypos=placement[1],
                     xanchor=placement[2], yanchor=placement[3],
                     xoffset=placement[4], yoffset=placement[5],
                     zoom=getattr(state, "zoom", 1.0),
@@ -41,7 +45,23 @@ init -10 python:
                 store.cs_director_people[tag] = ((tag,) + tuple(renpy.get_attributes(tag) or ()), positions)
                 store.cs_director_states[tag] = "PRESENT_ONSCREEN"
 
+    def cs_full_frame_cg_showing():
+        return any(t.startswith("cs_cg_") or t in ("cs_sleep_winter", "cs_sleep_summer", "cs_lena_pioneer_mirror") for t in renpy.get_showing_tags())
+
+    def cs_clear_cg_portraits():
+        if not cs_full_frame_cg_showing():
+            return False
+        cs_director_remember()
+        for tag in cs_presence_tags:
+            if renpy.showing(tag):
+                renpy.hide(tag)
+                store.cs_director_states[tag] = "PRESENT_OFFSCREEN"
+        return True
+
     def cs_presence_stage():
+        # A later emotion show must not put a standing actor over an illustration.
+        if cs_clear_cg_portraits():
+            return
         for preferred, old in (("cs_darya", "cs_dasha_winter"), ("cs_darya", "cs_dasha_pioneer"), ("cs_zhenya", "mz")):
             if renpy.showing(preferred) and renpy.showing(old):
                 renpy.hide(old)
@@ -50,14 +70,16 @@ init -10 python:
         tags = [t for t in cs_presence_tags if renpy.showing(t)]
         tags.sort(key=lambda t: (t in ("cs_darya", "cs_dasha_winter", "cs_dasha_pioneer"), cs_presence_tags.index(t)))
         n = len(tags)
-        if n >= 2:
+        if n >= 1:
             for i, tag in enumerate(tags):
                 name = (tag,) + tuple(renpy.get_attributes(tag) or ())
-                x = (0.25, 0.75)[i] if n == 2 else 0.14 + 0.72 * i / float(n-1)
+                x = 0.5 if n == 1 else ((0.25, 0.75)[i] if n == 2 else (0.18 + 0.64 * i / float(n-1) if n == 3 else 0.14 + 0.72 * i / float(n-1)))
                 current = renpy.game.context().scene_lists.get_displayable_by_tag("master", tag)
                 placement = current.get_placement()
                 state = getattr(current, "state", None)
-                renpy.show(name, at_list=[Transform(xpos=x, xanchor=0.5,
+                # Positioning replaces ATL; do not freeze a half-finished fade.
+                # Authored entry/change transitions supply the dissolve.
+                renpy.show(name, at_list=[Transform(alpha=1.0, xpos=x, xanchor=0.5,
                     ypos=placement[1], yanchor=placement[3], yoffset=placement[5],
                     zoom=getattr(state, "zoom", 1.0),
                     xzoom=getattr(state, "xzoom", 1.0), yzoom=getattr(state, "yzoom", 1.0))])
@@ -67,7 +89,7 @@ init -10 python:
         store.cs_reflective_shot = False
         # A full-frame illustration is already the authored view of the cast.
         # An inherited entry plan must never add standing portraits over it.
-        if any(t.startswith("cs_cg_") or t in ("cs_sleep_winter", "cs_sleep_summer", "cs_lena_pioneer_mirror") for t in renpy.get_showing_tags()):
+        if cs_full_frame_cg_showing():
             tags = []
         cs_director_remember()
         for tag in cs_presence_tags:
@@ -92,6 +114,22 @@ init -10 python:
         cs_frame_focus([])
         store.cs_reflective_shot = True
 
+    def cs_pov_begin():
+        # An authored inward-looking beat, not an automatic response to narration.
+        store.cs_pov_return_cast = [t for t in cs_presence_tags if renpy.showing(t)]
+        store.cs_pov_return_location = cs_director_location_key
+        cs_reflective_focus()
+
+    def cs_pov_end():
+        # A save from an older script may resume after the new begin cue.
+        if not cs_pov_return_cast:
+            return
+        tags = [t for t in cs_pov_return_cast if cs_director_states.get(t) != "ABSENT"]
+        if cs_pov_return_location == cs_director_location_key:
+            cs_frame_focus(tags)
+        store.cs_pov_return_cast = []
+        store.cs_pov_return_location = None
+
     def cs_actor_exit(tags):
         for tag in tags:
             renpy.hide(tag)
@@ -101,6 +139,8 @@ init -10 python:
 
     def cs_director_scene(image):
         store.cs_reflective_shot = False
+        store.cs_pov_return_cast = []
+        store.cs_pov_return_location = None
         cs_director_remember()
         key = re.sub(r"_(day|sunset|night)$", "", image)
         cg = image.startswith("cs_cg_") or image in ("cs_sleep_winter", "cs_sleep_summer", "cs_lena_pioneer_mirror")
@@ -119,3 +159,8 @@ init -10 python:
         return []
     def cs_presence_restore(saved):
         return
+
+init 40 python:
+    # Repair old CG overlays and center every lone actor after loading saves.
+    # Stage preserves the existing vertical placement and scale.
+    config.after_load_callbacks.append(cs_presence_stage)

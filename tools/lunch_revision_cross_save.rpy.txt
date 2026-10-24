@@ -1,0 +1,76 @@
+# -*- coding: utf-8 -*-
+init 96 python:
+    renpy.cs_lc_fast=False
+    renpy.cs_lc_at_menu=False
+    cs_lc_old_args=config.say_arguments_callback
+    cs_lc_old_label=config.label_callback
+    def cs_lc_args(who,*args,**kwargs):
+        if cs_lc_old_args: args,kwargs=cs_lc_old_args(who,*args,**kwargs)
+        if renpy.cs_lc_fast: kwargs["interact"]=False
+        return args,kwargs
+    def cs_lc_label(name,abnormal):
+        if cs_lc_old_label: cs_lc_old_label(name,abnormal)
+        if name=="cs_check_day03_125_menu":
+            renpy.cs_lc_fast=False
+            renpy.cs_lc_at_menu=True
+    config.say_arguments_callback=cs_lc_args
+    config.label_callback=cs_lc_label
+
+label cs_qa_lunch_old_menu:
+    $ cs_reset_state()
+    $ cs_active=cs_darya_known=cs_un_name_known=True
+    $ cs_friend_mz=3
+    $ cs_friend_un=2
+    $ cs_friend_mi=cs_friend_dv=2
+    $ cs_mi_day3_arrangement_help=cs_dv_music_talk_day3=True
+    $ cs_un_sketch_invite_day3=cs_un_day3_art_talk=True
+    $ cs_day03_part06_done=cs_day03_lunch_arrived=True
+    $ cs_sl_poster_collected_day3=True
+    $ cs_day03_poster_location="darya_folder"
+    $ cs_lena_elbow_bandaged=cs_viola_spare_bandage=True
+    $ cs_day03_documents_location="administration"
+    $ set_mode_adv()
+    $ day_time()
+    $ cs_director_scene("bg int_dining_hall_people_day")
+    scene bg int_dining_hall_people_day
+    $ cs_frame_focus(["cs_zhenya","cs_darya"])
+    jump cs_day03_part07
+
+testcase cs_lunch_old_save:
+    pause 0.5
+    $ _preferences.text_cps=0
+    $ _test.force=True
+    $ _test.timeout=120.0
+    $ renpy.cs_lc_fast=True
+    run Start("cs_qa_lunch_old_menu")
+    click until label cs_check_day03_125_menu
+    pause 0.5
+    assert renpy.cs_lc_at_menu
+    $ renpy.screenshot(config.basedir+"/lunch_old_actual_menu.png")
+    $ renpy.take_screenshot()
+    $ renpy.save("lunch_old_menu")
+    $ open(config.basedir+"/lunch_old_save_PASS.txt","w").write("PASS")
+    run Quit(confirm=False)
+
+testcase cs_lunch_new_load:
+    pause 0.5
+    $ _preferences.text_cps=0
+    $ _test.force=True
+    $ _test.timeout=120.0
+    $ renpy.cs_p6_case="lunch_cross_save"
+    $ renpy.load("lunch_old_menu")
+    pause 0.5
+    assert cs_friend_un==2 and cs_friend_mz==3
+    assert not cs_un_sketch_time_agreed_day3
+    "Предложить Лене Тихоновой пообедать вместе"
+    click until label cs_check_day03_part07_complete
+    pause 0.5
+    assert cs_day03_part07_done and cs_friend_un==3 and cs_friend_mz==3
+    assert cs_un_sketch_time_agreed_day3 and cs_un_sketch_plan_discussed_day3
+    assert cs_mi_followup_invitation_day3 and cs_dv_followup_invitation_day3
+    assert cs_day03_reading_book_selected
+    assert cs_day03_poster_location=="darya_folder" and cs_viola_spare_bandage
+    assert cs_lena_elbow_bandaged and cs_day03_documents_location=="administration"
+    $ cs_p6_capture("complete")
+    $ open(config.basedir+"/lunch_new_load_PASS.txt","w").write("PASS")
+    run Quit(confirm=False)

@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "manuscript_blocks": 875,
+  "runtime_blocks": 879,
+  "continuity_additions": [
+    [
+      "cs_un",
+      "Я ещё немного поработала над утренним рисунком."
+    ],
+    [
+      "cs_mz",
+      "Тогда понятно, почему вас заинтересовал её рисунок."
+    ],
+    [
+      "cs_th",
+      "Утром она показывала нам рисунок. Мы не стали надолго её отвлекать."
+    ],
+    [
+      "cs_narrator",
+      "Дарья забрала папку с плакатом со стула: оставлять её возле подносов она не собиралась."
+    ]
+  ],
+  "checks": [
+    "No duplicate labels/defaults",
+    "One separate UN reward with repeat guard",
+    "No MZ auto reward",
+    "Art advice conditional on morning branch",
+    "Book promise remembered before new agreement",
+    "No book issued yet",
+    "Poster actual holder tracked",
+    "Injury and sports ban retained",
+    "Darya leaves for Miku, absent at library",
+    "No repeated lunch horn",
+    "Day3 remains open"
+  ]
+}

@@ -20,7 +20,7 @@ label cs_day01_55:
             "Не отвлекать Женю от работы":
                 $ cs_part10_choice = "search"
     if cs_part10_choice == "help":
-        call cs_day01_55_a
+        call cs_day01_55_a from cs_return_cdb19a449ee98af5128b
     else:
-        call cs_day01_55_b
+        call cs_day01_55_b from cs_return_77806b4b6d72f616b051
     return

@@ -1,0 +1,118 @@
+[
+  {
+    "file": "days/day01/07_uninvited.rpy",
+    "status": "line_endings_only"
+  },
+  {
+    "file": "days/day01/part08/44_independent_opinion.rpy",
+    "status": "line_endings_only"
+  },
+  {
+    "file": "days/day01/part09/46_resemblance.rpy",
+    "status": "line_endings_only"
+  },
+  {
+    "file": "days/day01/part09/50_no_saves.rpy",
+    "status": "modified"
+  },
+  {
+    "file": "days/day01/part10/54_librarian.rpy",
+    "status": "modified"
+  },
+  {
+    "file": "days/day02/part05/35_a_scene.rpy",
+    "status": "line_endings_only"
+  },
+  {
+    "file": "days/day02/part06/41_a_scene.rpy",
+    "status": "line_endings_only"
+  },
+  {
+    "file": "days/day02/part06/45_scene.rpy",
+    "status": "line_endings_only"
+  },
+  {
+    "file": "days/day02/part06/46_scene.rpy",
+    "status": "modified"
+  },
+  {
+    "file": "days/day02/part08/57_scene.rpy",
+    "status": "line_endings_only"
+  },
+  {
+    "file": "days/day02/part09/65_scene.rpy",
+    "status": "line_endings_only"
+  },
+  {
+    "file": "days/day02/part10/69_scene.rpy",
+    "status": "line_endings_only"
+  },
+  {
+    "file": "days/day02/reading_interlude/59_05_scene.rpy",
+    "status": "modified"
+  },
+  {
+    "file": "days/day02/reading_interlude/59_06_scene.rpy",
+    "status": "modified"
+  },
+  {
+    "file": "days/day03/part03/90_scene.rpy",
+    "status": "modified"
+  },
+  {
+    "file": "days/day03/part06/00_flow.rpy",
+    "status": "modified"
+  },
+  {
+    "file": "days/day03/part06/116_scene.rpy",
+    "status": "modified"
+  },
+  {
+    "file": "days/day03/part07/00_flow.rpy",
+    "status": "new"
+  },
+  {
+    "file": "days/day03/part07/121_scene.rpy",
+    "status": "new"
+  },
+  {
+    "file": "days/day03/part07/122_scene.rpy",
+    "status": "new"
+  },
+  {
+    "file": "days/day03/part07/123_scene.rpy",
+    "status": "new"
+  },
+  {
+    "file": "days/day03/part07/124_scene.rpy",
+    "status": "new"
+  },
+  {
+    "file": "days/day03/part07/125a_scene.rpy",
+    "status": "new"
+  },
+  {
+    "file": "days/day03/part07/125b_scene.rpy",
+    "status": "new"
+  },
+  {
+    "file": "days/day03/part07/126_scene.rpy",
+    "status": "new"
+  },
+  {
+    "file": "days/day03/part07/127_scene.rpy",
+    "status": "new"
+  },
+  {
+    "file": "days/day03/part07/128_scene.rpy",
+    "status": "new"
+  },
+  {
+    "file": "days/day03/part07/resources.rpy",
+    "status": "new"
+  },
+  {
+    "file": "presence_staging.rpy",
+    "status": "modified"
+  }
+]

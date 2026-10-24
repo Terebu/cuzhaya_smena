@@ -17,14 +17,15 @@ label cs_day02_reading_06:
     # cs_presence_keep: hide cs
     # cs_presence_keep: hide cs_dasha_winter
     # cs_presence_keep: hide cs_dasha_pioneer
-    show cs_darya neutral pioneer normal at cs_darya_normal_right
-    $ cs_reading_cast = ["cs_darya"]
+    # cs_reading_entry_pov: both continue reading independently.
+    $ cs_frame_focus([])
+    $ cs_reading_cast = []
     $ cs_presence_stage()
     # cs_global_transition
     with cs_sprite_change
     label cs_check_reading_06:
     # cs_director_begin: entry frame; explicit scene plan
-    $ cs_frame_focus(["cs_darya"])
+    $ cs_frame_focus([])
     with cs_sprite_change
     # cs_director_end
     cs_narrator "Прошло ещё немного времени."

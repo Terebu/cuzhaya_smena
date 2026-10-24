@@ -1,0 +1,77 @@
+# -*- coding: utf-8 -*-
+init 94 python:
+    renpy.cs_rev_cross_fast=False
+    renpy.cs_rev_cross_observe=False
+    cs_rev_cross_say_original=config.say_arguments_callback
+    def cs_rev_cross_say(who,*args,**kwargs):
+        if cs_rev_cross_say_original:args,kwargs=cs_rev_cross_say_original(who,*args,**kwargs)
+        if renpy.cs_rev_cross_fast:kwargs["interact"]=False
+        return args,kwargs
+    config.say_arguments_callback=cs_rev_cross_say
+    cs_rev_cross_labels_original=config.label_callback
+    def cs_rev_cross_labels(name,abnormal):
+        if cs_rev_cross_labels_original:cs_rev_cross_labels_original(name,abnormal)
+        if renpy.cs_rev_cross_observe:
+            with open(config.basedir+"/revision_cross_progress.txt","a") as f:f.write(name+"\n")
+            if name=="cs_check_day03_104":renpy.cs_rev_cross_fast=False
+    config.label_callback=cs_rev_cross_labels
+
+label cs_qa_rev_old_menu:
+    $ cs_reset_state()
+    $ cs_active=cs_darya_known=True
+    $ cs_friend_viola=1
+    $ cs_lena_elbow_bandaged=True
+    $ cs_lena_elbow_injury_day2=2
+    $ cs_lena_no_sport_day2=True
+    $ set_mode_adv()
+    $ day_time()
+    jump cs_day03_part04
+
+testcase cs_revision_make_old_menu:
+    pause 0.5
+    $ persistent.font_size="small"
+    $ _preferences.text_cps=0
+    $ _preferences.transitions=0
+    $ _test.force=True
+    $ _test.timeout=120.0
+    $ renpy.cs_rev_cross_fast=True
+    run Start("cs_qa_rev_old_menu")
+    click until label cs_check_day03_101_menu
+    pause 0.5
+    assert cs_viola_friend_before_day3==1 and cs_friend_viola==1
+    assert not hasattr(renpy.store,"cs_dv_medpoint_day3")
+    $ open(config.basedir+"/revision_old_stack.txt","w").write(repr(renpy.game.context().return_stack))
+    $ renpy.take_screenshot()
+    $ renpy.save("revision_previous_menu")
+    $ open(config.basedir+"/revision_old_menu_PASS.txt","w").write("PASS")
+    run Quit(confirm=False)
+
+testcase cs_revision_load_old_menu:
+    pause 0.5
+    $ persistent.font_size="small"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps=0
+    $ _preferences.transitions=2
+    $ _test.force=True
+    $ _test.timeout=120.0
+    $ renpy.cs_rev_cross_observe=True
+    $ renpy.cs_rev_cross_fast=True
+    $ renpy.load("revision_previous_menu")
+    pause 0.5
+    $ renpy.screenshot(config.basedir+"/revision_cross_loaded_menu.png")
+    $ open(config.basedir+"/revision_new_stack.txt","w").write(repr(renpy.game.context().return_stack))
+    assert cs_friend_viola==1 and not cs_dv_medpoint_day3
+    "Предложить Виоле помочь с учётом материалов"
+    click until label cs_check_day03_102_menu
+    pause 0.5
+    $ renpy.screenshot(config.basedir+"/revision_cross_alice_menu.png")
+    assert cs_friend_viola==2 and not cs_viola_spare_bandage
+    assert renpy.showing("dv") and renpy.showing("cs_darya") and not renpy.showing("cs")
+    "Спросить, всё ли в порядке, и не делать из этого представление"
+    click until label cs_check_day03_104
+    pause 0.5
+    assert cs_friend_dv==1 and cs_dv_medpoint_day3
+    assert cs_day03_medpoint_revision_done and cs_lena_elbow_bandaged
+    $ renpy.screenshot(config.basedir+"/revision_cross_version_loaded.png")
+    $ open(config.basedir+"/revision_cross_save_PASS.txt","w").write("PASS")
+    run Quit(confirm=False)

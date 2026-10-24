@@ -1,0 +1,54 @@
+{
+  "status": "PASS",
+  "manuscript_blocks": 480,
+  "implemented_blocks": 489,
+  "documented_additions": [
+    [
+      "cs_narrator",
+      "У самого входа в столовую мне в голову пришла совершенно замечательная мысль."
+    ],
+    [
+      "cs_narrator",
+      "Закончив есть, Женя прошла мимо нашего стола с книгой в руках."
+    ],
+    [
+      "cs_narrator",
+      "Я обернулась к ней, не вставая."
+    ],
+    [
+      "cs_th",
+      "После нашего вчерашнего разговора мне стало любопытно, какие книги она любит."
+    ],
+    [
+      "cs_ls",
+      "Да. Хочу попробовать что-нибудь из того, что ты считаешь хорошим."
+    ],
+    [
+      "cs_narrator",
+      "Семён первым отложил ложку и поднялся."
+    ],
+    [
+      "cs_sy",
+      "Я пока отнесу поднос."
+    ],
+    [
+      "cs_narrator",
+      "Он забрал посуду и отошёл к стойке у выхода."
+    ],
+    [
+      "cs_narrator",
+      "Наши вчерашние спокойные разговоры."
+    ]
+  ],
+  "documented_replacements": {
+    "Женя просто кивнула и направилась к выходу.": "Женя просто кивнула и посмотрела в сторону выхода.",
+    "В этот момент из столовой вышел Семён.": "В этот момент по дорожке от столовой к нам подошёл Семён."
+  },
+  "friendship_max_before": 2,
+  "friendship_max_after": 3,
+  "prior_awards": [
+    "day01/part10/55_choice.rpy: help guarded by cs_part10_choice",
+    "day02/00_flow.rpy: square thanks guarded by cs_mz_square_day2_awarded"
+  ],
+  "viola_check": "voluntary morning visit; day02/part07/50_scene.rpy advises return if symptoms worsen"
+}

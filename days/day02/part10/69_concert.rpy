@@ -34,7 +34,7 @@ label cs_day02_concert:
         label cs_director_check_5a4b095373:
         # cs_director_end
         $ cs_viola_spare_bandage = True
-    if cs_friend_un >= 2:
+    if cs_met_un and cs_friend_un >= 1:
         $ cs_un_name_known = True
         show un shy pioneer at cs_actor_left
         $ cs_presence_stage()
@@ -122,7 +122,7 @@ label cs_day02_concert:
         cs_ls "Удалось. И я даже никого не спрашивала про автобус."
         cs_sy "Запишем как успех. Остальное завтра, ладно?"
         cs_ls "Ладно. Сегодня хватит."
-    if cs_friend_un >= 2:
+    if cs_met_un and cs_friend_un >= 1:
         show un smile pioneer at cs_actor_left
         $ cs_presence_stage()
         with cs_sprite_enter

@@ -1,0 +1,119 @@
+# -*- coding: utf-8 -*-
+init 95 python:
+    def cs_day03_test_capture(name):
+        renpy.screenshot(config.basedir + "/day03_%s_%s.png" % (renpy.cs_day03_case, name))
+
+label cs_qa_day03_route:
+    $ cs_reset_state()
+    $ cs_active = True
+    $ cs_darya_known = True
+    $ cs_slavya_known = True
+    $ cs_friend_sl = renpy.cs_day03_case
+    $ cs_lena_elbow_bandaged = True
+    $ cs_lena_elbow_injury_day2 = 2
+    $ cs_lena_no_sport_day2 = True
+    $ cs_mz_quiet_visit_seen = True
+    $ set_mode_adv()
+    $ night_time()
+    $ persistent.sprite_time = "night"
+    $ cs_director_scene("cs_house_lena_darya_int_night")
+    scene cs_house_lena_darya_int_night at cs_house_full_frame
+    play ambience "sound/ambiences/camp_center_night.ogg"
+    play music cs_music_After_Hours
+    $ renpy.music.set_volume(0.2,channel="music")
+    call cs_day02_74
+    jump cs_day02_complete
+
+testcase cs_day03_friend0:
+    pause 1.0
+    $ renpy.cs_day03_case = 0
+    call cs_day03_checks
+
+testcase cs_day03_friend1:
+    pause 1.0
+    $ renpy.cs_day03_case = 1
+    call cs_day03_checks
+
+testcase cs_day03_checks:
+    $ persistent.font_size = "small"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps = 0
+    $ _test.force = True
+    $ _test.timeout = 60.0
+    run Start("cs_qa_day03_route")
+    click until label cs_check_day03_night_insert
+    pause 0.5
+    assert renpy.showing("cs_darya")
+    $ renpy.cs_day03_night_bounds = renpy.get_image_bounds("cs_darya")
+    $ cs_day03_test_capture("night")
+    $ renpy.take_screenshot()
+    $ renpy.save("day03_night_"+str(renpy.cs_day03_case))
+    $ renpy.load("day03_night_"+str(renpy.cs_day03_case))
+    pause 0.4
+    assert renpy.get_image_bounds("cs_darya") == renpy.cs_day03_night_bounds
+    click until label cs_check_day_title
+    pause 0.4
+    assert renpy.get_screen("cs_day_title_screen").scope["day_number"] == 3
+    $ cs_day03_test_capture("title")
+    click until label cs_check_day03_75
+    pause 0.4
+    assert not renpy.showing("cs_darya")
+    assert cs_lena_elbow_bandaged and cs_lena_no_sport_day2
+    $ cs_day03_test_capture("dawn")
+    click until label cs_check_day03_mirror
+    pause 0.4
+    assert renpy.showing("cs_cg_lena_sport_mirror_bandaged_morning")
+    assert not renpy.showing("cs_darya")
+    $ cs_day03_test_capture("mirror")
+    click until label cs_check_day03_sport
+    pause 0.4
+    assert not renpy.showing("cs_darya") and not renpy.showing("sl")
+    $ cs_day03_test_capture("walk")
+    click until label cs_check_day03_77
+    pause 0.4
+    assert renpy.showing("sl") and not renpy.showing("cs_darya")
+    $ cs_day03_test_capture("slavya")
+    click until label cs_check_day03_poster_result
+    pause 0.4
+    assert cs_sl_poster_saved_day3 == bool(renpy.cs_day03_case)
+    assert cs_day03_poster_location == ("slavya" if renpy.cs_day03_case else None)
+    assert cs_friend_sl == renpy.cs_day03_case
+    $ cs_day03_test_capture("poster")
+    $ renpy.take_screenshot()
+    $ renpy.save("day03_poster_"+str(renpy.cs_day03_case))
+    $ renpy.load("day03_poster_"+str(renpy.cs_day03_case))
+    pause 0.4
+    assert cs_sl_poster_saved_day3 == bool(renpy.cs_day03_case)
+    assert cs_friend_sl == renpy.cs_day03_case
+    click until label cs_check_day03_sl_left
+    pause 0.4
+    assert not renpy.showing("sl") and not renpy.showing("cs_darya")
+    $ cs_day03_test_capture("sl_left")
+    click until label cs_check_day03_83_door
+    assert cs_day03_part01_done and cs_day02_done
+    assert not renpy.showing("cs_darya")
+    assert cs_friend_sl == renpy.cs_day03_case
+    $ open(config.basedir + "/day03_%s_PASS.txt" % renpy.cs_day03_case,"w").write("PASS")
+    run Quit(confirm=False)
+
+testcase cs_day03_after_night_load:
+    pause 1.0
+    $ renpy.cs_day03_case = 1
+    $ persistent.font_size = "small"
+    $ _preferences.text_cps = 0
+    $ _test.force = True
+    $ _test.timeout = 60.0
+    run Start("cs_qa_day03_route")
+    click until label cs_check_day03_75
+    pause 0.4
+    $ renpy.take_screenshot()
+    $ renpy.save("day03_after_night")
+    $ renpy.load("day03_after_night")
+    pause 0.4
+    assert cs_day02_done and cs_day03_started
+    assert cs_lena_elbow_bandaged and cs_lena_elbow_injury_day2 == 2
+    assert not cs_sl_poster_saved_day3 and cs_day03_poster_location is None
+    assert not renpy.showing("cs_darya") and not renpy.showing("sl")
+    $ cs_day03_test_capture("after_night_loaded")
+    $ open(config.basedir + "/day03_after_night_PASS.txt","w").write("PASS")
+    run Quit(confirm=False)

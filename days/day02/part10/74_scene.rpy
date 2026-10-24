@@ -157,31 +157,9 @@ label cs_day02_74:
     with cs_sprite_change
     cs_da "И тебе, Лен."
     cs_narrator "Я улыбнулась."
-    cs_ls "Спокойной ночи."
-    show cs_darya shrug pioneer normal at cs_darya_normal_right
-    $ cs_presence_stage()
-    # cs_global_transition
-    with cs_sprite_change
-    cs_da "Спокойной."
-    cs_narrator "Мы замолчали."
-    cs_narrator "И на этот раз тишина не требовала никаких объяснений."
-    # cs_director_begin: Conversation ended; final independent thoughts before sleep
-    $ cs_frame_focus([])
-    with cs_sprite_change
+    call cs_day02_74a from cs_return_3e0bdedba4a00ba6c482
+    # Compatibility label for saves already at the old final reflection.
     label cs_director_check_d61a0c0e86:
-    # cs_director_end
-    cs_th "Завтра мы снова будем искать ответы."
-    cs_th "Возможно, узнаем что-нибудь о дороге."
-    cs_th "Возможно, Шурик с Электроником продвинутся с телефоном."
-    cs_th "Возможно, Женя найдёт в библиотеке что-то полезное."
-    cs_th "А возможно, весь день пройдёт совершенно обычно."
-    cs_narrator "Я закрыла глаза."
-    cs_th "Сейчас мне было достаточно одного."
-    cs_th "Мы с Дашей здесь не одни."
-    cs_th "И пока можем поддерживать друг друга, у нас есть шанс разобраться с происходящим."
-    cs_narrator "За окном тихо шелестели деревья."
-    cs_narrator "Лагерь постепенно засыпал."
-    cs_narrator "И я вместе с ним."
     stop music fadeout 4.0
     stop ambience fadeout 4.0
     return

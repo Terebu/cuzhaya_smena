@@ -1,0 +1,706 @@
+# -*- coding: utf-8 -*-
+init 95 python:
+    def cs_day03_p2_capture(name):
+        renpy.screenshot(config.basedir + "/p2_%s_%s.png" % (renpy.cs_p2_case, name))
+
+label cs_qa_day03_p2:
+    $ cs_reset_state()
+    $ cs_active = True
+    $ cs_darya_known = True
+    $ cs_slavya_known = True
+    $ cs_lena_elbow_bandaged = True
+    $ cs_lena_elbow_injury_day2 = 2
+    $ cs_lena_no_sport_day2 = True
+    $ cs_friend_sl = renpy.cs_p2_poster
+    $ set_mode_adv()
+    $ day_time()
+    $ persistent.sprite_time = "day"
+    if renpy.cs_p2_full:
+        $ cs_friend_se = renpy.cs_p2_initial
+        jump cs_day03
+    $ cs_friend_se = renpy.cs_p2_initial
+    $ cs_sl_poster_saved_day3 = bool(renpy.cs_p2_poster)
+    $ cs_day03_poster_location = "slavya" if cs_sl_poster_saved_day3 else None
+    if renpy.cs_p2_reach:
+        call cs_day02_semen_choice
+        call cs_day02_road_choice
+    if not renpy.cs_p2_reach:
+        jump cs_qa_day03_p2_choice_route
+    jump cs_day03_part02
+
+label cs_qa_day03_p2_choice_route:
+    $ cs_day03_part01_done = True
+    call cs_day03_86
+    call cs_day03_87
+    call cs_day03_88
+    $ cs_day03_part02_done = True
+    jump cs_day03_part03_pending
+
+label cs_qa_day03_p2_replay:
+    hide screen cs_day03_part02_wait_screen
+    show cs_semen neutral pioneer normal at cs_semen_normal_left
+    $ cs_frame_focus(["cs_darya", "cs_semen"])
+    call cs_day03_semen_choice
+    jump cs_day03_part03_pending
+
+testcase cs_day03_p2_0:
+    pause 0.5
+    $ renpy.cs_p2_case = 0
+    $ renpy.cs_p2_initial = 0
+    $ renpy.cs_p2_ask = False
+    $ renpy.cs_p2_poster = 0
+    $ renpy.cs_p2_full = False
+    $ renpy.cs_p2_reach = False
+    $ persistent.font_size = "small"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps = 0
+    $ _test.force = True
+    $ _test.timeout = 60.0
+    run Start("cs_qa_day03_p2")
+    click until label cs_check_day03_86_semen
+    pause 0.5
+    assert renpy.showing("cs_darya") and renpy.showing("cs_semen")
+    assert renpy.get_image_bounds("cs_semen")[0] < renpy.get_image_bounds("cs_darya")[0]
+    $ renpy.cs_p2_pair_bounds = [renpy.get_image_bounds(t) for t in ("cs_darya","cs_semen")]
+    $ cs_day03_p2_capture("pair")
+    $ renpy.take_screenshot()
+    $ renpy.save("p2_before_choice_"+str(renpy.cs_p2_case))
+    $ renpy.load("p2_before_choice_"+str(renpy.cs_p2_case))
+    pause 0.4
+    click until label cs_check_day03_87_menu
+    pause 0.5
+    assert renpy.showing("cs_darya") and renpy.showing("cs_semen")
+    $ cs_day03_p2_capture("choice")
+    "Не задерживать его перед завтраком"
+    click until label cs_check_day03_87b
+    pause 0.5
+    assert renpy.showing("cs_darya") and renpy.showing("cs_semen")
+    assert cs_friend_se == renpy.cs_p2_initial + (2 if renpy.cs_p2_reach else 0) + int(renpy.cs_p2_ask)
+    assert cs_se_day3_morning_awarded == bool(renpy.cs_p2_ask)
+    $ cs_day03_p2_capture("branch")
+    $ renpy.take_screenshot()
+    $ renpy.save("p2_after_choice_"+str(renpy.cs_p2_case))
+    $ renpy.load("p2_after_choice_"+str(renpy.cs_p2_case))
+    pause 0.4
+    assert cs_friend_se == renpy.cs_p2_initial + (2 if renpy.cs_p2_reach else 0) + int(renpy.cs_p2_ask)
+    click until label cs_check_day03_88_semen_left
+    pause 0.5
+    assert renpy.showing("cs_darya") and not renpy.showing("cs_semen")
+    $ cs_day03_p2_capture("semen_left")
+    click until label cs_check_day03_88_compliment
+    pause 0.5
+    assert renpy.showing("cs_darya")
+    $ cs_day03_p2_capture("compliment")
+    click until label cs_check_day03_88_dining
+    pause 0.5
+    assert renpy.showing("cs_darya") and not renpy.showing("cs_semen")
+    $ cs_day03_p2_capture("dining")
+    click until label cs_check_day03_part02_complete
+    assert cs_day03_part01_done and cs_day03_part02_done
+    assert cs_lena_elbow_bandaged and cs_lena_elbow_injury_day2 == 2 and cs_lena_no_sport_day2
+    assert cs_friend_sl == renpy.cs_p2_poster and cs_friend_mz == 0 and cs_friend_viola == 0
+    $ cs_day03_p2_capture("end")
+    $ open(config.basedir + "/p2_%s_PASS.txt" % renpy.cs_p2_case,"w").write("PASS")
+    $ cs_reset_state()
+    assert not cs_day03_part02_done and not cs_se_day3_morning_awarded
+    run Quit(confirm=False)
+
+testcase cs_day03_p2_1:
+    pause 0.5
+    $ renpy.cs_p2_case = 1
+    $ renpy.cs_p2_initial = 0
+    $ renpy.cs_p2_ask = True
+    $ renpy.cs_p2_poster = 1
+    $ renpy.cs_p2_full = False
+    $ renpy.cs_p2_reach = False
+    $ persistent.font_size = "small"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps = 0
+    $ _test.force = True
+    $ _test.timeout = 60.0
+    run Start("cs_qa_day03_p2")
+    click until label cs_check_day03_86_semen
+    pause 0.5
+    assert renpy.showing("cs_darya") and renpy.showing("cs_semen")
+    assert renpy.get_image_bounds("cs_semen")[0] < renpy.get_image_bounds("cs_darya")[0]
+    $ renpy.cs_p2_pair_bounds = [renpy.get_image_bounds(t) for t in ("cs_darya","cs_semen")]
+    $ cs_day03_p2_capture("pair")
+    $ renpy.take_screenshot()
+    $ renpy.save("p2_before_choice_"+str(renpy.cs_p2_case))
+    $ renpy.load("p2_before_choice_"+str(renpy.cs_p2_case))
+    pause 0.4
+    click until label cs_check_day03_87_menu
+    pause 0.5
+    assert renpy.showing("cs_darya") and renpy.showing("cs_semen")
+    $ cs_day03_p2_capture("choice")
+    "Спросить Семёна, как у него дела"
+    click until label cs_check_day03_87a
+    pause 0.5
+    assert renpy.showing("cs_darya") and renpy.showing("cs_semen")
+    assert cs_friend_se == renpy.cs_p2_initial + (2 if renpy.cs_p2_reach else 0) + int(renpy.cs_p2_ask)
+    assert cs_se_day3_morning_awarded == bool(renpy.cs_p2_ask)
+    $ cs_day03_p2_capture("branch")
+    $ renpy.take_screenshot()
+    $ renpy.save("p2_after_choice_"+str(renpy.cs_p2_case))
+    $ renpy.load("p2_after_choice_"+str(renpy.cs_p2_case))
+    pause 0.4
+    assert cs_friend_se == renpy.cs_p2_initial + (2 if renpy.cs_p2_reach else 0) + int(renpy.cs_p2_ask)
+    click until label cs_check_day03_88_semen_left
+    pause 0.5
+    assert renpy.showing("cs_darya") and not renpy.showing("cs_semen")
+    $ cs_day03_p2_capture("semen_left")
+    click until label cs_check_day03_88_compliment
+    pause 0.5
+    assert renpy.showing("cs_darya")
+    $ cs_day03_p2_capture("compliment")
+    click until label cs_check_day03_88_dining
+    pause 0.5
+    assert renpy.showing("cs_darya") and not renpy.showing("cs_semen")
+    $ cs_day03_p2_capture("dining")
+    click until label cs_check_day03_part02_complete
+    assert cs_day03_part01_done and cs_day03_part02_done
+    assert cs_lena_elbow_bandaged and cs_lena_elbow_injury_day2 == 2 and cs_lena_no_sport_day2
+    assert cs_friend_sl == renpy.cs_p2_poster and cs_friend_mz == 0 and cs_friend_viola == 0
+    $ cs_day03_p2_capture("end")
+    $ open(config.basedir + "/p2_%s_PASS.txt" % renpy.cs_p2_case,"w").write("PASS")
+    $ cs_reset_state()
+    assert not cs_day03_part02_done and not cs_se_day3_morning_awarded
+    run Quit(confirm=False)
+
+testcase cs_day03_p2_2:
+    pause 0.5
+    $ renpy.cs_p2_case = 2
+    $ renpy.cs_p2_initial = 1
+    $ renpy.cs_p2_ask = False
+    $ renpy.cs_p2_poster = 1
+    $ renpy.cs_p2_full = False
+    $ renpy.cs_p2_reach = False
+    $ persistent.font_size = "small"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps = 0
+    $ _test.force = True
+    $ _test.timeout = 60.0
+    run Start("cs_qa_day03_p2")
+    click until label cs_check_day03_86_semen
+    pause 0.5
+    assert renpy.showing("cs_darya") and renpy.showing("cs_semen")
+    assert renpy.get_image_bounds("cs_semen")[0] < renpy.get_image_bounds("cs_darya")[0]
+    $ renpy.cs_p2_pair_bounds = [renpy.get_image_bounds(t) for t in ("cs_darya","cs_semen")]
+    $ cs_day03_p2_capture("pair")
+    $ renpy.take_screenshot()
+    $ renpy.save("p2_before_choice_"+str(renpy.cs_p2_case))
+    $ renpy.load("p2_before_choice_"+str(renpy.cs_p2_case))
+    pause 0.4
+    click until label cs_check_day03_87_menu
+    pause 0.5
+    assert renpy.showing("cs_darya") and renpy.showing("cs_semen")
+    $ cs_day03_p2_capture("choice")
+    "Не задерживать его перед завтраком"
+    click until label cs_check_day03_87b
+    pause 0.5
+    assert renpy.showing("cs_darya") and renpy.showing("cs_semen")
+    assert cs_friend_se == renpy.cs_p2_initial + (2 if renpy.cs_p2_reach else 0) + int(renpy.cs_p2_ask)
+    assert cs_se_day3_morning_awarded == bool(renpy.cs_p2_ask)
+    $ cs_day03_p2_capture("branch")
+    $ renpy.take_screenshot()
+    $ renpy.save("p2_after_choice_"+str(renpy.cs_p2_case))
+    $ renpy.load("p2_after_choice_"+str(renpy.cs_p2_case))
+    pause 0.4
+    assert cs_friend_se == renpy.cs_p2_initial + (2 if renpy.cs_p2_reach else 0) + int(renpy.cs_p2_ask)
+    click until label cs_check_day03_88_semen_left
+    pause 0.5
+    assert renpy.showing("cs_darya") and not renpy.showing("cs_semen")
+    $ cs_day03_p2_capture("semen_left")
+    click until label cs_check_day03_88_compliment
+    pause 0.5
+    assert renpy.showing("cs_darya")
+    $ cs_day03_p2_capture("compliment")
+    click until label cs_check_day03_88_dining
+    pause 0.5
+    assert renpy.showing("cs_darya") and not renpy.showing("cs_semen")
+    $ cs_day03_p2_capture("dining")
+    click until label cs_check_day03_part02_complete
+    assert cs_day03_part01_done and cs_day03_part02_done
+    assert cs_lena_elbow_bandaged and cs_lena_elbow_injury_day2 == 2 and cs_lena_no_sport_day2
+    assert cs_friend_sl == renpy.cs_p2_poster and cs_friend_mz == 0 and cs_friend_viola == 0
+    $ cs_day03_p2_capture("end")
+    $ open(config.basedir + "/p2_%s_PASS.txt" % renpy.cs_p2_case,"w").write("PASS")
+    $ cs_reset_state()
+    assert not cs_day03_part02_done and not cs_se_day3_morning_awarded
+    run Quit(confirm=False)
+
+testcase cs_day03_p2_3:
+    pause 0.5
+    $ renpy.cs_p2_case = 3
+    $ renpy.cs_p2_initial = 1
+    $ renpy.cs_p2_ask = True
+    $ renpy.cs_p2_poster = 0
+    $ renpy.cs_p2_full = False
+    $ renpy.cs_p2_reach = False
+    $ persistent.font_size = "small"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps = 0
+    $ _test.force = True
+    $ _test.timeout = 60.0
+    run Start("cs_qa_day03_p2")
+    click until label cs_check_day03_86_semen
+    pause 0.5
+    assert renpy.showing("cs_darya") and renpy.showing("cs_semen")
+    assert renpy.get_image_bounds("cs_semen")[0] < renpy.get_image_bounds("cs_darya")[0]
+    $ renpy.cs_p2_pair_bounds = [renpy.get_image_bounds(t) for t in ("cs_darya","cs_semen")]
+    $ cs_day03_p2_capture("pair")
+    $ renpy.take_screenshot()
+    $ renpy.save("p2_before_choice_"+str(renpy.cs_p2_case))
+    $ renpy.load("p2_before_choice_"+str(renpy.cs_p2_case))
+    pause 0.4
+    click until label cs_check_day03_87_menu
+    pause 0.5
+    assert renpy.showing("cs_darya") and renpy.showing("cs_semen")
+    $ cs_day03_p2_capture("choice")
+    "Спросить Семёна, как у него дела"
+    click until label cs_check_day03_87a
+    pause 0.5
+    assert renpy.showing("cs_darya") and renpy.showing("cs_semen")
+    assert cs_friend_se == renpy.cs_p2_initial + (2 if renpy.cs_p2_reach else 0) + int(renpy.cs_p2_ask)
+    assert cs_se_day3_morning_awarded == bool(renpy.cs_p2_ask)
+    $ cs_day03_p2_capture("branch")
+    $ renpy.take_screenshot()
+    $ renpy.save("p2_after_choice_"+str(renpy.cs_p2_case))
+    $ renpy.load("p2_after_choice_"+str(renpy.cs_p2_case))
+    pause 0.4
+    assert cs_friend_se == renpy.cs_p2_initial + (2 if renpy.cs_p2_reach else 0) + int(renpy.cs_p2_ask)
+    click until label cs_check_day03_88_semen_left
+    pause 0.5
+    assert renpy.showing("cs_darya") and not renpy.showing("cs_semen")
+    $ cs_day03_p2_capture("semen_left")
+    click until label cs_check_day03_88_compliment
+    pause 0.5
+    assert renpy.showing("cs_darya")
+    $ cs_day03_p2_capture("compliment")
+    click until label cs_check_day03_88_dining
+    pause 0.5
+    assert renpy.showing("cs_darya") and not renpy.showing("cs_semen")
+    $ cs_day03_p2_capture("dining")
+    click until label cs_check_day03_part02_complete
+    assert cs_day03_part01_done and cs_day03_part02_done
+    assert cs_lena_elbow_bandaged and cs_lena_elbow_injury_day2 == 2 and cs_lena_no_sport_day2
+    assert cs_friend_sl == renpy.cs_p2_poster and cs_friend_mz == 0 and cs_friend_viola == 0
+    $ cs_day03_p2_capture("end")
+    $ open(config.basedir + "/p2_%s_PASS.txt" % renpy.cs_p2_case,"w").write("PASS")
+    $ cs_reset_state()
+    assert not cs_day03_part02_done and not cs_se_day3_morning_awarded
+    run Quit(confirm=False)
+
+testcase cs_day03_p2_4:
+    pause 0.5
+    $ renpy.cs_p2_case = 4
+    $ renpy.cs_p2_initial = 2
+    $ renpy.cs_p2_ask = False
+    $ renpy.cs_p2_poster = 0
+    $ renpy.cs_p2_full = False
+    $ renpy.cs_p2_reach = False
+    $ persistent.font_size = "small"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps = 0
+    $ _test.force = True
+    $ _test.timeout = 60.0
+    run Start("cs_qa_day03_p2")
+    click until label cs_check_day03_86_semen
+    pause 0.5
+    assert renpy.showing("cs_darya") and renpy.showing("cs_semen")
+    assert renpy.get_image_bounds("cs_semen")[0] < renpy.get_image_bounds("cs_darya")[0]
+    $ renpy.cs_p2_pair_bounds = [renpy.get_image_bounds(t) for t in ("cs_darya","cs_semen")]
+    $ cs_day03_p2_capture("pair")
+    $ renpy.take_screenshot()
+    $ renpy.save("p2_before_choice_"+str(renpy.cs_p2_case))
+    $ renpy.load("p2_before_choice_"+str(renpy.cs_p2_case))
+    pause 0.4
+    click until label cs_check_day03_87_menu
+    pause 0.5
+    assert renpy.showing("cs_darya") and renpy.showing("cs_semen")
+    $ cs_day03_p2_capture("choice")
+    "Не задерживать его перед завтраком"
+    click until label cs_check_day03_87b
+    pause 0.5
+    assert renpy.showing("cs_darya") and renpy.showing("cs_semen")
+    assert cs_friend_se == renpy.cs_p2_initial + (2 if renpy.cs_p2_reach else 0) + int(renpy.cs_p2_ask)
+    assert cs_se_day3_morning_awarded == bool(renpy.cs_p2_ask)
+    $ cs_day03_p2_capture("branch")
+    $ renpy.take_screenshot()
+    $ renpy.save("p2_after_choice_"+str(renpy.cs_p2_case))
+    $ renpy.load("p2_after_choice_"+str(renpy.cs_p2_case))
+    pause 0.4
+    assert cs_friend_se == renpy.cs_p2_initial + (2 if renpy.cs_p2_reach else 0) + int(renpy.cs_p2_ask)
+    click until label cs_check_day03_88_semen_left
+    pause 0.5
+    assert renpy.showing("cs_darya") and not renpy.showing("cs_semen")
+    $ cs_day03_p2_capture("semen_left")
+    click until label cs_check_day03_88_compliment
+    pause 0.5
+    assert renpy.showing("cs_darya")
+    $ cs_day03_p2_capture("compliment")
+    click until label cs_check_day03_88_dining
+    pause 0.5
+    assert renpy.showing("cs_darya") and not renpy.showing("cs_semen")
+    $ cs_day03_p2_capture("dining")
+    click until label cs_check_day03_part02_complete
+    assert cs_day03_part01_done and cs_day03_part02_done
+    assert cs_lena_elbow_bandaged and cs_lena_elbow_injury_day2 == 2 and cs_lena_no_sport_day2
+    assert cs_friend_sl == renpy.cs_p2_poster and cs_friend_mz == 0 and cs_friend_viola == 0
+    $ cs_day03_p2_capture("end")
+    $ open(config.basedir + "/p2_%s_PASS.txt" % renpy.cs_p2_case,"w").write("PASS")
+    $ cs_reset_state()
+    assert not cs_day03_part02_done and not cs_se_day3_morning_awarded
+    run Quit(confirm=False)
+
+testcase cs_day03_p2_5:
+    pause 0.5
+    $ renpy.cs_p2_case = 5
+    $ renpy.cs_p2_initial = 2
+    $ renpy.cs_p2_ask = True
+    $ renpy.cs_p2_poster = 1
+    $ renpy.cs_p2_full = False
+    $ renpy.cs_p2_reach = False
+    $ persistent.font_size = "small"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps = 0
+    $ _test.force = True
+    $ _test.timeout = 60.0
+    run Start("cs_qa_day03_p2")
+    click until label cs_check_day03_86_semen
+    pause 0.5
+    assert renpy.showing("cs_darya") and renpy.showing("cs_semen")
+    assert renpy.get_image_bounds("cs_semen")[0] < renpy.get_image_bounds("cs_darya")[0]
+    $ renpy.cs_p2_pair_bounds = [renpy.get_image_bounds(t) for t in ("cs_darya","cs_semen")]
+    $ cs_day03_p2_capture("pair")
+    $ renpy.take_screenshot()
+    $ renpy.save("p2_before_choice_"+str(renpy.cs_p2_case))
+    $ renpy.load("p2_before_choice_"+str(renpy.cs_p2_case))
+    pause 0.4
+    click until label cs_check_day03_87_menu
+    pause 0.5
+    assert renpy.showing("cs_darya") and renpy.showing("cs_semen")
+    $ cs_day03_p2_capture("choice")
+    "Спросить Семёна, как у него дела"
+    click until label cs_check_day03_87a
+    pause 0.5
+    assert renpy.showing("cs_darya") and renpy.showing("cs_semen")
+    assert cs_friend_se == renpy.cs_p2_initial + (2 if renpy.cs_p2_reach else 0) + int(renpy.cs_p2_ask)
+    assert cs_se_day3_morning_awarded == bool(renpy.cs_p2_ask)
+    $ cs_day03_p2_capture("branch")
+    $ renpy.take_screenshot()
+    $ renpy.save("p2_after_choice_"+str(renpy.cs_p2_case))
+    $ renpy.load("p2_after_choice_"+str(renpy.cs_p2_case))
+    pause 0.4
+    assert cs_friend_se == renpy.cs_p2_initial + (2 if renpy.cs_p2_reach else 0) + int(renpy.cs_p2_ask)
+    click until label cs_check_day03_88_semen_left
+    pause 0.5
+    assert renpy.showing("cs_darya") and not renpy.showing("cs_semen")
+    $ cs_day03_p2_capture("semen_left")
+    click until label cs_check_day03_88_compliment
+    pause 0.5
+    assert renpy.showing("cs_darya")
+    $ cs_day03_p2_capture("compliment")
+    click until label cs_check_day03_88_dining
+    pause 0.5
+    assert renpy.showing("cs_darya") and not renpy.showing("cs_semen")
+    $ cs_day03_p2_capture("dining")
+    click until label cs_check_day03_part02_complete
+    assert cs_day03_part01_done and cs_day03_part02_done
+    assert cs_lena_elbow_bandaged and cs_lena_elbow_injury_day2 == 2 and cs_lena_no_sport_day2
+    assert cs_friend_sl == renpy.cs_p2_poster and cs_friend_mz == 0 and cs_friend_viola == 0
+    $ cs_day03_p2_capture("end")
+    $ open(config.basedir + "/p2_%s_PASS.txt" % renpy.cs_p2_case,"w").write("PASS")
+    $ cs_reset_state()
+    assert not cs_day03_part02_done and not cs_se_day3_morning_awarded
+    run Quit(confirm=False)
+
+testcase cs_day03_p2_6:
+    pause 0.5
+    $ renpy.cs_p2_case = 6
+    $ renpy.cs_p2_initial = 0
+    $ renpy.cs_p2_ask = True
+    $ renpy.cs_p2_poster = 1
+    $ renpy.cs_p2_full = True
+    $ renpy.cs_p2_reach = False
+    $ persistent.font_size = "small"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps = 0
+    $ _test.force = True
+    $ _test.timeout = 60.0
+    run Start("cs_qa_day03_p2")
+    click until label cs_check_day03_poster_result
+    assert cs_sl_poster_saved_day3 == bool(renpy.cs_p2_poster)
+    click until label cs_check_day03_sl_left
+    assert not renpy.showing("sl")
+    click until label cs_check_day03_83_door
+    pause 0.5
+    assert not renpy.showing("cs_darya") and not renpy.showing("cs_semen")
+    $ cs_day03_p2_capture("door")
+    click until label cs_check_day03_83_dressed
+    pause 0.5
+    assert renpy.showing("cs_darya")
+    $ renpy.cs_p2_bounds = renpy.get_image_bounds("cs_darya")
+    $ cs_day03_p2_capture("dressed")
+    click until label cs_check_day03_84_mirror
+    pause 0.5
+    assert not renpy.showing("cs_lena_pioneer_mirror") and renpy.showing("cs_darya")
+    $ cs_day03_p2_capture("mirror")
+    click until label cs_check_day03_84_restored
+    pause 0.5
+    assert renpy.showing("cs_darya") and not renpy.showing("cs_lena_pioneer_mirror")
+    assert renpy.get_image_bounds("cs_darya")[1:] == renpy.cs_p2_bounds[1:]
+    $ cs_day03_p2_capture("restored")
+    click until label cs_check_day03_85_poster_result
+    assert cs_sl_poster_saved_day3 == bool(renpy.cs_p2_poster)
+    assert cs_day03_poster_location == ("slavya" if renpy.cs_p2_poster else None)
+    click until label cs_check_day03_86_semen
+    pause 0.5
+    assert renpy.showing("cs_darya") and renpy.showing("cs_semen")
+    assert renpy.get_image_bounds("cs_semen")[0] < renpy.get_image_bounds("cs_darya")[0]
+    $ renpy.cs_p2_pair_bounds = [renpy.get_image_bounds(t) for t in ("cs_darya","cs_semen")]
+    $ cs_day03_p2_capture("pair")
+    $ renpy.take_screenshot()
+    $ renpy.save("p2_before_choice_"+str(renpy.cs_p2_case))
+    $ renpy.load("p2_before_choice_"+str(renpy.cs_p2_case))
+    pause 0.4
+    click until label cs_check_day03_87_menu
+    pause 0.5
+    assert renpy.showing("cs_darya") and renpy.showing("cs_semen")
+    $ cs_day03_p2_capture("choice")
+    "Спросить Семёна, как у него дела"
+    click until label cs_check_day03_87a
+    pause 0.5
+    assert renpy.showing("cs_darya") and renpy.showing("cs_semen")
+    assert cs_friend_se == renpy.cs_p2_initial + (2 if renpy.cs_p2_reach else 0) + int(renpy.cs_p2_ask)
+    assert cs_se_day3_morning_awarded == bool(renpy.cs_p2_ask)
+    $ cs_day03_p2_capture("branch")
+    $ renpy.take_screenshot()
+    $ renpy.save("p2_after_choice_"+str(renpy.cs_p2_case))
+    $ renpy.load("p2_after_choice_"+str(renpy.cs_p2_case))
+    pause 0.4
+    assert cs_friend_se == renpy.cs_p2_initial + (2 if renpy.cs_p2_reach else 0) + int(renpy.cs_p2_ask)
+    click until label cs_check_day03_88_semen_left
+    pause 0.5
+    assert renpy.showing("cs_darya") and not renpy.showing("cs_semen")
+    $ cs_day03_p2_capture("semen_left")
+    click until label cs_check_day03_88_compliment
+    pause 0.5
+    assert renpy.showing("cs_darya")
+    $ cs_day03_p2_capture("compliment")
+    click until label cs_check_day03_88_dining
+    pause 0.5
+    assert renpy.showing("cs_darya") and not renpy.showing("cs_semen")
+    $ cs_day03_p2_capture("dining")
+    click until label cs_check_day03_part02_complete
+    assert cs_day03_part01_done and cs_day03_part02_done
+    assert cs_lena_elbow_bandaged and cs_lena_elbow_injury_day2 == 2 and cs_lena_no_sport_day2
+    assert cs_friend_sl == renpy.cs_p2_poster and cs_friend_mz == 0 and cs_friend_viola == 0
+    $ cs_day03_p2_capture("end")
+    $ open(config.basedir + "/p2_%s_PASS.txt" % renpy.cs_p2_case,"w").write("PASS")
+    $ cs_reset_state()
+    assert not cs_day03_part02_done and not cs_se_day3_morning_awarded
+    run Quit(confirm=False)
+
+testcase cs_day03_p2_7:
+    pause 0.5
+    $ renpy.cs_p2_case = 7
+    $ renpy.cs_p2_initial = 0
+    $ renpy.cs_p2_ask = False
+    $ renpy.cs_p2_poster = 0
+    $ renpy.cs_p2_full = True
+    $ renpy.cs_p2_reach = False
+    $ persistent.font_size = "small"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps = 0
+    $ _test.force = True
+    $ _test.timeout = 60.0
+    run Start("cs_qa_day03_p2")
+    click until label cs_check_day03_poster_result
+    assert cs_sl_poster_saved_day3 == bool(renpy.cs_p2_poster)
+    click until label cs_check_day03_sl_left
+    assert not renpy.showing("sl")
+    click until label cs_check_day03_83_door
+    pause 0.5
+    assert not renpy.showing("cs_darya") and not renpy.showing("cs_semen")
+    $ cs_day03_p2_capture("door")
+    click until label cs_check_day03_83_dressed
+    pause 0.5
+    assert renpy.showing("cs_darya")
+    $ renpy.cs_p2_bounds = renpy.get_image_bounds("cs_darya")
+    $ cs_day03_p2_capture("dressed")
+    click until label cs_check_day03_84_mirror
+    pause 0.5
+    assert not renpy.showing("cs_lena_pioneer_mirror") and renpy.showing("cs_darya")
+    $ cs_day03_p2_capture("mirror")
+    click until label cs_check_day03_84_restored
+    pause 0.5
+    assert renpy.showing("cs_darya") and not renpy.showing("cs_lena_pioneer_mirror")
+    assert renpy.get_image_bounds("cs_darya")[1:] == renpy.cs_p2_bounds[1:]
+    $ cs_day03_p2_capture("restored")
+    click until label cs_check_day03_85_poster_result
+    assert cs_sl_poster_saved_day3 == bool(renpy.cs_p2_poster)
+    assert cs_day03_poster_location == ("slavya" if renpy.cs_p2_poster else None)
+    click until label cs_check_day03_86_semen
+    pause 0.5
+    assert renpy.showing("cs_darya") and renpy.showing("cs_semen")
+    assert renpy.get_image_bounds("cs_semen")[0] < renpy.get_image_bounds("cs_darya")[0]
+    $ renpy.cs_p2_pair_bounds = [renpy.get_image_bounds(t) for t in ("cs_darya","cs_semen")]
+    $ cs_day03_p2_capture("pair")
+    $ renpy.take_screenshot()
+    $ renpy.save("p2_before_choice_"+str(renpy.cs_p2_case))
+    $ renpy.load("p2_before_choice_"+str(renpy.cs_p2_case))
+    pause 0.4
+    click until label cs_check_day03_87_menu
+    pause 0.5
+    assert renpy.showing("cs_darya") and renpy.showing("cs_semen")
+    $ cs_day03_p2_capture("choice")
+    "Не задерживать его перед завтраком"
+    click until label cs_check_day03_87b
+    pause 0.5
+    assert renpy.showing("cs_darya") and renpy.showing("cs_semen")
+    assert cs_friend_se == renpy.cs_p2_initial + (2 if renpy.cs_p2_reach else 0) + int(renpy.cs_p2_ask)
+    assert cs_se_day3_morning_awarded == bool(renpy.cs_p2_ask)
+    $ cs_day03_p2_capture("branch")
+    $ renpy.take_screenshot()
+    $ renpy.save("p2_after_choice_"+str(renpy.cs_p2_case))
+    $ renpy.load("p2_after_choice_"+str(renpy.cs_p2_case))
+    pause 0.4
+    assert cs_friend_se == renpy.cs_p2_initial + (2 if renpy.cs_p2_reach else 0) + int(renpy.cs_p2_ask)
+    click until label cs_check_day03_88_semen_left
+    pause 0.5
+    assert renpy.showing("cs_darya") and not renpy.showing("cs_semen")
+    $ cs_day03_p2_capture("semen_left")
+    click until label cs_check_day03_88_compliment
+    pause 0.5
+    assert renpy.showing("cs_darya")
+    $ cs_day03_p2_capture("compliment")
+    click until label cs_check_day03_88_dining
+    pause 0.5
+    assert renpy.showing("cs_darya") and not renpy.showing("cs_semen")
+    $ cs_day03_p2_capture("dining")
+    click until label cs_check_day03_part02_complete
+    assert cs_day03_part01_done and cs_day03_part02_done
+    assert cs_lena_elbow_bandaged and cs_lena_elbow_injury_day2 == 2 and cs_lena_no_sport_day2
+    assert cs_friend_sl == renpy.cs_p2_poster and cs_friend_mz == 0 and cs_friend_viola == 0
+    $ cs_day03_p2_capture("end")
+    $ open(config.basedir + "/p2_%s_PASS.txt" % renpy.cs_p2_case,"w").write("PASS")
+    $ cs_reset_state()
+    assert not cs_day03_part02_done and not cs_se_day3_morning_awarded
+    run Quit(confirm=False)
+
+testcase cs_day03_p2_8:
+    pause 0.5
+    $ renpy.cs_p2_case = 8
+    $ renpy.cs_p2_initial = 0
+    $ renpy.cs_p2_ask = True
+    $ renpy.cs_p2_poster = 1
+    $ renpy.cs_p2_full = False
+    $ renpy.cs_p2_reach = True
+    $ persistent.font_size = "small"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps = 0
+    $ _test.force = True
+    $ _test.timeout = 60.0
+    run Start("cs_qa_day03_p2")
+    "Давай сделаем надпись вместе"
+    click until label cs_check_part06_menu
+    "Сказать Семёну, что меня действительно тревожит"
+    click until label cs_check_day03_83_door
+    pause 0.5
+    assert not renpy.showing("cs_darya") and not renpy.showing("cs_semen")
+    $ cs_day03_p2_capture("door")
+    click until label cs_check_day03_83_dressed
+    pause 0.5
+    assert renpy.showing("cs_darya")
+    $ renpy.cs_p2_bounds = renpy.get_image_bounds("cs_darya")
+    $ cs_day03_p2_capture("dressed")
+    click until label cs_check_day03_84_mirror
+    pause 0.5
+    assert not renpy.showing("cs_lena_pioneer_mirror") and renpy.showing("cs_darya")
+    $ cs_day03_p2_capture("mirror")
+    click until label cs_check_day03_84_restored
+    pause 0.5
+    assert renpy.showing("cs_darya") and not renpy.showing("cs_lena_pioneer_mirror")
+    assert renpy.get_image_bounds("cs_darya")[1:] == renpy.cs_p2_bounds[1:]
+    $ cs_day03_p2_capture("restored")
+    click until label cs_check_day03_85_poster_result
+    assert cs_sl_poster_saved_day3 == bool(renpy.cs_p2_poster)
+    assert cs_day03_poster_location == ("slavya" if renpy.cs_p2_poster else None)
+    click until label cs_check_day03_86_semen
+    pause 0.5
+    assert renpy.showing("cs_darya") and renpy.showing("cs_semen")
+    assert renpy.get_image_bounds("cs_semen")[0] < renpy.get_image_bounds("cs_darya")[0]
+    $ renpy.cs_p2_pair_bounds = [renpy.get_image_bounds(t) for t in ("cs_darya","cs_semen")]
+    $ cs_day03_p2_capture("pair")
+    $ renpy.take_screenshot()
+    $ renpy.save("p2_before_choice_"+str(renpy.cs_p2_case))
+    $ renpy.load("p2_before_choice_"+str(renpy.cs_p2_case))
+    pause 0.4
+    click until label cs_check_day03_87_menu
+    pause 0.5
+    assert renpy.showing("cs_darya") and renpy.showing("cs_semen")
+    $ cs_day03_p2_capture("choice")
+    "Спросить Семёна, как у него дела"
+    click until label cs_check_day03_87a
+    pause 0.5
+    assert renpy.showing("cs_darya") and renpy.showing("cs_semen")
+    assert cs_friend_se == renpy.cs_p2_initial + (2 if renpy.cs_p2_reach else 0) + int(renpy.cs_p2_ask)
+    assert cs_se_day3_morning_awarded == bool(renpy.cs_p2_ask)
+    $ cs_day03_p2_capture("branch")
+    $ renpy.take_screenshot()
+    $ renpy.save("p2_after_choice_"+str(renpy.cs_p2_case))
+    $ renpy.load("p2_after_choice_"+str(renpy.cs_p2_case))
+    pause 0.4
+    assert cs_friend_se == renpy.cs_p2_initial + (2 if renpy.cs_p2_reach else 0) + int(renpy.cs_p2_ask)
+    click until label cs_check_day03_88_semen_left
+    pause 0.5
+    assert renpy.showing("cs_darya") and not renpy.showing("cs_semen")
+    $ cs_day03_p2_capture("semen_left")
+    click until label cs_check_day03_88_compliment
+    pause 0.5
+    assert renpy.showing("cs_darya")
+    $ cs_day03_p2_capture("compliment")
+    click until label cs_check_day03_88_dining
+    pause 0.5
+    assert renpy.showing("cs_darya") and not renpy.showing("cs_semen")
+    $ cs_day03_p2_capture("dining")
+    click until label cs_check_day03_part02_complete
+    assert cs_day03_part01_done and cs_day03_part02_done
+    assert cs_lena_elbow_bandaged and cs_lena_elbow_injury_day2 == 2 and cs_lena_no_sport_day2
+    assert cs_friend_sl == renpy.cs_p2_poster and cs_friend_mz == 0 and cs_friend_viola == 0
+    $ cs_day03_p2_capture("end")
+    $ open(config.basedir + "/p2_%s_PASS.txt" % renpy.cs_p2_case,"w").write("PASS")
+    $ cs_reset_state()
+    assert not cs_day03_part02_done and not cs_se_day3_morning_awarded
+    run Quit(confirm=False)
+
+
+label cs_qa_day03_p2_guard:
+    $ cs_reset_state()
+    $ cs_active = True
+    $ set_mode_adv()
+    $ day_time()
+    call cs_day03_86
+    call cs_day03_semen_choice
+    label cs_check_day03_guard_second:
+    call cs_day03_semen_choice
+    label cs_check_day03_guard_done:
+    cs_narrator "Проверка повторного начисления завершена."
+    return
+
+testcase cs_day03_p2_guard:
+    pause 0.5
+    $ persistent.font_size = "small"
+    $ _preferences.text_cps = 0
+    $ _test.force = True
+    $ _test.timeout = 60.0
+    run Start("cs_qa_day03_p2_guard")
+    click until label cs_check_day03_87_menu
+    "Спросить Семёна, как у него дела"
+    click until label cs_check_day03_guard_second
+    "Спросить Семёна, как у него дела"
+    click until label cs_check_day03_guard_done
+    assert cs_friend_se == 1 and cs_se_day3_morning_awarded
+    $ open(config.basedir + "/p2_guard_PASS.txt","w").write("PASS")
+    run Quit(confirm=False)

@@ -250,6 +250,9 @@ label cs_day02_reading_05:
     cs_narrator "Я тихо рассмеялась."
     cs_ls "Вот видишь, уже переняла мои привычки."
     cs_narrator "Она улыбнулась."
+    # cs_inward_beat_12: attention turns inward
+    $ cs_pov_begin()
+    with cs_sprite_leave
     cs_narrator "И вернулась к чтению."
     cs_th "Вот так."
     cs_th "Две девушки, которые ещё недавно ехали в одном автобусе сквозь зимнюю Москву."

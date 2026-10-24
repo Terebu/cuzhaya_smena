@@ -17,6 +17,9 @@ label cs_day01_50:
     with cs_sprite_change
     label cs_director_check_b323b7e93a:
     # cs_director_end
+    # cs_inward_beat_0: attention turns inward
+    $ cs_pov_begin()
+    with cs_sprite_leave
     cs_narrator "Отсюда открывался вид на деревья и несколько домиков, освещённых вечерним солнцем."
     cs_narrator "Я ненадолго остановилась."
     cs_narrator "Посмотрела назад."
@@ -36,6 +39,9 @@ label cs_day01_50:
     with cs_sprite_change
     label cs_director_check_961dd14276:
     # cs_director_end
+    # Return to the same conversation, with the same cast and placement.
+    $ cs_pov_end()
+    with cs_sprite_change
     cs_narrator "Дарья заметила моё выражение лица."
     label cs_check_day01_part09_returns:
     # cs_darya_variety: reaction

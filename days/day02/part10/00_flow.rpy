@@ -5,16 +5,16 @@ label cs_day02_part10_start:
     $ cs_part09_live = False
     $ cs_reading_live = False
     if cs_reading_book_borrowed and not cs_lena_book_returned:
-        call cs_day02_66
-        call cs_day02_67
-        call cs_day02_68
+        call cs_day02_66 from cs_return_094801163811b0bba7ee
+        call cs_day02_67 from cs_return_ba00d7e3a688319600a7
+        call cs_day02_68 from cs_return_875a40c77b1154f074b9
         if cs_friend_mz >= 2:
-            call cs_day02_68c
+            call cs_day02_68c from cs_return_3b08ac141f62f980ea0b
         elif cs_friend_mz == 1:
-            call cs_day02_68b
+            call cs_day02_68b from cs_return_8ed90e07a62e6f6264c7
         else:
-            call cs_day02_68a
-        call cs_day02_69
+            call cs_day02_68a from cs_return_f608ed46b59a5823abbd
+        call cs_day02_69 from cs_return_267569315f6bc8b2375f
     else:
         # Legacy saves never receive an invented library loan.
         $ cs_director_scene("cs_camp_path_sunset")
@@ -28,31 +28,22 @@ label cs_day02_part10_start:
         # cs_director_end
         cs_narrator "Мы с Дарьей направились к площади: музыкальный вечер вот-вот должен был начаться."
     if not cs_day02_seating_done:
-        call cs_day02_65
+        call cs_day02_65 from cs_return_259a6661de2ee255a358
     if not cs_day02_concert_done:
-        call cs_day02_concert
-    call cs_day02_70
-    call cs_day02_71
-    call cs_day02_72
-    call cs_day02_73
-    call cs_day02_74
+        call cs_day02_concert from cs_return_752f9b4b63962dc617ef
+    call cs_day02_70 from cs_return_f79a743f45c77ca4115b
+    call cs_day02_71 from cs_return_6de683a6c1effd61c142
+    call cs_day02_72 from cs_return_26d720cf439768fae369
+    call cs_day02_73 from cs_return_042f4faacf1c75fff73d
+    call cs_day02_74 from cs_return_2db53474ef6c4519c627
     $ cs_part10_live = False
     $ cs_day02_part10_done = True
     $ cs_day02_done = True
     jump cs_day02_complete
 
 label cs_day02_complete:
-    window hide dissolve
-    $ cs_director_scene("black")
-    scene black
-    with Dissolve(2.0)
-    show text "День 2 завершён" at truecenter
-    with dissolve
-    pause 2.0
-    hide text with dissolve
     label cs_check_day02_complete:
-    call screen cs_day02_complete_screen
-    jump cs_check_day02_complete
+    jump cs_day03
 
 screen cs_day02_complete_screen():
     modal True
@@ -63,8 +54,8 @@ screen cs_day02_complete_screen():
         vbox:
             spacing 18
             text "День 2 — Без лишних слов" size 36
-            text "Лагерь засыпает. Третий день — впереди." size 25
-            text "Это конец доступного вертикального среза." size 22
+            text "Лагерь просыпается. Продолжить третий день." size 25
+            textbutton "Продолжить" action Return()
             textbutton "Сохранить игру" action ShowMenu("save")
             textbutton "Загрузить игру" action ShowMenu("load")
             textbutton "Главное меню" action [Function(cs_restore_audio), MainMenu()]

@@ -126,8 +126,12 @@ label cs_day02_33:
     cs_narrator "Никаких технологий будущего."
     cs_narrator "Никаких загадочных артефактов."
     cs_narrator "Просто задание, которое нужно выполнить."
+    # Finish the portrait exit against the ordinary background first.
+    $ cs_frame_focus([])
+    with cs_sprite_leave
     $ cs_director_scene("cs_cg_poster_planning_day")
     scene cs_cg_poster_planning_day
+    label cs_check_poster_33_enter:
     $ cs_part04_cg = True
     # cs_presence_keep: hide cs_darya
     # cs_presence_keep: hide cs_dasha_winter

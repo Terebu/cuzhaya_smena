@@ -1,0 +1,96 @@
+# -*- coding: utf-8 -*-
+label cs_qa_poster_scene:
+    $ cs_reset_state()
+    $ cs_active = True
+    $ cs_darya_known = True
+    $ set_mode_adv()
+    $ day_time()
+    $ persistent.sprite_time = "day"
+    if renpy.cs_qa_poster_number == 25:
+        call cs_day02_25
+    else:
+        call cs_day02_33
+        call cs_day02_34
+        call cs_day02_35
+        call cs_day02_35a
+        call cs_day02_36
+    return
+
+testcase cs_poster_25:
+    pause 0.5
+    $ renpy.cs_qa_poster_number = 25
+    $ persistent.font_size = "small"
+    $ _preferences.text_cps = 0
+    $ _test.force = True
+    $ _test.transition_timeout = 0
+    $ renpy.set_physical_size((1280,720))
+    run Start("cs_qa_poster_scene")
+    click until label cs_check_poster_25_enter
+    pause 0.05
+    assert renpy.showing("cs_cg_poster_planning_day")
+    assert not any(renpy.showing(t) for t in cs_presence_tags)
+    $ renpy.screenshot(config.basedir + "/poster_25_transition.png")
+    pause 1.0
+    assert not any(renpy.showing(t) for t in cs_presence_tags)
+    $ renpy.screenshot(config.basedir + "/poster_25_cg.png")
+    python:
+        renpy.show("cs_semen neutral pioneer normal", at_list=[cs_semen_normal_left])
+        cs_presence_stage()
+    assert not renpy.showing("cs_semen")
+    python:
+        renpy.show("cs_semen neutral pioneer normal", at_list=[cs_semen_normal_left])
+        renpy.take_screenshot()
+        renpy.save("poster_stale_"+str(renpy.cs_qa_poster_number))
+        renpy.hide("cs_semen")
+    $ renpy.load("poster_stale_"+str(renpy.cs_qa_poster_number))
+    pause 0.4
+    assert renpy.showing("cs_cg_poster_planning_day")
+    assert not any(renpy.showing(t) for t in cs_presence_tags)
+    $ renpy.screenshot(config.basedir + "/poster_25_loaded.png")
+    click until label cs_check_poster_25_restored
+    pause 0.5
+    assert not renpy.showing("cs_cg_poster_planning_day")
+    assert renpy.showing("cs_semen") and renpy.showing("cs_darya")
+    $ renpy.screenshot(config.basedir + "/poster_25_restored.png")
+    $ open(config.basedir + "/poster_25_PASS.txt","w").write("PASS")
+    run Quit(confirm=False)
+
+testcase cs_poster_33:
+    pause 0.5
+    $ renpy.cs_qa_poster_number = 33
+    $ persistent.font_size = "small"
+    $ _preferences.text_cps = 0
+    $ _test.force = True
+    $ _test.transition_timeout = 0
+    $ renpy.set_physical_size((1280,720))
+    run Start("cs_qa_poster_scene")
+    click until label cs_check_poster_33_enter
+    pause 0.05
+    assert renpy.showing("cs_cg_poster_planning_day")
+    assert not any(renpy.showing(t) for t in cs_presence_tags)
+    $ renpy.screenshot(config.basedir + "/poster_33_transition.png")
+    pause 1.0
+    assert not any(renpy.showing(t) for t in cs_presence_tags)
+    $ renpy.screenshot(config.basedir + "/poster_33_cg.png")
+    python:
+        renpy.show("cs_semen neutral pioneer normal", at_list=[cs_semen_normal_left])
+        cs_presence_stage()
+    assert not renpy.showing("cs_semen")
+    python:
+        renpy.show("cs_semen neutral pioneer normal", at_list=[cs_semen_normal_left])
+        renpy.take_screenshot()
+        renpy.save("poster_stale_"+str(renpy.cs_qa_poster_number))
+        renpy.hide("cs_semen")
+    $ renpy.load("poster_stale_"+str(renpy.cs_qa_poster_number))
+    pause 0.4
+    assert renpy.showing("cs_cg_poster_planning_day")
+    assert not any(renpy.showing(t) for t in cs_presence_tags)
+    $ renpy.screenshot(config.basedir + "/poster_33_loaded.png")
+    click until label cs_check_part05_poster_finished
+    pause 0.5
+    assert not renpy.showing("cs_cg_poster_planning_day")
+    assert renpy.showing("cs_semen") and renpy.showing("cs_darya")
+    $ renpy.screenshot(config.basedir + "/poster_33_restored.png")
+    $ open(config.basedir + "/poster_33_PASS.txt","w").write("PASS")
+    run Quit(confirm=False)
+

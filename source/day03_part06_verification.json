@@ -1,0 +1,88 @@
+{
+  "status": "PASS",
+  "manuscript_blocks": 1082,
+  "implemented_blocks": 1095,
+  "replacements": {
+    "Сегодня меня впервые за долгое время пустили в музыкальный клуб без обязательства уметь играть. Потом ещё и выяснилось, что здесь есть человек, с которым можно нормально поговорить о рисунках.": "Сегодня мы снова зашли в музыкальный клуб без обязательства уметь играть. А потом ещё и поговорили о рисунках.",
+    "Я и правда уже почти забыла, как это приятно.": "После долгого перерыва приятно снова привыкать к клавишам.",
+    "Даша, хочешь попробовать? Ты ведь вчера говорила, что раньше играла.": "Даша, хочешь ещё поиграть? Вчера у тебя хорошо получилось.",
+    "В хорошем. Было видно, что ты занята музыкой, а не попытками убедить всех, какая ты крутая.": "В хорошем. На концерте гитара хорошо держала ритм, даже когда зал шумел. Мне это понравилось.",
+    "Особенно если не начинать знакомство с попытки вывести её из себя.": "Особенно если слушать её ответы, а не искать повод для следующей колкости."
+  },
+  "continuity_additions": [
+    [
+      "cs_th",
+      "К Славе заглянули и честно сказали, что у нас ещё есть свои дела."
+    ],
+    [
+      "cs_narrator",
+      "Мы поднялись на библиотечное крыльцо."
+    ],
+    [
+      "cs_narrator",
+      "Перед тем как подойти к клавишам, Дарья положила папку с плакатом на свободный чистый стул."
+    ],
+    [
+      "cs_narrator",
+      "Дарья забрала со стула папку с плакатом и прижала её к боку."
+    ],
+    [
+      "cs_da",
+      "Та девушка тоже рисует?"
+    ],
+    [
+      "cs_ls",
+      "Да. Давай подойдём и познакомимся."
+    ],
+    [
+      "cs_ls",
+      "Привет. Я Лена Соколова, а это Даша."
+    ],
+    [
+      "cs_un",
+      "Лена. Тихонова."
+    ],
+    [
+      "cs_narrator",
+      "Вчера Лена показала мне лишь быстрый набросок музыкантов. Теперь вокруг них появились сцена, скамейки и зрители."
+    ],
+    [
+      "cs_th",
+      "Вчерашний быстрый набросок превращался в целую сцену."
+    ],
+    [
+      "cs_th",
+      "Утром мы уже поговорили без взаимных уколов. Теперь хотелось узнать, чем она живёт, кроме вечной готовности спорить."
+    ],
+    [
+      "cs_dv",
+      "Опять ты, Соколова? Только без комиссий."
+    ],
+    [
+      "cs_ls",
+      "Никаких комиссий. Просто слушаю."
+    ]
+  ],
+  "reachable_friendship_before": {
+    "mi": 1,
+    "dv": 0,
+    "un": 1
+  },
+  "reachable_friendship_after": {
+    "mi": 2,
+    "dv": 1,
+    "un": 2
+  },
+  "old_concert": "Both old UN>=2 checks were unreachable (only one prior award); now met_un and UN>=1. No new points and no replay from day3.",
+  "part5_glue": "47 branch blocks retired;113 handles optional catalog visit and all routes converge on114.",
+  "audit": [
+    "Day2 piano/concert remembered",
+    "Optional Sl help respected",
+    "Unknown Un introduced without friendship bonus",
+    "Catalog visit consumes morning appointment; requested book remains after lunch",
+    "Poster location authoritative; documents remain in administration",
+    "Injury, bandage, sports restriction and Viola inventory retained",
+    "No new SE jokes about rooming after111 promise",
+    "Only one lunch horn; final state is dining interior awaiting lunch continuation"
+  ]
+}

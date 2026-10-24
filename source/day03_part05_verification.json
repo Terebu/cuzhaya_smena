@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "manuscript_blocks": 728,
+  "implemented_blocks": 734,
+  "continuity_additions": [
+    [
+      "cs_narrator",
+      "Мы ещё не успели далеко уйти от развилки, когда мне в голову пришла очередная мысль."
+    ],
+    [
+      "cs_ls",
+      "А сегодня хотя бы понятно, зачем нужно отнести документы в администрацию."
+    ],
+    [
+      "cs_narrator",
+      "Мы поднялись на крыльцо административного корпуса."
+    ],
+    [
+      "cs_narrator",
+      "По дороге к домику вожатой я ещё раз посмотрела на повязку."
+    ],
+    [
+      "cs_ls",
+      "Помочь можно и без подвигов. Начнём с чего-нибудь, для чего не нужны обе руки."
+    ],
+    [
+      "cs_da",
+      "Вот с этого и начни разговор."
+    ]
+  ],
+  "prior_sl_award": "day02/00_flow.rpy: cs_day02_24, guarded by cs_sl_day2_awarded",
+  "reachable_sl_before": 1,
+  "reachable_sl_after": 2,
+  "poster": "saved in78a; kept by Slavya until110 physical handoff; location=darya_folder; no new item if not saved or already collected",
+  "part04_glue": "scene103 reduced to exterior establishing shot; 92 old ending blocks moved/replaced by104/112; old named entry points retained",
+  "administration": "User supplied exterior and interior renamed, registered and used; no invented actor"
+}

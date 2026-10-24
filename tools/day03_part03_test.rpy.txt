@@ -1,0 +1,1171 @@
+# -*- coding: utf-8 -*-
+init 95 python:
+    def cs_p3_actor_opaque(tag):
+        actor = renpy.game.context().scene_lists.get_displayable_by_tag("master", tag)
+        return actor is not None and getattr(getattr(actor,"state",None),"alpha",1.0) >= 0.999
+    def cs_p3_capture(name):
+        renpy.screenshot(config.basedir + "/p3_%s_%s.png" % (renpy.cs_p3_case,name))
+
+label cs_qa_day03_p3:
+    $ cs_reset_state()
+    $ cs_active = True
+    $ cs_darya_known = True
+    $ cs_lena_elbow_bandaged = True
+    $ cs_lena_elbow_injury_day2 = 2
+    $ cs_lena_no_sport_day2 = True
+    $ cs_lena_book_returned = renpy.cs_p3_book
+    $ cs_friend_mz = 0 if renpy.cs_p3_reach else renpy.cs_p3_mz
+    $ cs_friend_se = renpy.cs_p3_se
+    $ cs_se_day3_morning_awarded = cs_friend_se >= 3
+    $ cs_mz_map_lead = bool(renpy.cs_p3_map)
+    $ cs_day03_part01_done = True
+    $ cs_day03_part02_done = True
+    $ set_mode_adv()
+    $ day_time()
+    $ persistent.sprite_time = "day"
+    $ cs_director_scene("cs_camp_path_day")
+    scene cs_camp_path_day
+    show cs_darya shy_smile pioneer normal at cs_darya_normal_right
+    $ cs_presence_stage()
+    if renpy.cs_p3_door:
+        $ cs_director_scene("bg ext_dining_hall_away_day")
+        scene bg ext_dining_hall_away_day
+        show cs_darya shy_smile pioneer normal at cs_darya_normal_right
+    if not renpy.cs_p3_door:
+        play music "sound/music/my_daily_life.ogg"
+    if renpy.cs_p3_reach:
+        call cs_day01_55
+        call cs_day02_zhenya_square_choice
+    if renpy.cs_p3_bridge:
+        show cs_semen neutral pioneer normal at cs_semen_normal_left
+        $ cs_presence_stage()
+        call cs_day03_88
+        jump cs_day03_part03_pending
+    jump cs_day03_part03_pending
+
+testcase cs_day03_p3_0:
+    pause 0.5
+    $ renpy.cs_p3_case = 0
+    $ renpy.cs_p3_mz = 0
+    $ renpy.cs_p3_se = 0
+    $ renpy.cs_p3_map = 0
+    $ renpy.cs_p3_ask = False
+    $ renpy.cs_p3_book = True
+    $ renpy.cs_p3_door = False
+    $ renpy.cs_p3_bridge = False
+    $ renpy.cs_p3_reach = False
+    $ persistent.font_size = "small"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps = 0
+    $ _test.force = True
+    $ _test.timeout = 60.0
+    run Start("cs_qa_day03_p3")
+    click until label cs_check_day03_89
+    assert cs_friend_mz == renpy.cs_p3_mz and cs_friend_se == renpy.cs_p3_se
+    assert renpy.music.get_playing() == "sound/music/my_daily_life.ogg"
+    assert bool(cs_day03_at_dining_door) == renpy.cs_p3_door
+    click until label cs_check_day03_89_reflection
+    pause 0.4
+    assert not any(renpy.showing(t) for t in cs_presence_tags)
+    $ cs_p3_capture("reflection_walk")
+    click until label cs_check_day03_89_dialogue
+    pause 0.4
+    assert renpy.showing("cs_darya") and not renpy.showing("cs_semen")
+    click until label cs_check_day03_90_zhenya
+    pause 0.4
+    assert renpy.showing("cs_zhenya") and renpy.showing("cs_darya")
+    assert not renpy.showing("mz") and not renpy.showing("cs_semen")
+    assert cs_p3_actor_opaque("cs_zhenya")
+    $ cs_p3_capture("zhenya_arrival")
+    $ renpy.cs_p3_z_bounds = renpy.get_image_bounds("cs_zhenya")
+    click until label cs_check_day03_91
+    pause 0.4
+    assert renpy.showing("bg int_dining_hall_people_day")
+    assert renpy.showing("cs_zhenya") and renpy.showing("cs_darya")
+    assert renpy.get_image_bounds("cs_zhenya")[1:] == renpy.cs_p3_z_bounds[1:]
+    $ cs_p3_capture("breakfast")
+    click until label cs_check_day03_92_result
+    pause 0.4
+    assert cs_day03_mz_breakfast_together == (renpy.cs_p3_mz >= 1)
+    assert bool(renpy.showing("cs_zhenya")) == (renpy.cs_p3_mz >= 1)
+    assert renpy.showing("cs_darya")
+    $ cs_p3_capture("seating")
+    click until label cs_check_day03_93_reflection
+    pause 0.4
+    assert not any(renpy.showing(t) for t in cs_presence_tags)
+    $ cs_p3_capture("reflection_window")
+    click until label cs_check_day03_93_dialogue
+    assert renpy.showing("cs_darya")
+    assert bool(renpy.showing("cs_zhenya")) == (renpy.cs_p3_mz >= 1)
+    click until label cs_check_day03_93_semen
+    pause 0.4
+    assert renpy.showing("cs_semen") and renpy.showing("cs_darya")
+    assert not renpy.showing("cs_zhenya")
+    assert cs_p3_actor_opaque("cs_semen")
+    $ cs_p3_capture("semen_breakfast")
+    click until label cs_check_day03_93_semen_offscreen
+    assert cs_day03_semen_breakfast_joined == (renpy.cs_p3_se >= 3)
+    assert not renpy.showing("cs_semen")
+    click until label cs_check_day03_94_contact
+    pause 0.4
+    assert renpy.showing("cs_zhenya") and renpy.showing("cs_darya")
+    assert not renpy.showing("cs_semen")
+    assert cs_friend_mz == renpy.cs_p3_mz and not cs_mz_book_requested_day3
+    $ cs_p3_capture("book_contact")
+    $ renpy.take_screenshot()
+    $ renpy.save("p3_contact_"+str(renpy.cs_p3_case))
+    $ renpy.load("p3_contact_"+str(renpy.cs_p3_case))
+    pause 0.4
+    click until label cs_check_day03_94_menu
+    pause 0.4
+    $ cs_p3_capture("choice")
+    "Не задерживать Женю перед её делами"
+    click until label cs_check_day03_94b
+    pause 0.4
+    assert cs_friend_mz == renpy.cs_p3_mz + int(renpy.cs_p3_ask)
+    assert cs_mz_book_requested_day3 == renpy.cs_p3_ask
+    assert cs_mz_day3_book_awarded == renpy.cs_p3_ask
+    assert cs_day03_library_visit_time == ("late_morning" if renpy.cs_p3_map else "after_lunch" if renpy.cs_p3_ask else None)
+    assert renpy.showing("cs_zhenya") and renpy.showing("cs_darya")
+    $ cs_p3_capture("book_branch")
+    $ renpy.take_screenshot()
+    $ renpy.save("p3_award_"+str(renpy.cs_p3_case))
+    $ renpy.load("p3_award_"+str(renpy.cs_p3_case))
+    pause 0.4
+    assert cs_friend_mz == renpy.cs_p3_mz + int(renpy.cs_p3_ask)
+    click until label cs_check_day03_95_zhenya_left
+    pause 0.4
+    assert not renpy.showing("cs_zhenya")
+    $ cs_p3_capture("zhenya_left")
+    click until label cs_check_day03_95_semen_return
+    pause 0.4
+    assert renpy.showing("cs_semen") and renpy.showing("cs_darya")
+    assert not renpy.showing("cs_zhenya")
+    assert cs_p3_actor_opaque("cs_semen")
+    $ cs_p3_capture("semen_outside")
+    click until label cs_check_day03_95_semen_left
+    pause 0.4
+    assert not renpy.showing("cs_semen") and renpy.showing("cs_darya")
+    $ cs_p3_capture("semen_left")
+    click until label cs_check_day03_part03_complete
+    pause 0.4
+    assert cs_day03_part03_done and cs_day03_part02_done
+    assert not any(renpy.showing(t) for t in cs_presence_tags)
+    assert renpy.showing("cs_camp_path_day")
+    assert cs_mz_map_lead == bool(renpy.cs_p3_map)
+    assert cs_friend_se == renpy.cs_p3_se
+    assert cs_lena_elbow_bandaged and cs_lena_elbow_injury_day2 == 2 and cs_lena_no_sport_day2
+    assert cs_lena_book_returned == renpy.cs_p3_book
+    assert cs_day03_library_visit_time == ("late_morning" if renpy.cs_p3_map else "after_lunch" if renpy.cs_p3_ask else None)
+    $ cs_p3_capture("medical_path")
+    $ open(config.basedir + "/p3_%s_PASS.txt" % renpy.cs_p3_case,"w").write("PASS")
+    $ cs_reset_state()
+    assert not cs_mz_book_requested_day3 and not cs_mz_day3_book_awarded and not cs_day03_part03_done
+    assert cs_day03_library_visit_time is None
+    run Quit(confirm=False)
+
+testcase cs_day03_p3_1:
+    pause 0.5
+    $ renpy.cs_p3_case = 1
+    $ renpy.cs_p3_mz = 0
+    $ renpy.cs_p3_se = 1
+    $ renpy.cs_p3_map = 1
+    $ renpy.cs_p3_ask = True
+    $ renpy.cs_p3_book = True
+    $ renpy.cs_p3_door = False
+    $ renpy.cs_p3_bridge = False
+    $ renpy.cs_p3_reach = False
+    $ persistent.font_size = "small"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps = 0
+    $ _test.force = True
+    $ _test.timeout = 60.0
+    run Start("cs_qa_day03_p3")
+    click until label cs_check_day03_89
+    assert cs_friend_mz == renpy.cs_p3_mz and cs_friend_se == renpy.cs_p3_se
+    assert renpy.music.get_playing() == "sound/music/my_daily_life.ogg"
+    assert bool(cs_day03_at_dining_door) == renpy.cs_p3_door
+    click until label cs_check_day03_89_reflection
+    pause 0.4
+    assert not any(renpy.showing(t) for t in cs_presence_tags)
+    $ cs_p3_capture("reflection_walk")
+    click until label cs_check_day03_89_dialogue
+    pause 0.4
+    assert renpy.showing("cs_darya") and not renpy.showing("cs_semen")
+    click until label cs_check_day03_90_zhenya
+    pause 0.4
+    assert renpy.showing("cs_zhenya") and renpy.showing("cs_darya")
+    assert not renpy.showing("mz") and not renpy.showing("cs_semen")
+    assert cs_p3_actor_opaque("cs_zhenya")
+    $ cs_p3_capture("zhenya_arrival")
+    $ renpy.cs_p3_z_bounds = renpy.get_image_bounds("cs_zhenya")
+    click until label cs_check_day03_91
+    pause 0.4
+    assert renpy.showing("bg int_dining_hall_people_day")
+    assert renpy.showing("cs_zhenya") and renpy.showing("cs_darya")
+    assert renpy.get_image_bounds("cs_zhenya")[1:] == renpy.cs_p3_z_bounds[1:]
+    $ cs_p3_capture("breakfast")
+    click until label cs_check_day03_92_result
+    pause 0.4
+    assert cs_day03_mz_breakfast_together == (renpy.cs_p3_mz >= 1)
+    assert bool(renpy.showing("cs_zhenya")) == (renpy.cs_p3_mz >= 1)
+    assert renpy.showing("cs_darya")
+    $ cs_p3_capture("seating")
+    click until label cs_check_day03_93_reflection
+    pause 0.4
+    assert not any(renpy.showing(t) for t in cs_presence_tags)
+    $ cs_p3_capture("reflection_window")
+    click until label cs_check_day03_93_dialogue
+    assert renpy.showing("cs_darya")
+    assert bool(renpy.showing("cs_zhenya")) == (renpy.cs_p3_mz >= 1)
+    click until label cs_check_day03_93_semen
+    pause 0.4
+    assert renpy.showing("cs_semen") and renpy.showing("cs_darya")
+    assert not renpy.showing("cs_zhenya")
+    assert cs_p3_actor_opaque("cs_semen")
+    $ cs_p3_capture("semen_breakfast")
+    click until label cs_check_day03_93_semen_offscreen
+    assert cs_day03_semen_breakfast_joined == (renpy.cs_p3_se >= 3)
+    assert not renpy.showing("cs_semen")
+    click until label cs_check_day03_94_contact
+    pause 0.4
+    assert renpy.showing("cs_zhenya") and renpy.showing("cs_darya")
+    assert not renpy.showing("cs_semen")
+    assert cs_friend_mz == renpy.cs_p3_mz and not cs_mz_book_requested_day3
+    $ cs_p3_capture("book_contact")
+    $ renpy.take_screenshot()
+    $ renpy.save("p3_contact_"+str(renpy.cs_p3_case))
+    $ renpy.load("p3_contact_"+str(renpy.cs_p3_case))
+    pause 0.4
+    click until label cs_check_day03_94_menu
+    pause 0.4
+    $ cs_p3_capture("choice")
+    "Спросить Женю, какую книгу она посоветовала бы прочитать"
+    click until label cs_check_day03_94a
+    pause 0.4
+    assert cs_friend_mz == renpy.cs_p3_mz + int(renpy.cs_p3_ask)
+    assert cs_mz_book_requested_day3 == renpy.cs_p3_ask
+    assert cs_mz_day3_book_awarded == renpy.cs_p3_ask
+    assert cs_day03_library_visit_time == ("late_morning" if renpy.cs_p3_map else "after_lunch" if renpy.cs_p3_ask else None)
+    assert renpy.showing("cs_zhenya") and renpy.showing("cs_darya")
+    $ cs_p3_capture("book_branch")
+    $ renpy.take_screenshot()
+    $ renpy.save("p3_award_"+str(renpy.cs_p3_case))
+    $ renpy.load("p3_award_"+str(renpy.cs_p3_case))
+    pause 0.4
+    assert cs_friend_mz == renpy.cs_p3_mz + int(renpy.cs_p3_ask)
+    click until label cs_check_day03_95_zhenya_left
+    pause 0.4
+    assert not renpy.showing("cs_zhenya")
+    $ cs_p3_capture("zhenya_left")
+    click until label cs_check_day03_95_semen_return
+    pause 0.4
+    assert renpy.showing("cs_semen") and renpy.showing("cs_darya")
+    assert not renpy.showing("cs_zhenya")
+    assert cs_p3_actor_opaque("cs_semen")
+    $ cs_p3_capture("semen_outside")
+    click until label cs_check_day03_95_semen_left
+    pause 0.4
+    assert not renpy.showing("cs_semen") and renpy.showing("cs_darya")
+    $ cs_p3_capture("semen_left")
+    click until label cs_check_day03_part03_complete
+    pause 0.4
+    assert cs_day03_part03_done and cs_day03_part02_done
+    assert not any(renpy.showing(t) for t in cs_presence_tags)
+    assert renpy.showing("cs_camp_path_day")
+    assert cs_mz_map_lead == bool(renpy.cs_p3_map)
+    assert cs_friend_se == renpy.cs_p3_se
+    assert cs_lena_elbow_bandaged and cs_lena_elbow_injury_day2 == 2 and cs_lena_no_sport_day2
+    assert cs_lena_book_returned == renpy.cs_p3_book
+    assert cs_day03_library_visit_time == ("late_morning" if renpy.cs_p3_map else "after_lunch" if renpy.cs_p3_ask else None)
+    $ cs_p3_capture("medical_path")
+    $ open(config.basedir + "/p3_%s_PASS.txt" % renpy.cs_p3_case,"w").write("PASS")
+    $ cs_reset_state()
+    assert not cs_mz_book_requested_day3 and not cs_mz_day3_book_awarded and not cs_day03_part03_done
+    assert cs_day03_library_visit_time is None
+    run Quit(confirm=False)
+
+testcase cs_day03_p3_2:
+    pause 0.5
+    $ renpy.cs_p3_case = 2
+    $ renpy.cs_p3_mz = 1
+    $ renpy.cs_p3_se = 2
+    $ renpy.cs_p3_map = 0
+    $ renpy.cs_p3_ask = True
+    $ renpy.cs_p3_book = True
+    $ renpy.cs_p3_door = False
+    $ renpy.cs_p3_bridge = False
+    $ renpy.cs_p3_reach = False
+    $ persistent.font_size = "small"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps = 0
+    $ _test.force = True
+    $ _test.timeout = 60.0
+    run Start("cs_qa_day03_p3")
+    click until label cs_check_day03_89
+    assert cs_friend_mz == renpy.cs_p3_mz and cs_friend_se == renpy.cs_p3_se
+    assert renpy.music.get_playing() == "sound/music/my_daily_life.ogg"
+    assert bool(cs_day03_at_dining_door) == renpy.cs_p3_door
+    click until label cs_check_day03_89_reflection
+    pause 0.4
+    assert not any(renpy.showing(t) for t in cs_presence_tags)
+    $ cs_p3_capture("reflection_walk")
+    click until label cs_check_day03_89_dialogue
+    pause 0.4
+    assert renpy.showing("cs_darya") and not renpy.showing("cs_semen")
+    click until label cs_check_day03_90_zhenya
+    pause 0.4
+    assert renpy.showing("cs_zhenya") and renpy.showing("cs_darya")
+    assert not renpy.showing("mz") and not renpy.showing("cs_semen")
+    assert cs_p3_actor_opaque("cs_zhenya")
+    $ cs_p3_capture("zhenya_arrival")
+    $ renpy.cs_p3_z_bounds = renpy.get_image_bounds("cs_zhenya")
+    click until label cs_check_day03_91
+    pause 0.4
+    assert renpy.showing("bg int_dining_hall_people_day")
+    assert renpy.showing("cs_zhenya") and renpy.showing("cs_darya")
+    assert renpy.get_image_bounds("cs_zhenya")[1:] == renpy.cs_p3_z_bounds[1:]
+    $ cs_p3_capture("breakfast")
+    click until label cs_check_day03_92_result
+    pause 0.4
+    assert cs_day03_mz_breakfast_together == (renpy.cs_p3_mz >= 1)
+    assert bool(renpy.showing("cs_zhenya")) == (renpy.cs_p3_mz >= 1)
+    assert renpy.showing("cs_darya")
+    $ cs_p3_capture("seating")
+    click until label cs_check_day03_93_reflection
+    pause 0.4
+    assert not any(renpy.showing(t) for t in cs_presence_tags)
+    $ cs_p3_capture("reflection_window")
+    click until label cs_check_day03_93_dialogue
+    assert renpy.showing("cs_darya")
+    assert bool(renpy.showing("cs_zhenya")) == (renpy.cs_p3_mz >= 1)
+    click until label cs_check_day03_93_semen
+    pause 0.4
+    assert renpy.showing("cs_semen") and renpy.showing("cs_darya")
+    assert not renpy.showing("cs_zhenya")
+    assert cs_p3_actor_opaque("cs_semen")
+    $ cs_p3_capture("semen_breakfast")
+    click until label cs_check_day03_93_semen_offscreen
+    assert cs_day03_semen_breakfast_joined == (renpy.cs_p3_se >= 3)
+    assert not renpy.showing("cs_semen")
+    click until label cs_check_day03_94_contact
+    pause 0.4
+    assert renpy.showing("cs_zhenya") and renpy.showing("cs_darya")
+    assert not renpy.showing("cs_semen")
+    assert cs_friend_mz == renpy.cs_p3_mz and not cs_mz_book_requested_day3
+    $ cs_p3_capture("book_contact")
+    $ renpy.take_screenshot()
+    $ renpy.save("p3_contact_"+str(renpy.cs_p3_case))
+    $ renpy.load("p3_contact_"+str(renpy.cs_p3_case))
+    pause 0.4
+    click until label cs_check_day03_94_menu
+    pause 0.4
+    $ cs_p3_capture("choice")
+    "Спросить Женю, какую книгу она посоветовала бы прочитать"
+    click until label cs_check_day03_94a
+    pause 0.4
+    assert cs_friend_mz == renpy.cs_p3_mz + int(renpy.cs_p3_ask)
+    assert cs_mz_book_requested_day3 == renpy.cs_p3_ask
+    assert cs_mz_day3_book_awarded == renpy.cs_p3_ask
+    assert cs_day03_library_visit_time == ("late_morning" if renpy.cs_p3_map else "after_lunch" if renpy.cs_p3_ask else None)
+    assert renpy.showing("cs_zhenya") and renpy.showing("cs_darya")
+    $ cs_p3_capture("book_branch")
+    $ renpy.take_screenshot()
+    $ renpy.save("p3_award_"+str(renpy.cs_p3_case))
+    $ renpy.load("p3_award_"+str(renpy.cs_p3_case))
+    pause 0.4
+    assert cs_friend_mz == renpy.cs_p3_mz + int(renpy.cs_p3_ask)
+    click until label cs_check_day03_95_zhenya_left
+    pause 0.4
+    assert not renpy.showing("cs_zhenya")
+    $ cs_p3_capture("zhenya_left")
+    click until label cs_check_day03_95_semen_return
+    pause 0.4
+    assert renpy.showing("cs_semen") and renpy.showing("cs_darya")
+    assert not renpy.showing("cs_zhenya")
+    assert cs_p3_actor_opaque("cs_semen")
+    $ cs_p3_capture("semen_outside")
+    click until label cs_check_day03_95_semen_left
+    pause 0.4
+    assert not renpy.showing("cs_semen") and renpy.showing("cs_darya")
+    $ cs_p3_capture("semen_left")
+    click until label cs_check_day03_part03_complete
+    pause 0.4
+    assert cs_day03_part03_done and cs_day03_part02_done
+    assert not any(renpy.showing(t) for t in cs_presence_tags)
+    assert renpy.showing("cs_camp_path_day")
+    assert cs_mz_map_lead == bool(renpy.cs_p3_map)
+    assert cs_friend_se == renpy.cs_p3_se
+    assert cs_lena_elbow_bandaged and cs_lena_elbow_injury_day2 == 2 and cs_lena_no_sport_day2
+    assert cs_lena_book_returned == renpy.cs_p3_book
+    assert cs_day03_library_visit_time == ("late_morning" if renpy.cs_p3_map else "after_lunch" if renpy.cs_p3_ask else None)
+    $ cs_p3_capture("medical_path")
+    $ open(config.basedir + "/p3_%s_PASS.txt" % renpy.cs_p3_case,"w").write("PASS")
+    $ cs_reset_state()
+    assert not cs_mz_book_requested_day3 and not cs_mz_day3_book_awarded and not cs_day03_part03_done
+    assert cs_day03_library_visit_time is None
+    run Quit(confirm=False)
+
+testcase cs_day03_p3_3:
+    pause 0.5
+    $ renpy.cs_p3_case = 3
+    $ renpy.cs_p3_mz = 1
+    $ renpy.cs_p3_se = 3
+    $ renpy.cs_p3_map = 1
+    $ renpy.cs_p3_ask = False
+    $ renpy.cs_p3_book = True
+    $ renpy.cs_p3_door = False
+    $ renpy.cs_p3_bridge = False
+    $ renpy.cs_p3_reach = False
+    $ persistent.font_size = "small"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps = 0
+    $ _test.force = True
+    $ _test.timeout = 60.0
+    run Start("cs_qa_day03_p3")
+    click until label cs_check_day03_89
+    assert cs_friend_mz == renpy.cs_p3_mz and cs_friend_se == renpy.cs_p3_se
+    assert renpy.music.get_playing() == "sound/music/my_daily_life.ogg"
+    assert bool(cs_day03_at_dining_door) == renpy.cs_p3_door
+    click until label cs_check_day03_89_reflection
+    pause 0.4
+    assert not any(renpy.showing(t) for t in cs_presence_tags)
+    $ cs_p3_capture("reflection_walk")
+    click until label cs_check_day03_89_dialogue
+    pause 0.4
+    assert renpy.showing("cs_darya") and not renpy.showing("cs_semen")
+    click until label cs_check_day03_90_zhenya
+    pause 0.4
+    assert renpy.showing("cs_zhenya") and renpy.showing("cs_darya")
+    assert not renpy.showing("mz") and not renpy.showing("cs_semen")
+    assert cs_p3_actor_opaque("cs_zhenya")
+    $ cs_p3_capture("zhenya_arrival")
+    $ renpy.cs_p3_z_bounds = renpy.get_image_bounds("cs_zhenya")
+    click until label cs_check_day03_91
+    pause 0.4
+    assert renpy.showing("bg int_dining_hall_people_day")
+    assert renpy.showing("cs_zhenya") and renpy.showing("cs_darya")
+    assert renpy.get_image_bounds("cs_zhenya")[1:] == renpy.cs_p3_z_bounds[1:]
+    $ cs_p3_capture("breakfast")
+    click until label cs_check_day03_92_result
+    pause 0.4
+    assert cs_day03_mz_breakfast_together == (renpy.cs_p3_mz >= 1)
+    assert bool(renpy.showing("cs_zhenya")) == (renpy.cs_p3_mz >= 1)
+    assert renpy.showing("cs_darya")
+    $ cs_p3_capture("seating")
+    click until label cs_check_day03_93_reflection
+    pause 0.4
+    assert not any(renpy.showing(t) for t in cs_presence_tags)
+    $ cs_p3_capture("reflection_window")
+    click until label cs_check_day03_93_dialogue
+    assert renpy.showing("cs_darya")
+    assert bool(renpy.showing("cs_zhenya")) == (renpy.cs_p3_mz >= 1)
+    click until label cs_check_day03_93_semen
+    pause 0.4
+    assert renpy.showing("cs_semen") and renpy.showing("cs_darya")
+    assert not renpy.showing("cs_zhenya")
+    assert cs_p3_actor_opaque("cs_semen")
+    $ cs_p3_capture("semen_breakfast")
+    click until label cs_check_day03_93_semen_offscreen
+    assert cs_day03_semen_breakfast_joined == (renpy.cs_p3_se >= 3)
+    assert not renpy.showing("cs_semen")
+    click until label cs_check_day03_94_contact
+    pause 0.4
+    assert renpy.showing("cs_zhenya") and renpy.showing("cs_darya")
+    assert not renpy.showing("cs_semen")
+    assert cs_friend_mz == renpy.cs_p3_mz and not cs_mz_book_requested_day3
+    $ cs_p3_capture("book_contact")
+    $ renpy.take_screenshot()
+    $ renpy.save("p3_contact_"+str(renpy.cs_p3_case))
+    $ renpy.load("p3_contact_"+str(renpy.cs_p3_case))
+    pause 0.4
+    click until label cs_check_day03_94_menu
+    pause 0.4
+    $ cs_p3_capture("choice")
+    "Не задерживать Женю перед её делами"
+    click until label cs_check_day03_94b
+    pause 0.4
+    assert cs_friend_mz == renpy.cs_p3_mz + int(renpy.cs_p3_ask)
+    assert cs_mz_book_requested_day3 == renpy.cs_p3_ask
+    assert cs_mz_day3_book_awarded == renpy.cs_p3_ask
+    assert cs_day03_library_visit_time == ("late_morning" if renpy.cs_p3_map else "after_lunch" if renpy.cs_p3_ask else None)
+    assert renpy.showing("cs_zhenya") and renpy.showing("cs_darya")
+    $ cs_p3_capture("book_branch")
+    $ renpy.take_screenshot()
+    $ renpy.save("p3_award_"+str(renpy.cs_p3_case))
+    $ renpy.load("p3_award_"+str(renpy.cs_p3_case))
+    pause 0.4
+    assert cs_friend_mz == renpy.cs_p3_mz + int(renpy.cs_p3_ask)
+    click until label cs_check_day03_95_zhenya_left
+    pause 0.4
+    assert not renpy.showing("cs_zhenya")
+    $ cs_p3_capture("zhenya_left")
+    click until label cs_check_day03_95_semen_return
+    pause 0.4
+    assert renpy.showing("cs_semen") and renpy.showing("cs_darya")
+    assert not renpy.showing("cs_zhenya")
+    assert cs_p3_actor_opaque("cs_semen")
+    $ cs_p3_capture("semen_outside")
+    click until label cs_check_day03_95_semen_left
+    pause 0.4
+    assert not renpy.showing("cs_semen") and renpy.showing("cs_darya")
+    $ cs_p3_capture("semen_left")
+    click until label cs_check_day03_part03_complete
+    pause 0.4
+    assert cs_day03_part03_done and cs_day03_part02_done
+    assert not any(renpy.showing(t) for t in cs_presence_tags)
+    assert renpy.showing("cs_camp_path_day")
+    assert cs_mz_map_lead == bool(renpy.cs_p3_map)
+    assert cs_friend_se == renpy.cs_p3_se
+    assert cs_lena_elbow_bandaged and cs_lena_elbow_injury_day2 == 2 and cs_lena_no_sport_day2
+    assert cs_lena_book_returned == renpy.cs_p3_book
+    assert cs_day03_library_visit_time == ("late_morning" if renpy.cs_p3_map else "after_lunch" if renpy.cs_p3_ask else None)
+    $ cs_p3_capture("medical_path")
+    $ open(config.basedir + "/p3_%s_PASS.txt" % renpy.cs_p3_case,"w").write("PASS")
+    $ cs_reset_state()
+    assert not cs_mz_book_requested_day3 and not cs_mz_day3_book_awarded and not cs_day03_part03_done
+    assert cs_day03_library_visit_time is None
+    run Quit(confirm=False)
+
+testcase cs_day03_p3_4:
+    pause 0.5
+    $ renpy.cs_p3_case = 4
+    $ renpy.cs_p3_mz = 2
+    $ renpy.cs_p3_se = 3
+    $ renpy.cs_p3_map = 1
+    $ renpy.cs_p3_ask = True
+    $ renpy.cs_p3_book = True
+    $ renpy.cs_p3_door = False
+    $ renpy.cs_p3_bridge = False
+    $ renpy.cs_p3_reach = False
+    $ persistent.font_size = "small"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps = 0
+    $ _test.force = True
+    $ _test.timeout = 60.0
+    run Start("cs_qa_day03_p3")
+    click until label cs_check_day03_89
+    assert cs_friend_mz == renpy.cs_p3_mz and cs_friend_se == renpy.cs_p3_se
+    assert renpy.music.get_playing() == "sound/music/my_daily_life.ogg"
+    assert bool(cs_day03_at_dining_door) == renpy.cs_p3_door
+    click until label cs_check_day03_89_reflection
+    pause 0.4
+    assert not any(renpy.showing(t) for t in cs_presence_tags)
+    $ cs_p3_capture("reflection_walk")
+    click until label cs_check_day03_89_dialogue
+    pause 0.4
+    assert renpy.showing("cs_darya") and not renpy.showing("cs_semen")
+    click until label cs_check_day03_90_zhenya
+    pause 0.4
+    assert renpy.showing("cs_zhenya") and renpy.showing("cs_darya")
+    assert not renpy.showing("mz") and not renpy.showing("cs_semen")
+    assert cs_p3_actor_opaque("cs_zhenya")
+    $ cs_p3_capture("zhenya_arrival")
+    $ renpy.cs_p3_z_bounds = renpy.get_image_bounds("cs_zhenya")
+    click until label cs_check_day03_91
+    pause 0.4
+    assert renpy.showing("bg int_dining_hall_people_day")
+    assert renpy.showing("cs_zhenya") and renpy.showing("cs_darya")
+    assert renpy.get_image_bounds("cs_zhenya")[1:] == renpy.cs_p3_z_bounds[1:]
+    $ cs_p3_capture("breakfast")
+    click until label cs_check_day03_92_result
+    pause 0.4
+    assert cs_day03_mz_breakfast_together == (renpy.cs_p3_mz >= 1)
+    assert bool(renpy.showing("cs_zhenya")) == (renpy.cs_p3_mz >= 1)
+    assert renpy.showing("cs_darya")
+    $ cs_p3_capture("seating")
+    click until label cs_check_day03_93_reflection
+    pause 0.4
+    assert not any(renpy.showing(t) for t in cs_presence_tags)
+    $ cs_p3_capture("reflection_window")
+    click until label cs_check_day03_93_dialogue
+    assert renpy.showing("cs_darya")
+    assert bool(renpy.showing("cs_zhenya")) == (renpy.cs_p3_mz >= 1)
+    click until label cs_check_day03_93_semen
+    pause 0.4
+    assert renpy.showing("cs_semen") and renpy.showing("cs_darya")
+    assert not renpy.showing("cs_zhenya")
+    assert cs_p3_actor_opaque("cs_semen")
+    $ cs_p3_capture("semen_breakfast")
+    click until label cs_check_day03_93_semen_offscreen
+    assert cs_day03_semen_breakfast_joined == (renpy.cs_p3_se >= 3)
+    assert not renpy.showing("cs_semen")
+    click until label cs_check_day03_94_contact
+    pause 0.4
+    assert renpy.showing("cs_zhenya") and renpy.showing("cs_darya")
+    assert not renpy.showing("cs_semen")
+    assert cs_friend_mz == renpy.cs_p3_mz and not cs_mz_book_requested_day3
+    $ cs_p3_capture("book_contact")
+    $ renpy.take_screenshot()
+    $ renpy.save("p3_contact_"+str(renpy.cs_p3_case))
+    $ renpy.load("p3_contact_"+str(renpy.cs_p3_case))
+    pause 0.4
+    click until label cs_check_day03_94_menu
+    pause 0.4
+    $ cs_p3_capture("choice")
+    "Спросить Женю, какую книгу она посоветовала бы прочитать"
+    click until label cs_check_day03_94a
+    pause 0.4
+    assert cs_friend_mz == renpy.cs_p3_mz + int(renpy.cs_p3_ask)
+    assert cs_mz_book_requested_day3 == renpy.cs_p3_ask
+    assert cs_mz_day3_book_awarded == renpy.cs_p3_ask
+    assert cs_day03_library_visit_time == ("late_morning" if renpy.cs_p3_map else "after_lunch" if renpy.cs_p3_ask else None)
+    assert renpy.showing("cs_zhenya") and renpy.showing("cs_darya")
+    $ cs_p3_capture("book_branch")
+    $ renpy.take_screenshot()
+    $ renpy.save("p3_award_"+str(renpy.cs_p3_case))
+    $ renpy.load("p3_award_"+str(renpy.cs_p3_case))
+    pause 0.4
+    assert cs_friend_mz == renpy.cs_p3_mz + int(renpy.cs_p3_ask)
+    click until label cs_check_day03_95_zhenya_left
+    pause 0.4
+    assert not renpy.showing("cs_zhenya")
+    $ cs_p3_capture("zhenya_left")
+    click until label cs_check_day03_95_semen_return
+    pause 0.4
+    assert renpy.showing("cs_semen") and renpy.showing("cs_darya")
+    assert not renpy.showing("cs_zhenya")
+    assert cs_p3_actor_opaque("cs_semen")
+    $ cs_p3_capture("semen_outside")
+    click until label cs_check_day03_95_semen_left
+    pause 0.4
+    assert not renpy.showing("cs_semen") and renpy.showing("cs_darya")
+    $ cs_p3_capture("semen_left")
+    click until label cs_check_day03_part03_complete
+    pause 0.4
+    assert cs_day03_part03_done and cs_day03_part02_done
+    assert not any(renpy.showing(t) for t in cs_presence_tags)
+    assert renpy.showing("cs_camp_path_day")
+    assert cs_mz_map_lead == bool(renpy.cs_p3_map)
+    assert cs_friend_se == renpy.cs_p3_se
+    assert cs_lena_elbow_bandaged and cs_lena_elbow_injury_day2 == 2 and cs_lena_no_sport_day2
+    assert cs_lena_book_returned == renpy.cs_p3_book
+    assert cs_day03_library_visit_time == ("late_morning" if renpy.cs_p3_map else "after_lunch" if renpy.cs_p3_ask else None)
+    $ cs_p3_capture("medical_path")
+    $ open(config.basedir + "/p3_%s_PASS.txt" % renpy.cs_p3_case,"w").write("PASS")
+    $ cs_reset_state()
+    assert not cs_mz_book_requested_day3 and not cs_mz_day3_book_awarded and not cs_day03_part03_done
+    assert cs_day03_library_visit_time is None
+    run Quit(confirm=False)
+
+testcase cs_day03_p3_5:
+    pause 0.5
+    $ renpy.cs_p3_case = 5
+    $ renpy.cs_p3_mz = 2
+    $ renpy.cs_p3_se = 0
+    $ renpy.cs_p3_map = 0
+    $ renpy.cs_p3_ask = False
+    $ renpy.cs_p3_book = True
+    $ renpy.cs_p3_door = False
+    $ renpy.cs_p3_bridge = False
+    $ renpy.cs_p3_reach = False
+    $ persistent.font_size = "small"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps = 0
+    $ _test.force = True
+    $ _test.timeout = 60.0
+    run Start("cs_qa_day03_p3")
+    click until label cs_check_day03_89
+    assert cs_friend_mz == renpy.cs_p3_mz and cs_friend_se == renpy.cs_p3_se
+    assert renpy.music.get_playing() == "sound/music/my_daily_life.ogg"
+    assert bool(cs_day03_at_dining_door) == renpy.cs_p3_door
+    click until label cs_check_day03_89_reflection
+    pause 0.4
+    assert not any(renpy.showing(t) for t in cs_presence_tags)
+    $ cs_p3_capture("reflection_walk")
+    click until label cs_check_day03_89_dialogue
+    pause 0.4
+    assert renpy.showing("cs_darya") and not renpy.showing("cs_semen")
+    click until label cs_check_day03_90_zhenya
+    pause 0.4
+    assert renpy.showing("cs_zhenya") and renpy.showing("cs_darya")
+    assert not renpy.showing("mz") and not renpy.showing("cs_semen")
+    assert cs_p3_actor_opaque("cs_zhenya")
+    $ cs_p3_capture("zhenya_arrival")
+    $ renpy.cs_p3_z_bounds = renpy.get_image_bounds("cs_zhenya")
+    click until label cs_check_day03_91
+    pause 0.4
+    assert renpy.showing("bg int_dining_hall_people_day")
+    assert renpy.showing("cs_zhenya") and renpy.showing("cs_darya")
+    assert renpy.get_image_bounds("cs_zhenya")[1:] == renpy.cs_p3_z_bounds[1:]
+    $ cs_p3_capture("breakfast")
+    click until label cs_check_day03_92_result
+    pause 0.4
+    assert cs_day03_mz_breakfast_together == (renpy.cs_p3_mz >= 1)
+    assert bool(renpy.showing("cs_zhenya")) == (renpy.cs_p3_mz >= 1)
+    assert renpy.showing("cs_darya")
+    $ cs_p3_capture("seating")
+    click until label cs_check_day03_93_reflection
+    pause 0.4
+    assert not any(renpy.showing(t) for t in cs_presence_tags)
+    $ cs_p3_capture("reflection_window")
+    click until label cs_check_day03_93_dialogue
+    assert renpy.showing("cs_darya")
+    assert bool(renpy.showing("cs_zhenya")) == (renpy.cs_p3_mz >= 1)
+    click until label cs_check_day03_93_semen
+    pause 0.4
+    assert renpy.showing("cs_semen") and renpy.showing("cs_darya")
+    assert not renpy.showing("cs_zhenya")
+    assert cs_p3_actor_opaque("cs_semen")
+    $ cs_p3_capture("semen_breakfast")
+    click until label cs_check_day03_93_semen_offscreen
+    assert cs_day03_semen_breakfast_joined == (renpy.cs_p3_se >= 3)
+    assert not renpy.showing("cs_semen")
+    click until label cs_check_day03_94_contact
+    pause 0.4
+    assert renpy.showing("cs_zhenya") and renpy.showing("cs_darya")
+    assert not renpy.showing("cs_semen")
+    assert cs_friend_mz == renpy.cs_p3_mz and not cs_mz_book_requested_day3
+    $ cs_p3_capture("book_contact")
+    $ renpy.take_screenshot()
+    $ renpy.save("p3_contact_"+str(renpy.cs_p3_case))
+    $ renpy.load("p3_contact_"+str(renpy.cs_p3_case))
+    pause 0.4
+    click until label cs_check_day03_94_menu
+    pause 0.4
+    $ cs_p3_capture("choice")
+    "Не задерживать Женю перед её делами"
+    click until label cs_check_day03_94b
+    pause 0.4
+    assert cs_friend_mz == renpy.cs_p3_mz + int(renpy.cs_p3_ask)
+    assert cs_mz_book_requested_day3 == renpy.cs_p3_ask
+    assert cs_mz_day3_book_awarded == renpy.cs_p3_ask
+    assert cs_day03_library_visit_time == ("late_morning" if renpy.cs_p3_map else "after_lunch" if renpy.cs_p3_ask else None)
+    assert renpy.showing("cs_zhenya") and renpy.showing("cs_darya")
+    $ cs_p3_capture("book_branch")
+    $ renpy.take_screenshot()
+    $ renpy.save("p3_award_"+str(renpy.cs_p3_case))
+    $ renpy.load("p3_award_"+str(renpy.cs_p3_case))
+    pause 0.4
+    assert cs_friend_mz == renpy.cs_p3_mz + int(renpy.cs_p3_ask)
+    click until label cs_check_day03_95_zhenya_left
+    pause 0.4
+    assert not renpy.showing("cs_zhenya")
+    $ cs_p3_capture("zhenya_left")
+    click until label cs_check_day03_95_semen_return
+    pause 0.4
+    assert renpy.showing("cs_semen") and renpy.showing("cs_darya")
+    assert not renpy.showing("cs_zhenya")
+    assert cs_p3_actor_opaque("cs_semen")
+    $ cs_p3_capture("semen_outside")
+    click until label cs_check_day03_95_semen_left
+    pause 0.4
+    assert not renpy.showing("cs_semen") and renpy.showing("cs_darya")
+    $ cs_p3_capture("semen_left")
+    click until label cs_check_day03_part03_complete
+    pause 0.4
+    assert cs_day03_part03_done and cs_day03_part02_done
+    assert not any(renpy.showing(t) for t in cs_presence_tags)
+    assert renpy.showing("cs_camp_path_day")
+    assert cs_mz_map_lead == bool(renpy.cs_p3_map)
+    assert cs_friend_se == renpy.cs_p3_se
+    assert cs_lena_elbow_bandaged and cs_lena_elbow_injury_day2 == 2 and cs_lena_no_sport_day2
+    assert cs_lena_book_returned == renpy.cs_p3_book
+    assert cs_day03_library_visit_time == ("late_morning" if renpy.cs_p3_map else "after_lunch" if renpy.cs_p3_ask else None)
+    $ cs_p3_capture("medical_path")
+    $ open(config.basedir + "/p3_%s_PASS.txt" % renpy.cs_p3_case,"w").write("PASS")
+    $ cs_reset_state()
+    assert not cs_mz_book_requested_day3 and not cs_mz_day3_book_awarded and not cs_day03_part03_done
+    assert cs_day03_library_visit_time is None
+    run Quit(confirm=False)
+
+testcase cs_day03_p3_6:
+    pause 0.5
+    $ renpy.cs_p3_case = 6
+    $ renpy.cs_p3_mz = 0
+    $ renpy.cs_p3_se = 3
+    $ renpy.cs_p3_map = 0
+    $ renpy.cs_p3_ask = True
+    $ renpy.cs_p3_book = False
+    $ renpy.cs_p3_door = True
+    $ renpy.cs_p3_bridge = False
+    $ renpy.cs_p3_reach = False
+    $ persistent.font_size = "small"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps = 0
+    $ _test.force = True
+    $ _test.timeout = 60.0
+    run Start("cs_qa_day03_p3")
+    click until label cs_check_day03_89
+    assert cs_friend_mz == renpy.cs_p3_mz and cs_friend_se == renpy.cs_p3_se
+    assert renpy.music.get_playing() == "sound/music/my_daily_life.ogg"
+    assert bool(cs_day03_at_dining_door) == renpy.cs_p3_door
+    click until label cs_check_day03_89_reflection
+    pause 0.4
+    assert not any(renpy.showing(t) for t in cs_presence_tags)
+    $ cs_p3_capture("reflection_walk")
+    click until label cs_check_day03_89_dialogue
+    pause 0.4
+    assert renpy.showing("cs_darya") and not renpy.showing("cs_semen")
+    click until label cs_check_day03_90_zhenya
+    pause 0.4
+    assert renpy.showing("cs_zhenya") and renpy.showing("cs_darya")
+    assert not renpy.showing("mz") and not renpy.showing("cs_semen")
+    assert cs_p3_actor_opaque("cs_zhenya")
+    $ cs_p3_capture("zhenya_arrival")
+    $ renpy.cs_p3_z_bounds = renpy.get_image_bounds("cs_zhenya")
+    click until label cs_check_day03_91
+    pause 0.4
+    assert renpy.showing("bg int_dining_hall_people_day")
+    assert renpy.showing("cs_zhenya") and renpy.showing("cs_darya")
+    assert renpy.get_image_bounds("cs_zhenya")[1:] == renpy.cs_p3_z_bounds[1:]
+    $ cs_p3_capture("breakfast")
+    click until label cs_check_day03_92_result
+    pause 0.4
+    assert cs_day03_mz_breakfast_together == (renpy.cs_p3_mz >= 1)
+    assert bool(renpy.showing("cs_zhenya")) == (renpy.cs_p3_mz >= 1)
+    assert renpy.showing("cs_darya")
+    $ cs_p3_capture("seating")
+    click until label cs_check_day03_93_reflection
+    pause 0.4
+    assert not any(renpy.showing(t) for t in cs_presence_tags)
+    $ cs_p3_capture("reflection_window")
+    click until label cs_check_day03_93_dialogue
+    assert renpy.showing("cs_darya")
+    assert bool(renpy.showing("cs_zhenya")) == (renpy.cs_p3_mz >= 1)
+    click until label cs_check_day03_93_semen
+    pause 0.4
+    assert renpy.showing("cs_semen") and renpy.showing("cs_darya")
+    assert not renpy.showing("cs_zhenya")
+    assert cs_p3_actor_opaque("cs_semen")
+    $ cs_p3_capture("semen_breakfast")
+    click until label cs_check_day03_93_semen_offscreen
+    assert cs_day03_semen_breakfast_joined == (renpy.cs_p3_se >= 3)
+    assert not renpy.showing("cs_semen")
+    click until label cs_check_day03_94_contact
+    pause 0.4
+    assert renpy.showing("cs_zhenya") and renpy.showing("cs_darya")
+    assert not renpy.showing("cs_semen")
+    assert cs_friend_mz == renpy.cs_p3_mz and not cs_mz_book_requested_day3
+    $ cs_p3_capture("book_contact")
+    $ renpy.take_screenshot()
+    $ renpy.save("p3_contact_"+str(renpy.cs_p3_case))
+    $ renpy.load("p3_contact_"+str(renpy.cs_p3_case))
+    pause 0.4
+    click until label cs_check_day03_94_menu
+    pause 0.4
+    $ cs_p3_capture("choice")
+    "Спросить Женю, какую книгу она посоветовала бы прочитать"
+    click until label cs_check_day03_94a
+    pause 0.4
+    assert cs_friend_mz == renpy.cs_p3_mz + int(renpy.cs_p3_ask)
+    assert cs_mz_book_requested_day3 == renpy.cs_p3_ask
+    assert cs_mz_day3_book_awarded == renpy.cs_p3_ask
+    assert cs_day03_library_visit_time == ("late_morning" if renpy.cs_p3_map else "after_lunch" if renpy.cs_p3_ask else None)
+    assert renpy.showing("cs_zhenya") and renpy.showing("cs_darya")
+    $ cs_p3_capture("book_branch")
+    $ renpy.take_screenshot()
+    $ renpy.save("p3_award_"+str(renpy.cs_p3_case))
+    $ renpy.load("p3_award_"+str(renpy.cs_p3_case))
+    pause 0.4
+    assert cs_friend_mz == renpy.cs_p3_mz + int(renpy.cs_p3_ask)
+    click until label cs_check_day03_95_zhenya_left
+    pause 0.4
+    assert not renpy.showing("cs_zhenya")
+    $ cs_p3_capture("zhenya_left")
+    click until label cs_check_day03_95_semen_return
+    pause 0.4
+    assert renpy.showing("cs_semen") and renpy.showing("cs_darya")
+    assert not renpy.showing("cs_zhenya")
+    assert cs_p3_actor_opaque("cs_semen")
+    $ cs_p3_capture("semen_outside")
+    click until label cs_check_day03_95_semen_left
+    pause 0.4
+    assert not renpy.showing("cs_semen") and renpy.showing("cs_darya")
+    $ cs_p3_capture("semen_left")
+    click until label cs_check_day03_part03_complete
+    pause 0.4
+    assert cs_day03_part03_done and cs_day03_part02_done
+    assert not any(renpy.showing(t) for t in cs_presence_tags)
+    assert renpy.showing("cs_camp_path_day")
+    assert cs_mz_map_lead == bool(renpy.cs_p3_map)
+    assert cs_friend_se == renpy.cs_p3_se
+    assert cs_lena_elbow_bandaged and cs_lena_elbow_injury_day2 == 2 and cs_lena_no_sport_day2
+    assert cs_lena_book_returned == renpy.cs_p3_book
+    assert cs_day03_library_visit_time == ("late_morning" if renpy.cs_p3_map else "after_lunch" if renpy.cs_p3_ask else None)
+    $ cs_p3_capture("medical_path")
+    $ open(config.basedir + "/p3_%s_PASS.txt" % renpy.cs_p3_case,"w").write("PASS")
+    $ cs_reset_state()
+    assert not cs_mz_book_requested_day3 and not cs_mz_day3_book_awarded and not cs_day03_part03_done
+    assert cs_day03_library_visit_time is None
+    run Quit(confirm=False)
+
+testcase cs_day03_p3_7:
+    pause 0.5
+    $ renpy.cs_p3_case = 7
+    $ renpy.cs_p3_mz = 1
+    $ renpy.cs_p3_se = 3
+    $ renpy.cs_p3_map = 1
+    $ renpy.cs_p3_ask = True
+    $ renpy.cs_p3_book = True
+    $ renpy.cs_p3_door = False
+    $ renpy.cs_p3_bridge = True
+    $ renpy.cs_p3_reach = False
+    $ persistent.font_size = "small"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps = 0
+    $ _test.force = True
+    $ _test.timeout = 60.0
+    run Start("cs_qa_day03_p3")
+    click until label cs_check_day03_89
+    assert cs_friend_mz == renpy.cs_p3_mz and cs_friend_se == renpy.cs_p3_se
+    assert renpy.music.get_playing() == "sound/music/my_daily_life.ogg"
+    assert bool(cs_day03_at_dining_door) == renpy.cs_p3_door
+    click until label cs_check_day03_89_reflection
+    pause 0.4
+    assert not any(renpy.showing(t) for t in cs_presence_tags)
+    $ cs_p3_capture("reflection_walk")
+    click until label cs_check_day03_89_dialogue
+    pause 0.4
+    assert renpy.showing("cs_darya") and not renpy.showing("cs_semen")
+    click until label cs_check_day03_90_zhenya
+    pause 0.4
+    assert renpy.showing("cs_zhenya") and renpy.showing("cs_darya")
+    assert not renpy.showing("mz") and not renpy.showing("cs_semen")
+    assert cs_p3_actor_opaque("cs_zhenya")
+    $ cs_p3_capture("zhenya_arrival")
+    $ renpy.cs_p3_z_bounds = renpy.get_image_bounds("cs_zhenya")
+    click until label cs_check_day03_91
+    pause 0.4
+    assert renpy.showing("bg int_dining_hall_people_day")
+    assert renpy.showing("cs_zhenya") and renpy.showing("cs_darya")
+    assert renpy.get_image_bounds("cs_zhenya")[1:] == renpy.cs_p3_z_bounds[1:]
+    $ cs_p3_capture("breakfast")
+    click until label cs_check_day03_92_result
+    pause 0.4
+    assert cs_day03_mz_breakfast_together == (renpy.cs_p3_mz >= 1)
+    assert bool(renpy.showing("cs_zhenya")) == (renpy.cs_p3_mz >= 1)
+    assert renpy.showing("cs_darya")
+    $ cs_p3_capture("seating")
+    click until label cs_check_day03_93_reflection
+    pause 0.4
+    assert not any(renpy.showing(t) for t in cs_presence_tags)
+    $ cs_p3_capture("reflection_window")
+    click until label cs_check_day03_93_dialogue
+    assert renpy.showing("cs_darya")
+    assert bool(renpy.showing("cs_zhenya")) == (renpy.cs_p3_mz >= 1)
+    click until label cs_check_day03_93_semen
+    pause 0.4
+    assert renpy.showing("cs_semen") and renpy.showing("cs_darya")
+    assert not renpy.showing("cs_zhenya")
+    assert cs_p3_actor_opaque("cs_semen")
+    $ cs_p3_capture("semen_breakfast")
+    click until label cs_check_day03_93_semen_offscreen
+    assert cs_day03_semen_breakfast_joined == (renpy.cs_p3_se >= 3)
+    assert not renpy.showing("cs_semen")
+    click until label cs_check_day03_94_contact
+    pause 0.4
+    assert renpy.showing("cs_zhenya") and renpy.showing("cs_darya")
+    assert not renpy.showing("cs_semen")
+    assert cs_friend_mz == renpy.cs_p3_mz and not cs_mz_book_requested_day3
+    $ cs_p3_capture("book_contact")
+    $ renpy.take_screenshot()
+    $ renpy.save("p3_contact_"+str(renpy.cs_p3_case))
+    $ renpy.load("p3_contact_"+str(renpy.cs_p3_case))
+    pause 0.4
+    click until label cs_check_day03_94_menu
+    pause 0.4
+    $ cs_p3_capture("choice")
+    "Спросить Женю, какую книгу она посоветовала бы прочитать"
+    click until label cs_check_day03_94a
+    pause 0.4
+    assert cs_friend_mz == renpy.cs_p3_mz + int(renpy.cs_p3_ask)
+    assert cs_mz_book_requested_day3 == renpy.cs_p3_ask
+    assert cs_mz_day3_book_awarded == renpy.cs_p3_ask
+    assert cs_day03_library_visit_time == ("late_morning" if renpy.cs_p3_map else "after_lunch" if renpy.cs_p3_ask else None)
+    assert renpy.showing("cs_zhenya") and renpy.showing("cs_darya")
+    $ cs_p3_capture("book_branch")
+    $ renpy.take_screenshot()
+    $ renpy.save("p3_award_"+str(renpy.cs_p3_case))
+    $ renpy.load("p3_award_"+str(renpy.cs_p3_case))
+    pause 0.4
+    assert cs_friend_mz == renpy.cs_p3_mz + int(renpy.cs_p3_ask)
+    click until label cs_check_day03_95_zhenya_left
+    pause 0.4
+    assert not renpy.showing("cs_zhenya")
+    $ cs_p3_capture("zhenya_left")
+    click until label cs_check_day03_95_semen_return
+    pause 0.4
+    assert renpy.showing("cs_semen") and renpy.showing("cs_darya")
+    assert not renpy.showing("cs_zhenya")
+    assert cs_p3_actor_opaque("cs_semen")
+    $ cs_p3_capture("semen_outside")
+    click until label cs_check_day03_95_semen_left
+    pause 0.4
+    assert not renpy.showing("cs_semen") and renpy.showing("cs_darya")
+    $ cs_p3_capture("semen_left")
+    click until label cs_check_day03_part03_complete
+    pause 0.4
+    assert cs_day03_part03_done and cs_day03_part02_done
+    assert not any(renpy.showing(t) for t in cs_presence_tags)
+    assert renpy.showing("cs_camp_path_day")
+    assert cs_mz_map_lead == bool(renpy.cs_p3_map)
+    assert cs_friend_se == renpy.cs_p3_se
+    assert cs_lena_elbow_bandaged and cs_lena_elbow_injury_day2 == 2 and cs_lena_no_sport_day2
+    assert cs_lena_book_returned == renpy.cs_p3_book
+    assert cs_day03_library_visit_time == ("late_morning" if renpy.cs_p3_map else "after_lunch" if renpy.cs_p3_ask else None)
+    $ cs_p3_capture("medical_path")
+    $ open(config.basedir + "/p3_%s_PASS.txt" % renpy.cs_p3_case,"w").write("PASS")
+    $ cs_reset_state()
+    assert not cs_mz_book_requested_day3 and not cs_mz_day3_book_awarded and not cs_day03_part03_done
+    assert cs_day03_library_visit_time is None
+    run Quit(confirm=False)
+
+testcase cs_day03_p3_8:
+    pause 0.5
+    $ renpy.cs_p3_case = 8
+    $ renpy.cs_p3_mz = 2
+    $ renpy.cs_p3_se = 3
+    $ renpy.cs_p3_map = 1
+    $ renpy.cs_p3_ask = True
+    $ renpy.cs_p3_book = True
+    $ renpy.cs_p3_door = False
+    $ renpy.cs_p3_bridge = False
+    $ renpy.cs_p3_reach = True
+    $ persistent.font_size = "small"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps = 0
+    $ _test.force = True
+    $ _test.timeout = 60.0
+    run Start("cs_qa_day03_p3")
+    click until label cs_check_day01_part10_choice
+    "Предложить Жене помощь с книгами"
+    click until label cs_check_part08_menu
+    "Подойти к Жене и поблагодарить за вчерашний разговор"
+    click until label cs_check_day03_89
+    assert cs_friend_mz == renpy.cs_p3_mz and cs_friend_se == renpy.cs_p3_se
+    assert renpy.music.get_playing() == "sound/music/my_daily_life.ogg"
+    assert bool(cs_day03_at_dining_door) == renpy.cs_p3_door
+    click until label cs_check_day03_89_reflection
+    pause 0.4
+    assert not any(renpy.showing(t) for t in cs_presence_tags)
+    $ cs_p3_capture("reflection_walk")
+    click until label cs_check_day03_89_dialogue
+    pause 0.4
+    assert renpy.showing("cs_darya") and not renpy.showing("cs_semen")
+    click until label cs_check_day03_90_zhenya
+    pause 0.4
+    assert renpy.showing("cs_zhenya") and renpy.showing("cs_darya")
+    assert not renpy.showing("mz") and not renpy.showing("cs_semen")
+    assert cs_p3_actor_opaque("cs_zhenya")
+    $ cs_p3_capture("zhenya_arrival")
+    $ renpy.cs_p3_z_bounds = renpy.get_image_bounds("cs_zhenya")
+    click until label cs_check_day03_91
+    pause 0.4
+    assert renpy.showing("bg int_dining_hall_people_day")
+    assert renpy.showing("cs_zhenya") and renpy.showing("cs_darya")
+    assert renpy.get_image_bounds("cs_zhenya")[1:] == renpy.cs_p3_z_bounds[1:]
+    $ cs_p3_capture("breakfast")
+    click until label cs_check_day03_92_result
+    pause 0.4
+    assert cs_day03_mz_breakfast_together == (renpy.cs_p3_mz >= 1)
+    assert bool(renpy.showing("cs_zhenya")) == (renpy.cs_p3_mz >= 1)
+    assert renpy.showing("cs_darya")
+    $ cs_p3_capture("seating")
+    click until label cs_check_day03_93_reflection
+    pause 0.4
+    assert not any(renpy.showing(t) for t in cs_presence_tags)
+    $ cs_p3_capture("reflection_window")
+    click until label cs_check_day03_93_dialogue
+    assert renpy.showing("cs_darya")
+    assert bool(renpy.showing("cs_zhenya")) == (renpy.cs_p3_mz >= 1)
+    click until label cs_check_day03_93_semen
+    pause 0.4
+    assert renpy.showing("cs_semen") and renpy.showing("cs_darya")
+    assert not renpy.showing("cs_zhenya")
+    assert cs_p3_actor_opaque("cs_semen")
+    $ cs_p3_capture("semen_breakfast")
+    click until label cs_check_day03_93_semen_offscreen
+    assert cs_day03_semen_breakfast_joined == (renpy.cs_p3_se >= 3)
+    assert not renpy.showing("cs_semen")
+    click until label cs_check_day03_94_contact
+    pause 0.4
+    assert renpy.showing("cs_zhenya") and renpy.showing("cs_darya")
+    assert not renpy.showing("cs_semen")
+    assert cs_friend_mz == renpy.cs_p3_mz and not cs_mz_book_requested_day3
+    $ cs_p3_capture("book_contact")
+    $ renpy.take_screenshot()
+    $ renpy.save("p3_contact_"+str(renpy.cs_p3_case))
+    $ renpy.load("p3_contact_"+str(renpy.cs_p3_case))
+    pause 0.4
+    click until label cs_check_day03_94_menu
+    pause 0.4
+    $ cs_p3_capture("choice")
+    "Спросить Женю, какую книгу она посоветовала бы прочитать"
+    click until label cs_check_day03_94a
+    pause 0.4
+    assert cs_friend_mz == renpy.cs_p3_mz + int(renpy.cs_p3_ask)
+    assert cs_mz_book_requested_day3 == renpy.cs_p3_ask
+    assert cs_mz_day3_book_awarded == renpy.cs_p3_ask
+    assert cs_day03_library_visit_time == ("late_morning" if renpy.cs_p3_map else "after_lunch" if renpy.cs_p3_ask else None)
+    assert renpy.showing("cs_zhenya") and renpy.showing("cs_darya")
+    $ cs_p3_capture("book_branch")
+    $ renpy.take_screenshot()
+    $ renpy.save("p3_award_"+str(renpy.cs_p3_case))
+    $ renpy.load("p3_award_"+str(renpy.cs_p3_case))
+    pause 0.4
+    assert cs_friend_mz == renpy.cs_p3_mz + int(renpy.cs_p3_ask)
+    click until label cs_check_day03_95_zhenya_left
+    pause 0.4
+    assert not renpy.showing("cs_zhenya")
+    $ cs_p3_capture("zhenya_left")
+    click until label cs_check_day03_95_semen_return
+    pause 0.4
+    assert renpy.showing("cs_semen") and renpy.showing("cs_darya")
+    assert not renpy.showing("cs_zhenya")
+    assert cs_p3_actor_opaque("cs_semen")
+    $ cs_p3_capture("semen_outside")
+    click until label cs_check_day03_95_semen_left
+    pause 0.4
+    assert not renpy.showing("cs_semen") and renpy.showing("cs_darya")
+    $ cs_p3_capture("semen_left")
+    click until label cs_check_day03_part03_complete
+    pause 0.4
+    assert cs_day03_part03_done and cs_day03_part02_done
+    assert not any(renpy.showing(t) for t in cs_presence_tags)
+    assert renpy.showing("cs_camp_path_day")
+    assert cs_mz_map_lead == bool(renpy.cs_p3_map)
+    assert cs_friend_se == renpy.cs_p3_se
+    assert cs_lena_elbow_bandaged and cs_lena_elbow_injury_day2 == 2 and cs_lena_no_sport_day2
+    assert cs_lena_book_returned == renpy.cs_p3_book
+    assert cs_day03_library_visit_time == ("late_morning" if renpy.cs_p3_map else "after_lunch" if renpy.cs_p3_ask else None)
+    $ cs_p3_capture("medical_path")
+    $ open(config.basedir + "/p3_%s_PASS.txt" % renpy.cs_p3_case,"w").write("PASS")
+    $ cs_reset_state()
+    assert not cs_mz_book_requested_day3 and not cs_mz_day3_book_awarded and not cs_day03_part03_done
+    assert cs_day03_library_visit_time is None
+    run Quit(confirm=False)
+
+label cs_qa_day03_p3_guard:
+    $ cs_reset_state()
+    $ cs_active = True
+    $ cs_friend_mz = 2
+    $ cs_mz_map_lead = True
+    $ cs_lena_book_returned = True
+    $ set_mode_adv()
+    $ day_time()
+    scene bg int_dining_hall_people_day
+    show cs_zhenya normal pioneer normal at cs_darya_normal_left
+    show cs_darya neutral pioneer normal at cs_darya_normal_right
+    $ cs_presence_stage()
+    call cs_day03_zhenya_book_choice
+    label cs_check_day03_p3_guard_second:
+    call cs_day03_zhenya_book_choice
+    label cs_check_day03_p3_guard_done:
+    cs_narrator "Проверка завершена."
+    return
+
+testcase cs_day03_p3_guard:
+    pause 0.5
+    $ persistent.font_size = "small"
+    $ _preferences.text_cps = 0
+    $ _test.force = True
+    $ _test.timeout = 60.0
+    run Start("cs_qa_day03_p3_guard")
+    "Спросить Женю, какую книгу она посоветовала бы прочитать"
+    click until label cs_check_day03_p3_guard_second
+    "Спросить Женю, какую книгу она посоветовала бы прочитать"
+    click until label cs_check_day03_p3_guard_done
+    assert cs_friend_mz == 3 and cs_mz_day3_book_awarded and cs_mz_book_requested_day3
+    $ open(config.basedir + "/p3_guard_PASS.txt","w").write("PASS")
+    run Quit(confirm=False)

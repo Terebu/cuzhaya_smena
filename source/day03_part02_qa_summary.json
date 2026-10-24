@@ -1,0 +1,121 @@
+{
+  "status": "PASS",
+  "final_release": "D:\\stean\\release_chuzaya_smena\\day03_part02_20261022_complete",
+  "final_native_tests": [
+    {
+      "test": "cs_day03_p2_6",
+      "exit": 0
+    },
+    {
+      "test": "cs_day03_p2_7",
+      "exit": 0
+    },
+    {
+      "test": "cs_day03_p2_8",
+      "exit": 0
+    },
+    {
+      "test": "cs_day03_p2_guard",
+      "exit": 0
+    },
+    {
+      "test": "cs_day03_after_night_load",
+      "exit": 0
+    },
+    {
+      "test": "cs_day03_assets",
+      "exit": 0
+    },
+    {
+      "test": "cs_day03_entry_frames",
+      "exit": 0
+    },
+    {
+      "test": "cs_poster_25",
+      "exit": 0
+    },
+    {
+      "test": "cs_poster_33",
+      "exit": 0
+    }
+  ],
+  "friendship_matrix_tests": [
+    {
+      "test": "cs_day03_p2_0",
+      "exit": 0
+    },
+    {
+      "test": "cs_day03_p2_1",
+      "exit": 0
+    },
+    {
+      "test": "cs_day03_p2_2",
+      "exit": 0
+    },
+    {
+      "test": "cs_day03_p2_3",
+      "exit": 0
+    },
+    {
+      "test": "cs_day03_p2_4",
+      "exit": 0
+    },
+    {
+      "test": "cs_day03_p2_5",
+      "exit": 0
+    }
+  ],
+  "matrix_release": "D:\\stean\\release_chuzaya_smena\\day03_part02_20261022_final",
+  "unchanged_friendship_flow_sha256": "e25ddbd5073e5ce766258750e5174c63d6e2eaa62f35f0e606a54fa3cc4ed057",
+  "entry_frames": {
+    "status": "PASS",
+    "frames": [
+      {
+        "frame": 0,
+        "no_upper_ghost": true
+      },
+      {
+        "frame": 1,
+        "no_upper_ghost": true
+      },
+      {
+        "frame": 2,
+        "no_upper_ghost": true
+      },
+      {
+        "frame": 3,
+        "no_upper_ghost": true
+      },
+      {
+        "frame": 4,
+        "no_upper_ghost": true
+      },
+      {
+        "frame": 5,
+        "no_upper_ghost": true
+      },
+      {
+        "frame": 6,
+        "no_upper_ghost": true
+      },
+      {
+        "frame": 7,
+        "no_upper_ghost": true
+      }
+    ]
+  },
+  "manually_inspected": [
+    "entry_0.png",
+    "poster_25_transition.png",
+    "poster_33_cg.png",
+    "poster_33_loaded.png",
+    "poster_33_restored.png"
+  ],
+  "lint": "exit 0; pre-existing original-game resource/screen/translation diagnostics and two non-ASCII mod asset names",
+  "story_tracebacks": [],
+  "earlier_visual_reviews": [
+    "door/dressed/mirror in the same room before the final entry fade",
+    "two-actor dialogue, departure, dining exterior and waiting panel",
+    "entry fade frames 0, 1 and final; reproduced bad first frame preserved separately"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "manuscript_blocks": 732,
+  "runtime_blocks": 735,
+  "editorial_replacements": {
+    "Кстати, это ты там что-то кричала возле столовой?": "Кстати, это ты возле столовой очередь ко мне распределяла?",
+    "Третий визит к местной медицине.": "Плановый осмотр после вчерашних приключений.",
+    "Удивительно. Стоит дважды поранить локоть, и люди уже начинают считать тебя постоянным клиентом.": "Удивительно. Стоит вернуться на перевязку, и люди уже начинают считать тебя постоянным клиентом."
+  },
+  "continuity_additions": [
+    [
+      "cs_narrator",
+      "Я убрала запечатанный пакет в сумку, чтобы не потерять его по дороге."
+    ],
+    [
+      "cs_vi",
+      "Запасная повязка ещё у тебя? Пусть остаётся в сумке. Если рука будет беспокоить, приходи."
+    ],
+    [
+      "cs_ls",
+      "Да, она со мной. Спасибо."
+    ]
+  ],
+  "scripts": 327,
+  "checks": [
+    "Unique labels/defaults",
+    "Two independent guarded DV rewards",
+    "Prior Viola friendship snapshot",
+    "Gift before Alice, no duplicate item",
+    "Single examination",
+    "Part5 bridge respects earlier decision",
+    "Solo framing shared by all registered actors",
+    "Long reflective focus clears all portraits"
+  ]
+}

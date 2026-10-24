@@ -1,0 +1,510 @@
+# -*- coding: utf-8 -*-
+init 97 python:
+    renpy.cs_lr_fast=False
+    cs_lr_old_say=config.say_arguments_callback
+    cs_lr_old_labels=config.label_callback
+    cs_lr_old_menu=config.menu_arguments_callback
+    def cs_lr_say(who,*args,**kwargs):
+        if cs_lr_old_say:
+            args,kwargs=cs_lr_old_say(who,*args,**kwargs)
+        if renpy.cs_lr_fast: kwargs["interact"]=False
+        return args,kwargs
+    def cs_lr_menu(items,*args,**kwargs):
+        choices=[(label,value) for label,value in items if value is not None]
+        val=choices[0 if renpy.cs_lr_yes else -1][1]
+        return val() if callable(val) else val
+    def cs_lr_menu_args(*args,**kwargs):
+        if cs_lr_old_menu: args,kwargs=cs_lr_old_menu(*args,**kwargs)
+        if renpy.cs_lr_fast: store.menu=cs_lr_menu
+        return args,kwargs
+    def cs_lr_label(name,abnormal):
+        if cs_lr_old_labels: cs_lr_old_labels(name,abnormal)
+        if not renpy.cs_lr_fast: return
+        if name in ("cs_day03_122","cs_day03_124","cs_day03_125","cs_day03_126","cs_day03_127","cs_check_day03_127_darya_left","cs_check_day03_128_library"):
+            renpy.cs_lr_pending=name
+        if name=="cs_day03_122": assert renpy.showing("cs_zhenya") and not renpy.showing("cs_darya")
+        if name=="cs_day03_127": assert not renpy.showing("cs_zhenya") and cs_director_states["cs_zhenya"]=="ABSENT"
+        if name=="cs_check_day03_127_darya_left": assert not renpy.showing("cs_darya") and cs_director_states["cs_darya"]=="ABSENT"
+    def cs_lr_character(event,**kwargs):
+        if event!="show_done" or not renpy.cs_lr_fast: return
+        cast=tuple(sorted(t for t in cs_presence_tags if renpy.showing(t)))
+        if cast!=renpy.cs_lr_cast or renpy.cs_lr_pending:
+            renpy.cs_lr_cast=cast
+            renpy.cs_lr_count+=1
+            renpy.pause(0.25,hard=True)
+            cs_p6_capture("%02d_%s"%(renpy.cs_lr_count,renpy.cs_lr_pending or "cast"))
+            renpy.cs_lr_pending=None
+    config.say_arguments_callback=cs_lr_say
+    config.label_callback=cs_lr_label
+    config.menu_arguments_callback=cs_lr_menu_args
+    config.all_character_callbacks.append(cs_lr_character)
+
+label cs_qa_lunch_revision:
+    $ cs_reset_state()
+    $ cs_active=cs_darya_known=cs_un_name_known=True
+    $ cs_friend_mz=renpy.cs_lr_mz
+    $ cs_friend_un=renpy.cs_lr_un
+    $ cs_friend_mi=cs_friend_dv=2
+    $ cs_mi_day3_arrangement_help=renpy.cs_lr_mi
+    $ cs_dv_music_talk_day3=renpy.cs_lr_dv
+    $ cs_un_sketch_invite_day3=renpy.cs_lr_invite
+    $ cs_un_day3_art_talk=renpy.cs_lr_art
+    $ cs_mz_day3_book_awarded=renpy.cs_lr_book
+    $ cs_mz_book_requested_day3=renpy.cs_lr_book
+    $ cs_mz_catalog_checked_day3=cs_mz_map_lead=True
+    $ cs_lena_book_returned=renpy.cs_lr_returned
+    $ cs_day03_part06_done=cs_day03_lunch_arrived=True
+    $ cs_day03_lunch_horn_played=True
+    $ cs_sl_poster_collected_day3=bool(renpy.cs_lr_poster)
+    $ cs_day03_poster_location=renpy.cs_lr_poster
+    $ cs_viola_spare_bandage=True
+    $ cs_lena_elbow_injury_day2=2
+    $ cs_lena_elbow_bandaged=cs_lena_no_sport_day2=True
+    $ cs_day03_documents_location="administration"
+    $ set_mode_adv()
+    $ day_time()
+    $ persistent.sprite_time="day"
+    $ cs_director_scene("bg int_dining_hall_people_day")
+    scene bg int_dining_hall_people_day
+    show cs_zhenya normal pioneer normal at cs_darya_normal_left
+    show cs_darya shrug pioneer normal at cs_darya_normal_right
+    $ cs_presence_stage()
+    jump cs_day03_part07
+
+label cs_qa_lunch_revision_guard:
+    $ cs_reset_state()
+    $ cs_active=cs_darya_known=cs_un_name_known=True
+    $ set_mode_adv()
+    $ day_time()
+    $ cs_director_scene("bg int_dining_hall_people_day")
+    scene bg int_dining_hall_people_day
+    $ cs_frame_focus(["cs_zhenya","cs_darya"])
+    call cs_day03_un_lunch_choice
+    call cs_day03_un_lunch_choice
+    $ cs_mz_book_prepared_day3=True
+    $ cs_mz_quiet_reading_place_day3=True
+    call cs_day03_128
+    $ renpy.cs_lr_first_id=cs_day03_reading_book_id
+    call cs_day03_128
+    label cs_check_lunch_revision_guard_end:
+    cs_narrator "Проверка завершена."
+    return
+
+testcase cs_lunch_revision_0:
+    pause 0.5
+    $ persistent.font_size="small"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps=0
+    $ _preferences.transitions=2
+    $ _test.force=True
+    $ _test.timeout=120.0
+    $ renpy.cs_lr_mz=0
+    $ renpy.cs_lr_un=0
+    $ renpy.cs_lr_yes=False
+    $ renpy.cs_lr_invite=False
+    $ renpy.cs_lr_art=False
+    $ renpy.cs_lr_mi=False
+    $ renpy.cs_lr_dv=False
+    $ renpy.cs_lr_book=False
+    $ renpy.cs_lr_returned=False
+    $ renpy.cs_lr_poster=None
+    $ renpy.cs_lr_fast=True
+    $ renpy.cs_lr_pending=None
+    $ renpy.cs_lr_cast=()
+    $ renpy.cs_lr_count=0
+    $ renpy.cs_p6_case="lunch_revision_0"
+    run Start("cs_qa_lunch_revision")
+    click until label cs_check_day03_part07_complete
+    pause 0.5
+    assert cs_day03_part07_done and cs_day03_reading_book_selected
+    assert cs_day03_reading_book_id=="paustovsky_warm_bread"
+    assert cs_day03_reading_book_location=="library_reading_table"
+    assert not cs_reading_book_borrowed
+    assert cs_viola_spare_bandage and cs_lena_elbow_bandaged and cs_lena_no_sport_day2
+    assert cs_lena_elbow_injury_day2==2 and cs_day03_documents_location=="administration"
+    assert cs_mz_catalog_checked_day3 and cs_day03_darya_destination=="music_club"
+    assert not any(renpy.showing(t) for t in cs_presence_tags)
+    assert cs_friend_mz==0 and cs_friend_un==0
+    assert cs_friend_mi==2 and cs_friend_dv==2
+    assert cs_mz_book_prepared_day3==False and cs_mz_quiet_reading_place_day3==False
+    assert cs_un_sketch_time_agreed_day3==False and cs_un_sketch_invite_day3==False
+    assert cs_mi_followup_invitation_day3==False and cs_dv_followup_invitation_day3==False
+    assert cs_day03_poster_location==None
+    $ cs_p6_capture("complete")
+    $ renpy.take_screenshot()
+    $ renpy.save("lunch_revision_complete")
+    $ renpy.load("lunch_revision_complete")
+    pause 0.5
+    assert cs_day03_reading_book_id=="paustovsky_warm_bread"
+    $ open(config.basedir+"/lunch_revision_0_PASS.txt","w").write("PASS")
+    run Quit(confirm=False)
+
+testcase cs_lunch_revision_1:
+    pause 0.5
+    $ persistent.font_size="small"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps=0
+    $ _preferences.transitions=2
+    $ _test.force=True
+    $ _test.timeout=120.0
+    $ renpy.cs_lr_mz=1
+    $ renpy.cs_lr_un=0
+    $ renpy.cs_lr_yes=True
+    $ renpy.cs_lr_invite=False
+    $ renpy.cs_lr_art=False
+    $ renpy.cs_lr_mi=False
+    $ renpy.cs_lr_dv=False
+    $ renpy.cs_lr_book=True
+    $ renpy.cs_lr_returned=False
+    $ renpy.cs_lr_poster=None
+    $ renpy.cs_lr_fast=True
+    $ renpy.cs_lr_pending=None
+    $ renpy.cs_lr_cast=()
+    $ renpy.cs_lr_count=0
+    $ renpy.cs_p6_case="lunch_revision_1"
+    run Start("cs_qa_lunch_revision")
+    click until label cs_check_day03_part07_complete
+    pause 0.5
+    assert cs_day03_part07_done and cs_day03_reading_book_selected
+    assert cs_day03_reading_book_id=="paustovsky_warm_bread"
+    assert cs_day03_reading_book_location=="library_reading_table"
+    assert not cs_reading_book_borrowed
+    assert cs_viola_spare_bandage and cs_lena_elbow_bandaged and cs_lena_no_sport_day2
+    assert cs_lena_elbow_injury_day2==2 and cs_day03_documents_location=="administration"
+    assert cs_mz_catalog_checked_day3 and cs_day03_darya_destination=="music_club"
+    assert not any(renpy.showing(t) for t in cs_presence_tags)
+    assert cs_friend_mz==1 and cs_friend_un==1
+    assert cs_friend_mi==2 and cs_friend_dv==2
+    assert cs_mz_book_prepared_day3==False and cs_mz_quiet_reading_place_day3==False
+    assert cs_un_sketch_time_agreed_day3==False and cs_un_sketch_invite_day3==False
+    assert cs_mi_followup_invitation_day3==False and cs_dv_followup_invitation_day3==False
+    assert cs_day03_poster_location==None
+    $ cs_p6_capture("complete")
+    $ renpy.take_screenshot()
+    $ renpy.save("lunch_revision_complete")
+    $ renpy.load("lunch_revision_complete")
+    pause 0.5
+    assert cs_day03_reading_book_id=="paustovsky_warm_bread"
+    $ open(config.basedir+"/lunch_revision_1_PASS.txt","w").write("PASS")
+    run Quit(confirm=False)
+
+testcase cs_lunch_revision_2:
+    pause 0.5
+    $ persistent.font_size="small"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps=0
+    $ _preferences.transitions=2
+    $ _test.force=True
+    $ _test.timeout=120.0
+    $ renpy.cs_lr_mz=2
+    $ renpy.cs_lr_un=1
+    $ renpy.cs_lr_yes=True
+    $ renpy.cs_lr_invite=False
+    $ renpy.cs_lr_art=False
+    $ renpy.cs_lr_mi=True
+    $ renpy.cs_lr_dv=False
+    $ renpy.cs_lr_book=True
+    $ renpy.cs_lr_returned=True
+    $ renpy.cs_lr_poster='darya_folder'
+    $ renpy.cs_lr_fast=True
+    $ renpy.cs_lr_pending=None
+    $ renpy.cs_lr_cast=()
+    $ renpy.cs_lr_count=0
+    $ renpy.cs_p6_case="lunch_revision_2"
+    run Start("cs_qa_lunch_revision")
+    click until label cs_check_day03_part07_complete
+    pause 0.5
+    assert cs_day03_part07_done and cs_day03_reading_book_selected
+    assert cs_day03_reading_book_id=="paustovsky_warm_bread"
+    assert cs_day03_reading_book_location=="library_reading_table"
+    assert not cs_reading_book_borrowed
+    assert cs_viola_spare_bandage and cs_lena_elbow_bandaged and cs_lena_no_sport_day2
+    assert cs_lena_elbow_injury_day2==2 and cs_day03_documents_location=="administration"
+    assert cs_mz_catalog_checked_day3 and cs_day03_darya_destination=="music_club"
+    assert not any(renpy.showing(t) for t in cs_presence_tags)
+    assert cs_friend_mz==2 and cs_friend_un==2
+    assert cs_friend_mi==2 and cs_friend_dv==2
+    assert cs_mz_book_prepared_day3==True and cs_mz_quiet_reading_place_day3==False
+    assert cs_un_sketch_time_agreed_day3==False and cs_un_sketch_invite_day3==True
+    assert cs_mi_followup_invitation_day3==True and cs_dv_followup_invitation_day3==False
+    assert cs_day03_poster_location=='darya_folder'
+    $ cs_p6_capture("complete")
+    $ renpy.take_screenshot()
+    $ renpy.save("lunch_revision_complete")
+    $ renpy.load("lunch_revision_complete")
+    pause 0.5
+    assert cs_day03_reading_book_id=="paustovsky_warm_bread"
+    $ open(config.basedir+"/lunch_revision_2_PASS.txt","w").write("PASS")
+    run Quit(confirm=False)
+
+testcase cs_lunch_revision_3:
+    pause 0.5
+    $ persistent.font_size="small"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps=0
+    $ _preferences.transitions=2
+    $ _test.force=True
+    $ _test.timeout=120.0
+    $ renpy.cs_lr_mz=3
+    $ renpy.cs_lr_un=2
+    $ renpy.cs_lr_yes=True
+    $ renpy.cs_lr_invite=True
+    $ renpy.cs_lr_art=True
+    $ renpy.cs_lr_mi=True
+    $ renpy.cs_lr_dv=True
+    $ renpy.cs_lr_book=True
+    $ renpy.cs_lr_returned=True
+    $ renpy.cs_lr_poster='darya_folder'
+    $ renpy.cs_lr_fast=True
+    $ renpy.cs_lr_pending=None
+    $ renpy.cs_lr_cast=()
+    $ renpy.cs_lr_count=0
+    $ renpy.cs_p6_case="lunch_revision_3"
+    run Start("cs_qa_lunch_revision")
+    click until label cs_check_day03_part07_complete
+    pause 0.5
+    assert cs_day03_part07_done and cs_day03_reading_book_selected
+    assert cs_day03_reading_book_id=="paustovsky_warm_bread"
+    assert cs_day03_reading_book_location=="library_reading_table"
+    assert not cs_reading_book_borrowed
+    assert cs_viola_spare_bandage and cs_lena_elbow_bandaged and cs_lena_no_sport_day2
+    assert cs_lena_elbow_injury_day2==2 and cs_day03_documents_location=="administration"
+    assert cs_mz_catalog_checked_day3 and cs_day03_darya_destination=="music_club"
+    assert not any(renpy.showing(t) for t in cs_presence_tags)
+    assert cs_friend_mz==3 and cs_friend_un==3
+    assert cs_friend_mi==2 and cs_friend_dv==2
+    assert cs_mz_book_prepared_day3==True and cs_mz_quiet_reading_place_day3==True
+    assert cs_un_sketch_time_agreed_day3==True and cs_un_sketch_invite_day3==True
+    assert cs_mi_followup_invitation_day3==True and cs_dv_followup_invitation_day3==True
+    assert cs_day03_poster_location=='darya_folder'
+    $ cs_p6_capture("complete")
+    $ renpy.take_screenshot()
+    $ renpy.save("lunch_revision_complete")
+    $ renpy.load("lunch_revision_complete")
+    pause 0.5
+    assert cs_day03_reading_book_id=="paustovsky_warm_bread"
+    $ open(config.basedir+"/lunch_revision_3_PASS.txt","w").write("PASS")
+    run Quit(confirm=False)
+
+testcase cs_lunch_revision_4:
+    pause 0.5
+    $ persistent.font_size="small"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps=0
+    $ _preferences.transitions=2
+    $ _test.force=True
+    $ _test.timeout=120.0
+    $ renpy.cs_lr_mz=3
+    $ renpy.cs_lr_un=2
+    $ renpy.cs_lr_yes=False
+    $ renpy.cs_lr_invite=True
+    $ renpy.cs_lr_art=True
+    $ renpy.cs_lr_mi=False
+    $ renpy.cs_lr_dv=True
+    $ renpy.cs_lr_book=False
+    $ renpy.cs_lr_returned=True
+    $ renpy.cs_lr_poster='house'
+    $ renpy.cs_lr_fast=True
+    $ renpy.cs_lr_pending=None
+    $ renpy.cs_lr_cast=()
+    $ renpy.cs_lr_count=0
+    $ renpy.cs_p6_case="lunch_revision_4"
+    run Start("cs_qa_lunch_revision")
+    click until label cs_check_day03_part07_complete
+    pause 0.5
+    assert cs_day03_part07_done and cs_day03_reading_book_selected
+    assert cs_day03_reading_book_id=="paustovsky_warm_bread"
+    assert cs_day03_reading_book_location=="library_reading_table"
+    assert not cs_reading_book_borrowed
+    assert cs_viola_spare_bandage and cs_lena_elbow_bandaged and cs_lena_no_sport_day2
+    assert cs_lena_elbow_injury_day2==2 and cs_day03_documents_location=="administration"
+    assert cs_mz_catalog_checked_day3 and cs_day03_darya_destination=="music_club"
+    assert not any(renpy.showing(t) for t in cs_presence_tags)
+    assert cs_friend_mz==3 and cs_friend_un==2
+    assert cs_friend_mi==2 and cs_friend_dv==2
+    assert cs_mz_book_prepared_day3==True and cs_mz_quiet_reading_place_day3==True
+    assert cs_un_sketch_time_agreed_day3==False and cs_un_sketch_invite_day3==True
+    assert cs_mi_followup_invitation_day3==False and cs_dv_followup_invitation_day3==True
+    assert cs_day03_poster_location=='house'
+    $ cs_p6_capture("complete")
+    $ renpy.take_screenshot()
+    $ renpy.save("lunch_revision_complete")
+    $ renpy.load("lunch_revision_complete")
+    pause 0.5
+    assert cs_day03_reading_book_id=="paustovsky_warm_bread"
+    $ open(config.basedir+"/lunch_revision_4_PASS.txt","w").write("PASS")
+    run Quit(confirm=False)
+
+testcase cs_lunch_revision_5:
+    pause 0.5
+    $ persistent.font_size="small"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps=0
+    $ _preferences.transitions=2
+    $ _test.force=True
+    $ _test.timeout=120.0
+    $ renpy.cs_lr_mz=2
+    $ renpy.cs_lr_un=2
+    $ renpy.cs_lr_yes=True
+    $ renpy.cs_lr_invite=False
+    $ renpy.cs_lr_art=False
+    $ renpy.cs_lr_mi=False
+    $ renpy.cs_lr_dv=True
+    $ renpy.cs_lr_book=False
+    $ renpy.cs_lr_returned=False
+    $ renpy.cs_lr_poster=None
+    $ renpy.cs_lr_fast=True
+    $ renpy.cs_lr_pending=None
+    $ renpy.cs_lr_cast=()
+    $ renpy.cs_lr_count=0
+    $ renpy.cs_p6_case="lunch_revision_5"
+    run Start("cs_qa_lunch_revision")
+    click until label cs_check_day03_part07_complete
+    pause 0.5
+    assert cs_day03_part07_done and cs_day03_reading_book_selected
+    assert cs_day03_reading_book_id=="paustovsky_warm_bread"
+    assert cs_day03_reading_book_location=="library_reading_table"
+    assert not cs_reading_book_borrowed
+    assert cs_viola_spare_bandage and cs_lena_elbow_bandaged and cs_lena_no_sport_day2
+    assert cs_lena_elbow_injury_day2==2 and cs_day03_documents_location=="administration"
+    assert cs_mz_catalog_checked_day3 and cs_day03_darya_destination=="music_club"
+    assert not any(renpy.showing(t) for t in cs_presence_tags)
+    assert cs_friend_mz==2 and cs_friend_un==3
+    assert cs_friend_mi==2 and cs_friend_dv==2
+    assert cs_mz_book_prepared_day3==True and cs_mz_quiet_reading_place_day3==False
+    assert cs_un_sketch_time_agreed_day3==False and cs_un_sketch_invite_day3==True
+    assert cs_mi_followup_invitation_day3==False and cs_dv_followup_invitation_day3==True
+    assert cs_day03_poster_location==None
+    $ cs_p6_capture("complete")
+    $ renpy.take_screenshot()
+    $ renpy.save("lunch_revision_complete")
+    $ renpy.load("lunch_revision_complete")
+    pause 0.5
+    assert cs_day03_reading_book_id=="paustovsky_warm_bread"
+    $ open(config.basedir+"/lunch_revision_5_PASS.txt","w").write("PASS")
+    run Quit(confirm=False)
+
+testcase cs_lunch_revision_6:
+    pause 0.5
+    $ persistent.font_size="small"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps=0
+    $ _preferences.transitions=2
+    $ _test.force=True
+    $ _test.timeout=120.0
+    $ renpy.cs_lr_mz=2
+    $ renpy.cs_lr_un=2
+    $ renpy.cs_lr_yes=False
+    $ renpy.cs_lr_invite=True
+    $ renpy.cs_lr_art=True
+    $ renpy.cs_lr_mi=True
+    $ renpy.cs_lr_dv=False
+    $ renpy.cs_lr_book=True
+    $ renpy.cs_lr_returned=True
+    $ renpy.cs_lr_poster='darya_folder'
+    $ renpy.cs_lr_fast=True
+    $ renpy.cs_lr_pending=None
+    $ renpy.cs_lr_cast=()
+    $ renpy.cs_lr_count=0
+    $ renpy.cs_p6_case="lunch_revision_6"
+    run Start("cs_qa_lunch_revision")
+    click until label cs_check_day03_part07_complete
+    pause 0.5
+    assert cs_day03_part07_done and cs_day03_reading_book_selected
+    assert cs_day03_reading_book_id=="paustovsky_warm_bread"
+    assert cs_day03_reading_book_location=="library_reading_table"
+    assert not cs_reading_book_borrowed
+    assert cs_viola_spare_bandage and cs_lena_elbow_bandaged and cs_lena_no_sport_day2
+    assert cs_lena_elbow_injury_day2==2 and cs_day03_documents_location=="administration"
+    assert cs_mz_catalog_checked_day3 and cs_day03_darya_destination=="music_club"
+    assert not any(renpy.showing(t) for t in cs_presence_tags)
+    assert cs_friend_mz==2 and cs_friend_un==2
+    assert cs_friend_mi==2 and cs_friend_dv==2
+    assert cs_mz_book_prepared_day3==True and cs_mz_quiet_reading_place_day3==False
+    assert cs_un_sketch_time_agreed_day3==False and cs_un_sketch_invite_day3==True
+    assert cs_mi_followup_invitation_day3==True and cs_dv_followup_invitation_day3==False
+    assert cs_day03_poster_location=='darya_folder'
+    $ cs_p6_capture("complete")
+    $ renpy.take_screenshot()
+    $ renpy.save("lunch_revision_complete")
+    $ renpy.load("lunch_revision_complete")
+    pause 0.5
+    assert cs_day03_reading_book_id=="paustovsky_warm_bread"
+    $ open(config.basedir+"/lunch_revision_6_PASS.txt","w").write("PASS")
+    run Quit(confirm=False)
+
+testcase cs_lunch_revision_7:
+    pause 0.5
+    $ persistent.font_size="small"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps=0
+    $ _preferences.transitions=2
+    $ _test.force=True
+    $ _test.timeout=120.0
+    $ renpy.cs_lr_mz=1
+    $ renpy.cs_lr_un=0
+    $ renpy.cs_lr_yes=True
+    $ renpy.cs_lr_invite=False
+    $ renpy.cs_lr_art=False
+    $ renpy.cs_lr_mi=True
+    $ renpy.cs_lr_dv=True
+    $ renpy.cs_lr_book=False
+    $ renpy.cs_lr_returned=False
+    $ renpy.cs_lr_poster=None
+    $ renpy.cs_lr_fast=True
+    $ renpy.cs_lr_pending=None
+    $ renpy.cs_lr_cast=()
+    $ renpy.cs_lr_count=0
+    $ renpy.cs_p6_case="lunch_revision_7"
+    run Start("cs_qa_lunch_revision")
+    click until label cs_check_day03_part07_complete
+    pause 0.5
+    assert cs_day03_part07_done and cs_day03_reading_book_selected
+    assert cs_day03_reading_book_id=="paustovsky_warm_bread"
+    assert cs_day03_reading_book_location=="library_reading_table"
+    assert not cs_reading_book_borrowed
+    assert cs_viola_spare_bandage and cs_lena_elbow_bandaged and cs_lena_no_sport_day2
+    assert cs_lena_elbow_injury_day2==2 and cs_day03_documents_location=="administration"
+    assert cs_mz_catalog_checked_day3 and cs_day03_darya_destination=="music_club"
+    assert not any(renpy.showing(t) for t in cs_presence_tags)
+    assert cs_friend_mz==1 and cs_friend_un==1
+    assert cs_friend_mi==2 and cs_friend_dv==2
+    assert cs_mz_book_prepared_day3==False and cs_mz_quiet_reading_place_day3==False
+    assert cs_un_sketch_time_agreed_day3==False and cs_un_sketch_invite_day3==False
+    assert cs_mi_followup_invitation_day3==True and cs_dv_followup_invitation_day3==True
+    assert cs_day03_poster_location==None
+    $ cs_p6_capture("complete")
+    $ renpy.take_screenshot()
+    $ renpy.save("lunch_revision_complete")
+    $ renpy.load("lunch_revision_complete")
+    pause 0.5
+    assert cs_day03_reading_book_id=="paustovsky_warm_bread"
+    $ open(config.basedir+"/lunch_revision_7_PASS.txt","w").write("PASS")
+    run Quit(confirm=False)
+
+testcase cs_lunch_revision_guard:
+    pause 0.5
+    $ persistent.font_size="small"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps=0
+    $ _preferences.transitions=2
+    $ _test.force=True
+    $ _test.timeout=120.0
+    $ renpy.cs_lr_fast=False
+    $ renpy.cs_p6_case="lunch_revision_guard"
+    run Start("cs_qa_lunch_revision_guard")
+    pause 0.5
+    $ renpy.take_screenshot()
+    $ renpy.save("lunch_revision_menu")
+    $ renpy.load("lunch_revision_menu")
+    pause 0.5
+    "Предложить Лене Тихоновой пообедать вместе"
+    click until label cs_check_day03_125_result
+    assert cs_friend_un==1 and cs_un_day3_lunch_awarded
+    pause 0.5
+    "Предложить Лене Тихоновой пообедать вместе"
+    click until label cs_check_lunch_revision_guard_end
+    assert cs_friend_un==1 and cs_day03_reading_book_id==renpy.cs_lr_first_id
+    $ cs_p6_capture("repeat_no_duplicate")
+    $ open(config.basedir+"/lunch_revision_guard_PASS.txt","w").write("PASS")
+    run Quit(confirm=False)

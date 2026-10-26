@@ -46,7 +46,7 @@ init 98 python:
             renpy.cs_rw_visited.append(name)
         elif name in ("cs_check_day03_83_underwear","cs_check_day03_83_hair_touch","cs_check_day03_83_turned_away","cs_check_day03_83_dressed","cs_check_day01_part03_phone_off"):
             renpy.cs_rw_pending=name
-        if name=="cs_check_day03_part07_complete":
+        if name=="cs_check_day03_part14_complete":
             assert cs_day01_done and cs_day02_done and cs_day03_part07_done and cs_day03_lunch_arrived
             assert bool(cs_un_day3_lunch_together)==renpy.cs_rw_positive
             assert bool(cs_un_sketch_plan_discussed_day3)==renpy.cs_rw_positive
@@ -54,10 +54,48 @@ init 98 python:
             assert bool(cs_mz_quiet_reading_place_day3)==renpy.cs_rw_positive
             assert bool(cs_mi_followup_invitation_day3)==renpy.cs_rw_positive
             assert bool(cs_dv_followup_invitation_day3)==renpy.cs_rw_positive
-            assert cs_day03_reading_book_selected and cs_day03_reading_book_id=="paustovsky_warm_bread"
-            assert cs_day03_darya_destination=="music_club"
-            assert not renpy.showing("cs_darya") and not renpy.showing("un")
-            assert cs_friend_mz==3*int(renpy.cs_rw_positive) and cs_mz_book_requested_day3
+            assert cs_day03_reading_book_selected and cs_day03_reading_book_id=="goncharov_ordinary_story"
+            assert cs_day03_part08_done and cs_day03_part09_done and not cs_mz_book_borrowed_day3
+            assert cs_day03_reading_book_location=="library"
+            assert bool(cs_un_sketch_completed_day3)==renpy.cs_rw_positive
+            assert bool(cs_un_private_drawing_shown_day3)==renpy.cs_rw_positive
+            assert bool(cs_se_sketch_spot_day3)==renpy.cs_rw_positive
+            assert bool(cs_mz_open_library_invitation_day3)==renpy.cs_rw_positive
+            assert cs_mz_friend_on_arrival_day3==3*int(renpy.cs_rw_positive)
+            assert cs_se_friend_before_square_day3==3*int(renpy.cs_rw_positive)
+            assert cs_friend_se==4*int(renpy.cs_rw_positive)
+            assert cs_day03_poster_location==("house_table" if renpy.cs_rw_positive else None)
+            assert cs_day03_darya_destination=="house"
+            assert not renpy.showing("cs_zhenya")
+            assert cs_day03_part10_done and cs_day03_dinner_horn_played and cs_day03_dinner_arrived
+            assert cs_friend_da==3*int(renpy.cs_rw_positive)
+            assert cs_da_friend_before_night==2*int(renpy.cs_rw_positive)
+            assert cs_day03_part14_done and cs_day03_completed
+            assert bool(cs_da_shared_bed_day3)==renpy.cs_rw_positive
+            assert bool(cs_da_love_confession_day3)==renpy.cs_rw_positive
+            assert bool(cs_da_shared_sleep_cg_seen_day3)==renpy.cs_rw_positive
+            assert bool(cs_da_respected_space_day3)!=renpy.cs_rw_positive
+            assert cs_day03_part13_done and cs_mz_book_finished_day3
+            assert bool(cs_da_day3_fear_of_getting_used_to_camp)==renpy.cs_rw_positive
+            assert bool(cs_da_day3_quiet_walk)!=renpy.cs_rw_positive
+            assert bool(cs_mz_day3_final_discussion)==renpy.cs_rw_positive
+            assert bool(cs_da_day3_music_talk)==renpy.cs_rw_positive
+            assert bool(cs_da_day3_shared_silence)!=renpy.cs_rw_positive
+            assert cs_da_cheek_kiss_day3
+            assert cs_friend_mz==5*int(renpy.cs_rw_positive) and cs_mz_book_requested_day3
+            assert cs_day03_part11_done and cs_day03_dinner_finished
+            assert cs_day03_part12_done and cs_day03_evening_book_retrieved
+            assert cs_friend_sl==3*int(renpy.cs_rw_positive)
+            assert cs_sl_friend_before_evening_choice==2*int(renpy.cs_rw_positive)
+            assert bool(cs_sl_day4_notice_offer)==renpy.cs_rw_positive
+            assert not set(renpy.cs_rw_visited)&set(("cs_day03_161a","cs_day03_161b","cs_day03_162"))
+            assert cs_mz_dinner_friend_on_arrival==4*int(renpy.cs_rw_positive)
+            assert bool(cs_mz_hug_allowed_day3)==renpy.cs_rw_positive
+            assert bool(cs_mz_evening_help_day3)==renpy.cs_rw_positive
+            assert bool(cs_mz_evening_help_completed_day3)==renpy.cs_rw_positive
+            assert cs_mi_followup_target_day==(4 if renpy.cs_rw_positive else None)
+            assert cs_dv_followup_target_day==(4 if renpy.cs_rw_positive else None)
+            assert cs_day03_sketchbook_location=="house_table"
             assert cs_friend_mi==2*int(renpy.cs_rw_positive) and cs_friend_dv==2*int(renpy.cs_rw_positive) and cs_friend_un==3*int(renpy.cs_rw_positive)
             assert bool(cs_un_sketch_invite_day3)==renpy.cs_rw_positive
             assert bool(cs_un_concert_sketch_seen)==renpy.cs_rw_positive
@@ -67,6 +105,12 @@ init 98 python:
     def cs_rw_character(event,**kwargs):
         if not renpy.cs_rw_enabled or event!="show_done":
             return
+        if renpy.showing("bg"):
+            assert renpy.has_image(("bg",)+tuple(renpy.get_attributes("bg"))),"Unregistered background"
+        if cs_day03_started and cs_day03_audio_location:
+            target=cs_day03_audio_target(cs_day03_audio_location)
+            if target is not False:
+                assert renpy.music.get_playing(channel="ambience")==target,"Leaked room ambience: "+cs_day03_audio_location
         cg=tuple(sorted(t for t in renpy.get_showing_tags() if t.startswith("cs_cg_") or t in ("cs_sleep_winter","cs_sleep_summer","cs_lena_pioneer_mirror")))
         pending=renpy.cs_rw_pending
         cast=tuple(sorted(t for t in cs_presence_tags if renpy.showing(t)))
@@ -107,7 +151,7 @@ for positive in (True,False):
     $ renpy.cs_rw_visited = []
     $ renpy.cs_rw_count = 0
     run Start("chuzhaya_smena_start")
-    click until label cs_check_day03_part07_complete
+    click until label cs_check_day03_part14_complete
     pause 0.5
     assert cs_day03_part06_done and cs_day03_lunch_horn_played and cs_day03_lunch_arrived
     $ cs_p6_capture("complete")

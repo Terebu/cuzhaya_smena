@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "source_blocks": 832,
+  "runtime_blocks": 852,
+  "edited_blocks": {
+    "На безопасной полке лежала папка с концертным плакатом.": 1,
+    "Я подошла к кровати.": 1,
+    "А Семён, между прочим, уже сам научился поддерживать представление.": 1,
+    "Так что, возможно, мой педагогический эксперимент оказался успешным.": 1,
+    "После сегодняшнего количества страниц, наверное, уже нет.": 1,
+    "Не потому, что я получила новую книгу.": 1
+  },
+  "checks": [
+    "Old 161/162 unreachable in fresh flow",
+    "One guarded SL award; prior friendship threshold",
+    "No new MZ/SE points",
+    "Help only when chosen and unfinished",
+    "Book taken exactly in house",
+    "Darya absent on solo trip",
+    "No lowering/zoom",
+    "Unique labels/defaults"
+  ]
+}

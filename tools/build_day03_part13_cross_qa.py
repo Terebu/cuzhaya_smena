@@ -1,0 +1,50 @@
+from pathlib import Path
+R=Path(__file__).resolve().parent.parent
+s='''# -*- coding: utf-8 -*-
+label cs_qa_p13_load_previous:
+    $ renpy.load("p12_"+str(renpy.cs_p13_load_case)+"_end")
+    return
+'''
+for case,mz,help in ((0,0,False),(12,3,False),(15,4,True)):
+ s+='''testcase cs_p13_cross_'''+str(case)+''':
+    pause 0.5
+    $ _test.force=True
+    $ _test.timeout=100.0
+    $ _preferences.text_cps=0
+    $ _preferences.transitions=2
+    $ renpy.set_physical_size((1280,720))
+    $ renpy.cs_p13_fast=False
+    $ renpy.cs_p13_auto=True
+    $ renpy.cs_p13_yes=True
+    $ renpy.cs_p13_cast=()
+    $ renpy.cs_p13_pending=None
+    $ renpy.cs_p13_count=renpy.cs_p13_hugs=renpy.cs_p13_returns=0
+    $ renpy.cs_p6_case="p13_cross_'''+str(case)+'''"
+    $ renpy.cs_p13_load_case='''+str(case)+'''
+    run Start("cs_qa_p13_load_previous")
+    pause 1.5
+    $ cs_p6_capture("loaded_initial")
+    $ renpy.cs_p13_fast=True
+    click
+    pause 45.0
+    pause 0.5
+    assert renpy.get_screen("cs_day03_part13_wait_screen") is not None
+    assert renpy.get_screen("main_menu") is None
+    assert cs_day03_part12_done and cs_day03_part13_done
+    assert cs_friend_da==1
+    assert cs_friend_mz=='''+str(mz)+'''
+    assert cs_mz_evening_help_completed_day3=='''+repr(help)+'''
+    assert renpy.cs_p13_returns==1 and renpy.cs_p13_hugs=='''+str(int(mz>=3))+'''
+    assert cs_mz_book_finished_day3 and not cs_mz_book_borrowed_day3
+    assert cs_day03_reading_book_location=="library" and cs_day03_darya_destination=="house"
+    assert cs_day03_sketchbook_location==cs_day03_poster_location=="house_table"
+    assert cs_da_day3_fear_of_getting_used_to_camp and not cs_da_day3_quiet_walk
+    assert cs_mi_followup_invitation_day3 and cs_dv_followup_invitation_day3
+    assert cs_lena_elbow_injury_day2==2
+    $ cs_p6_capture("complete")
+    $ open(config.basedir+"/p13_cross_'''+str(case)+'''_PASS.txt","w").write("PASS")
+    run Quit(confirm=False)
+
+'''
+(R/'tools/day03_part13_cross_save.rpy.txt').write_text(s,encoding='utf8')
+print('Generated three actual previous-release save tests')

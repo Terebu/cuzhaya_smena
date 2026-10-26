@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "source_blocks": 961,
+  "runtime_blocks": 970,
+  "edited_blocks": {
+    "Она ведь не Семён, которого можно поймать за плечо и объявить любимым супругом при половине лагеря.": 1,
+    "Нет. Где-то чуть дальше середины.": 1,
+    "Женя, ты уже четвёртый человек за сегодня, который напоминает мне об этом.": 1,
+    "Ещё пару дней назад я бы обязательно попыталась расшевелить Женю.": 1,
+    "Ты сегодня уже третий раз оказываешься рядом с Женей.": 1,
+    "Просто за эти два дня я уже успела понять, что не обязательно проверять терпение человека до самого предела.": 1
+  },
+  "checks": [
+    "Arrival snapshot before menu",
+    "One guarded MZ award",
+    "Consent hug only at prior threshold plus invitation",
+    "One guarded actual completion of help",
+    "Exclusive help/walk",
+    "No dinner horn replay",
+    "Independent day4 music appointments; pending flags retained",
+    "Book/poster/injury unchanged",
+    "No sprite lowering/zoom",
+    "Unique labels/defaults"
+  ]
+}

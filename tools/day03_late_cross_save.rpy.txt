@@ -1,0 +1,87 @@
+# -*- coding: utf-8 -*-
+init 99 python:
+    renpy.cs_lx_fast=False
+    cs_lx_old_say=config.say_arguments_callback
+    cs_lx_old_menu=config.menu_arguments_callback
+    cs_lx_old_labels=config.label_callback
+    def cs_lx_say(who,*args,**kwargs):
+        if cs_lx_old_say:args,kwargs=cs_lx_old_say(who,*args,**kwargs)
+        if renpy.cs_lx_fast:kwargs["interact"]=False
+        return args,kwargs
+    def cs_lx_menu(items,*args,**kwargs):
+        label,val=next((l,v) for l,v in items if v is not None)
+        return val() if callable(val) else val
+    def cs_lx_menu_args(*args,**kwargs):
+        if cs_lx_old_menu:args,kwargs=cs_lx_old_menu(*args,**kwargs)
+        if renpy.cs_lx_fast:store.menu=cs_lx_menu
+        return args,kwargs
+    def cs_lx_labels(name,abnormal):
+        if cs_lx_old_labels:cs_lx_old_labels(name,abnormal)
+        if renpy.cs_lx_fast:
+            with open(config.basedir+"/late_cross_progress.txt","a") as trace:
+                trace.write(name+"\n")
+            assert name!="cs_day03_121","Old lunch must not replay"
+    config.say_arguments_callback=cs_lx_say
+    config.menu_arguments_callback=cs_lx_menu_args
+    config.label_callback=cs_lx_labels
+
+label cs_qa_late_old_wait:
+    $ cs_reset_state()
+    $ cs_active=cs_darya_known=cs_un_name_known=True
+    $ cs_friend_mz=cs_friend_un=3
+    $ cs_friend_se=2
+    $ cs_day03_part07_done=True
+    $ cs_day03_reading_book_selected=True
+    $ cs_day03_reading_book_id="paustovsky_warm_bread"
+    $ cs_day03_reading_book_location="library_reading_table"
+    $ cs_mz_quiet_reading_place_day3=True
+    $ cs_un_sketch_time_agreed_day3=cs_un_sketch_invite_day3=True
+    $ cs_mi_followup_invitation_day3=cs_dv_followup_invitation_day3=True
+    $ cs_day03_poster_location="darya_folder"
+    $ cs_sl_poster_collected_day3=True
+    $ cs_lena_elbow_bandaged=cs_viola_spare_bandage=True
+    $ cs_day03_documents_location="administration"
+    $ set_mode_adv()
+    $ day_time()
+    $ cs_director_scene("bg int_library_day")
+    scene bg int_library_day
+    jump cs_day03_part08_pending
+
+testcase cs_late_make_old:
+    pause 0.5
+    $ _test.force=True
+    run Start("cs_qa_late_old_wait")
+    pause 0.5
+    assert renpy.get_screen("cs_day03_part07_wait_screen") is not None
+    $ renpy.screenshot(config.basedir+"/late_old_wait.png")
+    $ renpy.take_screenshot()
+    $ renpy.save("late_old_wait")
+    $ open(config.basedir+"/late_old_save_PASS.txt","w").write("PASS")
+    run Quit(confirm=False)
+
+testcase cs_late_load_old:
+    pause 0.5
+    $ _test.force=True
+    $ _test.timeout=120.0
+    $ _preferences.text_cps=0
+    $ renpy.cs_p6_case="late_cross"
+    $ renpy.cs_lx_fast=True
+    $ renpy.load("late_old_wait")
+    pause 1.0
+    $ renpy.screenshot(config.basedir+"/late_cross_diagnostic.png")
+    assert renpy.get_screen("cs_day03_part09_wait_screen") is not None
+    pause 0.5
+    assert cs_day03_library_legacy_bridge
+    assert cs_day03_part08_done and cs_day03_part09_done
+    assert cs_friend_mz==4 and cs_friend_se==3
+    assert cs_mz_friend_on_arrival_day3==3 and cs_se_friend_before_square_day3==2
+    assert cs_day03_reading_book_id=="goncharov_ordinary_story" and cs_mz_book_borrowed_day3
+    assert cs_day03_reading_book_location=="house_table"
+    assert cs_day03_poster_location=="house_table"
+    assert cs_un_sketch_completed_day3 and cs_un_private_drawing_shown_day3 and cs_se_sketch_spot_day3
+    assert cs_mi_followup_invitation_day3 and cs_dv_followup_invitation_day3
+    assert cs_lena_elbow_bandaged and cs_viola_spare_bandage
+    assert cs_day03_documents_location=="administration"
+    $ cs_p6_capture("complete")
+    $ open(config.basedir+"/late_cross_save_PASS.txt","w").write("PASS")
+    run Quit(confirm=False)

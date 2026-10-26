@@ -1,0 +1,16 @@
+{
+  "accessed": "2026-10-26",
+  "sources": [
+    {"url": "https://soviet.games/everlasting-summer/", "use": "Official character overview; original installed dialogue remains the primary reference for Zhenya. Do not confuse mod Darya with another game's Dasha."},
+    {"url": "https://everlasting-summer.fandom.com/ru/wiki/Женя", "use": "Secondary character lookup: librarian, restrained manner. Mod-specific biographies in the same article are not imported."},
+    {"url": "https://rvb.ru/19vek/goncharov/pssp/vol1/text/oi-13.html", "use": "Primary public-domain epilogue. Alexander's career and advantageous match; uncle's concern for wife but renewed admiration for wealth. Reflection is not complete moral redemption."}
+  ],
+  "editorial": [
+    "Selection of the novel is checked against friendship on initial library arrival, not newly gained points.",
+    "A previous hug and a first consensual hug form mutually exclusive branches.",
+    "The long reading interval occurs before the closing reminder. Darya only waits for the last pages and farewell.",
+    "The previous remark about no immediate jokes contradicted the writer joke outside; changed to renewed thoughtfulness.",
+    "Permanent reading place requires its actual flag; drawing and independent music invitations remain conditional.",
+    "Short thoughts keep actors; long reflection and reading use the existing shared POV staging for all actors."
+  ]
+}

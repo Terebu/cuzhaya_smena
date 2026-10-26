@@ -138,6 +138,8 @@ init -10 python:
         cs_presence_stage()
 
     def cs_director_scene(image):
+        if hasattr(store, "cs_day03_location_audio"):
+            cs_day03_location_audio(image)
         store.cs_reflective_shot = False
         store.cs_pov_return_cast = []
         store.cs_pov_return_location = None

@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "source_blocks": 935,
+  "runtime_blocks": 938,
+  "edited_blocks": {
+    "Моя новая возможность на несколько часов забыть о существовании лагерных проблем.": 1,
+    "Особенно учитывая, что мы с Тихоновой почти не отвлекались друг от друга на разговоры.": 1,
+    "Ещё утром мы обсуждали с ней то, как люди меняются под воздействием обстоятельств.": 1,
+    "Ты уже давно сидишь почти не двигаясь.": 1,
+    "И какую половицу лучше не наступать ночью.": 1,
+    "Даже когда я полчаса молчу и читаю Гончарова?": 1,
+    "Сегодня Тихонова показала мне один рисунок, который раньше никому не показывала.": 1,
+    "Вы вроде даже не заметили, сколько времени прошло.": 1,
+    "Три дня назад я даже не знала, что окажусь здесь.": 1
+  },
+  "checks": [
+    "One guarded Darya award",
+    "Exclusive silence/music outcome",
+    "One guarded horn",
+    "Arrival friendship snapshot",
+    "Independent MI/DV memories; invitations retained",
+    "Drawing duration conditional",
+    "Book and sketchbook stay home",
+    "Injury unchanged",
+    "No custom sprite lowering/zoom",
+    "Unique labels/defaults"
+  ]
+}

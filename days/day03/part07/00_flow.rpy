@@ -32,19 +32,9 @@ label cs_day03_un_lunch_choice:
 
 label cs_day03_part08_pending:
     label cs_check_day03_part07_complete:
-    call screen cs_day03_part07_wait_screen
-    jump cs_day03_part08_pending
+    hide screen cs_day03_part07_wait_screen
+    jump cs_day03_part08
 
+# A loaded save can still be waiting on the old modal screen.
 screen cs_day03_part07_wait_screen():
-    modal True
-    frame:
-        align (0.03,0.06)
-        padding (24,20)
-        background Solid("#142821ed")
-        vbox:
-            spacing 12
-            text "День 3. Тишина тоже сближает" size 26
-            text "Лена выбрала книгу. Продолжение — послеобеденное чтение." size 22
-            textbutton "Сохранить игру" action ShowMenu("save")
-            textbutton "Загрузить игру" action ShowMenu("load")
-            textbutton "Главное меню" action [Function(cs_restore_audio),MainMenu()]
+    timer 0.1 action Jump("cs_day03_part08_pending")

@@ -95,7 +95,7 @@ def emit(key,title,text,pre=(),post=()):
     path=directory/(key+'_scene.rpy');path.write_text('\n'.join(lines)+'\n',encoding='utf8')
 
 emit('74a','Переговоры перед сном',sections['74А'][1],actor('da','thinking')+['$ cs_frame_focus(["cs_darya"])','label cs_check_day03_night_insert:'])
-emit('75',sections['75'][0],sections['75'][1],scene('cs_house_lena_darya_int_day',True)+['$ cs_frame_focus([])','play ambience "sound/ambiences/forest_day.ogg" fadein 2.0','$ renpy.music.set_volume(0.16, channel="ambience")','play music "sound/music/my_daily_life.ogg" fadein 3.0','$ renpy.music.set_volume(0.2, channel="music")','label cs_check_day03_75:'])
+emit('75',sections['75'][0],sections['75'][1],scene('cs_house_lena_darya_int_day',True)+['$ cs_frame_focus([])','play ambience "sound/ambiences/int_cabin_day.ogg" fadein 2.0','$ renpy.music.set_volume(0.16, channel="ambience")','play music "sound/music/my_daily_life.ogg" fadein 3.0','$ renpy.music.set_volume(0.2, channel="music")','label cs_check_day03_75:'])
 emit('76',sections['76'][0],sections['76'][1],scene('cs_camp_path_day',True)+['$ cs_frame_focus([])','label cs_check_day03_76:'])
 emit('77',sections['77'][0],sections['77'][1],actor('sl','smile')+['$ cs_frame_focus(["sl"])','label cs_check_day03_77:'])
 s78=sections['78'][1]; high,low=s78.split('#### Если `cs_friend_sl == 0`');high=high.split('#### Если `cs_friend_sl >= 1`')[1]

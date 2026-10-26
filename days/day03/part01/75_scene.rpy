@@ -5,7 +5,7 @@ label cs_day03_75:
     scene cs_house_lena_darya_int_day at cs_day03_dawn
     with Dissolve(0.8)
     $ cs_frame_focus([])
-    play ambience "sound/ambiences/forest_day.ogg" fadein 2.0
+    play ambience "sound/ambiences/int_cabin_day.ogg" fadein 2.0
     $ renpy.music.set_volume(0.16, channel="ambience")
     play music "sound/music/my_daily_life.ogg" fadein 3.0
     $ renpy.music.set_volume(0.2, channel="music")

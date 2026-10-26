@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "source_blocks": 788,
+  "runtime_blocks": 787,
+  "cg_sha256": "7730cad48a2f3a33f1a068431bcc7b9ff72e2beb7f9804baada4be4b878068e9",
+  "friendship_reachable": 2,
+  "notes": [
+    "Two prior authored rewards reach threshold 2.",
+    "No day4 story supplied: preserved state and explicit continuation screen.",
+    "Nightwear not available: no false uniform portrait after changing."
+  ]
+}

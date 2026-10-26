@@ -1,0 +1,86 @@
+# -*- coding: utf-8 -*-
+label cs_qa_p14_load_previous:
+    $ renpy.load("p13_"+str(renpy.cs_p14_load_case)+"_end")
+    return
+testcase cs_p14_cross_0:
+    pause 0.5
+    $ _test.force=True
+    $ _test.timeout=100.0
+    $ _preferences.text_cps=0
+    $ _preferences.transitions=2
+    $ renpy.set_physical_size((1280,720))
+    $ renpy.cs_p14_fast=False
+    $ renpy.cs_p14_auto=True
+    $ renpy.cs_p14_request=True
+    $ renpy.cs_p14_confess=True
+    $ renpy.cs_p14_cast=()
+    $ renpy.cs_p14_pending=None
+    $ renpy.cs_p14_count=0
+    $ renpy.cs_p14_visited=[]
+    $ renpy.cs_p6_case="p14_cross_0"
+    $ renpy.cs_p14_load_case=0
+    run Start("cs_qa_p14_load_previous")
+    pause 1.5
+    $ cs_p6_capture("loaded_initial")
+    $ renpy.cs_p14_fast=True
+    click
+    pause 55.0
+    assert renpy.get_screen("cs_day04_wait_screen") is not None
+    assert renpy.get_screen("main_menu") is None
+    assert cs_day03_part13_done and cs_day03_part14_done and cs_day03_completed
+    assert cs_da_friend_before_night==2
+    assert cs_friend_da==3
+    assert cs_da_shared_bed_day3 and cs_da_shared_sleep_cg_seen_day3
+    assert cs_da_love_confession_day3==True
+    assert cs_da_unspoken_feelings_day3==False
+    assert cs_mz_book_finished_day3 and not cs_mz_book_borrowed_day3
+    assert cs_day03_reading_book_location=="library"
+    assert cs_lena_elbow_injury_day2==2 and cs_lena_elbow_bandaged
+    assert cs_day03_sketchbook_location==cs_day03_poster_location=="house_table"
+    assert cs_mi_followup_invitation_day3 and cs_dv_followup_invitation_day3
+    assert "cs_day03_171" not in renpy.cs_p14_visited
+    $ cs_p6_capture("complete")
+    $ open(config.basedir+"/p14_cross_0_PASS.txt","w").write("PASS")
+    run Quit(confirm=False)
+
+testcase cs_p14_cross_1:
+    pause 0.5
+    $ _test.force=True
+    $ _test.timeout=100.0
+    $ _preferences.text_cps=0
+    $ _preferences.transitions=2
+    $ renpy.set_physical_size((1280,720))
+    $ renpy.cs_p14_fast=False
+    $ renpy.cs_p14_auto=True
+    $ renpy.cs_p14_request=True
+    $ renpy.cs_p14_confess=False
+    $ renpy.cs_p14_cast=()
+    $ renpy.cs_p14_pending=None
+    $ renpy.cs_p14_count=0
+    $ renpy.cs_p14_visited=[]
+    $ renpy.cs_p6_case="p14_cross_1"
+    $ renpy.cs_p14_load_case=1
+    run Start("cs_qa_p14_load_previous")
+    pause 1.5
+    $ cs_p6_capture("loaded_initial")
+    $ renpy.cs_p14_fast=True
+    click
+    pause 55.0
+    assert renpy.get_screen("cs_day04_wait_screen") is not None
+    assert renpy.get_screen("main_menu") is None
+    assert cs_day03_part13_done and cs_day03_part14_done and cs_day03_completed
+    assert cs_da_friend_before_night==3
+    assert cs_friend_da==4
+    assert cs_da_shared_bed_day3 and cs_da_shared_sleep_cg_seen_day3
+    assert cs_da_love_confession_day3==False
+    assert cs_da_unspoken_feelings_day3==True
+    assert cs_mz_book_finished_day3 and not cs_mz_book_borrowed_day3
+    assert cs_day03_reading_book_location=="library"
+    assert cs_lena_elbow_injury_day2==2 and cs_lena_elbow_bandaged
+    assert cs_day03_sketchbook_location==cs_day03_poster_location=="house_table"
+    assert cs_mi_followup_invitation_day3 and cs_dv_followup_invitation_day3
+    assert "cs_day03_171" not in renpy.cs_p14_visited
+    $ cs_p6_capture("complete")
+    $ open(config.basedir+"/p14_cross_1_PASS.txt","w").write("PASS")
+    run Quit(confirm=False)
+

@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "source_blocks": 817,
+  "runtime_blocks": 829,
+  "edited_blocks": {
+    "На улице окончательно стемнело.": 1,
+    "А ведь собиралась только немного почитать.": 1,
+    "Пара страниц, одна глава, и домой.": 1,
+    "До конца оставалось совсем немного.": 1,
+    "А дядя наконец понял, что не всё в жизни измеряется карьерой и деньгами.": 1,
+    "Жаль, что для этого понадобилось столько времени.": 1,
+    "Нет. Нормально.": 1,
+    "Ты сегодня после библиотеки даже не начала сразу шутить.": 1,
+    "Окна были тёмными.": 1,
+    "Мику и Алиса ждут нас завтра в музыкальном клубе — если мы обещали прийти.": 1,
+    "Потом открыла дверь.": 1
+  },
+  "checks": [
+    "one guarded DA reward",
+    "book finished then returned",
+    "first hug consent and mutually exclusive farewell",
+    "preserved all future hooks",
+    "prior book-selection snapshot",
+    "no lowering",
+    "shared actor staging",
+    "unique defaults and labels"
+  ]
+}

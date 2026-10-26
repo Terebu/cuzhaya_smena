@@ -1,0 +1,180 @@
+from pathlib import Path
+R=Path(__file__).resolve().parent.parent
+s='''# -*- coding: utf-8 -*-
+init 99 python:
+    renpy.cs_p10_fast=False
+    renpy.cs_p10_auto=False
+    cs_p10_old_say=config.say_arguments_callback
+    cs_p10_old_labels=config.label_callback
+    cs_p10_old_args=config.menu_arguments_callback
+    def cs_p10_say(who,*args,**kwargs):
+        if cs_p10_old_say:args,kwargs=cs_p10_old_say(who,*args,**kwargs)
+        if renpy.cs_p10_fast:
+            kwargs["interact"]=False
+            if who is store.cs_da:assert renpy.showing("cs_darya"),"Darya speaks without portrait"
+        return args,kwargs
+    def cs_p10_menu(items,*args,**kwargs):
+        choices=[v for l,v in items if v is not None]
+        v=choices[0 if renpy.cs_p10_yes else -1]
+        return v() if callable(v) else v
+    def cs_p10_args(*args,**kwargs):
+        if cs_p10_old_args:args,kwargs=cs_p10_old_args(*args,**kwargs)
+        if renpy.cs_p10_auto:store.menu=cs_p10_menu
+        return args,kwargs
+    def cs_p10_labels(name,abnormal):
+        if cs_p10_old_labels:cs_p10_old_labels(name,abnormal)
+        if not renpy.cs_p10_fast:return
+        if name=="cs_check_day03_152_horn":renpy.cs_p10_horns+=1
+        if name.startswith("cs_day03_1") and name[9:].rstrip("ab").isdigit():
+            renpy.cs_p10_pending=name
+        if name=="cs_check_day03_part10_complete":renpy.cs_p10_pending=None
+    def cs_p10_capture(event,**kwargs):
+        if event!="show_done" or not renpy.cs_p10_fast:return
+        cast=tuple(sorted(t for t in cs_presence_tags if renpy.showing(t)))
+        if renpy.cs_p10_pending or cast!=renpy.cs_p10_cast:
+            renpy.cs_p10_count+=1
+            renpy.pause(0.25,hard=True)
+            cs_p6_capture("%02d_%s"%(renpy.cs_p10_count,renpy.cs_p10_pending or "cast"))
+            if "cs_darya" in cast:
+                x,y,w,h=renpy.get_image_bounds("cs_darya")
+                assert abs(x+w/2.0-960)<2,"Solo actor off center"
+            renpy.cs_p10_cast=cast;renpy.cs_p10_pending=None
+    config.say_arguments_callback=cs_p10_say
+    config.menu_arguments_callback=cs_p10_args
+    config.label_callback=cs_p10_labels
+    config.all_character_callbacks.append(cs_p10_capture)
+
+label cs_qa_p10_setup:
+    $ cs_reset_state()
+    $ cs_active=cs_darya_known=True
+    $ cs_friend_da=2
+    $ cs_day03_part09_done=True
+    $ cs_un_sketch_completed_day3=renpy.cs_p10_sketch
+    $ cs_day03_solo_sketch_done=not renpy.cs_p10_sketch
+    $ cs_un_sketch_time_agreed_day3=renpy.cs_p10_sketch
+    $ cs_un_private_drawing_shown_day3=renpy.cs_p10_sketch and renpy.cs_p10_benefits
+    $ cs_mz_friend_on_arrival_day3=renpy.cs_p10_mz
+    $ cs_friend_mz=renpy.cs_p10_mz+1
+    $ cs_mz_day3_honest_book_talk=renpy.cs_p10_benefits
+    $ cs_mz_open_library_invitation_day3=renpy.cs_p10_mz>=3
+    $ cs_mz_book_borrowed_day3=cs_day03_novel_selected=True
+    $ cs_day03_reading_book_id="goncharov_ordinary_story"
+    $ cs_day03_reading_book_location="house_table"
+    $ cs_day03_poster_location="house_table" if renpy.cs_p10_benefits else None
+    $ cs_sl_poster_collected_day3=cs_day03_poster_stored_home=renpy.cs_p10_benefits
+    $ cs_mi_followup_invitation_day3=cs_dv_followup_invitation_day3=renpy.cs_p10_benefits
+    $ cs_mi_day3_arrangement_help=cs_dv_music_talk_day3=renpy.cs_p10_benefits
+    $ cs_friend_mi=cs_friend_dv=2 if renpy.cs_p10_benefits else 0
+    $ cs_friend_se=2
+    $ cs_se_friend_before_square_day3=1
+    $ cs_se_day3_personal_talk=renpy.cs_p10_benefits
+    $ cs_lena_elbow_bandaged=cs_lena_no_sport_day2=cs_viola_spare_bandage=True
+    $ cs_lena_elbow_injury_day2=2
+    $ cs_day03_documents_location="administration"
+    $ day_time()
+    $ set_mode_adv()
+    return
+
+label cs_qa_p10_route:
+    call cs_qa_p10_setup
+    jump cs_day03_part10
+
+label cs_qa_p10_guard:
+    call cs_qa_p10_setup
+    call cs_day03_146
+    call cs_day03_147
+    call cs_day03_148
+    call cs_day03_darya_reading_choice
+    call screen cs_qa_p10_gate
+    call cs_day03_darya_reading_choice
+    call cs_day03_152
+    call cs_day03_152
+    call screen cs_qa_p10_gate
+    $ cs_day03_part10_done=True
+    jump cs_day03_part10
+
+screen cs_qa_p10_gate():
+    modal True
+    textbutton "Продолжить проверку" action Return() align (0.5,0.5)
+'''
+for i in range(8):
+    sketch=bool(i&1);yes=bool(i&2);benefits=bool(i&4);mz=i%4
+    s+='''
+testcase cs_p10_'''+str(i)+''':
+    pause 0.5
+    $ persistent.font_size="small"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps=0
+    $ _preferences.transitions=2
+    $ _test.force=True
+    $ _test.timeout=90.0
+    $ renpy.cs_p10_fast=renpy.cs_p10_auto=True
+    $ renpy.cs_p10_yes='''+repr(yes)+'''
+    $ renpy.cs_p10_sketch='''+repr(sketch)+'''
+    $ renpy.cs_p10_benefits='''+repr(benefits)+'''
+    $ renpy.cs_p10_mz='''+str(mz)+'''
+    $ renpy.cs_p10_count=renpy.cs_p10_horns=0
+    $ renpy.cs_p10_cast=()
+    $ renpy.cs_p10_pending=None
+    $ renpy.cs_p6_case="p10_'''+str(i)+'''"
+    run Start("cs_qa_p10_route")
+    click until label cs_check_day03_part10_complete
+    pause 0.5
+    assert cs_day03_part10_done and cs_day03_dinner_arrived and cs_day03_dinner_horn_played
+    assert renpy.cs_p10_horns==1
+    assert cs_friend_da=='''+str(2+yes)+'''
+    assert bool(cs_da_day3_music_talk)=='''+repr(yes)+'''
+    assert bool(cs_da_day3_shared_silence)=='''+repr(not yes)+'''
+    assert cs_da_cheek_kiss_day3 and cs_mz_book_borrowed_day3
+    assert cs_day03_reading_book_id=="goncharov_ordinary_story" and cs_day03_reading_book_location=="house_table"
+    assert cs_day03_darya_destination=="dining_hall" and renpy.showing("cs_darya")
+    assert cs_un_sketch_completed_day3=='''+repr(sketch)+'''
+    assert cs_mi_followup_invitation_day3==cs_dv_followup_invitation_day3=='''+repr(benefits)+'''
+    assert cs_day03_poster_location=='''+repr('house_table' if benefits else None)+'''
+    assert cs_lena_elbow_bandaged and cs_lena_elbow_injury_day2==2 and cs_viola_spare_bandage
+    assert cs_day03_documents_location=="administration"
+    $ renpy.take_screenshot()
+    $ renpy.save("p10_'''+str(i)+'''_end")
+    $ renpy.load("p10_'''+str(i)+'''_end")
+    pause 0.5
+    assert cs_day03_part10_done and cs_friend_da=='''+str(2+yes)+'''
+    $ cs_p6_capture("complete")
+    $ open(config.basedir+"/p10_'''+str(i)+'''_PASS.txt","w").write("PASS")
+    run Quit(confirm=False)
+'''
+s+='''
+testcase cs_p10_guard:
+    pause 0.5
+    $ persistent.font_size="small"
+    $ _preferences.text_cps=0
+    $ _preferences.transitions=2
+    $ _test.force=True
+    $ _test.timeout=90.0
+    $ renpy.cs_p10_fast=True
+    $ renpy.cs_p10_auto=False
+    $ renpy.cs_p10_sketch=renpy.cs_p10_benefits=True
+    $ renpy.cs_p10_mz=3
+    $ renpy.cs_p10_count=renpy.cs_p10_horns=0
+    $ renpy.cs_p10_cast=()
+    $ renpy.cs_p10_pending=None
+    $ renpy.cs_p6_case="p10_guard"
+    run Start("cs_qa_p10_guard")
+    click until label cs_check_day03_148_menu
+    pause 0.5
+    $ renpy.take_screenshot()
+    $ renpy.save("p10_menu")
+    $ renpy.load("p10_menu")
+    pause 0.5
+    "Отложить книгу и расспросить Дашу о музыке"
+    "Продолжить проверку"
+    "Продолжить проверку"
+    pause 0.5
+    assert renpy.get_screen("cs_day03_part10_wait_screen") is not None
+    assert cs_friend_da==3 and cs_da_day3_music_talk and not cs_da_day3_shared_silence
+    assert renpy.cs_p10_horns==1
+    $ cs_p6_capture("guard")
+    $ open(config.basedir+"/p10_guard_PASS.txt","w").write("PASS")
+    run Quit(confirm=False)
+'''
+(R/'tools/day03_part10_test.rpy.txt').write_text(s,encoding='utf8')
+print('PART10_QA_GENERATED')

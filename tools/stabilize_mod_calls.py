@@ -29,7 +29,7 @@ existing=R/'save_return_compat.rpy'
 if existing.exists():
  match=re.search(r'^    cs_legacy_call_returns = (.+)$',existing.read_text(encoding='utf8'),re.M)
  if match:legacy.update(ast.literal_eval(match.group(1)))
-for name in ('day03_part07_20261024_final','day03_part06_20261023_final','day03_medpoint_revision_20261024_final'):
+for name in ('day03_part07_20261024_final','day03_part06_20261023_final','day03_medpoint_revision_20261024_final','day03_part07_revision_20261024_final','day03_part08_09_20261025_final','day03_part10_20261025_final','day03_part11_20261025_final','day03_part12_20261025_final','day03_part13_20261026_final'):
  release=Path('D:/stean/release_chuzaya_smena')/name
  for src in (release/'source_snapshot').rglob('*.rpy'):
   rel=src.relative_to(release/'source_snapshot').as_posix();mapping=sites(src.read_text(encoding='utf-8-sig'),rel)

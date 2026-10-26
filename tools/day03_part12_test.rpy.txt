@@ -1,0 +1,1279 @@
+# -*- coding: utf-8 -*-
+init 101 python:
+    renpy.cs_p12_fast=False
+    renpy.cs_p12_auto=False
+    cs_p12_old_say=config.say_arguments_callback
+    cs_p12_old_labels=config.label_callback
+    cs_p12_old_args=config.menu_arguments_callback
+    def cs_p12_audio_check():
+        if not cs_day03_started:return
+        target=cs_day03_audio_target(cs_day03_audio_location) if cs_day03_audio_location else False
+        if target is not False:
+            assert renpy.music.get_playing(channel="ambience")==target, "Wrong room ambience: %r -> %r"%(cs_day03_audio_location,renpy.music.get_playing(channel="ambience"))
+    def cs_p12_say(who,*args,**kwargs):
+        if cs_p12_old_say:args,kwargs=cs_p12_old_say(who,*args,**kwargs)
+        if renpy.cs_p12_fast:
+            kwargs["interact"]=False
+            for c,t in ((cs_da,"cs_darya"),(cs_mz,"cs_zhenya"),(cs_sy,"cs_semen"),(cs_sl,"sl")):
+                if who is c:assert renpy.showing(t),"Speaking actor missing: "+t
+        return args,kwargs
+    def cs_p12_menu(items,*args,**kwargs):
+        v=[v for l,v in items if v is not None][0 if renpy.cs_p12_yes else -1]
+        return v() if callable(v) else v
+    def cs_p12_args(*args,**kwargs):
+        if cs_p12_old_args:args,kwargs=cs_p12_old_args(*args,**kwargs)
+        if renpy.cs_p12_auto:store.menu=cs_p12_menu
+        return args,kwargs
+    def cs_p12_labels(name,abnormal):
+        if cs_p12_old_labels:cs_p12_old_labels(name,abnormal)
+        if not renpy.cs_p12_fast:return
+        assert name not in ("cs_day03_161a","cs_day03_161b","cs_day03_162","cs_day03_154","cs_check_day03_152_horn"),"Old dinner replayed"
+        if name=="cs_check_day03_169_help_completed":renpy.cs_p12_helps+=1
+        if name=="cs_check_day03_166_book_taken":renpy.cs_p12_books+=1
+        if name.startswith("cs_day03_16") or name=="cs_day03_170":renpy.cs_p12_pending=name
+        if name=="cs_check_day03_part12_complete":renpy.cs_p12_pending=None
+    def cs_p12_capture(event,**kwargs):
+        if event!="show_done" or not renpy.cs_p12_fast:return
+        cs_p12_audio_check()
+        if renpy.showing("bg"):
+            assert renpy.has_image(("bg",)+tuple(renpy.get_attributes("bg"))),"Unregistered background"
+        cast=tuple(sorted(t for t in cs_presence_tags if renpy.showing(t)))
+        background=tuple(sorted((t,tuple(renpy.get_attributes(t) or ())) for t in renpy.get_showing_tags() if t not in cs_presence_tags))
+        if renpy.cs_p12_pending or cast!=renpy.cs_p12_cast or background!=getattr(renpy,"cs_p12_background",()):
+            renpy.cs_p12_count+=1
+            renpy.pause(0.25,hard=True)
+            cs_p6_capture("%02d_%s"%(renpy.cs_p12_count,renpy.cs_p12_pending or "cast"))
+            if len(cast)==1:
+                x,y,w,h=renpy.get_image_bounds(cast[0]);assert abs(x+w/2.0-960)<2
+            renpy.cs_p12_cast=cast;renpy.cs_p12_pending=None
+            renpy.cs_p12_background=background
+    config.say_arguments_callback=cs_p12_say
+    config.menu_arguments_callback=cs_p12_args
+    config.label_callback=cs_p12_labels
+    config.all_character_callbacks.append(cs_p12_capture)
+
+label cs_qa_p12_setup:
+    $ cs_reset_state()
+    $ cs_active=cs_darya_known=cs_day03_started=True
+    $ cs_friend_mz=renpy.cs_p12_mz+int(renpy.cs_p12_help)
+    $ cs_mz_dinner_friend_on_arrival=renpy.cs_p12_mz
+    $ cs_mz_friend_on_arrival_day3=min(cs_friend_mz,3)
+    $ cs_mz_open_library_invitation_day3=renpy.cs_p12_open
+    $ cs_mz_quiet_reading_place_day3=renpy.cs_p12_quiet
+    $ cs_mz_evening_help_day3=renpy.cs_p12_help
+    $ cs_mz_evening_help_completed_day3=renpy.cs_p12_completed
+    $ cs_mz_evening_choice_done=True
+    $ cs_friend_sl=renpy.cs_p12_sl
+    $ cs_friend_se=2 if renpy.cs_p12_se else 0
+    $ cs_se_day3_personal_talk=renpy.cs_p12_se
+    $ cs_mi_followup_invitation_day3=cs_dv_followup_invitation_day3=True
+    $ cs_mi_followup_target_day=cs_dv_followup_target_day=4
+    $ cs_mz_book_borrowed_day3=cs_day03_novel_selected=True
+    $ cs_day03_reading_book_id="goncharov_ordinary_story"
+    $ cs_day03_reading_book_location=cs_day03_sketchbook_location="house_table"
+    $ cs_day03_poster_location="house_table"
+    $ cs_sl_poster_collected_day3=cs_day03_poster_stored_home=True
+    $ cs_day03_part11_done=cs_day03_dinner_horn_played=cs_day03_dinner_arrived=cs_day03_dinner_finished=True
+    $ cs_lena_elbow_bandaged=cs_lena_no_sport_day2=cs_viola_spare_bandage=True
+    $ cs_lena_elbow_injury_day2=2
+    $ cs_day03_documents_location="administration"
+    $ set_mode_adv()
+    $ sunset_time()
+    $ persistent.sprite_time="sunset"
+    return
+
+label cs_qa_p12_route:
+    call cs_qa_p12_setup
+    if renpy.cs_p12_legacy:
+        jump cs_day03_part12_from_legacy
+    jump cs_day03_part12
+
+label cs_qa_p12_guard:
+    call cs_qa_p12_setup
+    $ cs_day03_part12_started=True
+    call cs_day03_163
+    call cs_day03_164
+    call cs_day03_165
+    call cs_day03_slavya_evening_choice
+    call screen cs_qa_p12_gate
+    call cs_day03_slavya_evening_choice
+    call cs_day03_166
+    call cs_day03_167
+    call cs_day03_168
+    call cs_day03_169a
+    call cs_day03_169a
+    call cs_day03_170
+    call screen cs_qa_p12_gate
+    $ cs_day03_part12_done=True
+    jump cs_day03_part12
+
+screen cs_qa_p12_gate():
+    modal True
+    textbutton "Продолжить проверку" action Return() align (0.5,0.5)
+
+testcase cs_p12_0:
+    pause 0.5
+    $ persistent.font_size="small"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps=0
+    $ _preferences.transitions=2
+    $ _test.force=True
+    $ _test.timeout=100.0
+    $ renpy.cs_p12_fast=True
+    $ renpy.cs_p12_auto=True
+    $ renpy.cs_p12_yes=False
+    $ renpy.cs_p12_mz=0
+    $ renpy.cs_p12_help=False
+    $ renpy.cs_p12_sl=0
+    $ renpy.cs_p12_se=False
+    $ renpy.cs_p12_open=False
+    $ renpy.cs_p12_quiet=False
+    $ renpy.cs_p12_completed=False
+    $ renpy.cs_p12_legacy=False
+    $ renpy.cs_p12_count=0
+    $ renpy.cs_p12_helps=0
+    $ renpy.cs_p12_books=0
+    $ renpy.cs_p12_cast=()
+    $ renpy.cs_p12_pending=None
+    $ renpy.cs_p6_case="p12_0"
+    run Start("cs_qa_p12_route")
+    click until label cs_check_day03_part12_complete
+    pause 0.5
+    assert cs_friend_sl==0
+    assert cs_sl_friend_before_evening_choice==0
+    assert cs_sl_evening_schedule_help_day3==False
+    assert cs_sl_day4_notice_offer==False
+    assert cs_friend_mz==0
+    assert cs_friend_se==0
+    assert cs_mz_evening_help_completed_day3==False
+    assert cs_day03_darya_destination=='music_club'
+    assert cs_day03_reading_book_location=='with_lena'
+    assert cs_day03_sketchbook_location=='house_table'
+    assert cs_day03_poster_location=='house_table'
+    assert cs_mz_open_library_invitation_day3==False
+    assert cs_mz_quiet_reading_place_day3==False
+    assert cs_day03_part12_done and cs_day03_dinner_finished and cs_day03_evening_book_retrieved
+    assert cs_mi_followup_invitation_day3 and cs_dv_followup_invitation_day3
+    assert cs_mi_followup_target_day==cs_dv_followup_target_day==4
+    assert cs_lena_elbow_bandaged and cs_lena_elbow_injury_day2==2 and cs_viola_spare_bandage
+    assert cs_day03_documents_location=="administration"
+    assert not renpy.showing("cs_semen") and not renpy.showing("sl")
+    assert not renpy.showing("cs_darya")
+    $ open(config.basedir+"/p12_final_audio_state.txt","w").write(repr(([(t,renpy.get_attributes(t)) for t in renpy.get_showing_tags()],cs_day03_audio_location,renpy.music.get_playing(channel="ambience"))))
+    assert renpy.music.get_playing(channel="ambience") is None
+    assert renpy.cs_p12_helps==0
+    assert renpy.cs_p12_books==1
+    $ renpy.take_screenshot()
+    $ renpy.save("p12_0_end")
+    $ renpy.load("p12_0_end")
+    pause 0.5
+    assert cs_friend_sl==0
+    $ cs_p6_capture("complete")
+    $ open(config.basedir+"/p12_0_PASS.txt","w").write("PASS")
+    run Quit(confirm=False)
+
+testcase cs_p12_1:
+    pause 0.5
+    $ persistent.font_size="small"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps=0
+    $ _preferences.transitions=2
+    $ _test.force=True
+    $ _test.timeout=100.0
+    $ renpy.cs_p12_fast=True
+    $ renpy.cs_p12_auto=True
+    $ renpy.cs_p12_yes=True
+    $ renpy.cs_p12_mz=0
+    $ renpy.cs_p12_help=False
+    $ renpy.cs_p12_sl=0
+    $ renpy.cs_p12_se=True
+    $ renpy.cs_p12_open=False
+    $ renpy.cs_p12_quiet=False
+    $ renpy.cs_p12_completed=False
+    $ renpy.cs_p12_legacy=False
+    $ renpy.cs_p12_count=0
+    $ renpy.cs_p12_helps=0
+    $ renpy.cs_p12_books=0
+    $ renpy.cs_p12_cast=()
+    $ renpy.cs_p12_pending=None
+    $ renpy.cs_p6_case="p12_1"
+    run Start("cs_qa_p12_route")
+    click until label cs_check_day03_part12_complete
+    pause 0.5
+    assert cs_friend_sl==1
+    assert cs_sl_friend_before_evening_choice==0
+    assert cs_sl_evening_schedule_help_day3==True
+    assert cs_sl_day4_notice_offer==False
+    assert cs_friend_mz==0
+    assert cs_friend_se==2
+    assert cs_mz_evening_help_completed_day3==False
+    assert cs_day03_darya_destination=='music_club'
+    assert cs_day03_reading_book_location=='with_lena'
+    assert cs_day03_sketchbook_location=='house_table'
+    assert cs_day03_poster_location=='house_table'
+    assert cs_mz_open_library_invitation_day3==False
+    assert cs_mz_quiet_reading_place_day3==False
+    assert cs_day03_part12_done and cs_day03_dinner_finished and cs_day03_evening_book_retrieved
+    assert cs_mi_followup_invitation_day3 and cs_dv_followup_invitation_day3
+    assert cs_mi_followup_target_day==cs_dv_followup_target_day==4
+    assert cs_lena_elbow_bandaged and cs_lena_elbow_injury_day2==2 and cs_viola_spare_bandage
+    assert cs_day03_documents_location=="administration"
+    assert not renpy.showing("cs_semen") and not renpy.showing("sl")
+    assert not renpy.showing("cs_darya")
+    $ open(config.basedir+"/p12_final_audio_state.txt","w").write(repr(([(t,renpy.get_attributes(t)) for t in renpy.get_showing_tags()],cs_day03_audio_location,renpy.music.get_playing(channel="ambience"))))
+    assert renpy.music.get_playing(channel="ambience") is None
+    assert renpy.cs_p12_helps==0
+    assert renpy.cs_p12_books==1
+    $ renpy.take_screenshot()
+    $ renpy.save("p12_1_end")
+    $ renpy.load("p12_1_end")
+    pause 0.5
+    assert cs_friend_sl==1
+    $ cs_p6_capture("complete")
+    $ open(config.basedir+"/p12_1_PASS.txt","w").write("PASS")
+    run Quit(confirm=False)
+
+testcase cs_p12_2:
+    pause 0.5
+    $ persistent.font_size="small"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps=0
+    $ _preferences.transitions=2
+    $ _test.force=True
+    $ _test.timeout=100.0
+    $ renpy.cs_p12_fast=True
+    $ renpy.cs_p12_auto=True
+    $ renpy.cs_p12_yes=False
+    $ renpy.cs_p12_mz=0
+    $ renpy.cs_p12_help=True
+    $ renpy.cs_p12_sl=1
+    $ renpy.cs_p12_se=True
+    $ renpy.cs_p12_open=False
+    $ renpy.cs_p12_quiet=False
+    $ renpy.cs_p12_completed=False
+    $ renpy.cs_p12_legacy=False
+    $ renpy.cs_p12_count=0
+    $ renpy.cs_p12_helps=0
+    $ renpy.cs_p12_books=0
+    $ renpy.cs_p12_cast=()
+    $ renpy.cs_p12_pending=None
+    $ renpy.cs_p6_case="p12_2"
+    run Start("cs_qa_p12_route")
+    click until label cs_check_day03_part12_complete
+    pause 0.5
+    assert cs_friend_sl==1
+    assert cs_sl_friend_before_evening_choice==1
+    assert cs_sl_evening_schedule_help_day3==False
+    assert cs_sl_day4_notice_offer==False
+    assert cs_friend_mz==1
+    assert cs_friend_se==2
+    assert cs_mz_evening_help_completed_day3==True
+    assert cs_day03_darya_destination=='library'
+    assert cs_day03_reading_book_location=='with_lena'
+    assert cs_day03_sketchbook_location=='house_table'
+    assert cs_day03_poster_location=='house_table'
+    assert cs_mz_open_library_invitation_day3==False
+    assert cs_mz_quiet_reading_place_day3==False
+    assert cs_day03_part12_done and cs_day03_dinner_finished and cs_day03_evening_book_retrieved
+    assert cs_mi_followup_invitation_day3 and cs_dv_followup_invitation_day3
+    assert cs_mi_followup_target_day==cs_dv_followup_target_day==4
+    assert cs_lena_elbow_bandaged and cs_lena_elbow_injury_day2==2 and cs_viola_spare_bandage
+    assert cs_day03_documents_location=="administration"
+    assert not renpy.showing("cs_semen") and not renpy.showing("sl")
+    assert not renpy.showing("cs_darya")
+    $ open(config.basedir+"/p12_final_audio_state.txt","w").write(repr(([(t,renpy.get_attributes(t)) for t in renpy.get_showing_tags()],cs_day03_audio_location,renpy.music.get_playing(channel="ambience"))))
+    assert renpy.music.get_playing(channel="ambience") is None
+    assert renpy.cs_p12_helps==1
+    assert renpy.cs_p12_books==1
+    $ renpy.take_screenshot()
+    $ renpy.save("p12_2_end")
+    $ renpy.load("p12_2_end")
+    pause 0.5
+    assert cs_friend_sl==1
+    $ cs_p6_capture("complete")
+    $ open(config.basedir+"/p12_2_PASS.txt","w").write("PASS")
+    run Quit(confirm=False)
+
+testcase cs_p12_3:
+    pause 0.5
+    $ persistent.font_size="small"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps=0
+    $ _preferences.transitions=2
+    $ _test.force=True
+    $ _test.timeout=100.0
+    $ renpy.cs_p12_fast=True
+    $ renpy.cs_p12_auto=True
+    $ renpy.cs_p12_yes=True
+    $ renpy.cs_p12_mz=0
+    $ renpy.cs_p12_help=True
+    $ renpy.cs_p12_sl=1
+    $ renpy.cs_p12_se=False
+    $ renpy.cs_p12_open=False
+    $ renpy.cs_p12_quiet=False
+    $ renpy.cs_p12_completed=False
+    $ renpy.cs_p12_legacy=False
+    $ renpy.cs_p12_count=0
+    $ renpy.cs_p12_helps=0
+    $ renpy.cs_p12_books=0
+    $ renpy.cs_p12_cast=()
+    $ renpy.cs_p12_pending=None
+    $ renpy.cs_p6_case="p12_3"
+    run Start("cs_qa_p12_route")
+    click until label cs_check_day03_part12_complete
+    pause 0.5
+    assert cs_friend_sl==2
+    assert cs_sl_friend_before_evening_choice==1
+    assert cs_sl_evening_schedule_help_day3==True
+    assert cs_sl_day4_notice_offer==False
+    assert cs_friend_mz==1
+    assert cs_friend_se==0
+    assert cs_mz_evening_help_completed_day3==True
+    assert cs_day03_darya_destination=='library'
+    assert cs_day03_reading_book_location=='with_lena'
+    assert cs_day03_sketchbook_location=='house_table'
+    assert cs_day03_poster_location=='house_table'
+    assert cs_mz_open_library_invitation_day3==False
+    assert cs_mz_quiet_reading_place_day3==False
+    assert cs_day03_part12_done and cs_day03_dinner_finished and cs_day03_evening_book_retrieved
+    assert cs_mi_followup_invitation_day3 and cs_dv_followup_invitation_day3
+    assert cs_mi_followup_target_day==cs_dv_followup_target_day==4
+    assert cs_lena_elbow_bandaged and cs_lena_elbow_injury_day2==2 and cs_viola_spare_bandage
+    assert cs_day03_documents_location=="administration"
+    assert not renpy.showing("cs_semen") and not renpy.showing("sl")
+    assert not renpy.showing("cs_darya")
+    $ open(config.basedir+"/p12_final_audio_state.txt","w").write(repr(([(t,renpy.get_attributes(t)) for t in renpy.get_showing_tags()],cs_day03_audio_location,renpy.music.get_playing(channel="ambience"))))
+    assert renpy.music.get_playing(channel="ambience") is None
+    assert renpy.cs_p12_helps==1
+    assert renpy.cs_p12_books==1
+    $ renpy.take_screenshot()
+    $ renpy.save("p12_3_end")
+    $ renpy.load("p12_3_end")
+    pause 0.5
+    assert cs_friend_sl==2
+    $ cs_p6_capture("complete")
+    $ open(config.basedir+"/p12_3_PASS.txt","w").write("PASS")
+    run Quit(confirm=False)
+
+testcase cs_p12_4:
+    pause 0.5
+    $ persistent.font_size="small"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps=0
+    $ _preferences.transitions=2
+    $ _test.force=True
+    $ _test.timeout=100.0
+    $ renpy.cs_p12_fast=True
+    $ renpy.cs_p12_auto=True
+    $ renpy.cs_p12_yes=False
+    $ renpy.cs_p12_mz=1
+    $ renpy.cs_p12_help=False
+    $ renpy.cs_p12_sl=2
+    $ renpy.cs_p12_se=True
+    $ renpy.cs_p12_open=False
+    $ renpy.cs_p12_quiet=False
+    $ renpy.cs_p12_completed=False
+    $ renpy.cs_p12_legacy=False
+    $ renpy.cs_p12_count=0
+    $ renpy.cs_p12_helps=0
+    $ renpy.cs_p12_books=0
+    $ renpy.cs_p12_cast=()
+    $ renpy.cs_p12_pending=None
+    $ renpy.cs_p6_case="p12_4"
+    run Start("cs_qa_p12_route")
+    click until label cs_check_day03_part12_complete
+    pause 0.5
+    assert cs_friend_sl==2
+    assert cs_sl_friend_before_evening_choice==2
+    assert cs_sl_evening_schedule_help_day3==False
+    assert cs_sl_day4_notice_offer==False
+    assert cs_friend_mz==1
+    assert cs_friend_se==2
+    assert cs_mz_evening_help_completed_day3==False
+    assert cs_day03_darya_destination=='music_club'
+    assert cs_day03_reading_book_location=='with_lena'
+    assert cs_day03_sketchbook_location=='house_table'
+    assert cs_day03_poster_location=='house_table'
+    assert cs_mz_open_library_invitation_day3==False
+    assert cs_mz_quiet_reading_place_day3==False
+    assert cs_day03_part12_done and cs_day03_dinner_finished and cs_day03_evening_book_retrieved
+    assert cs_mi_followup_invitation_day3 and cs_dv_followup_invitation_day3
+    assert cs_mi_followup_target_day==cs_dv_followup_target_day==4
+    assert cs_lena_elbow_bandaged and cs_lena_elbow_injury_day2==2 and cs_viola_spare_bandage
+    assert cs_day03_documents_location=="administration"
+    assert not renpy.showing("cs_semen") and not renpy.showing("sl")
+    assert not renpy.showing("cs_darya")
+    $ open(config.basedir+"/p12_final_audio_state.txt","w").write(repr(([(t,renpy.get_attributes(t)) for t in renpy.get_showing_tags()],cs_day03_audio_location,renpy.music.get_playing(channel="ambience"))))
+    assert renpy.music.get_playing(channel="ambience") is None
+    assert renpy.cs_p12_helps==0
+    assert renpy.cs_p12_books==1
+    $ renpy.take_screenshot()
+    $ renpy.save("p12_4_end")
+    $ renpy.load("p12_4_end")
+    pause 0.5
+    assert cs_friend_sl==2
+    $ cs_p6_capture("complete")
+    $ open(config.basedir+"/p12_4_PASS.txt","w").write("PASS")
+    run Quit(confirm=False)
+
+testcase cs_p12_5:
+    pause 0.5
+    $ persistent.font_size="small"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps=0
+    $ _preferences.transitions=2
+    $ _test.force=True
+    $ _test.timeout=100.0
+    $ renpy.cs_p12_fast=True
+    $ renpy.cs_p12_auto=True
+    $ renpy.cs_p12_yes=True
+    $ renpy.cs_p12_mz=1
+    $ renpy.cs_p12_help=False
+    $ renpy.cs_p12_sl=2
+    $ renpy.cs_p12_se=True
+    $ renpy.cs_p12_open=False
+    $ renpy.cs_p12_quiet=False
+    $ renpy.cs_p12_completed=False
+    $ renpy.cs_p12_legacy=False
+    $ renpy.cs_p12_count=0
+    $ renpy.cs_p12_helps=0
+    $ renpy.cs_p12_books=0
+    $ renpy.cs_p12_cast=()
+    $ renpy.cs_p12_pending=None
+    $ renpy.cs_p6_case="p12_5"
+    run Start("cs_qa_p12_route")
+    click until label cs_check_day03_part12_complete
+    pause 0.5
+    assert cs_friend_sl==3
+    assert cs_sl_friend_before_evening_choice==2
+    assert cs_sl_evening_schedule_help_day3==True
+    assert cs_sl_day4_notice_offer==True
+    assert cs_friend_mz==1
+    assert cs_friend_se==2
+    assert cs_mz_evening_help_completed_day3==False
+    assert cs_day03_darya_destination=='music_club'
+    assert cs_day03_reading_book_location=='with_lena'
+    assert cs_day03_sketchbook_location=='house_table'
+    assert cs_day03_poster_location=='house_table'
+    assert cs_mz_open_library_invitation_day3==False
+    assert cs_mz_quiet_reading_place_day3==False
+    assert cs_day03_part12_done and cs_day03_dinner_finished and cs_day03_evening_book_retrieved
+    assert cs_mi_followup_invitation_day3 and cs_dv_followup_invitation_day3
+    assert cs_mi_followup_target_day==cs_dv_followup_target_day==4
+    assert cs_lena_elbow_bandaged and cs_lena_elbow_injury_day2==2 and cs_viola_spare_bandage
+    assert cs_day03_documents_location=="administration"
+    assert not renpy.showing("cs_semen") and not renpy.showing("sl")
+    assert not renpy.showing("cs_darya")
+    $ open(config.basedir+"/p12_final_audio_state.txt","w").write(repr(([(t,renpy.get_attributes(t)) for t in renpy.get_showing_tags()],cs_day03_audio_location,renpy.music.get_playing(channel="ambience"))))
+    assert renpy.music.get_playing(channel="ambience") is None
+    assert renpy.cs_p12_helps==0
+    assert renpy.cs_p12_books==1
+    $ renpy.take_screenshot()
+    $ renpy.save("p12_5_end")
+    $ renpy.load("p12_5_end")
+    pause 0.5
+    assert cs_friend_sl==3
+    $ cs_p6_capture("complete")
+    $ open(config.basedir+"/p12_5_PASS.txt","w").write("PASS")
+    run Quit(confirm=False)
+
+testcase cs_p12_6:
+    pause 0.5
+    $ persistent.font_size="small"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps=0
+    $ _preferences.transitions=2
+    $ _test.force=True
+    $ _test.timeout=100.0
+    $ renpy.cs_p12_fast=True
+    $ renpy.cs_p12_auto=True
+    $ renpy.cs_p12_yes=False
+    $ renpy.cs_p12_mz=1
+    $ renpy.cs_p12_help=True
+    $ renpy.cs_p12_sl=0
+    $ renpy.cs_p12_se=False
+    $ renpy.cs_p12_open=False
+    $ renpy.cs_p12_quiet=False
+    $ renpy.cs_p12_completed=False
+    $ renpy.cs_p12_legacy=False
+    $ renpy.cs_p12_count=0
+    $ renpy.cs_p12_helps=0
+    $ renpy.cs_p12_books=0
+    $ renpy.cs_p12_cast=()
+    $ renpy.cs_p12_pending=None
+    $ renpy.cs_p6_case="p12_6"
+    run Start("cs_qa_p12_route")
+    click until label cs_check_day03_part12_complete
+    pause 0.5
+    assert cs_friend_sl==0
+    assert cs_sl_friend_before_evening_choice==0
+    assert cs_sl_evening_schedule_help_day3==False
+    assert cs_sl_day4_notice_offer==False
+    assert cs_friend_mz==2
+    assert cs_friend_se==0
+    assert cs_mz_evening_help_completed_day3==True
+    assert cs_day03_darya_destination=='library'
+    assert cs_day03_reading_book_location=='with_lena'
+    assert cs_day03_sketchbook_location=='house_table'
+    assert cs_day03_poster_location=='house_table'
+    assert cs_mz_open_library_invitation_day3==False
+    assert cs_mz_quiet_reading_place_day3==False
+    assert cs_day03_part12_done and cs_day03_dinner_finished and cs_day03_evening_book_retrieved
+    assert cs_mi_followup_invitation_day3 and cs_dv_followup_invitation_day3
+    assert cs_mi_followup_target_day==cs_dv_followup_target_day==4
+    assert cs_lena_elbow_bandaged and cs_lena_elbow_injury_day2==2 and cs_viola_spare_bandage
+    assert cs_day03_documents_location=="administration"
+    assert not renpy.showing("cs_semen") and not renpy.showing("sl")
+    assert not renpy.showing("cs_darya")
+    $ open(config.basedir+"/p12_final_audio_state.txt","w").write(repr(([(t,renpy.get_attributes(t)) for t in renpy.get_showing_tags()],cs_day03_audio_location,renpy.music.get_playing(channel="ambience"))))
+    assert renpy.music.get_playing(channel="ambience") is None
+    assert renpy.cs_p12_helps==1
+    assert renpy.cs_p12_books==1
+    $ renpy.take_screenshot()
+    $ renpy.save("p12_6_end")
+    $ renpy.load("p12_6_end")
+    pause 0.5
+    assert cs_friend_sl==0
+    $ cs_p6_capture("complete")
+    $ open(config.basedir+"/p12_6_PASS.txt","w").write("PASS")
+    run Quit(confirm=False)
+
+testcase cs_p12_7:
+    pause 0.5
+    $ persistent.font_size="small"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps=0
+    $ _preferences.transitions=2
+    $ _test.force=True
+    $ _test.timeout=100.0
+    $ renpy.cs_p12_fast=True
+    $ renpy.cs_p12_auto=True
+    $ renpy.cs_p12_yes=True
+    $ renpy.cs_p12_mz=1
+    $ renpy.cs_p12_help=True
+    $ renpy.cs_p12_sl=0
+    $ renpy.cs_p12_se=True
+    $ renpy.cs_p12_open=False
+    $ renpy.cs_p12_quiet=False
+    $ renpy.cs_p12_completed=False
+    $ renpy.cs_p12_legacy=False
+    $ renpy.cs_p12_count=0
+    $ renpy.cs_p12_helps=0
+    $ renpy.cs_p12_books=0
+    $ renpy.cs_p12_cast=()
+    $ renpy.cs_p12_pending=None
+    $ renpy.cs_p6_case="p12_7"
+    run Start("cs_qa_p12_route")
+    click until label cs_check_day03_part12_complete
+    pause 0.5
+    assert cs_friend_sl==1
+    assert cs_sl_friend_before_evening_choice==0
+    assert cs_sl_evening_schedule_help_day3==True
+    assert cs_sl_day4_notice_offer==False
+    assert cs_friend_mz==2
+    assert cs_friend_se==2
+    assert cs_mz_evening_help_completed_day3==True
+    assert cs_day03_darya_destination=='library'
+    assert cs_day03_reading_book_location=='with_lena'
+    assert cs_day03_sketchbook_location=='house_table'
+    assert cs_day03_poster_location=='house_table'
+    assert cs_mz_open_library_invitation_day3==False
+    assert cs_mz_quiet_reading_place_day3==False
+    assert cs_day03_part12_done and cs_day03_dinner_finished and cs_day03_evening_book_retrieved
+    assert cs_mi_followup_invitation_day3 and cs_dv_followup_invitation_day3
+    assert cs_mi_followup_target_day==cs_dv_followup_target_day==4
+    assert cs_lena_elbow_bandaged and cs_lena_elbow_injury_day2==2 and cs_viola_spare_bandage
+    assert cs_day03_documents_location=="administration"
+    assert not renpy.showing("cs_semen") and not renpy.showing("sl")
+    assert not renpy.showing("cs_darya")
+    $ open(config.basedir+"/p12_final_audio_state.txt","w").write(repr(([(t,renpy.get_attributes(t)) for t in renpy.get_showing_tags()],cs_day03_audio_location,renpy.music.get_playing(channel="ambience"))))
+    assert renpy.music.get_playing(channel="ambience") is None
+    assert renpy.cs_p12_helps==1
+    assert renpy.cs_p12_books==1
+    $ renpy.take_screenshot()
+    $ renpy.save("p12_7_end")
+    $ renpy.load("p12_7_end")
+    pause 0.5
+    assert cs_friend_sl==1
+    $ cs_p6_capture("complete")
+    $ open(config.basedir+"/p12_7_PASS.txt","w").write("PASS")
+    run Quit(confirm=False)
+
+testcase cs_p12_8:
+    pause 0.5
+    $ persistent.font_size="small"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps=0
+    $ _preferences.transitions=2
+    $ _test.force=True
+    $ _test.timeout=100.0
+    $ renpy.cs_p12_fast=True
+    $ renpy.cs_p12_auto=True
+    $ renpy.cs_p12_yes=False
+    $ renpy.cs_p12_mz=2
+    $ renpy.cs_p12_help=False
+    $ renpy.cs_p12_sl=1
+    $ renpy.cs_p12_se=True
+    $ renpy.cs_p12_open=False
+    $ renpy.cs_p12_quiet=False
+    $ renpy.cs_p12_completed=False
+    $ renpy.cs_p12_legacy=False
+    $ renpy.cs_p12_count=0
+    $ renpy.cs_p12_helps=0
+    $ renpy.cs_p12_books=0
+    $ renpy.cs_p12_cast=()
+    $ renpy.cs_p12_pending=None
+    $ renpy.cs_p6_case="p12_8"
+    run Start("cs_qa_p12_route")
+    click until label cs_check_day03_part12_complete
+    pause 0.5
+    assert cs_friend_sl==1
+    assert cs_sl_friend_before_evening_choice==1
+    assert cs_sl_evening_schedule_help_day3==False
+    assert cs_sl_day4_notice_offer==False
+    assert cs_friend_mz==2
+    assert cs_friend_se==2
+    assert cs_mz_evening_help_completed_day3==False
+    assert cs_day03_darya_destination=='music_club'
+    assert cs_day03_reading_book_location=='with_lena'
+    assert cs_day03_sketchbook_location=='house_table'
+    assert cs_day03_poster_location=='house_table'
+    assert cs_mz_open_library_invitation_day3==False
+    assert cs_mz_quiet_reading_place_day3==False
+    assert cs_day03_part12_done and cs_day03_dinner_finished and cs_day03_evening_book_retrieved
+    assert cs_mi_followup_invitation_day3 and cs_dv_followup_invitation_day3
+    assert cs_mi_followup_target_day==cs_dv_followup_target_day==4
+    assert cs_lena_elbow_bandaged and cs_lena_elbow_injury_day2==2 and cs_viola_spare_bandage
+    assert cs_day03_documents_location=="administration"
+    assert not renpy.showing("cs_semen") and not renpy.showing("sl")
+    assert not renpy.showing("cs_darya")
+    $ open(config.basedir+"/p12_final_audio_state.txt","w").write(repr(([(t,renpy.get_attributes(t)) for t in renpy.get_showing_tags()],cs_day03_audio_location,renpy.music.get_playing(channel="ambience"))))
+    assert renpy.music.get_playing(channel="ambience") is None
+    assert renpy.cs_p12_helps==0
+    assert renpy.cs_p12_books==1
+    $ renpy.take_screenshot()
+    $ renpy.save("p12_8_end")
+    $ renpy.load("p12_8_end")
+    pause 0.5
+    assert cs_friend_sl==1
+    $ cs_p6_capture("complete")
+    $ open(config.basedir+"/p12_8_PASS.txt","w").write("PASS")
+    run Quit(confirm=False)
+
+testcase cs_p12_9:
+    pause 0.5
+    $ persistent.font_size="small"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps=0
+    $ _preferences.transitions=2
+    $ _test.force=True
+    $ _test.timeout=100.0
+    $ renpy.cs_p12_fast=True
+    $ renpy.cs_p12_auto=True
+    $ renpy.cs_p12_yes=True
+    $ renpy.cs_p12_mz=2
+    $ renpy.cs_p12_help=False
+    $ renpy.cs_p12_sl=1
+    $ renpy.cs_p12_se=False
+    $ renpy.cs_p12_open=False
+    $ renpy.cs_p12_quiet=False
+    $ renpy.cs_p12_completed=False
+    $ renpy.cs_p12_legacy=False
+    $ renpy.cs_p12_count=0
+    $ renpy.cs_p12_helps=0
+    $ renpy.cs_p12_books=0
+    $ renpy.cs_p12_cast=()
+    $ renpy.cs_p12_pending=None
+    $ renpy.cs_p6_case="p12_9"
+    run Start("cs_qa_p12_route")
+    click until label cs_check_day03_part12_complete
+    pause 0.5
+    assert cs_friend_sl==2
+    assert cs_sl_friend_before_evening_choice==1
+    assert cs_sl_evening_schedule_help_day3==True
+    assert cs_sl_day4_notice_offer==False
+    assert cs_friend_mz==2
+    assert cs_friend_se==0
+    assert cs_mz_evening_help_completed_day3==False
+    assert cs_day03_darya_destination=='music_club'
+    assert cs_day03_reading_book_location=='with_lena'
+    assert cs_day03_sketchbook_location=='house_table'
+    assert cs_day03_poster_location=='house_table'
+    assert cs_mz_open_library_invitation_day3==False
+    assert cs_mz_quiet_reading_place_day3==False
+    assert cs_day03_part12_done and cs_day03_dinner_finished and cs_day03_evening_book_retrieved
+    assert cs_mi_followup_invitation_day3 and cs_dv_followup_invitation_day3
+    assert cs_mi_followup_target_day==cs_dv_followup_target_day==4
+    assert cs_lena_elbow_bandaged and cs_lena_elbow_injury_day2==2 and cs_viola_spare_bandage
+    assert cs_day03_documents_location=="administration"
+    assert not renpy.showing("cs_semen") and not renpy.showing("sl")
+    assert not renpy.showing("cs_darya")
+    $ open(config.basedir+"/p12_final_audio_state.txt","w").write(repr(([(t,renpy.get_attributes(t)) for t in renpy.get_showing_tags()],cs_day03_audio_location,renpy.music.get_playing(channel="ambience"))))
+    assert renpy.music.get_playing(channel="ambience") is None
+    assert renpy.cs_p12_helps==0
+    assert renpy.cs_p12_books==1
+    $ renpy.take_screenshot()
+    $ renpy.save("p12_9_end")
+    $ renpy.load("p12_9_end")
+    pause 0.5
+    assert cs_friend_sl==2
+    $ cs_p6_capture("complete")
+    $ open(config.basedir+"/p12_9_PASS.txt","w").write("PASS")
+    run Quit(confirm=False)
+
+testcase cs_p12_10:
+    pause 0.5
+    $ persistent.font_size="small"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps=0
+    $ _preferences.transitions=2
+    $ _test.force=True
+    $ _test.timeout=100.0
+    $ renpy.cs_p12_fast=True
+    $ renpy.cs_p12_auto=True
+    $ renpy.cs_p12_yes=False
+    $ renpy.cs_p12_mz=2
+    $ renpy.cs_p12_help=True
+    $ renpy.cs_p12_sl=2
+    $ renpy.cs_p12_se=True
+    $ renpy.cs_p12_open=False
+    $ renpy.cs_p12_quiet=False
+    $ renpy.cs_p12_completed=False
+    $ renpy.cs_p12_legacy=False
+    $ renpy.cs_p12_count=0
+    $ renpy.cs_p12_helps=0
+    $ renpy.cs_p12_books=0
+    $ renpy.cs_p12_cast=()
+    $ renpy.cs_p12_pending=None
+    $ renpy.cs_p6_case="p12_10"
+    run Start("cs_qa_p12_route")
+    click until label cs_check_day03_part12_complete
+    pause 0.5
+    assert cs_friend_sl==2
+    assert cs_sl_friend_before_evening_choice==2
+    assert cs_sl_evening_schedule_help_day3==False
+    assert cs_sl_day4_notice_offer==False
+    assert cs_friend_mz==3
+    assert cs_friend_se==2
+    assert cs_mz_evening_help_completed_day3==True
+    assert cs_day03_darya_destination=='library'
+    assert cs_day03_reading_book_location=='with_lena'
+    assert cs_day03_sketchbook_location=='house_table'
+    assert cs_day03_poster_location=='house_table'
+    assert cs_mz_open_library_invitation_day3==False
+    assert cs_mz_quiet_reading_place_day3==False
+    assert cs_day03_part12_done and cs_day03_dinner_finished and cs_day03_evening_book_retrieved
+    assert cs_mi_followup_invitation_day3 and cs_dv_followup_invitation_day3
+    assert cs_mi_followup_target_day==cs_dv_followup_target_day==4
+    assert cs_lena_elbow_bandaged and cs_lena_elbow_injury_day2==2 and cs_viola_spare_bandage
+    assert cs_day03_documents_location=="administration"
+    assert not renpy.showing("cs_semen") and not renpy.showing("sl")
+    assert not renpy.showing("cs_darya")
+    $ open(config.basedir+"/p12_final_audio_state.txt","w").write(repr(([(t,renpy.get_attributes(t)) for t in renpy.get_showing_tags()],cs_day03_audio_location,renpy.music.get_playing(channel="ambience"))))
+    assert renpy.music.get_playing(channel="ambience") is None
+    assert renpy.cs_p12_helps==1
+    assert renpy.cs_p12_books==1
+    $ renpy.take_screenshot()
+    $ renpy.save("p12_10_end")
+    $ renpy.load("p12_10_end")
+    pause 0.5
+    assert cs_friend_sl==2
+    $ cs_p6_capture("complete")
+    $ open(config.basedir+"/p12_10_PASS.txt","w").write("PASS")
+    run Quit(confirm=False)
+
+testcase cs_p12_11:
+    pause 0.5
+    $ persistent.font_size="small"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps=0
+    $ _preferences.transitions=2
+    $ _test.force=True
+    $ _test.timeout=100.0
+    $ renpy.cs_p12_fast=True
+    $ renpy.cs_p12_auto=True
+    $ renpy.cs_p12_yes=True
+    $ renpy.cs_p12_mz=2
+    $ renpy.cs_p12_help=True
+    $ renpy.cs_p12_sl=2
+    $ renpy.cs_p12_se=True
+    $ renpy.cs_p12_open=False
+    $ renpy.cs_p12_quiet=False
+    $ renpy.cs_p12_completed=False
+    $ renpy.cs_p12_legacy=False
+    $ renpy.cs_p12_count=0
+    $ renpy.cs_p12_helps=0
+    $ renpy.cs_p12_books=0
+    $ renpy.cs_p12_cast=()
+    $ renpy.cs_p12_pending=None
+    $ renpy.cs_p6_case="p12_11"
+    run Start("cs_qa_p12_route")
+    click until label cs_check_day03_part12_complete
+    pause 0.5
+    assert cs_friend_sl==3
+    assert cs_sl_friend_before_evening_choice==2
+    assert cs_sl_evening_schedule_help_day3==True
+    assert cs_sl_day4_notice_offer==True
+    assert cs_friend_mz==3
+    assert cs_friend_se==2
+    assert cs_mz_evening_help_completed_day3==True
+    assert cs_day03_darya_destination=='library'
+    assert cs_day03_reading_book_location=='with_lena'
+    assert cs_day03_sketchbook_location=='house_table'
+    assert cs_day03_poster_location=='house_table'
+    assert cs_mz_open_library_invitation_day3==False
+    assert cs_mz_quiet_reading_place_day3==False
+    assert cs_day03_part12_done and cs_day03_dinner_finished and cs_day03_evening_book_retrieved
+    assert cs_mi_followup_invitation_day3 and cs_dv_followup_invitation_day3
+    assert cs_mi_followup_target_day==cs_dv_followup_target_day==4
+    assert cs_lena_elbow_bandaged and cs_lena_elbow_injury_day2==2 and cs_viola_spare_bandage
+    assert cs_day03_documents_location=="administration"
+    assert not renpy.showing("cs_semen") and not renpy.showing("sl")
+    assert not renpy.showing("cs_darya")
+    $ open(config.basedir+"/p12_final_audio_state.txt","w").write(repr(([(t,renpy.get_attributes(t)) for t in renpy.get_showing_tags()],cs_day03_audio_location,renpy.music.get_playing(channel="ambience"))))
+    assert renpy.music.get_playing(channel="ambience") is None
+    assert renpy.cs_p12_helps==1
+    assert renpy.cs_p12_books==1
+    $ renpy.take_screenshot()
+    $ renpy.save("p12_11_end")
+    $ renpy.load("p12_11_end")
+    pause 0.5
+    assert cs_friend_sl==3
+    $ cs_p6_capture("complete")
+    $ open(config.basedir+"/p12_11_PASS.txt","w").write("PASS")
+    run Quit(confirm=False)
+
+testcase cs_p12_12:
+    pause 0.5
+    $ persistent.font_size="small"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps=0
+    $ _preferences.transitions=2
+    $ _test.force=True
+    $ _test.timeout=100.0
+    $ renpy.cs_p12_fast=True
+    $ renpy.cs_p12_auto=True
+    $ renpy.cs_p12_yes=False
+    $ renpy.cs_p12_mz=3
+    $ renpy.cs_p12_help=False
+    $ renpy.cs_p12_sl=0
+    $ renpy.cs_p12_se=False
+    $ renpy.cs_p12_open=False
+    $ renpy.cs_p12_quiet=False
+    $ renpy.cs_p12_completed=False
+    $ renpy.cs_p12_legacy=False
+    $ renpy.cs_p12_count=0
+    $ renpy.cs_p12_helps=0
+    $ renpy.cs_p12_books=0
+    $ renpy.cs_p12_cast=()
+    $ renpy.cs_p12_pending=None
+    $ renpy.cs_p6_case="p12_12"
+    run Start("cs_qa_p12_route")
+    click until label cs_check_day03_part12_complete
+    pause 0.5
+    assert cs_friend_sl==0
+    assert cs_sl_friend_before_evening_choice==0
+    assert cs_sl_evening_schedule_help_day3==False
+    assert cs_sl_day4_notice_offer==False
+    assert cs_friend_mz==3
+    assert cs_friend_se==0
+    assert cs_mz_evening_help_completed_day3==False
+    assert cs_day03_darya_destination=='music_club'
+    assert cs_day03_reading_book_location=='with_lena'
+    assert cs_day03_sketchbook_location=='house_table'
+    assert cs_day03_poster_location=='house_table'
+    assert cs_mz_open_library_invitation_day3==False
+    assert cs_mz_quiet_reading_place_day3==False
+    assert cs_day03_part12_done and cs_day03_dinner_finished and cs_day03_evening_book_retrieved
+    assert cs_mi_followup_invitation_day3 and cs_dv_followup_invitation_day3
+    assert cs_mi_followup_target_day==cs_dv_followup_target_day==4
+    assert cs_lena_elbow_bandaged and cs_lena_elbow_injury_day2==2 and cs_viola_spare_bandage
+    assert cs_day03_documents_location=="administration"
+    assert not renpy.showing("cs_semen") and not renpy.showing("sl")
+    assert not renpy.showing("cs_darya")
+    $ open(config.basedir+"/p12_final_audio_state.txt","w").write(repr(([(t,renpy.get_attributes(t)) for t in renpy.get_showing_tags()],cs_day03_audio_location,renpy.music.get_playing(channel="ambience"))))
+    assert renpy.music.get_playing(channel="ambience") is None
+    assert renpy.cs_p12_helps==0
+    assert renpy.cs_p12_books==1
+    $ renpy.take_screenshot()
+    $ renpy.save("p12_12_end")
+    $ renpy.load("p12_12_end")
+    pause 0.5
+    assert cs_friend_sl==0
+    $ cs_p6_capture("complete")
+    $ open(config.basedir+"/p12_12_PASS.txt","w").write("PASS")
+    run Quit(confirm=False)
+
+testcase cs_p12_13:
+    pause 0.5
+    $ persistent.font_size="small"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps=0
+    $ _preferences.transitions=2
+    $ _test.force=True
+    $ _test.timeout=100.0
+    $ renpy.cs_p12_fast=True
+    $ renpy.cs_p12_auto=True
+    $ renpy.cs_p12_yes=True
+    $ renpy.cs_p12_mz=3
+    $ renpy.cs_p12_help=False
+    $ renpy.cs_p12_sl=0
+    $ renpy.cs_p12_se=True
+    $ renpy.cs_p12_open=True
+    $ renpy.cs_p12_quiet=True
+    $ renpy.cs_p12_completed=False
+    $ renpy.cs_p12_legacy=False
+    $ renpy.cs_p12_count=0
+    $ renpy.cs_p12_helps=0
+    $ renpy.cs_p12_books=0
+    $ renpy.cs_p12_cast=()
+    $ renpy.cs_p12_pending=None
+    $ renpy.cs_p6_case="p12_13"
+    run Start("cs_qa_p12_route")
+    click until label cs_check_day03_part12_complete
+    pause 0.5
+    assert cs_friend_sl==1
+    assert cs_sl_friend_before_evening_choice==0
+    assert cs_sl_evening_schedule_help_day3==True
+    assert cs_sl_day4_notice_offer==False
+    assert cs_friend_mz==3
+    assert cs_friend_se==2
+    assert cs_mz_evening_help_completed_day3==False
+    assert cs_day03_darya_destination=='music_club'
+    assert cs_day03_reading_book_location=='with_lena'
+    assert cs_day03_sketchbook_location=='house_table'
+    assert cs_day03_poster_location=='house_table'
+    assert cs_mz_open_library_invitation_day3==True
+    assert cs_mz_quiet_reading_place_day3==True
+    assert cs_day03_part12_done and cs_day03_dinner_finished and cs_day03_evening_book_retrieved
+    assert cs_mi_followup_invitation_day3 and cs_dv_followup_invitation_day3
+    assert cs_mi_followup_target_day==cs_dv_followup_target_day==4
+    assert cs_lena_elbow_bandaged and cs_lena_elbow_injury_day2==2 and cs_viola_spare_bandage
+    assert cs_day03_documents_location=="administration"
+    assert not renpy.showing("cs_semen") and not renpy.showing("sl")
+    assert not renpy.showing("cs_darya")
+    $ open(config.basedir+"/p12_final_audio_state.txt","w").write(repr(([(t,renpy.get_attributes(t)) for t in renpy.get_showing_tags()],cs_day03_audio_location,renpy.music.get_playing(channel="ambience"))))
+    assert renpy.music.get_playing(channel="ambience") is None
+    assert renpy.cs_p12_helps==0
+    assert renpy.cs_p12_books==1
+    $ renpy.take_screenshot()
+    $ renpy.save("p12_13_end")
+    $ renpy.load("p12_13_end")
+    pause 0.5
+    assert cs_friend_sl==1
+    $ cs_p6_capture("complete")
+    $ open(config.basedir+"/p12_13_PASS.txt","w").write("PASS")
+    run Quit(confirm=False)
+
+testcase cs_p12_14:
+    pause 0.5
+    $ persistent.font_size="small"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps=0
+    $ _preferences.transitions=2
+    $ _test.force=True
+    $ _test.timeout=100.0
+    $ renpy.cs_p12_fast=True
+    $ renpy.cs_p12_auto=True
+    $ renpy.cs_p12_yes=False
+    $ renpy.cs_p12_mz=3
+    $ renpy.cs_p12_help=True
+    $ renpy.cs_p12_sl=1
+    $ renpy.cs_p12_se=True
+    $ renpy.cs_p12_open=False
+    $ renpy.cs_p12_quiet=False
+    $ renpy.cs_p12_completed=False
+    $ renpy.cs_p12_legacy=False
+    $ renpy.cs_p12_count=0
+    $ renpy.cs_p12_helps=0
+    $ renpy.cs_p12_books=0
+    $ renpy.cs_p12_cast=()
+    $ renpy.cs_p12_pending=None
+    $ renpy.cs_p6_case="p12_14"
+    run Start("cs_qa_p12_route")
+    click until label cs_check_day03_part12_complete
+    pause 0.5
+    assert cs_friend_sl==1
+    assert cs_sl_friend_before_evening_choice==1
+    assert cs_sl_evening_schedule_help_day3==False
+    assert cs_sl_day4_notice_offer==False
+    assert cs_friend_mz==4
+    assert cs_friend_se==2
+    assert cs_mz_evening_help_completed_day3==True
+    assert cs_day03_darya_destination=='library'
+    assert cs_day03_reading_book_location=='with_lena'
+    assert cs_day03_sketchbook_location=='house_table'
+    assert cs_day03_poster_location=='house_table'
+    assert cs_mz_open_library_invitation_day3==False
+    assert cs_mz_quiet_reading_place_day3==False
+    assert cs_day03_part12_done and cs_day03_dinner_finished and cs_day03_evening_book_retrieved
+    assert cs_mi_followup_invitation_day3 and cs_dv_followup_invitation_day3
+    assert cs_mi_followup_target_day==cs_dv_followup_target_day==4
+    assert cs_lena_elbow_bandaged and cs_lena_elbow_injury_day2==2 and cs_viola_spare_bandage
+    assert cs_day03_documents_location=="administration"
+    assert not renpy.showing("cs_semen") and not renpy.showing("sl")
+    assert not renpy.showing("cs_darya")
+    $ open(config.basedir+"/p12_final_audio_state.txt","w").write(repr(([(t,renpy.get_attributes(t)) for t in renpy.get_showing_tags()],cs_day03_audio_location,renpy.music.get_playing(channel="ambience"))))
+    assert renpy.music.get_playing(channel="ambience") is None
+    assert renpy.cs_p12_helps==1
+    assert renpy.cs_p12_books==1
+    $ renpy.take_screenshot()
+    $ renpy.save("p12_14_end")
+    $ renpy.load("p12_14_end")
+    pause 0.5
+    assert cs_friend_sl==1
+    $ cs_p6_capture("complete")
+    $ open(config.basedir+"/p12_14_PASS.txt","w").write("PASS")
+    run Quit(confirm=False)
+
+testcase cs_p12_15:
+    pause 0.5
+    $ persistent.font_size="small"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps=0
+    $ _preferences.transitions=2
+    $ _test.force=True
+    $ _test.timeout=100.0
+    $ renpy.cs_p12_fast=True
+    $ renpy.cs_p12_auto=True
+    $ renpy.cs_p12_yes=True
+    $ renpy.cs_p12_mz=3
+    $ renpy.cs_p12_help=True
+    $ renpy.cs_p12_sl=1
+    $ renpy.cs_p12_se=False
+    $ renpy.cs_p12_open=True
+    $ renpy.cs_p12_quiet=True
+    $ renpy.cs_p12_completed=False
+    $ renpy.cs_p12_legacy=False
+    $ renpy.cs_p12_count=0
+    $ renpy.cs_p12_helps=0
+    $ renpy.cs_p12_books=0
+    $ renpy.cs_p12_cast=()
+    $ renpy.cs_p12_pending=None
+    $ renpy.cs_p6_case="p12_15"
+    run Start("cs_qa_p12_route")
+    click until label cs_check_day03_part12_complete
+    pause 0.5
+    assert cs_friend_sl==2
+    assert cs_sl_friend_before_evening_choice==1
+    assert cs_sl_evening_schedule_help_day3==True
+    assert cs_sl_day4_notice_offer==False
+    assert cs_friend_mz==4
+    assert cs_friend_se==0
+    assert cs_mz_evening_help_completed_day3==True
+    assert cs_day03_darya_destination=='library'
+    assert cs_day03_reading_book_location=='with_lena'
+    assert cs_day03_sketchbook_location=='house_table'
+    assert cs_day03_poster_location=='house_table'
+    assert cs_mz_open_library_invitation_day3==True
+    assert cs_mz_quiet_reading_place_day3==True
+    assert cs_day03_part12_done and cs_day03_dinner_finished and cs_day03_evening_book_retrieved
+    assert cs_mi_followup_invitation_day3 and cs_dv_followup_invitation_day3
+    assert cs_mi_followup_target_day==cs_dv_followup_target_day==4
+    assert cs_lena_elbow_bandaged and cs_lena_elbow_injury_day2==2 and cs_viola_spare_bandage
+    assert cs_day03_documents_location=="administration"
+    assert not renpy.showing("cs_semen") and not renpy.showing("sl")
+    assert not renpy.showing("cs_darya")
+    $ open(config.basedir+"/p12_final_audio_state.txt","w").write(repr(([(t,renpy.get_attributes(t)) for t in renpy.get_showing_tags()],cs_day03_audio_location,renpy.music.get_playing(channel="ambience"))))
+    assert renpy.music.get_playing(channel="ambience") is None
+    assert renpy.cs_p12_helps==1
+    assert renpy.cs_p12_books==1
+    $ renpy.take_screenshot()
+    $ renpy.save("p12_15_end")
+    $ renpy.load("p12_15_end")
+    pause 0.5
+    assert cs_friend_sl==2
+    $ cs_p6_capture("complete")
+    $ open(config.basedir+"/p12_15_PASS.txt","w").write("PASS")
+    run Quit(confirm=False)
+
+testcase cs_p12_16:
+    pause 0.5
+    $ persistent.font_size="small"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps=0
+    $ _preferences.transitions=2
+    $ _test.force=True
+    $ _test.timeout=100.0
+    $ renpy.cs_p12_fast=True
+    $ renpy.cs_p12_auto=True
+    $ renpy.cs_p12_yes=True
+    $ renpy.cs_p12_mz=4
+    $ renpy.cs_p12_help=True
+    $ renpy.cs_p12_sl=1
+    $ renpy.cs_p12_se=True
+    $ renpy.cs_p12_open=True
+    $ renpy.cs_p12_quiet=False
+    $ renpy.cs_p12_completed=True
+    $ renpy.cs_p12_legacy=True
+    $ renpy.cs_p12_count=0
+    $ renpy.cs_p12_helps=0
+    $ renpy.cs_p12_books=0
+    $ renpy.cs_p12_cast=()
+    $ renpy.cs_p12_pending=None
+    $ renpy.cs_p6_case="p12_16"
+    run Start("cs_qa_p12_route")
+    click until label cs_check_day03_part12_complete
+    pause 0.5
+    assert cs_friend_sl==2
+    assert cs_sl_friend_before_evening_choice==1
+    assert cs_sl_evening_schedule_help_day3==True
+    assert cs_sl_day4_notice_offer==False
+    assert cs_friend_mz==5
+    assert cs_friend_se==2
+    assert cs_mz_evening_help_completed_day3==True
+    assert cs_day03_darya_destination=='library'
+    assert cs_day03_reading_book_location=='with_lena'
+    assert cs_day03_sketchbook_location=='house_table'
+    assert cs_day03_poster_location=='house_table'
+    assert cs_mz_open_library_invitation_day3==True
+    assert cs_mz_quiet_reading_place_day3==False
+    assert cs_day03_part12_done and cs_day03_dinner_finished and cs_day03_evening_book_retrieved
+    assert cs_mi_followup_invitation_day3 and cs_dv_followup_invitation_day3
+    assert cs_mi_followup_target_day==cs_dv_followup_target_day==4
+    assert cs_lena_elbow_bandaged and cs_lena_elbow_injury_day2==2 and cs_viola_spare_bandage
+    assert cs_day03_documents_location=="administration"
+    assert not renpy.showing("cs_semen") and not renpy.showing("sl")
+    assert not renpy.showing("cs_darya")
+    $ open(config.basedir+"/p12_final_audio_state.txt","w").write(repr(([(t,renpy.get_attributes(t)) for t in renpy.get_showing_tags()],cs_day03_audio_location,renpy.music.get_playing(channel="ambience"))))
+    assert renpy.music.get_playing(channel="ambience") is None
+    assert renpy.cs_p12_helps==0
+    assert renpy.cs_p12_books==1
+    $ renpy.take_screenshot()
+    $ renpy.save("p12_16_end")
+    $ renpy.load("p12_16_end")
+    pause 0.5
+    assert cs_friend_sl==2
+    $ cs_p6_capture("complete")
+    $ open(config.basedir+"/p12_16_PASS.txt","w").write("PASS")
+    run Quit(confirm=False)
+
+testcase cs_p12_17:
+    pause 0.5
+    $ persistent.font_size="small"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps=0
+    $ _preferences.transitions=2
+    $ _test.force=True
+    $ _test.timeout=100.0
+    $ renpy.cs_p12_fast=True
+    $ renpy.cs_p12_auto=True
+    $ renpy.cs_p12_yes=False
+    $ renpy.cs_p12_mz=4
+    $ renpy.cs_p12_help=True
+    $ renpy.cs_p12_sl=2
+    $ renpy.cs_p12_se=True
+    $ renpy.cs_p12_open=True
+    $ renpy.cs_p12_quiet=False
+    $ renpy.cs_p12_completed=True
+    $ renpy.cs_p12_legacy=True
+    $ renpy.cs_p12_count=0
+    $ renpy.cs_p12_helps=0
+    $ renpy.cs_p12_books=0
+    $ renpy.cs_p12_cast=()
+    $ renpy.cs_p12_pending=None
+    $ renpy.cs_p6_case="p12_17"
+    run Start("cs_qa_p12_route")
+    click until label cs_check_day03_part12_complete
+    pause 0.5
+    assert cs_friend_sl==2
+    assert cs_sl_friend_before_evening_choice==2
+    assert cs_sl_evening_schedule_help_day3==False
+    assert cs_sl_day4_notice_offer==False
+    assert cs_friend_mz==5
+    assert cs_friend_se==2
+    assert cs_mz_evening_help_completed_day3==True
+    assert cs_day03_darya_destination=='library'
+    assert cs_day03_reading_book_location=='with_lena'
+    assert cs_day03_sketchbook_location=='house_table'
+    assert cs_day03_poster_location=='house_table'
+    assert cs_mz_open_library_invitation_day3==True
+    assert cs_mz_quiet_reading_place_day3==False
+    assert cs_day03_part12_done and cs_day03_dinner_finished and cs_day03_evening_book_retrieved
+    assert cs_mi_followup_invitation_day3 and cs_dv_followup_invitation_day3
+    assert cs_mi_followup_target_day==cs_dv_followup_target_day==4
+    assert cs_lena_elbow_bandaged and cs_lena_elbow_injury_day2==2 and cs_viola_spare_bandage
+    assert cs_day03_documents_location=="administration"
+    assert not renpy.showing("cs_semen") and not renpy.showing("sl")
+    assert not renpy.showing("cs_darya")
+    $ open(config.basedir+"/p12_final_audio_state.txt","w").write(repr(([(t,renpy.get_attributes(t)) for t in renpy.get_showing_tags()],cs_day03_audio_location,renpy.music.get_playing(channel="ambience"))))
+    assert renpy.music.get_playing(channel="ambience") is None
+    assert renpy.cs_p12_helps==0
+    assert renpy.cs_p12_books==1
+    $ renpy.take_screenshot()
+    $ renpy.save("p12_17_end")
+    $ renpy.load("p12_17_end")
+    pause 0.5
+    assert cs_friend_sl==2
+    $ cs_p6_capture("complete")
+    $ open(config.basedir+"/p12_17_PASS.txt","w").write("PASS")
+    run Quit(confirm=False)
+
+testcase cs_p12_guard:
+    pause 0.5
+    $ persistent.font_size="small"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps=0
+    $ _preferences.transitions=2
+    $ _test.force=True
+    $ _test.timeout=100.0
+    $ renpy.cs_p12_fast=True
+    $ renpy.cs_p12_auto=False
+    $ renpy.cs_p12_yes=True
+    $ renpy.cs_p12_mz=2
+    $ renpy.cs_p12_help=True
+    $ renpy.cs_p12_sl=1
+    $ renpy.cs_p12_se=False
+    $ renpy.cs_p12_open=False
+    $ renpy.cs_p12_quiet=False
+    $ renpy.cs_p12_completed=False
+    $ renpy.cs_p12_legacy=False
+    $ renpy.cs_p12_count=0
+    $ renpy.cs_p12_helps=0
+    $ renpy.cs_p12_books=0
+    $ renpy.cs_p12_cast=()
+    $ renpy.cs_p12_pending=None
+    $ renpy.cs_p6_case="p12_guard"
+    run Start("cs_qa_p12_guard")
+    pause 15.0
+    $ renpy.take_screenshot()
+    $ renpy.save("p12_menu")
+    $ renpy.load("p12_menu")
+    pause 0.5
+    "Предложить помочь сверить завтрашние поручения"
+    "Продолжить проверку"
+    "Продолжить проверку"
+    pause 0.5
+    assert renpy.get_screen("cs_day03_part12_wait_screen") is not None
+    assert cs_friend_sl==2
+    assert cs_sl_friend_before_evening_choice==1
+    assert cs_sl_evening_schedule_help_day3==True
+    assert cs_sl_day4_notice_offer==False
+    assert cs_friend_mz==3
+    assert cs_friend_se==0
+    assert cs_mz_evening_help_completed_day3==True
+    assert cs_day03_darya_destination=='library'
+    assert cs_day03_reading_book_location=='with_lena'
+    assert cs_day03_sketchbook_location=='house_table'
+    assert cs_day03_poster_location=='house_table'
+    assert cs_mz_open_library_invitation_day3==False
+    assert cs_mz_quiet_reading_place_day3==False
+    assert cs_day03_part12_done and cs_day03_dinner_finished and cs_day03_evening_book_retrieved
+    assert cs_mi_followup_invitation_day3 and cs_dv_followup_invitation_day3
+    assert cs_mi_followup_target_day==cs_dv_followup_target_day==4
+    assert cs_lena_elbow_bandaged and cs_lena_elbow_injury_day2==2 and cs_viola_spare_bandage
+    assert cs_day03_documents_location=="administration"
+    assert not renpy.showing("cs_semen") and not renpy.showing("sl")
+    assert not renpy.showing("cs_darya")
+    $ open(config.basedir+"/p12_final_audio_state.txt","w").write(repr(([(t,renpy.get_attributes(t)) for t in renpy.get_showing_tags()],cs_day03_audio_location,renpy.music.get_playing(channel="ambience"))))
+    assert renpy.music.get_playing(channel="ambience") is None
+    assert renpy.cs_p12_helps==1
+    assert renpy.cs_p12_books==1
+    $ renpy.take_screenshot()
+    $ renpy.save("p12_guard_end")
+    $ renpy.load("p12_guard_end")
+    pause 0.5
+    assert cs_friend_sl==2
+    $ cs_p6_capture("complete")
+    $ open(config.basedir+"/p12_guard_PASS.txt","w").write("PASS")
+    run Quit(confirm=False)

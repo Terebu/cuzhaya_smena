@@ -1,0 +1,150 @@
+{
+  "status": "PASS",
+  "rooms": {
+    "black": {
+      "target": null,
+      "inherits": false
+    },
+    "cs_house_lena_darya_int_day": {
+      "target": "sound/ambiences/int_cabin_day.ogg",
+      "inherits": false
+    },
+    "cs_cg_lena_sport_mirror_bandaged_morning": {
+      "target": false,
+      "inherits": true
+    },
+    "cs_house_lena_darya_ext_day": {
+      "target": "sound/ambiences/camp_center_day.ogg",
+      "inherits": false
+    },
+    "cs_camp_path_day": {
+      "target": "sound/ambiences/camp_center_day.ogg",
+      "inherits": false
+    },
+    "bg ext_square_day": {
+      "target": "sound/ambiences/camp_center_day.ogg",
+      "inherits": false
+    },
+    "bg ext_playground_day": {
+      "target": "sound/ambiences/camp_center_day.ogg",
+      "inherits": false
+    },
+    "bg ext_clubs_day": {
+      "target": "sound/ambiences/camp_center_day.ogg",
+      "inherits": false
+    },
+    "bg ext_dining_hall_away_day": {
+      "target": "sound/ambiences/camp_center_day.ogg",
+      "inherits": false
+    },
+    "bg int_dining_hall_people_day": {
+      "target": "sound/ambiences/dining_hall_full.ogg",
+      "inherits": false
+    },
+    "cs_cg_lena_darya_medical_inventory_day": {
+      "target": false,
+      "inherits": true
+    },
+    "bg int_aidpost_day": {
+      "target": "sound/ambiences/medstation_inside_day.ogg",
+      "inherits": false
+    },
+    "bg ext_aidpost_day": {
+      "target": "sound/ambiences/camp_center_day.ogg",
+      "inherits": false
+    },
+    "bg ext_house_of_mt_day": {
+      "target": "sound/ambiences/camp_center_day.ogg",
+      "inherits": false
+    },
+    "cs_ext_administration_day": {
+      "target": "sound/ambiences/camp_center_day.ogg",
+      "inherits": false
+    },
+    "cs_int_administration_day": {
+      "target": null,
+      "inherits": false
+    },
+    "bg ext_library_day": {
+      "target": "sound/ambiences/camp_center_day.ogg",
+      "inherits": false
+    },
+    "bg int_library_day": {
+      "target": null,
+      "inherits": false
+    },
+    "bg ext_musclub_day": {
+      "target": "sound/ambiences/camp_center_day.ogg",
+      "inherits": false
+    },
+    "bg int_musclub_day": {
+      "target": null,
+      "inherits": false
+    },
+    "bg ext_dining_hall_near_day": {
+      "target": "sound/ambiences/camp_center_day.ogg",
+      "inherits": false
+    },
+    "cs_house_lena_darya_int_sunset": {
+      "target": "sound/ambiences/int_cabin_day.ogg",
+      "inherits": false
+    },
+    "cs_house_lena_darya_ext_sunset": {
+      "target": "sound/ambiences/camp_center_evening.ogg",
+      "inherits": false
+    },
+    "cs_camp_path_sunset": {
+      "target": "sound/ambiences/camp_center_evening.ogg",
+      "inherits": false
+    },
+    "bg ext_dining_hall_near_sunset": {
+      "target": "sound/ambiences/camp_center_evening.ogg",
+      "inherits": false
+    },
+    "bg int_dining_hall_sunset": {
+      "target": "sound/ambiences/dining_hall_full.ogg",
+      "inherits": false
+    },
+    "cs_library_exterior_sunset": {
+      "target": "sound/ambiences/camp_center_evening.ogg",
+      "inherits": false
+    },
+    "cs_library_interior_evening": {
+      "target": null,
+      "inherits": false
+    },
+    "bg ext_square_sunset": {
+      "target": "sound/ambiences/camp_center_evening.ogg",
+      "inherits": false
+    },
+    "cs_library_interior_night": {
+      "target": null,
+      "inherits": false
+    },
+    "cs_library_exterior_night": {
+      "target": "sound/ambiences/camp_center_night.ogg",
+      "inherits": false
+    },
+    "cs_camp_path_night": {
+      "target": "sound/ambiences/camp_center_night.ogg",
+      "inherits": false
+    },
+    "cs_house_lena_darya_ext_night": {
+      "target": "sound/ambiences/camp_center_night.ogg",
+      "inherits": false
+    },
+    "cs_house_lena_darya_int_night": {
+      "target": "sound/ambiences/int_cabin_day.ogg",
+      "inherits": false
+    },
+    "cs_house_lena_darya_int_sleep_night": {
+      "target": "sound/ambiences/int_cabin_day.ogg",
+      "inherits": false
+    },
+    "cs_cg_lena_darya_shared_sleep_night": {
+      "target": false,
+      "inherits": true
+    }
+  },
+  "scope": "All authored day3 scene requests, including retired compatibility tail. Native routes separately validate the playing ambience channel."
+}

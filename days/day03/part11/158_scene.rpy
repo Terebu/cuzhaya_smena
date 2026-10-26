@@ -26,7 +26,7 @@ label cs_day03_158:
         cs_narrator "Дарья улыбнулась."
         cs_da "Я ей сегодня то же самое говорила."
         cs_narrator "Я посмотрела на неё."
-        cs_ls "Прекрасно. Против меня сформировалась комиссия по изучению личности."
+        cs_ls "Прекрасно. Меня обсуждают всем столом."
         if renpy.showing("cs_zhenya"):
             show cs_zhenya shrug pioneer normal
             $ cs_presence_stage()

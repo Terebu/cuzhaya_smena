@@ -470,7 +470,7 @@ label cs_day02_24a:
     $ cs_presence_stage()
     # cs_global_transition
     with cs_sprite_change
-    cs_da "Ты вчера уже рассказывала, что без кнопки отмены тебе будет тяжело."
+    cs_da "Ты же говорила, что дома рисуешь на планшете. А тут даже кнопки отмены нет."
     cs_narrator "Славя удивилась."
     # cs_presence_keep: hide cs_dasha_winter
     # cs_presence_keep: hide cs_dasha_pioneer

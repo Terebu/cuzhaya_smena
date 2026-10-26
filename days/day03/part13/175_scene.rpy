@@ -15,7 +15,7 @@ label cs_day03_175:
     if cs_reflective_shot:
         $ cs_pov_end()
         with cs_sprite_change
-    cs_mz "Давай. И локоть береги."
+    cs_mz "Давай."
     cs_narrator "Я улыбнулась."
     if cs_reflective_shot:
         $ cs_pov_end()

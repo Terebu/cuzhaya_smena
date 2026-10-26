@@ -8,7 +8,7 @@ label cs_day03_156:
     play ambience "sound/ambiences/dining_hall_full.ogg" fadeout 1.5 fadein 1.5
     cs_narrator "Очередь двигалась довольно быстро."
     cs_narrator "Я взяла поднос."
-    cs_narrator "Женя — следующий."
+    cs_narrator "Женя — следом."
     cs_narrator "Дарья встала рядом."
     cs_narrator "Некоторое время мы молчали."
     cs_narrator "Потом Женя неожиданно повернулась ко мне."

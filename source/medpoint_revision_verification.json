@@ -21,7 +21,7 @@
       "Да, она со мной. Спасибо."
     ]
   ],
-  "scripts": 327,
+  "scripts": 421,
   "checks": [
     "Unique labels/defaults",
     "Two independent guarded DV rewards",

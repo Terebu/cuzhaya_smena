@@ -30,6 +30,7 @@ def cond(part,k,block):
     assert c,block
     if part==8 and k not in ('128','136'):c=c.replace('cs_friend_mz','cs_mz_friend_on_arrival_day3')
     if k in ('136','138'):c=c.replace('cs_friend_mz','cs_mz_friend_on_arrival_day3')
+    if k=='136':c=c.replace('cs_mz_friend_on_arrival_day3 >= 2','cs_mz_friend_on_arrival_day3 >= 1')  # inner 'выбрала/помогла выбрать' split stays reachable
     if k=='132':c+=' and cs_helped_sl_day3'
     if k=='143' and 'poster' in c:c+=' and cs_day03_poster_location == "darya_folder"'
     return c
@@ -67,8 +68,14 @@ hooks={
         'Она направилась к клубам.':['$ cs_day03_darya_destination = "music_club"']+leave(['cs_darya'])},
 }
 hooks.setdefault('140',{})['Интересный всё-таки человек.']=reflect()
+hooks.setdefault('130',{})['Положила книгу перед собой.']=['if not cs_day03_hint_album_seen:',
+ '    cs_narrator "Женя, не поднимая головы, добавила:"',
+ '    cs_mz "Кстати. Разбирала карточки и нашла запись про фотоальбом старых смен."',
+ '    cs_mz "Его когда-то передали в старый корпус. Не знаю, остался ли он там."',
+ '    $ cs_day03_hint_album_seen = True']
 # Speaker-less interior paragraphs in the supplied prose remain thoughts, not
 # spoken disclosures to Zhenya. Camera cues above are authored separately.
+force_narrator={'131':{'Я чуть улыбнулась.'},'133':{'Я посмотрела в окно.','На солнечную дорожку.','На деревья.','На пионеров, проходивших мимо.'}}
 inner_ranges={
  '129':[('Кратко.','Вполне в её стиле.'),('Ну что ж.','Осталось главное — книга.')],
  '130':[('Хм.','Звучит подозрительно актуально.'),('Что ж.','Посмотрим, чем ты собираешься меня удивлять, товарищ Гончаров.')],
@@ -97,6 +104,9 @@ def edit(k,who,w):
         return ['if cs_mz_friend_on_arrival_day3 >= 1:', '    '+who+' '+json.dumps(w,ensure_ascii=False),
                 'else:', '    '+who+' '+json.dumps(own_choice[w],ensure_ascii=False)]
     changes={
+ 'Только локоть береги.':'Увидимся позже.',
+ 'Даша, у меня скоро появится коллекция напоминаний. Можно будет издать отдельной книгой.':'Постараюсь не потеряться.',
+     'Кстати, раз уж мы заговорили о рисовании…':'Кстати, о планах на вечер…',
      'Ты вчера говорила, что тебе интересны персонажи. Особенно когда они меняются по ходу истории.':'Сегодня мы говорили об историях, где важны люди и их решения. Здесь как раз можно проследить, как человек меняется.',
      'Ты говорила, что любишь истории про людей?':'Хочешь попробовать историю про людей и их решения?',
      'Можно взять эту?':'Можно почитать эту здесь?',
@@ -157,6 +167,7 @@ def generate(part,k,pre=(),post=()):
         who,w=parse(block)
         if any(w==a for a,z in inner_ranges.get(k,[])):inward=True
         if inward and who=='cs_narrator':who='cs_th'
+        if w in force_narrator.get(k,()):who='cs_narrator'
         transcript[k].append([who,w])
         b+=['    '*depth+x for x in hooks.get(k,{}).get(w,[])]
         b+=['    '*depth+x for x in edit(k,who,w)]

@@ -95,7 +95,7 @@ label cs_day03_183:
     cs_ls "Просто хочется заснуть рядом."
     cs_narrator "Даша опустила взгляд на свою кровать."
     cs_narrator "Потом снова посмотрела на меня."
-    if cs_da_friend_before_night >= 2:
+    if cs_da_friend_before_night >= 1:
         cs_narrator "Она немного помолчала."
         cs_narrator "Затем улыбнулась."
         if cs_reflective_shot:
@@ -111,7 +111,10 @@ label cs_day03_183:
         if cs_reflective_shot:
             $ cs_pov_end()
             with cs_sprite_change
-        cs_da "Сегодня можешь лечь рядом со мной."
+        if cs_da_friend_before_night >= 2:
+            cs_da "Сегодня можешь лечь рядом со мной."
+        else:
+            cs_da "Сегодня можешь лечь рядом. Только давай без разговоров — просто спать."
         cs_narrator "Я несколько секунд смотрела на неё."
         cs_th "Так."
         cs_th "Спокойно."
@@ -266,6 +269,17 @@ label cs_day03_183:
             $ cs_pov_end()
             with cs_sprite_change
         cs_da "Спасибо."
+        cs_narrator "Она помолчала."
+        if cs_reflective_shot:
+            $ cs_pov_end()
+            with cs_sprite_change
+        cs_da "Но если хочешь, посиди ещё немного рядом. Можно просто молчать."
+        cs_narrator "Я улыбнулась."
+        if cs_reflective_shot:
+            $ cs_pov_end()
+            with cs_sprite_change
+        cs_ls "Это я, пожалуй, смогу."
+        cs_narrator "Я села на край её кровати."
         cs_narrator "Я посмотрела на две кровати."
         cs_narrator "Потом на неё."
         if cs_reflective_shot:

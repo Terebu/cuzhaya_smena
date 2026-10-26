@@ -22,7 +22,7 @@ label cs_day03_136:
         cs_narrator "Широко улыбнулась."
         cs_ls "Товарищ Соколова, поздравляю. Вас официально допустили в общество людей, умеющих молчать."
         cs_narrator "Я тихо рассмеялась."
-    elif cs_mz_friend_on_arrival_day3 >= 2:
+    elif cs_mz_friend_on_arrival_day3 >= 1:
         if cs_mz_friend_on_arrival_day3 >= 2:
             cs_narrator "Женя выбрала для меня книгу."
         else:

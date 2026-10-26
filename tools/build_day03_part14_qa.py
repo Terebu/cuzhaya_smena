@@ -87,7 +87,7 @@ label cs_qa_p14_repeat:
 '''
 cases=[(0,True,False),(1,True,False),(2,True,True),(2,True,False),(3,True,True),(3,True,False),(0,False,False),(2,False,False),(3,False,False)]
 for n,(friend,request,confess) in list(enumerate(cases))+[('guard',(2,True,True))]:
- shared=request and friend>=2
+ shared=request and friend>=1  # one calm choice is enough to share the bed; the confession still needs 2
  s+='\ntestcase cs_p14_'+str(n)+':\n    pause 0.5\n    $ persistent.font_size="small"\n    $ renpy.set_physical_size((1280,720))\n    $ _preferences.text_cps=0\n    $ _preferences.transitions=2\n    $ _test.force=True\n    $ _test.timeout=120.0\n'
  vals=dict(fast=True,auto=n!='guard',friend=friend,request=request,confess=confess,count=0,cast=(),pending=None,visited=[])
  s+=''.join('    $ renpy.cs_p14_'+k+'='+repr(v)+'\n' for k,v in vals.items())

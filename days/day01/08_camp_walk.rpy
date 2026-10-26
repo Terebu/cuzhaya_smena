@@ -118,17 +118,17 @@ label cs_day01_08:
     $ cs_presence_stage()
     # cs_global_transition
     with cs_sprite_change
-    cs_da "Мне это чувство знакомо."
+    cs_da "Как дежавю?"
     cs_narrator "Я повернулась к ней."
-    cs_narrator "И тут же вспомнила, с кем разговариваю."
-    cs_ls "А. Ну да."
+    cs_narrator "Хорошее слово. Только обычно дежавю длится секунду, а не всю дорогу от ворот."
+    cs_ls "Да. Примерно так."
     # cs_darya_variety: reaction
     show cs_dasha_winter smile normal at cs_darya_normal_right
     $ cs_presence_stage()
     # cs_global_transition
     with cs_sprite_change
     cs_narrator "Дарья слегка усмехнулась."
-    cs_da "Именно."
+    cs_da "Тогда держись рядом. Вдруг пройдёт."
     # cs_presence_keep: hide sl
     # cs_composition: regroup
     show cs_dasha_winter smile normal at cs_darya_normal_center
@@ -136,7 +136,7 @@ label cs_day01_08:
     # cs_global_transition
     with cs_sprite_change
     cs_narrator "Некоторое время мы шли молча."
-    cs_ls "У тебя хотя бы имеется опыт существования внутри весьма запутанной истории."
+    cs_ls "Хорошо хоть, одна из нас видит всё это впервые."
     # cs_darya_stage: present in story
     show cs_dasha_winter worried normal at cs_darya_normal_center
     $ cs_presence_stage()

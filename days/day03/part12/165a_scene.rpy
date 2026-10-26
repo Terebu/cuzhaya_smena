@@ -91,7 +91,7 @@ label cs_day03_165a:
         cs_narrator "Она перевела взгляд на повязку."
         cs_sl "Конечно. И никаких тяжёлых вещей."
         cs_narrator "Я вздохнула."
-        cs_ls "Удивительно. Даже художественное оформление теперь проходит медицинское согласование."
+        cs_ls "Ладно, ладно. Руку держу на весу."
         if renpy.showing("cs_semen"):
             show cs_semen smile pioneer normal
             $ cs_presence_stage()

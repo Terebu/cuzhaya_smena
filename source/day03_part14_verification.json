@@ -1,7 +1,7 @@
 {
   "status": "PASS",
-  "source_blocks": 788,
-  "runtime_blocks": 787,
+  "source_blocks": 793,
+  "runtime_blocks": 793,
   "cg_sha256": "7730cad48a2f3a33f1a068431bcc7b9ff72e2beb7f9804baada4be4b878068e9",
   "friendship_reachable": 2,
   "notes": [

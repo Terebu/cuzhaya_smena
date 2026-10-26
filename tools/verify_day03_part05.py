@@ -30,7 +30,7 @@ for pattern in (r'^\s*label (\w+)',r'^default (\w+)\s*='):
 flow=(R/'days/day03/part05/00_flow.rpy').read_text(encoding='utf8')
 assert flow.count('    menu:')==1 and flow.count('$ cs_friend_sl += 1')==1
 assert 'if not cs_sl_day3_awarded:' in flow
-assert len(re.findall(r'\$ cs_friend_sl \+= 1',alltext))==2
+assert len(re.findall(r'\$ cs_friend_sl \+= 1',alltext))==3  # day 3 part 12 added a third, intentional Slavya reward
 t=(R/'days/day03/part05/110_scene.rpy').read_text(encoding='utf8')
 assert 'if cs_sl_poster_saved_day3 and not cs_sl_poster_collected_day3:' in t
 assert '$ cs_day03_poster_location = "darya_folder"' in t

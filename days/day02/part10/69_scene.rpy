@@ -78,10 +78,16 @@ label cs_day02_69:
     with Dissolve(0.8)
     cs_narrator "На крыльце я ненадолго остановилась."
     cs_narrator "Посмотрела в сторону библиотеки."
+    # cs_inward_beat_5: attention turns inward
+    $ cs_pov_begin()
+    with cs_sprite_leave
     cs_th "Забавно."
     cs_th "Вчера я пришла сюда с намерением проверить, насколько Женя похожа на знакомого персонажа."
     cs_th "Сегодня просто вернула книгу."
     cs_th "И, кажется, этот визит оказался для нас гораздо важнее."
+    # Return to the same conversation, with the same cast and placement.
+    $ cs_pov_end()
+    with cs_sprite_change
     cs_narrator "Дарья подошла ближе."
     show cs_darya thinking pioneer normal at cs_darya_normal_right
     $ cs_presence_stage()

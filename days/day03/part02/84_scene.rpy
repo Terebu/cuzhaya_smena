@@ -102,6 +102,9 @@ label cs_day03_84:
     cs_narrator "С первого раза."
     label cs_check_day03_84_mirror:
     cs_narrator "Посмотрела на себя в зеркало."
+    # cs_inward_beat_6: attention turns inward
+    $ cs_pov_begin()
+    with cs_sprite_leave
     cs_th "Вот теперь действительно заметен прогресс."
     cs_th "В первый день я пыталась понять, как вообще здесь оказалась."
     cs_th "В третий уже могу завязать пионерский галстук без консультации специалиста."
@@ -109,6 +112,9 @@ label cs_day03_84:
     cs_th "Хотя нет."
     cs_th "Не будем давать Славе идеи."
     label cs_check_day03_84_restored:
+    # Return to the same conversation, with the same cast and placement.
+    $ cs_pov_end()
+    with cs_sprite_change
     cs_ls "Всё, готово."
     cs_narrator "Дарья повернулась."
     cs_narrator "Посмотрела на меня."

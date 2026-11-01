@@ -1,0 +1,87 @@
+# -*- coding: utf-8 -*-
+init 112 python:
+    renpy.cs_patch_active = False
+    cs_patch_say_original = config.say_arguments_callback
+    cs_patch_menu_original = config.menu_arguments_callback
+    cs_patch_label_original = config.label_callback
+    def cs_patch_say(who,*args,**kwargs):
+        if cs_patch_say_original:
+            args,kwargs=cs_patch_say_original(who,*args,**kwargs)
+        if renpy.cs_patch_active:
+            kwargs["interact"]=False
+        return args,kwargs
+    def cs_patch_menu(items,*args,**kwargs):
+        values=[v for l,v in items if v is not None]
+        value=values[0]
+        return value() if callable(value) else value
+    def cs_patch_menu_args(*args,**kwargs):
+        if cs_patch_menu_original:
+            args,kwargs=cs_patch_menu_original(*args,**kwargs)
+        if renpy.cs_patch_active:
+            store.menu=cs_patch_menu
+        return args,kwargs
+    def cs_patch_labels(name,abnormal):
+        if cs_patch_label_original:
+            cs_patch_label_original(name,abnormal)
+        if renpy.cs_patch_active and name in ("cs_day04_01","cs_day04_02","cs_day04_03","cs_day04_04"):
+            renpy.cs_patch_scene=name
+    def cs_patch_frame(event,**kwargs):
+        if not renpy.cs_patch_active or event!="show_done":
+            return
+        if renpy.cs_patch_scene in ("cs_day04_01","cs_day04_02","cs_day04_03"):
+            assert not renpy.music.get_playing(channel="music"),"Music in old-camp episode"
+        target=cs_day03_audio_target(cs_day03_audio_location) if cs_day03_audio_location else False
+        if target is not False:
+            assert renpy.music.get_playing(channel="ambience")==target
+        names=[" ".join((t,)+tuple(renpy.get_attributes(t) or ())) for t in renpy.get_showing_tags()]
+        for key,name in (("sports","bg ext_playground_night"),("old_exterior","cs_d4_old_ext"),("bunker","bg int_catacombs_living"),("reunion","cs_cg_lena_darya_bunker_reunion"),("return","bg ext_square_day")):
+            if name in names and key not in renpy.cs_patch_captured:
+                renpy.pause(0.3,hard=True)
+                renpy.screenshot(config.basedir+"/day04_polish_"+key+".png")
+                renpy.cs_patch_captured.append(key)
+    config.say_arguments_callback=cs_patch_say
+    config.menu_arguments_callback=cs_patch_menu_args
+    config.label_callback=cs_patch_labels
+    config.all_character_callbacks.append(cs_patch_frame)
+
+label cs_qa_day04_polish:
+    $ cs_reset_state()
+    $ cs_active=cs_day03_started=cs_day04_started=cs_darya_known=cs_olga_seen=cs_slavya_known=True
+    $ cs_lena_elbow_bandaged=True
+    $ set_mode_adv()
+    call cs_day04_01
+    call cs_day04_02
+    call cs_day04_03
+    call cs_day04_04
+    label cs_check_day04_polish:
+    $ renpy.cs_patch_active=False
+    cs_narrator "Проверка исправлений завершена."
+    return
+
+testcase cs_day04_polish:
+    pause 0.5
+    $ persistent.font_size="small"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps=0
+    $ _preferences.transitions=2
+    $ _test.force=True
+    $ _test.timeout=120.0
+    $ renpy.cs_patch_active=True
+    $ renpy.cs_patch_scene=None
+    $ renpy.cs_patch_captured=[]
+    run Start("cs_qa_day04_polish")
+    click until label cs_check_day04_polish
+    pause 0.5
+    assert set(renpy.cs_patch_captured)==set(("sports","old_exterior","bunker","reunion","return"))
+    assert renpy.music.get_playing(channel="music")==cs_day_music_daily
+    $ renpy.cs_patch_active=False
+    $ cs_director_scene("cs_d4_old_corridor")
+    $ renpy.scene()
+    $ renpy.show("cs_d4_old_corridor")
+    $ renpy.music.play("sound/music/orchid.ogg",channel="music")
+    $ cs_day03_audio_after_load()
+    pause 1.0
+    assert not renpy.music.get_playing(channel="music")
+    assert renpy.music.get_playing(channel="ambience")=="sound/ambiences/catacombs.ogg"
+    $ open(config.basedir+"/day04_polish_PASS.txt","w").write("PASS")
+    run Quit(confirm=False)

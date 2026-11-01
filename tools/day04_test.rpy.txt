@@ -1,0 +1,251 @@
+# -*- coding: utf-8 -*-
+init 110 python:
+    import json as cs_d4_qa_json
+    renpy.cs_d4_qa=False
+    cs_d4_qa_old_say=config.say_arguments_callback
+    cs_d4_qa_old_args=config.menu_arguments_callback
+    cs_d4_qa_old_labels=config.label_callback
+    def cs_d4_qa_say(who,*args,**kwargs):
+        if cs_d4_qa_old_say:args,kwargs=cs_d4_qa_old_say(who,*args,**kwargs)
+        if renpy.cs_d4_qa:kwargs["interact"]=False
+        return args,kwargs
+    def cs_d4_qa_menu(items,*args,**kwargs):
+        opts=[v for l,v in items if v is not None]
+        i=renpy.cs_d4_qa_menu_count
+        renpy.cs_d4_qa_menu_count+=1
+        v=opts[renpy.cs_d4_qa_choices[i]]
+        return v() if callable(v) else v
+    def cs_d4_qa_args(*args,**kwargs):
+        if cs_d4_qa_old_args:args,kwargs=cs_d4_qa_old_args(*args,**kwargs)
+        if renpy.cs_d4_qa:store.menu=cs_d4_qa_menu
+        return args,kwargs
+    def cs_d4_qa_labels(name,abnormal):
+        if cs_d4_qa_old_labels:cs_d4_qa_old_labels(name,abnormal)
+        if renpy.cs_d4_qa and name=="cs_check_day_title":
+            renpy.pause(0.2,hard=True)
+            cs_p6_capture("day4_title")
+        if renpy.cs_d4_qa and name.startswith("cs_day04_"):
+            renpy.cs_d4_qa_pending=name
+    def cs_d4_qa_capture(event,**kwargs):
+        if not renpy.cs_d4_qa or event!="show_done":return
+        if renpy.showing("bg"):
+            assert renpy.has_image(("bg",)+tuple(renpy.get_attributes("bg")),exact=True),"Missing exact background"
+        tags=tuple(sorted(renpy.get_showing_tags()))
+        attrs=tuple((t,tuple(renpy.get_attributes(t) or ())) for t in tags)
+        target=cs_day03_audio_target(cs_day03_audio_location) if cs_day03_audio_location else False
+        if target is not False:assert renpy.music.get_playing(channel="ambience")==target
+        if renpy.cs_d4_qa_pending or attrs!=getattr(renpy,"cs_d4_qa_frame",()):
+            renpy.cs_d4_qa_count+=1
+            renpy.pause(0.3,hard=True)
+            cs_p6_capture("%03d_%s"%(renpy.cs_d4_qa_count,renpy.cs_d4_qa_pending or "cast"))
+            for t in cs_presence_tags:
+                if renpy.showing(t):
+                    x,y,w,h=renpy.get_image_bounds(t)
+                    assert y<300 and h>500,"Wrong actor vertical baseline"
+            live=[t for t in cs_presence_tags if renpy.showing(t)]
+            if len(live)==1:
+                x,y,w,h=renpy.get_image_bounds(live[0]);assert abs(x+w/2.0-960)<2
+            renpy.cs_d4_qa_frame=attrs;renpy.cs_d4_qa_pending=None
+    config.say_arguments_callback=cs_d4_qa_say
+    config.menu_arguments_callback=cs_d4_qa_args
+    config.label_callback=cs_d4_qa_labels
+    config.all_character_callbacks.append(cs_d4_qa_capture)
+
+label cs_qa_day04:
+    $ cs_reset_state()
+    $ cs_active=cs_day03_started=cs_darya_known=cs_slavya_known=cs_olga_seen=True
+    $ cs_day03_part14_done=cs_day03_completed=True
+    $ cs_lena_elbow_bandaged=True
+    $ cs_friend_mz=renpy.cs_d4_qa_mz
+    $ cs_friend_da=2
+    $ cs_friend_se=cs_friend_dv=cs_friend_viola=1
+    $ cs_mz_hug_allowed_day3=renpy.cs_d4_qa_hug
+    $ cs_da_shared_bed_day3=renpy.cs_d4_qa_shared
+    $ cs_da_love_confession_day3=renpy.cs_d4_qa_confess
+    $ cs_mi_followup_invitation_day3=cs_dv_followup_invitation_day3=cs_sl_day4_notice_offer=True
+    $ set_mode_adv()
+    jump cs_day04
+
+testcase cs_day04_matrix_0:
+    pause 0.5
+    $ persistent.font_size="small"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps=0
+    $ _preferences.transitions=2
+    $ _test.force=True
+    $ _test.timeout=120.0
+    $ renpy.cs_d4_qa=True
+    $ renpy.cs_d4_qa_mz=0
+    $ renpy.cs_d4_qa_hug=False
+    $ renpy.cs_d4_qa_shared=False
+    $ renpy.cs_d4_qa_confess=False
+    $ renpy.cs_d4_qa_choices=[0, 0, 0, 0, 0, 0, 0]
+    $ renpy.cs_d4_qa_menu_count=0
+    $ renpy.cs_d4_qa_count=0
+    $ renpy.cs_d4_qa_pending=None
+    $ renpy.cs_d4_qa_frame=()
+    $ renpy.cs_p6_case="day04_matrix_0"
+    run Start("cs_qa_day04")
+    click until label cs_check_day04_complete
+    pause 0.5
+    assert cs_day04_done and renpy.cs_d4_qa_menu_count==7
+    assert cs_d4_mz_hug_09==cs_d4_mz_hug_12==False
+    assert cs_friend_se==2
+    assert cs_friend_viola==2
+    assert cs_friend_dv==2
+    assert cs_friend_mz==1
+    assert cs_friend_da==3
+    assert cs_d4_mz_friend_before_choice==0
+    assert cs_d4_left_note==True
+    assert cs_d4_shared_bed==False
+    assert cs_d4_elbow_bandage_removed and not cs_lena_elbow_bandaged
+    assert cs_d4_photo1971_location==cs_d4_roster_location==cs_d4_dream_notes_location=="library_locked_drawer"
+    assert cs_d4_undated_photo_location=="olga"
+    assert cs_mi_followup_invitation_day3 and cs_dv_followup_invitation_day3
+    assert cs_mi_followup_target_day==cs_dv_followup_target_day==5
+    $ renpy.take_screenshot()
+    $ renpy.save("day04_matrix_0")
+    $ renpy.load("day04_matrix_0")
+    pause 0.5
+    assert cs_day04_done
+    $ cs_p6_capture("complete")
+    $ open(config.basedir+"/day04_matrix_0_PASS.txt","w").write("PASS")
+    run Quit(confirm=False)
+
+testcase cs_day04_matrix_1:
+    pause 0.5
+    $ persistent.font_size="small"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps=0
+    $ _preferences.transitions=2
+    $ _test.force=True
+    $ _test.timeout=120.0
+    $ renpy.cs_d4_qa=True
+    $ renpy.cs_d4_qa_mz=2
+    $ renpy.cs_d4_qa_hug=True
+    $ renpy.cs_d4_qa_shared=True
+    $ renpy.cs_d4_qa_confess=False
+    $ renpy.cs_d4_qa_choices=[0, 0, 0, 0, 0, 0, 0]
+    $ renpy.cs_d4_qa_menu_count=0
+    $ renpy.cs_d4_qa_count=0
+    $ renpy.cs_d4_qa_pending=None
+    $ renpy.cs_d4_qa_frame=()
+    $ renpy.cs_p6_case="day04_matrix_1"
+    run Start("cs_qa_day04")
+    click until label cs_check_day04_complete
+    pause 0.5
+    assert cs_day04_done and renpy.cs_d4_qa_menu_count==7
+    assert cs_d4_mz_hug_09==cs_d4_mz_hug_12==False
+    assert cs_friend_se==2
+    assert cs_friend_viola==2
+    assert cs_friend_dv==2
+    assert cs_friend_mz==3
+    assert cs_friend_da==3
+    assert cs_d4_mz_friend_before_choice==2
+    assert cs_d4_left_note==True
+    assert cs_d4_shared_bed==True
+    assert cs_d4_elbow_bandage_removed and not cs_lena_elbow_bandaged
+    assert cs_d4_photo1971_location==cs_d4_roster_location==cs_d4_dream_notes_location=="library_locked_drawer"
+    assert cs_d4_undated_photo_location=="olga"
+    assert cs_mi_followup_invitation_day3 and cs_dv_followup_invitation_day3
+    assert cs_mi_followup_target_day==cs_dv_followup_target_day==5
+    $ renpy.take_screenshot()
+    $ renpy.save("day04_matrix_1")
+    $ renpy.load("day04_matrix_1")
+    pause 0.5
+    assert cs_day04_done
+    $ cs_p6_capture("complete")
+    $ open(config.basedir+"/day04_matrix_1_PASS.txt","w").write("PASS")
+    run Quit(confirm=False)
+
+testcase cs_day04_matrix_2:
+    pause 0.5
+    $ persistent.font_size="small"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps=0
+    $ _preferences.transitions=2
+    $ _test.force=True
+    $ _test.timeout=120.0
+    $ renpy.cs_d4_qa=True
+    $ renpy.cs_d4_qa_mz=3
+    $ renpy.cs_d4_qa_hug=True
+    $ renpy.cs_d4_qa_shared=True
+    $ renpy.cs_d4_qa_confess=True
+    $ renpy.cs_d4_qa_choices=[1, 1, 1, 1, 1, 1, 1]
+    $ renpy.cs_d4_qa_menu_count=0
+    $ renpy.cs_d4_qa_count=0
+    $ renpy.cs_d4_qa_pending=None
+    $ renpy.cs_d4_qa_frame=()
+    $ renpy.cs_p6_case="day04_matrix_2"
+    run Start("cs_qa_day04")
+    click until label cs_check_day04_complete
+    pause 0.5
+    assert cs_day04_done and renpy.cs_d4_qa_menu_count==7
+    assert cs_d4_mz_hug_09==cs_d4_mz_hug_12==True
+    assert cs_friend_se==1
+    assert cs_friend_viola==1
+    assert cs_friend_dv==1
+    assert cs_friend_mz==3
+    assert cs_friend_da==2
+    assert cs_d4_mz_friend_before_choice==3
+    assert cs_d4_left_note==False
+    assert cs_d4_shared_bed==True
+    assert cs_d4_elbow_bandage_removed and not cs_lena_elbow_bandaged
+    assert cs_d4_photo1971_location==cs_d4_roster_location==cs_d4_dream_notes_location=="library_locked_drawer"
+    assert cs_d4_undated_photo_location=="olga"
+    assert cs_mi_followup_invitation_day3 and cs_dv_followup_invitation_day3
+    assert cs_mi_followup_target_day==cs_dv_followup_target_day==5
+    $ renpy.take_screenshot()
+    $ renpy.save("day04_matrix_2")
+    $ renpy.load("day04_matrix_2")
+    pause 0.5
+    assert cs_day04_done
+    $ cs_p6_capture("complete")
+    $ open(config.basedir+"/day04_matrix_2_PASS.txt","w").write("PASS")
+    run Quit(confirm=False)
+
+testcase cs_day04_matrix_3:
+    pause 0.5
+    $ persistent.font_size="small"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps=0
+    $ _preferences.transitions=2
+    $ _test.force=True
+    $ _test.timeout=120.0
+    $ renpy.cs_d4_qa=True
+    $ renpy.cs_d4_qa_mz=3
+    $ renpy.cs_d4_qa_hug=False
+    $ renpy.cs_d4_qa_shared=False
+    $ renpy.cs_d4_qa_confess=False
+    $ renpy.cs_d4_qa_choices=[0, 1, 0, 1, 0, 1, 0]
+    $ renpy.cs_d4_qa_menu_count=0
+    $ renpy.cs_d4_qa_count=0
+    $ renpy.cs_d4_qa_pending=None
+    $ renpy.cs_d4_qa_frame=()
+    $ renpy.cs_p6_case="day04_matrix_3"
+    run Start("cs_qa_day04")
+    click until label cs_check_day04_complete
+    pause 0.5
+    assert cs_day04_done and renpy.cs_d4_qa_menu_count==7
+    assert cs_d4_mz_hug_09==cs_d4_mz_hug_12==False
+    assert cs_friend_se==1
+    assert cs_friend_viola==1
+    assert cs_friend_dv==2
+    assert cs_friend_mz==3
+    assert cs_friend_da==3
+    assert cs_d4_mz_friend_before_choice==3
+    assert cs_d4_left_note==True
+    assert cs_d4_shared_bed==False
+    assert cs_d4_elbow_bandage_removed and not cs_lena_elbow_bandaged
+    assert cs_d4_photo1971_location==cs_d4_roster_location==cs_d4_dream_notes_location=="library_locked_drawer"
+    assert cs_d4_undated_photo_location=="olga"
+    assert cs_mi_followup_invitation_day3 and cs_dv_followup_invitation_day3
+    assert cs_mi_followup_target_day==cs_dv_followup_target_day==5
+    $ renpy.take_screenshot()
+    $ renpy.save("day04_matrix_3")
+    $ renpy.load("day04_matrix_3")
+    pause 0.5
+    assert cs_day04_done
+    $ cs_p6_capture("complete")
+    $ open(config.basedir+"/day04_matrix_3_PASS.txt","w").write("PASS")
+    run Quit(confirm=False)

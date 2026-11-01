@@ -94,6 +94,10 @@ def validate(root, manifest, game, output=None, index=None):
                     path=entry['path'].replace('mods/chuzaya_smena/','')
                     if path.startswith('/') or ':' in path or '..' in path.split('/') or path not in found:
                         errors.append('Invalid/missing metadata asset: '+path)
+                    if 'face_path' in entry:
+                        face=entry['face_path']
+                        if face.startswith('/') or ':' in face or '..' in face.split('/') or face not in found:
+                            errors.append('Invalid/missing face layer: '+face)
         except Exception as e:errors.append('Invalid runtime JSON '+rel+': '+str(e))
     game=Path(game).resolve()
     locations=[game/'mods',game.parents[2]/'workshop/content/331470']

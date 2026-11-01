@@ -1,0 +1,257 @@
+# -*- coding: utf-8 -*-
+init 114 python:
+    renpy.cs_gap_fast=False
+    cs_gap_old_say=config.say_arguments_callback
+    def cs_gap_say(who,*args,**kwargs):
+        if cs_gap_old_say:args,kwargs=cs_gap_old_say(who,*args,**kwargs)
+        if renpy.cs_gap_fast:kwargs["interact"]=False
+        return args,kwargs
+    config.say_arguments_callback=cs_gap_say
+
+label cs_qa_music_gap:
+    $ cs_reset_state()
+    $ cs_active=cs_day04_started=cs_day03_started=cs_darya_known=cs_slavya_known=True
+    $ cs_lena_elbow_bandaged=False
+    $ cs_mi_followup_invitation_day3=renpy.cs_gap_miku
+    $ cs_dv_followup_invitation_day3=renpy.cs_gap_alice
+    $ cs_friend_dv=2
+    $ cs_sl_day4_notice_offer=True
+    $ set_mode_adv()
+    $ day_time()
+    call cs_day04_08
+    # Re-entering a chapter must not award the same point a second time.
+    call cs_day04_08
+    label cs_check_music_gap_complete:
+    $ renpy.cs_gap_fast=False
+    cs_narrator "Переход к обеду проверен."
+    return
+
+testcase cs_music_gap_0:
+    $ persistent.font_size="small"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps=0
+    $ _preferences.transitions=2
+    $ _test.force=True
+    $ _test.timeout=120.0
+    $ renpy.cs_gap_fast=True
+    $ renpy.cs_gap_miku=False
+    $ renpy.cs_gap_alice=False
+    run Start("cs_qa_music_gap")
+    pause 8
+    assert renpy.showing("mi") and renpy.showing("dv") and renpy.showing("cs_darya")
+    assert renpy.showing("bg ext_dining_hall_near_day")
+    assert _last_say_what=="Прекрасно. Я ещё не поела, а уже член худсовета."
+    $ renpy.screenshot(config.basedir+"/music_gap_0_menu.png")
+    "Выслушать обеих и помочь найти компромисс"
+    click until label cs_check_music_gap_complete
+    pause 0.5
+    assert cs_d4_choice_08_done and cs_friend_dv==3
+    assert cs_d4_dv_mi_compromise==True and cs_d4_dv_mi_self_decide==False
+    assert cs_mi_followup_invitation_day3==False and cs_dv_followup_invitation_day3==False
+    assert renpy.showing("cs_darya") and not renpy.showing("mi") and not renpy.showing("dv")
+    $ renpy.screenshot(config.basedir+"/music_gap_0_end.png")
+    $ open(config.basedir+"/music_gap_0_PASS.txt","w").write("PASS")
+    run Quit(confirm=False)
+
+testcase cs_music_gap_1:
+    $ persistent.font_size="small"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps=0
+    $ _preferences.transitions=2
+    $ _test.force=True
+    $ _test.timeout=120.0
+    $ renpy.cs_gap_fast=True
+    $ renpy.cs_gap_miku=False
+    $ renpy.cs_gap_alice=False
+    run Start("cs_qa_music_gap")
+    pause 8
+    assert renpy.showing("mi") and renpy.showing("dv") and renpy.showing("cs_darya")
+    assert renpy.showing("bg ext_dining_hall_near_day")
+    assert _last_say_what=="Прекрасно. Я ещё не поела, а уже член худсовета."
+    $ renpy.screenshot(config.basedir+"/music_gap_1_menu.png")
+    "Предложить девушкам самим решить музыкальный спор"
+    click until label cs_check_music_gap_complete
+    pause 0.5
+    assert cs_d4_choice_08_done and cs_friend_dv==2
+    assert cs_d4_dv_mi_compromise==False and cs_d4_dv_mi_self_decide==True
+    assert cs_mi_followup_invitation_day3==False and cs_dv_followup_invitation_day3==False
+    assert renpy.showing("cs_darya") and not renpy.showing("mi") and not renpy.showing("dv")
+    $ renpy.screenshot(config.basedir+"/music_gap_1_end.png")
+    $ open(config.basedir+"/music_gap_1_PASS.txt","w").write("PASS")
+    run Quit(confirm=False)
+
+testcase cs_music_gap_2:
+    $ persistent.font_size="small"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps=0
+    $ _preferences.transitions=2
+    $ _test.force=True
+    $ _test.timeout=120.0
+    $ renpy.cs_gap_fast=True
+    $ renpy.cs_gap_miku=True
+    $ renpy.cs_gap_alice=False
+    run Start("cs_qa_music_gap")
+    pause 8
+    assert renpy.showing("mi") and renpy.showing("dv") and renpy.showing("cs_darya")
+    assert renpy.showing("bg ext_dining_hall_near_day")
+    assert _last_say_what=="Прекрасно. Я ещё не поела, а уже член худсовета."
+    $ renpy.screenshot(config.basedir+"/music_gap_2_menu.png")
+    "Выслушать обеих и помочь найти компромисс"
+    click until label cs_check_music_gap_complete
+    pause 0.5
+    assert cs_d4_choice_08_done and cs_friend_dv==3
+    assert cs_d4_dv_mi_compromise==True and cs_d4_dv_mi_self_decide==False
+    assert cs_mi_followup_invitation_day3==True and cs_dv_followup_invitation_day3==False
+    assert cs_mi_followup_target_day==5
+    assert renpy.showing("cs_darya") and not renpy.showing("mi") and not renpy.showing("dv")
+    $ renpy.screenshot(config.basedir+"/music_gap_2_end.png")
+    $ open(config.basedir+"/music_gap_2_PASS.txt","w").write("PASS")
+    run Quit(confirm=False)
+
+testcase cs_music_gap_3:
+    $ persistent.font_size="small"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps=0
+    $ _preferences.transitions=2
+    $ _test.force=True
+    $ _test.timeout=120.0
+    $ renpy.cs_gap_fast=True
+    $ renpy.cs_gap_miku=True
+    $ renpy.cs_gap_alice=False
+    run Start("cs_qa_music_gap")
+    pause 8
+    assert renpy.showing("mi") and renpy.showing("dv") and renpy.showing("cs_darya")
+    assert renpy.showing("bg ext_dining_hall_near_day")
+    assert _last_say_what=="Прекрасно. Я ещё не поела, а уже член худсовета."
+    $ renpy.screenshot(config.basedir+"/music_gap_3_menu.png")
+    "Предложить девушкам самим решить музыкальный спор"
+    click until label cs_check_music_gap_complete
+    pause 0.5
+    assert cs_d4_choice_08_done and cs_friend_dv==2
+    assert cs_d4_dv_mi_compromise==False and cs_d4_dv_mi_self_decide==True
+    assert cs_mi_followup_invitation_day3==True and cs_dv_followup_invitation_day3==False
+    assert cs_mi_followup_target_day==5
+    assert renpy.showing("cs_darya") and not renpy.showing("mi") and not renpy.showing("dv")
+    $ renpy.screenshot(config.basedir+"/music_gap_3_end.png")
+    $ open(config.basedir+"/music_gap_3_PASS.txt","w").write("PASS")
+    run Quit(confirm=False)
+
+testcase cs_music_gap_4:
+    $ persistent.font_size="small"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps=0
+    $ _preferences.transitions=2
+    $ _test.force=True
+    $ _test.timeout=120.0
+    $ renpy.cs_gap_fast=True
+    $ renpy.cs_gap_miku=False
+    $ renpy.cs_gap_alice=True
+    run Start("cs_qa_music_gap")
+    pause 8
+    assert renpy.showing("mi") and renpy.showing("dv") and renpy.showing("cs_darya")
+    assert renpy.showing("bg ext_dining_hall_near_day")
+    assert _last_say_what=="Прекрасно. Я ещё не поела, а уже член худсовета."
+    $ renpy.screenshot(config.basedir+"/music_gap_4_menu.png")
+    "Выслушать обеих и помочь найти компромисс"
+    click until label cs_check_music_gap_complete
+    pause 0.5
+    assert cs_d4_choice_08_done and cs_friend_dv==3
+    assert cs_d4_dv_mi_compromise==True and cs_d4_dv_mi_self_decide==False
+    assert cs_mi_followup_invitation_day3==False and cs_dv_followup_invitation_day3==True
+    assert cs_dv_followup_target_day==5
+    assert renpy.showing("cs_darya") and not renpy.showing("mi") and not renpy.showing("dv")
+    $ renpy.screenshot(config.basedir+"/music_gap_4_end.png")
+    $ open(config.basedir+"/music_gap_4_PASS.txt","w").write("PASS")
+    run Quit(confirm=False)
+
+testcase cs_music_gap_5:
+    $ persistent.font_size="small"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps=0
+    $ _preferences.transitions=2
+    $ _test.force=True
+    $ _test.timeout=120.0
+    $ renpy.cs_gap_fast=True
+    $ renpy.cs_gap_miku=False
+    $ renpy.cs_gap_alice=True
+    run Start("cs_qa_music_gap")
+    pause 8
+    assert renpy.showing("mi") and renpy.showing("dv") and renpy.showing("cs_darya")
+    assert renpy.showing("bg ext_dining_hall_near_day")
+    assert _last_say_what=="Прекрасно. Я ещё не поела, а уже член худсовета."
+    $ renpy.screenshot(config.basedir+"/music_gap_5_menu.png")
+    "Предложить девушкам самим решить музыкальный спор"
+    click until label cs_check_music_gap_complete
+    pause 0.5
+    assert cs_d4_choice_08_done and cs_friend_dv==2
+    assert cs_d4_dv_mi_compromise==False and cs_d4_dv_mi_self_decide==True
+    assert cs_mi_followup_invitation_day3==False and cs_dv_followup_invitation_day3==True
+    assert cs_dv_followup_target_day==5
+    assert renpy.showing("cs_darya") and not renpy.showing("mi") and not renpy.showing("dv")
+    $ renpy.screenshot(config.basedir+"/music_gap_5_end.png")
+    $ open(config.basedir+"/music_gap_5_PASS.txt","w").write("PASS")
+    run Quit(confirm=False)
+
+testcase cs_music_gap_6:
+    $ persistent.font_size="small"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps=0
+    $ _preferences.transitions=2
+    $ _test.force=True
+    $ _test.timeout=120.0
+    $ renpy.cs_gap_fast=True
+    $ renpy.cs_gap_miku=True
+    $ renpy.cs_gap_alice=True
+    run Start("cs_qa_music_gap")
+    pause 8
+    assert renpy.showing("mi") and renpy.showing("dv") and renpy.showing("cs_darya")
+    assert renpy.showing("bg ext_dining_hall_near_day")
+    assert _last_say_what=="Прекрасно. Я ещё не поела, а уже член худсовета."
+    $ renpy.screenshot(config.basedir+"/music_gap_6_menu.png")
+    $ renpy.cs_gap_saved_cast={t:renpy.get_attributes(t) for t in ("mi","dv","cs_darya")}
+    $ renpy.save("music_gap_at_choice")
+    run Function(renpy.load,"music_gap_at_choice")
+    pause 1
+    assert tuple(renpy.get_attributes(t) for t in ("mi","dv","cs_darya"))==tuple(renpy.cs_gap_saved_cast[t] for t in ("mi","dv","cs_darya"))
+    $ renpy.screenshot(config.basedir+"/music_gap_6_loaded.png")
+    "Выслушать обеих и помочь найти компромисс"
+    click until label cs_check_music_gap_complete
+    pause 0.5
+    assert cs_d4_choice_08_done and cs_friend_dv==3
+    assert cs_d4_dv_mi_compromise==True and cs_d4_dv_mi_self_decide==False
+    assert cs_mi_followup_invitation_day3==True and cs_dv_followup_invitation_day3==True
+    assert cs_mi_followup_target_day==5
+    assert cs_dv_followup_target_day==5
+    assert renpy.showing("cs_darya") and not renpy.showing("mi") and not renpy.showing("dv")
+    $ renpy.screenshot(config.basedir+"/music_gap_6_end.png")
+    $ open(config.basedir+"/music_gap_6_PASS.txt","w").write("PASS")
+    run Quit(confirm=False)
+
+testcase cs_music_gap_7:
+    $ persistent.font_size="small"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps=0
+    $ _preferences.transitions=2
+    $ _test.force=True
+    $ _test.timeout=120.0
+    $ renpy.cs_gap_fast=True
+    $ renpy.cs_gap_miku=True
+    $ renpy.cs_gap_alice=True
+    run Start("cs_qa_music_gap")
+    pause 8
+    assert renpy.showing("mi") and renpy.showing("dv") and renpy.showing("cs_darya")
+    assert renpy.showing("bg ext_dining_hall_near_day")
+    assert _last_say_what=="Прекрасно. Я ещё не поела, а уже член худсовета."
+    $ renpy.screenshot(config.basedir+"/music_gap_7_menu.png")
+    "Предложить девушкам самим решить музыкальный спор"
+    click until label cs_check_music_gap_complete
+    pause 0.5
+    assert cs_d4_choice_08_done and cs_friend_dv==2
+    assert cs_d4_dv_mi_compromise==False and cs_d4_dv_mi_self_decide==True
+    assert cs_mi_followup_invitation_day3==True and cs_dv_followup_invitation_day3==True
+    assert cs_mi_followup_target_day==5
+    assert cs_dv_followup_target_day==5
+    assert renpy.showing("cs_darya") and not renpy.showing("mi") and not renpy.showing("dv")
+    $ renpy.screenshot(config.basedir+"/music_gap_7_end.png")
+    $ open(config.basedir+"/music_gap_7_PASS.txt","w").write("PASS")
+    run Quit(confirm=False)

@@ -154,11 +154,16 @@ label cs_day02_30:
     cs_narrator "Виола посмотрела на меня."
     cs_vi "Почему?"
     cs_narrator "Я некоторое время молчала."
+    # cs_all_actor_focus: Lena considers whether to tell Viola the truth.
+    $ cs_pov_begin()
+    with cs_sprite_leave
     cs_th "Ну вот."
     cs_th "Опять этот момент."
     cs_th "Сказать правду?"
     cs_th "Начать объяснять человеку историю, которая ещё не произошла?"
     cs_th "Или наконец научиться сначала оценивать собственные слова?"
+    $ cs_pov_end()
+    with cs_sprite_change
     cs_narrator "Я посмотрела на Виолу."
     cs_ls "Есть одно изображение, которое я помню по истории девяностых годов. Этот рисунок его очень напоминает."
     cs_narrator "Виола нахмурилась."

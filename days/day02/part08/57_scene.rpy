@@ -183,6 +183,9 @@ label cs_day02_57:
     with cs_sprite_change
     cs_narrator "Он рассмеялся."
     cs_narrator "И я рассмеялась вместе с ним."
+    # cs_inward_beat_3: attention turns inward
+    $ cs_pov_begin()
+    with cs_sprite_leave
     cs_th "Да."
     cs_th "Наверное, именно так и появляются друзья."
     cs_th "Не после особенного признания."

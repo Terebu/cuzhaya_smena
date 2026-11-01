@@ -332,6 +332,9 @@ label cs_day02_65:
     cs_narrator "На сценической площадке кто-то передвигал стул."
     cs_narrator "Послышался тихий звук гитарной струны."
     cs_narrator "Я огляделась."
+    # cs_inward_beat_4: attention turns inward
+    $ cs_pov_begin()
+    with cs_sprite_leave
     cs_th "И всё-таки наш плакат сработал."
     cs_th "Люди пришли."
     cs_th "Места приготовили."
@@ -342,6 +345,9 @@ label cs_day02_65:
     with cs_sprite_change
     label cs_director_check_cb07c17dfa:
     # cs_director_end
+    # Return to the same conversation, with the same cast and placement.
+    $ cs_pov_end()
+    with cs_sprite_change
     cs_narrator "Дарья посмотрела на меня."
     # cs_presence_keep: hide cs_dasha_winter
     # cs_presence_keep: hide cs_dasha_pioneer

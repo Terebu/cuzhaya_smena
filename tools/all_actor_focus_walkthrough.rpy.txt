@@ -1,0 +1,209 @@
+# -*- coding: utf-8 -*-
+init 98 python:
+    import re as cs_rw_re
+    import json as cs_rw_json
+    renpy.cs_rw_enabled = False
+    cs_rw_original_args = config.say_arguments_callback
+    cs_rw_original_labels = config.label_callback
+    cs_rw_original_menu_args = config.menu_arguments_callback
+    cs_rw_original_menu = menu
+    def cs_rw_args(who, *args, **kwargs):
+        if cs_rw_original_args:
+            args,kwargs=cs_rw_original_args(who,*args,**kwargs)
+        if renpy.cs_rw_enabled:
+            kwargs["interact"]=False
+            renpy.game.preferences.transitions=0
+        return args,kwargs
+    def cs_rw_menu(items,*args,**kwargs):
+        if not renpy.cs_rw_enabled:
+            return cs_rw_original_menu(items,*args,**kwargs)
+        choices=[(label,value) for label,value in items if value is not None and (not callable(value) or renpy.display.behavior.is_sensitive(value))]
+        label,value=choices[0 if renpy.cs_rw_positive else -1]
+        with open(config.basedir+"/rw_"+renpy.cs_rw_route+"_choices.txt","ab") as f:
+            f.write((label+"\n").encode("utf8"))
+        return value() if callable(value) else value
+    def cs_rw_menu_args(*args,**kwargs):
+        if cs_rw_original_menu_args:
+            args,kwargs=cs_rw_original_menu_args(*args,**kwargs)
+        if renpy.cs_rw_enabled:
+            store.menu=cs_rw_menu
+        return args,kwargs
+    def cs_rw_labels(name,abnormal):
+        if cs_rw_original_labels:
+            cs_rw_original_labels(name,abnormal)
+        if not renpy.cs_rw_enabled:
+            return
+        if cs_rw_re.match(r"^cs_(scene_\d+|day0[1234]_\d+[a-z_]*)$",name):
+            renpy.cs_rw_pending=name
+            renpy.cs_rw_visited.append(name)
+        elif name in ("cs_check_day03_83_underwear","cs_check_day03_83_hair_touch","cs_check_day03_83_turned_away","cs_check_day03_83_dressed","cs_check_day01_part03_phone_off"):
+            renpy.cs_rw_pending=name
+        if name=="cs_check_day03_part14_complete":
+            assert cs_day01_done and cs_day02_done and cs_day03_part07_done and cs_day03_lunch_arrived
+            assert bool(cs_un_day3_lunch_together)==renpy.cs_rw_positive
+            assert bool(cs_un_sketch_plan_discussed_day3)==renpy.cs_rw_positive
+            assert bool(cs_un_sketch_time_agreed_day3)==renpy.cs_rw_positive
+            assert bool(cs_mz_quiet_reading_place_day3)==renpy.cs_rw_positive
+            assert bool(cs_mi_followup_invitation_day3)==renpy.cs_rw_positive
+            assert bool(cs_dv_followup_invitation_day3)==renpy.cs_rw_positive
+            assert cs_day03_reading_book_selected and cs_day03_reading_book_id=="goncharov_ordinary_story"
+            assert cs_day03_part08_done and cs_day03_part09_done and not cs_mz_book_borrowed_day3
+            assert cs_day03_reading_book_location=="library"
+            assert bool(cs_un_sketch_completed_day3)==renpy.cs_rw_positive
+            assert bool(cs_un_private_drawing_shown_day3)==renpy.cs_rw_positive
+            assert bool(cs_se_sketch_spot_day3)==renpy.cs_rw_positive
+            assert bool(cs_mz_open_library_invitation_day3)==renpy.cs_rw_positive
+            assert cs_mz_friend_on_arrival_day3==3*int(renpy.cs_rw_positive)
+            assert cs_se_friend_before_square_day3==3*int(renpy.cs_rw_positive)
+            assert cs_friend_se==4*int(renpy.cs_rw_positive)
+            assert cs_day03_poster_location==("house_table" if renpy.cs_rw_positive else None)
+            assert cs_day03_darya_destination=="house"
+            assert not renpy.showing("cs_zhenya")
+            assert cs_day03_part10_done and cs_day03_dinner_horn_played and cs_day03_dinner_arrived
+            assert cs_friend_da==3*int(renpy.cs_rw_positive)
+            assert cs_da_friend_before_night==2*int(renpy.cs_rw_positive)
+            assert cs_day03_part14_done and cs_day03_completed
+            assert bool(cs_da_shared_bed_day3)==renpy.cs_rw_positive
+            assert bool(cs_da_love_confession_day3)==renpy.cs_rw_positive
+            assert bool(cs_da_shared_sleep_cg_seen_day3)==renpy.cs_rw_positive
+            assert bool(cs_da_respected_space_day3)!=renpy.cs_rw_positive
+            assert cs_day03_part13_done and cs_mz_book_finished_day3
+            assert bool(cs_da_day3_fear_of_getting_used_to_camp)==renpy.cs_rw_positive
+            assert bool(cs_da_day3_quiet_walk)!=renpy.cs_rw_positive
+            assert bool(cs_mz_day3_final_discussion)==renpy.cs_rw_positive
+            assert bool(cs_da_day3_music_talk)==renpy.cs_rw_positive
+            assert bool(cs_da_day3_shared_silence)!=renpy.cs_rw_positive
+            assert cs_da_cheek_kiss_day3
+            assert cs_friend_mz==5*int(renpy.cs_rw_positive) and cs_mz_book_requested_day3
+            assert cs_day03_part11_done and cs_day03_dinner_finished
+            assert cs_day03_part12_done and cs_day03_evening_book_retrieved
+            assert cs_friend_sl==3*int(renpy.cs_rw_positive)
+            assert cs_sl_friend_before_evening_choice==2*int(renpy.cs_rw_positive)
+            assert bool(cs_sl_day4_notice_offer)==renpy.cs_rw_positive
+            assert not set(renpy.cs_rw_visited)&set(("cs_day03_161a","cs_day03_161b","cs_day03_162"))
+            assert cs_mz_dinner_friend_on_arrival==4*int(renpy.cs_rw_positive)
+            assert bool(cs_mz_hug_allowed_day3)==renpy.cs_rw_positive
+            assert bool(cs_mz_evening_help_day3)==renpy.cs_rw_positive
+            assert bool(cs_mz_evening_help_completed_day3)==renpy.cs_rw_positive
+            assert cs_mi_followup_target_day==(4 if renpy.cs_rw_positive else None)
+            assert cs_dv_followup_target_day==(4 if renpy.cs_rw_positive else None)
+            assert cs_day03_sketchbook_location=="house_table"
+            assert cs_friend_mi==2*int(renpy.cs_rw_positive) and cs_friend_dv==2*int(renpy.cs_rw_positive) and cs_friend_un==3*int(renpy.cs_rw_positive)
+            assert bool(cs_un_sketch_invite_day3)==renpy.cs_rw_positive
+            assert bool(cs_un_concert_sketch_seen)==renpy.cs_rw_positive
+            assert cs_lena_elbow_injury_day2==2 and cs_lena_no_sport_day2
+            with open(config.basedir+"/rw_"+renpy.cs_rw_route+"_state.json","w") as f:
+                cs_rw_json.dump(dict(status="PASS",visited=renpy.cs_rw_visited,screenshots=renpy.cs_rw_count,friendship=dict(mi=cs_friend_mi,dv=cs_friend_dv,un=cs_friend_un,se=cs_friend_se,sl=cs_friend_sl,mz=cs_friend_mz,viola=cs_friend_viola),poster=cs_day03_poster_location,catalog=cs_mz_catalog_checked_day3,book_requested=cs_mz_book_requested_day3,documents=cs_day03_documents_location,lunch_together=cs_un_day3_lunch_together,sketch_plan=cs_un_sketch_plan_discussed_day3,darya_destination=cs_day03_darya_destination),f)
+        if name=="cs_check_day04_complete":
+            assert cs_day04_done and cs_day04_started
+            assert cs_d4_found_1971_records and cs_d4_unknown_girl_seen and cs_d4_heard_unknown_voice
+            assert cs_d4_elbow_bandage_removed and not cs_lena_elbow_bandaged
+            assert cs_d4_olga_has_undated_photo and cs_d4_mz_has_1971_photo
+            assert cs_d4_undated_photo_location=="olga"
+            assert cs_d4_photo1971_location==cs_d4_roster_location==cs_d4_dream_notes_location=="library_locked_drawer"
+            assert cs_d4_mz_dream_record_written and cs_d4_dream_phrase_second
+            assert cs_d4_mz_friend_before_choice==5*int(renpy.cs_rw_positive)
+            assert cs_friend_mz==6*int(renpy.cs_rw_positive)
+            assert cs_friend_se==5*int(renpy.cs_rw_positive)
+            assert cs_friend_da==4*int(renpy.cs_rw_positive)
+            assert cs_friend_dv==3*int(renpy.cs_rw_positive)
+            assert bool(cs_d4_shared_bed)==renpy.cs_rw_positive
+            assert not renpy.music.get_playing(channel="ambience") and not renpy.music.get_playing(channel="music")
+            if renpy.cs_rw_positive:
+                assert cs_mi_followup_invitation_day3 and cs_dv_followup_invitation_day3
+                assert cs_mi_followup_target_day==cs_dv_followup_target_day==5
+                assert cs_d4_sl_notice_deferred
+            with open(config.basedir+"/rw_"+renpy.cs_rw_route+"_state.json","w") as f:
+                cs_rw_json.dump(dict(status="PASS",visited=renpy.cs_rw_visited,screenshots=renpy.cs_rw_count,day4=True,friendship=dict(da=cs_friend_da,mz=cs_friend_mz,se=cs_friend_se,dv=cs_friend_dv,viola=cs_friend_viola)),f)
+    def cs_rw_character(event,**kwargs):
+        if not renpy.cs_rw_enabled or event!="show_done":
+            return
+        if renpy.showing("bg"):
+            assert renpy.has_image(("bg",)+tuple(renpy.get_attributes("bg")),exact=True),"Unregistered background"
+        if cs_day03_started and cs_day03_audio_location:
+            target=cs_day03_audio_target(cs_day03_audio_location)
+            if target is not False:
+                assert renpy.music.get_playing(channel="ambience")==target,"Leaked room ambience: "+cs_day03_audio_location
+        cg=tuple(sorted(t for t in renpy.get_showing_tags() if t.startswith("cs_cg_") or t in ("cs_sleep_winter","cs_sleep_summer","cs_lena_pioneer_mirror")))
+        pending=renpy.cs_rw_pending
+        cast=tuple(sorted(t for t in cs_presence_tags if renpy.showing(t)))
+        if cast!=renpy.cs_rw_last_cast:
+            pending=pending or ("cast_"+"_".join(cast) if cast else "cast_empty")
+        renpy.cs_rw_last_cast=cast
+        if cg and cg!=renpy.cs_rw_last_cg:
+            pending=pending or cg[0]
+        renpy.cs_rw_last_cg=cg
+        if cs_day04_started:
+            bg=tuple(sorted((t,tuple(renpy.get_attributes(t) or ())) for t in renpy.get_showing_tags() if t not in cs_presence_tags))
+            if bg!=getattr(renpy,"cs_rw_last_bg",()):
+                pending=pending or "location"
+            renpy.cs_rw_last_bg=bg
+        if pending:
+            renpy.cs_rw_pending=None
+            renpy.cs_rw_count+=1
+            renpy.pause(0.02,hard=True)
+            cs_p6_capture("%03d_%s"%(renpy.cs_rw_count,pending))
+    config.say_arguments_callback=cs_rw_args
+    config.menu_arguments_callback=cs_rw_menu_args
+    config.label_callback=cs_rw_labels
+    config.all_character_callbacks.append(cs_rw_character)
+
+testcase cs_render_walk_high:
+    pause 0.5
+    $ persistent.font_size = "small"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps = 0
+    $ _preferences.transitions = 0
+    $ _test.force = True
+    $ _test.timeout = 120.0
+    $ renpy.cs_rw_enabled = True
+    $ renpy.cs_rw_positive = True
+    $ renpy.cs_rw_route = "high"
+    $ renpy.cs_p6_case = "render_reviewed_high"
+    $ renpy.cs_rw_pending = None
+    $ renpy.cs_rw_last_cg = ()
+    $ renpy.cs_rw_last_cast = ()
+    $ renpy.cs_rw_visited = []
+    $ renpy.cs_rw_count = 0
+    run Start("chuzhaya_smena_start")
+    click until label cs_check_day04_complete
+    pause 0.5
+    assert cs_day03_part06_done and cs_day03_lunch_horn_played and cs_day03_lunch_arrived
+    $ cs_p6_capture("complete")
+    $ open(config.basedir+"/rw_high_PASS.txt","w").write("PASS")
+    run Quit(confirm=False)
+
+testcase cs_render_walk_low:
+    pause 0.5
+    $ persistent.font_size = "small"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps = 0
+    $ _preferences.transitions = 0
+    $ _test.force = True
+    $ _test.timeout = 120.0
+    $ renpy.cs_rw_enabled = True
+    $ renpy.cs_rw_positive = False
+    $ renpy.cs_rw_route = "low"
+    $ renpy.cs_p6_case = "render_reviewed_low"
+    $ renpy.cs_rw_pending = None
+    $ renpy.cs_rw_last_cg = ()
+    $ renpy.cs_rw_last_cast = ()
+    $ renpy.cs_rw_visited = []
+    $ renpy.cs_rw_count = 0
+    run Start("chuzhaya_smena_start")
+    click until label cs_check_day04_complete
+    pause 0.5
+    assert cs_day03_part06_done and cs_day03_lunch_horn_played and cs_day03_lunch_arrived
+    $ cs_p6_capture("complete")
+    $ open(config.basedir+"/rw_low_PASS.txt","w").write("PASS")
+    run Quit(confirm=False)
+
+
+init 120 python:
+    cs_focus_original_capture=cs_p6_capture
+    def cs_focus_sample_capture(name):
+        if cs_full_frame_cg_showing():assert not any(renpy.showing(t) for t in cs_presence_tags)
+        assert all(cs_p6_opaque(t) for t in cs_presence_tags if renpy.showing(t))
+        if name=="complete" or any(name.endswith(x) for x in ("cs_scene_01","cs_day01_01","cs_day02_01","cs_day03_75","cs_day04_01")):
+            cs_focus_original_capture(name)
+    cs_p6_capture=cs_focus_sample_capture

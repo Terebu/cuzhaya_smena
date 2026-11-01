@@ -12,7 +12,8 @@ init -4 python:
         canvas_w, canvas_h = int(1000 * ratio), int(1600 * ratio)
         x = int(canvas_w / 2.0 - (left + right) / 2.0 * factor)
         y = int(canvas_h - bottom * factor)
-        canvas = im.Composite((canvas_w, canvas_h), (x, y), im.FactorScale(cs_path(entry["path"]), factor))
+        source = cs_path(entry["path"])
+        canvas = im.Composite((canvas_w, canvas_h), (x, y), im.FactorScale(source, factor))
         # Apply the scene's sunset lighting to custom actors too, retaining full PNGs.
         return ConditionSwitch("persistent.sprite_time == 'sunset'", im.MatrixColor(canvas, im.matrix.tint(1.0, 0.87, 0.78)), "persistent.sprite_time == 'night'", im.MatrixColor(canvas, im.matrix.tint(0.75, 0.80, 1.0)), "True", canvas)
 
@@ -23,25 +24,21 @@ init -4 python:
                 cs_image = cs_dasha_image(cs_entry, cs_distance)
                 cs_base = "cs_dasha_%s %d" % (cs_costume, cs_number)
                 renpy.image(cs_base + " " + cs_distance, cs_image)
-                if cs_costume == "pioneer":
-                    # The author chose the surprised PNG for Darya's smiling reaction.
+                if cs_costume in ("pioneer","sport"):
                     cs_reaction_image = cs_image
-                    if cs_entry["pose"] == "smile":
-                        cs_smile_entry = next(e for e in cs_entries if e["pose"] == "surprised")
-                        cs_reaction_image = cs_dasha_image(cs_smile_entry, cs_distance)
-                    renpy.image("cs_darya " + cs_entry["pose"] + " pioneer " + cs_distance, cs_reaction_image)
+                    renpy.image("cs_darya " + cs_entry["pose"] + " " + cs_costume + " " + cs_distance, cs_reaction_image)
                     # Preserve older semantic names when a new set has no exact equivalent.
-                    for cs_old_pose, cs_new_pose in {"sad":"worried", "shy":"surprised"}.items():
+                    for cs_old_pose, cs_new_pose in {"sad":"worried", "shy":"shy_smile"}.items():
                         if cs_entry["pose"] == cs_new_pose:
-                            renpy.image("cs_darya " + cs_old_pose + " pioneer " + cs_distance, cs_image)
+                            renpy.image("cs_darya " + cs_old_pose + " " + cs_costume + " " + cs_distance, cs_image)
                 if cs_distance == "normal":
                     renpy.image(cs_base, cs_image)
-                    if cs_costume == "pioneer":
-                        renpy.image("cs_dasha_full %d" % cs_number, cs_image)
-                        renpy.image("cs_darya " + cs_entry["pose"] + " pioneer", cs_reaction_image)
-                        for cs_old_pose, cs_new_pose in {"sad":"worried", "shy":"surprised"}.items():
+                    if cs_costume in ("pioneer","sport"):
+                        if cs_costume == "pioneer": renpy.image("cs_dasha_full %d" % cs_number, cs_image)
+                        renpy.image("cs_darya " + cs_entry["pose"] + " " + cs_costume, cs_reaction_image)
+                        for cs_old_pose, cs_new_pose in {"sad":"worried", "shy":"shy_smile"}.items():
                             if cs_entry["pose"] == cs_new_pose:
-                                renpy.image("cs_darya " + cs_old_pose + " pioneer", cs_image)
+                                renpy.image("cs_darya " + cs_old_pose + " " + cs_costume, cs_image)
                 if cs_costume == "winter":
                     cs_emotion = {1:"neutral",2:"smile",3:"interested",4:"sleep"}.get(cs_number, cs_entry.get("pose", "neutral"))
                     renpy.image("cs_dasha_winter " + cs_emotion + " " + cs_distance, cs_image)

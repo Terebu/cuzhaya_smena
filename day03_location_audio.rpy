@@ -8,10 +8,18 @@ init -9 python:
             return False
         if image == "black":
             return None
+        if image.startswith("cs_d4_old_"):
+            return "sound/ambiences/old_camp_outside.ogg" if image.endswith("ext") else "sound/ambiences/catacombs.ogg"
+        if image.startswith("bg int_catacombs"):
+            return "sound/ambiences/catacombs.ogg"
+        if image.startswith("bg int_house_of_mt"):
+            return "sound/ambiences/int_cabin_night.ogg" if image.endswith("night") else "sound/ambiences/int_cabin_day.ogg"
+        if image.startswith("bg ext_path"):
+            return "sound/ambiences/forest_night.ogg" if image.endswith("night") else "sound/ambiences/forest_day.ogg"
         if image.startswith("bg int_dining_hall"):
             return "sound/ambiences/dining_hall_full.ogg"
         if image.startswith("cs_house_lena_darya_int"):
-            return "sound/ambiences/int_cabin_day.ogg"
+            return "sound/ambiences/int_cabin_night.ogg" if image.endswith("night") else "sound/ambiences/int_cabin_day.ogg"
         if image.startswith("bg int_aidpost"):
             return "sound/ambiences/medstation_inside_day.ogg"
         if image.startswith(("bg int_library", "bg int_musclub", "cs_int_administration", "cs_library_interior")):
@@ -21,9 +29,17 @@ init -9 python:
                 return "sound/ambiences/camp_center_night.ogg"
             return "sound/ambiences/camp_center_evening.ogg" if image.endswith(("sunset", "night")) else "sound/ambiences/camp_center_day.ogg"
         return False
+    def cs_day04_old_camp_silence(image):
+        if not getattr(store,"cs_active",False) or not getattr(store,"cs_day04_started",False):
+            return
+        old_camp = image.startswith(("cs_d4_old_", "bg int_catacombs")) or image == "cs_cg_lena_darya_bunker_reunion"
+        if old_camp and renpy.music.get_playing(channel="music"):
+            renpy.music.stop(channel="music", fadeout=0.8)
+
     def cs_day03_location_audio(image):
         if not getattr(store,"cs_active",False) or not getattr(store,"cs_day03_started",False):
             return
+        cs_day04_old_camp_silence(image)
         target = cs_day03_audio_target(image)
         if target is False:
             return
@@ -41,6 +57,7 @@ init -9 python:
         # Prefer the frame in the save; the remembered room may predate this fix.
         for tag in renpy.get_showing_tags():
             name = " ".join((tag,) + tuple(renpy.get_attributes(tag) or ()))
+            cs_day04_old_camp_silence(name)
             if cs_day03_audio_target(name) is not False:
                 if cs_day03_audio_location != name or renpy.music.get_playing(channel="ambience") != cs_day03_audio_target(name):
                     cs_day03_location_audio(name)

@@ -1,0 +1,105 @@
+# -*- coding: utf-8 -*-
+label cs_qa_all_actor_focus:
+    $ cs_reset_state()
+    $ cs_active=cs_darya_known=True
+    $ persistent.font_size="small"
+    $ set_mode_adv()
+    $ day_time()
+    python:
+        samples=dict(cs_director_defaults)
+        samples["mz"]=("mz normal pioneer","cs_actor_left")
+        samples.update(cs_dasha_pioneer=("cs_dasha_pioneer 1 normal","cs_darya_normal_right"),cs_dasha_full=("cs_dasha_full 1","cs_darya_normal_right"),cs_dasha=("cs_dasha neutral normal","cs_darya_normal_right"))
+        for tag,(name,position) in sorted(samples.items()):
+            cs_director_scene("bg int_musclub_day")
+            renpy.scene();renpy.show("bg int_musclub_day")
+            renpy.show(name,at_list=[getattr(store,position)])
+            d=renpy.game.context().scene_lists.get_displayable_by_tag("master",tag)
+            vertical=d.get_placement()[1],d.get_placement()[3],getattr(getattr(d,"state",None),"zoom",1.0)
+            renpy.pause(0.25,hard=True)
+            bounds=renpy.get_image_bounds(tag)
+            assert abs(bounds[0]+bounds[2]/2.0-960)<2,(tag,bounds)
+            d=renpy.game.context().scene_lists.get_displayable_by_tag("master",tag)
+            assert vertical==(d.get_placement()[1],d.get_placement()[3],getattr(getattr(d,"state",None),"zoom",1.0))
+            cs_presence_stage()
+            assert d is renpy.game.context().scene_lists.get_displayable_by_tag("master",tag),"Transform restarted"
+            renpy.screenshot(config.basedir+"/focus_solo_"+tag+".png")
+            cs_pov_begin();cs_pov_begin()
+            renpy.pause(0.25,hard=True)
+            assert not any(renpy.showing(t) for t in cs_presence_tags)
+            renpy.screenshot(config.basedir+"/focus_inward_"+tag+".png")
+            cs_pov_end();renpy.pause(0.25,hard=True)
+            assert renpy.showing(tag) and renpy.get_image_bounds(tag)==bounds,(tag,bounds,renpy.get_image_bounds(tag))
+            renpy.screenshot(config.basedir+"/focus_return_"+tag+".png")
+            cs_pov_begin();cs_actor_exit([tag]);cs_pov_end()
+            assert not renpy.showing(tag),"Departed actor resurrected"
+            renpy.show(name,at_list=[getattr(store,position)]);cs_pov_begin()
+            cs_director_scene("bg ext_square_day");renpy.scene();renpy.show("bg ext_square_day");cs_pov_end()
+            assert not renpy.showing(tag),"Actor followed a location change"
+        open(config.basedir+"/all_actor_focus_PASS.txt","w").write("PASS: %d tags"%len(samples))
+    label cs_check_all_actor_focus:
+    pause
+    return
+
+label cs_qa_focus_save:
+    $ cs_reset_state()
+    $ cs_active=cs_darya_known=True
+    $ set_mode_adv()
+    $ day_time()
+    $ cs_director_scene("bg int_aidpost_day")
+    scene bg int_aidpost_day
+    show cs custom serious medical normal at cs_viola_normal_left
+    show cs_darya worried pioneer normal at cs_darya_normal_right
+    $ cs_presence_stage()
+    $ cs_pov_begin()
+    $ renpy.save("cs_qa_inward_focus")
+    cs_narrator "Лена размышляет. Собеседники вне фокуса."
+    $ cs_pov_end()
+    $ renpy.pause(0.3,hard=True)
+    $ assert renpy.showing("cs") and renpy.showing("cs_darya")
+    $ renpy.screenshot(config.basedir+"/focus_group_return.png")
+    cs_vi "Снова смотрим на собеседников."
+    hide cs
+    cs_th "Короткая мысль. Дарья остаётся в кадре."
+    scene cs_cg_lena_darya_bunker_reunion
+    show cs_darya worried sport normal at cs_darya_normal_center
+    show cs_semen neutral pioneer normal at cs_semen_normal_left
+    cs_narrator "Иллюстрация без портретов поверх."
+    return
+
+testcase cs_all_actor_focus:
+    $ renpy.set_physical_size((1280,720))
+    $ _test.force=True
+    $ _test.timeout=120.0
+    run Start("cs_qa_all_actor_focus")
+    click until label cs_check_all_actor_focus
+    pause 0.5
+    assert __import__("os").path.isfile(config.basedir+"/all_actor_focus_PASS.txt")
+    run Quit(confirm=False)
+
+testcase cs_focus_save:
+    $ persistent.font_size="small"
+    $ renpy.set_physical_size((1280,720))
+    $ _test.force=True
+    $ _test.timeout=120.0
+    run Start("cs_qa_focus_save")
+    pause 1
+    assert not renpy.showing("cs") and not renpy.showing("cs_darya")
+    run Function(renpy.load,"cs_qa_inward_focus")
+    pause 1
+    assert not renpy.showing("cs") and not renpy.showing("cs_darya")
+    click
+    pause 1
+    assert renpy.showing("cs") and renpy.showing("cs_darya")
+    click
+    pause 0.5
+    assert renpy.showing("cs_darya") and not renpy.showing("cs")
+    $ cs_focus_bounds=renpy.get_image_bounds("cs_darya")
+    assert abs(cs_focus_bounds[0]+cs_focus_bounds[2]/2.0-960)<2
+    $ renpy.screenshot(config.basedir+"/focus_short_thought.png")
+    click
+    pause 0.5
+    assert cs_full_frame_cg_showing()
+    assert not any(renpy.showing(t) for t in cs_presence_tags)
+    $ renpy.screenshot(config.basedir+"/focus_cg.png")
+    $ open(config.basedir+"/focus_save_PASS.txt","w").write("PASS")
+    run Quit(confirm=False)

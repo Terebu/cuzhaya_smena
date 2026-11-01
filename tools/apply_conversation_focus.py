@@ -42,7 +42,7 @@ inward=[
  ('days/day03/part07/125a_scene.rpy','cs_th','Четыре девушки.','cs_narrator','Через некоторое время Тихонова сама нарушила молчание.'),
  ('days/day02/reading_interlude/59_05_scene.rpy','cs_narrator','И вернулась к чтению.',None,None)
 ]
-active_beats={0,2,12}
+active_beats={0,2,3,4,5,6,7,10,12}
 updates={}
 for number,(name,who,start,endwho,end) in enumerate(inward):
  p=R/name;s=updates.get(p,p.read_text(encoding='utf8'))
@@ -77,4 +77,15 @@ if '# cs_reading_entry_pov' not in s:
  first=first.replace('$ cs_reading_cast = ["cs_darya"]','$ cs_reading_cast = []').replace('$ cs_frame_focus(["cs_darya"])','$ cs_frame_focus([])')
  s=first+'    cs_narrator "Прошло ещё немного времени."'+rest
  p.write_text(s,encoding='utf8')
-print('Calmer direction: 5 observation cues, 3 extended inward/reading beats; short thoughts keep the cast.')
+print('Authored focus: 5 observation cues and %d inward/reading beats; short thoughts keep the cast.'%len(active_beats))
+
+# Mixed conversation with Viola: the same POV framing applies to the whole cast.
+p=R/'days/day02/part04/30_scene.rpy'
+s=p.read_text(encoding='utf8')
+if '# cs_all_actor_focus:' not in s:
+ first='    cs_th "Ну вот."'
+ last='    cs_narrator "Я посмотрела на Виолу."'
+ at=s.index(first);end=s.index(last,at)
+ s=s[:end]+'    $ cs_pov_end()\n    with cs_sprite_change\n'+s[end:]
+ s=s[:at]+'    # cs_all_actor_focus: Lena considers whether to tell Viola the truth.\n    $ cs_pov_begin()\n    with cs_sprite_leave\n'+s[at:]
+ p.write_text(s,encoding='utf8')

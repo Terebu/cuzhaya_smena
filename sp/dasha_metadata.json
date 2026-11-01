@@ -229,344 +229,2196 @@
   ],
   "pioneer": [
     {
-      "number": 1,
       "pose": "neutral",
-      "path": "mods/chuzaya_smena/sp/Dasha sprites/new/darya_pioneer_neutral.png",
-      "original_name": "Изображение ChatGPT 11 окт. 2026 г., 02_19_22-1.png",
-      "sha256": "f211f09fdc2f8ca09e066fac2f0a2191449f69eb1bb1fe11e17355fe7b8033de",
+      "path": "sp/darya_pioneer/darya_pioneer_idle_neutral.png",
       "size": [
         941,
         1672
       ],
       "bbox": [
-        66,
-        0,
-        917,
-        1672
-      ]
-    },
-    {
-      "number": 2,
-      "pose": "serious",
-      "path": "mods/chuzaya_smena/sp/Dasha sprites/new/darya_pioneer_serious.png",
-      "original_name": "Изображение ChatGPT 11 окт. 2026 г., 02_19_22-2.png",
-      "sha256": "1fef0ce7876e69d9b8cf5e4edccb14332177a2d52a4da964bd24523e9df9c08a",
-      "size": [
-        941,
-        1672
-      ],
-      "bbox": [
-        50,
-        22,
-        913,
-        1649
-      ]
-    },
-    {
-      "number": 3,
-      "pose": "surprised",
-      "path": "mods/chuzaya_smena/sp/Dasha sprites/new/darya_pioneer_surprised.png",
-      "original_name": "Изображение ChatGPT 11 окт. 2026 г., 02_19_23-3.png",
-      "sha256": "56c355a405aea9ccc120a964b7cb4d24a9cf22c9837617715e15d9c1e6b27826",
-      "size": [
-        941,
-        1672
-      ],
-      "bbox": [
-        66,
-        0,
-        886,
-        1672
-      ]
-    },
-    {
-      "number": 4,
-      "pose": "explaining",
-      "path": "mods/chuzaya_smena/sp/Dasha sprites/new/darya_pioneer_explaining.png",
-      "original_name": "Изображение ChatGPT 11 окт. 2026 г., 02_19_24-4.png",
-      "sha256": "8aa11b0dc98e573419ef86ae881aa26ae9adc43e5d2fdaa4414b0f081d02e29d",
-      "size": [
-        941,
-        1672
-      ],
-      "bbox": [
-        58,
-        0,
-        888,
-        1672
-      ]
-    },
-    {
-      "number": 5,
-      "pose": "worried",
-      "path": "mods/chuzaya_smena/sp/Dasha sprites/new/darya_pioneer_worried.png",
-      "original_name": "Изображение ChatGPT 11 окт. 2026 г., 02_19_25-5.png",
-      "sha256": "037403acd9017458bcfe4a3ac26bb11d3ca5bdc9833a7b308d2e4135f4d8aad8",
-      "size": [
-        941,
-        1672
-      ],
-      "bbox": [
-        70,
-        0,
-        913,
-        1662
-      ]
-    },
-    {
-      "number": 6,
-      "pose": "smile",
-      "path": "mods/chuzaya_smena/sp/Dasha sprites/new/darya_pioneer_smile.png",
-      "original_name": "Изображение ChatGPT 11 окт. 2026 г., 02_19_26-6.png",
-      "sha256": "0a4ec74436b41ab7c147fe338fd970a27ba5997d5e3ef9e0b624303cd88faf95",
-      "size": [
-        941,
-        1672
-      ],
-      "bbox": [
-        25,
-        5,
-        905,
-        1658
-      ]
-    },
-    {
-      "number": 7,
-      "pose": "thinking",
-      "path": "mods/chuzaya_smena/sp/Dasha sprites/new/darya_pioneer_thinking.png",
-      "original_name": "Изображение ChatGPT 11 окт. 2026 г., 02_19_27-7.png",
-      "sha256": "3b1d64eaca09a715ec72babc3ba4cbdcc0e5a4949903828f4f88db2e1f6cedab",
-      "size": [
-        941,
-        1672
-      ],
-      "bbox": [
-        123,
-        0,
-        842,
-        1672
-      ]
-    },
-    {
-      "number": 8,
-      "pose": "wave",
-      "path": "mods/chuzaya_smena/sp/Dasha sprites/new/darya_pioneer_wave.png",
-      "original_name": "Изображение ChatGPT 11 окт. 2026 г., 02_19_28-8.png",
-      "sha256": "5ed9e0e64fe8197dbba7b149a3c226f4a740f2a3e306bf144f51ebb960f38c67",
-      "size": [
-        941,
-        1672
-      ],
-      "bbox": [
-        0,
-        12,
-        919,
-        1663
-      ]
-    },
-    {
-      "number": 9,
-      "pose": "arms_crossed",
-      "path": "mods/chuzaya_smena/sp/Dasha sprites/new/darya_pioneer_arms_crossed.png",
-      "original_name": "Изображение ChatGPT 11 окт. 2026 г., 02_19_29-9.png",
-      "sha256": "e7b7021ee41887c53a7fe670b2c92653f9d47c96a7bdcdfcbfd5f2b1b44b4c8e",
-      "size": [
-        941,
-        1672
-      ],
-      "bbox": [
-        52,
-        0,
-        921,
-        1672
-      ]
-    },
-    {
-      "number": 10,
-      "pose": "shrug",
-      "path": "mods/chuzaya_smena/sp/Dasha sprites/new/darya_pioneer_shrug.png",
-      "original_name": "Изображение ChatGPT 11 окт. 2026 г., 02_19_30-10.png",
-      "sha256": "8e7ed7ba09764a012694f15a245d64a9364a143acdab87e962cd97517ab739c9",
-      "size": [
-        941,
-        1672
-      ],
-      "bbox": [
-        58,
-        0,
-        913,
-        1658
-      ]
-    },
-    {
-      "number": 11,
-      "pose": "shy_smile",
-      "path": "mods/chuzaya_smena/sp/Dasha sprites/new/darya_pioneer_shy_smile.png",
-      "original_name": "Изображение ChatGPT 11 окт. 2026 г., 15_25_30-1.png",
-      "sha256": "5eda9f5c4c1e9fa7eda71eb0d22e2fbfc79ac17f5c37b9d489cc2a5e800d6926",
-      "size": [
-        941,
-        1672
-      ],
-      "bbox": [
-        25,
-        0,
-        913,
-        1672
-      ]
-    },
-    {
-      "number": 12,
-      "pose": "ear_touch",
-      "path": "mods/chuzaya_smena/sp/Dasha sprites/new/darya_pioneer_ear_touch.png",
-      "original_name": "Изображение ChatGPT 11 окт. 2026 г., 15_25_31-2.png",
-      "sha256": "594ed4f530533fae1ba09c051336a17f0d6f709c9a45b14774f60f259da81d80",
-      "size": [
-        941,
-        1672
-      ],
-      "bbox": [
-        41,
-        5,
-        927,
-        1672
-      ]
-    },
-    {
-      "number": 13,
-      "pose": "hands_on_hips",
-      "path": "mods/chuzaya_smena/sp/Dasha sprites/new/darya_pioneer_hands_on_hips.png",
-      "original_name": "Изображение ChatGPT 11 окт. 2026 г., 15_25_32-3.png",
-      "sha256": "12c591b1dac75779cd700bdc48568c26df50963fa490457b8e6c32336de560d3",
-      "size": [
-        941,
-        1672
-      ],
-      "bbox": [
-        23,
-        0,
-        917,
+        245,
+        18,
+        690,
         1655
-      ]
+      ],
+      "number": 1
     },
     {
-      "number": 14,
+      "pose": "serious",
+      "path": "sp/darya_pioneer/darya_pioneer_mad_serious.png",
+      "size": [
+        941,
+        1672
+      ],
+      "bbox": [
+        188,
+        12,
+        769,
+        1648
+      ],
+      "number": 2
+    },
+    {
+      "pose": "surprised",
+      "path": "sp/darya_pioneer/darya_pioneer_curious_surprised.png",
+      "size": [
+        941,
+        1672
+      ],
+      "bbox": [
+        271,
+        16,
+        675,
+        1632
+      ],
+      "number": 3
+    },
+    {
+      "pose": "explaining",
+      "path": "sp/darya_pioneer/darya_pioneer_smile_smile.png",
+      "size": [
+        941,
+        1671
+      ],
+      "bbox": [
+        158,
+        14,
+        735,
+        1630
+      ],
+      "number": 4
+    },
+    {
+      "pose": "worried",
+      "path": "sp/darya_pioneer/darya_pioneer_cry_anxious.png",
+      "size": [
+        941,
+        1672
+      ],
+      "bbox": [
+        274,
+        15,
+        674,
+        1657
+      ],
+      "number": 5
+    },
+    {
+      "pose": "smile",
+      "path": "sp/darya_pioneer/darya_pioneer_idle_soft_smile.png",
+      "size": [
+        941,
+        1672
+      ],
+      "bbox": [
+        246,
+        17,
+        691,
+        1655
+      ],
+      "number": 6
+    },
+    {
+      "pose": "thinking",
+      "path": "sp/darya_pioneer/darya_pioneer_curious_thinking.png",
+      "size": [
+        941,
+        1671
+      ],
+      "bbox": [
+        269,
+        18,
+        679,
+        1632
+      ],
+      "number": 7
+    },
+    {
+      "pose": "wave",
+      "path": "sp/darya_pioneer/darya_pioneer_laugh_cheerful.png",
+      "size": [
+        941,
+        1672
+      ],
+      "bbox": [
+        167,
+        14,
+        805,
+        1643
+      ],
+      "number": 8
+    },
+    {
+      "pose": "arms_crossed",
+      "path": "sp/darya_pioneer/darya_pioneer_mad_annoyed.png",
+      "size": [
+        941,
+        1672
+      ],
+      "bbox": [
+        185,
+        11,
+        768,
+        1650
+      ],
+      "number": 9
+    },
+    {
+      "pose": "shrug",
+      "path": "sp/darya_pioneer/darya_pioneer_curious_curious.png",
+      "size": [
+        941,
+        1672
+      ],
+      "bbox": [
+        269,
+        15,
+        680,
+        1642
+      ],
+      "number": 10
+    },
+    {
+      "pose": "shy_smile",
+      "path": "sp/darya_pioneer/darya_pioneer_cry_embarrassed.png",
+      "size": [
+        941,
+        1672
+      ],
+      "bbox": [
+        273,
+        14,
+        678,
+        1658
+      ],
+      "number": 11
+    },
+    {
+      "pose": "ear_touch",
+      "path": "sp/darya_pioneer/darya_pioneer_smile_gentle_smile.png",
+      "size": [
+        941,
+        1672
+      ],
+      "bbox": [
+        158,
+        14,
+        734,
+        1630
+      ],
+      "number": 12
+    },
+    {
+      "pose": "hands_on_hips",
+      "path": "sp/darya_pioneer/darya_pioneer_mad_serious.png",
+      "size": [
+        941,
+        1672
+      ],
+      "bbox": [
+        188,
+        12,
+        769,
+        1648
+      ],
+      "number": 13
+    },
+    {
       "pose": "hair_touch",
-      "path": "mods/chuzaya_smena/sp/Dasha sprites/new/darya_pioneer_hair_touch.png",
-      "original_name": "Изображение ChatGPT 11 окт. 2026 г., 15_25_33-4.png",
-      "sha256": "38882a9d71ca7cb5150eb8e5501e58e985c6a2e8f2a9bc61cb3945b1bb5cabfc",
+      "path": "sp/darya_pioneer/darya_pioneer_smile_gentle_smile.png",
       "size": [
         941,
         1672
       ],
       "bbox": [
-        60,
-        13,
-        921,
-        1656
-      ]
+        158,
+        14,
+        734,
+        1630
+      ],
+      "number": 14
     },
     {
-      "number": 15,
       "pose": "tie_touch",
-      "path": "mods/chuzaya_smena/sp/Dasha sprites/new/darya_pioneer_tie_touch.png",
-      "original_name": "Изображение ChatGPT 11 окт. 2026 г., 15_25_34-5.png",
-      "sha256": "98aa7e90efc5644c7dc8b31d6cd31b5db9e11b697b40d7bec8cb699a294eb0ce",
+      "path": "sp/darya_pioneer/darya_pioneer_idle_thoughtful.png",
       "size": [
         941,
-        1672
+        1671
       ],
       "bbox": [
-        179,
-        8,
-        817,
-        1672
-      ]
+        246,
+        17,
+        691,
+        1654
+      ],
+      "number": 15
     },
     {
-      "number": 16,
       "pose": "amused",
-      "path": "mods/chuzaya_smena/sp/Dasha sprites/new/darya_pioneer_amused.png",
-      "original_name": "Изображение ChatGPT 11 окт. 2026 г., 15_25_35-6.png",
-      "sha256": "783a9e0fd2f23eca50f948ffdc545c7505ded9fdc82fc95599da43eb20f375ba",
+      "path": "sp/darya_pioneer/darya_pioneer_laugh_teasing.png",
       "size": [
         941,
         1672
       ],
       "bbox": [
-        58,
-        0,
-        921,
-        1659
-      ]
+        169,
+        12,
+        845,
+        1648
+      ],
+      "number": 16
     },
     {
-      "number": 17,
       "pose": "shy_bend",
-      "path": "mods/chuzaya_smena/sp/Dasha sprites/new/darya_pioneer_shy_bend.png",
-      "original_name": "Изображение ChatGPT 11 окт. 2026 г., 15_25_36-7.png",
-      "sha256": "cbba59d525824598c1689e82cc43ae299ef74dc727ebc5ff77bbc5f736934612",
+      "path": "sp/darya_pioneer/darya_pioneer_cry_embarrassed.png",
       "size": [
         941,
         1672
       ],
       "bbox": [
-        0,
-        0,
-        921,
-        1672
-      ]
+        273,
+        14,
+        678,
+        1658
+      ],
+      "number": 17
     },
     {
-      "number": 18,
       "pose": "reaching",
-      "path": "mods/chuzaya_smena/sp/Dasha sprites/new/darya_pioneer_reaching.png",
-      "original_name": "Изображение ChatGPT 11 окт. 2026 г., 15_25_37-8.png",
-      "sha256": "384ccab7a6c0d39a3ca53f8a1cfbf7ec902f89507c70eb8b8034cfc9bc9d2dfa",
+      "path": "sp/darya_pioneer/darya_pioneer_smile_happy.png",
       "size": [
         941,
         1672
+      ],
+      "bbox": [
+        156,
+        15,
+        741,
+        1631
+      ],
+      "number": 18
+    },
+    {
+      "pose": "forearm_hold",
+      "path": "sp/darya_pioneer/darya_pioneer_cry_anxious.png",
+      "size": [
+        941,
+        1672
+      ],
+      "bbox": [
+        274,
+        15,
+        674,
+        1657
+      ],
+      "number": 19
+    },
+    {
+      "pose": "surprise_hand",
+      "path": "sp/darya_pioneer/darya_pioneer_idle_surprised.png",
+      "size": [
+        941,
+        1672
+      ],
+      "bbox": [
+        247,
+        16,
+        690,
+        1655
+      ],
+      "number": 20
+    },
+    {
+      "pose": "idle_01",
+      "path": "sp/darya_pioneer/darya_pioneer_idle_neutral.png",
+      "size": [
+        941,
+        1672
+      ],
+      "bbox": [
+        245,
+        18,
+        690,
+        1655
+      ],
+      "number": 21
+    },
+    {
+      "pose": "idle_02",
+      "path": "sp/darya_pioneer/darya_pioneer_idle_sad.png",
+      "size": [
+        941,
+        1672
+      ],
+      "bbox": [
+        244,
+        17,
+        692,
+        1655
+      ],
+      "number": 22
+    },
+    {
+      "pose": "idle_03",
+      "path": "sp/darya_pioneer/darya_pioneer_idle_soft_smile.png",
+      "size": [
+        941,
+        1672
+      ],
+      "bbox": [
+        246,
+        17,
+        691,
+        1655
+      ],
+      "number": 23
+    },
+    {
+      "pose": "idle_04",
+      "path": "sp/darya_pioneer/darya_pioneer_idle_surprised.png",
+      "size": [
+        941,
+        1672
+      ],
+      "bbox": [
+        247,
+        16,
+        690,
+        1655
+      ],
+      "number": 24
+    },
+    {
+      "pose": "curious_01",
+      "path": "sp/darya_pioneer/darya_pioneer_curious_confused.png",
+      "size": [
+        941,
+        1672
+      ],
+      "bbox": [
+        270,
+        17,
+        681,
+        1633
+      ],
+      "number": 25
+    },
+    {
+      "pose": "curious_02",
+      "path": "sp/darya_pioneer/darya_pioneer_curious_curious.png",
+      "size": [
+        941,
+        1672
+      ],
+      "bbox": [
+        269,
+        15,
+        680,
+        1642
+      ],
+      "number": 26
+    },
+    {
+      "pose": "curious_03",
+      "path": "sp/darya_pioneer/darya_pioneer_curious_interested.png",
+      "size": [
+        941,
+        1671
+      ],
+      "bbox": [
+        266,
+        16,
+        684,
+        1635
+      ],
+      "number": 27
+    },
+    {
+      "pose": "curious_04",
+      "path": "sp/darya_pioneer/darya_pioneer_curious_surprised.png",
+      "size": [
+        941,
+        1672
+      ],
+      "bbox": [
+        271,
+        16,
+        675,
+        1632
+      ],
+      "number": 28
+    },
+    {
+      "pose": "curious_05",
+      "path": "sp/darya_pioneer/darya_pioneer_curious_suspicious.png",
+      "size": [
+        941,
+        1672
+      ],
+      "bbox": [
+        271,
+        16,
+        684,
+        1638
+      ],
+      "number": 29
+    },
+    {
+      "pose": "curious_06",
+      "path": "sp/darya_pioneer/darya_pioneer_curious_thinking.png",
+      "size": [
+        941,
+        1671
+      ],
+      "bbox": [
+        269,
+        18,
+        679,
+        1632
+      ],
+      "number": 30
+    },
+    {
+      "pose": "mad_01",
+      "path": "sp/darya_pioneer/darya_pioneer_mad_angry.png",
+      "size": [
+        941,
+        1672
+      ],
+      "bbox": [
+        187,
+        16,
+        770,
+        1649
+      ],
+      "number": 31
+    },
+    {
+      "pose": "mad_02",
+      "path": "sp/darya_pioneer/darya_pioneer_mad_annoyed.png",
+      "size": [
+        941,
+        1672
+      ],
+      "bbox": [
+        185,
+        11,
+        768,
+        1650
+      ],
+      "number": 32
+    },
+    {
+      "pose": "mad_03",
+      "path": "sp/darya_pioneer/darya_pioneer_mad_furious.png",
+      "size": [
+        941,
+        1672
+      ],
+      "bbox": [
+        189,
+        13,
+        770,
+        1649
+      ],
+      "number": 33
+    },
+    {
+      "pose": "mad_04",
+      "path": "sp/darya_pioneer/darya_pioneer_mad_offended.png",
+      "size": [
+        941,
+        1672
+      ],
+      "bbox": [
+        187,
+        11,
+        771,
+        1651
+      ],
+      "number": 34
+    },
+    {
+      "pose": "mad_05",
+      "path": "sp/darya_pioneer/darya_pioneer_mad_serious.png",
+      "size": [
+        941,
+        1672
+      ],
+      "bbox": [
+        188,
+        12,
+        769,
+        1648
+      ],
+      "number": 35
+    },
+    {
+      "pose": "mad_06",
+      "path": "sp/darya_pioneer/darya_pioneer_mad_skeptical.png",
+      "size": [
+        941,
+        1672
+      ],
+      "bbox": [
+        186,
+        14,
+        771,
+        1650
+      ],
+      "number": 36
+    },
+    {
+      "pose": "laught_01",
+      "path": "sp/darya_pioneer/darya_pioneer_cry_anxious.png",
+      "size": [
+        941,
+        1672
+      ],
+      "bbox": [
+        274,
+        15,
+        674,
+        1657
+      ],
+      "number": 37
+    },
+    {
+      "pose": "laught_02",
+      "path": "sp/darya_pioneer/darya_pioneer_cry_crying.png",
+      "size": [
+        941,
+        1672
+      ],
+      "bbox": [
+        272,
+        12,
+        672,
+        1660
+      ],
+      "number": 38
+    },
+    {
+      "pose": "laught_03",
+      "path": "sp/darya_pioneer/darya_pioneer_cry_embarrassed.png",
+      "size": [
+        941,
+        1672
+      ],
+      "bbox": [
+        273,
+        14,
+        678,
+        1658
+      ],
+      "number": 39
+    },
+    {
+      "pose": "laught_04",
+      "path": "sp/darya_pioneer/darya_pioneer_cry_hurt.png",
+      "size": [
+        941,
+        1672
+      ],
+      "bbox": [
+        274,
+        13,
+        673,
+        1660
+      ],
+      "number": 40
+    },
+    {
+      "pose": "laught_05",
+      "path": "sp/darya_pioneer/darya_pioneer_cry_sad.png",
+      "size": [
+        941,
+        1672
+      ],
+      "bbox": [
+        276,
+        15,
+        671,
+        1657
+      ],
+      "number": 41
+    },
+    {
+      "pose": "laught_06",
+      "path": "sp/darya_pioneer/darya_pioneer_cry_teary.png",
+      "size": [
+        941,
+        1672
+      ],
+      "bbox": [
+        274,
+        14,
+        674,
+        1657
+      ],
+      "number": 42
+    },
+    {
+      "pose": "shy_01",
+      "path": "sp/darya_pioneer/darya_pioneer_laugh_big_smile.png",
+      "size": [
+        941,
+        1672
+      ],
+      "bbox": [
+        169,
+        12,
+        805,
+        1645
+      ],
+      "number": 43
+    },
+    {
+      "pose": "shy_02",
+      "path": "sp/darya_pioneer/darya_pioneer_laugh_cheerful.png",
+      "size": [
+        941,
+        1672
+      ],
+      "bbox": [
+        167,
+        14,
+        805,
+        1643
+      ],
+      "number": 44
+    },
+    {
+      "pose": "shy_03",
+      "path": "sp/darya_pioneer/darya_pioneer_laugh_laugh.png",
+      "size": [
+        941,
+        1672
+      ],
+      "bbox": [
+        172,
+        12,
+        812,
+        1647
+      ],
+      "number": 45
+    },
+    {
+      "pose": "shy_04",
+      "path": "sp/darya_pioneer/darya_pioneer_laugh_smug.png",
+      "size": [
+        941,
+        1672
+      ],
+      "bbox": [
+        175,
+        11,
+        829,
+        1649
+      ],
+      "number": 46
+    },
+    {
+      "pose": "shy_05",
+      "path": "sp/darya_pioneer/darya_pioneer_laugh_teasing.png",
+      "size": [
+        941,
+        1672
+      ],
+      "bbox": [
+        169,
+        12,
+        845,
+        1648
+      ],
+      "number": 47
+    },
+    {
+      "pose": "shy_06",
+      "path": "sp/darya_pioneer/darya_pioneer_laugh_wink.png",
+      "size": [
+        941,
+        1671
+      ],
+      "bbox": [
+        169,
+        15,
+        804,
+        1644
+      ],
+      "number": 48
+    },
+    {
+      "pose": "smile_01",
+      "path": "sp/darya_pioneer/darya_pioneer_smile_excited.png",
+      "size": [
+        941,
+        1672
+      ],
+      "bbox": [
+        156,
+        13,
+        738,
+        1631
+      ],
+      "number": 49
+    },
+    {
+      "pose": "smile_02",
+      "path": "sp/darya_pioneer/darya_pioneer_smile_gentle_smile.png",
+      "size": [
+        941,
+        1672
+      ],
+      "bbox": [
+        158,
+        14,
+        734,
+        1630
+      ],
+      "number": 50
+    },
+    {
+      "pose": "smile_03",
+      "path": "sp/darya_pioneer/darya_pioneer_smile_happy.png",
+      "size": [
+        941,
+        1672
+      ],
+      "bbox": [
+        156,
+        15,
+        741,
+        1631
+      ],
+      "number": 51
+    },
+    {
+      "pose": "smile_04",
+      "path": "sp/darya_pioneer/darya_pioneer_smile_playful.png",
+      "size": [
+        941,
+        1672
+      ],
+      "bbox": [
+        156,
+        16,
+        735,
+        1630
+      ],
+      "number": 52
+    },
+    {
+      "pose": "smile_05",
+      "path": "sp/darya_pioneer/darya_pioneer_smile_relieved.png",
+      "size": [
+        941,
+        1672
+      ],
+      "bbox": [
+        156,
+        13,
+        736,
+        1631
+      ],
+      "number": 53
+    },
+    {
+      "pose": "smile_06",
+      "path": "sp/darya_pioneer/darya_pioneer_smile_smile.png",
+      "size": [
+        941,
+        1671
+      ],
+      "bbox": [
+        158,
+        14,
+        735,
+        1630
+      ],
+      "number": 54
+    },
+    {
+      "pose": "cry_anxious",
+      "path": "sp/darya_pioneer/darya_pioneer_cry_anxious.png",
+      "size": [
+        941,
+        1672
+      ],
+      "bbox": [
+        274,
+        15,
+        674,
+        1657
+      ],
+      "number": 55
+    },
+    {
+      "pose": "cry_crying",
+      "path": "sp/darya_pioneer/darya_pioneer_cry_crying.png",
+      "size": [
+        941,
+        1672
+      ],
+      "bbox": [
+        272,
+        12,
+        672,
+        1660
+      ],
+      "number": 56
+    },
+    {
+      "pose": "cry_embarrassed",
+      "path": "sp/darya_pioneer/darya_pioneer_cry_embarrassed.png",
+      "size": [
+        941,
+        1672
+      ],
+      "bbox": [
+        273,
+        14,
+        678,
+        1658
+      ],
+      "number": 57
+    },
+    {
+      "pose": "cry_hurt",
+      "path": "sp/darya_pioneer/darya_pioneer_cry_hurt.png",
+      "size": [
+        941,
+        1672
+      ],
+      "bbox": [
+        274,
+        13,
+        673,
+        1660
+      ],
+      "number": 58
+    },
+    {
+      "pose": "cry_sad",
+      "path": "sp/darya_pioneer/darya_pioneer_cry_sad.png",
+      "size": [
+        941,
+        1672
+      ],
+      "bbox": [
+        276,
+        15,
+        671,
+        1657
+      ],
+      "number": 59
+    },
+    {
+      "pose": "cry_teary",
+      "path": "sp/darya_pioneer/darya_pioneer_cry_teary.png",
+      "size": [
+        941,
+        1672
+      ],
+      "bbox": [
+        274,
+        14,
+        674,
+        1657
+      ],
+      "number": 60
+    },
+    {
+      "pose": "curious_confused",
+      "path": "sp/darya_pioneer/darya_pioneer_curious_confused.png",
+      "size": [
+        941,
+        1672
+      ],
+      "bbox": [
+        270,
+        17,
+        681,
+        1633
+      ],
+      "number": 61
+    },
+    {
+      "pose": "curious_curious",
+      "path": "sp/darya_pioneer/darya_pioneer_curious_curious.png",
+      "size": [
+        941,
+        1672
+      ],
+      "bbox": [
+        269,
+        15,
+        680,
+        1642
+      ],
+      "number": 62
+    },
+    {
+      "pose": "curious_interested",
+      "path": "sp/darya_pioneer/darya_pioneer_curious_interested.png",
+      "size": [
+        941,
+        1671
+      ],
+      "bbox": [
+        266,
+        16,
+        684,
+        1635
+      ],
+      "number": 63
+    },
+    {
+      "pose": "curious_surprised",
+      "path": "sp/darya_pioneer/darya_pioneer_curious_surprised.png",
+      "size": [
+        941,
+        1672
+      ],
+      "bbox": [
+        271,
+        16,
+        675,
+        1632
+      ],
+      "number": 64
+    },
+    {
+      "pose": "curious_suspicious",
+      "path": "sp/darya_pioneer/darya_pioneer_curious_suspicious.png",
+      "size": [
+        941,
+        1672
+      ],
+      "bbox": [
+        271,
+        16,
+        684,
+        1638
+      ],
+      "number": 65
+    },
+    {
+      "pose": "curious_thinking",
+      "path": "sp/darya_pioneer/darya_pioneer_curious_thinking.png",
+      "size": [
+        941,
+        1671
+      ],
+      "bbox": [
+        269,
+        18,
+        679,
+        1632
+      ],
+      "number": 66
+    },
+    {
+      "pose": "idle_neutral",
+      "path": "sp/darya_pioneer/darya_pioneer_idle_neutral.png",
+      "size": [
+        941,
+        1672
+      ],
+      "bbox": [
+        245,
+        18,
+        690,
+        1655
+      ],
+      "number": 67
+    },
+    {
+      "pose": "idle_sad",
+      "path": "sp/darya_pioneer/darya_pioneer_idle_sad.png",
+      "size": [
+        941,
+        1672
+      ],
+      "bbox": [
+        244,
+        17,
+        692,
+        1655
+      ],
+      "number": 68
+    },
+    {
+      "pose": "idle_soft_smile",
+      "path": "sp/darya_pioneer/darya_pioneer_idle_soft_smile.png",
+      "size": [
+        941,
+        1672
+      ],
+      "bbox": [
+        246,
+        17,
+        691,
+        1655
+      ],
+      "number": 69
+    },
+    {
+      "pose": "idle_surprised",
+      "path": "sp/darya_pioneer/darya_pioneer_idle_surprised.png",
+      "size": [
+        941,
+        1672
+      ],
+      "bbox": [
+        247,
+        16,
+        690,
+        1655
+      ],
+      "number": 70
+    },
+    {
+      "pose": "idle_thoughtful",
+      "path": "sp/darya_pioneer/darya_pioneer_idle_thoughtful.png",
+      "size": [
+        941,
+        1671
+      ],
+      "bbox": [
+        246,
+        17,
+        691,
+        1654
+      ],
+      "number": 71
+    },
+    {
+      "pose": "idle_tired",
+      "path": "sp/darya_pioneer/darya_pioneer_idle_tired.png",
+      "size": [
+        941,
+        1672
+      ],
+      "bbox": [
+        246,
+        17,
+        689,
+        1655
+      ],
+      "number": 72
+    },
+    {
+      "pose": "laugh_big_smile",
+      "path": "sp/darya_pioneer/darya_pioneer_laugh_big_smile.png",
+      "size": [
+        941,
+        1672
+      ],
+      "bbox": [
+        169,
+        12,
+        805,
+        1645
+      ],
+      "number": 73
+    },
+    {
+      "pose": "laugh_cheerful",
+      "path": "sp/darya_pioneer/darya_pioneer_laugh_cheerful.png",
+      "size": [
+        941,
+        1672
+      ],
+      "bbox": [
+        167,
+        14,
+        805,
+        1643
+      ],
+      "number": 74
+    },
+    {
+      "pose": "laugh_laugh",
+      "path": "sp/darya_pioneer/darya_pioneer_laugh_laugh.png",
+      "size": [
+        941,
+        1672
+      ],
+      "bbox": [
+        172,
+        12,
+        812,
+        1647
+      ],
+      "number": 75
+    },
+    {
+      "pose": "laugh_smug",
+      "path": "sp/darya_pioneer/darya_pioneer_laugh_smug.png",
+      "size": [
+        941,
+        1672
+      ],
+      "bbox": [
+        175,
+        11,
+        829,
+        1649
+      ],
+      "number": 76
+    },
+    {
+      "pose": "laugh_teasing",
+      "path": "sp/darya_pioneer/darya_pioneer_laugh_teasing.png",
+      "size": [
+        941,
+        1672
+      ],
+      "bbox": [
+        169,
+        12,
+        845,
+        1648
+      ],
+      "number": 77
+    },
+    {
+      "pose": "laugh_wink",
+      "path": "sp/darya_pioneer/darya_pioneer_laugh_wink.png",
+      "size": [
+        941,
+        1671
+      ],
+      "bbox": [
+        169,
+        15,
+        804,
+        1644
+      ],
+      "number": 78
+    },
+    {
+      "pose": "mad_angry",
+      "path": "sp/darya_pioneer/darya_pioneer_mad_angry.png",
+      "size": [
+        941,
+        1672
+      ],
+      "bbox": [
+        187,
+        16,
+        770,
+        1649
+      ],
+      "number": 79
+    },
+    {
+      "pose": "mad_annoyed",
+      "path": "sp/darya_pioneer/darya_pioneer_mad_annoyed.png",
+      "size": [
+        941,
+        1672
+      ],
+      "bbox": [
+        185,
+        11,
+        768,
+        1650
+      ],
+      "number": 80
+    },
+    {
+      "pose": "mad_furious",
+      "path": "sp/darya_pioneer/darya_pioneer_mad_furious.png",
+      "size": [
+        941,
+        1672
+      ],
+      "bbox": [
+        189,
+        13,
+        770,
+        1649
+      ],
+      "number": 81
+    },
+    {
+      "pose": "mad_offended",
+      "path": "sp/darya_pioneer/darya_pioneer_mad_offended.png",
+      "size": [
+        941,
+        1672
+      ],
+      "bbox": [
+        187,
+        11,
+        771,
+        1651
+      ],
+      "number": 82
+    },
+    {
+      "pose": "mad_serious",
+      "path": "sp/darya_pioneer/darya_pioneer_mad_serious.png",
+      "size": [
+        941,
+        1672
+      ],
+      "bbox": [
+        188,
+        12,
+        769,
+        1648
+      ],
+      "number": 83
+    },
+    {
+      "pose": "mad_skeptical",
+      "path": "sp/darya_pioneer/darya_pioneer_mad_skeptical.png",
+      "size": [
+        941,
+        1672
+      ],
+      "bbox": [
+        186,
+        14,
+        771,
+        1650
+      ],
+      "number": 84
+    },
+    {
+      "pose": "smile_excited",
+      "path": "sp/darya_pioneer/darya_pioneer_smile_excited.png",
+      "size": [
+        941,
+        1672
+      ],
+      "bbox": [
+        156,
+        13,
+        738,
+        1631
+      ],
+      "number": 85
+    },
+    {
+      "pose": "smile_gentle_smile",
+      "path": "sp/darya_pioneer/darya_pioneer_smile_gentle_smile.png",
+      "size": [
+        941,
+        1672
+      ],
+      "bbox": [
+        158,
+        14,
+        734,
+        1630
+      ],
+      "number": 86
+    },
+    {
+      "pose": "smile_happy",
+      "path": "sp/darya_pioneer/darya_pioneer_smile_happy.png",
+      "size": [
+        941,
+        1672
+      ],
+      "bbox": [
+        156,
+        15,
+        741,
+        1631
+      ],
+      "number": 87
+    },
+    {
+      "pose": "smile_playful",
+      "path": "sp/darya_pioneer/darya_pioneer_smile_playful.png",
+      "size": [
+        941,
+        1672
+      ],
+      "bbox": [
+        156,
+        16,
+        735,
+        1630
+      ],
+      "number": 88
+    },
+    {
+      "pose": "smile_relieved",
+      "path": "sp/darya_pioneer/darya_pioneer_smile_relieved.png",
+      "size": [
+        941,
+        1672
+      ],
+      "bbox": [
+        156,
+        13,
+        736,
+        1631
+      ],
+      "number": 89
+    },
+    {
+      "pose": "smile_smile",
+      "path": "sp/darya_pioneer/darya_pioneer_smile_smile.png",
+      "size": [
+        941,
+        1671
+      ],
+      "bbox": [
+        158,
+        14,
+        735,
+        1630
+      ],
+      "number": 90
+    }
+  ],
+  "sport": [
+    {
+      "pose": "neutral",
+      "path": "sp/darya_sport/darya_sport_idle_neutral.png",
+      "size": [
+        793,
+        1983
+      ],
+      "bbox": [
+        143,
+        14,
+        652,
+        1905
+      ],
+      "number": 1
+    },
+    {
+      "pose": "serious",
+      "path": "sp/darya_sport/darya_sport_mad_serious.png",
+      "size": [
+        793,
+        1983
+      ],
+      "bbox": [
+        49,
+        12,
+        736,
+        1933
+      ],
+      "number": 2
+    },
+    {
+      "pose": "surprised",
+      "path": "sp/darya_sport/darya_sport_curious_surprised.png",
+      "size": [
+        793,
+        1983
+      ],
+      "bbox": [
+        170,
+        20,
+        681,
+        1929
+      ],
+      "number": 3
+    },
+    {
+      "pose": "explaining",
+      "path": "sp/darya_sport/darya_sport_smile_smile.png",
+      "size": [
+        793,
+        1983
+      ],
+      "bbox": [
+        99,
+        9,
+        644,
+        1933
+      ],
+      "number": 4
+    },
+    {
+      "pose": "worried",
+      "path": "sp/darya_sport/darya_sport_cry_anxious.png",
+      "size": [
+        793,
+        1984
+      ],
+      "bbox": [
+        178,
+        0,
+        614,
+        1942
+      ],
+      "number": 5
+    },
+    {
+      "pose": "smile",
+      "path": "sp/darya_sport/darya_sport_idle_soft_smile.png",
+      "size": [
+        793,
+        1983
+      ],
+      "bbox": [
+        139,
+        11,
+        655,
+        1905
+      ],
+      "number": 6
+    },
+    {
+      "pose": "thinking",
+      "path": "sp/darya_sport/darya_sport_curious_thinking.png",
+      "size": [
+        793,
+        1983
+      ],
+      "bbox": [
+        178,
+        26,
+        684,
+        1921
+      ],
+      "number": 7
+    },
+    {
+      "pose": "wave",
+      "path": "sp/darya_sport/darya_sport_laugh_cheerful.png",
+      "size": [
+        941,
+        1672
+      ],
+      "bbox": [
+        130,
+        11,
+        868,
+        1652
+      ],
+      "number": 8
+    },
+    {
+      "pose": "arms_crossed",
+      "path": "sp/darya_sport/darya_sport_mad_annoyed.png",
+      "size": [
+        793,
+        1983
       ],
       "bbox": [
         50,
-        0,
-        919,
-        1672
-      ]
+        13,
+        729,
+        1935
+      ],
+      "number": 9
     },
     {
-      "number": 19,
+      "pose": "shrug",
+      "path": "sp/darya_sport/darya_sport_curious_curious.png",
+      "size": [
+        793,
+        1983
+      ],
+      "bbox": [
+        161,
+        23,
+        685,
+        1930
+      ],
+      "number": 10
+    },
+    {
+      "pose": "shy_smile",
+      "path": "sp/darya_sport/darya_sport_cry_embarrassed.png",
+      "size": [
+        793,
+        1984
+      ],
+      "bbox": [
+        181,
+        0,
+        620,
+        1946
+      ],
+      "number": 11
+    },
+    {
+      "pose": "ear_touch",
+      "path": "sp/darya_sport/darya_sport_smile_gentle_smile.png",
+      "size": [
+        793,
+        1983
+      ],
+      "bbox": [
+        97,
+        9,
+        653,
+        1936
+      ],
+      "number": 12
+    },
+    {
+      "pose": "hands_on_hips",
+      "path": "sp/darya_sport/darya_sport_mad_serious.png",
+      "size": [
+        793,
+        1983
+      ],
+      "bbox": [
+        49,
+        12,
+        736,
+        1933
+      ],
+      "number": 13
+    },
+    {
+      "pose": "hair_touch",
+      "path": "sp/darya_sport/darya_sport_smile_gentle_smile.png",
+      "size": [
+        793,
+        1983
+      ],
+      "bbox": [
+        97,
+        9,
+        653,
+        1936
+      ],
+      "number": 14
+    },
+    {
+      "pose": "tie_touch",
+      "path": "sp/darya_sport/darya_sport_idle_thoughtful.png",
+      "size": [
+        793,
+        1983
+      ],
+      "bbox": [
+        142,
+        12,
+        651,
+        1906
+      ],
+      "number": 15
+    },
+    {
+      "pose": "amused",
+      "path": "sp/darya_sport/darya_sport_laugh_teasing.png",
+      "size": [
+        881,
+        1785
+      ],
+      "bbox": [
+        98,
+        10,
+        816,
+        1773
+      ],
+      "number": 16
+    },
+    {
+      "pose": "shy_bend",
+      "path": "sp/darya_sport/darya_sport_cry_embarrassed.png",
+      "size": [
+        793,
+        1984
+      ],
+      "bbox": [
+        181,
+        0,
+        620,
+        1946
+      ],
+      "number": 17
+    },
+    {
+      "pose": "reaching",
+      "path": "sp/darya_sport/darya_sport_smile_happy.png",
+      "size": [
+        793,
+        1983
+      ],
+      "bbox": [
+        98,
+        12,
+        644,
+        1937
+      ],
+      "number": 18
+    },
+    {
       "pose": "forearm_hold",
-      "path": "mods/chuzaya_smena/sp/Dasha sprites/new/darya_pioneer_forearm_hold.png",
-      "original_name": "Изображение ChatGPT 11 окт. 2026 г., 15_25_38-9.png",
-      "sha256": "cf64ae37f2fd2a0f1eab71fafd3d4caaf702459fc3ae248bd4c359d5381debd7",
+      "path": "sp/darya_sport/darya_sport_cry_anxious.png",
       "size": [
-        941,
-        1672
+        793,
+        1984
       ],
       "bbox": [
-        19,
+        178,
         0,
-        927,
-        1672
-      ]
+        614,
+        1942
+      ],
+      "number": 19
     },
     {
-      "number": 20,
       "pose": "surprise_hand",
-      "path": "mods/chuzaya_smena/sp/Dasha sprites/new/darya_pioneer_surprise_hand.png",
-      "original_name": "Изображение ChatGPT 11 окт. 2026 г., 15_25_39-10.png",
-      "sha256": "e793dbd644ec1d44e8613190e50b6ca2b79a01acad1f1d5bf1d66b91d1467938",
+      "path": "sp/darya_sport/darya_sport_idle_surprised.png",
+      "size": [
+        793,
+        1983
+      ],
+      "bbox": [
+        142,
+        13,
+        652,
+        1905
+      ],
+      "number": 20
+    },
+    {
+      "pose": "cry_anxious",
+      "path": "sp/darya_sport/darya_sport_cry_anxious.png",
+      "size": [
+        793,
+        1984
+      ],
+      "bbox": [
+        178,
+        0,
+        614,
+        1942
+      ],
+      "number": 21
+    },
+    {
+      "pose": "cry_crying",
+      "path": "sp/darya_sport/darya_sport_cry_crying.png",
+      "size": [
+        793,
+        1983
+      ],
+      "bbox": [
+        183,
+        0,
+        613,
+        1937
+      ],
+      "number": 22
+    },
+    {
+      "pose": "cry_embarrassed",
+      "path": "sp/darya_sport/darya_sport_cry_embarrassed.png",
+      "size": [
+        793,
+        1984
+      ],
+      "bbox": [
+        181,
+        0,
+        620,
+        1946
+      ],
+      "number": 23
+    },
+    {
+      "pose": "cry_hurt",
+      "path": "sp/darya_sport/darya_sport_cry_hurt.png",
+      "size": [
+        793,
+        1983
+      ],
+      "bbox": [
+        188,
+        0,
+        620,
+        1938
+      ],
+      "number": 24
+    },
+    {
+      "pose": "cry_sad",
+      "path": "sp/darya_sport/darya_sport_cry_sad.png",
+      "size": [
+        793,
+        1984
+      ],
+      "bbox": [
+        184,
+        8,
+        614,
+        1939
+      ],
+      "number": 25
+    },
+    {
+      "pose": "cry_teary",
+      "path": "sp/darya_sport/darya_sport_cry_teary.png",
+      "size": [
+        793,
+        1983
+      ],
+      "bbox": [
+        180,
+        1,
+        616,
+        1939
+      ],
+      "number": 26
+    },
+    {
+      "pose": "curious_confused",
+      "path": "sp/darya_sport/darya_sport_curious_confused.png",
+      "size": [
+        875,
+        1798
+      ],
+      "bbox": [
+        221,
+        15,
+        707,
+        1770
+      ],
+      "number": 27
+    },
+    {
+      "pose": "curious_curious",
+      "path": "sp/darya_sport/darya_sport_curious_curious.png",
+      "size": [
+        793,
+        1983
+      ],
+      "bbox": [
+        161,
+        23,
+        685,
+        1930
+      ],
+      "number": 28
+    },
+    {
+      "pose": "curious_interested",
+      "path": "sp/darya_sport/darya_sport_curious_interested.png",
+      "size": [
+        793,
+        1983
+      ],
+      "bbox": [
+        167,
+        14,
+        685,
+        1925
+      ],
+      "number": 29
+    },
+    {
+      "pose": "curious_surprised",
+      "path": "sp/darya_sport/darya_sport_curious_surprised.png",
+      "size": [
+        793,
+        1983
+      ],
+      "bbox": [
+        170,
+        20,
+        681,
+        1929
+      ],
+      "number": 30
+    },
+    {
+      "pose": "curious_suspicious",
+      "path": "sp/darya_sport/darya_sport_curious_suspicious.png",
+      "size": [
+        864,
+        1821
+      ],
+      "bbox": [
+        212,
+        11,
+        702,
+        1794
+      ],
+      "number": 31
+    },
+    {
+      "pose": "curious_thinking",
+      "path": "sp/darya_sport/darya_sport_curious_thinking.png",
+      "size": [
+        793,
+        1983
+      ],
+      "bbox": [
+        178,
+        26,
+        684,
+        1921
+      ],
+      "number": 32
+    },
+    {
+      "pose": "idle_neutral",
+      "path": "sp/darya_sport/darya_sport_idle_neutral.png",
+      "size": [
+        793,
+        1983
+      ],
+      "bbox": [
+        143,
+        14,
+        652,
+        1905
+      ],
+      "number": 33
+    },
+    {
+      "pose": "idle_sad",
+      "path": "sp/darya_sport/darya_sport_idle_sad.png",
+      "size": [
+        793,
+        1983
+      ],
+      "bbox": [
+        141,
+        13,
+        651,
+        1905
+      ],
+      "number": 34
+    },
+    {
+      "pose": "idle_soft_smile",
+      "path": "sp/darya_sport/darya_sport_idle_soft_smile.png",
+      "size": [
+        793,
+        1983
+      ],
+      "bbox": [
+        139,
+        11,
+        655,
+        1905
+      ],
+      "number": 35
+    },
+    {
+      "pose": "idle_surprised",
+      "path": "sp/darya_sport/darya_sport_idle_surprised.png",
+      "size": [
+        793,
+        1983
+      ],
+      "bbox": [
+        142,
+        13,
+        652,
+        1905
+      ],
+      "number": 36
+    },
+    {
+      "pose": "idle_thoughtful",
+      "path": "sp/darya_sport/darya_sport_idle_thoughtful.png",
+      "size": [
+        793,
+        1983
+      ],
+      "bbox": [
+        142,
+        12,
+        651,
+        1906
+      ],
+      "number": 37
+    },
+    {
+      "pose": "idle_tired",
+      "path": "sp/darya_sport/darya_sport_idle_tired.png",
+      "size": [
+        793,
+        1983
+      ],
+      "bbox": [
+        142,
+        13,
+        652,
+        1905
+      ],
+      "number": 38
+    },
+    {
+      "pose": "laugh_big_smile",
+      "path": "sp/darya_sport/darya_sport_laugh_big_smile.png",
+      "size": [
+        925,
+        1700
+      ],
+      "bbox": [
+        130,
+        6,
+        890,
+        1697
+      ],
+      "number": 39
+    },
+    {
+      "pose": "laugh_cheerful",
+      "path": "sp/darya_sport/darya_sport_laugh_cheerful.png",
       "size": [
         941,
         1672
       ],
       "bbox": [
-        33,
-        0,
-        911,
-        1672
-      ]
+        130,
+        11,
+        868,
+        1652
+      ],
+      "number": 40
+    },
+    {
+      "pose": "laugh_laugh",
+      "path": "sp/darya_sport/darya_sport_laugh_laugh.png",
+      "size": [
+        963,
+        1632
+      ],
+      "bbox": [
+        126,
+        12,
+        856,
+        1619
+      ],
+      "number": 41
+    },
+    {
+      "pose": "laugh_smug",
+      "path": "sp/darya_sport/darya_sport_laugh_smug.png",
+      "size": [
+        793,
+        1983
+      ],
+      "bbox": [
+        50,
+        18,
+        789,
+        1926
+      ],
+      "number": 42
+    },
+    {
+      "pose": "laugh_teasing",
+      "path": "sp/darya_sport/darya_sport_laugh_teasing.png",
+      "size": [
+        881,
+        1785
+      ],
+      "bbox": [
+        98,
+        10,
+        816,
+        1773
+      ],
+      "number": 43
+    },
+    {
+      "pose": "laugh_wink",
+      "path": "sp/darya_sport/darya_sport_laugh_wink.png",
+      "size": [
+        881,
+        1785
+      ],
+      "bbox": [
+        98,
+        10,
+        814,
+        1778
+      ],
+      "number": 44
+    },
+    {
+      "pose": "mad_angry",
+      "path": "sp/darya_sport/darya_sport_mad_angry.png",
+      "size": [
+        793,
+        1983
+      ],
+      "bbox": [
+        50,
+        16,
+        731,
+        1933
+      ],
+      "number": 45
+    },
+    {
+      "pose": "mad_annoyed",
+      "path": "sp/darya_sport/darya_sport_mad_annoyed.png",
+      "size": [
+        793,
+        1983
+      ],
+      "bbox": [
+        50,
+        13,
+        729,
+        1935
+      ],
+      "number": 46
+    },
+    {
+      "pose": "mad_furious",
+      "path": "sp/darya_sport/darya_sport_mad_furious.png",
+      "size": [
+        793,
+        1984
+      ],
+      "bbox": [
+        50,
+        14,
+        735,
+        1939
+      ],
+      "number": 47
+    },
+    {
+      "pose": "mad_offended",
+      "path": "sp/darya_sport/darya_sport_mad_offended.png",
+      "size": [
+        793,
+        1983
+      ],
+      "bbox": [
+        50,
+        13,
+        730,
+        1933
+      ],
+      "number": 48
+    },
+    {
+      "pose": "mad_serious",
+      "path": "sp/darya_sport/darya_sport_mad_serious.png",
+      "size": [
+        793,
+        1983
+      ],
+      "bbox": [
+        49,
+        12,
+        736,
+        1933
+      ],
+      "number": 49
+    },
+    {
+      "pose": "mad_skeptical",
+      "path": "sp/darya_sport/darya_sport_mad_skeptical.png",
+      "size": [
+        793,
+        1984
+      ],
+      "bbox": [
+        49,
+        12,
+        733,
+        1937
+      ],
+      "number": 50
+    },
+    {
+      "pose": "smile_excited",
+      "path": "sp/darya_sport/darya_sport_smile_excited.png",
+      "size": [
+        793,
+        1984
+      ],
+      "bbox": [
+        98,
+        8,
+        645,
+        1937
+      ],
+      "number": 51
+    },
+    {
+      "pose": "smile_gentle_smile",
+      "path": "sp/darya_sport/darya_sport_smile_gentle_smile.png",
+      "size": [
+        793,
+        1983
+      ],
+      "bbox": [
+        97,
+        9,
+        653,
+        1936
+      ],
+      "number": 52
+    },
+    {
+      "pose": "smile_happy",
+      "path": "sp/darya_sport/darya_sport_smile_happy.png",
+      "size": [
+        793,
+        1983
+      ],
+      "bbox": [
+        98,
+        12,
+        644,
+        1937
+      ],
+      "number": 53
+    },
+    {
+      "pose": "smile_playful",
+      "path": "sp/darya_sport/darya_sport_smile_playful.png",
+      "size": [
+        793,
+        1983
+      ],
+      "bbox": [
+        98,
+        10,
+        644,
+        1933
+      ],
+      "number": 54
+    },
+    {
+      "pose": "smile_relieved",
+      "path": "sp/darya_sport/darya_sport_smile_relieved.png",
+      "size": [
+        793,
+        1984
+      ],
+      "bbox": [
+        97,
+        12,
+        648,
+        1941
+      ],
+      "number": 55
+    },
+    {
+      "pose": "smile_smile",
+      "path": "sp/darya_sport/darya_sport_smile_smile.png",
+      "size": [
+        793,
+        1983
+      ],
+      "bbox": [
+        99,
+        9,
+        644,
+        1933
+      ],
+      "number": 56
     }
   ]
 }

@@ -187,3 +187,6 @@ p.write_text(flow,encoding='utf8')
 p=R/'days/day03/part13/00_flow.rpy';t=p.read_text(encoding='utf8').replace('    call screen cs_day03_part13_wait_screen\n    jump cs_day03_bedtime_pending','    jump cs_day03_part14');t=t[:t.index('screen cs_day03_part13_wait_screen():')]+'screen cs_day03_part13_wait_screen():\n    timer 0.1 action Jump("cs_day03_part14")\n';p.write_text(t,encoding='utf8')
 (R/'source/day03_part14_transcript.json').write_text(json.dumps(dict(source_blocks=sum(map(len,transcript.values())),scenes=transcript,edits=edits),ensure_ascii=False,indent=2),encoding='utf8')
 print('PART14_GENERATED',sum(map(len,transcript.values())),'blocks;',len(scenes),'scenes')
+if (R/'source/day04.md').is_file():
+ import subprocess,sys
+ subprocess.run([sys.executable,str(R/'tools/build_day04.py')],check=True)

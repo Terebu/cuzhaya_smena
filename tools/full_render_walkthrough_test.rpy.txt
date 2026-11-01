@@ -33,7 +33,7 @@ init 98 python:
             cs_rw_original_labels(name,abnormal)
         if not renpy.cs_rw_enabled:
             return
-        if cs_rw_re.match(r"^cs_(scene_\d+|day0[123]_\d+[a-z_]*)$",name):
+        if cs_rw_re.match(r"^cs_(scene_\d+|day0[1234]_\d+[a-z_]*)$",name):
             renpy.cs_rw_pending=name
             renpy.cs_rw_visited.append(name)
         elif name in ("cs_check_day03_83_underwear","cs_check_day03_83_hair_touch","cs_check_day03_83_turned_away","cs_check_day03_83_dressed","cs_check_day01_part03_phone_off"):
@@ -94,11 +94,32 @@ init 98 python:
             assert cs_lena_elbow_injury_day2==2 and cs_lena_no_sport_day2
             with open(config.basedir+"/rw_"+renpy.cs_rw_route+"_state.json","w") as f:
                 cs_rw_json.dump(dict(status="PASS",visited=renpy.cs_rw_visited,screenshots=renpy.cs_rw_count,friendship=dict(mi=cs_friend_mi,dv=cs_friend_dv,un=cs_friend_un,se=cs_friend_se,sl=cs_friend_sl,mz=cs_friend_mz,viola=cs_friend_viola),poster=cs_day03_poster_location,catalog=cs_mz_catalog_checked_day3,book_requested=cs_mz_book_requested_day3,documents=cs_day03_documents_location,lunch_together=cs_un_day3_lunch_together,sketch_plan=cs_un_sketch_plan_discussed_day3,darya_destination=cs_day03_darya_destination),f)
+        if name=="cs_check_day04_complete":
+            assert cs_day04_done and cs_day04_started
+            assert cs_d4_found_1971_records and cs_d4_unknown_girl_seen and cs_d4_heard_unknown_voice
+            assert cs_d4_elbow_bandage_removed and not cs_lena_elbow_bandaged
+            assert cs_d4_olga_has_undated_photo and cs_d4_mz_has_1971_photo
+            assert cs_d4_undated_photo_location=="olga"
+            assert cs_d4_photo1971_location==cs_d4_roster_location==cs_d4_dream_notes_location=="library_locked_drawer"
+            assert cs_d4_mz_dream_record_written and cs_d4_dream_phrase_second
+            assert cs_d4_mz_friend_before_choice==5*int(renpy.cs_rw_positive)
+            assert cs_friend_mz==6*int(renpy.cs_rw_positive)
+            assert cs_friend_se==5*int(renpy.cs_rw_positive)
+            assert cs_friend_da==4*int(renpy.cs_rw_positive)
+            assert cs_friend_dv==3*int(renpy.cs_rw_positive)
+            assert bool(cs_d4_shared_bed)==renpy.cs_rw_positive
+            assert not renpy.music.get_playing(channel="ambience") and not renpy.music.get_playing(channel="music")
+            if renpy.cs_rw_positive:
+                assert cs_mi_followup_invitation_day3 and cs_dv_followup_invitation_day3
+                assert cs_mi_followup_target_day==cs_dv_followup_target_day==5
+                assert cs_d4_sl_notice_deferred
+            with open(config.basedir+"/rw_"+renpy.cs_rw_route+"_state.json","w") as f:
+                cs_rw_json.dump(dict(status="PASS",visited=renpy.cs_rw_visited,screenshots=renpy.cs_rw_count,day4=True,friendship=dict(da=cs_friend_da,mz=cs_friend_mz,se=cs_friend_se,dv=cs_friend_dv,viola=cs_friend_viola)),f)
     def cs_rw_character(event,**kwargs):
         if not renpy.cs_rw_enabled or event!="show_done":
             return
         if renpy.showing("bg"):
-            assert renpy.has_image(("bg",)+tuple(renpy.get_attributes("bg"))),"Unregistered background"
+            assert renpy.has_image(("bg",)+tuple(renpy.get_attributes("bg")),exact=True),"Unregistered background"
         if cs_day03_started and cs_day03_audio_location:
             target=cs_day03_audio_target(cs_day03_audio_location)
             if target is not False:
@@ -112,6 +133,11 @@ init 98 python:
         if cg and cg!=renpy.cs_rw_last_cg:
             pending=pending or cg[0]
         renpy.cs_rw_last_cg=cg
+        if cs_day04_started:
+            bg=tuple(sorted((t,tuple(renpy.get_attributes(t) or ())) for t in renpy.get_showing_tags() if t not in cs_presence_tags))
+            if bg!=getattr(renpy,"cs_rw_last_bg",()):
+                pending=pending or "location"
+            renpy.cs_rw_last_bg=bg
         if pending:
             renpy.cs_rw_pending=None
             renpy.cs_rw_count+=1
@@ -140,7 +166,7 @@ testcase cs_render_walk_high:
     $ renpy.cs_rw_visited = []
     $ renpy.cs_rw_count = 0
     run Start("chuzhaya_smena_start")
-    click until label cs_check_day03_part14_complete
+    click until label cs_check_day04_complete
     pause 0.5
     assert cs_day03_part06_done and cs_day03_lunch_horn_played and cs_day03_lunch_arrived
     $ cs_p6_capture("complete")
@@ -165,7 +191,7 @@ testcase cs_render_walk_low:
     $ renpy.cs_rw_visited = []
     $ renpy.cs_rw_count = 0
     run Start("chuzhaya_smena_start")
-    click until label cs_check_day03_part14_complete
+    click until label cs_check_day04_complete
     pause 0.5
     assert cs_day03_part06_done and cs_day03_lunch_horn_played and cs_day03_lunch_arrived
     $ cs_p6_capture("complete")

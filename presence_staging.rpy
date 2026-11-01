@@ -59,6 +59,8 @@ init -10 python:
         return True
 
     def cs_presence_stage():
+        if not getattr(store, "cs_active", False):
+            return
         # A later emotion show must not put a standing actor over an illustration.
         if cs_clear_cg_portraits():
             return
@@ -77,6 +79,10 @@ init -10 python:
                 current = renpy.game.context().scene_lists.get_displayable_by_tag("master", tag)
                 placement = current.get_placement()
                 state = getattr(current, "state", None)
+                # A correctly staged actor must retain the live transform.
+                # Re-showing on every line would restart entries and dissolves.
+                if placement[0] == x and placement[2] == 0.5 and not placement[4]:
+                    continue
                 # Positioning replaces ATL; do not freeze a half-finished fade.
                 # Authored entry/change transitions supply the dissolve.
                 renpy.show(name, at_list=[Transform(alpha=1.0, xpos=x, xanchor=0.5,
@@ -116,13 +122,16 @@ init -10 python:
 
     def cs_pov_begin():
         # An authored inward-looking beat, not an automatic response to narration.
-        store.cs_pov_return_cast = [t for t in cs_presence_tags if renpy.showing(t)]
-        store.cs_pov_return_location = cs_director_location_key
+        if not cs_reflective_shot:
+            store.cs_pov_return_cast = [t for t in cs_presence_tags if renpy.showing(t)]
+            store.cs_pov_return_location = cs_director_location_key
         cs_reflective_focus()
 
     def cs_pov_end():
         # A save from an older script may resume after the new begin cue.
         if not cs_pov_return_cast:
+            store.cs_reflective_shot = False
+            store.cs_pov_return_location = None
             return
         tags = [t for t in cs_pov_return_cast if cs_director_states.get(t) != "ABSENT"]
         if cs_pov_return_location == cs_director_location_key:
@@ -163,6 +172,14 @@ init -10 python:
         return
 
 init 40 python:
+    def cs_stage_at_line(event, **kwargs):
+        if event == "begin":
+            cs_presence_stage()
+
+    # Narration, dialogue and menus share the same placement rule. Visibility
+    # remains authored through POV begin/end and actual arrivals/departures.
+    config.all_character_callbacks.append(cs_stage_at_line)
+    config.interact_callbacks.append(cs_presence_stage)
     # Repair old CG overlays and center every lone actor after loading saves.
     # Stage preserves the existing vertical placement and scale.
     config.after_load_callbacks.append(cs_presence_stage)

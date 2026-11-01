@@ -10,6 +10,9 @@ label cs_day03_120:
     label cs_check_day03_120_bench_left:
     cs_narrator "Мы отошли от скамейки."
     cs_narrator "Дарья шла рядом."
+    # cs_inward_beat_10: attention turns inward
+    $ cs_pov_begin()
+    with cs_sprite_leave
     cs_narrator "Я посмотрела на небо."
     cs_narrator "Солнце поднялось уже довольно высоко."
     cs_narrator "Тени под деревьями стали короче."
@@ -19,6 +22,9 @@ label cs_day03_120:
     cs_th "Потом государственная служба."
     cs_th "Теперь творческие консультации."
     cs_th "Ещё немного — и меня действительно придётся оформлять на полную ставку."
+    # Return to the same conversation, with the same cast and placement.
+    $ cs_pov_end()
+    with cs_sprite_change
     cs_narrator "Дарья посмотрела на меня."
     cs_da "Довольна?"
     cs_narrator "Я улыбнулась."

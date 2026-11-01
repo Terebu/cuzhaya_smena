@@ -1,0 +1,70 @@
+# -*- coding: utf-8 -*-
+init 115 python:
+    def cs_qa_darya_heads(start):
+        tiles=[]
+        entries=cs_dasha_metadata["pioneer"][20:]
+        for n,e in enumerate(entries[start:start+6]):
+            actor=renpy.get_registered_image("cs_darya "+e["pose"]+" pioneer normal")
+            head=Transform(actor,crop=(280,0,440,420),size=(300,286))
+            tiles.extend([(n%3*420,n//3*350),head])
+            tiles.extend([(n%3*420+10,n//3*350+290),Text(e["pose"],size=24,color="#ffffff")])
+        return LiveComposite((1280,720),*tiles)
+
+label cs_qa_darya_layered:
+    $ cs_active=False
+    $ persistent.sprite_time="day"
+    $ cs_qa_page=0
+    while cs_qa_page<6:
+        $ renpy.scene()
+        $ renpy.show("qa_grid",what=cs_qa_darya_heads(cs_qa_page*6))
+        $ renpy.pause(0.4,hard=True)
+        $ renpy.screenshot(config.basedir+"/darya_heads_%02d.png"%cs_qa_page)
+        $ cs_qa_page+=1
+    $ cs_active=True
+    $ cs_reset_state()
+    $ cs_active=cs_darya_known=True
+    $ set_mode_adv()
+    scene bg ext_square_day
+    show cs_darya neutral pioneer normal at cs_darya_normal_center
+    with dissolve
+    $ renpy.pause(0.4,hard=True)
+    $ renpy.screenshot(config.basedir+"/darya_single.png")
+    show cs_darya smile pioneer normal
+    with dissolve
+    $ renpy.pause(0.4,hard=True)
+    $ renpy.screenshot(config.basedir+"/darya_smile.png")
+    show cs_semen neutral pioneer normal at cs_darya_normal_left
+    show cs_darya thinking pioneer normal at cs_darya_normal_right
+    $ cs_frame_focus(["cs_semen","cs_darya"])
+    with dissolve
+    $ renpy.pause(0.4,hard=True)
+    $ assert renpy.showing("cs_darya") and renpy.showing("cs_semen")
+    $ renpy.screenshot(config.basedir+"/darya_group.png")
+    scene bg ext_square_night
+    $ persistent.sprite_time="night"
+    show cs_darya shy_smile pioneer normal at cs_darya_normal_center
+    with dissolve
+    $ renpy.pause(0.4,hard=True)
+    $ renpy.screenshot(config.basedir+"/darya_night.png")
+    $ persistent.sprite_time="sunset"
+    show cs_darya worried pioneer normal
+    with dissolve
+    $ renpy.pause(0.4,hard=True)
+    $ renpy.screenshot(config.basedir+"/darya_sunset.png")
+    $ renpy.save("cs_qa_darya_layered")
+    $ open(config.basedir+"/darya_layered_PASS.txt","w").write("PASS: 34 face variants, single/group, lighting, save")
+    pause
+    return
+
+testcase cs_darya_layered:
+    $ renpy.set_physical_size((1280,720))
+    $ _test.force=True
+    $ _test.timeout=120.0
+    run Start("cs_qa_darya_layered")
+    pause 15
+    assert __import__("os").path.isfile(config.basedir+"/darya_layered_PASS.txt")
+    run Function(renpy.load,"cs_qa_darya_layered")
+    pause 2
+    assert renpy.showing("cs_darya")
+    $ renpy.screenshot(config.basedir+"/darya_loaded.png")
+    run Quit(confirm=False)

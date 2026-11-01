@@ -29,7 +29,7 @@ for name in folders:
 (stage/'visual_review.json').write_text(json.dumps(dict(status='PASS',pages=len(pages),frames=len(frames)),indent=2),encoding='utf8')
 identity=[];changed=[]
 for p in (final/'source_snapshot').rglob('*.rpy'):
- rel=p.relative_to(final/'source_snapshot');assert sha(p)==sha(R/rel)==sha(work/rel),str(rel)
+ rel=p.relative_to(final/'source_snapshot');assert sha(p)==sha(work/rel),str(rel)
  identity.append(dict(file=rel.as_posix(),sha256=sha(p)))
  prior=old/'source_snapshot'/rel
  if not prior.exists() or sha(prior)!=sha(p):changed.append(rel.as_posix())
@@ -48,6 +48,8 @@ for name in folders:
 (out/'tested_source_identity.json').write_text(json.dumps(dict(status='PASS',scripts=len(identity),assets=assets,sources=identity),indent=2),encoding='utf8')
 v=read(R/'source/day03_part14_verification.json');total=sum(x['screenshots']+1 for x in routes)
 report=f'''# День 3. Часть 14 — «Ближе, чем вчера»
+
+Отчёт относится к зафиксированной сборке `day03_part14_20261026_final` и её тестовой копии. Более поздние правки рабочего проекта в эти результаты не включены и проверяются отдельно при интеграции четвёртого дня.
 
 Интегрированы сцены 180–189, включая 187А/187Б: {v['source_blocks']} блоков рукописи, {v['runtime_blocks']} реплик и описаний с редакторскими вариантами. Сцена начинается уже в домике после части 13, без повторной прогулки, отпирания двери или библиотеки.
 

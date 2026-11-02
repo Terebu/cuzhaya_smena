@@ -32,8 +32,7 @@ label cs_day02_13:
     $ cs_frame_focus(["cs_semen", "cs_darya"])
     with cs_sprite_change
     # cs_director_end
-    cs_narrator "Когда завтрак подходил к концу, Семён немного наклонился к нам."
-    cs_narrator "Выражение его лица стало серьёзнее."
+    cs_narrator "Когда завтрак подходил к концу, Семён немного наклонился к нам. Выражение его лица стало серьёзнее."
     # cs_presence_keep: hide cs_dasha_pioneer
     # cs_presence_keep: hide cs_zhenya
     # cs_presence_keep: hide mz
@@ -55,11 +54,9 @@ label cs_day02_13:
     with cs_sprite_change
     label cs_check_breakfast_private:
     cs_sy "Слушайте. Насчёт автобуса."
-    cs_narrator "Я поставила стакан."
-    cs_narrator "Дарья тоже повернулась к нему."
+    cs_narrator "Я поставила стакан. Дарья тоже повернулась к нему."
     cs_ls "Да?"
     cs_sy "Я после нашего разговора всё думаю, когда он мог исчезнуть."
-    cs_narrator "Я кивнула."
     cs_ls "Я тоже."
     # cs_presence_keep: hide cs_dasha_pioneer
     # cs_presence_keep: hide cs_zhenya
@@ -81,10 +78,7 @@ label cs_day02_13:
     # cs_global_transition
     with cs_sprite_change
     cs_sy "Ты точно не видела ничего необычного у ворот?"
-    cs_narrator "Я задумалась."
-    cs_narrator "Перед глазами снова появилась пустая дорога."
-    cs_narrator "Лес."
-    cs_narrator "Асфальт."
+    cs_narrator "Я задумалась. Перед глазами снова появилась пустая дорога. Лес. Асфальт."
     cs_narrator "Место, где вчера стоял автобус."
     cs_ls "Ничего определённого. Даже следы шин нормально рассмотреть не получилось."
     # cs_presence_keep: hide cs_dasha_pioneer
@@ -122,15 +116,9 @@ label cs_day02_13:
     with cs_sprite_change
     cs_da "Мы ведь пока даже не знаем, куда ведёт эта дорога."
     cs_narrator "Я посмотрела на неё."
-    cs_th "Вот."
-    cs_th "Именно."
-    cs_narrator "Вчера всё казалось довольно простым."
-    cs_narrator "Есть лагерь."
-    cs_narrator "Есть дорога."
-    cs_narrator "Есть автобус."
-    cs_narrator "Значит, где-то должен существовать маршрут обратно."
-    cs_narrator "Но теперь исчез единственный знакомый транспорт."
-    cs_narrator "И сама дорога оставалась совершенно неизвестной."
+    cs_th "Вот. Именно."
+    cs_narrator "Вчера всё казалось довольно простым. Есть лагерь. Есть дорога. Есть автобус."
+    cs_narrator "Значит, где-то должен существовать маршрут обратно. Но теперь исчез единственный знакомый транспорт. И сама дорога оставалась совершенно неизвестной."
     # cs_presence_keep: hide cs_dasha_pioneer
     # cs_presence_keep: hide cs_zhenya
     # cs_presence_keep: hide mz
@@ -175,10 +163,8 @@ label cs_day02_13:
     cs_da "Посмотреть можно. Но не обязательно сегодня уходить далеко."
     cs_narrator "Я повернулась к ней."
     cs_ls "Согласна."
-    cs_narrator "Она посмотрела на меня чуть внимательнее."
-    cs_narrator "Кажется, всё ещё проверяла, действительно ли я собираюсь соблюдать собственное обещание."
-    cs_th "Да, Даш."
-    cs_th "На этот раз без самостоятельных экспедиций."
+    cs_narrator "Она посмотрела на меня чуть внимательнее. Кажется, всё ещё проверяла, действительно ли я собираюсь соблюдать собственное обещание."
+    cs_th "Да, Даш. На этот раз без самостоятельных экспедиций."
     # cs_presence_keep: hide cs_dasha_pioneer
     # cs_presence_keep: hide cs_zhenya
     # cs_presence_keep: hide mz
@@ -213,18 +199,11 @@ label cs_day02_13:
     # cs_global_transition
     with cs_sprite_change
     cs_sy "Тогда когда?"
-    cs_narrator "Я задумалась."
-    cs_narrator "На сегодня у нас уже было одно вполне конкретное дело."
-    cs_narrator "Телефон."
-    cs_narrator "Шурик."
-    cs_narrator "Электроник."
-    cs_narrator "И, вероятно, очередная встреча с местной электротехникой."
+    cs_narrator "Я задумалась. На сегодня у нас уже было одно вполне конкретное дело. Телефон. Шурик."
+    cs_narrator "Электроник. И, вероятно, очередная встреча с местной электротехникой."
     cs_ls "После линейки хотела снова сходить в клубы. Посмотреть, получилось ли что-нибудь с питанием телефона."
     cs_sy "Можно с вами?"
-    cs_narrator "Я уже открыла рот."
-    cs_narrator "Но остановилась."
-    cs_narrator "Посмотрела на Дарью."
-    cs_narrator "Она заметила."
+    cs_narrator "Я уже открыла рот. Но остановилась. Посмотрела на Дарью. Она заметила."
     cs_narrator "И немного улыбнулась."
     cs_da "Конечно. Вместе будет проще."
     cs_narrator "Семён кивнул."
@@ -261,13 +240,9 @@ label cs_day02_13:
     label cs_director_check_f9be118425:
     # cs_director_end
     cs_th "Вот ещё одна деталь, которую нельзя потерять."
-    cs_narrator "Разница в один день."
-    cs_narrator "Пока небольшая."
-    cs_narrator "Но если наше пребывание действительно связано с историей, которую я помню, она может оказаться важной."
-    cs_narrator "Я машинально потянулась к карману."
+    cs_narrator "Разница в один день. Пока небольшая. Но если наше пребывание действительно связано с историей, которую я помню, она может оказаться важной. Я машинально потянулась к карману."
     cs_narrator "И сразу вспомнила, что лист наблюдений остался в домике."
-    cs_th "Прекрасно."
-    cs_th "Система документирования дала сбой."
+    cs_th "Прекрасно. Система документирования дала сбой."
     # cs_director_begin: Return to direct interaction: Remembered chronology and missing notebook
     $ cs_frame_focus(["cs_darya", "cs_semen"])
     with cs_sprite_change
@@ -308,7 +283,6 @@ label cs_day02_13:
     # cs_global_transition
     with cs_sprite_change
     cs_da "Записать хотела?"
-    cs_narrator "Я кивнула."
     cs_ls "Да."
     # cs_presence_keep: hide cs_dasha_pioneer
     # cs_presence_keep: hide cs_zhenya
@@ -335,12 +309,9 @@ label cs_day02_13:
     cs_da "Два и три — не такие уж сложные числа."
     cs_narrator "Семён усмехнулся."
     cs_sy "Пока мы здесь втроём, можно просто спросить."
-    cs_narrator "Я посмотрела на него."
-    cs_narrator "Потом на Дарью."
+    cs_narrator "Я посмотрела на него, потом на Дарью."
     cs_th "А ведь верно."
-    cs_narrator "Не всякую информацию обязательно немедленно превращать в отчёт."
-    cs_narrator "Иногда достаточно того, что рядом есть люди, которые помнят то же самое."
-    cs_narrator "Я улыбнулась."
+    cs_narrator "Не всякую информацию обязательно немедленно превращать в отчёт. Иногда достаточно того, что рядом есть люди, которые помнят то же самое. Я улыбнулась."
     # cs_presence_keep: hide cs_dasha_pioneer
     # cs_presence_keep: hide cs_zhenya
     # cs_presence_keep: hide mz

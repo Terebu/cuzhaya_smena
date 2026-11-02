@@ -19,8 +19,7 @@ label cs_day01_31:
     $ cs_frame_focus(["dv", "us", "cs_darya"])
     with cs_sprite_change
     # cs_director_end
-    cs_narrator "На пороге стояли две девушки."
-    cs_narrator "Точнее, девушка и девочка."
+    cs_narrator "На пороге стояли девушка и девочка."
     show dv smile pioneer far at cs_actor_far_left
     show us smile pioneer far at cs_actor_far_right
     $ cs_presence_stage()
@@ -67,7 +66,6 @@ label cs_day01_31:
     cs_narrator "Алиса сложила руки на груди."
     cs_dv "Я Алиса. Это Ульянка."
     cs_us "Эй!"
-    cs_narrator "Я слегка улыбнулась."
     cs_ls "Лена. А это Даша."
     cs_da "Дарья."
     show us grin pioneer far at cs_actor_far_right
@@ -75,21 +73,17 @@ label cs_day01_31:
     # cs_global_transition
     with cs_sprite_change
     cs_us "Вы откуда приехали?"
-    cs_narrator "Я на секунду задумалась."
     cs_ls "Из Москвы."
     show dv surprise pioneer far at cs_actor_far_left
     $ cs_presence_stage()
     # cs_global_transition
     with cs_sprite_change
     cs_dv "Правда? И как там?"
-    cs_th "Хороший вопрос."
     cs_th "Смотря о какой Москве спрашивать."
     cs_ls "Шумно. Очень много людей, машин и рекламы."
     cs_dv "Рекламы?"
     cs_ls "Неважно. Большой город, одним словом."
-    cs_narrator "Дарья бросила на меня короткий взгляд."
-    cs_narrator "Поняла."
-    cs_narrator "Не стоит превращать первое знакомство в лекцию о разнице эпох."
+    cs_narrator "Дарья бросила на меня взгляд. Поняла: без лекций о разнице эпох."
     cs_narrator "Алиса осмотрела комнату."
     show dv smile pioneer far at cs_actor_far_left
     $ cs_presence_stage()
@@ -137,9 +131,7 @@ label cs_day01_31:
     with cs_sprite_leave
     label cs_director_check_c31a0001e1:
     # cs_director_end
-    cs_narrator "Я закрыла дверь."
-    cs_narrator "Несколько секунд мы с Дарьей молчали."
-    cs_narrator "Затем она произнесла:"
+    cs_narrator "Я закрыла дверь. Мы с Дарьей помолчали."
     # cs_darya_variety: reaction
     show cs_darya smile pioneer normal at cs_darya_normal_center
     $ cs_presence_stage()

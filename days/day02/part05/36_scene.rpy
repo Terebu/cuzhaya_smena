@@ -33,23 +33,15 @@ label cs_day02_36:
     $ cs_frame_focus([])
     with cs_sprite_change
     # cs_director_end
-    cs_narrator "Мы разложили перед собой готовую основу объявления."
-    cs_narrator "Сверху — крупный заголовок:"
-    cs_narrator "«МУЗЫКАЛЬНЫЙ ВЕЧЕР»"
-    cs_narrator "Чуть ниже — небольшая гитара и несколько нот."
-    cs_narrator "Внизу осталось место для информации."
-    cs_narrator "Дарья взяла карандаш."
+    cs_narrator "Мы разложили перед собой готовую основу объявления. Сверху — крупный заголовок: «МУЗЫКАЛЬНЫЙ ВЕЧЕР» Чуть ниже — небольшая гитара и несколько нот."
+    cs_narrator "Внизу осталось место для информации. Дарья взяла карандаш."
     cs_da "Так. Теперь самое важное."
     cs_ls "Указать, что выступление действительно состоится?"
     cs_da "Желательно."
     cs_narrator "Семён рассмеялся."
     cs_sy "Ольга Дмитриевна сказала, что после ужина. Точного времени пока не будет."
-    cs_narrator "Я задумалась."
     cs_ls "Тогда так и напишем."
-    cs_narrator "Дарья вывела аккуратными буквами:"
-    cs_narrator "«Сегодня после ужина. На площади»."
-    cs_narrator "Я посмотрела на результат."
-    cs_narrator "Вполне читабельно."
+    cs_narrator "Дарья вывела аккуратными буквами: «Сегодня после ужина. На площади». Я посмотрела на результат. Вполне читабельно."
     cs_narrator "И никакого риска, что мы ошибёмся с часами."
     cs_sy "Всё?"
     cs_ls "Почти."
@@ -60,13 +52,9 @@ label cs_day02_36:
     cs_narrator "Дарья приподняла бровь."
     cs_da "Только маленькая."
     cs_ls "Слово художника."
-    cs_narrator "Я нарисовала в углу небольшую нотную строку."
-    cs_narrator "Затем рядом — крошечную звёздочку."
-    cs_narrator "Посмотрела."
-    cs_narrator "Подумала."
+    cs_narrator "Я нарисовала в углу небольшую нотную строку. Затем рядом — крошечную звёздочку. Посмотрела. Подумала."
     cs_narrator "И отложила карандаш."
-    cs_th "Хватит."
-    cs_th "Главное — вовремя остановиться."
+    cs_th "Хватит. Главное — вовремя остановиться."
     $ cs_director_scene("bg ext_clubs_day")
     scene bg ext_clubs_day
     $ cs_part05_cg = False
@@ -90,13 +78,10 @@ label cs_day02_36:
     with Dissolve(0.8)
     $ cs_day02_poster_finished = True
     label cs_check_part05_poster_finished:
-    cs_narrator "Семён поднял объявление."
-    cs_narrator "Подержал на вытянутых руках."
+    cs_narrator "Семён поднял объявление. Подержал на вытянутых руках."
     cs_sy "Нормально смотрится."
-    cs_narrator "Дарья отошла на несколько шагов."
-    cs_narrator "Прищурилась."
+    cs_narrator "Дарья отошла на несколько шагов. Прищурилась."
     cs_da "Заголовок видно. Место и время тоже."
-    cs_narrator "Я кивнула."
     cs_ls "Значит, можно предъявлять заказчику."
     show cs_semen thinking pioneer normal at cs_semen_normal_left
     $ cs_part05_cast = ["cs_semen", "cs_darya"]
@@ -105,8 +90,7 @@ label cs_day02_36:
     with cs_sprite_change
     cs_sy "Ольге Дмитриевне?"
     cs_ls "Кому же ещё. Нашему главному управлению культурных мероприятий."
-    cs_narrator "Семён усмехнулся."
-    cs_narrator "Мы начали собирать карандаши."
+    cs_narrator "Семён усмехнулся. Мы начали собирать карандаши."
     # cs_presence_keep: hide cs_dasha_winter
     # cs_presence_keep: hide cs_dasha_pioneer
     # cs_presence_keep: hide cs_zhenya
@@ -133,17 +117,13 @@ label cs_day02_36:
     cs_ls "Работа завершена. Приступаем к государственной приёмке."
     cs_narrator "Славя рассмеялась."
     cs_sl "Можно посмотреть?"
-    cs_narrator "Семён повернул объявление к ней."
-    cs_narrator "Она внимательно прочитала текст."
-    cs_narrator "Посмотрела на рисунок."
-    cs_narrator "Потом улыбнулась."
+    cs_narrator "Семён повернул объявление к ней. Она внимательно прочитала текст. Посмотрела на рисунок. Потом улыбнулась."
     show sl smile pioneer far at cs_actor_far_left zorder 10
     $ cs_part05_cast = ["sl", "cs_semen", "cs_darya"]
     $ cs_presence_stage()
     # cs_global_transition
     with cs_sprite_change
     cs_sl "Очень красиво получилось!"
-    cs_narrator "Я кивнула."
     cs_ls "Спасибо."
     cs_sl "И всё понятно. Это самое главное."
     cs_narrator "Дарья посмотрела на меня."
@@ -184,10 +164,8 @@ label cs_day02_36:
     # cs_global_transition
     with cs_sprite_change
     cs_da "Только без торжественного открытия."
-    cs_narrator "Я задумалась."
     cs_ls "А красную ленточку уже приготовили?"
     cs_da "Лена."
     cs_ls "Всё. Отменяется."
-    cs_narrator "Все рассмеялись."
-    cs_narrator "Мы направились к площади."
+    cs_narrator "Все рассмеялись. Мы направились к площади."
     return

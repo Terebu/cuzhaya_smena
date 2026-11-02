@@ -14,24 +14,12 @@ label cs_day01_05:
     with cs_sprite_change
     label cs_director_check_d3d42e530a:
     # cs_director_end
-    cs_narrator "Потому что одно дело — рассуждать о визуальной новелле, в которую каким-то невероятным образом попала."
-    cs_narrator "И совсем другое — вспомнить, что где-то осталась моя жизнь."
-    cs_narrator "Квартира."
-    cs_narrator "Знакомые вещи."
-    cs_narrator "Работа."
-    cs_narrator "Люди."
-    cs_narrator "Интернет."
-    cs_narrator "Моя комната."
-    cs_narrator "Графический планшет."
-    cs_narrator "Картины, которые я так и не закончила."
+    cs_narrator "Одно дело — рассуждать о новелле, в которую попала. И совсем другое — вспомнить, что где-то осталась моя жизнь."
+    cs_narrator "Квартира, работа, графический планшет. Картины, которые я так и не закончила."
     cs_narrator "Привычный мир, в котором утром была зима, а автобусы обычно довозили людей хотя бы приблизительно до нужной остановки."
     pause 1.0
-    cs_narrator "Я посмотрела на ворота."
-    cs_narrator "Всё вокруг выглядело совершенно настоящим."
-    cs_narrator "И от этого становилось только тревожнее."
-    cs_th "Ладно."
-    cs_th "Допустим, ты действительно здесь."
-    cs_th "Что дальше?"
+    cs_narrator "Всё вокруг выглядело настоящим, и от этого становилось тревожнее."
+    cs_th "Ладно. Допустим, ты здесь. Что дальше?"
     # cs_director_begin: Return to direct interaction: Moscow and the life left behind
     $ cs_frame_focus(["cs_dasha_winter"])
     with cs_sprite_change
@@ -51,16 +39,8 @@ label cs_day01_05:
     with cs_sprite_change
     label cs_director_check_81ca1cb78b:
     # cs_director_end
-    cs_narrator "Я задумалась."
-    cs_narrator "Хороший вопрос."
-    cs_narrator "Очень хороший."
-    cs_narrator "Я вспомнила начало новеллы."
-    cs_narrator "Автобус."
-    cs_narrator "Ворота."
-    cs_narrator "Первую встречу."
+    cs_narrator "Я вспомнила начало новеллы: автобус, ворота, первую встречу."
     stop music fadeout 2.0
     $ renpy.music.set_volume(0.65, delay=2.0, channel="ambience")
-    cs_narrator "И почти одновременно с этой мыслью за оградой послышались шаги."
-    cs_narrator "Я замерла."
-    cs_narrator "К нам кто-то приближался."
+    cs_narrator "За оградой послышались шаги. К нам кто-то приближался."
     return

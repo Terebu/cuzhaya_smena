@@ -19,15 +19,12 @@ label cs_day02_68a:
     with cs_sprite_change
     # cs_director_end
     cs_mz "Понятно. Хорошо, что понравилась."
-    cs_narrator "Она открыла журнал выдачи."
-    cs_narrator "Нашла мою запись."
-    cs_narrator "Поставила отметку о возврате."
+    cs_narrator "Она открыла журнал выдачи. Нашла мою запись. Поставила отметку о возврате."
     show cs_zhenya thoughtful pioneer normal at cs_darya_normal_left
     $ cs_presence_stage()
     # cs_global_transition
     with cs_sprite_change
     cs_mz "Всё, книга возвращена."
-    cs_narrator "Я кивнула."
     cs_ls "Спасибо."
     show cs_zhenya thoughtful pioneer normal at cs_darya_normal_left
     $ cs_presence_stage()
@@ -42,9 +39,7 @@ label cs_day02_68a:
     cs_mz "Только в следующий раз осторожнее с книгами. И с собой тоже."
     cs_narrator "Я усмехнулась."
     cs_ls "Постараюсь."
-    cs_th "Спокойный разговор."
-    cs_th "Без прежнего раздражения."
-    cs_th "И, пожалуй, для нашего знакомства это уже неплохо."
+    cs_th "Спокойный разговор. Без прежнего раздражения. И, пожалуй, для нашего знакомства это уже неплохо."
     $ cs_reading_book_borrowed = False
     $ cs_lena_book_returned = True
     $ cs_reading_book_location = "library_shelf"

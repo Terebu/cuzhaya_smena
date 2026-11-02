@@ -8,8 +8,7 @@ label cs_day01_60:
     $ cs_frame_focus(["cs_darya", "cs_zhenya"])
     with cs_sprite_change
     # cs_director_end
-    cs_narrator "Она собрала газеты в ровную стопку."
-    cs_narrator "Женя оставила газеты возле себя. Я поймала себя на желании немедленно помочь и остановилась: после такого рассказа можно было хотя бы не трогать чужие вещи без спроса."
+    cs_narrator "Женя сложила газеты возле себя. Хотелось помочь, но я остановилась: не стоит трогать чужие вещи без спроса."
     cs_ls "Мне не нужно, чтобы ты сейчас согласилась со всем."
     show cs_zhenya arms_crossed pioneer normal at cs_darya_normal_left
     $ cs_presence_stage()
@@ -21,7 +20,7 @@ label cs_day01_60:
     # cs_global_transition
     with cs_sprite_change
     cs_da "Тогда мы хотя бы правильно друг друга поняли."
-    cs_narrator "В её голосе не было обиды. От этого разговор почему-то стал легче, хотя убедительнее наша история не сделалась."
+    cs_narrator "Дарья не обиделась. Разговор стал легче, хотя наша история — не убедительнее."
     show cs_zhenya glasses_touch pioneer normal at cs_darya_normal_left
     $ cs_presence_stage()
     # cs_global_transition
@@ -48,8 +47,8 @@ label cs_day01_60:
     with cs_sprite_change
     cs_mz "И не нужно проверять на мне свои воспоминания."
     cs_ls "Это тоже хорошо."
-    cs_narrator "Я ответила без привычного добавления. Кажется, она заметила."
-    cs_narrator "Дарья отошла к полке и поставила на место книгу, которую держала всё это время. Женя проследила за её рукой, убедилась, что корешок оказался там, где нужно, и немного расслабилась."
+    cs_narrator "Я ответила без шутки. Женя заметила."
+    cs_narrator "Дарья вернула книгу на полку. Женя проследила за ней и расслабилась: всё на своём месте."
     if cs_friend_mz >= 1:
         show cs_zhenya arms_crossed pioneer normal at cs_darya_normal_left
         $ cs_presence_stage()
@@ -86,7 +85,7 @@ label cs_day01_60:
     with cs_sprite_change
     cs_mz "Сплетни я не собираю. Но если вам станет плохо, я позову вожатую."
     cs_ls "Да. Конечно."
-    cs_narrator "Обещания хранить нашу тайну любой ценой не прозвучало. И требовать его от человека, который знал нас меньше часа, было бы довольно нагло."
+    cs_narrator "Обещать молчание любой ценой она не стала. И глупо требовать этого от человека, который знает нас меньше часа."
     cs_narrator "Женя встала."
     show cs_zhenya shy pioneer normal at cs_darya_normal_left
     $ cs_presence_stage()

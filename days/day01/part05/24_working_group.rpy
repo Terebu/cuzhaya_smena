@@ -56,8 +56,7 @@ label cs_day01_24:
     $ cs_presence_stage()
     with None
     label cs_check_day01_part05_olga:
-    cs_narrator "Рядом со столом остановилась Ольга Дмитриевна."
-    cs_narrator "Я заметила её раньше, чем Семён успел задать следующий вопрос."
+    cs_narrator "Рядом остановилась Ольга Дмитриевна. Семён не успел задать следующий вопрос."
     show mt smile pioneer far at cs_actor_far_left
     $ cs_presence_stage()
     # cs_global_transition
@@ -74,8 +73,7 @@ label cs_day01_24:
     # cs_global_transition
     with cs_sprite_change
     cs_sy "Просто разговариваем."
-    cs_narrator "Вожатая посмотрела на него."
-    cs_narrator "Потом на нас с Дарьей."
+    cs_narrator "Вожатая оглядела нас троих."
     show mt normal pioneer far at cs_actor_far_left
     $ cs_presence_stage()
     # cs_global_transition
@@ -118,8 +116,7 @@ label cs_day01_24:
     # cs_global_transition
     with cs_sprite_change
     cs_da "Лучше сначала самим понять, что можно объяснить."
-    cs_narrator "Семён помолчал."
-    cs_narrator "Затем кивнул."
+    cs_narrator "Семён помолчал и кивнул."
     show cs_semen grateful pioneer far at cs_semen_far_right
     $ cs_presence_stage()
     # cs_global_transition
@@ -137,17 +134,11 @@ label cs_day01_24:
     # cs_global_transition
     with cs_sprite_change
     cs_da "Договорились."
-    cs_narrator "Я позволила себе немного улыбнуться."
     cs_ls "Рабочая группа сформирована. Председателя выбирать не будем."
     show cs_darya amused pioneer far at cs_darya_far_left
     $ cs_presence_stage()
     # cs_global_transition
     with cs_sprite_change
-    cs_narrator "Дарья усмехнулась."
-    cs_narrator "Семён тоже, хотя улыбка получилась не особенно уверенной."
-    cs_narrator "Тревога никуда не делась."
-    cs_narrator "Зато теперь её не приходилось держать при себе целиком."
-    cs_narrator "Я посмотрела на стакан с немного остывшим компотом."
-    cs_th "Автобус привёз нас по отдельности."
-    cs_th "Но искать выход поодиночке уже необязательно."
+    cs_narrator "Оба усмехнулись, хотя Семён — неуверенно. Тревога осталась, но теперь её можно было разделить."
+    cs_th "Автобус привёз нас по отдельности. Но искать выход поодиночке необязательно."
     return

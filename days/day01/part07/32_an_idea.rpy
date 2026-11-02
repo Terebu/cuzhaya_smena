@@ -18,17 +18,9 @@ label cs_day01_32:
     with cs_sprite_change
     label cs_director_check_89b9017019:
     # cs_director_end
-    cs_narrator "Несколько секунд смотрела в потолок."
-    cs_narrator "Деревянные балки."
-    cs_narrator "Белая краска."
-    cs_narrator "Никакого вентилятора."
-    cs_narrator "Никакого кондиционера."
-    cs_th "Прекрасно."
+    cs_narrator "На потолке — белая краска и деревянные балки. Ни вентилятора, ни кондиционера."
     cs_th "Технологический отпуск продолжается."
-    cs_narrator "Потом мой взгляд остановился на телефоне, лежавшем на тумбочке."
-    cs_narrator "Экран по-прежнему оставался чёрным."
-    cs_narrator "Я посмотрела на него."
-    cs_narrator "Затем в окно."
+    cs_narrator "На тумбочке лежал телефон с чёрным экраном."
     # cs_director_begin: Return to direct interaction: Ceiling and dead phone; not lying as a hide trigger
     $ cs_frame_focus(["cs_darya"])
     with cs_sprite_change
@@ -36,9 +28,7 @@ label cs_day01_32:
     # cs_director_end
     cs_narrator "И вдруг села."
     cs_ls "Электроника."
-    cs_narrator "Дарья даже не вздрогнула."
-    cs_narrator "Кажется, она уже начинала привыкать к моим внезапным идеям."
-    cs_narrator "Что, вероятно, было тревожным признаком."
+    cs_narrator "Дарья даже не вздрогнула. Кажется, мои внезапные идеи переставали её удивлять."
     show cs_darya thinking pioneer normal at cs_darya_normal_center
     $ cs_presence_stage()
     # cs_global_transition
@@ -48,19 +38,16 @@ label cs_day01_32:
     cs_da "И?"
     cs_narrator "Я выпрямилась."
     cs_ls "А в нём два местных специалиста по всему, что можно разобрать, спаять или случайно заставить дымиться."
-    cs_narrator "Дарья посмотрела на телефон."
-    cs_narrator "Потом на меня."
+    cs_narrator "Дарья посмотрела на телефон, потом на меня."
     show cs_darya shrug pioneer normal at cs_darya_normal_center
     $ cs_presence_stage()
     # cs_global_transition
     with cs_sprite_change
     cs_da "Ты хочешь его зарядить."
-    cs_narrator "Я указала на неё пальцем."
     cs_ls "Именно."
     cs_da "Лен, ты же сама сказала, что здесь нет подходящей зарядки."
     cs_ls "Зато здесь есть люди, которые умеют работать с электричеством."
     cs_da "И которые впервые увидят твой телефон."
-    cs_narrator "Я задумалась."
     cs_ls "Небольшое техническое затруднение."
     show cs_darya thinking pioneer normal at cs_darya_normal_center
     $ cs_presence_stage()
@@ -75,8 +62,7 @@ label cs_day01_32:
     # cs_global_transition
     with cs_sprite_change
     cs_da "А ты уверена, что это хорошая идея?"
-    cs_narrator "Я взяла телефон."
-    cs_narrator "Повертела в руке."
+    cs_narrator "Я повертела телефон в руке."
     cs_ls "Пока нет. Но если он заработает, у меня хотя бы останутся фотографии, заметки и документы."
     # cs_darya_variety: reaction
     show cs_darya thinking pioneer normal at cs_darya_normal_center
@@ -85,7 +71,6 @@ label cs_day01_32:
     with cs_sprite_change
     cs_da "А связь?"
     cs_ls "С ней всё гораздо хуже. Заряженный телефон ещё не означает, что здесь появится мобильная сеть."
-    cs_narrator "Дарья кивнула."
     show cs_darya shrug pioneer normal at cs_darya_normal_center
     $ cs_presence_stage()
     # cs_global_transition

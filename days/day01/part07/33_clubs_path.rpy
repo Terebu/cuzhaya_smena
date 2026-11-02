@@ -16,10 +16,8 @@ label cs_day01_33:
     with cs_sprite_change
     # cs_director_end
     cs_narrator "Мы вышли из домика."
-    cs_narrator "Солнце по-прежнему ярко освещало дорожки."
-    cs_narrator "После обеда лагерь немного опустел: кто-то разошёлся по кружкам, кто-то отдыхал, а кто-то продолжал носиться по территории с такой энергией, будто жара совершенно не существовала."
-    cs_narrator "Я шла впереди, стараясь сопоставить дорожки с картой из игры."
-    cs_narrator "Дарья держалась рядом."
+    cs_narrator "После обеда лагерь опустел: кто-то разошёлся по кружкам, кто-то отдыхал. Лишь немногие носились по жаре."
+    cs_narrator "Я сверялась с памятью, Дарья шла рядом."
     show cs_darya shrug pioneer normal at cs_darya_normal_center
     $ cs_presence_stage()
     # cs_global_transition
@@ -43,15 +41,13 @@ label cs_day01_33:
     show cs_darya shrug pioneer normal at cs_darya_normal_center
     $ cs_presence_stage()
     with Dissolve(1.0)
-    cs_narrator "Мы свернули за один из домиков."
-    cs_narrator "Потом ещё раз."
+    cs_narrator "Мы сделали ещё два поворота."
     $ cs_director_scene("bg ext_clubs_day")
     scene bg ext_clubs_day
     show cs_darya shrug pioneer normal at cs_darya_normal_center
     $ cs_presence_stage()
     with Dissolve(1.0)
-    cs_narrator "Через несколько минут показалось знакомое здание."
-    cs_narrator "Я сразу указала на него."
+    cs_narrator "Показалось знакомое здание. Я указала на него."
     cs_ls "Вот."
     cs_narrator "Дарья посмотрела на фасад."
     show cs_darya thinking pioneer normal at cs_darya_normal_center
@@ -60,15 +56,11 @@ label cs_day01_33:
     with cs_sprite_change
     cs_da "Уверена?"
     cs_ls "Теперь да."
-    cs_narrator "На двери висела табличка кружков."
-    cs_narrator "Изнутри доносились голоса."
-    cs_narrator "Я остановилась перед входом."
-    cs_th "Ну здравствуйте, товарищи инженеры."
-    cs_th "Посмотрим, насколько далеко продвинулся местный научно-технический прогресс."
+    cs_narrator "На двери висела табличка кружков, изнутри доносились голоса."
+    cs_th "Здравствуйте, товарищи инженеры. Посмотрим, что вы умеете."
     stop music fadeout 2.0
     play sound "sound/sfx/knock_door7_polite.ogg"
     cs_narrator "Я постучала."
-    cs_narrator "Изнутри послышалось:"
     show cs_darya thinking pioneer normal at cs_darya_normal_left
     $ cs_presence_stage()
     # cs_global_transition

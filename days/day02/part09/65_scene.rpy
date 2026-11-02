@@ -36,17 +36,11 @@ label cs_day02_65:
     $ cs_frame_focus(["cs_darya"])
     with cs_sprite_change
     # cs_director_end
-    cs_narrator "К этому времени солнце уже клонилось к деревьям."
-    cs_narrator "Воздух стал прохладнее."
+    cs_narrator "К этому времени солнце уже клонилось к деревьям. Воздух стал прохладнее."
     label cs_check_part09_square:
-    cs_narrator "На площади заметно прибавилось народу."
-    cs_narrator "Несколько скамеек стояли перед небольшим местом, отведённым для выступления."
-    cs_narrator "Кто-то разговаривал."
-    cs_narrator "Кто-то рассаживался."
-    cs_narrator "Издалека доносились обрывки звуков гитары."
-    cs_narrator "Я посмотрела в сторону музыки."
-    cs_th "Ага."
-    cs_th "Значит, подготовка почти закончена."
+    cs_narrator "На площади заметно прибавилось народу. Несколько скамеек стояли перед небольшим местом, отведённым для выступления. Кто-то разговаривал. Кто-то рассаживался."
+    cs_narrator "Издалека доносились обрывки звуков гитары. Я посмотрела в сторону музыки."
+    cs_th "Ага. Значит, подготовка почти закончена."
     cs_narrator "Дарья остановилась рядом."
     # cs_presence_keep: hide cs_dasha_winter
     # cs_presence_keep: hide cs_dasha_pioneer
@@ -293,8 +287,7 @@ label cs_day02_65:
         # cs_global_transition
         with cs_sprite_change
         cs_sl "Не за что!"
-        cs_narrator "Мы выбрали два свободных места немного сбоку."
-        cs_narrator "Оттуда было хорошо видно площадку для выступления, хотя сидели мы дальше от музыкантов."
+        cs_narrator "Мы выбрали два свободных места немного сбоку. Оттуда было хорошо видно площадку для выступления, хотя сидели мы дальше от музыкантов."
         $ cs_sl_good_seats = False
     # cs_presence_keep: hide cs_dasha_winter
     # cs_presence_keep: hide cs_dasha_pioneer
@@ -322,23 +315,17 @@ label cs_day02_65:
     with cs_sprite_leave
     label cs_director_check_da24651655:
     # cs_director_end
-    cs_narrator "Я осторожно села."
-    cs_narrator "Дарья устроилась рядом."
+    cs_narrator "Я осторожно села. Дарья устроилась рядом."
     # cs_director_begin: REFLECTIVE_SHOT: Watching the prepared stage and completed work
     $ cs_reflective_focus()
     with cs_sprite_change
     label cs_director_check_975cacab44:
     # cs_director_end
-    cs_narrator "На сценической площадке кто-то передвигал стул."
-    cs_narrator "Послышался тихий звук гитарной струны."
-    cs_narrator "Я огляделась."
+    cs_narrator "На сценической площадке кто-то передвигал стул. Послышался тихий звук гитарной струны. Я огляделась."
     # cs_inward_beat_4: attention turns inward
     $ cs_pov_begin()
     with cs_sprite_leave
-    cs_th "И всё-таки наш плакат сработал."
-    cs_th "Люди пришли."
-    cs_th "Места приготовили."
-    cs_th "Музыканты готовятся."
+    cs_th "И всё-таки наш плакат сработал. Люди пришли. Места приготовили. Музыканты готовятся."
     cs_th "Удивительное чувство: сделать что-то небольшое, а потом увидеть результат в реальной жизни."
     # cs_director_begin: Return to direct interaction: Watching the prepared stage and completed work
     $ cs_frame_focus(["cs_darya"])
@@ -373,11 +360,8 @@ label cs_day02_65:
     cs_ls "Очень."
     cs_narrator "Она улыбнулась."
     cs_da "Даже без компьютера?"
-    cs_narrator "Я рассмеялась."
     cs_ls "Представь себе."
-    cs_narrator "В этот момент из-за площадки показалась Мику."
-    cs_narrator "Она держала папку с нотами."
-    cs_narrator "Осматривалась, словно кого-то искала."
+    cs_narrator "В этот момент из-за площадки показалась Мику. Она держала папку с нотами. Осматривалась, словно кого-то искала."
     if cs_friend_mi >= 1:
         # cs_presence_keep: hide cs_dasha_winter
         # cs_presence_keep: hide cs_dasha_pioneer
@@ -466,7 +450,6 @@ label cs_day02_65:
         # cs_global_transition
         with cs_sprite_change
         cs_mi "Да! И теперь переход звучит гораздо лучше. По крайней мере, мне так кажется. Алиса тоже сказала, что так интереснее."
-        cs_narrator "Я улыбнулась."
         cs_ls "Тогда тем более хочется послушать."
         cs_narrator "Мику посмотрела на нас обеих."
         # cs_presence_keep: hide cs_dasha_winter
@@ -557,18 +540,14 @@ label cs_day02_65:
         # cs_director_end
         $ cs_mi_intro_revised = True
     else:
-        cs_narrator "Мику заметила нас среди зрителей."
-        cs_narrator "Приветливо помахала рукой."
-        cs_narrator "Я ответила."
-        cs_narrator "Она улыбнулась и вернулась к подготовке."
+        cs_narrator "Мику заметила нас среди зрителей. Приветливо помахала рукой. Я ответила. Она улыбнулась и вернулась к подготовке."
         # cs_director_begin: Miku returns to stage; audience viewpoint
         $ cs_frame_focus(["cs_darya"])
         with cs_sprite_change
         label cs_director_check_ff17e6298b:
         # cs_director_end
         $ cs_mi_intro_revised = False
-    cs_narrator "Я посмотрела на Дарью."
-    cs_narrator "Она следила за тем, как Мику исчезает за площадкой."
+    cs_narrator "Я посмотрела на Дарью. Она следила за тем, как Мику исчезает за площадкой."
     cs_ls "Ну что, готова?"
     # cs_presence_keep: hide cs_dasha_winter
     # cs_presence_keep: hide cs_dasha_pioneer
@@ -612,8 +591,7 @@ label cs_day02_65:
     # cs_global_transition
     with cs_sprite_change
     cs_da "Думаю, да."
-    cs_narrator "Я кивнула."
-    cs_narrator "А затем немного понизила голос."
+    cs_narrator "Я кивнула. А затем немного понизила голос."
     cs_ls "Кстати, если Мику начнёт играть что-нибудь знакомое, постарайся не подсказывать мне заранее. Хочу сама услышать."
     cs_narrator "Дарья улыбнулась."
     # cs_presence_keep: hide cs_dasha_winter
@@ -642,15 +620,9 @@ label cs_day02_65:
     with cs_sprite_change
     label cs_director_check_45c6fdba52:
     # cs_director_end
-    cs_narrator "Впереди уже собирались остальные зрители."
-    cs_narrator "Я осторожно положила перебинтованную руку на колени."
-    cs_narrator "Дарья сидела рядом."
-    cs_narrator "Никаких новых расследований."
-    cs_narrator "Никаких поисков выхода."
-    cs_narrator "И, очень хотелось надеяться, никаких неожиданных встреч с медицинским персоналом."
-    cs_th "Просто музыка."
-    cs_th "Обычный вечер."
-    cs_th "Хотя бы на час."
+    cs_narrator "Впереди уже собирались остальные зрители. Я осторожно положила перебинтованную руку на колени. Дарья сидела рядом. Никаких новых расследований."
+    cs_narrator "Никаких поисков выхода. И, очень хотелось надеяться, никаких неожиданных встреч с медицинским персоналом."
+    cs_th "Просто музыка. Обычный вечер. Хотя бы на час."
     stop music fadeout 3.0
     $ cs_day02_part09_complete = True
     label cs_check_part09_ready:

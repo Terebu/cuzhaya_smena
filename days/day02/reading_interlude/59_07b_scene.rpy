@@ -48,8 +48,7 @@ label cs_day02_reading_07b:
     # cs_global_transition
     with cs_sprite_change
     cs_mz "Кстати, до какого места ты дошла?"
-    cs_narrator "Я показала страницу."
-    cs_narrator "Она посмотрела."
+    cs_narrator "Я показала страницу. Она посмотрела."
     # cs_presence_keep: hide cs_semen
     # cs_presence_keep: hide mz
     # cs_presence_keep: hide un
@@ -76,10 +75,8 @@ label cs_day02_reading_07b:
     cs_ls "Очень информативно."
     cs_narrator "Она усмехнулась."
     cs_mz "Узнаешь сама, когда доберёшься до этого места."
-    cs_narrator "Я кивнула."
     cs_ls "Справедливо."
-    cs_narrator "Женя немного помолчала."
-    cs_narrator "Потом спросила:"
+    cs_narrator "Женя немного помолчала. Потом спросила:"
     # cs_presence_keep: hide cs_semen
     # cs_presence_keep: hide mz
     # cs_presence_keep: hide un
@@ -100,7 +97,6 @@ label cs_day02_reading_07b:
     # cs_global_transition
     with cs_sprite_change
     cs_mz "А главный герой тебе нравится?"
-    cs_narrator "Я задумалась."
     cs_ls "Пока не особенно."
     cs_narrator "Она удивилась."
     cs_mz "Почему?"
@@ -127,11 +123,9 @@ label cs_day02_reading_07b:
     # cs_global_transition
     with cs_sprite_change
     cs_mz "Мне тоже так показалось."
-    cs_narrator "Я улыбнулась."
     cs_ls "Значит, согласны."
     cs_mz "Пока."
-    cs_narrator "Я посмотрела на неё."
-    cs_narrator "Она слегка усмехнулась."
+    cs_narrator "Я посмотрела на неё. Она слегка усмехнулась."
     cs_mz "Посмотрим, что ты скажешь, когда дочитаешь."
     cs_narrator "Я тоже улыбнулась."
     # cs_presence_keep: hide cs_zhenya
@@ -142,8 +136,7 @@ label cs_day02_reading_07b:
     with cs_sprite_change
     label cs_director_check_9f19b77133:
     # cs_director_end
-    cs_th "Оказывается, у нас довольно похожие взгляды на персонажей книг."
-    cs_th "Надо будет запомнить."
+    cs_th "Оказывается, у нас довольно похожие взгляды на персонажей книг. Надо будет запомнить."
     label cs_check_reading_desk_07b:
     pause 0.5
     return

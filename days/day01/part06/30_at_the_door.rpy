@@ -23,15 +23,9 @@ label cs_day01_30:
     # cs_global_transition
     with cs_sprite_change
     cs_da "Кажется, к нам кто-то идёт."
-    cs_narrator "Я поднялась."
-    cs_narrator "Из-за деревьев показались две знакомые фигуры."
-    cs_narrator "Одна — рыжеволосая."
-    cs_narrator "Другая — заметно ниже ростом."
-    cs_narrator "Я подошла ближе."
-    cs_th "Алиса."
-    cs_th "Ульяна."
+    cs_narrator "Из-за деревьев показались две фигуры: рыжеволосая и та, что ниже ростом. Я подошла к окну."
+    cs_th "Алиса. Ульяна."
     cs_narrator "Ну разумеется."
-    cs_narrator "Я слегка прикрыла глаза."
     cs_ls "Даш."
     show cs_darya thinking pioneer normal at cs_darya_normal_center
     $ cs_presence_stage()
@@ -43,15 +37,13 @@ label cs_day01_30:
     cs_ls "Более чем."
     cs_narrator "Дарья посмотрела на меня."
     cs_da "Это хорошо?"
-    cs_narrator "Я ненадолго задумалась."
     cs_narrator "За окном Алиса что-то сказала Ульяне."
     # cs_darya_variety: reaction
     show cs_darya amused pioneer normal at cs_darya_normal_center
     $ cs_presence_stage()
     # cs_global_transition
     with cs_sprite_change
-    cs_narrator "Та рассмеялась."
-    cs_narrator "Потом обе направились к нашему домику."
+    cs_narrator "Та рассмеялась. Обе направились к нашему домику."
     cs_ls "Скажем так. Сейчас получим возможность оценить качество местной системы знакомства с новосёлами."
     show cs_darya smile pioneer normal at cs_darya_normal_center
     $ cs_presence_stage()
@@ -64,24 +56,17 @@ label cs_day01_30:
     with cs_sprite_change
     cs_da "Ты опять начинаешь?"
     cs_ls "Я ещё даже ничего не сказала."
-    cs_narrator "Снаружи послышались шаги."
-    cs_narrator "Затем кто-то постучал в дверь."
+    cs_narrator "На крыльце послышались шаги, затем стук."
     $ renpy.music.set_volume(0.45,channel="sound")
     play sound cs_day_sfx_knock
     label cs_check_day01_part06_knock:
-    cs_narrator "Я посмотрела на Дарью."
-    cs_narrator "Она — на меня."
-    cs_narrator "Потом раздался голос:"
+    cs_narrator "Мы с Дарьей переглянулись."
     cs_dv "Эй, новенькие! Вы там живые?"
     cs_narrator "Я медленно выдохнула."
-    cs_th "Ну что ж."
-    cs_th "Кажется, спокойное заселение официально завершено."
-    cs_narrator "Подошла к двери."
-    cs_narrator "Положила ладонь на ручку."
-    cs_narrator "И совершенно спокойно ответила:"
+    cs_th "Спокойное заселение официально завершено."
+    cs_narrator "Я подошла к двери и взялась за ручку."
     cs_ls "Живые. Предварительная проверка это подтверждает."
-    cs_narrator "За дверью повисла пауза."
-    cs_narrator "Затем послышался второй, более звонкий голос."
+    cs_narrator "Из-за двери донёсся второй, более звонкий голос:"
     cs_us "Алиса, я же говорила, они странные!"
     cs_narrator "Я посмотрела на Дарью."
     # cs_darya_variety: reaction

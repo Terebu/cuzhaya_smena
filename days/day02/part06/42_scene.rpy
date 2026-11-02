@@ -58,19 +58,10 @@ label cs_day02_42:
     if renpy.music.get_playing(channel="ambience") != "sound/ambiences/int_cabin_day.ogg":
         play ambience "sound/ambiences/int_cabin_day.ogg" fadeout 1.0 fadein 1.5
     $ renpy.music.set_volume(0.12, channel="ambience", delay=1.0)
-    cs_narrator "Я и Дарья зашли в наш домик за водой."
-    cs_narrator "Семён отправился взять свою флягу и договорился встретить нас у ворот."
-    cs_narrator "Я проверила карманы."
-    cs_narrator "Сложенный листок с заметками."
-    cs_narrator "Карандаш."
-    cs_narrator "Резинка для волос."
-    cs_narrator "И телефон."
-    cs_narrator "Я вынула его, посмотрела на тёмный экран и положила обратно."
-    cs_th "Зачем беру?"
-    cs_th "Не знаю."
-    cs_th "Наверное, привычка."
-    cs_narrator "Шурик и Электроник по-прежнему не нашли способа безопасно зарядить его, но оставлять единственную вещь из моей привычной жизни почему-то не хотелось."
-    cs_narrator "Дарья закрутила крышку бутылки."
+    cs_narrator "Я и Дарья зашли в наш домик за водой. Семён отправился взять свою флягу и договорился встретить нас у ворот. Я проверила карманы. Сложенный листок с заметками."
+    cs_narrator "Карандаш. Резинка для волос. И телефон. Я вынула его, посмотрела на тёмный экран и положила обратно."
+    cs_th "Зачем беру? Не знаю. Наверное, привычка."
+    cs_narrator "Шурик и Электроник по-прежнему не нашли способа безопасно зарядить его, но оставлять единственную вещь из моей привычной жизни почему-то не хотелось. Дарья закрутила крышку бутылки."
     show cs_darya thinking pioneer normal at cs_darya_normal_right
     $ cs_part06_cast = ["cs_darya"]
     $ cs_presence_stage()
@@ -88,8 +79,7 @@ label cs_day02_42:
     # cs_global_transition
     with cs_sprite_change
     cs_da "Я знаю. Просто уточняю."
-    cs_narrator "Я немного помолчала."
-    cs_narrator "Затем улыбнулась."
+    cs_narrator "Я помолчала. Затем улыбнулась."
     cs_ls "Не переживай. Если пространство решит нас куда-нибудь отправить, будем возмущаться коллективно."
     show cs_darya amused pioneer normal at cs_darya_normal_right
     $ cs_part06_cast = ["cs_darya"]
@@ -126,22 +116,16 @@ label cs_day02_42:
     if renpy.music.get_playing(channel="ambience") != "sound/ambiences/camp_entrance_day.ogg":
         play ambience "sound/ambiences/camp_entrance_day.ogg" fadeout 1.0 fadein 1.5
     $ renpy.music.set_volume(0.15, channel="ambience", delay=1.0)
-    cs_narrator "Через несколько минут мы дошли до ворот."
-    cs_narrator "Семён уже ждал нас."
-    cs_narrator "Он стоял возле ограды и смотрел на дорогу."
+    cs_narrator "Через несколько минут мы дошли до ворот. Семён уже ждал нас. Он стоял возле ограды и смотрел на дорогу."
     show cs_semen thinking pioneer normal at cs_semen_normal_left
     $ cs_part06_cast = ["cs_semen", "cs_darya"]
     $ cs_presence_stage()
     # cs_global_transition
     with cs_sprite_change
     cs_sy "Ну что, готовы?"
-    cs_narrator "Я кивнула."
     cs_ls "В теории."
     cs_sy "А на практике?"
-    cs_narrator "Я посмотрела наружу."
-    cs_narrator "Асфальт."
-    cs_narrator "Деревья."
-    cs_narrator "Пустая обочина."
+    cs_narrator "Я посмотрела наружу. Асфальт. Деревья. Пустая обочина."
     $ cs_director_scene("bg ext_no_bus")
     scene bg ext_no_bus
     # cs_presence_keep: hide cs_dasha_winter
@@ -185,16 +169,9 @@ label cs_day02_42:
     $ cs_part06_cast = ["cs_semen", "cs_darya"]
     $ cs_presence_stage()
     with Dissolve(0.8)
-    cs_narrator "Мы прошли под вывеской «Совёнок»."
-    cs_narrator "Я остановилась почти сразу за воротами."
-    cs_narrator "Посмотрела назад."
-    cs_narrator "Они стояли на месте."
-    cs_narrator "Ничего не произошло."
-    cs_narrator "Никакой вспышки."
-    cs_narrator "Никакого странного звука."
-    cs_narrator "Лагерь никуда не исчез."
-    cs_th "Ну что ж."
-    cs_th "Первые несколько метров существования внешнего мира успешно подтверждены."
+    cs_narrator "Мы прошли под вывеской «Совёнок». Я остановилась почти сразу за воротами. Посмотрела назад. Они стояли на месте."
+    cs_narrator "Ничего не произошло. Никакой вспышки. Никакого странного звука. Лагерь никуда не исчез."
+    cs_th "Ну что ж. Первые несколько метров существования внешнего мира успешно подтверждены."
     show cs_darya thinking pioneer normal at cs_darya_normal_right
     $ cs_part06_cast = ["cs_semen", "cs_darya"]
     $ cs_presence_stage()
@@ -237,19 +214,10 @@ label cs_day02_42:
     if renpy.music.get_playing(channel="ambience") != "sound/ambiences/forest_day.ogg":
         play ambience "sound/ambiences/forest_day.ogg" fadeout 1.0 fadein 1.5
     $ renpy.music.set_volume(0.15, channel="ambience", delay=1.0)
-    cs_narrator "Мы продолжили путь."
-    cs_narrator "Сначала всё выглядело абсолютно обычно."
-    cs_narrator "Невысокая трава по обочинам."
-    cs_narrator "Лес с обеих сторон."
-    cs_narrator "Птицы."
-    cs_narrator "Солнечные пятна на асфальте."
-    cs_narrator "Я оглянулась ещё раз."
-    cs_narrator "Ворота постепенно скрывались за деревьями."
-    cs_th "Странно."
-    cs_th "Всё настолько нормально, что даже обидно."
-    cs_th "Я почти ожидала встретить табличку «За пределами сюжетной области проход запрещён»."
-    cs_narrator "Но никакой таблички не было."
-    cs_narrator "Лес у дороги не менялся: те же сосны, тот же асфальт, тот же ровный шум листвы."
+    cs_narrator "Мы продолжили путь. Сначала всё выглядело абсолютно обычно. Невысокая трава по обочинам. Лес с обеих сторон."
+    cs_narrator "Птицы. Солнечные пятна на асфальте. Я оглянулась ещё раз. Ворота постепенно скрывались за деревьями."
+    cs_th "Странно. Всё настолько нормально, что даже обидно. Я почти ожидала встретить табличку «За пределами сюжетной области проход запрещён»."
+    cs_narrator "Но никакой таблички не было. Лес у дороги не менялся: те же сосны, тот же асфальт, тот же ровный шум листвы."
     $ cs_director_scene("cs_road_powerlines_day")
     scene cs_road_powerlines_day
     # cs_presence_keep: hide cs_dasha_winter
@@ -271,6 +239,5 @@ label cs_day02_42:
     $ cs_presence_stage()
     with Dissolve(0.8)
     $ cs_road_visual_trace.append("approach")
-    cs_narrator "Только дорога."
-    cs_narrator "И трое людей, которые совершенно не представляли, куда она ведёт."
+    cs_narrator "Только дорога. И трое людей, которые совершенно не представляли, куда она ведёт."
     return

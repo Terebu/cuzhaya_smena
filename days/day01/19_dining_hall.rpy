@@ -20,8 +20,7 @@ label cs_day01_19:
     $ cs_frame_focus(["mt", "cs_darya"])
     with cs_sprite_change
     # cs_director_end
-    cs_narrator "Через несколько минут впереди показалась столовая."
-    cs_narrator "Я узнала её мгновенно."
+    cs_narrator "Впереди показалась знакомая столовая."
     cs_ls "Вот она."
     # cs_darya_stage: present in story
     show cs_darya thinking pioneer normal at cs_darya_normal_right
@@ -36,15 +35,10 @@ label cs_day01_19:
     cs_narrator "Я посмотрела на знакомый фасад."
     cs_ls "Именно это и настораживает."
     cs_narrator "Ольга Дмитриевна решила не уточнять."
-    cs_narrator "Возле входа толпились пионеры."
-    cs_narrator "Голоса."
-    cs_narrator "Смех."
-    cs_narrator "Запах еды."
-    cs_narrator "До меня вдруг дошло, что я действительно проголодалась."
+    cs_narrator "Возле входа толпились пионеры: голоса, смех, запах еды. Я вдруг поняла, как проголодалась."
     cs_ls "Надеюсь, кормят здесь так же неплохо, как я помню."
     cs_da "Ты знаешь даже меню?"
     cs_ls "Не настолько у меня хорошая память."
-    cs_narrator "Пауза."
     cs_ls "Хотя некоторые блюда действительно помню."
     # cs_darya_stage: present in story
     show cs_darya smile pioneer normal at cs_darya_normal_right
@@ -69,8 +63,7 @@ label cs_day01_19:
     with cs_sprite_change
     label cs_director_check_5d95593d1c:
     # cs_director_end
-    cs_narrator "Она стояла возле стены и о чём-то разговаривала с девочкой заметно ниже ростом."
-    cs_narrator "Рядом — Ульяна."
+    cs_narrator "Она разговаривала с девочкой ниже ростом — Ульяной."
     # cs_composition: regroup
     show dv normal pioneer far at cs_actor_far_left
     # cs_composition: regroup
@@ -104,12 +97,7 @@ label cs_day01_19:
     $ cs_presence_stage()
     # cs_global_transition
     with cs_sprite_change
-    cs_narrator "И тут Алиса сама повернулась в нашу сторону."
-    cs_narrator "Наши взгляды встретились."
-    cs_narrator "Она оценила мои фиолетовые волосы."
-    cs_narrator "Затем алые волосы Дарьи."
-    cs_narrator "Пионерскую форму."
-    cs_narrator "И снова наши лица."
+    cs_narrator "Алиса повернулась. Оглядела мои фиолетовые волосы, алые волосы Дарьи, нашу форму."
     # cs_camp_emotion: text reaction
     show dv grin pioneer far at cs_actor_far_left
     $ cs_presence_stage()
@@ -129,7 +117,7 @@ label cs_day01_19:
     # cs_global_transition
     with cs_sprite_change
     cs_ls "Всё. Местная разведка нас заметила."
-    cs_narrator "Дарья посмотрела на девушек."
+    cs_narrator "Дарья тоже посмотрела на девушек."
     # cs_darya_stage: present in story
     show cs_darya shrug pioneer far at cs_darya_far_center
     $ cs_presence_stage()

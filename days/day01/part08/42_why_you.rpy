@@ -15,17 +15,13 @@ label cs_day01_42:
     cs_da "Можно теперь я спрошу?"
     cs_ls "Конечно."
     cs_da "Почему я?"
-    cs_narrator "Я открыла рот."
-    cs_narrator "Потом закрыла."
-    cs_th "Отлично."
+    cs_narrator "Я открыла рот и не нашла слов."
     cs_th "Самый логичный вопрос оказался самым сложным."
     cs_ls "Сначала мне хотелось ответить, что не знаю."
     cs_da "А теперь?"
-    cs_narrator "Я посмотрела на неё."
     cs_ls "Наверное, потому что рядом с тобой мне спокойно."
     cs_narrator "Дарья молчала."
     cs_ls "Я не особенно люблю большие компании. Не люблю, когда от меня постоянно ждут разговоров, шуток или какой-нибудь активности."
-    cs_narrator "Я ненадолго остановилась."
     cs_ls "А с тобой можно просто идти рядом и молчать."
     cs_da "И тебе этого достаточно?"
     cs_ls "Не знаю насчёт отношений. Но для начала — уже немало."
@@ -46,9 +42,7 @@ label cs_day01_42:
     $ cs_presence_stage()
     # cs_global_transition
     with cs_sprite_change
-    cs_narrator "Она рассмеялась."
-    cs_narrator "Я тоже улыбнулась."
-    cs_narrator "Но затем снова стала серьёзной."
+    cs_narrator "Мы рассмеялись. Потом я снова стала серьёзной."
     cs_ls "Есть ещё одна причина."
     # cs_darya_variety: reaction
     show cs_darya thinking pioneer normal at cs_darya_normal_center
@@ -56,15 +50,11 @@ label cs_day01_42:
     # cs_global_transition
     with cs_sprite_change
     cs_da "Какая?"
-    cs_narrator "Я посмотрела на деревья."
     cs_ls "Мы обе оказались здесь совершенно случайно."
-    cs_narrator "Дарья кивнула."
     cs_ls "Ещё утром у каждой была своя жизнь в 2026 году. Свои дела, привычки, планы."
-    cs_narrator "Я ненадолго замолчала."
     cs_ls "А теперь мы в неизвестном пионерлагере, без нормальной связи и без малейшего понимания, как вернуться домой."
     cs_da "Это правда."
     cs_ls "Семён хотя бы успел провести здесь сутки. Я знаю часть происходящего по игре."
-    cs_narrator "Я посмотрела на неё."
     cs_ls "Но ты пока почти ничего об этом месте не знаешь. И всё равно держишься."
     # cs_darya_variety: reaction
     show cs_darya shrug pioneer normal at cs_darya_normal_center
@@ -86,15 +76,13 @@ label cs_day01_42:
     cs_ls "Поэтому и предлагаю пока заниматься вопросами."
     cs_da "Вместе?"
     cs_ls "Вместе."
-    cs_narrator "Несколько секунд мы молчали."
-    cs_narrator "Затем Дарья спросила:"
+    cs_narrator "После короткого молчания Дарья спросила:"
     # cs_darya_variety: reaction
     show cs_darya worried pioneer normal at cs_darya_normal_center
     $ cs_presence_stage()
     # cs_global_transition
     with cs_sprite_change
     cs_da "А если я не отвечу тебе взаимностью?"
-    cs_narrator "Я посмотрела на неё."
     cs_ls "Тогда не ответишь."
     cs_da "И что дальше?"
     cs_ls "Ничего особенного."
@@ -107,8 +95,7 @@ label cs_day01_42:
     with cs_sprite_change
     cs_narrator "Она улыбнулась."
     cs_ls "Ты не обязана мне ничем только потому, что я решила признаться."
-    cs_narrator "Дарья опустила взгляд."
-    cs_narrator "Потом снова посмотрела на меня."
+    cs_narrator "Она опустила взгляд, потом снова посмотрела на меня."
     # cs_darya_variety: reaction
     show cs_darya smile pioneer normal at cs_darya_normal_center
     $ cs_presence_stage()
@@ -123,8 +110,7 @@ label cs_day01_42:
     $ cs_presence_stage()
     # cs_global_transition
     with cs_sprite_change
-    cs_narrator "Она снова рассмеялась."
-    cs_narrator "Но на этот раз улыбка не исчезла сразу."
+    cs_narrator "Она рассмеялась и продолжала улыбаться."
     stop music fadeout 3.0
     $ renpy.music.set_volume(0.22,delay=1.5,channel="ambience")
     if renpy.music.get_playing(channel="ambience") != "sound/ambiences/camp_center_evening.ogg":
@@ -133,7 +119,6 @@ label cs_day01_42:
     cs_narrator "Дарья ненадолго задумалась."
     cs_da "Ты мне тоже нравишься, Лен."
     cs_narrator "Я повернулась к ней."
-    cs_narrator "Она продолжила:"
     # cs_darya_variety: reaction
     show cs_darya shy_smile pioneer normal at cs_darya_normal_center
     $ cs_presence_stage()
@@ -141,10 +126,8 @@ label cs_day01_42:
     with cs_sprite_change
     cs_da "Мне с тобой интересно. И я рада, что мы оказались здесь не поодиночке."
     pause 0.7
-    cs_narrator "Пауза."
     label cs_check_day01_part08_boundaries:
     cs_da "Но насчёт всего остального я пока не знаю."
-    cs_narrator "Я кивнула."
     cs_ls "Поняла."
     # cs_darya_variety: reaction
     show cs_darya ear_touch pioneer normal at cs_darya_normal_center
@@ -163,7 +146,5 @@ label cs_day01_42:
     with cs_sprite_change
     cs_da "Ты неисправима."
     cs_ls "Есть такое."
-    cs_narrator "Мы снова пошли по дорожке."
-    cs_narrator "Уже медленнее."
-    cs_narrator "И почему-то теперь молчание казалось совсем другим."
+    cs_narrator "Мы пошли медленнее. Молчание теперь казалось другим."
     return

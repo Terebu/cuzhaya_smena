@@ -24,9 +24,15 @@ def engine_run(engine, args, log, timeout=240):
         result=subprocess.run(cmd,cwd=engine,env=env,stdout=stream,stderr=subprocess.STDOUT,timeout=timeout)
     if result.returncode:raise RuntimeError('Engine failed (%s), see %s'%(result.returncode,log))
 
-def build(output):
-    subprocess.run([__import__('sys').executable,str(ROOT/'tools/stabilize_mod_calls.py')],check=True,cwd=ROOT)
-    output=Path(output).resolve()
+def build(output, *, compiled_seed=None, source_root=None, engine_root=None, asset_root=None, stabilize=True):
+    global ROOT, ENGINE
+    if source_root: ROOT=Path(source_root).resolve()
+    if engine_root: ENGINE=Path(engine_root).resolve()
+    asset_root=Path(asset_root).resolve() if asset_root else ROOT
+    compiled_seed=Path(compiled_seed).resolve() if compiled_seed else None
+    if stabilize:
+        subprocess.run([__import__('sys').executable,str(ROOT/'tools/stabilize_mod_calls.py')],check=True,cwd=ROOT)
+    output=Path(output).absolute()
     if output.exists():raise ValueError('Existing release is preserved. Choose a new directory: '+str(output))
     if not output.parent.is_dir():raise ValueError('Release parent directory must already exist.')
     temp=Path(tempfile.mkdtemp(prefix='.chuzhaya_build_',dir=output.parent))
@@ -43,14 +49,20 @@ def build(output):
     for p in scripts:
         rel=p.relative_to(ROOT);dest=work/NAMESPACE/rel;dest.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(p,dest)
         snap=snapshot/rel;snap.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(p,snap)
+        # Editorial releases retain names from the preceding compiled AST.
+        # Ren'Py merges unchanged statement names while compiling new source.
+        if compiled_seed:
+            seed=compiled_seed/rel.with_suffix('.rpyc')
+            if not seed.is_file():raise RuntimeError('Missing published RPYC seed: '+str(seed))
+            shutil.copy2(seed,dest.with_suffix('.rpyc'))
         source_provenance[(Path(NAMESPACE)/rel.with_suffix('.rpyc')).as_posix()]=dict(source=rel.as_posix(),source_sha256=sha(p))
     for name in ('audio','bg','cg','fonts','sp','ui'):
-        for p in (ROOT/name).rglob('*'):
+        for p in (asset_root/name).rglob('*'):
             if p.is_file() and p.suffix.lower() in ('.png','.jpg','.jpeg','.webp','.ogg','.mp3','.wav','.ttf','.otf','.txt'):
-                dest=work/p.relative_to(ROOT);dest.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(p,dest)
+                dest=work/p.relative_to(asset_root);dest.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(p,dest)
     for rel in METADATA+[MARKER]:
-        dest=work/rel;dest.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(ROOT/rel,dest)
-    print('Compiling',len(scripts),'current source files, no mod RPYC copied.',flush=True)
+        dest=work/rel;dest.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(asset_root/rel,dest)
+    print('Compiling',len(scripts),'source files; RPYC seed: '+str(compiled_seed) if compiled_seed else 'current source files, no mod RPYC copied.',flush=True)
     # ES ships original scripts without sources; Ren'Py compile otherwise
     # deletes them as orphans. Only the freshly staged mod is cache-free.
     engine_run(native,['compile','--keep-orphan-rpyc'],temp/'compile.log')
@@ -98,10 +110,12 @@ def build(output):
             if p.is_file():z.write(p,'chuzaya_smena/'+p.relative_to(content).as_posix())
     with zipfile.ZipFile(temp/'Chuzhaya_Smena_Vertical_Slice.zip') as z:
         if z.testzip():raise RuntimeError('ZIP CRC failure')
-    (temp/'BUILD_PASS.json').write_text(json.dumps(dict(scripts=len(scripts),static=result,local_exit=0,workshop_exit=[0,0],assets=runtime['count']),ensure_ascii=False,indent=2),encoding='utf8')
+    (temp/'BUILD_PASS.json').write_text(json.dumps(dict(scripts=len(scripts),static=result,local_exit=0,workshop_exit=[0,0],assets=runtime['count'],compiled_seed=str(compiled_seed) if compiled_seed else None),ensure_ascii=False,indent=2),encoding='utf8')
     temp.rename(output)
     print('VERIFIED RELEASE:',output,flush=True)
     return output
 
 if __name__=='__main__':
-    a=argparse.ArgumentParser();a.add_argument('output');args=a.parse_args();build(args.output)
+    a=argparse.ArgumentParser();a.add_argument('output')
+    a.add_argument('--seed-rpyc');a.add_argument('--source-root');a.add_argument('--engine-root');a.add_argument('--asset-root');a.add_argument('--skip-stabilize',action='store_true')
+    args=a.parse_args();build(args.output,compiled_seed=args.seed_rpyc,source_root=args.source_root,engine_root=args.engine_root,asset_root=args.asset_root,stabilize=not args.skip_stabilize)

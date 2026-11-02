@@ -1,0 +1,254 @@
+# -*- coding: utf-8 -*-
+# QA ONLY. Keep this exact fixture available for both old and edited builds.
+default cs_readability_probe_sentinel = 0
+
+init 98 python:
+    import __builtin__ as cs_rb_builtin
+    import json as cs_rb_json
+    import ast as cs_rb_ast
+    import time as cs_rb_time
+    import renpy.test.testexecution as cs_rb_testexecution
+
+    with open(config.basedir + "/readability_case_request.json", "r") as cs_rb_request_file:
+        renpy.cs_rb_request = cs_rb_json.load(cs_rb_request_file)
+    renpy.cs_rb_case = renpy.cs_rb_request["case"]
+    renpy.cs_rb_active = False
+    renpy.cs_rb_resume_pending = False
+    renpy.cs_rb_load_phase = "initial"
+    renpy.cs_rb_seed_calls = 0
+    renpy.cs_rb_debug_started = cs_rb_time.time()
+    renpy.cs_rb_debug_seen = cs_rb_builtin.set()
+    renpy.cs_rb_debug_screenshot = False
+    renpy.cs_rb_result = {"case": renpy.cs_rb_case["id"], "mode": renpy.cs_rb_request["mode"], "fixture_sha256": renpy.cs_rb_request["fixture_sha256"]}
+    renpy.cs_rb_menu_original = menu
+    renpy.cs_rb_load_failed_original = renpy.python.RollbackLog.load_failed
+
+    def cs_readability_debug(event):
+        try:
+            actual = cs_readability_node()
+        except Exception as error:
+            actual = {"id": repr(renpy.game.context().current), "error": repr(error)}
+        key = (event, actual.get("id"), bool(renpy.cs_rb_active))
+        if key in renpy.cs_rb_debug_seen:
+            return
+        renpy.cs_rb_debug_seen.add(key)
+        record = dict(event=event, active=bool(renpy.cs_rb_active), node=actual,
+                      elapsed=cs_rb_time.time()-renpy.cs_rb_debug_started,
+                      labels=list(cs_rb_testexecution.labels),
+                      test_node=repr(cs_rb_testexecution.node_loc),
+                      last_say=getattr(store, "_last_raw_what", None))
+        with open(config.basedir + "/readability_" + renpy.cs_rb_case["id"] + "_debug.jsonl", "a") as stream:
+            stream.write(cs_rb_json.dumps(record, ensure_ascii=True) + "\n")
+
+    class CSReadabilityReady(Action):
+        def __init__(self, point):
+            self.point = point
+        def get_sensitive(self):
+            try:
+                node = cs_readability_node()
+            except Exception:
+                return False
+            if self.point == "target":
+                return node["id"] == renpy.cs_rb_case["old_id"]
+            return node.get("text") == u"Проверка редактуры: сцена пройдена." and "readability_cross_save.rpy" in node["filename"]
+        def __call__(self):
+            cs_readability_debug("predicate_" + self.point)
+
+    def cs_readability_interact_debug():
+        cs_readability_debug("interact")
+        if renpy.cs_rb_active and not renpy.cs_rb_debug_screenshot and cs_rb_time.time()-renpy.cs_rb_debug_started >= 2.0:
+            renpy.cs_rb_debug_screenshot = True
+            cs_readability_capture("debug_interact")
+
+    config.interact_callbacks.append(cs_readability_interact_debug)
+
+    def cs_readability_write():
+        path = config.basedir + "/readability_" + renpy.cs_rb_case["id"] + "_" + renpy.cs_rb_request["mode"] + ".json"
+        with open(path, "w") as stream:
+            cs_rb_json.dump(renpy.cs_rb_result, stream, ensure_ascii=True, indent=2)
+
+    def cs_readability_failed(log):
+        if renpy.cs_rb_active:
+            renpy.cs_rb_result["load_failed"] = True
+            cs_readability_write()
+            raise AssertionError("Native RollbackLog.load_failed was reached")
+        return renpy.cs_rb_load_failed_original(log)
+
+    # An observer that fails the test; it does not redirect or repair saves.
+    renpy.python.RollbackLog.load_failed = cs_readability_failed
+
+    def cs_readability_menu(items, *args, **kwargs):
+        if not renpy.cs_rb_active:
+            return renpy.cs_rb_menu_original(items, *args, **kwargs)
+        available = [(label, value) for label, value in items if value is not None]
+        assert available, "No available test menu choice"
+        label, value = available[0]
+        renpy.cs_rb_result.setdefault("choices", []).append(label)
+        return value() if cs_rb_builtin.callable(value) else value
+
+    def cs_readability_seed():
+        renpy.cs_rb_seed_calls += 1
+        cs_readability_debug("seed")
+        cs_reset_state()
+        for key, value in renpy.cs_rb_case["seed"].items():
+            setattr(store, key, value)
+        store.cs_readability_probe_sentinel = renpy.cs_rb_case["sentinel"]
+        store.menu = cs_readability_menu
+        set_mode_adv()
+        if renpy.cs_rb_case["group"] == "prologue":
+            prolog_time()
+        else:
+            day_time()
+        store.persistent.sprite_time = "day"
+
+    def cs_readability_node():
+        current = renpy.game.context().current
+        node = renpy.game.script.lookup(current)
+        return dict(id=repr(current), kind=node.__class__.__name__,
+                    filename=node.filename.replace("\\", "/"), line=node.linenumber,
+                    who=getattr(node, "who", None), text=getattr(node, "what", None))
+
+    def cs_readability_state():
+        return {key: getattr(store, key, None) for key in renpy.cs_rb_case["state_fields"]}
+
+    def cs_readability_snapshot():
+        checkpoints = []
+        for record in renpy.game.log.log:
+            if not getattr(record, "checkpoint", False):
+                continue
+            current = record.context.current
+            if not renpy.has_label(current):
+                continue
+            node = renpy.game.script.lookup(current)
+            if node.__class__.__name__ == "Say" and node.filename.replace("\\", "/").endswith("/" + renpy.cs_rb_case["file"]):
+                checkpoints.append(dict(id=repr(current), text=node.what, hard=bool(record.hard_checkpoint)))
+        return dict(node=cs_readability_node(), state=cs_readability_state(),
+                    return_stack=[repr(x) for x in renpy.get_return_stack()],
+                    genuine_scene_checkpoints=checkpoints)
+
+    def cs_readability_capture(phase):
+        renpy.screenshot(config.basedir + "/readability_" + renpy.cs_rb_case["id"] + "_" + phase + ".png")
+
+    def cs_readability_save_baseline():
+        actual = cs_readability_snapshot()
+        assert actual["node"]["id"] == renpy.cs_rb_case["old_id"], actual
+        assert len(actual["genuine_scene_checkpoints"]) >= 2, "Need real prior dialogue checkpoints inside the scene"
+        renpy.cs_rb_result["saved"] = actual
+        cs_readability_capture("baseline_saved")
+        renpy.take_screenshot()
+        renpy.save(renpy.cs_rb_case["slot"])
+        cs_readability_write()
+
+    def cs_readability_scene_end():
+        actual = cs_readability_snapshot()
+        assert actual["state"]["cs_readability_probe_sentinel"] == renpy.cs_rb_case["sentinel"]
+        assert actual["state"]["cs_active"] is True
+        if renpy.cs_rb_request["mode"] == "load":
+            assert actual["state"] == renpy.cs_rb_request["baseline"]["end"]["state"], "Scene-end flags changed"
+            assert actual["return_stack"] == renpy.cs_rb_request["baseline"]["end"]["return_stack"], "Scene-end call stack changed"
+        renpy.cs_rb_result["end"] = actual
+        cs_readability_capture(renpy.cs_rb_request["mode"] + "_end")
+        cs_readability_write()
+
+    def cs_readability_after_load():
+        if renpy.cs_rb_active:
+            renpy.cs_rb_resume_pending = True
+
+    def cs_readability_character(event, **kwargs):
+        if event in ("begin", "show_done"):
+            cs_readability_debug("character_" + event)
+        if not renpy.cs_rb_active or event != "show_done":
+            return
+        actual = cs_readability_node()
+        if renpy.cs_rb_request["mode"] == "create":
+            if actual["id"] == renpy.cs_rb_case["old_id"]:
+                cs_rb_testexecution.take_name("cs_readability_target")
+            return
+        if not renpy.cs_rb_resume_pending:
+            return
+        renpy.cs_rb_resume_pending = False
+        snapshot = cs_readability_snapshot()
+        if renpy.cs_rb_load_phase == "initial":
+            expected = renpy.cs_rb_request["baseline"]["saved"]
+            assert renpy.cs_rb_seed_calls == 0, "Load replayed the fixture's state-reset setup"
+            assert actual["filename"].endswith("/" + renpy.cs_rb_case["file"]), "Load escaped the selected scene"
+            assert snapshot["state"] == expected["state"], "Load reset/changed story flags"
+            assert snapshot["return_stack"] == expected["return_stack"], "Load changed the return stack"
+            old_id = cs_rb_ast.literal_eval(renpy.cs_rb_case["old_id"])
+            exists = renpy.has_label(old_id)
+            snapshot["original_id_still_present"] = exists
+            snapshot["fallback_used"] = actual["id"] != renpy.cs_rb_case["old_id"]
+            if renpy.cs_rb_case["expect"] == "deleted":
+                assert not exists, "Chosen deletion target survived; select an actually absent Say ID"
+                assert snapshot["fallback_used"], "Missing Say did not trigger a valid fallback"
+            else:
+                assert exists and not snapshot["fallback_used"], "Surviving Say did not resume at its original ID"
+            renpy.cs_rb_result["resumed"] = snapshot
+            cs_rb_testexecution.take_name("cs_readability_resumed")
+        else:
+            expected = renpy.cs_rb_result["end"]
+            assert snapshot["state"] == expected["state"], "Round-trip changed story state"
+            assert snapshot["return_stack"] == expected["return_stack"], "Round-trip changed return stack"
+            assert actual["id"] == expected["node"]["id"], "Round-trip resumed at a different statement"
+            renpy.cs_rb_result["roundtrip"] = snapshot
+            cs_rb_testexecution.take_name("cs_readability_roundtrip")
+        cs_readability_write()
+
+    config.after_load_callbacks.append(cs_readability_after_load)
+    config.all_character_callbacks.append(cs_readability_character)
+
+label cs_readability_probe_setup:
+    $ cs_readability_seed()
+    call expression renpy.cs_rb_case["scene_label"] from cs_readability_probe_return
+    label cs_readability_scene_complete:
+    cs_narrator "Проверка редактуры: сцена пройдена."
+    return
+
+label cs_readability_probe_load:
+    $ renpy.load(renpy.cs_rb_case["slot"])
+    return
+
+testcase cs_readability_create:
+    pause 0.3
+    $ _test.force = True
+    $ _test.timeout = 100.0
+    $ _preferences.text_cps = 0
+    $ _preferences.transitions = 0
+    $ renpy.set_physical_size((1280,720))
+    $ renpy.cs_rb_active = True
+    run Start("cs_readability_probe_setup")
+    click until run CSReadabilityReady("target")
+    pause 0.3
+    $ cs_readability_save_baseline()
+    click until run CSReadabilityReady("end")
+    pause 0.3
+    $ cs_readability_scene_end()
+    $ renpy.cs_rb_result["status"] = "PASS"
+    $ cs_readability_write()
+    run Quit(confirm=False)
+
+testcase cs_readability_load:
+    pause 0.3
+    $ _test.force = True
+    $ _test.timeout = 100.0
+    $ _preferences.text_cps = 0
+    $ _preferences.transitions = 0
+    $ renpy.set_physical_size((1280,720))
+    $ renpy.cs_rb_active = True
+    run Start("cs_readability_probe_load")
+    pause 1.0
+    assert "resumed" in renpy.cs_rb_result
+    $ cs_readability_capture("loaded_initial")
+    click until run CSReadabilityReady("end")
+    pause 0.3
+    $ cs_readability_scene_end()
+    $ renpy.take_screenshot()
+    $ renpy.save(renpy.cs_rb_case["slot"] + "_roundtrip")
+    $ renpy.cs_rb_load_phase = "roundtrip"
+    $ renpy.load(renpy.cs_rb_case["slot"] + "_roundtrip")
+    pause 1.0
+    assert "roundtrip" in renpy.cs_rb_result
+    $ cs_readability_capture("loaded_roundtrip")
+    $ renpy.cs_rb_result["status"] = "PASS"
+    $ cs_readability_write()
+    run Quit(confirm=False)

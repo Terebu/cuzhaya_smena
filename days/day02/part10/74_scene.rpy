@@ -25,7 +25,6 @@ label cs_day02_74:
     # cs_global_transition
     with cs_sprite_change
     cs_da "Рука?"
-    cs_narrator "Я кивнула."
     cs_ls "Немного."
     cs_narrator "Она подошла ближе."
     show cs_darya thinking pioneer normal at cs_darya_normal_right
@@ -70,7 +69,6 @@ label cs_day02_74:
     # cs_global_transition
     with cs_sprite_change
     cs_da "Если ты собираешься завтра снова бегать, хотя бы посмотри, как будет чувствовать себя локоть."
-    cs_narrator "Я кивнула."
     cs_ls "Да. Виола ведь не зря просила его беречь."
     cs_narrator "Дарья улыбнулась."
     show cs_darya shrug pioneer normal at cs_darya_normal_right
@@ -87,7 +85,6 @@ label cs_day02_74:
     # cs_global_transition
     with cs_sprite_change
     cs_da "На прогулке — возможно."
-    cs_narrator "Я улыбнулась."
     cs_ls "Прекрасно."
     show cs_darya shrug pioneer normal at cs_darya_normal_right
     $ cs_presence_stage()
@@ -146,7 +143,7 @@ label cs_day02_74:
     # cs_global_transition
     with cs_sprite_change
     cs_da "М?"
-    cs_narrator "Я немного помолчала."
+    cs_narrator "Я помолчала."
     cs_ls "Спасибо за сегодняшний день."
     cs_narrator "Дарья повернулась ко мне."
     cs_narrator "В темноте я почти не различала её лица."

@@ -48,7 +48,6 @@ label cs_day02_reading_04b:
     # cs_global_transition
     with cs_sprite_change
     cs_mz "Подожди. Это ведь та, что я вчера читала?"
-    cs_narrator "Я кивнула."
     cs_ls "Да."
     cs_mz "Нашла второй экземпляр?"
     cs_ls "Угу. На полке стояли два."
@@ -108,9 +107,6 @@ label cs_day02_reading_04b:
     with cs_sprite_change
     label cs_director_check_f2371b7c05:
     # cs_director_end
-    cs_th "Небольшой разговор."
-    cs_th "Никаких попыток доказать друг другу собственную правоту."
-    cs_th "Пожалуй, именно таким наше знакомство могло бы быть с самого начала."
     label cs_check_reading_desk_04b:
     pause 0.5
     return

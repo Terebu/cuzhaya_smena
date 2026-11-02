@@ -40,7 +40,7 @@ label cs_day01_61:
         # cs_global_transition
         with cs_sprite_change
         cs_narrator "На скамейке чуть в стороне сидела моя тёзка. Книга лежала у неё на коленях, но смотрела она на листок, вложенный между страницами."
-        cs_narrator "Увидев нас, Лена поднялась."
+        cs_narrator "Увидев нас, Тихонова поднялась."
         show un smile pioneer at cs_actor_left zorder 10
         $ cs_presence_stage()
         # cs_global_transition
@@ -62,7 +62,7 @@ label cs_day01_61:
         with cs_sprite_change
         cs_un "Он ещё не закончен."
         cs_ls "Вижу. Мне нравится, как у тебя ветка уходит вперёд. Из-за неё домик кажется дальше."
-        cs_narrator "Лена посмотрела на листок, будто проверяя, действительно ли там была эта ветка."
+        cs_narrator "Тихонова проверила рисунок взглядом."
         show un smile pioneer at cs_actor_left zorder 10
         $ cs_presence_stage()
         # cs_global_transition
@@ -77,7 +77,7 @@ label cs_day01_61:
         # cs_global_transition
         with cs_sprite_change
         cs_da "Даже ступенька похожа. Я сегодня о такую споткнулась."
-        cs_narrator "Лена улыбнулась. Я вернула ей рисунок, стараясь не замять край."
+        cs_narrator "Тихонова улыбнулась. Я вернула рисунок, стараясь не замять край."
         cs_ls "Завтра хочу сама что-нибудь нарисовать. Без планшета. Посмотрим, вспомнят ли руки старые обязанности."
         show un smile pioneer at cs_actor_left zorder 10
         $ cs_presence_stage()
@@ -97,8 +97,7 @@ label cs_day01_61:
         # cs_global_transition
         with cs_sprite_change
         cs_da "Значит, успели вовремя."
-        cs_narrator "Мы улыбнулись друг другу. Продолжать разговор только ради того, чтобы он не закончился, было уже необязательно."
-        cs_narrator "Мы немного прошли вместе и расстались у развилки. Лена убрала рисунок обратно в книгу. Мне было приятно, что она решила показать его сама."
+        cs_narrator "Мы улыбнулись и пошли вместе до развилки. Тихонова убрала рисунок в книгу. Хорошо, что решилась показать его сама."
         # cs_director_begin: Tikhonova farewell at the branch of the paths
         $ cs_actor_exit(["un"])
         with cs_sprite_leave

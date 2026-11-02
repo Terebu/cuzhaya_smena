@@ -13,12 +13,8 @@ label cs_day01_53:
     $ cs_frame_focus(["cs_darya"])
     with cs_sprite_change
     # cs_director_end
-    cs_narrator "После ужина на улице стало немного прохладнее."
-    cs_narrator "Солнце медленно опускалось за деревья, окрашивая дорожки мягким оранжевым светом."
-    cs_narrator "Я шла рядом с Дарьей, поглядывая по сторонам."
-    cs_narrator "Дорогу до библиотеки я помнила."
-    cs_narrator "По крайней мере, примерно."
-    cs_narrator "А после дневных прогулок начинала ориентироваться уже не только по игровым фонам."
+    cs_narrator "На улице похолодало. Закат окрашивал дорожки оранжевым."
+    cs_narrator "До библиотеки я теперь добиралась и без игровых фонов: дневная прогулка помогла."
     # cs_darya_variety: reaction
     show cs_darya thinking pioneer normal at cs_darya_normal_center
     $ cs_presence_stage()
@@ -28,8 +24,6 @@ label cs_day01_53:
     cs_ls "Была одна в оригинальной истории."
     cs_da "Значит, опять проверяем совпадения?"
     cs_ls "На этот раз с пользой для образования."
-    cs_narrator "Я ненадолго замолчала."
-    cs_narrator "Затем добавила:"
     cs_ls "И ещё мне любопытно познакомиться с местной библиотекаршей."
     cs_narrator "Дарья бросила на меня подозрительный взгляд."
     cs_da "Почему?"
@@ -38,8 +32,7 @@ label cs_day01_53:
     cs_ls "Да. Она довольно строгая."
     cs_da "И?"
     cs_ls "Не особенно любит шум, беспорядок и людей, которые отвлекают её от работы."
-    cs_narrator "Дарья посмотрела на меня."
-    cs_narrator "Потом медленно улыбнулась."
+    cs_narrator "Дарья медленно улыбнулась."
     # cs_darya_variety: reaction
     show cs_darya explaining pioneer normal at cs_darya_normal_center
     $ cs_presence_stage()
@@ -60,11 +53,7 @@ label cs_day01_53:
     label cs_check_day01_part10_exterior:
     cs_narrator "Мы свернули к библиотеке."
     # cs_presence_keep: hide cs_darya
-    cs_narrator "Перед нами стояла библиотека."
-    cs_narrator "Знакомое здание."
-    cs_narrator "Знакомые окна."
-    cs_narrator "Знакомая дверь."
-    cs_narrator "И совершенно незнакомая перспектива разговора с человеком, который мог оказаться не таким, каким я привыкла видеть его на экране."
+    cs_narrator "Здание, окна, дверь — всё знакомое. А вот разговор с человеком по ту сторону экрана предстоял впервые."
     cs_narrator "Я остановилась у входа."
     # cs_darya_variety: reaction
     show cs_darya thinking pioneer normal at cs_darya_normal_center
@@ -75,10 +64,7 @@ label cs_day01_53:
     cs_ls "Думаю."
     cs_da "О чём?"
     cs_ls "О том, как не испортить первое впечатление."
-    cs_narrator "Дарья посмотрела на меня."
-    cs_narrator "Пауза."
     cs_da "Начни с обычного «здравствуйте»."
-    cs_narrator "Я задумчиво кивнула."
     cs_ls "Радикальное предложение."
     # cs_darya_variety: reaction
     show cs_darya amused pioneer normal at cs_darya_normal_center

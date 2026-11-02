@@ -36,8 +36,7 @@ label cs_day02_24b:
     $ cs_frame_focus(["sl", "cs_darya"])
     with cs_sprite_change
     # cs_director_end
-    cs_narrator "Я посмотрела на коробку."
-    cs_narrator "Потом на Дарью."
+    cs_narrator "Я посмотрела на коробку, потом на Дарью."
     cs_ls "Мы тогда пока подготовим место для объявления, если ты не против."
     cs_narrator "Славя кивнула."
     # cs_presence_keep: hide cs_dasha_winter
@@ -85,15 +84,12 @@ label cs_day02_24b:
     cs_sl "Да. Тут недалеко."
     cs_narrator "Я посмотрела на папку."
     cs_ls "Тогда можно взять несколько чистых листов и карандаши?"
-    cs_narrator "Славя открыла её."
-    cs_narrator "Отделила нужное."
+    cs_narrator "Славя открыла её. Отделила нужное."
     cs_sl "Вот. Только пока ничего не начинайте писать крупно — я ещё уточню, во сколько будет выступление."
     cs_ls "Хорошо. Сначала соберём исходные данные, затем перейдём к производству."
     cs_narrator "Славя улыбнулась."
     cs_sl "Именно."
-    cs_narrator "Дарья взяла бумагу."
-    cs_narrator "Я — карандаши."
-    cs_narrator "Семён посмотрел на нас."
+    cs_narrator "Дарья взяла бумагу. Я — карандаши. Семён посмотрел на нас."
     # cs_presence_keep: hide cs_dasha_winter
     # cs_presence_keep: hide cs_dasha_pioneer
     # cs_presence_keep: hide cs_zhenya
@@ -131,8 +127,7 @@ label cs_day02_24b:
     with cs_sprite_change
     cs_sy "Значит, идём искать стол?"
     cs_ls "Да. И желательно такой, который не развалится под тяжестью нашего творческого замысла."
-    cs_narrator "Дарья тихо рассмеялась."
-    cs_narrator "Мы попрощались со Славей."
+    cs_narrator "Дарья тихо рассмеялась. Мы попрощались со Славей."
     # cs_presence_keep: hide cs_dasha_winter
     # cs_presence_keep: hide cs_dasha_pioneer
     # cs_presence_keep: hide cs_zhenya
@@ -160,6 +155,5 @@ label cs_day02_24b:
     label cs_director_check_026413f428:
     # cs_director_end
     cs_narrator "А мы пошли в сторону клубов, где, как я помнила, было достаточно места для работы."
-    cs_th "Славя и сама прекрасно справится."
-    cs_th "А у нас уже появилось первое официальное поручение."
+    cs_th "Славя и сама прекрасно справится. А у нас уже появилось первое поручение."
     return

@@ -8,8 +8,7 @@ label cs_day01_21:
     $ cs_frame_focus(["cs_darya", "cs_semen", "mt"])
     with cs_sprite_change
     # cs_director_end
-    cs_narrator "Семён не ответил сразу."
-    cs_narrator "Его взгляд скользнул за моё плечо, будто там всё ещё мог стоять автобус."
+    cs_narrator "Семён посмотрел за моё плечо, будто там всё ещё стоял автобус."
     show cs_semen thinking_alt pioneer far at cs_semen_far_right
     $ cs_presence_stage()
     # cs_global_transition
@@ -63,9 +62,7 @@ label cs_day01_21:
     # cs_global_transition
     with cs_sprite_change
     cs_da "Да."
-    cs_narrator "Вокруг продолжали звенеть ложки."
-    cs_narrator "Кто-то позади нас попросил передать хлеб."
-    cs_narrator "Обычный обед. Почти нелепая обстановка для такого разговора."
+    cs_narrator "Вокруг звенели ложки, кто-то попросил передать хлеб. Нелепая обстановка для такого разговора."
     cs_sy "А какой у вас был год?"
     cs_narrator "Я посмотрела на Дарью."
     # cs_darya_variety: reaction
@@ -77,9 +74,7 @@ label cs_day01_21:
     stop music fadeout 1.5
     label cs_check_day01_part05_2026:
     cs_ls "Две тысячи двадцать шестой."
-    cs_narrator "Семён замер."
-    cs_narrator "На этот раз он смотрел не на мои волосы и не на пионерскую форму."
-    cs_narrator "Прямо в лицо."
+    cs_narrator "Семён замер. Теперь смотрел прямо мне в лицо."
     cs_sy "Вы серьёзно?"
     cs_da "Да. Обе."
     show cs_semen awkward_alt pioneer far at cs_semen_far_right
@@ -87,7 +82,6 @@ label cs_day01_21:
     # cs_global_transition
     with cs_sprite_change
     cs_sy "У меня дома был другой год."
-    cs_narrator "Я медленно кивнула."
     cs_ls "Значит, не обязательно одинаковая дата отправления. Это уже полезно."
     show cs_semen thinking_alt pioneer far at cs_semen_far_right
     $ cs_presence_stage()
@@ -95,24 +89,18 @@ label cs_day01_21:
     with cs_sprite_change
     cs_sy "Полезно?"
     cs_ls "Лучше знать, чем предполагать."
-    cs_narrator "Он несколько секунд молчал."
-    cs_narrator "Потом словно вспомнил про поручение вожатой."
+    cs_narrator "Он помолчал, потом вспомнил про поручение вожатой."
     show cs_semen tie_touch pioneer far at cs_semen_far_right
     $ cs_presence_stage()
     # cs_global_transition
     with cs_sprite_change
     cs_sy "Давайте сначала возьмём еду. А то здесь неудобно стоять."
-    cs_narrator "На удивление, спорить не хотелось."
-    cs_narrator "Мы взяли подносы и прошли вдоль раздачи."
-    cs_narrator "Я старалась не разглядывать каждого человека, который попадался навстречу."
-    cs_narrator "Получалось плохо."
-    cs_narrator "Семён выбрал стол чуть в стороне от шумной компании."
-    cs_narrator "Дарья села рядом со мной."
+    cs_narrator "Мы прошли с подносами вдоль раздачи. Я старалась не разглядывать каждого встречного. Получалось плохо."
+    cs_narrator "Семён выбрал стол подальше от шумной компании. Дарья села рядом со мной."
     show cs_semen thinking_alt pioneer normal at cs_semen_normal_right
     show cs_darya forearm_hold pioneer normal at cs_darya_normal_left
     $ cs_presence_stage()
     with None
     cs_narrator "Он — напротив."
-    cs_th "Три человека с одним и тем же вопросом."
-    cs_th "Для начала уже неплохо."
+    cs_th "Три человека с одним вопросом. Для начала неплохо."
     return

@@ -28,21 +28,13 @@ label cs_day02_61:
     $ cs_frame_focus(["cs_darya"])
     with cs_sprite_change
     # cs_director_end
-    cs_narrator "Возле столовой уже собирались пионеры."
-    cs_narrator "Кто-то торопился занять место."
-    cs_narrator "Кто-то продолжал разговор на крыльце."
-    cs_narrator "А несколько девочек стояли чуть поодаль, споря о том, кто будет сидеть ближе к музыкальному выступлению."
+    cs_narrator "Возле столовой уже собирались пионеры. Кто-то торопился занять место. Кто-то продолжал разговор на крыльце. А несколько девочек стояли чуть поодаль, споря о том, кто будет сидеть ближе к музыкальному выступлению."
     cs_narrator "Я невольно улыбнулась."
     cs_th "Вечер ещё не начался, а подготовка уже идёт полным ходом."
-    cs_narrator "Мы поднялись по ступенькам."
-    cs_narrator "И почти сразу я увидела знакомую фигуру."
-    cs_narrator "Тёмные волосы."
-    cs_narrator "Очки."
-    cs_narrator "Книга под мышкой."
-    cs_narrator "Выражение лица человека, который предпочёл бы сейчас находиться где-нибудь в тишине."
+    cs_narrator "Мы поднялись по ступенькам. И почти сразу я увидела знакомую фигуру. Тёмные волосы. Очки."
+    cs_narrator "Книга под мышкой. Выражение лица человека, который предпочёл бы сейчас находиться где-нибудь в тишине."
     cs_th "Женя."
-    cs_narrator "Я замедлила шаг."
-    cs_narrator "Дарья тоже посмотрела в её сторону."
+    cs_narrator "Я замедлила шаг. Дарья тоже посмотрела в её сторону."
     # cs_presence_keep: hide cs_dasha_winter
     # cs_presence_keep: hide cs_dasha_pioneer
     # cs_presence_keep: hide cs_semen
@@ -63,7 +55,6 @@ label cs_day02_61:
     # cs_global_transition
     with cs_sprite_change
     cs_da "Видишь?"
-    cs_narrator "Я кивнула."
     cs_ls "Вижу."
     # cs_presence_keep: hide cs_dasha_winter
     # cs_presence_keep: hide cs_dasha_pioneer
@@ -90,8 +81,7 @@ label cs_day02_61:
     cs_narrator "Дарья посмотрела на перевязанный локоть."
     cs_da "Которая уже дважды посетила медпункт."
     cs_ls "Одно другому не противоречит."
-    cs_narrator "Она усмехнулась."
-    cs_narrator "Мы подошли ближе."
+    cs_narrator "Она усмехнулась. Мы подошли ближе."
     # cs_presence_keep: hide cs_dasha_winter
     # cs_presence_keep: hide cs_dasha_pioneer
     # cs_presence_keep: hide cs_semen
@@ -135,8 +125,7 @@ label cs_day02_61:
         with cs_sprite_change
         cs_mz "А, Соколова. Я тебя как раз хотела увидеть."
         cs_narrator "Я остановилась."
-        cs_th "О."
-        cs_th "Вот это уже неожиданно."
+        cs_th "О. Вот это уже неожиданно."
         cs_ls "Меня?"
         # cs_presence_keep: hide cs_dasha_winter
         # cs_presence_keep: hide cs_dasha_pioneer
@@ -160,8 +149,7 @@ label cs_day02_61:
         cs_mz "Нет, твою повязку. Конечно, тебя."
         cs_narrator "Я медленно улыбнулась."
         cs_ls "Какая тёплая встреча."
-        cs_narrator "Женя закатила глаза."
-        cs_narrator "Но уголки губ слегка дрогнули."
+        cs_narrator "Женя закатила глаза. Но уголки губ слегка дрогнули."
         # cs_presence_keep: hide cs_dasha_winter
         # cs_presence_keep: hide cs_dasha_pioneer
         # cs_presence_keep: hide cs_semen
@@ -257,8 +245,7 @@ label cs_day02_61:
         cs_narrator "Женя посмотрела на повязку и снова напомнила беречь локоть."
         cs_ls "Помню. Смотрю под ноги."
     else:
-        cs_narrator "Затем Женя заметила мой локоть."
-        cs_narrator "Посмотрела на повязку."
+        cs_narrator "Затем Женя заметила мой локоть. Посмотрела на повязку."
         # cs_presence_keep: hide cs_dasha_winter
         # cs_presence_keep: hide cs_dasha_pioneer
         # cs_presence_keep: hide cs_semen
@@ -367,8 +354,7 @@ label cs_day02_61:
         # cs_global_transition
         with cs_sprite_change
         cs_mz "Потому что ты вчера успела устроить достаточно шума в библиотеке, чтобы я примерно представляла твою способность находить неприятности."
-        cs_narrator "Дарья негромко рассмеялась."
-        cs_narrator "Я медленно повернулась к ней."
+        cs_narrator "Дарья негромко рассмеялась. Я медленно повернулась к ней."
         cs_ls "Вижу, против меня снова формируется коалиция."
         cs_da "Никто не виноват, что вы обе пришли к одинаковым выводам."
         cs_narrator "Женя усмехнулась."
@@ -394,8 +380,7 @@ label cs_day02_61:
         cs_mz "Просто в следующий раз смотри под ноги."
         cs_narrator "Я вздохнула."
         cs_ls "Этот совет сегодня популярнее любой музыкальной композиции."
-    cs_narrator "Изнутри столовой донёсся голос, приглашавший проходить к раздаче."
-    cs_narrator "Женя закрыла книгу."
+    cs_narrator "Изнутри столовой донёсся голос, приглашавший проходить к раздаче. Женя закрыла книгу."
     # cs_presence_keep: hide cs_dasha_winter
     # cs_presence_keep: hide cs_dasha_pioneer
     # cs_presence_keep: hide cs_semen

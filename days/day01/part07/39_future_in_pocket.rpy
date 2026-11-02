@@ -24,7 +24,6 @@ label cs_day01_39:
     # cs_global_transition
     with cs_sprite_change
     cs_el "И что они там делают?"
-    cs_narrator "Я слегка улыбнулась."
     cs_ls "Например, выкладывают фотографии и видео. Другие люди их смотрят, обсуждают, подписываются на авторов."
     cs_narrator "Электроник задумался."
     cs_el "Подписываются?"
@@ -33,7 +32,6 @@ label cs_day01_39:
     cs_ls "Примерно. Только газету может выпускать почти любой желающий."
     cs_narrator "Он посмотрел на меня внимательнее."
     cs_el "И ты тоже?"
-    cs_narrator "Я кивнула."
     cs_ls "У меня было почти двести пятьдесят тысяч подписчиков."
     cs_narrator "Шурик поднял голову."
     show sh surprise pioneer far at cs_actor_far_left
@@ -47,7 +45,6 @@ label cs_day01_39:
     # cs_global_transition
     with cs_sprite_change
     cs_sh "И они знают тебя?"
-    cs_narrator "Я задумалась."
     cs_ls "Некоторые. Большинство просто смотрят, что я публикую."
     cs_narrator "Электроник нахмурился."
     cs_el "А зачем им твои фотографии?"
@@ -67,14 +64,11 @@ label cs_day01_39:
     cs_ls "И я."
     cs_narrator "Я присела на край свободного стула."
     cs_ls "Людям интересно смотреть, что делают другие. Кто-то рисует, кто-то снимает видео, кто-то рассказывает о своей работе или увлечениях."
-    cs_narrator "Шурик задумчиво кивнул."
     cs_sh "Значит, можно показывать свои разработки?"
     cs_ls "Разумеется."
     cs_sh "И обсуждать их с людьми из других городов?"
     cs_ls "Даже из других стран."
-    cs_narrator "Шурик посмотрел на Электроника."
-    cs_narrator "В глазах обоих появился совершенно одинаковый интерес."
-    cs_th "Ну вот."
+    cs_narrator "Парни переглянулись с одинаковым интересом."
     cs_th "Нашли практическое применение."
     cs_narrator "Электроник вдруг спросил:"
     show el surprise pioneer far at cs_actor_far_right
@@ -84,7 +78,6 @@ label cs_day01_39:
     cs_el "А можно будет увидеть всё это на твоём телефоне?"
     cs_ls "Если он заработает, кое-что из сохранённого покажу. Но интернет здесь сам по себе не появится."
     cs_el "Почему?"
-    cs_narrator "Я посмотрела на него."
     cs_ls "Потому что для него нужна целая инфраструктура. Мобильные сети, оборудование, связь с другими устройствами…"
     cs_narrator "Он вздохнул."
     show el smile pioneer far at cs_actor_far_right
@@ -92,7 +85,6 @@ label cs_day01_39:
     # cs_global_transition
     with cs_sprite_change
     cs_el "Понятно."
-    cs_narrator "Я кивнула."
     cs_ls "Пять вольт мы, возможно, найдём. А вот глобальную сеть придётся строить несколько дольше."
     show cs_darya amused pioneer far at cs_darya_far_center
     $ cs_presence_stage()
@@ -117,18 +109,14 @@ label cs_day01_39:
     cs_sh "И телефон не забудь."
     cs_narrator "Я коснулась кармана."
     cs_ls "Теперь это будет довольно сложно."
-    cs_narrator "Мы с Дарьей направились к двери."
-    cs_narrator "Но уже на пороге она тихо спросила:"
+    cs_narrator "На пороге Дарья тихо спросила:"
     show cs_darya thinking pioneer far at cs_darya_far_center
     $ cs_presence_stage()
     # cs_global_transition
     with cs_sprite_change
     cs_da "Лен, а тебе не кажется, что мы слишком много им рассказали?"
-    cs_narrator "Я остановилась."
-    cs_narrator "Посмотрела на Шурика и Электроника."
-    cs_narrator "Они уже склонились над столом, оживлённо обсуждая, каким образом можно подготовить подходящий источник питания."
-    cs_th "Да."
-    cs_th "Кажется."
+    cs_narrator "Я обернулась. Парни уже склонились над столом, обсуждая источник питания."
+    cs_th "Да. Кажется."
     cs_ls "Есть такое."
     show cs_darya shrug pioneer far at cs_darya_far_center
     $ cs_presence_stage()
@@ -141,7 +129,6 @@ label cs_day01_39:
     # cs_global_transition
     with cs_sprite_change
     cs_da "И?"
-    cs_narrator "Я немного помолчала."
     cs_ls "Похоже, научно-технический прогресс временно подавил у меня инстинкт самосохранения."
     cs_narrator "Дарья покачала головой."
     show cs_darya shrug pioneer far at cs_darya_far_center
@@ -149,7 +136,6 @@ label cs_day01_39:
     # cs_global_transition
     with cs_sprite_change
     cs_da "Главное, чтобы потом не пришлось объясняться с Ольгой Дмитриевной."
-    cs_narrator "Я посмотрела в сторону выхода."
     cs_ls "Тогда будем надеяться, что местные инженеры умеют хранить профессиональные секреты."
     cs_narrator "Дарья открыла дверь."
     cs_narrator "Снаружи нас снова встретил летний воздух."
@@ -163,13 +149,7 @@ label cs_day01_39:
     if renpy.music.get_playing(channel="ambience") != "sound/ambiences/camp_center_day.ogg":
         play ambience "sound/ambiences/camp_center_day.ogg" fadeout 1.5 fadein 2.0
     label cs_check_day01_part07_exit:
-    cs_narrator "Я вышла на крыльцо."
-    cs_narrator "За спиной остался кружок электроники."
-    cs_narrator "Впереди — весь остальной «Совёнок»."
-    cs_narrator "Я коснулась кармана, в котором лежал телефон."
-    cs_narrator "Пока он оставался бесполезным куском стекла, металла и кремния."
-    cs_narrator "Но теперь хотя бы появилась возможность это изменить."
-    cs_narrator "Я посмотрела на Дарью."
+    cs_narrator "Я вышла на крыльцо и коснулась кармана. Пока телефон оставался куском стекла, металла и кремния. Но теперь был шанс это изменить."
     cs_ls "Ну что?"
     show cs_darya thinking pioneer normal at cs_darya_normal_center
     $ cs_presence_stage()
@@ -179,17 +159,12 @@ label cs_day01_39:
     cs_ls "Первый научно-технический проект нашей смены официально запущен."
     cs_narrator "Она улыбнулась."
     cs_da "И какие результаты?"
-    cs_narrator "Я задумалась."
     cs_ls "Никаких."
-    cs_narrator "Небольшая пауза."
     cs_ls "Но энтузиазм исполнителей исключительно высокий."
     # cs_director_begin: Independent recap after the electronics errand
     $ cs_reflective_focus()
     with cs_sprite_change
     label cs_director_check_103eb8e099:
     # cs_director_end
-    cs_th "Молодец, Лена."
-    cs_th "Приехала за продуктами."
-    cs_th "Получила пионерский галстук, домик и собственную программу развития советской электроники."
-    cs_th "План на день можно считать перевыполненным."
+    cs_th "Приехала за продуктами, получила галстук, домик и программу развития советской электроники. План перевыполнен."
     return

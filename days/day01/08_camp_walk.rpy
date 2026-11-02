@@ -32,23 +32,10 @@ label cs_day01_08:
     with cs_sprite_change
     label cs_director_check_4a3e545105:
     # cs_director_end
-    cs_narrator "И вот здесь ощущение нереальности стало ещё сильнее."
-    cs_narrator "До этого я могла смотреть на лагерь как на декорацию."
-    cs_narrator "Как на очень качественную реконструкцию."
-    cs_narrator "Или, в конце концов, как на необычайно убедительный сон."
-    cs_narrator "Но теперь всё вокруг было слишком живым."
-    cs_narrator "Солнечный свет пробивался сквозь листья."
-    cs_narrator "Где-то пахло нагретой древесиной."
-    cs_narrator "Издалека доносились голоса."
-    cs_narrator "Кто-то смеялся."
-    cs_narrator "В одном из зданий хлопнула дверь."
+    cs_narrator "Пока мы стояли у ворот, лагерь ещё можно было принять за декорацию или убедительный сон. Здесь это стало труднее."
+    cs_narrator "Свет пробивался сквозь листья, пахло нагретой древесиной. Издалека доносились голоса; в одном из зданий хлопнула дверь."
     cs_narrator "На дорожке лежали мелкие камешки."
-    cs_narrator "Не текстура."
-    cs_narrator "Не нарисованный фон."
-    cs_narrator "Настоящие камни."
-    cs_narrator "Я намеренно замедлила шаг и провела подошвой по асфальту."
-    cs_narrator "Шероховатый."
-    cs_narrator "Совершенно обычный."
+    cs_narrator "Я провела подошвой по асфальту. Шероховатый, самый обычный."
     # cs_director_begin: Return to direct interaction: Living camp panorama
     $ cs_frame_focus(["sl", "cs_dasha_winter"])
     with cs_sprite_change
@@ -80,24 +67,13 @@ label cs_day01_08:
     cs_sl "Вы что-то сказали?"
     cs_ls "Нет, всё хорошо."
     cs_narrator "Я ускорила шаг."
-    cs_narrator "Мы пошли дальше."
     # cs_director_begin: REFLECTIVE_SHOT: Map remembered as real space
     $ cs_reflective_focus()
     with cs_sprite_change
     label cs_director_check_a51ccf619e:
     # cs_director_end
-    cs_narrator "Я смотрела по сторонам, испытывая странную смесь любопытства и очень нехорошего предчувствия."
-    cs_narrator "Потому что знала эти места."
-    cs_narrator "Вот эта дорожка."
-    cs_narrator "Эти деревья."
-    cs_narrator "Там должна быть площадь."
-    cs_narrator "Дальше — столовая."
-    cs_narrator "Клубы."
-    cs_narrator "Домики."
-    cs_narrator "Медпункт."
-    cs_narrator "Библиотека."
-    cs_narrator "Я знала карту лагеря."
-    cs_narrator "Но знание карты совершенно не помогало принять тот факт, что сейчас я по ней иду."
+    cs_narrator "Я знала эти места: вот дорожка, там площадь, дальше столовая, клубы, домики, медпункт, библиотека."
+    cs_narrator "Но знание карты не помогало принять то, что сейчас я по ней иду."
     # cs_director_begin: Return to direct interaction: Map remembered as real space
     $ cs_frame_focus(["sl", "cs_dasha_winter"])
     with cs_sprite_change
@@ -119,7 +95,6 @@ label cs_day01_08:
     # cs_global_transition
     with cs_sprite_change
     cs_da "Как дежавю?"
-    cs_narrator "Я повернулась к ней."
     cs_narrator "Хорошее слово. Только обычно дежавю длится секунду, а не всю дорогу от ворот."
     cs_ls "Да. Примерно так."
     # cs_darya_variety: reaction
@@ -144,13 +119,7 @@ label cs_day01_08:
     with cs_sprite_change
     cs_da "Не уверена, что это преимущество."
     cs_ls "Сейчас проверим."
-    cs_narrator "Я бросила взгляд на Славю."
-    cs_narrator "Она шагала впереди, совершенно спокойно ведя нас через лагерь."
-    cs_narrator "Для неё всё происходящее, вероятно, выглядело обычным летним днём."
-    cs_narrator "Две странно одетые девушки."
-    cs_narrator "Непонятный автобус."
-    cs_narrator "Несколько нелепых объяснений."
-    cs_th "Ничего особенного."
-    cs_th "Рядовая смена в пионерском лагере."
+    cs_narrator "Славя спокойно шагала впереди. Для неё это, вероятно, обычный летний день: странные девушки, непонятный автобус, нелепые объяснения."
+    cs_th "Ничего особенного. Рядовая смена в пионерском лагере."
     cs_narrator "Я едва заметно покачала головой."
     return

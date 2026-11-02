@@ -35,12 +35,8 @@ label cs_day02_32:
     $ cs_frame_focus(["cs_darya"])
     with cs_sprite_change
     # cs_director_end
-    cs_narrator "Мы вышли из медпункта."
-    cs_narrator "Солнечный свет после прохладного помещения показался особенно ярким."
-    cs_narrator "Я остановилась на крыльце."
-    cs_narrator "Посмотрела на обработанный локоть."
-    cs_narrator "Потом на дверь."
-    cs_narrator "И наконец на Дарью."
+    cs_narrator "Мы вышли из медпункта. Солнечный свет после прохладного помещения показался особенно ярким. Я остановилась на крыльце. Посмотрела на обработанный локоть."
+    cs_narrator "Потом на дверь. И наконец на Дарью."
     cs_ls "Интересное заведение."
     cs_narrator "Она усмехнулась."
     show cs_darya thinking pioneer normal at cs_darya_normal_right
@@ -56,7 +52,6 @@ label cs_day02_32:
     # cs_global_transition
     with cs_sprite_change
     cs_da "А мне понравилось. Виола вполне приятная."
-    cs_narrator "Я кивнула."
     cs_ls "И наблюдательная."
     $ cs_director_scene("cs_camp_path_day")
     scene cs_camp_path_day
@@ -79,16 +74,13 @@ label cs_day02_32:
     $ cs_part04_cast = ["cs_darya"]
     $ cs_presence_stage()
     with Dissolve(0.8)
-    cs_narrator "Мы спустились с крыльца."
-    cs_narrator "Несколько секунд шли молча."
-    cs_narrator "Потом Дарья спросила:"
+    cs_narrator "Мы спустились с крыльца. Несколько секунд шли молча. Потом Дарья спросила:"
     show cs_darya thinking pioneer normal at cs_darya_normal_right
     $ cs_part04_cast = ["cs_darya"]
     $ cs_presence_stage()
     # cs_global_transition
     with cs_sprite_change
     cs_da "Ты действительно думаешь, что тот рисунок связан с историей из девяностых?"
-    cs_narrator "Я задумалась."
     cs_ls "Не знаю."
     cs_da "Но узнала его?"
     cs_ls "Мне показалось, что узнала."
@@ -103,8 +95,7 @@ label cs_day02_32:
     with cs_sprite_change
     cs_da "Ты видишь что-то похожее на то, что помнишь по игре. И сразу начинаешь думать, что знаешь, что это такое."
     cs_narrator "Я остановилась."
-    cs_th "Вот ведь."
-    cs_th "Опять она права."
+    cs_th "Вот ведь. Опять она права."
     cs_narrator "Я посмотрела в сторону медпункта."
     cs_ls "Да. Похоже, я опять тороплюсь с выводами."
     show cs_darya smile pioneer normal at cs_darya_normal_right
@@ -119,7 +110,6 @@ label cs_day02_32:
     # cs_global_transition
     with cs_sprite_change
     cs_da "Ничего страшного. Просто лучше сначала разобраться."
-    cs_narrator "Я кивнула."
     cs_ls "Тогда запишем как наблюдение, а не как доказательство."
     show cs_darya shrug pioneer normal at cs_darya_normal_right
     $ cs_part04_cast = ["cs_darya"]
@@ -136,7 +126,6 @@ label cs_day02_32:
     # cs_global_transition
     with cs_sprite_change
     cs_da "А ты кем будешь?"
-    cs_narrator "Я задумалась."
     cs_ls "Специалистом по обнаружению подозрительных плакатов."
     show cs_darya shrug pioneer normal at cs_darya_normal_right
     $ cs_part04_cast = ["cs_darya"]
@@ -145,7 +134,5 @@ label cs_day02_32:
     with cs_sprite_change
     cs_da "Очень узкая специальность."
     cs_ls "Зато востребованная именно здесь."
-    cs_narrator "Дарья покачала головой."
-    cs_narrator "Но улыбаться не перестала."
-    cs_narrator "Мы свернули на дорожку к клубам."
+    cs_narrator "Дарья покачала головой. Но улыбаться не перестала. Мы свернули на дорожку к клубам."
     return

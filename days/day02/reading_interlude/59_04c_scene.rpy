@@ -27,17 +27,14 @@ label cs_day02_reading_04c:
     $ cs_frame_focus(["cs_zhenya"])
     with cs_sprite_change
     # cs_director_end
-    cs_narrator "Женя посмотрела на обложку."
-    cs_narrator "И чуть заметно улыбнулась."
+    cs_narrator "Женя посмотрела на обложку. И чуть заметно улыбнулась."
     cs_mz "Ты всё-таки решила её прочитать."
-    cs_narrator "Я кивнула."
     cs_ls "Ты вчера так увлечённо её читала, что стало интересно."
     cs_narrator "Она на секунду отвела взгляд."
     cs_mz "Я просто читала."
     cs_ls "Для тебя это почти страсть."
     cs_narrator "Она посмотрела на меня поверх очков."
     cs_mz "Соколова."
-    cs_narrator "Я слегка улыбнулась."
     cs_ls "Всё, поняла."
     cs_narrator "Женя перевела взгляд на страницу."
     # cs_presence_keep: hide cs_darya
@@ -60,8 +57,7 @@ label cs_day02_reading_04c:
     # cs_global_transition
     with cs_sprite_change
     cs_mz "До какого места дошла?"
-    cs_narrator "Я показала."
-    cs_narrator "Она кивнула."
+    cs_narrator "Я показала. Она кивнула."
     # cs_presence_keep: hide cs_darya
     # cs_presence_keep: hide cs_semen
     # cs_presence_keep: hide mz
@@ -104,7 +100,6 @@ label cs_day02_reading_04c:
     # cs_global_transition
     with cs_sprite_change
     cs_mz "Почти. Оставила несколько страниц на вечер."
-    cs_narrator "Я кивнула."
     cs_ls "Тогда договорились. Без спойлеров."
     cs_narrator "Она усмехнулась."
     # cs_presence_keep: hide cs_darya
@@ -128,8 +123,7 @@ label cs_day02_reading_04c:
     with cs_sprite_change
     cs_mz "Без чего?"
     cs_narrator "Я остановилась."
-    cs_th "Ах да."
-    cs_th "Опять."
+    cs_th "Ах да. Опять."
     cs_ls "Без рассказов о том, что произойдёт дальше."
     cs_narrator "Женя кивнула."
     # cs_presence_keep: hide cs_darya
@@ -152,9 +146,7 @@ label cs_day02_reading_04c:
     # cs_global_transition
     with cs_sprite_change
     cs_mz "Так бы сразу и сказала."
-    cs_narrator "Я улыбнулась."
-    cs_narrator "Она направилась к своему столу."
-    cs_narrator "И уже через несколько шагов обернулась."
+    cs_narrator "Я улыбнулась. Она направилась к своему столу. И уже через несколько шагов обернулась."
     # cs_presence_keep: hide cs_darya
     # cs_presence_keep: hide cs_semen
     # cs_presence_keep: hide mz
@@ -177,8 +169,7 @@ label cs_day02_reading_04c:
     cs_mz "Кстати, если понадобится закладка, у меня есть лишние."
     cs_narrator "Я посмотрела на книгу."
     cs_ls "Было бы удобно."
-    cs_narrator "Женя принесла небольшой прямоугольник плотной бумаги."
-    cs_narrator "Положила рядом со мной."
+    cs_narrator "Женя принесла небольшой прямоугольник плотной бумаги. Положила рядом со мной."
     # cs_presence_keep: hide cs_darya
     # cs_presence_keep: hide cs_semen
     # cs_presence_keep: hide mz
@@ -209,11 +200,8 @@ label cs_day02_reading_04c:
     with cs_sprite_change
     label cs_director_check_985d025ca4:
     # cs_director_end
-    cs_th "Маленькая вещь."
-    cs_th "Обычная закладка."
-    cs_th "Но ещё вчера я бы даже не подумала, что Женя сама предложит мне что-нибудь без предварительных переговоров."
-    cs_narrator "Я положила закладку рядом."
-    cs_narrator "И снова принялась читать."
+    cs_th "Маленькая вещь. Обычная закладка. Но ещё вчера я бы даже не подумала, что Женя сама предложит мне что-нибудь без предварительных переговоров."
+    cs_narrator "Я положила закладку рядом. И снова принялась читать."
     label cs_check_reading_desk_04c:
     pause 0.5
     return

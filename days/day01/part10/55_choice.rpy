@@ -6,11 +6,8 @@ label cs_day01_55:
     $ cs_frame_focus([])
     with cs_sprite_change
     # cs_director_end
-    cs_narrator "Я посмотрела на стопку книг."
-    cs_narrator "Затем на Женю."
-    cs_narrator "Она уже собиралась приступить к сортировке."
-    cs_th "Можно предложить помощь."
-    cs_th "А можно не вмешиваться и просто поискать нужные издания."
+    cs_narrator "Женя собиралась разбирать стопку книг."
+    cs_th "Предложить помощь или поискать нужные издания самим?"
     label cs_check_day01_part10_choice:
     if cs_part10_choice is None:
         menu:

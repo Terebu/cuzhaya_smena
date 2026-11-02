@@ -6,8 +6,7 @@ label cs_day03_183:
         with cs_sprite_change
     $ cs_frame_focus(["cs_darya"])
     with cs_sprite_change
-    cs_narrator "Я немного помолчала."
-    cs_narrator "Потом посмотрела Даше в глаза."
+    cs_narrator "Я помолчала. Потом посмотрела Даше в глаза."
     if cs_reflective_shot:
         $ cs_pov_end()
         with cs_sprite_change
@@ -55,13 +54,11 @@ label cs_day03_183:
         $ cs_pov_end()
         with cs_sprite_change
     cs_ls "Можно сегодня лечь рядом с тобой?"
-    cs_narrator "Она перестала улыбаться, но не потому, что рассердилась."
-    cs_narrator "Скорее задумалась."
+    cs_narrator "Она перестала улыбаться, но не потому, что рассердилась. Скорее задумалась."
     if cs_reflective_shot:
         $ cs_pov_end()
         with cs_sprite_change
     cs_da "Ты серьёзно?"
-    cs_narrator "Я кивнула."
     if cs_reflective_shot:
         $ cs_pov_end()
         with cs_sprite_change
@@ -71,14 +68,12 @@ label cs_day03_183:
         with cs_sprite_change
     cs_da "А почему тебе хочется?"
     cs_narrator "Я немного подумала."
-    cs_th "Хороший вопрос."
-    cs_th "И, к моему собственному удивлению, у меня есть нормальный ответ."
+    cs_th "Хороший вопрос. И, к моему собственному удивлению, у меня есть нормальный ответ."
     if cs_reflective_shot:
         $ cs_pov_end()
         with cs_sprite_change
     cs_ls "Потому что мне спокойно рядом с тобой."
-    cs_narrator "Она посмотрела на меня внимательнее."
-    cs_narrator "Я продолжила:"
+    cs_narrator "Она посмотрела на меня внимательнее. Я продолжила:"
     if cs_reflective_shot:
         $ cs_pov_end()
         with cs_sprite_change
@@ -88,16 +83,13 @@ label cs_day03_183:
         $ cs_pov_end()
         with cs_sprite_change
     cs_ls "Не ради шутки. Не для того, чтобы потом кого-нибудь удивить."
-    cs_narrator "Я улыбнулась."
     if cs_reflective_shot:
         $ cs_pov_end()
         with cs_sprite_change
     cs_ls "Просто хочется заснуть рядом."
-    cs_narrator "Даша опустила взгляд на свою кровать."
-    cs_narrator "Потом снова посмотрела на меня."
+    cs_narrator "Даша опустила взгляд на свою кровать. Потом снова посмотрела на меня."
     if cs_da_friend_before_night >= 1:
-        cs_narrator "Она немного помолчала."
-        cs_narrator "Затем улыбнулась."
+        cs_narrator "Она немного помолчала. Затем улыбнулась."
         if cs_reflective_shot:
             $ cs_pov_end()
             with cs_sprite_change
@@ -116,25 +108,21 @@ label cs_day03_183:
         else:
             cs_da "Сегодня можешь лечь рядом. Только давай без разговоров — просто спать."
         cs_narrator "Я несколько секунд смотрела на неё."
-        cs_th "Так."
-        cs_th "Спокойно."
+        cs_th "Так. Спокойно."
         if not cs_reflective_shot:
             $ cs_pov_begin()
             with cs_sprite_leave
-        cs_th "Соколова."
-        cs_th "Внутри сейчас начнётся торжественная церемония с салютом."
-        cs_th "Нужно срочно отменить приглашение оркестра."
+        cs_th "Соколова. Сейчас я точно не скажу ничего умного. Лучше помолчать."
         cs_narrator "Я медленно улыбнулась."
         if cs_reflective_shot:
             $ cs_pov_end()
             with cs_sprite_change
         cs_ls "Спасибо."
-        cs_narrator "Дарья чуть приподняла бровь."
+        cs_narrator "Даша чуть приподняла бровь."
         if cs_reflective_shot:
             $ cs_pov_end()
             with cs_sprite_change
         cs_da "И всё?"
-        cs_narrator "Я кивнула."
         if cs_reflective_shot:
             $ cs_pov_end()
             with cs_sprite_change
@@ -154,18 +142,15 @@ label cs_day03_183:
             $ cs_pov_end()
             with cs_sprite_change
         cs_da "Лена…"
-        cs_narrator "Я улыбнулась."
         if cs_reflective_shot:
             $ cs_pov_end()
             with cs_sprite_change
         cs_ls "Всё. Никаких резолюций."
-        cs_narrator "Даша посмотрела на две кровати."
-        cs_narrator "Потом на меня."
+        cs_narrator "Даша посмотрела на две кровати, потом на меня."
         if cs_reflective_shot:
             $ cs_pov_end()
             with cs_sprite_change
         cs_da "Только у меня кровать довольно узкая."
-        cs_narrator "Я кивнула."
         if cs_reflective_shot:
             $ cs_pov_end()
             with cs_sprite_change
@@ -175,7 +160,6 @@ label cs_day03_183:
             $ cs_pov_end()
             with cs_sprite_change
         cs_da "И локоть твой жалко."
-        cs_narrator "Я улыбнулась."
         if cs_reflective_shot:
             $ cs_pov_end()
             with cs_sprite_change
@@ -185,7 +169,6 @@ label cs_day03_183:
             $ cs_pov_end()
             with cs_sprite_change
         cs_da "Тогда договорились. Но если станет неудобно, ты перейдёшь на свою кровать. Хорошо?"
-        cs_narrator "Я кивнула."
         if cs_reflective_shot:
             $ cs_pov_end()
             with cs_sprite_change
@@ -214,37 +197,30 @@ label cs_day03_183:
             $ cs_pov_end()
             with cs_sprite_change
         cs_ls "Приблизительно настолько же, насколько советская мебель рассчитана на двух взрослых девушек."
-        cs_narrator "Она рассмеялась."
         if cs_reflective_shot:
             $ cs_pov_end()
             with cs_sprite_change
         cs_da "Значит, будем осторожны."
         cs_narrator "Я улыбнулась."
-        cs_th "Вот и всё."
-        cs_th "Никакого великого договора."
         if not cs_reflective_shot:
             $ cs_pov_begin()
             with cs_sprite_leave
-        cs_th "Просто она согласилась."
-        cs_th "А я не собираюсь превращать это согласие в обязательство на каждый следующий вечер."
+        cs_th "Просто она согласилась. А я не собираюсь превращать это согласие в обязательство на каждый следующий вечер."
         $ cs_da_shared_bed_day3 = True
         if not cs_da_shared_bed_awarded_day3:
             $ cs_friend_da += 1
             $ cs_da_shared_bed_awarded_day3 = True
     else:
-        cs_narrator "Дарья немного помолчала."
-        cs_narrator "Потом мягко покачала головой."
+        cs_narrator "Даша немного помолчала. Потом мягко покачала головой."
         if cs_reflective_shot:
             $ cs_pov_end()
             with cs_sprite_change
         cs_da "Лен, давай сегодня всё-таки отдельно."
-        cs_narrator "Я посмотрела на неё."
-        cs_narrator "Она добавила:"
+        cs_narrator "Я посмотрела на неё. Она добавила:"
         if cs_reflective_shot:
             $ cs_pov_end()
             with cs_sprite_change
         cs_da "Мне с тобой хорошо. Правда. Просто я пока не готова так спать."
-        cs_narrator "Я кивнула."
         if cs_reflective_shot:
             $ cs_pov_end()
             with cs_sprite_change
@@ -264,7 +240,7 @@ label cs_day03_183:
             $ cs_pov_end()
             with cs_sprite_change
         cs_ls "Ты же не обязана соглашаться только потому, что я спросила."
-        cs_narrator "Дарья выдохнула."
+        cs_narrator "Даша выдохнула."
         if cs_reflective_shot:
             $ cs_pov_end()
             with cs_sprite_change
@@ -274,14 +250,11 @@ label cs_day03_183:
             $ cs_pov_end()
             with cs_sprite_change
         cs_da "Но если хочешь, посиди ещё немного рядом. Можно просто молчать."
-        cs_narrator "Я улыбнулась."
         if cs_reflective_shot:
             $ cs_pov_end()
             with cs_sprite_change
         cs_ls "Это я, пожалуй, смогу."
-        cs_narrator "Я села на край её кровати."
-        cs_narrator "Я посмотрела на две кровати."
-        cs_narrator "Потом на неё."
+        cs_narrator "Я села на край её кровати. Я посмотрела на две кровати, потом на неё."
         if cs_reflective_shot:
             $ cs_pov_end()
             with cs_sprite_change
@@ -291,7 +264,6 @@ label cs_day03_183:
             $ cs_pov_end()
             with cs_sprite_change
         cs_da "Именно."
-        cs_narrator "Я кивнула."
         if cs_reflective_shot:
             $ cs_pov_end()
             with cs_sprite_change
@@ -301,13 +273,9 @@ label cs_day03_183:
             $ cs_pov_end()
             with cs_sprite_change
         cs_da "Они уже установлены."
-        cs_th "Ну вот."
-        cs_th "Ничего страшного."
+        cs_th "Ну вот. Ничего страшного."
         if not cs_reflective_shot:
             $ cs_pov_begin()
             with cs_sprite_leave
-        cs_th "Даже наоборот."
-        cs_th "Спросила."
-        cs_th "Получила ответ."
-        cs_th "И теперь мы обе знаем, что можем нормально об этом разговаривать."
+        cs_th "Даже наоборот. Спросила. Получила ответ. И теперь мы обе знаем, что можем нормально об этом разговаривать."
     return

@@ -16,17 +16,9 @@ label cs_day01_43:
     $ cs_frame_focus(["cs_darya"])
     with cs_sprite_change
     # cs_director_end
-    cs_narrator "Когда мы вышли на площадь, солнце уже опустилось достаточно низко."
-    cs_narrator "Тени деревьев вытянулись почти до противоположного края дорожки."
-    cs_narrator "На площади было заметно спокойнее, чем днём."
-    cs_narrator "Несколько пионеров сидели на скамейках."
-    cs_narrator "Кто-то направлялся к домикам."
-    cs_narrator "У памятника разговаривали две девочки."
-    cs_narrator "А неподалёку, на одной из скамеек, сидел знакомый парень."
-    cs_narrator "Семён."
-    cs_narrator "Он смотрел куда-то в сторону лагеря, задумчиво подперев щёку рукой."
+    cs_narrator "Тени на площади вытянулись до другого края дорожки. На скамейках сидели пионеры, кто-то шёл к домикам."
+    cs_narrator "На одной из скамеек я заметила Семёна. Он задумчиво подпирал щёку рукой."
     cs_narrator "Я остановилась."
-    cs_th "О."
     cs_th "Председатель нашей рабочей группы обнаружен."
     cs_narrator "Дарья заметила, куда я смотрю."
     # cs_darya_variety: reaction
@@ -35,12 +27,10 @@ label cs_day01_43:
     # cs_global_transition
     with cs_sprite_change
     cs_da "Только не начинай."
-    cs_narrator "Я повернулась к ней."
     cs_ls "Что именно?"
     cs_da "У тебя опять такое выражение лица."
     cs_ls "Какое?"
     cs_da "Как будто придумала что-то, о чём окружающие скоро пожалеют."
-    cs_narrator "Я задумалась."
     cs_ls "Несправедливая характеристика."
     # cs_darya_variety: reaction
     show cs_darya shrug pioneer normal at cs_darya_normal_center
@@ -48,11 +38,9 @@ label cs_day01_43:
     # cs_global_transition
     with cs_sprite_change
     cs_da "Зато точная."
-    cs_narrator "Я усмехнулась."
-    cs_narrator "Потом негромко спросила:"
+    cs_narrator "Я негромко спросила:"
     cs_ls "Даш, можно я немного его помучаю вопросами? Только без подробностей нашего разговора."
-    cs_narrator "Она посмотрела на меня."
-    cs_narrator "Несколько секунд размышляла."
+    cs_narrator "Она помедлила с ответом."
     cs_da "Если действительно без подробностей."
     cs_ls "Договорились."
     show cs_semen thinking_down pioneer normal at cs_semen_normal_left
@@ -64,10 +52,7 @@ label cs_day01_43:
     label cs_check_day01_part08_semen:
     cs_narrator "Мы подошли к скамейке."
     cs_ls "Товарищ Семён."
-    cs_narrator "Он поднял голову."
-    cs_narrator "Увидел меня."
-    cs_narrator "Затем Дарью."
-    cs_narrator "После чего вздохнул с таким выражением лица, будто заранее приготовился к очередному необычному разговору."
+    cs_narrator "Увидев нас, он вздохнул, будто заранее готовился к странному вопросу."
     show cs_semen thinking_alt pioneer normal at cs_semen_normal_left
     $ cs_presence_stage()
     # cs_global_transition
@@ -79,7 +64,6 @@ label cs_day01_43:
     # cs_global_transition
     with cs_sprite_change
     cs_sy "Потому что каждый раз, когда ты ко мне подходишь, у тебя возникает какой-нибудь странный вопрос."
-    cs_narrator "Я задумчиво кивнула."
     cs_ls "Наблюдательность развита прекрасно."
     cs_narrator "Семён посмотрел на Дарью."
     show cs_semen thinking_alt pioneer normal at cs_semen_normal_left
@@ -92,8 +76,7 @@ label cs_day01_43:
     cs_sy "Зачем?"
     cs_ls "Проводили консультацию по восстановлению связи с цивилизацией."
     cs_sy "То есть?"
-    cs_narrator "Я достала телефон."
-    cs_narrator "Показала его."
+    cs_narrator "Я показала телефон."
     cs_ls "Пытаемся зарядить."
     cs_narrator "Семён удивился."
     cs_sy "Здесь?"

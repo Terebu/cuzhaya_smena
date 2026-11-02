@@ -17,25 +17,13 @@ label cs_day01_54:
     $ cs_frame_focus(["cs_zhenya", "cs_darya"])
     with cs_sprite_change
     # cs_director_end
-    cs_narrator "Внутри пахло бумагой."
-    cs_narrator "Деревом."
-    cs_narrator "Старой краской."
-    cs_narrator "И чем-то ещё, что бывает только в библиотеках с длинными рядами книжных полок."
+    cs_narrator "Пахло бумагой, деревом, старой краской — библиотекой."
     # cs_authored_pov_0: Lena examines the room, not her companions
     $ cs_frame_focus([])
     with cs_sprite_change
     cs_narrator "Я огляделась."
-    cs_narrator "Несколько стеллажей."
-    cs_narrator "Читательские столы."
-    cs_narrator "Каталожные ящики."
-    cs_narrator "Стопки книг."
-    cs_narrator "Никаких компьютеров."
-    cs_narrator "Никаких электронных систем поиска."
-    cs_narrator "Только бумага."
-    cs_narrator "Очень много бумаги."
-    cs_th "Поисковая система версии тысяча девятьсот восьмидесятого года."
-    cs_th "Индексация ручная."
-    cs_th "Время ответа — зависит от настроения библиотекаря."
+    cs_narrator "Стеллажи, читательские столы, каталожные ящики. Ни компьютеров, ни электронного поиска. Очень много бумаги."
+    cs_th "Поисковая система 1980-го года. Индексация ручная, время ответа зависит от настроения библиотекаря."
     # cs_authored_pov_1: Lena finds the librarian at her desk
     $ cs_frame_focus(["cs_zhenya"])
     with cs_sprite_change
@@ -43,9 +31,7 @@ label cs_day01_54:
     cs_narrator "Она читала книгу, придерживая страницу пальцем."
     cs_narrator "Услышав дверь, подняла глаза."
     cs_th "Женя."
-    cs_narrator "Именно такой я её и помнила."
-    cs_narrator "Только теперь она не была двухмерным изображением."
-    cs_narrator "Она сидела за настоящим столом, листала настоящую книгу и совершенно явно собиралась заниматься своими делами, пока мы не появились."
+    cs_narrator "И пока мы не вошли, она явно собиралась заниматься своими делами."
     # cs_speaker: present
     show cs_zhenya thinking pioneer normal at cs_darya_normal_left zorder 10
     $ cs_presence_stage()
@@ -66,7 +52,6 @@ label cs_day01_54:
     with cs_sprite_change
     cs_mz "Если за книгами, то лучше не затягивайте. Скоро буду закрывать."
     cs_ls "Мы ненадолго."
-    cs_narrator "Она кивнула."
     # cs_speaker: present
     show cs_zhenya explaining pioneer normal at cs_darya_normal_left zorder 10
     $ cs_presence_stage()
@@ -89,7 +74,6 @@ label cs_day01_54:
     # cs_global_transition
     with cs_sprite_change
     cs_mz "А зачем?"
-    cs_narrator "Я задумалась."
     cs_th "Вот и начались вопросы."
     cs_ls "Хотим кое-что проверить."
     # cs_speaker: present
@@ -122,8 +106,7 @@ label cs_day01_54:
     # cs_global_transition
     with cs_sprite_change
     cs_mz "Понятно."
-    cs_narrator "Судя по тону, понятно ей было далеко не всё."
-    cs_narrator "Она закрыла книгу."
+    cs_narrator "Судя по тону, понятно ей было не всё. Она закрыла книгу."
     $ cs_met_mz = True
     # cs_speaker: present
     show cs_zhenya glasses_touch pioneer normal at cs_darya_normal_left zorder 10
@@ -131,11 +114,9 @@ label cs_day01_54:
     # cs_global_transition
     with cs_sprite_change
     cs_mz "Я Женя. За библиотеку отвечаю. Если хотите что-нибудь взять, сначала запишу вас."
-    cs_narrator "Я чуть заметно кивнула."
     cs_ls "Лена Соколова. А это Дарья."
     cs_da "Дарья Еретикова. Можно Даша."
-    cs_narrator "Женя взглянула на наши волосы."
-    cs_narrator "Затем на пионерскую форму."
+    cs_narrator "Женя оглядела наши волосы и форму."
     # cs_speaker: present
     show cs_zhenya angry pioneer normal at cs_darya_normal_left zorder 10
     $ cs_presence_stage()
@@ -156,15 +137,13 @@ label cs_day01_54:
     $ cs_presence_stage()
     # cs_global_transition
     with cs_sprite_change
-    cs_narrator "Она не улыбнулась."
-    cs_narrator "Но в её глазах мелькнуло что-то похожее на интерес."
+    cs_narrator "Она не улыбнулась, но в глазах мелькнул интерес."
     # cs_speaker: present
     show cs_zhenya angry pioneer normal at cs_darya_normal_left zorder 10
     $ cs_presence_stage()
     # cs_global_transition
     with cs_sprite_change
     cs_mz "Только, пожалуйста, потише. Здесь библиотека."
-    cs_narrator "Я кивнула."
     cs_ls "Договорились."
     cs_narrator "Дарья посмотрела на меня."
     # cs_darya_variety: reaction
@@ -188,10 +167,6 @@ label cs_day01_54:
     with cs_sprite_change
     label cs_director_check_4d6f0716e1:
     # cs_director_end
-    cs_narrator "Я заметила возле неё стопку возвращённых книг."
-    cs_narrator "Некоторые были разложены по размеру."
-    cs_narrator "Другие лежали отдельно."
-    cs_narrator "На корешках виднелись инвентарные номера."
-    cs_th "Интересно."
-    cs_th "Кажется, сейчас можно либо попытаться познакомиться поближе, либо просто заняться собственными поисками."
+    cs_narrator "Возле неё лежали возвращённые книги с инвентарными номерами на корешках. Часть уже была рассортирована."
+    cs_th "Помочь и познакомиться поближе — или заняться своими поисками?"
     return

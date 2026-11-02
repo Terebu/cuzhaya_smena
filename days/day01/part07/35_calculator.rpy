@@ -5,8 +5,7 @@ label cs_day01_35:
     $ cs_frame_focus(["cs_darya", "sh", "el"])
     with cs_sprite_change
     # cs_director_end
-    cs_narrator "Я достала смартфон."
-    cs_narrator "Аккуратно положила его на свободный участок стола."
+    cs_narrator "Я положила смартфон на свободный участок стола."
     cs_narrator "Оба парня замолчали."
     cs_narrator "Электроник первым наклонился ближе."
     show el surprise pioneer far at cs_actor_far_right
@@ -21,8 +20,7 @@ label cs_day01_35:
     # cs_global_transition
     with cs_sprite_change
     cs_narrator "Она уже едва заметно улыбалась."
-    cs_th "Ладно."
-    cs_th "Проверенная легенда."
+    cs_th "Ладно. Проверенная легенда."
     cs_ls "Калькулятор."
     cs_narrator "Дарья прикрыла глаза."
     show cs_darya shrug pioneer far at cs_darya_far_center
@@ -37,8 +35,7 @@ label cs_day01_35:
     with cs_sprite_change
     cs_da "Ты опять?"
     cs_ls "Не мешай легенде."
-    cs_narrator "Шурик внимательно осмотрел устройство."
-    cs_narrator "Но трогать пока не стал."
+    cs_narrator "Шурик осмотрел устройство, пока не решаясь тронуть."
     show sh serious pioneer far at cs_actor_far_left
     $ cs_presence_stage()
     # cs_global_transition
@@ -55,7 +52,6 @@ label cs_day01_35:
     cs_ls "И цифры тоже."
     cs_narrator "Шурик нахмурился."
     cs_sh "А что ещё?"
-    cs_narrator "Я ненадолго задумалась."
     cs_ls "Довольно много всего."
     cs_narrator "Электроник заглянул мне в лицо."
     cs_el "Это телевизор?"
@@ -63,7 +59,6 @@ label cs_day01_35:
     cs_el "А радио?"
     cs_ls "И радио."
     cs_el "А для чего тогда калькулятор?"
-    cs_narrator "Я посмотрела на него."
     cs_ls "Начинаю подозревать, что легенда разваливается."
     show cs_darya amused pioneer far at cs_darya_far_center
     $ cs_presence_stage()
@@ -78,19 +73,16 @@ label cs_day01_35:
     cs_ls "Относительно."
     cs_sh "А где батарейки?"
     cs_ls "Внутри."
-    cs_narrator "Он попробовал рассмотреть швы корпуса."
-    cs_narrator "Я сразу подняла ладонь."
+    cs_narrator "Он принялся рассматривать швы корпуса. Я подняла ладонь."
     cs_ls "Только одно условие."
     cs_sh "Какое?"
     cs_ls "Ничего не вскрывать."
-    cs_narrator "Шурик посмотрел на меня."
     cs_sh "Почему?"
     cs_ls "Потому что я пришла за помощью, а не на демонстрацию того, как аккуратно разобрать моё имущество."
     show el smile pioneer far at cs_actor_far_right
     $ cs_presence_stage()
     # cs_global_transition
     with cs_sprite_change
-    cs_narrator "Электроник усмехнулся."
     show el surprise pioneer far at cs_actor_far_right
     $ cs_presence_stage()
     # cs_global_transition
@@ -106,7 +98,6 @@ label cs_day01_35:
     label cs_check_day01_part07_silence:
     cs_narrator "Экран не загорелся."
     cs_ls "Как видите, настроение у него сегодня исключительно мрачное."
-    cs_narrator "Шурик сразу стал серьёзнее."
     cs_sh "Какое напряжение ему требуется?"
     cs_ls "Для обычной зарядки — пять вольт через подходящий разъём. Но это не значит, что к нему можно просто подвести два провода."
     cs_sh "Почему?"
@@ -119,9 +110,7 @@ label cs_day01_35:
     with cs_sprite_change
     cs_el "Никогда такого разъёма не видел."
     cs_ls "Я почему-то не удивлена."
-    cs_narrator "Шурик посмотрел на меня."
     cs_sh "А что это за устройство вообще?"
     cs_narrator "Я замолчала."
-    cs_th "Ну вот."
-    cs_th "До этого вопроса мы всё-таки добрались."
+    cs_th "Ну вот, добрались и до этого вопроса."
     return

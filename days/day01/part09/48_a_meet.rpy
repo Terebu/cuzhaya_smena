@@ -21,7 +21,6 @@ label cs_day01_48_a:
     # cs_global_transition
     with cs_sprite_change
     cs_un "Давай…"
-    cs_narrator "Я слегка улыбнулась."
     cs_ls "Лена. Лена Соколова."
     # cs_darya_variety: reaction
     show cs_darya surprise_hand pioneer normal at cs_darya_normal_right
@@ -36,16 +35,13 @@ label cs_day01_48_a:
     with cs_sprite_change
     cs_un "Лена?"
     cs_ls "Угу."
-    cs_narrator "Пауза."
     # cs_speaker: present
     show un normal pioneer at cs_actor_left zorder 10
     $ cs_presence_stage()
     # cs_global_transition
     with cs_sprite_change
     cs_un "Меня тоже Лена зовут."
-    cs_narrator "Я посмотрела на неё."
-    cs_narrator "Затем на Дарью."
-    cs_narrator "Медленно кивнула."
+    cs_narrator "Я переглянулась с Дарьей."
     cs_ls "Великолепно. Теперь главное — не потеряться при перекличке."
     show un shy pioneer at cs_actor_left zorder 10
     $ cs_presence_stage()
@@ -82,19 +78,12 @@ label cs_day01_48_a:
     with cs_sprite_change
     cs_un "Приятно познакомиться."
     cs_da "Взаимно."
-    cs_narrator "На несколько секунд повисла тишина."
-    cs_narrator "Я снова обратила внимание на наше внешнее сходство."
-    cs_narrator "Фиолетовые волосы."
-    cs_narrator "Зелёные глаза."
-    cs_narrator "Даже рост не слишком различался."
-    cs_narrator "При этом характеры, кажется, были совершенно противоположными."
+    cs_narrator "Мы помолчали. Похожие волосы, глаза, даже рост. И, кажется, совсем разные характеры."
     cs_narrator "Я указала на свои волосы."
     cs_ls "Забавно получилось."
     cs_narrator "Тёзка вопросительно посмотрела на меня."
     cs_ls "У нас даже волосы почти одного цвета."
-    cs_narrator "Она посмотрела на мою причёску."
-    cs_narrator "Потом на свою прядь."
-    cs_narrator "И едва заметно улыбнулась."
+    cs_narrator "Она сравнила наши пряди и улыбнулась."
     # cs_speaker: present
     show un smile pioneer at cs_actor_left zorder 10
     $ cs_presence_stage()
@@ -102,13 +91,9 @@ label cs_day01_48_a:
     with cs_sprite_change
     cs_un "Правда, похожи."
     cs_da "Особенно глаза."
-    cs_narrator "Я кивнула."
     cs_ls "Хорошо, что причёски разные. Иначе нас пришлось бы подписывать."
-    cs_narrator "Лена тихо рассмеялась."
-    cs_narrator "Я почувствовала, что напряжение немного спало."
-    cs_th "Вот."
-    cs_th "Уже лучше."
-    cs_th "Не обязательно устраивать дипломатический приём. Иногда достаточно обычного знакомства."
+    cs_narrator "Тихонова рассмеялась. Напряжение спало."
+    cs_th "Обычное знакомство. Без дипломатического приёма."
     cs_ls "Ты куда шла?"
     # cs_speaker: present
     show un normal pioneer at cs_actor_left zorder 10
@@ -116,7 +101,6 @@ label cs_day01_48_a:
     # cs_global_transition
     with cs_sprite_change
     cs_un "В библиотеку."
-    cs_narrator "Я кивнула."
     cs_ls "Любишь читать?"
     # cs_speaker: present
     show un normal pioneer at cs_actor_left zorder 10
@@ -145,7 +129,6 @@ label cs_day01_48_a:
     $ cs_presence_stage()
     # cs_global_transition
     with cs_sprite_change
-    cs_narrator "Она задумчиво кивнула."
     # cs_speaker: present
     show un normal pioneer at cs_actor_left zorder 10
     $ cs_presence_stage()
@@ -158,7 +141,7 @@ label cs_day01_48_a:
     $ cs_presence_stage()
     # cs_global_transition
     with cs_sprite_change
-    cs_narrator "Лена немного смутилась."
+    cs_narrator "Тихонова смутилась."
     # cs_speaker: present
     show un shy pioneer at cs_actor_left zorder 10
     $ cs_presence_stage()
@@ -180,18 +163,11 @@ label cs_day01_48_a:
     # cs_global_transition
     with cs_sprite_change
     cs_un "Хорошо."
-    cs_narrator "Я кивнула."
-    cs_narrator "Всё-таки удивительная вещь."
-    cs_narrator "Ещё пару часов назад я знала её исключительно как персонажа визуальной новеллы."
-    cs_narrator "Знала некоторые события её истории."
-    cs_narrator "И считала, что понимаю её характер."
-    cs_narrator "А сейчас мы просто разговаривали о рисовании."
-    cs_narrator "И, кажется, это было гораздо важнее всех моих знаний о возможных концовках."
+    cs_narrator "Ещё недавно мне казалось, что я знаю её характер и будущее. А сейчас мы говорили о рисовании, и это было важнее."
     pause 0.6
     cs_narrator "Откуда-то со стороны дорожки раздался знакомый голос."
     cs_sy "Лена!"
-    cs_narrator "Я обернулась."
-    cs_narrator "Тёзка тоже."
+    cs_narrator "Мы обе обернулись."
     show cs_semen awkward pioneer far at cs_semen_far_right
     # cs_composition: regroup
     show un smile pioneer far at cs_actor_far_left zorder 10
@@ -200,10 +176,7 @@ label cs_day01_48_a:
     $ cs_presence_stage()
     with None
     label cs_check_day01_part09_trio:
-    cs_narrator "Семён остановился."
-    cs_narrator "Посмотрел сначала на неё."
-    cs_narrator "Потом на меня."
-    cs_narrator "Затем снова на неё."
+    cs_narrator "Семён остановился, переводя взгляд с неё на меня."
     show cs_semen surprised pioneer far at cs_semen_far_right
     $ cs_presence_stage()
     # cs_global_transition
@@ -237,9 +210,7 @@ label cs_day01_48_a:
     cs_sy "Я пока ничего не говорил!"
     cs_ls "Но выражение лица весьма красноречивое."
     cs_narrator "Тёзка не выдержала и тихо засмеялась."
-    cs_narrator "Семён посмотрел на неё."
-    cs_narrator "Потом на меня."
-    cs_narrator "И тоже усмехнулся."
+    cs_narrator "Семён оглядел нас обеих и тоже усмехнулся."
     show cs_semen smile pioneer far at cs_semen_far_right
     $ cs_presence_stage()
     # cs_global_transition
@@ -267,9 +238,7 @@ label cs_day01_48_a:
     with cs_sprite_leave
     label cs_director_check_f193d944d5:
     # cs_director_end
-    cs_narrator "Я посмотрела на тёзку."
-    cs_narrator "Она всё ещё улыбалась."
-    cs_narrator "Но уже совсем немного."
+    cs_narrator "Тихонова всё ещё улыбалась."
     cs_ls "Ладно, не будем тебя задерживать."
     # cs_speaker: present
     show un smile pioneer at cs_actor_left zorder 10
@@ -286,7 +255,6 @@ label cs_day01_48_a:
     # cs_global_transition
     with cs_sprite_change
     cs_un "Увидимся, Лена."
-    cs_narrator "Я улыбнулась."
     cs_ls "Удачи, Лена."
     # cs_darya_variety: reaction
     show cs_darya amused pioneer normal at cs_darya_normal_right

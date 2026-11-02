@@ -19,11 +19,7 @@ label cs_day01_09:
     with cs_sprite_change
     # cs_director_end
     cs_narrator "Славя остановилась возле одного из домиков."
-    cs_narrator "Я узнала его ещё до того, как рассмотрела полностью."
-    cs_narrator "Знакомое крыльцо."
-    cs_narrator "Знакомые окна."
-    cs_narrator "Знакомая дверь."
-    cs_narrator "И от этого опять стало неуютно."
+    cs_narrator "Я сразу узнала крыльцо, окна, дверь. И опять стало неуютно."
     cs_narrator "Я посмотрела на Дарью."
     cs_ls "Сейчас, кажется, будет ещё интереснее."
     # cs_darya_stage: present in story
@@ -39,12 +35,9 @@ label cs_day01_09:
     cs_mt "Да?"
     $ renpy.music.set_volume(0.35, delay=1.0, channel="music")
     play music cs_day_music_think fadeout 2.0 fadein 2.0
-    cs_narrator "У меня по спине прошёл неприятный холодок."
-    cs_narrator "Несмотря на жару."
-    cs_narrator "Потому что голос тоже оказался настоящим."
+    cs_narrator "По спине прошёл холодок, несмотря на жару."
     cs_narrator "Славя приоткрыла дверь."
     cs_sl "Тут две девушки приехали."
-    cs_narrator "Пауза."
     cs_mt "Какие ещё девушки?"
     cs_narrator "Я тихо обратилась к Дарье."
     cs_ls "Вот сейчас начинается импровизация."
@@ -77,15 +70,8 @@ label cs_day01_09:
     $ cs_presence_stage()
     # cs_global_transition
     with cs_sprite_change
-    cs_narrator "Белая рубашка."
-    cs_narrator "Красный галстук."
-    cs_narrator "Тёмная юбка."
-    cs_narrator "Тот самый образ."
-    cs_narrator "Я сразу её узнала."
-    cs_narrator "Ольга Дмитриевна остановилась на крыльце."
-    cs_narrator "Посмотрела на Славю."
-    cs_narrator "Потом на Дарью."
-    cs_narrator "И наконец на меня."
+    cs_narrator "Белая рубашка, красный галстук, тёмная юбка. Ольгу Дмитриевну я узнала сразу."
+    cs_narrator "Она остановилась на крыльце, оглядела Славю, Дарью и наконец меня."
     cs_narrator "Особенно долго её взгляд задержался на зимней куртке у меня в руках."
     # cs_camp_emotion: text reaction
     show mt smile pioneer far at cs_actor_far_right
@@ -95,10 +81,7 @@ label cs_day01_09:
     cs_mt "Добрый день."
     cs_narrator "Я слегка подняла ладонь."
     cs_ls "Здравствуйте."
-    cs_narrator "Пауза."
-    cs_narrator "Я посмотрела на Дарью."
-    cs_narrator "Потом снова на вожатую."
-    cs_narrator "И решила начать с самого простого."
+    cs_narrator "Я решила начать с самого простого."
     cs_ls "У нас небольшая логистическая проблема."
     show mt surprise pioneer far at cs_actor_far_right
     $ cs_presence_stage()
@@ -128,24 +111,16 @@ label cs_day01_09:
     # cs_global_transition
     with cs_sprite_change
     cs_narrator "Славя моментально приняла серьёзный вид."
-    cs_narrator "Я продолжила."
     cs_ls "И ещё наш автобус до сих пор стоит возле ворот."
     cs_mt "Ваш автобус?"
     cs_ls "Четыреста десятый."
     stop music fadeout 1.5
     pause 1.0
-    cs_narrator "На этот раз Ольга Дмитриевна очень медленно перевела взгляд на меня."
-    cs_narrator "Я заметила."
-    cs_narrator "И вот тут мне стало действительно интересно."
-    cs_narrator "До этого удивлялась Славя."
-    cs_narrator "Но реакция вожатой оказалась другой."
-    cs_narrator "Совсем немного."
-    cs_narrator "Едва уловимо."
-    cs_narrator "Будто этот номер ей что-то напомнил."
+    cs_narrator "На этот раз Ольга Дмитриевна медленно перевела взгляд на меня. Славя удивлялась, а вожатая будто что-то вспомнила."
+    cs_narrator "Что-то, связанное с номером автобуса."
     $ renpy.music.set_volume(0.35, delay=1.0, channel="music")
     play music cs_day_music_mystery fadeout 2.0 fadein 3.0
-    cs_narrator "Я слегка прищурилась."
-    cs_ls "Любопытно."
+    cs_ls "Странно."
     # cs_darya_stage: present in story
     show cs_dasha_winter explaining far at cs_darya_far_center
     $ cs_presence_stage()
@@ -154,15 +129,13 @@ label cs_day01_09:
     cs_da "Что?"
     cs_narrator "Не сводя глаз с Ольги Дмитриевны, я ответила:"
     cs_ls "Кажется, четыреста десятый ей знаком."
-    cs_narrator "Несколько секунд никто ничего не говорил."
-    cs_narrator "Затем вожатая заговорила."
+    cs_narrator "После короткого молчания вожатая заговорила."
     label cs_check_day01_name:
     cs_mt "Лена, давайте для начала зайдём внутрь."
     stop music fadeout 1.0
     $ renpy.music.set_volume(0.2, delay=1.5, channel="ambience")
     pause 1.5
-    cs_narrator "Я замерла."
-    cs_narrator "Очень медленно подняла взгляд."
+    cs_narrator "Я замерла и подняла взгляд."
     cs_ls "Простите."
     cs_narrator "Теперь остановилась уже она."
     cs_mt "Что?"
@@ -179,10 +152,7 @@ label cs_day01_09:
     with cs_sprite_change
     cs_mt "Лена."
     pause 1.5
-    cs_narrator "Я ничего не ответила."
-    cs_narrator "Она тоже."
-    cs_narrator "Славя посмотрела на Ольгу Дмитриевну."
-    cs_narrator "Дарья — на меня."
+    cs_narrator "Мы обе молчали. Славя посмотрела на вожатую, Дарья — на меня."
     cs_narrator "Я сделала один шаг к крыльцу."
     cs_ls "Славя вам моё имя сказала?"
     show sl surprise pioneer far at cs_actor_far_left
@@ -191,7 +161,6 @@ label cs_day01_09:
     with cs_sprite_change
     cs_narrator "Славя сразу покачала головой."
     cs_sl "Нет."
-    cs_narrator "Я повернулась к ней."
     cs_ls "Точно?"
     # cs_camp_emotion: text reaction
     show sl normal pioneer far at cs_actor_far_left
@@ -199,13 +168,9 @@ label cs_day01_09:
     # cs_global_transition
     with cs_sprite_change
     cs_sl "Точно. Я даже не знала, как тебя зовут."
-    cs_narrator "Я снова посмотрела на вожатую."
-    cs_narrator "Пять секунд."
-    cs_narrator "Возможно, больше."
-    cs_narrator "Мы просто стояли друг напротив друга."
+    cs_narrator "Я снова посмотрела на вожатую. Несколько секунд мы стояли друг напротив друга."
     $ renpy.music.set_volume(0.22, delay=1.0, channel="music")
     play music cs_day_music_unknown fadeout 2.0 fadein 3.0
-    cs_narrator "Потом я негромко произнесла:"
     label cs_check_day01_tension:
     cs_ls "Вот теперь интересно."
     # cs_darya_stage: present in story
@@ -214,11 +179,8 @@ label cs_day01_09:
     # cs_global_transition
     with cs_sprite_change
     cs_da "Что именно?"
-    cs_narrator "Я не сводила глаз с Ольги Дмитриевны."
-    cs_narrator "Сарказм почему-то совершенно перестал помогать."
+    cs_narrator "Сарказм перестал помогать."
     cs_ls "Кажется, мы добрались до событий, которых в оригинальной истории не было."
     pause 1.0
-    cs_narrator "Ольга Дмитриевна продолжала смотреть на меня."
-    cs_narrator "И мне всё сильнее казалось, что она собирается что-то сказать."
-    cs_narrator "Но почему-то медлит."
+    cs_narrator "Вожатая смотрела на меня, будто собиралась что-то сказать, но медлила."
     return

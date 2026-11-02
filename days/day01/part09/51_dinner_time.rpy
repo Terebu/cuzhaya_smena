@@ -16,9 +16,7 @@ label cs_day01_51:
     # cs_director_end
     cs_narrator "В этот момент над лагерем раздался сигнал горна."
     play sound "sound/sfx/dinner_jingle_speaker.ogg"
-    cs_narrator "Я остановилась."
-    cs_narrator "Посмотрела в сторону столовой."
-    cs_narrator "Затем на Дарью."
+    cs_narrator "Я посмотрела в сторону столовой."
     cs_ls "А вот и звуковое сопровождение следующего пункта программы."
     # cs_darya_variety: reaction
     show cs_darya thinking pioneer normal at cs_darya_normal_center
@@ -29,7 +27,6 @@ label cs_day01_51:
     cs_ls "Судя по всему."
     cs_narrator "Она посмотрела на дорожку."
     cs_da "Пойдём?"
-    cs_narrator "Я кивнула."
     cs_ls "Пойдём."
     cs_narrator "Мы направились к столовой."
     # cs_director_begin: REFLECTIVE_SHOT: Evening camp before looking back at Darya
@@ -37,13 +34,8 @@ label cs_day01_51:
     with cs_sprite_change
     label cs_director_check_368a2a6837:
     # cs_director_end
-    cs_narrator "Вокруг постепенно оживал лагерь."
-    cs_narrator "Открывались двери домиков."
-    cs_narrator "На дорожках появлялись пионеры."
-    cs_narrator "Кто-то торопился, кто-то спокойно шёл, разговаривая с друзьями."
-    cs_narrator "Обычный летний вечер."
-    cs_narrator "В обычном пионерском лагере."
-    cs_narrator "Только для меня он уже давно перестал быть обычным."
+    cs_narrator "На дорожки снова высыпали пионеры. Кто-то торопился, кто-то болтал с друзьями."
+    cs_narrator "Для них — обычный летний вечер."
     # cs_director_begin: Return to direct interaction: Evening camp before looking back at Darya
     $ cs_frame_focus(["cs_darya"])
     with cs_sprite_change
@@ -56,9 +48,7 @@ label cs_day01_51:
     # cs_global_transition
     with cs_sprite_change
     cs_narrator "Она шла рядом, слегка улыбаясь чему-то своему."
-    cs_th "Может, я и не знаю, как мы отсюда выберемся."
-    cs_th "Может, знакомый сюжет уже изменился настолько, что полагаться на него бесполезно."
-    cs_th "Но хотя бы сегодня я не одна."
+    cs_th "Не знаю, как мы выберемся отсюда и сколько осталось от знакомого сюжета. Но сегодня я хотя бы не одна."
     cs_narrator "Я слегка улыбнулась."
     cs_ls "Даш."
     # cs_darya_variety: reaction

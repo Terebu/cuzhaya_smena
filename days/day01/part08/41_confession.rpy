@@ -13,16 +13,10 @@ label cs_day01_41:
     with cs_sprite_change
     # cs_director_end
     cs_narrator "Мы остановились у края дорожки."
-    cs_narrator "Солнце медленно опускалось за деревья."
-    cs_narrator "На земле вытянулись длинные тени."
-    cs_narrator "Где-то неподалёку разговаривали пионеры, но сам участок дорожки оставался почти пустым."
-    cs_narrator "Я посмотрела на Дарью."
-    cs_narrator "Затем отвела взгляд."
-    cs_th "Ну давай, Соколова."
-    cs_th "С Ольгой Дмитриевной спорить можешь."
-    cs_th "Семёна вопросами засыпать можешь."
-    cs_th "Даже советским инженерам рассказать о технологиях будущего не постеснялась."
-    cs_th "А сейчас внезапно закончились слова."
+    cs_narrator "Солнце опускалось за деревья, вытягивая тени. Голоса доносились издалека; здесь почти никого не было."
+    cs_narrator "Я посмотрела на Дарью и отвела взгляд."
+    cs_th "Ну давай, Соколова. С вожатой спорить можешь, Семёна засыпать вопросами можешь. О будущем инженерам рассказала."
+    cs_th "А теперь закончились слова."
     cs_narrator "Я тихо вздохнула."
     cs_ls "У меня никогда не было отношений."
     # cs_darya_variety: reaction
@@ -30,8 +24,7 @@ label cs_day01_41:
     $ cs_presence_stage()
     # cs_global_transition
     with cs_sprite_change
-    cs_narrator "Дарья моргнула."
-    cs_narrator "Кажется, такого начала она не ожидала."
+    cs_narrator "Такого начала Дарья не ожидала."
     cs_da "Совсем?"
     cs_ls "Угу."
     cs_narrator "Я пожала плечами."
@@ -42,12 +35,10 @@ label cs_day01_41:
     # cs_global_transition
     with cs_sprite_change
     cs_da "Почему?"
-    cs_narrator "Я задумалась."
     cs_ls "Не знаю. Наверное, мне слишком хорошо было одной."
     cs_narrator "Немного помолчала."
     cs_ls "Или просто не встречался человек, ради которого хотелось бы что-то менять."
-    cs_narrator "Дарья внимательно смотрела на меня."
-    cs_narrator "На этот раз без улыбки."
+    cs_narrator "Дарья смотрела внимательно, без улыбки."
     cs_da "Но у тебя ведь много знакомых?"
     cs_ls "В основном в интернете."
     # cs_darya_variety: reaction
@@ -57,9 +48,7 @@ label cs_day01_41:
     with cs_sprite_change
     cs_da "Это другое."
     cs_ls "Вот именно."
-    cs_narrator "Я поправила галстук."
-    cs_narrator "Не потому, что он мешал."
-    cs_narrator "Просто нужно было чем-то занять руки."
+    cs_narrator "Я поправила галстук, чтобы занять руки."
     label cs_check_day01_part08_confession:
     cs_ls "В общем… Кажется, ты мне нравишься."
     pause 1.0
@@ -67,9 +56,7 @@ label cs_day01_41:
     $ cs_presence_stage()
     # cs_global_transition
     with cs_sprite_change
-    cs_narrator "Дарья остановилась совершенно неподвижно."
-    cs_narrator "Несколько секунд она просто смотрела на меня."
-    cs_narrator "Потом чуть наклонила голову."
+    cs_narrator "Дарья замерла. Потом наклонила голову."
     cs_da "В каком смысле?"
     cs_narrator "Я усмехнулась."
     cs_ls "Боюсь, в самом очевидном."
@@ -80,8 +67,7 @@ label cs_day01_41:
     $ cs_presence_stage()
     # cs_global_transition
     with cs_sprite_change
-    cs_narrator "Дарья отвела взгляд."
-    cs_narrator "На её лице появилось выражение человека, которому только что сообщили нечто неожиданное, но не обязательно неприятное."
+    cs_narrator "Она отвела взгляд. Кажется, неожиданность была не совсем неприятной."
     cs_da "Лен…"
     cs_ls "Да?"
     # cs_darya_variety: reaction
@@ -100,12 +86,10 @@ label cs_day01_41:
     with cs_sprite_change
     cs_narrator "Она чуть улыбнулась."
     cs_da "И ты уже говоришь такие вещи?"
-    cs_narrator "Я ненадолго задумалась."
     cs_ls "Ну… Если учитывать обычное знакомство, наверное, рановато."
     cs_narrator "Я посмотрела на дорожку."
     cs_ls "Но сегодня у нас получилось далеко не обычное знакомство."
-    cs_narrator "Дарья ничего не ответила."
-    cs_narrator "Я продолжила:"
+    cs_narrator "Не дождавшись ответа, я продолжила:"
     cs_ls "Хотя это не означает, что ты обязана что-то отвечать прямо сейчас."
     # cs_darya_variety: reaction
     show cs_darya thinking pioneer normal at cs_darya_normal_center
@@ -113,8 +97,7 @@ label cs_day01_41:
     # cs_global_transition
     with cs_sprite_change
     cs_da "Тогда почему решила сказать?"
-    cs_narrator "Вот здесь уже пришлось подумать серьёзнее."
-    cs_narrator "Я посмотрела на неё."
+    cs_narrator "Вот здесь пришлось подумать."
     cs_ls "Потому что не хочу делать вид, будто ничего не чувствую."
     pause 0.8
     cs_ls "Сама ещё не до конца понимаю, что с этим делать."
@@ -126,6 +109,5 @@ label cs_day01_41:
     $ cs_presence_stage()
     # cs_global_transition
     with cs_sprite_change
-    cs_narrator "Она тихо рассмеялась."
-    cs_narrator "И мне тоже стало немного легче."
+    cs_narrator "Она тихо рассмеялась, и мне стало легче."
     return

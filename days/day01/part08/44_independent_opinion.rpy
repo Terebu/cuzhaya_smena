@@ -6,9 +6,7 @@ label cs_day01_44:
     $ cs_frame_focus(["cs_darya", "cs_semen"])
     with cs_sprite_change
     # cs_director_end
-    cs_narrator "Я села на свободный край скамейки."
-    cs_narrator "Дарья осталась рядом."
-    cs_narrator "Семён посмотрел на меня."
+    cs_narrator "Я села с краю. Дарья осталась рядом."
     show cs_semen thinking_alt pioneer normal at cs_semen_normal_left
     $ cs_presence_stage()
     # cs_global_transition
@@ -20,16 +18,12 @@ label cs_day01_44:
     # cs_global_transition
     with cs_sprite_change
     cs_sy "Слишком довольная."
-    cs_narrator "Я невольно улыбнулась."
     cs_ls "Есть один вопрос."
     cs_sy "Ну конечно."
-    cs_narrator "Я поправила галстук."
-    cs_narrator "Сделала совершенно серьёзное лицо."
+    cs_narrator "Я поправила галстук с серьёзным видом."
     cs_ls "Как считаешь, из меня вышел бы нормальный человек для свидания?"
     pause 0.8
-    cs_narrator "Семён несколько секунд молчал."
-    cs_narrator "Потом медленно повернулся к Дарье."
-    cs_narrator "Та отвела взгляд, стараясь не рассмеяться."
+    cs_narrator "Семён повернулся к Дарье. Та старательно прятала улыбку."
     show cs_semen thinking_alt pioneer normal at cs_semen_normal_left
     $ cs_presence_stage()
     # cs_global_transition
@@ -49,16 +43,12 @@ label cs_day01_44:
     with cs_sprite_change
     cs_sy "Почему именно я?"
     cs_ls "Ты сидел ближе всех."
-    cs_narrator "Дарья не выдержала и рассмеялась."
-    cs_narrator "Семён посмотрел на неё."
-    cs_narrator "Потом снова на меня."
+    cs_narrator "Дарья рассмеялась. Семён снова посмотрел на меня."
     cs_sy "А тебе самой как кажется?"
-    cs_narrator "Я задумалась."
     cs_ls "Думаю, у меня имеются определённые недостатки."
     cs_sy "Например?"
     cs_ls "Иногда слишком много говорю."
     cs_da "Иногда?"
-    cs_narrator "Я повернулась к ней."
     cs_ls "Прошу не вмешиваться в работу независимой комиссии."
     # cs_darya_variety: reaction
     show cs_darya hands_on_hips pioneer normal at cs_darya_normal_right
@@ -72,8 +62,6 @@ label cs_day01_44:
     # cs_global_transition
     with cs_sprite_change
     cs_sy "Вы обе друг друга стоите."
-    cs_narrator "Я медленно повернулась к Дарье."
-    cs_narrator "Потом обратно к Семёну."
     cs_ls "Вот видишь. Уже есть положительная оценка совместимости."
     show cs_semen awkward_alt pioneer normal at cs_semen_normal_left
     $ cs_presence_stage()
@@ -93,7 +81,6 @@ label cs_day01_44:
     # cs_global_transition
     with cs_sprite_change
     cs_sy "Нет, ну вы действительно забавные."
-    cs_narrator "Я усмехнулась."
     cs_ls "Спасибо. На этом экспертное заключение принимается."
     cs_narrator "Он посмотрел на нас ещё раз."
     show cs_semen relaxed pioneer normal at cs_semen_normal_left
@@ -101,15 +88,12 @@ label cs_day01_44:
     # cs_global_transition
     with cs_sprite_change
     cs_sy "Только вы сначала сами разберитесь, что у вас происходит."
-    cs_narrator "Я коротко кивнула."
     cs_ls "Этим и занимаемся."
-    cs_narrator "Дарья посмотрела на меня."
-    cs_narrator "На секунду наши взгляды встретились."
+    cs_narrator "Мы с Дарьей встретились взглядами."
     # cs_darya_variety: reaction
     show cs_darya smile pioneer normal at cs_darya_normal_right
     $ cs_presence_stage()
     # cs_global_transition
     with cs_sprite_change
-    cs_narrator "Она слегка улыбнулась."
-    cs_narrator "И почему-то мне совершенно не захотелось продолжать шутку."
+    cs_narrator "Она улыбнулась, и продолжать шутку расхотелось."
     return

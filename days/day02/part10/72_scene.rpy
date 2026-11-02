@@ -13,14 +13,12 @@ label cs_day02_72:
     $ cs_frame_focus(["cs_darya"])
     with cs_sprite_change
     # cs_director_end
-    cs_narrator "Дарья отложила книгу."
-    cs_narrator "Посмотрела на меня."
+    cs_narrator "Дарья отложила книгу. Посмотрела на меня."
     show cs_darya thinking pioneer normal at cs_darya_normal_right
     $ cs_presence_stage()
     # cs_global_transition
     with cs_sprite_change
     cs_da "Ну что, как тебе вечер в библиотеке?"
-    cs_narrator "Я задумалась."
     cs_ls "Хорошо."
     show cs_darya thinking pioneer normal at cs_darya_normal_right
     $ cs_presence_stage()
@@ -29,9 +27,7 @@ label cs_day02_72:
     cs_da "Только хорошо?"
     cs_narrator "Я улыбнулась."
     cs_ls "Очень хорошо."
-    cs_narrator "Она рассмеялась."
-    cs_narrator "Я немного помолчала."
-    cs_narrator "Потом посмотрела на неё серьёзнее."
+    cs_narrator "Она рассмеялась. Я помолчала. Потом посмотрела на неё серьёзнее."
     cs_ls "Знаешь, я сегодня кое-что решила."
     show cs_darya thinking pioneer normal at cs_darya_normal_right
     $ cs_presence_stage()
@@ -54,7 +50,6 @@ label cs_day02_72:
     # cs_global_transition
     with cs_sprite_change
     cs_da "Это ты только сегодня заметила?"
-    cs_narrator "Я улыбнулась."
     cs_ls "Нет. Просто раньше воспринимала её раздражение как повод пошутить ещё раз."
     cs_narrator "Немного помолчала."
     cs_ls "А сегодня поняла, что ей не обязательно должно быть весело от каждой моей шутки."
@@ -66,7 +61,6 @@ label cs_day02_72:
     # cs_global_transition
     with cs_sprite_change
     cs_da "Согласна."
-    cs_narrator "Я улыбнулась."
     cs_ls "К тому же выяснилось, что с Женей можно прекрасно разговаривать о книгах."
     show cs_darya thinking pioneer normal at cs_darya_normal_right
     $ cs_presence_stage()
@@ -74,12 +68,9 @@ label cs_day02_72:
     with cs_sprite_change
     cs_da "Даже не выводя её из себя?"
     cs_ls "Представь себе."
-    cs_narrator "Она рассмеялась."
-    cs_narrator "Я тоже улыбнулась."
-    cs_narrator "Потом задумалась."
+    cs_narrator "Я тоже улыбнулась. Потом задумалась."
     cs_ls "И это не значит, что теперь я буду рядом с ней только молчать. Просто стану внимательнее к тому, когда она хочет разговаривать, а когда нет."
-    cs_narrator "Дарья немного помолчала."
-    cs_narrator "Затем произнесла:"
+    cs_narrator "Дарья немного помолчала. Затем произнесла:"
     show cs_darya shrug pioneer normal at cs_darya_normal_right
     $ cs_presence_stage()
     # cs_global_transition
@@ -93,16 +84,13 @@ label cs_day02_72:
     # cs_global_transition
     with cs_sprite_change
     cs_da "Да. Ты ведь сама сегодня сказала, что не хочешь, чтобы тебя воспринимали только с одной стороны."
-    cs_narrator "Я улыбнулась."
     cs_ls "Хорошо запоминаешь."
     show cs_darya shrug pioneer normal at cs_darya_normal_right
     $ cs_presence_stage()
     # cs_global_transition
     with cs_sprite_change
     cs_da "Стараюсь."
-    cs_narrator "Несколько секунд мы молчали."
-    cs_narrator "Потом я осторожно улеглась поперёк кровати."
-    cs_narrator "Повернулась к Даше."
+    cs_narrator "Несколько секунд мы молчали. Потом я осторожно улеглась поперёк кровати. Повернулась к Дарье."
     cs_ls "Вообще, знаешь, с разными людьми я веду себя по-разному."
     cs_narrator "Она посмотрела на меня."
     show cs_darya thinking pioneer normal at cs_darya_normal_right
@@ -110,7 +98,6 @@ label cs_day02_72:
     # cs_global_transition
     with cs_sprite_change
     cs_da "Например?"
-    cs_narrator "Я задумалась."
     cs_ls "С Женей интересно обсуждать книги."
     cs_narrator "Дарья кивнула."
     cs_ls "Со Славей приятно просто работать. Она умеет организовать всё так, что даже я начинаю выглядеть полезным членом общества."
@@ -129,11 +116,8 @@ label cs_day02_72:
     # cs_global_transition
     with cs_sprite_change
     cs_da "А с Семёном?"
-    cs_narrator "Я задумалась."
-    cs_narrator "Очень серьёзно."
-    cs_narrator "Потом улыбнулась."
+    cs_narrator "Я задумалась. Очень серьёзно. Потом улыбнулась."
     cs_ls "С Семёном у нас непрерывное соревнование по взаимному поддразниванию."
-    cs_narrator "Дарья засмеялась."
     show cs_darya shrug pioneer normal at cs_darya_normal_right
     $ cs_presence_stage()
     # cs_global_transition
@@ -147,8 +131,7 @@ label cs_day02_72:
     # cs_global_transition
     with cs_sprite_change
     cs_da "Согласна."
-    cs_narrator "Я на секунду вспомнила дорогу."
-    cs_narrator "Разговор перед исследованием."
+    cs_narrator "Я на секунду вспомнила дорогу. Разговор перед исследованием."
     if cs_friend_se >= 2:
         cs_narrator "Семёна, который сам предложил помощь перед концертом."
     else:
@@ -163,21 +146,16 @@ label cs_day02_72:
     # cs_global_transition
     with cs_sprite_change
     cs_da "Что со мной?"
-    cs_narrator "Я немного помолчала."
-    cs_narrator "Улыбнулась."
+    cs_narrator "Я помолчала. Улыбнулась."
     cs_ls "С тобой мне хочется быть собой. Без необходимости каждый раз объяснять, почему я сегодня разговорчивая, а завтра могу молчать несколько часов."
-    cs_narrator "Дарья посмотрела на меня."
-    cs_narrator "Несколько секунд ничего не говорила."
-    cs_narrator "Потом тихо улыбнулась."
+    cs_narrator "Дарья посмотрела на меня. Несколько секунд ничего не говорила. Потом тихо улыбнулась."
     show cs_darya shrug pioneer normal at cs_darya_normal_right
     $ cs_presence_stage()
     # cs_global_transition
     with cs_sprite_change
     cs_da "Мне это нравится."
     cs_narrator "Я почувствовала, что тоже улыбаюсь."
-    cs_th "Вот ведь."
-    cs_th "Снова удалось сказать что-то совершенно серьёзное."
-    cs_th "И мир не рухнул."
+    cs_th "Вот ведь. Снова удалось сказать что-то серьёзное. И мир не рухнул."
     cs_narrator "Я слегка приподнялась."
     cs_ls "Хотя предупреждаю: это не означает, что от моих шуток ты теперь официально освобождена."
     cs_narrator "Дарья рассмеялась."

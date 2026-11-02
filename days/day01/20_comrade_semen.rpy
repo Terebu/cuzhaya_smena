@@ -17,47 +17,24 @@ label cs_day01_20:
     $ cs_frame_focus(["cs_darya"])
     with cs_sprite_change
     # cs_director_end
-    cs_narrator "Столовая встретила нас гулом голосов."
-    cs_narrator "Звенела посуда."
-    cs_narrator "Кто-то смеялся."
-    cs_narrator "Пионеры переговаривались через столы."
-    cs_narrator "Всё выглядело удивительно обыденно."
-    cs_narrator "И почти сразу я увидела его."
-    cs_narrator "За одним из столов сидел парень."
-    cs_narrator "Тёмные волосы."
-    cs_narrator "Пионерская форма."
-    cs_narrator "И слегка потерянное выражение лица человека, который всё ещё не до конца принял окружающую действительность."
+    cs_narrator "Столовая встретила гулом голосов и звоном посуды. Пионеры переговаривались через столы — самый обыкновенный обед."
+    cs_narrator "Я почти сразу увидела парня в форме: тёмные волосы, потерянное лицо человека, который ещё не освоился."
     cs_narrator "{b}Семён.{/b}"
     stop music fadeout 2.0
     $ renpy.music.set_volume(0.25, delay=1.0, channel="ambience")
-    cs_narrator "Не стилизованный рисунок."
-    cs_narrator "Не изображение из меню игры."
     cs_narrator "Обычный живой человек."
-    cs_narrator "Он поднял глаза."
-    cs_narrator "Увидел Ольгу Дмитриевну."
-    cs_narrator "Потом меня."
-    cs_narrator "Затем Дарью."
-    cs_narrator "И застыл."
-    cs_narrator "Я тоже остановилась."
+    cs_narrator "Он увидел вожатую, нас с Дарьей — и застыл. Я тоже остановилась."
     cs_th "Ну здравствуй, главный герой."
     $ renpy.music.set_volume(0.3, delay=1.0, channel="music")
     play music cs_day_music_think fadeout 1.5 fadein 2.0
-    cs_narrator "Семён явно понятия не имел, кто мы такие."
-    cs_narrator "Зато я знала о нём слишком много."
-    cs_narrator "Его прежнюю жизнь."
-    cs_narrator "Зимнюю Москву."
-    cs_narrator "Автобус."
-    cs_narrator "Возможные отношения."
-    cs_narrator "Разные варианты будущего."
-    cs_narrator "И даже то, кем могли стать некоторые его версии после множества повторений."
-    cs_narrator "Всё это были сведения, которые сейчас категорически не стоило произносить вслух."
+    cs_narrator "Он понятия не имел, кто мы. А я знала его прежнюю жизнь, зимнюю Москву, автобус. Возможные концовки. Даже то, кем стали некоторые его версии после множества повторений."
+    cs_narrator "Сведения, которые сейчас категорически не стоило произносить вслух."
     # cs_darya_stage: present in story
     show cs_darya thinking pioneer normal at cs_darya_normal_center
     $ cs_presence_stage()
     # cs_global_transition
     with cs_sprite_change
     cs_da "Он?"
-    cs_narrator "Я кивнула."
     cs_ls "Ага."
     # cs_darya_stage: present in story
     show cs_darya surprised pioneer normal at cs_darya_normal_center
@@ -91,11 +68,8 @@ label cs_day01_20:
     with cs_sprite_change
     cs_narrator "Парень медленно поднялся."
     label cs_check_day01_part04_semen:
-    cs_narrator "Мне пришлось приложить некоторое усилие, чтобы не улыбнуться."
-    cs_narrator "Ситуация была по-настоящему нелепой."
-    cs_narrator "Человек, который по правилам знакомой мне истории должен был быть единственным пришельцем из будущего, теперь смотрел на двух девушек, прибывших тем же автобусом сутки спустя."
-    cs_narrator "Причём одна знала его историю почти наизусть."
-    cs_narrator "А другая тоже была обычной девушкой из Москвы 2026 года и так же не понимала, как мы сюда попали."
+    cs_narrator "Пришлось сдержать улыбку: единственный пришелец из будущего смотрел на двух новых пассажирок того же автобуса."
+    cs_narrator "Одна знала его историю почти наизусть. Другая понимала происходящее не больше него."
     cs_narrator "Я протянула руку."
     cs_ls "Лена."
     cs_narrator "Он пожал её."
@@ -107,12 +81,8 @@ label cs_day01_20:
     label cs_check_camp_semen_awkward:
     cs_sy "Семён."
     cs_narrator "Несколько секунд я смотрела ему в глаза."
-    cs_th "И что теперь?"
-    cs_th "Спросить, как дела?"
-    cs_th "Пожелать удачного прохождения?"
-    cs_th "Предупредить про концовки?"
-    cs_narrator "Нет."
-    cs_narrator "Начнём с простого."
+    cs_th "И что теперь? Спросить, как дела? Пожелать удачного прохождения? Предупредить про концовки?"
+    cs_narrator "Нет. Начнём с простого."
     cs_ls "Слушай."
     # cs_camp_emotion: text reaction
     show cs_semen serious pioneer far at cs_semen_far_right
@@ -136,22 +106,17 @@ label cs_day01_20:
     $ cs_presence_stage()
     # cs_global_transition
     with cs_sprite_change
-    cs_narrator "Его лицо изменилось мгновенно."
-    cs_narrator "Словно я только что произнесла пароль от чего-то, о существовании чего он предпочёл бы никому не рассказывать."
-    cs_narrator "Семён застыл."
+    cs_narrator "Семён застыл, будто я произнесла пароль от чего-то, о чём он предпочёл бы молчать."
     label cs_check_day01_part04_reaction:
     cs_sy "Откуда ты…"
     $ renpy.music.set_volume(0.3, delay=1.0, channel="music")
     play music cs_day_music_unknown fadeout 1.5 fadein 2.5
     cs_narrator "Я едва заметно улыбнулась."
     cs_ls "А вот теперь, товарищ Семён…"
-    cs_narrator "Дарья рядом тихо вздохнула."
-    cs_narrator "Кажется, она уже догадывалась, куда я веду."
-    cs_narrator "Я продолжила, сохраняя абсолютно серьёзное выражение лица:"
+    cs_narrator "Дарья рядом вздохнула. Уже догадалась, куда я веду."
     label cs_check_day01_part04_final:
     cs_ls "…у нас с тобой есть о чём поговорить."
     pause 1.0
-    cs_narrator "Он продолжал смотреть на меня."
-    cs_narrator "А я впервые за всё время почувствовала, что могу получить ответ от человека, который действительно понимает хотя бы часть происходящего."
+    cs_narrator "Впервые мне показалось, что я смогу получить ответ от человека, который понимает хотя бы часть происходящего."
     cs_th "По крайней мере, очень на это надеюсь."
     return

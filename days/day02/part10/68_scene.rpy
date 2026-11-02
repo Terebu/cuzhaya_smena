@@ -14,24 +14,19 @@ label cs_day02_68:
     $ cs_frame_focus(["cs_darya", "cs_zhenya"])
     with cs_sprite_change
     # cs_director_end
-    cs_narrator "Женя как раз закрывала журнал."
-    cs_narrator "Когда я подошла, она подняла голову."
-    cs_narrator "Посмотрела на книгу."
+    cs_narrator "Женя как раз закрывала журнал. Когда я подошла, она подняла голову. Посмотрела на книгу."
     show cs_zhenya thinking pioneer normal at cs_darya_normal_left
     $ cs_presence_stage()
     # cs_global_transition
     with cs_sprite_change
     cs_mz "Всё?"
-    cs_narrator "Я кивнула."
     cs_ls "Дочитала."
-    cs_narrator "Она протянула руку."
-    cs_narrator "Я аккуратно передала ей экземпляр."
+    cs_narrator "Она протянула руку. Я аккуратно передала ей экземпляр."
     show cs_zhenya thinking pioneer normal at cs_darya_normal_left
     $ cs_presence_stage()
     # cs_global_transition
     with cs_sprite_change
     cs_mz "И как?"
-    cs_narrator "Я немного подумала."
     cs_ls "Хорошая книга."
     cs_narrator "Женя приподняла бровь."
     show cs_zhenya thinking pioneer normal at cs_darya_normal_left
@@ -54,7 +49,5 @@ label cs_day02_68:
     cs_ls "Наоборот."
     cs_narrator "Немного задумалась."
     cs_ls "Он не идеальный. Но честный. Персонажи не стали внезапно другими людьми только потому, что история подошла к концу."
-    cs_narrator "Женя посмотрела на обложку."
-    cs_narrator "Потом на меня."
-    cs_narrator "И чуть заметно улыбнулась."
+    cs_narrator "Женя посмотрела на обложку, потом на меня. И чуть заметно улыбнулась."
     return

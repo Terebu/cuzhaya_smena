@@ -26,8 +26,7 @@ label cs_day02_64d2:
     $ cs_frame_focus(["cs_zhenya", "cs_darya"])
     with cs_sprite_change
     # cs_director_end
-    cs_narrator "Женя посмотрела на часы."
-    cs_narrator "Потом на книгу."
+    cs_narrator "Женя посмотрела на часы, потом на книгу."
     # cs_presence_keep: hide cs_semen
     # cs_presence_keep: hide mz
     # cs_presence_keep: hide un
@@ -93,7 +92,6 @@ label cs_day02_64d2:
     with cs_sprite_change
     cs_mz "Особенно небольшое. Такие обычно самые шумные."
     cs_narrator "Дарья тихо рассмеялась."
-    cs_narrator "Я задумалась."
     cs_ls "Тогда просто почитаю."
     cs_narrator "Женя кивнула."
     cs_mz "Вот это уже хорошая идея."
@@ -104,7 +102,5 @@ label cs_day02_64d2:
     cs_narrator "Я улыбнулась."
     cs_ls "Договорились."
     cs_narrator "Она вернулась к ужину."
-    cs_th "Никаких особенных обещаний."
-    cs_th "Просто возможность зайти и поговорить."
-    cs_th "Но, пожалуй, для начала знакомства этого вполне достаточно."
+    cs_th "Никаких особенных обещаний. Просто возможность зайти и поговорить. Но, пожалуй, для начала знакомства этого вполне достаточно."
     return

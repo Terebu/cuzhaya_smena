@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
 label cs_day03_176:
     $ save_name = "Чужая смена — День 3: Девушка, которая ждала"
-    cs_narrator "Я спустилась с крыльца."
-    cs_narrator "Сделала несколько шагов."
+    cs_narrator "Я спустилась с крыльца. Сделала несколько шагов."
     $ cs_frame_focus(["cs_darya"])
     with cs_sprite_change
     cs_narrator "И услышала знакомый голос."
@@ -10,12 +9,10 @@ label cs_day03_176:
         $ cs_pov_end()
         with cs_sprite_change
     cs_da "Ну наконец-то."
-    cs_narrator "Я обернулась."
-    cs_narrator "На скамейке неподалёку сидела Даша."
+    cs_narrator "Я обернулась. На скамейке неподалёку сидела Даша."
     $ cs_da_waiting_outside_library_day3 = True
     $ cs_day03_darya_destination = "with_lena"
-    cs_narrator "Она поднялась, когда я посмотрела в её сторону."
-    cs_narrator "Я немного удивилась."
+    cs_narrator "Она поднялась, когда я посмотрела в её сторону. Я немного удивилась."
     if cs_reflective_shot:
         $ cs_pov_end()
         with cs_sprite_change
@@ -30,8 +27,7 @@ label cs_day03_176:
         $ cs_pov_end()
         with cs_sprite_change
     cs_ls "Ты чего здесь?"
-    cs_narrator "Она посмотрела на библиотеку."
-    cs_narrator "Потом на меня."
+    cs_narrator "Она посмотрела на библиотеку, потом на меня."
     if cs_reflective_shot:
         $ cs_pov_end()
         with cs_sprite_change
@@ -42,12 +38,11 @@ label cs_day03_176:
             $ cs_pov_end()
             with cs_sprite_change
         cs_ls "А я думала, ты уже пошла в домик."
-        cs_narrator "Дарья покачала головой."
+        cs_narrator "Даша покачала головой."
         if cs_reflective_shot:
             $ cs_pov_end()
             with cs_sprite_change
         cs_da "Нет. Я же сказала, что немного посижу здесь."
-        cs_narrator "Я кивнула."
         if cs_reflective_shot:
             $ cs_pov_end()
             with cs_sprite_change
@@ -68,7 +63,7 @@ label cs_day03_176:
             $ cs_pov_end()
             with cs_sprite_change
         cs_ls "А ты разве не к Мику собиралась?"
-        cs_narrator "Дарья кивнула."
+        cs_narrator "Даша кивнула."
         if cs_reflective_shot:
             $ cs_pov_end()
             with cs_sprite_change
@@ -82,12 +77,11 @@ label cs_day03_176:
             $ cs_pov_end()
             with cs_sprite_change
         cs_da "Шла к домику, увидела, что здесь ещё горит свет. Подумала, что ты, наверное, всё ещё читаешь."
-        cs_narrator "Я улыбнулась."
         if cs_reflective_shot:
             $ cs_pov_end()
             with cs_sprite_change
         cs_ls "Очень смелая гипотеза."
-        cs_narrator "Дарья рассмеялась."
+        cs_narrator "Даша рассмеялась."
         if renpy.showing("cs_darya"):
             show cs_darya amused pioneer normal
             $ cs_presence_stage()
@@ -106,8 +100,7 @@ label cs_day03_176:
         $ cs_pov_end()
         with cs_sprite_change
     cs_da "Нет, всего несколько минут. Не успела замёрзнуть."
-    cs_narrator "Я немного помолчала."
-    cs_narrator "Потом улыбнулась."
+    cs_narrator "Я помолчала. Потом улыбнулась."
     if cs_reflective_shot:
         $ cs_pov_end()
         with cs_sprite_change
@@ -118,21 +111,17 @@ label cs_day03_176:
         with cs_sprite_change
     cs_da "Не хотела мешать."
     cs_narrator "Я посмотрела на неё."
-    cs_th "Вот ведь."
-    cs_th "Она действительно не стала меня отвлекать."
-    cs_th "Не потому, что я попросила."
-    cs_th "Просто знала, что мне хочется дочитать."
+    cs_th "Вот ведь. Она действительно не стала меня отвлекать. Не потому, что я попросила. Просто знала, что мне хочется дочитать."
     if cs_reflective_shot:
         $ cs_pov_end()
         with cs_sprite_change
     cs_ls "Спасибо."
-    cs_narrator "Дарья слегка улыбнулась."
+    cs_narrator "Даша слегка улыбнулась."
     if cs_reflective_shot:
         $ cs_pov_end()
         with cs_sprite_change
     cs_da "Не за что."
-    cs_narrator "Я посмотрела на её руки."
-    cs_narrator "Потом на скамейку."
+    cs_narrator "Я посмотрела на её руки, потом на скамейку."
     if cs_reflective_shot:
         $ cs_pov_end()
         with cs_sprite_change
@@ -142,38 +131,32 @@ label cs_day03_176:
         $ cs_pov_end()
         with cs_sprite_change
     cs_da "Нет. Но домой уже хочется."
-    cs_narrator "Я кивнула."
     if cs_reflective_shot:
         $ cs_pov_end()
         with cs_sprite_change
     cs_ls "Тогда пойдём."
-    cs_narrator "Она улыбнулась."
-    cs_narrator "Потом посмотрела на мои пустые руки."
+    cs_narrator "Она улыбнулась. Потом посмотрела на мои пустые руки."
     if cs_reflective_shot:
         $ cs_pov_end()
         with cs_sprite_change
     cs_da "А книга?"
-    cs_narrator "Я улыбнулась."
     if cs_reflective_shot:
         $ cs_pov_end()
         with cs_sprite_change
     cs_ls "Дочитана. Возвращена. Официально закрыта."
-    cs_narrator "Дарья подняла бровь."
+    cs_narrator "Даша подняла бровь."
     if cs_reflective_shot:
         $ cs_pov_end()
         with cs_sprite_change
     cs_da "Даже так?"
-    cs_narrator "Я кивнула."
     if cs_reflective_shot:
         $ cs_pov_end()
         with cs_sprite_change
     cs_ls "Да. Наш бурный роман с Иваном Александровичем завершился."
-    cs_narrator "Она рассмеялась."
     if cs_reflective_shot:
         $ cs_pov_end()
         with cs_sprite_change
     cs_da "И как ощущения?"
-    cs_narrator "Я задумалась."
     if cs_reflective_shot:
         $ cs_pov_end()
         with cs_sprite_change
@@ -183,7 +166,6 @@ label cs_day03_176:
         $ cs_pov_end()
         with cs_sprite_change
     cs_da "Значит, стоило того?"
-    cs_narrator "Я кивнула."
     if cs_reflective_shot:
         $ cs_pov_end()
         with cs_sprite_change
@@ -193,7 +175,7 @@ label cs_day03_176:
         $ cs_pov_end()
         with cs_sprite_change
     cs_ls "Ну что, теперь всё внимание снова твоё."
-    cs_narrator "Дарья усмехнулась."
+    cs_narrator "Даша усмехнулась."
     if cs_reflective_shot:
         $ cs_pov_end()
         with cs_sprite_change
@@ -203,10 +185,7 @@ label cs_day03_176:
         $ cs_pov_end()
         with cs_sprite_change
     cs_ls "Пользуйся, пока не нашла следующего писателя."
-    cs_narrator "Она рассмеялась."
-    cs_narrator "Я подошла ближе."
-    cs_narrator "Предложила ей здоровую руку."
-    cs_narrator "Даша взяла меня под руку."
+    cs_narrator "Она рассмеялась. Я подошла ближе. Предложила ей здоровую руку. Даша взяла меня под руку."
     $ cs_da_waiting_outside_library_day3 = False
     cs_narrator "И мы направились по дорожке."
     return

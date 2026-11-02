@@ -24,8 +24,7 @@ label cs_day04_03:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
     cs_ls "Тише ты. Я здесь вообще-то инкогнито."
-    cs_narrator "Дверь продолжала скрипеть."
-    cs_narrator "Видимо, понятие конфиденциальности советской промышленности было совершенно неизвестно."
+    cs_narrator "Дверь скрипеть не перестала. Советская промышленность понятия конфиденциальности не знала."
     $ cs_director_scene("bg int_catacombs_entrance")
     scene bg int_catacombs_entrance
     $ cs_d4_scene_cast = []
@@ -33,13 +32,7 @@ label cs_day04_03:
     with Dissolve(0.7)
     cs_narrator "За дверью начинался короткий бетонный коридор."
     cs_narrator "Вдоль стен тянулись трубы, под потолком мерцала лампа. Пол был гораздо чище, чем наверху."
-    cs_narrator "Я провела пальцем по ближайшей трубе."
-    cs_narrator "Пыль."
-    cs_narrator "По соседней."
-    cs_narrator "Почти ничего."
-    cs_narrator "Я нахмурилась."
-    cs_narrator "Кто-то здесь бывает."
-    cs_narrator "Причём достаточно часто."
+    cs_narrator "Я провела пальцем по трубе — пыль. По соседней — почти чисто. Кто-то здесь бывает, и часто."
     cs_narrator "За поворотом щёлкнуло и коротко загудело, будто включился мотор."
     cs_narrator "Я остановилась."
     cs_narrator "Работающее оборудование."
@@ -58,22 +51,9 @@ label cs_day04_03:
     cs_narrator "Я приблизилась."
     cs_narrator "Пыль покрывала почти всю поверхность стола, кроме одного аккуратного прямоугольника."
     cs_narrator "Здесь недавно что-то стояло."
-    cs_narrator "И кто-то это забрал."
-    cs_narrator "Один из шкафов оказался незапертым."
-    cs_narrator "Внутри находились папки."
-    cs_narrator "Десятки старых папок с пожелтевшими корешками."
-    cs_narrator "Я вытащила ближайшую."
-    cs_narrator "На обложке ещё можно было разобрать надпись:"
-    cs_narrator "«Совёнок. Смена…»"
-    cs_narrator "Дата почти полностью стёрлась."
-    cs_narrator "Внутри лежали списки."
-    cs_narrator "Имена. Фамилии. Возраст. Отряды."
-    cs_narrator "Самые обычные лагерные документы."
-    cs_narrator "Я перелистнула несколько страниц."
-    cs_narrator "Ничего особенно интересного."
-    cs_narrator "Следующая папка."
-    cs_narrator "Ещё одна."
-    cs_narrator "И вдруг взгляд остановился на цифрах."
+    cs_narrator "Здесь недавно что-то стояло. Теперь забрали."
+    cs_narrator "В незапертом шкафу теснились папки с пожелтевшими корешками. На первой читалось: «Совёнок. Смена…» Дата почти стёрлась."
+    cs_narrator "Внутри — обычные списки: фамилии, возраст, отряды. Я просмотрела несколько папок, прежде чем взгляд зацепился за цифры."
     cs_narrator "1971."
     $ cs_director_scene("cs_d4_old_archive")
     scene cs_d4_old_archive
@@ -82,17 +62,9 @@ label cs_day04_03:
     cs_narrator "Я медленно раскрыла папку."
     show cs_d4_document roster1971 at cs_d4_document_center zorder 40
     with dissolve
-    cs_narrator "Сначала увидела таблицу с фамилиями."
-    cs_narrator "Потом знакомые имена."
-    cs_narrator "Лена."
-    cs_narrator "Женя."
-    cs_narrator "Славя."
-    cs_narrator "Семён."
-    cs_narrator "Ниже — Алиса, Ульяна, Мику."
-    cs_narrator "Я перечитала список."
-    cs_narrator "Потом ещё раз."
-    cs_narrator "Буквы никуда не исчезли."
-    cs_narrator "Нет."
+    cs_narrator "В таблице значились знакомые имена: Тихонова, Женя, Славя, Семён. Ниже — Алиса, Ульяна, Мику."
+    cs_narrator "Я перечитала список. Буквы никуда не исчезли. Так не бывает."
+    cs_narrator "Я перевернула страницу."
     cs_narrator "Так не бывает."
     cs_narrator "Я быстро перевернула страницу."
     hide cs_d4_document
@@ -115,30 +87,16 @@ label cs_day04_03:
     show cs_d4_document photo1963 at cs_d4_document_center zorder 40
     with dissolve
     cs_narrator "1963."
-    cs_narrator "Несколько секунд просто смотрела на цифры."
-    cs_narrator "Потом открыла."
-    cs_narrator "Снова списки."
-    cs_narrator "Снова фотографии."
-    cs_narrator "И снова некоторые лица, которые я видела буквально вчера."
-    cs_narrator "Я опустилась на край стула."
-    cs_narrator "Так."
-    cs_narrator "Совпадения бывают."
-    cs_narrator "Родственники тоже бывают."
-    cs_narrator "Бывает, что человеку очень хочется найти знакомые черты на старой фотографии."
-    cs_narrator "Но одинаковая родинка у девушки в очках?"
-    cs_narrator "Одинаковый разрез глаз?"
-    cs_narrator "Те же имена?"
-    cs_narrator "Я закрыла глаза."
+    cs_narrator "Я открыла папку. Снова списки, фотографии, лица вчерашних знакомых."
+    cs_narrator "Пришлось сесть. Совпадения бывают, родственники тоже. Можно найти знакомые черты, если очень хочется."
+    cs_narrator "Но родинка у девушки в очках? Тот же разрез глаз? Имена? Я закрыла глаза."
     if cs_reflective_shot:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
     cs_ls "Ну что ж. У исторической науки только что появилась серьёзная проблема."
     cs_narrator "И тут в голове возникло слово."
     cs_narrator "Циклы."
-    cs_narrator "Я открыла глаза."
-    cs_narrator "Нет."
-    cs_narrator "Пока это гипотеза."
-    cs_narrator "Не ответ."
+    cs_narrator "Я открыла глаза. Нет. Пока это гипотеза, не ответ."
     cs_narrator "В игре время тоже вытворяло странное. Но здешние события я уже не узнавала. Да и Семён упорно жил своей жизнью, как бы я ни пыталась превратить её в комедию."
     cs_narrator "Я осторожно вынула из папки 1971 года одну фотографию и лист со списком."
     hide cs_d4_document
@@ -146,10 +104,7 @@ label cs_day04_03:
     cs_narrator "Остальные документы вернула на место."
     cs_narrator "Находки поместила между листами картона рядом с первым снимком."
     $ cs_d4_photo1971_location = cs_d4_roster_location = "lena"
-    cs_narrator "Покажу Даше."
-    cs_narrator "Потом Семёну."
-    cs_narrator "И, возможно, Ольге Дмитриевне."
-    cs_narrator "Дальше будем думать."
+    cs_narrator "Покажу Даше, Семёну, может быть, вожатой. Тогда и подумаем."
     $ cs_director_scene("cs_d4_old_bunker")
     scene cs_d4_old_bunker
     $ cs_d4_scene_cast = []
@@ -180,9 +135,7 @@ label cs_day04_03:
     $ cs_d4_scene_cast = []
     $ cs_frame_focus(cs_d4_scene_cast)
     with Dissolve(0.7)
-    cs_narrator "За ней начиналась ещё одна лестница."
-    cs_narrator "Вниз."
-    cs_narrator "Ещё глубже."
+    cs_narrator "За дверью начиналась ещё одна лестница. Глубже под землю."
     if cs_reflective_shot:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
@@ -207,15 +160,12 @@ label cs_day04_03:
     cs_narrator "Только ступени, уходящие вниз, и слабое свечение где-то далеко за поворотом."
     cs_narrator "Я осторожно сделала шаг."
     cs_d4_unknown_girl "Не ходи дальше."
-    cs_narrator "Сердце неприятно сжалось."
-    cs_narrator "Голос звучал совсем близко."
-    cs_narrator "Но рядом никого не было."
+    cs_narrator "Сердце сжалось. Голос был близко, а рядом никого."
     if cs_reflective_shot:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
     cs_ls "Ты кто?"
-    cs_narrator "Тишина."
-    cs_narrator "Потом:"
+    cs_narrator "После короткой тишины:"
     cs_d4_unknown_girl "Ты не должна была проснуться здесь."
     cs_narrator "Я почувствовала, как по спине пробежал холод."
     cs_narrator "Слова прозвучали спокойно, почти буднично."
@@ -249,20 +199,10 @@ label cs_day04_03:
     stop music fadeout 1.5
     cs_narrator "Я отшатнулась в темноте, потеряла равновесие и ударилась плечом о стену."
     cs_narrator "Деревяшка едва не выскользнула из руки."
-    cs_narrator "Я замерла."
-    cs_narrator "Вокруг было настолько темно, что я с трудом различала собственные пальцы."
-    cs_narrator "Где-то впереди продолжала капать вода."
-    cs_narrator "Кап."
-    cs_narrator "Кап."
-    cs_narrator "Кап."
-    cs_narrator "Я пыталась понять, слышу ли ещё чьё-нибудь дыхание."
-    cs_narrator "Ничего."
-    cs_narrator "Только собственное сердце, стучавшее так сильно, что казалось, его слышно по всему убежищу."
-    cs_narrator "Всё."
-    cs_narrator "Хватит."
-    cs_narrator "Я медленно нащупала перила и начала отступать."
-    cs_narrator "Не побежала."
-    cs_narrator "Потому что понятия не имела, сколько ступеней осталось за спиной и насколько прочным был бетон под ногами."
+    cs_narrator "Я замерла. Даже пальцы перед лицом едва различались. Впереди капала вода."
+    cs_narrator "Кап. Кап. Кап."
+    cs_narrator "Я прислушалась: чужого дыхания не слышно, только собственное сердце. Всё. Хватит."
+    cs_narrator "Нащупав перила, я начала отступать. Бежать нельзя: я не знала, сколько ступеней за спиной и прочны ли они."
     $ cs_director_scene("cs_d4_old_bunker")
     scene cs_d4_old_bunker
     $ cs_d4_scene_cast = []
@@ -278,10 +218,7 @@ label cs_day04_03:
     cs_narrator "Без возможности позвать на помощь."
     cs_narrator "И всё ради фотографий, которые никто не мешал сначала показать остальным."
     cs_narrator "Я проверила папку: фотографии и список были на месте."
-    cs_narrator "Домой."
-    cs_narrator "Больше никаких подвигов."
-    cs_narrator "Никаких незнакомых лестниц."
-    cs_narrator "И никаких попыток проверить, насколько удачно я умею сражаться с мистикой при помощи мебели."
+    cs_narrator "Домой. Никаких подвигов, незнакомых лестниц и попыток сражаться с мистикой при помощи мебели."
     cs_narrator "Я направилась к выходу."
     $ cs_director_scene("cs_d4_old_stairs")
     scene cs_d4_old_stairs
@@ -289,9 +226,7 @@ label cs_day04_03:
     $ cs_frame_focus(cs_d4_scene_cast)
     with Dissolve(0.7)
     cs_narrator "И почти добралась до лестницы наверх, когда услышала шаги."
-    cs_narrator "Быстрые."
-    cs_narrator "Человеческие."
-    cs_narrator "Кто-то спускался."
+    cs_narrator "Быстрые человеческие шаги. Кто-то спускался."
     cs_narrator "Я прижалась к стене, подняв деревянную ножку."
     cs_narrator "Из полумрака показался силуэт."
     cs_da "Лена?!"
@@ -306,8 +241,7 @@ label cs_day04_03:
     with cs_sprite_change
     cs_narrator "Она остановилась на ступеньке."
     cs_narrator "Волосы кое-как собраны, кроссовки в грязи. Даша явно одевалась и бежала сюда впопыхах."
-    cs_narrator "Даша посмотрела на меня."
-    cs_narrator "Потом на деревяшку в руке."
+    cs_narrator "Даша посмотрела на деревяшку в моей руке."
     if cs_reflective_shot:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
@@ -317,11 +251,7 @@ label cs_day04_03:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
     cs_ls "Доброе утро."
-    cs_narrator "Она не улыбнулась. Молча рассматривала меня."
-    cs_narrator "На грязные кроссовки."
-    cs_narrator "На пыльную футболку."
-    cs_narrator "На бумаги, прижатые к груди."
-    cs_narrator "Потом снова в глаза."
+    cs_narrator "Она не улыбнулась. Осмотрела грязные кроссовки, пыльную футболку, бумаги у груди — и посмотрела мне в глаза."
     if cs_reflective_shot:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
@@ -356,8 +286,7 @@ label cs_day04_03:
     $ cs_frame_focus(cs_d4_scene_cast)
     with Dissolve(0.7)
     cs_narrator "И обняла."
-    cs_narrator "Я растерялась."
-    cs_narrator "Настолько, что не сразу смогла ответить."
+    cs_narrator "Я растерялась и не сразу ответила на объятие."
     if cs_reflective_shot:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
@@ -410,7 +339,6 @@ label cs_day04_03:
             $ cs_frame_focus(cs_d4_scene_cast)
             with cs_sprite_change
         cs_da "Я решила сначала проверить дорогу. Если бы не нашла тебя, вернулась бы за помощью."
-        cs_narrator "Я медленно кивнула."
         if cs_reflective_shot:
             $ cs_frame_focus(cs_d4_scene_cast)
             with cs_sprite_change
@@ -441,8 +369,7 @@ label cs_day04_03:
             $ cs_frame_focus(cs_d4_scene_cast)
             with cs_sprite_change
         cs_da "А что мне оставалось?"
-        cs_narrator "Она произнесла это без злости."
-        cs_narrator "От чего стало только хуже."
+        cs_narrator "Она сказала это без злости. От этого стало хуже."
         if cs_reflective_shot:
             $ cs_frame_focus(cs_d4_scene_cast)
             with cs_sprite_change
@@ -475,8 +402,7 @@ label cs_day04_03:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
     cs_ls "Всё. Молчу."
-    cs_narrator "Она ещё несколько секунд смотрела на меня."
-    cs_narrator "Я медленно выдохнула."
+    cs_narrator "Я выдохнула под её взглядом."
     if cs_reflective_shot:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
@@ -486,12 +412,8 @@ label cs_day04_03:
         with cs_sprite_change
     cs_da "Не должна была."
     cs_narrator "На этот раз я не спорила."
-    cs_narrator "На лестничной площадке стало тихо."
-    cs_narrator "Где-то за стеной продолжало гудеть оборудование."
-    cs_narrator "Я вспомнила голос."
-    cs_narrator "Темноту."
-    cs_narrator "Фразу про то, что мне не следовало просыпаться здесь."
-    cs_narrator "И снова почувствовала холод."
+    cs_narrator "На лестничной площадке стало тихо. За стеной гудело оборудование."
+    cs_narrator "Стоило вспомнить голос и темноту, как снова прошиб холод."
     cs_narrator "Даша заметила, что я смотрю в сторону лестницы."
     if cs_reflective_shot:
         $ cs_frame_focus(cs_d4_scene_cast)
@@ -502,9 +424,7 @@ label cs_day04_03:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
     cs_ls "Кое-что нашла."
-    cs_narrator "Она осторожно взяла верхний снимок."
-    cs_narrator "Несколько секунд рассматривала."
-    cs_narrator "Потом нахмурилась."
+    cs_narrator "Даша взяла верхний снимок, рассмотрела и нахмурилась."
     if cs_reflective_shot:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
@@ -527,9 +447,7 @@ label cs_day04_03:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
     cs_ls "Именно."
-    cs_narrator "Я показала список."
-    cs_narrator "Даша быстро пробежала глазами по именам."
-    cs_narrator "Её лицо постепенно менялось."
+    cs_narrator "Я показала список. Даша пробежала глазами имена, и лицо её изменилось."
     if cs_reflective_shot:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
@@ -542,12 +460,11 @@ label cs_day04_03:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
     cs_da "И остальные?"
-    cs_narrator "Я кивнула."
     if cs_reflective_shot:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
     cs_ls "Причём есть ещё папка за шестьдесят третий. Там похожая история."
-    cs_narrator "Даша медленно опустила бумаги."
+    cs_narrator "Даша опустила бумаги."
     if cs_reflective_shot:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
@@ -584,7 +501,7 @@ label cs_day04_03:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
     cs_ls "А потом кто-то говорил со мной оттуда."
-    cs_narrator "Дарья повернула голову."
+    cs_narrator "Даша повернула голову."
     if cs_reflective_shot:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
@@ -594,14 +511,11 @@ label cs_day04_03:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
     cs_ls "Что я не должна была здесь проснуться."
-    cs_narrator "Даша ничего не ответила."
-    cs_narrator "Только посмотрела вниз."
-    cs_narrator "Потом взяла меня за руку."
+    cs_narrator "Даша молча посмотрела вниз и взяла меня за руку."
     if cs_reflective_shot:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
     cs_da "Мы уходим."
-    cs_narrator "Я сразу кивнула."
     if cs_reflective_shot:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
@@ -616,8 +530,7 @@ label cs_day04_03:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
     cs_ls "За последние двадцать минут мой талант к возражениям серьёзно пострадал."
-    cs_narrator "Даша почти улыбнулась."
-    cs_narrator "Но глаза оставались напряжёнными."
+    cs_narrator "Она почти улыбнулась, но глаза оставались напряжёнными."
     cs_narrator "Мы начали подниматься."
     cs_narrator "Ступени гулко отзывались под ногами. Я держалась рядом с Дашей и смотрела, куда ставлю ногу."
     cs_narrator "На середине подъёма снизу донёсся короткий смех."
@@ -626,12 +539,11 @@ label cs_day04_03:
     cs_narrator "Мы остановились одновременно."
     cs_d4_unknown_girl "До встречи, Лена."
     cs_narrator "Пальцы Даши сжались на моей руке."
-    cs_narrator "Она медленно повернула голову."
+    cs_narrator "Она обернулась."
     if cs_reflective_shot:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
     cs_da "Ты слышала?"
-    cs_narrator "Я посмотрела на неё."
     if cs_reflective_shot:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change

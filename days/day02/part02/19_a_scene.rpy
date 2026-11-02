@@ -51,8 +51,7 @@ label cs_day02_19a:
     with cs_sprite_change
     label cs_check_part02_miku_19a:
     cs_mi "Правда? Тогда сейчас!"
-    cs_narrator "Она поправила ноты."
-    cs_narrator "Села ровнее."
+    cs_narrator "Она поправила ноты. Села ровнее."
     $ cs_director_scene("cs_cg_miku_piano_day")
     scene cs_cg_miku_piano_day
     # cs_presence_keep: hide cs_darya
@@ -77,12 +76,8 @@ label cs_day02_19a:
     play cs_piano cs_miku_piano_track noloop fadein 1.0
     label cs_check_d2_piano_miku:
     pause 1.5
-    cs_narrator "И начала играть."
-    cs_narrator "На этот раз мелодия была значительно увереннее."
-    cs_narrator "Мику не приходилось искать клавиши."
-    cs_narrator "Она двигалась быстрее, иногда едва заметно покачиваясь в такт."
-    cs_narrator "В середине несколько раз повторилась одна и та же музыкальная фраза."
-    cs_narrator "Затем она перешла к следующей части."
+    cs_narrator "И начала играть. На этот раз мелодия была значительно увереннее. Мику не приходилось искать клавиши. Она двигалась быстрее, иногда едва заметно покачиваясь в такт."
+    cs_narrator "В середине несколько раз повторилась одна и та же музыкальная фраза. Затем она перешла к следующей части."
     stop cs_piano fadeout 0.8
     $ cs_director_scene("bg int_musclub_day")
     scene bg int_musclub_day
@@ -194,8 +189,7 @@ label cs_day02_19a:
     # cs_global_transition
     with cs_sprite_change
     cs_mi "Может, и правда…"
-    cs_narrator "Она взяла карандаш."
-    cs_narrator "Сделала небольшую пометку."
+    cs_narrator "Она взяла карандаш. Сделала небольшую пометку."
     $ cs_director_scene("cs_cg_miku_piano_day")
     scene cs_cg_miku_piano_day
     # cs_presence_keep: hide cs_darya
@@ -220,10 +214,7 @@ label cs_day02_19a:
     play cs_piano "<from 12>sound/music/miku_song_voice.ogg" noloop fadein 1.0
     label cs_check_d2_piano_miku_again:
     pause 1.5
-    cs_narrator "Потом сыграла фрагмент ещё раз."
-    cs_narrator "Теперь с более коротким вступлением."
-    cs_narrator "Я не особенно разбиралась в музыкальной композиции."
-    cs_narrator "Но разница ощущалась."
+    cs_narrator "Потом сыграла фрагмент ещё раз. Теперь с более коротким вступлением. Я не особенно разбиралась в музыкальной композиции. Но разница ощущалась."
     cs_narrator "Мелодия будто быстрее находила своё направление."
     stop cs_piano fadeout 0.8
     $ cs_director_scene("bg int_musclub_day")
@@ -295,10 +286,7 @@ label cs_day02_19a:
     cs_mi "Да. Знаешь, самой всё время кажется, что раз я это придумала, значит, всё понятно. А потом кто-нибудь послушает и оказывается, что нет."
     cs_narrator "Я посмотрела на неё."
     cs_th "Знакомое чувство."
-    cs_narrator "С рисунками у меня происходило почти то же самое."
-    cs_narrator "Часами рассматриваешь собственную работу."
-    cs_narrator "Уже перестаёшь видеть ошибки."
-    cs_narrator "А потом кто-нибудь показывает на простую вещь, которую ты почему-то совершенно не замечала."
+    cs_narrator "С рисунками у меня происходило почти то же самое. Часами рассматриваешь собственную работу. Уже перестаёшь видеть ошибки. А потом кто-нибудь показывает на простую вещь, которую ты почему-то совершенно не замечала."
     # cs_presence_keep: hide cs_dasha_pioneer
     # cs_presence_keep: hide cs_semen
     # cs_presence_keep: hide cs_zhenya

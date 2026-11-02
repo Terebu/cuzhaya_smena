@@ -27,13 +27,9 @@ label cs_day02_reading_08:
     $ cs_frame_focus(["cs_darya"])
     with cs_sprite_change
     # cs_director_end
-    cs_narrator "Когда я в следующий раз подняла голову, за окнами заметно изменился свет."
-    cs_narrator "Солнце клонилось ниже."
-    cs_narrator "Пылинки в воздухе теперь казались почти золотыми."
-    cs_narrator "Я посмотрела на страницу."
+    cs_narrator "Когда я в следующий раз подняла голову, за окнами заметно изменился свет. Солнце клонилось ниже. Пылинки в воздухе теперь казались почти золотыми. Я посмотрела на страницу."
     cs_narrator "Затем на часы."
-    cs_th "Надо же."
-    cs_th "Время действительно прошло незаметно."
+    cs_th "Надо же. Время действительно прошло незаметно."
     cs_narrator "Дарья тоже закрыла книгу."
     # cs_presence_keep: hide cs_zhenya
     # cs_presence_keep: hide cs_semen
@@ -55,7 +51,6 @@ label cs_day02_reading_08:
     # cs_global_transition
     with cs_sprite_change
     cs_da "Кажется, скоро ужин."
-    cs_narrator "Я кивнула."
     cs_ls "Похоже на то."
     cs_narrator "Она посмотрела на мою книгу."
     # cs_presence_keep: hide cs_zhenya
@@ -82,10 +77,7 @@ label cs_day02_reading_08:
     cs_ls "Нет. Но осталось совсем немного."
     cs_narrator "Потом посмотрела в сторону Жени."
     cs_th "Надо будет спросить, можно ли взять с собой."
-    cs_narrator "Я аккуратно вложила закладку между страницами."
-    cs_narrator "Поднялась."
-    cs_narrator "Взяла книгу здоровой рукой."
-    cs_narrator "Дарья тоже встала, вернула свой том на место, предварительно уточнив у Жени нужную полку."
+    cs_narrator "Я аккуратно вложила закладку между страницами. Поднялась. Взяла книгу здоровой рукой. Дарья тоже встала, вернула свой том на место, предварительно уточнив у Жени нужную полку."
     # cs_presence_keep: hide cs_semen
     # cs_presence_keep: hide mz
     # cs_presence_keep: hide un
@@ -129,7 +121,6 @@ label cs_day02_reading_08:
     # cs_global_transition
     with cs_sprite_change
     cs_mz "Дочитать хочешь?"
-    cs_narrator "Я кивнула."
     cs_ls "Да."
     cs_narrator "Она достала журнал выдачи."
     # cs_presence_keep: hide cs_semen
@@ -152,8 +143,7 @@ label cs_day02_reading_08:
     # cs_global_transition
     with cs_sprite_change
     cs_mz "Тогда запишем."
-    cs_narrator "Я подошла ближе."
-    cs_narrator "Она открыла нужную страницу."
+    cs_narrator "Я подошла ближе. Она открыла нужную страницу."
     # cs_presence_keep: hide cs_semen
     # cs_presence_keep: hide mz
     # cs_presence_keep: hide un
@@ -174,8 +164,7 @@ label cs_day02_reading_08:
     # cs_global_transition
     with cs_sprite_change
     cs_mz "Фамилия, имя. И какой у тебя домик?"
-    cs_narrator "Я назвала данные."
-    cs_narrator "Женя внесла их в журнал."
+    cs_narrator "Я назвала данные. Женя внесла их в журнал."
     $ cs_reading_book_borrowed = True
     $ cs_reading_book_location = "lena_hand"
     label cs_check_reading_borrowed:
@@ -199,7 +188,6 @@ label cs_day02_reading_08:
     # cs_global_transition
     with cs_sprite_change
     cs_mz "Только постарайся не испачкать книгу."
-    cs_narrator "Я кивнула."
     cs_ls "Конечно."
     cs_narrator "Она посмотрела на мой локоть."
     # cs_presence_keep: hide cs_semen
@@ -222,8 +210,7 @@ label cs_day02_reading_08:
     # cs_global_transition
     with cs_sprite_change
     cs_mz "И не урони её по дороге."
-    cs_narrator "Я немного помолчала."
-    cs_narrator "Затем усмехнулась."
+    cs_narrator "Я помолчала. Затем усмехнулась."
     cs_ls "Очень своевременное уточнение."
     cs_narrator "Дарья тихо рассмеялась."
     if cs_friend_mz == 0:
@@ -231,12 +218,8 @@ label cs_day02_reading_08:
         cs_mz "Всё. Вернёшь, когда дочитаешь."
         cs_ls "Хорошо. Спасибо."
         cs_mz "Не за что."
-        cs_narrator "Она вернулась к бумагам."
-        cs_narrator "Я поправила книгу в руке."
-        cs_th "Обычная выдача."
-        cs_th "Обычные правила."
-        cs_th "И нормальное отношение, даже несмотря на наше вчерашнее знакомство."
-        cs_th "Пожалуй, вполне неплохо."
+        cs_narrator "Она вернулась к бумагам. Я поправила книгу в руке."
+        cs_th "Обычная выдача. Обычные правила. И нормальное отношение, даже несмотря на наше вчерашнее знакомство. Пожалуй, вполне неплохо."
     elif cs_friend_mz == 1:
         cs_narrator "Женя закрыла журнал."
         cs_mz "Когда дочитаешь, скажешь, что думаешь о концовке."
@@ -244,17 +227,13 @@ label cs_day02_reading_08:
         cs_ls "Договорились."
         cs_mz "Только не рассказывай её всем остальным."
         cs_ls "Никаких преждевременных разглашений."
-        cs_narrator "Она покачала головой."
-        cs_narrator "Но улыбнулась."
+        cs_narrator "Она покачала головой. Но улыбнулась."
     else:
-        cs_narrator "Женя посмотрела на книгу."
-        cs_narrator "Затем на меня."
+        cs_narrator "Женя посмотрела на книгу, затем на меня."
         cs_mz "Можешь вернуть завтра. Если захочешь, обсудим, когда дочитаешь."
-        cs_narrator "Я улыбнулась."
         cs_ls "С удовольствием."
         cs_narrator "Она кивнула."
         cs_mz "Только не вздумай специально читать всю ночь ради этого."
-        cs_narrator "Я рассмеялась."
         cs_ls "Обещать не буду."
         cs_narrator "Женя посмотрела на Дарью."
         cs_mz "Проследи хотя бы ты, чтобы она не сидела до утра."
@@ -283,9 +262,7 @@ label cs_day02_reading_08:
         cs_ls "Какие прекрасные перспективы. Уже двое контролируют мой режим дня."
         cs_narrator "Женя усмехнулась."
         cs_mz "Кто-то же должен."
-    cs_narrator "Я взяла книгу."
-    cs_narrator "Посмотрела на Женю."
-    cs_narrator "И неожиданно для себя произнесла:"
+    cs_narrator "Я взяла книгу. Посмотрела на Женю. И неожиданно для себя произнесла:"
     cs_ls "Спасибо."
     cs_narrator "Она подняла взгляд."
     # cs_presence_keep: hide cs_semen
@@ -308,14 +285,10 @@ label cs_day02_reading_08:
     # cs_global_transition
     with cs_sprite_change
     cs_mz "За книгу?"
-    cs_narrator "Я немного подумала."
     cs_ls "И за неё тоже."
     cs_narrator "Потом оглядела библиотеку."
     cs_ls "Просто здесь хорошо."
-    cs_narrator "Женя проследила за моим взглядом."
-    cs_narrator "Посмотрела на шкафы."
-    cs_narrator "На столы."
-    cs_narrator "На свет, падавший из окон."
+    cs_narrator "Женя проследила за моим взглядом. Посмотрела на шкафы. На столы. На свет, падавший из окон."
     cs_narrator "И чуть заметно улыбнулась."
     # cs_presence_keep: hide cs_semen
     # cs_presence_keep: hide mz
@@ -337,10 +310,8 @@ label cs_day02_reading_08:
     # cs_global_transition
     with cs_sprite_change
     cs_mz "Да. Здесь тихо."
-    cs_narrator "Я кивнула."
     cs_ls "Именно."
-    cs_narrator "Несколько секунд мы молчали."
-    cs_narrator "Затем Дарья подошла к двери."
+    cs_narrator "Несколько секунд мы молчали. Затем Дарья подошла к двери."
     # cs_presence_keep: hide cs_semen
     # cs_presence_keep: hide mz
     # cs_presence_keep: hide un
@@ -361,7 +332,6 @@ label cs_day02_reading_08:
     # cs_global_transition
     with cs_sprite_change
     cs_da "Лен, пойдём? А то скоро все в столовую побегут."
-    cs_narrator "Я кивнула."
     cs_ls "Иду."
     cs_narrator "Повернулась к Жене."
     cs_ls "До завтра."

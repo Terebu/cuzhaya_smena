@@ -14,8 +14,7 @@ label cs_day02_69:
     $ cs_frame_focus(["cs_darya", "cs_zhenya"])
     with cs_sprite_change
     # cs_director_end
-    cs_narrator "Я посмотрела на стопку книг."
-    cs_narrator "Потом на Женю."
+    cs_narrator "Я посмотрела на стопку книг, потом на Женю."
     cs_ls "Спасибо, что дала мне спокойно дочитать."
     cs_narrator "Она слегка удивилась."
     show cs_zhenya thoughtful pioneer normal at cs_darya_normal_left
@@ -23,20 +22,16 @@ label cs_day02_69:
     # cs_global_transition
     with cs_sprite_change
     cs_mz "Ты ведь сама попросила."
-    cs_narrator "Я кивнула."
     cs_ls "Знаю."
     cs_narrator "Немного помолчала."
     cs_ls "Просто спасибо."
-    cs_narrator "Женя посмотрела на меня."
-    cs_narrator "Затем чуть улыбнулась."
+    cs_narrator "Женя посмотрела на меня. Затем чуть улыбнулась."
     show cs_zhenya thoughtful pioneer normal at cs_darya_normal_left
     $ cs_presence_stage()
     # cs_global_transition
     with cs_sprite_change
     cs_mz "Пожалуйста."
-    cs_narrator "Издалека донеслись новые голоса."
-    cs_narrator "Кто-то явно собирался на музыкальный вечер."
-    cs_narrator "Женя посмотрела в окно."
+    cs_narrator "Издалека донеслись новые голоса. Кто-то явно собирался на музыкальный вечер. Женя посмотрела в окно."
     show cs_zhenya thoughtful pioneer normal at cs_darya_normal_left
     $ cs_presence_stage()
     # cs_global_transition
@@ -68,7 +63,6 @@ label cs_day02_69:
     # cs_global_transition
     with cs_sprite_change
     cs_mz "Хорошего вечера."
-    cs_narrator "Я слегка улыбнулась."
     cs_ls "Тебе тоже."
     cs_narrator "Мы вышли."
     $ cs_director_scene("cs_library_exterior_sunset")
@@ -76,15 +70,11 @@ label cs_day02_69:
     show cs_darya shrug pioneer normal at cs_darya_normal_right
     $ cs_presence_stage()
     with Dissolve(0.8)
-    cs_narrator "На крыльце я ненадолго остановилась."
-    cs_narrator "Посмотрела в сторону библиотеки."
+    cs_narrator "На крыльце я ненадолго остановилась. Посмотрела в сторону библиотеки."
     # cs_inward_beat_5: attention turns inward
     $ cs_pov_begin()
     with cs_sprite_leave
-    cs_th "Забавно."
-    cs_th "Вчера я пришла сюда с намерением проверить, насколько Женя похожа на знакомого персонажа."
-    cs_th "Сегодня просто вернула книгу."
-    cs_th "И, кажется, этот визит оказался для нас гораздо важнее."
+    cs_th "Забавно. Вчера я пришла сюда с намерением проверить, насколько Женя похожа на знакомого персонажа. Сегодня просто вернула книгу. И, кажется, этот визит оказался для нас гораздо важнее."
     # Return to the same conversation, with the same cast and placement.
     $ cs_pov_end()
     with cs_sprite_change
@@ -94,10 +84,8 @@ label cs_day02_69:
     # cs_global_transition
     with cs_sprite_change
     cs_da "Ну что, теперь на концерт?"
-    cs_narrator "Я кивнула."
     cs_ls "Теперь точно."
-    cs_narrator "Она улыбнулась."
-    cs_narrator "Мы направились к площади."
+    cs_narrator "Она улыбнулась. Мы направились к площади."
     $ cs_director_scene("cs_camp_path_sunset")
     scene cs_camp_path_sunset
     show cs_darya shrug pioneer normal at cs_darya_normal_right

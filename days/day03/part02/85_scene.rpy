@@ -4,17 +4,13 @@ label cs_day03_85:
     show cs_darya hair_touch pioneer normal
     $ cs_presence_stage()
     with cs_sprite_change
-    cs_narrator "Дарья поправила волосы."
-    cs_narrator "Я тем временем решила проверить, всё ли взяла."
-    cs_narrator "Галстук."
-    cs_narrator "Форма."
+    cs_narrator "Дарья поправила волосы. Я тем временем решила проверить, всё ли взяла. Галстук. Форма."
     cs_narrator "Повязка."
     cs_th "Вроде ничего не забыла."
     cs_narrator "Потом вспомнила утреннюю встречу."
     cs_ls "Кстати, я сегодня Славю встретила."
     cs_narrator "Дарья подняла взгляд."
     cs_da "Уже успела?"
-    cs_narrator "Я кивнула."
     cs_ls "Разумеется. Пока остальные спали, она занималась хозяйственными делами."
     show cs_darya shy_smile pioneer normal
     $ cs_presence_stage()
@@ -27,29 +23,25 @@ label cs_day03_85:
     with cs_sprite_change
     cs_narrator "Дарья рассмеялась."
     cs_da "И что вы обсуждали?"
-    cs_narrator "Я немного подумала."
     cs_ls "Преимущественно трудовую этику, медицинские ограничения и некоторые недостатки советской тяжёлой промышленности."
     show cs_darya thinking pioneer normal
     $ cs_presence_stage()
     with cs_sprite_change
-    cs_narrator "Дарья замолчала."
-    cs_narrator "Потом медленно повернулась ко мне."
+    cs_narrator "Дарья замолчала. Потом медленно повернулась ко мне."
     cs_da "Лена."
-    cs_narrator "Я совершенно серьёзно посмотрела на неё."
+    cs_narrator "Я серьёзно посмотрела на неё."
     cs_ls "Да?"
     cs_da "Ты снова говорила про танки?"
     cs_narrator "Я вздохнула."
     cs_ls "Всего один раз."
-    cs_narrator "Она закрыла глаза."
-    cs_narrator "И рассмеялась."
+    cs_narrator "Она закрыла глаза. И рассмеялась."
     cs_da "Бедная Славя."
     cs_narrator "Я указала на неё здоровой рукой."
     cs_ls "Никакая она не бедная. Сегодня уже сама начала издеваться над моей трудовой биографией."
     cs_da "И правильно сделала."
     cs_narrator "Я посмотрела на неё."
-    cs_th "Вот ведь."
     cs_th "Два дня — и у меня уже сформировалась организованная оппозиция."
-    cs_ls "Поразительно, с какой скоростью в этом лагере распространяется сарказм."
+    cs_ls "Не успеваю защищаться."
     show cs_darya shy_smile pioneer normal
     $ cs_presence_stage()
     with cs_sprite_change

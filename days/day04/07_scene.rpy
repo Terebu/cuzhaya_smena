@@ -7,14 +7,10 @@ label cs_day04_07:
     $ cs_frame_focus(cs_d4_scene_cast)
     with Dissolve(0.7)
     play music cs_day_music_daily fadein 2.0
-    cs_narrator "На улице уже стало заметно теплее."
-    cs_narrator "Лагерь окончательно проснулся."
-    cs_narrator "По дорожкам шли пионеры. Издалека доносились голоса, смех и чей-то недовольный спор о том, кому сегодня досталась уборка."
-    cs_narrator "Возле столовой мелькнула знакомая светлая голова Слави."
-    cs_narrator "Она что-то объясняла двум пионерам, показывая рукой на хозяйственные постройки."
+    cs_narrator "Потеплело, лагерь проснулся. По дорожкам шли пионеры, кто-то спорил из-за уборки. Возле столовой Славя раздавала поручения."
     cs_narrator "Лагерь не поддавался объяснению, зато уборка шла по графику."
     cs_narrator "Мы пошли к столовой."
-    cs_narrator "«Когда я впервые приехала…» Оговорка Ольги Дмитриевны всё не шла из головы. Сколько же раз она здесь приезжала?"
+    cs_narrator "«Когда я впервые приехала…» Оговорка Ольги Дмитриевны всё не шла из головы. Сколько же раз она сюда приезжала?"
     cs_narrator "Я посмотрела на Семёна и остановилась."
     if cs_reflective_shot:
         $ cs_frame_focus(cs_d4_scene_cast)
@@ -30,13 +26,11 @@ label cs_day04_07:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
     cs_sy "Какая ещё арифметика?"
-    cs_narrator "Дарья тоже повернулась."
-    cs_narrator "Я посмотрела на обоих."
+    cs_narrator "Даша тоже повернулась."
     if cs_reflective_shot:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
     cs_ls "У нас сегодня четвёртый день."
-    cs_narrator "Даша кивнула."
     if cs_reflective_shot:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
@@ -50,7 +44,6 @@ label cs_day04_07:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
     cs_ls "Да."
-    cs_narrator "Я посмотрела на него."
     if cs_reflective_shot:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
@@ -60,7 +53,7 @@ label cs_day04_07:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
     cs_da "Последний день смены?"
-    cs_narrator "Я медленно кивнула."
+    cs_narrator "Я кивнула."
     if cs_reflective_shot:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
@@ -70,7 +63,6 @@ label cs_day04_07:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
     cs_sy "И что это значит?"
-    cs_narrator "Я вздохнула."
     if cs_reflective_shot:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
@@ -80,18 +72,15 @@ label cs_day04_07:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
     cs_ls "Именно поэтому мне и не нравится эта арифметика."
-    cs_narrator "Семён усмехнулся."
-    cs_narrator "Но как-то невесело."
+    cs_narrator "Семён невесело усмехнулся."
     if cs_reflective_shot:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
     cs_sy "Отлично. Значит, у меня теперь есть срок."
-    cs_narrator "Я посмотрела на него."
     if cs_reflective_shot:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
     cs_ls "Нет."
-    cs_narrator "Он поднял бровь."
     if cs_reflective_shot:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
@@ -100,7 +89,6 @@ label cs_day04_07:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
     cs_sy "А если всё произойдёт как в игре?"
-    cs_narrator "Я некоторое время молчала."
     if cs_reflective_shot:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
@@ -115,7 +103,6 @@ label cs_day04_07:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
     cs_da "Из двух человек."
-    cs_narrator "Семён посмотрел на нас."
     if cs_reflective_shot:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
@@ -150,17 +137,14 @@ label cs_day04_07:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
     cs_ls "Медпункт."
-    cs_narrator "Семён кивнул."
     if cs_reflective_shot:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
     cs_sy "Правильное решение."
-    cs_narrator "Я вздохнула."
     if cs_reflective_shot:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
     cs_ls "Удивительно, насколько быстро все начали хвалить меня за элементарные поступки."
-    cs_narrator "Даша улыбнулась."
     if cs_reflective_shot:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
@@ -175,17 +159,13 @@ label cs_day04_07:
     $ cs_frame_focus(cs_d4_scene_cast)
     with Dissolve(0.7)
     cs_narrator "После завтрака Семён отправился по своим делам."
-    cs_narrator "Мы договорились встретиться ближе к вечеру, чтобы ещё раз обсудить документы."
-    cs_narrator "Даша пошла узнать у Слави, не требуется ли помощь."
-    cs_narrator "А я направилась в медпункт."
+    cs_narrator "Условились с Семёном встретиться к вечеру и обсудить документы. Даша пошла к Славе, я — в медпункт."
     $ cs_director_scene("bg int_aidpost_day")
     scene bg int_aidpost_day
     $ cs_d4_scene_cast = ['cs']
     $ cs_frame_focus(cs_d4_scene_cast)
     with Dissolve(0.7)
-    cs_narrator "В медпункте было прохладно."
-    cs_narrator "Пахло лекарствами и чем-то чистым, совершенно не похожим на сырость старого корпуса."
-    cs_narrator "Я постучала."
+    cs_narrator "В прохладном медпункте пахло лекарствами. После сырости старого корпуса это успокаивало. Я постучала."
     if cs_reflective_shot:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
@@ -227,12 +207,10 @@ label cs_day04_07:
         with cs_sprite_change
     cs_vi "Всё неплохо. Рана заживает."
     cs_narrator "Я облегчённо выдохнула."
-    cs_narrator "Но она продолжила:"
     if cs_reflective_shot:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
     cs_vi "Правда, хотелось бы узнать, где ты успела так испачкать бинт."
-    cs_narrator "Я посмотрела на неё."
     if cs_reflective_shot:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
@@ -251,7 +229,6 @@ label cs_day04_07:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
     cs_vi "Если не будешь снова лазить по грязи, можно оставить локоть без повязки."
-    cs_narrator "Я подняла бровь."
     if cs_reflective_shot:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
@@ -260,7 +237,6 @@ label cs_day04_07:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
     cs_vi "От повязки. Не от здравого смысла."
-    cs_narrator "Я задумалась."
     if cs_reflective_shot:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
@@ -277,7 +253,6 @@ label cs_day04_07:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
     cs_ls "Даже жалко."
-    cs_narrator "Виола подняла глаза."
     if cs_reflective_shot:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
@@ -291,24 +266,17 @@ label cs_day04_07:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
     cs_vi "Теперь придётся рассчитывать на характер."
-    cs_narrator "Я вздохнула."
     if cs_reflective_shot:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
     cs_ls "Вот это действительно плохая новость."
     $ cs_d4_elbow_bandage_removed = True
     $ cs_lena_elbow_bandaged = False
-    cs_narrator "Я уже собиралась встать."
-    cs_narrator "Но вспомнила разговор с Ольгой Дмитриевной."
-    cs_narrator "Фотографии."
-    cs_narrator "И слова Семёна о седьмом дне."
-    cs_narrator "Я осталась сидеть."
-    cs_narrator "Виола заметила."
+    cs_narrator "Я собиралась встать, но вспомнила оговорку вожатой, фотографии, седьмой день Семёна. Виола заметила, что я задержалась."
     if cs_reflective_shot:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
     cs_vi "Что-то ещё?"
-    cs_narrator "Я посмотрела на неё."
     if cs_reflective_shot:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
@@ -318,7 +286,6 @@ label cs_day04_07:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
     cs_vi "Конечно."
-    cs_narrator "Я немного помолчала."
     if cs_reflective_shot:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
@@ -328,7 +295,6 @@ label cs_day04_07:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
     cs_vi "Семь дней. А что?"
-    cs_narrator "Я посмотрела на неё внимательнее."
     if cs_reflective_shot:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
@@ -341,7 +307,6 @@ label cs_day04_07:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
     cs_ls "Вы это помните?"
-    cs_narrator "Она слегка нахмурилась."
     if cs_reflective_shot:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
@@ -362,12 +327,10 @@ label cs_day04_07:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
     cs_ls "Иногда?"
-    cs_narrator "Она повернулась."
     if cs_reflective_shot:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
     cs_vi "Почему ты спрашиваешь?"
-    cs_narrator "Я вздохнула."
     if cs_reflective_shot:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
@@ -387,7 +350,6 @@ label cs_day04_07:
         $ cs_presence_stage()
         with cs_sprite_change
     cs_vi "Что вы нашли, Лена?"
-    cs_narrator "Я посмотрела на неё."
     cs_narrator "Виола явно не собиралась довольствоваться словом «обстоятельства»."
     if not cs_d4_choice_07_done:
         menu:
@@ -409,20 +371,12 @@ label cs_day04_07:
                     $ cs_frame_focus(cs_d4_scene_cast)
                     with cs_sprite_change
                 cs_vi "Конечно."
-                cs_narrator "Я немного улыбнулась."
                 if cs_reflective_shot:
                     $ cs_frame_focus(cs_d4_scene_cast)
                     with cs_sprite_change
                 cs_ls "Да. Не самое выдающееся решение в моей жизни."
                 cs_narrator "Она жестом предложила продолжать."
-                cs_narrator "Я рассказала о заброшенном корпусе, фотографиях и документах за разные годы."
-                cs_narrator "О металлической двери."
-                cs_narrator "О работающем электричестве."
-                cs_narrator "И о том, что кто-то произнёс моё имя из темноты."
-                cs_narrator "На этот раз я не пыталась выставить себя героиней."
-                cs_narrator "Героизма в моём походе было примерно столько же, сколько в ножке стула."
-                cs_narrator "Виола слушала внимательно."
-                cs_narrator "И больше не перебивала."
+                cs_narrator "Я коротко рассказала про корпус, фотографии и документы. Про голос — тоже. Не пыталась выставить себя героиней. Виола выслушала, не перебивая."
             "Рассказать только о фотографиях и спросить о старом лагере":
                 $ cs_d4_viola_partial_disclosure = True
                 cs_narrator "Я решила пока ограничиться тем, что можно подтвердить."
@@ -439,12 +393,10 @@ label cs_day04_07:
                     $ cs_frame_focus(cs_d4_scene_cast)
                     with cs_sprite_change
                 cs_ls "Да."
-                cs_narrator "Она немного помолчала."
                 if cs_reflective_shot:
                     $ cs_frame_focus(cs_d4_scene_cast)
                     with cs_sprite_change
                 cs_vi "А в убежище заходила?"
-                cs_narrator "Я посмотрела на неё."
                 cs_narrator "Врать медику, который только что держал твой локоть, — так себе стратегия."
                 if cs_reflective_shot:
                     $ cs_frame_focus(cs_d4_scene_cast)
@@ -456,8 +408,7 @@ label cs_day04_07:
                     with cs_sprite_change
                 cs_vi "Понятно."
         $ cs_d4_choice_07_done = True
-    cs_narrator "Некоторое время она молчала."
-    cs_narrator "Затем спросила:"
+    cs_narrator "После паузы она спросила:"
     if cs_reflective_shot:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
@@ -480,17 +431,14 @@ label cs_day04_07:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
     cs_vi "Я тоже иногда помню странные вещи."
-    cs_narrator "Я замерла."
     if cs_reflective_shot:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
     cs_ls "Какие?"
-    cs_narrator "Она задумалась."
     if cs_reflective_shot:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
     cs_vi "Другие дни. Разговоры, которых не было. Иногда помню людей, которых давно не видела."
-    cs_narrator "Она повернулась ко мне."
     if cs_reflective_shot:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
@@ -525,16 +473,11 @@ label cs_day04_07:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
     cs_vi "Иногда."
-    cs_narrator "Я опустила взгляд."
-    cs_narrator "Вот оно."
-    cs_narrator "Ещё один человек, чья память не сходится с календарём."
-    cs_narrator "И ни одного объяснения."
-    cs_narrator "Я осторожно провела пальцем по краю кушетки."
+    cs_narrator "Ещё один человек, чья память не сходится с календарём. И ни одного объяснения."
     if cs_reflective_shot:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
     cs_ls "Виола."
-    cs_narrator "Она посмотрела на меня."
     if cs_reflective_shot:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
@@ -544,12 +487,10 @@ label cs_day04_07:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
     cs_vi "Нет."
-    cs_narrator "Я медленно выдохнула."
     if cs_reflective_shot:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
     cs_ls "Спасибо."
-    cs_narrator "Она удивилась."
     if cs_reflective_shot:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
@@ -559,7 +500,7 @@ label cs_day04_07:
         with cs_sprite_change
     cs_ls "За честное «нет». Сегодня это довольно редкий ответ."
     cs_narrator "Виола посмотрела на меня внимательнее."
-    cs_narrator "Затем слегка улыбнулась."
+    cs_narrator "Затем улыбнулась."
     cs_narrator "Но почти сразу стала серьёзной."
     if cs_reflective_shot:
         $ cs_frame_focus(cs_d4_scene_cast)
@@ -578,8 +519,7 @@ label cs_day04_07:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
     cs_ls "Не собираюсь."
-    cs_narrator "Она продолжала смотреть."
-    cs_narrator "Я добавила:"
+    cs_narrator "Под её взглядом я добавила:"
     if cs_reflective_shot:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
@@ -606,17 +546,14 @@ label cs_day04_07:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
     cs_ls "Спасибо за осмотр."
-    cs_narrator "Виола улыбнулась."
     if cs_reflective_shot:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
     cs_vi "Постарайся сегодня больше ничего не повредить."
-    cs_narrator "Я задумалась."
     if cs_reflective_shot:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
     cs_ls "Очень амбициозная задача."
-    cs_narrator "Она покачала головой."
     $ cs_d4_scene_cast = ['cs']
     $ cs_frame_focus(cs_d4_scene_cast)
     with cs_sprite_change
@@ -643,7 +580,6 @@ label cs_day04_07:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
     cs_vi "До свидания, Лена."
-    cs_narrator "Я кивнула."
     if cs_reflective_shot:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
@@ -654,11 +590,6 @@ label cs_day04_07:
     $ cs_frame_focus(cs_d4_scene_cast)
     with Dissolve(0.7)
     cs_narrator "На улице оказалось заметно теплее."
-    cs_narrator "Я остановилась возле крыльца и посмотрела на площадь."
-    cs_narrator "Семён."
-    cs_narrator "Пятый день."
-    cs_narrator "Завтра шестой."
-    cs_narrator "Послезавтра седьмой."
-    cs_narrator "Теперь у нас хотя бы появились вопросы, которые можно задавать."
-    cs_narrator "Осталось найти кого-нибудь, кто действительно знает ответы."
+    cs_narrator "На крыльце я оглядела площадь. У Семёна пятый день. Завтра шестой, послезавтра седьмой."
+    cs_narrator "Теперь мы хотя бы знали, о чём спрашивать. Осталось найти ответы."
     return

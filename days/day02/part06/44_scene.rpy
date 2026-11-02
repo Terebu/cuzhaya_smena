@@ -33,17 +33,8 @@ label cs_day02_44:
     $ cs_frame_focus(["cs_semen", "cs_darya"])
     with cs_sprite_change
     # cs_director_end
-    cs_narrator "Мы решили провести ещё одну проверку."
-    cs_narrator "На этот раз договорились заранее."
-    cs_narrator "Никто не сходит с асфальта."
-    cs_narrator "Не делает ненужных поворотов."
-    cs_narrator "Не отвлекается надолго на лес."
-    cs_narrator "Семён следит за временем."
-    cs_narrator "Дарья запоминает заметные особенности дороги."
-    cs_narrator "Я отмечаю всё, что кажется необычным."
-    cs_narrator "Прежде чем отправиться, я ещё раз посмотрела на куст."
-    cs_narrator "Поправила резинку так, чтобы её было хорошо видно."
-    cs_narrator "Дарья сделала рядом со старой стрелкой вторую короткую отметку."
+    cs_narrator "Мы решили провести ещё одну проверку. Договорились заранее: с асфальта не сходим, Семён следит за временем, Дарья — за обочиной, я — за всем странным. Прежде чем отправиться, я ещё раз посмотрела на куст."
+    cs_narrator "Поправила резинку так, чтобы её было хорошо видно. Дарья сделала рядом со старой стрелкой вторую короткую отметку."
     show cs_darya surprised pioneer far at cs_darya_far_left
     $ cs_part06_cast = ["cs_semen", "cs_darya"]
     $ cs_presence_stage()
@@ -56,7 +47,6 @@ label cs_day02_44:
     # cs_global_transition
     with cs_sprite_change
     cs_sy "Идём?"
-    cs_narrator "Я кивнула."
     cs_ls "Идём."
     hide cs_road_powerlines_day
     hide cs_road_right_bend_day
@@ -66,19 +56,10 @@ label cs_day02_44:
     with Dissolve(0.8)
     $ cs_road_visual_trace.append("lap2_a")
     label cs_check_part06_lap2_a:
-    cs_narrator "Мы снова пошли вперёд."
-    cs_narrator "Прошло несколько минут."
-    cs_narrator "Потом ещё несколько."
-    cs_narrator "Я старалась не смотреть на каждый куст так, будто он собирался внезапно переместиться."
+    cs_narrator "Мы снова пошли вперёд. Прошло несколько минут. Потом ещё несколько. Я старалась не смотреть на каждый куст так, будто он собирался внезапно переместиться."
     cs_narrator "Получалось плохо."
-    cs_th "Ну же."
-    cs_th "Обычная дорога."
-    cs_th "Обычный лес."
-    cs_th "Ничего сверхъестественного."
-    cs_narrator "Но теперь даже птицы казались подозрительно громкими."
-    cs_narrator "Семён время от времени сообщал, сколько прошло времени."
-    cs_narrator "Дарья внимательно следила за обочиной."
-    cs_narrator "Я смотрела то вперёд, то на землю под ногами."
+    cs_th "Ну же. Обычная дорога. Обычный лес. Ничего сверхъестественного."
+    cs_narrator "Но теперь даже птицы казались подозрительно громкими. Семён время от времени сообщал, сколько прошло времени. Дарья внимательно следила за обочиной. Я смотрела то вперёд, то на землю под ногами."
     hide cs_road_powerlines_day
     hide cs_road_right_bend_day
     hide cs_road_marked_verge_day
@@ -87,9 +68,7 @@ label cs_day02_44:
     with Dissolve(0.8)
     $ cs_road_visual_trace.append("lap2_b")
     label cs_check_part06_lap2_b:
-    cs_narrator "На одном участке дорога слегка изгибалась влево."
-    cs_narrator "Мы прошли его."
-    cs_narrator "Потом длинный прямой отрезок."
+    cs_narrator "На одном участке дорога слегка изгибалась влево. Мы прошли его. Потом длинный прямой отрезок."
     hide cs_road_powerlines_day
     hide cs_road_right_bend_day
     hide cs_road_marked_verge_day
@@ -98,19 +77,14 @@ label cs_day02_44:
     with Dissolve(0.8)
     $ cs_road_visual_trace.append("lap2_c")
     label cs_check_part06_lap2_c:
-    cs_narrator "Небольшая неровность асфальта."
-    cs_narrator "Ещё несколько деревьев."
-    cs_narrator "И…"
+    cs_narrator "Небольшая неровность асфальта. Ещё несколько деревьев. И…"
     show cs_darya shrug pioneer far at cs_darya_far_left
     $ cs_part06_cast = ["cs_semen", "cs_darya"]
     $ cs_presence_stage()
     # cs_global_transition
     with cs_sprite_change
     cs_da "Лена."
-    cs_narrator "Я подняла голову."
-    cs_narrator "Она не смотрела на меня."
-    cs_narrator "Смотрела вперёд."
-    cs_narrator "Я перевела взгляд туда же."
+    cs_narrator "Я подняла голову. Она не смотрела на меня. Смотрела вперёд. Я перевела взгляд туда же."
     hide cs_road_powerlines_day
     hide cs_road_right_bend_day
     hide cs_road_marked_verge_day
@@ -121,10 +95,7 @@ label cs_day02_44:
     label cs_check_part06_lap2_return:
     $ cs_road_loop_observations = 2
     pause 1.0
-    cs_narrator "Яркая резинка."
-    cs_narrator "Тот же куст."
-    cs_narrator "У края дороги — две отметки."
-    cs_narrator "Я остановилась."
+    cs_narrator "Яркая резинка. Тот же куст. У края дороги — две отметки. Я остановилась."
     cs_narrator "Семён медленно выдохнул."
     show cs_semen serious pioneer far at cs_semen_far_center
     $ cs_part06_cast = ["cs_semen", "cs_darya"]
@@ -132,21 +103,13 @@ label cs_day02_44:
     # cs_global_transition
     with cs_sprite_change
     cs_sy "Мы опять пришли сюда."
-    cs_narrator "Я несколько секунд молчала."
-    cs_narrator "Потом подошла к обочине."
-    cs_narrator "Присела."
-    cs_narrator "Проверила вторую отметку."
+    cs_narrator "Я несколько секунд молчала. Потом подошла к обочине. Присела. Проверила вторую отметку."
     cs_narrator "Она была на месте."
     cs_ls "Да."
     cs_da "И мы ни разу не разворачивались."
     cs_sy "Ни разу."
-    cs_narrator "Я выпрямилась."
-    cs_narrator "Посмотрела на дорогу."
-    cs_narrator "С виду она ничем не отличалась от самой обычной лесной трассы."
-    cs_narrator "Но теперь у нас было два последовательных наблюдения."
-    cs_narrator "Мы шли в одном направлении."
-    cs_narrator "Без намеренного возвращения."
-    cs_narrator "И дважды оказывались у одной и той же контрольной точки."
+    cs_narrator "Я выпрямилась. Посмотрела на дорогу. С виду она ничем не отличалась от самой обычной лесной трассы. Но теперь у нас было два последовательных наблюдения."
+    cs_narrator "Мы шли в одном направлении. Без намеренного возвращения. И дважды оказывались у одной и той же контрольной точки."
     cs_th "Вот теперь стало по-настоящему неуютно."
     cs_narrator "Семён потёр затылок."
     show cs_semen thinking pioneer far at cs_semen_far_center
@@ -170,10 +133,8 @@ label cs_day02_44:
     cs_narrator "Семён посмотрел в сторону лагеря."
     cs_sy "А если мы попробуем пойти обратно?"
     cs_narrator "Мы переглянулись."
-    cs_narrator "Я кивнула."
     cs_ls "Думаю, на сегодня хватит движения вперёд."
-    cs_narrator "Дарья согласилась."
-    cs_narrator "Мы развернулись."
+    cs_narrator "Дарья согласилась. Мы развернулись."
     hide cs_road_powerlines_day
     hide cs_road_right_bend_day
     hide cs_road_marked_verge_day
@@ -182,9 +143,7 @@ label cs_day02_44:
     with Dissolve(0.8)
     $ cs_road_visual_trace.append("back_c")
     label cs_check_part06_back_c:
-    cs_narrator "И пошли в противоположную сторону."
-    cs_narrator "Я следила за дорогой почти болезненно внимательно."
-    cs_narrator "Снова деревья."
+    cs_narrator "И пошли в противоположную сторону. Я следила за дорогой почти болезненно внимательно. Снова деревья."
     hide cs_road_powerlines_day
     hide cs_road_right_bend_day
     hide cs_road_marked_verge_day
@@ -193,9 +152,7 @@ label cs_day02_44:
     with Dissolve(0.8)
     $ cs_road_visual_trace.append("back_b")
     label cs_check_part06_back_b:
-    cs_narrator "Снова асфальт."
-    cs_narrator "Снова одинаковая трава по обочинам."
-    cs_narrator "Но теперь прошло заметно меньше времени."
+    cs_narrator "Снова асфальт. Снова одинаковая трава по обочинам. Но теперь прошло заметно меньше времени."
     hide cs_road_powerlines_day
     hide cs_road_right_bend_day
     hide cs_road_marked_verge_day
@@ -204,8 +161,7 @@ label cs_day02_44:
     with Dissolve(0.8)
     $ cs_road_visual_trace.append("back_a")
     label cs_check_part06_back_a:
-    cs_narrator "Дорога сделала небольшой изгиб."
-    cs_narrator "Впереди посветлело."
+    cs_narrator "Дорога сделала небольшой изгиб. Впереди посветлело."
     $ cs_director_scene("bg ext_no_bus")
     scene bg ext_no_bus
     # cs_presence_keep: hide cs_dasha_winter
@@ -227,34 +183,25 @@ label cs_day02_44:
     $ cs_presence_stage()
     with Dissolve(0.8)
     label cs_check_part06_gate_return:
-    cs_narrator "И между деревьями показалась знакомая вывеска."
-    cs_narrator "«СОВЁНОК»."
-    cs_narrator "Я остановилась."
-    cs_ls "Вот теперь действительно интересно."
+    cs_narrator "И между деревьями показалась знакомая вывеска. «СОВЁНОК». Я остановилась."
+    cs_ls "Назад — быстрее, чем вперёд."
     cs_narrator "Семён посмотрел на часы."
-    cs_sy "Назад мы шли намного меньше."
+    cs_sy "Ага. Минут на пять, не больше."
     show cs_darya shrug pioneer normal at cs_darya_normal_right
     $ cs_part06_cast = ["cs_semen", "cs_darya"]
     $ cs_presence_stage()
     # cs_global_transition
     with cs_sprite_change
     cs_da "Да."
-    cs_narrator "Я взглянула на ворота."
-    cs_narrator "Они были совершенно обычными."
-    cs_narrator "Такими же, какими я видела их утром."
-    cs_narrator "Но теперь смотреть на них было гораздо неприятнее."
-    cs_th "Получается, уйти можно."
-    cs_th "По крайней мере, на какое-то расстояние."
-    cs_th "А вот куда именно ведёт дорога, мы так и не выяснили."
-    cs_narrator "Я посмотрела на Семёна."
-    cs_narrator "Потом на Дарью."
+    cs_narrator "Я взглянула на ворота. Они были обычными. Такими же, какими я видела их утром. Но теперь смотреть на них было гораздо неприятнее."
+    cs_th "Получается, уйти можно. По крайней мере, на какое-то расстояние. А вот куда именно ведёт дорога, мы так и не выяснили."
+    cs_narrator "Я посмотрела на Семёна, потом на Дарью."
     cs_ls "У нас есть наблюдение, которое пока не укладывается в обычную схему."
     cs_sy "Это ты ещё мягко сказала."
     cs_narrator "Я невесело усмехнулась."
     cs_ls "Если начну формулировать жёстче, боюсь, нам всем станет ещё хуже."
     cs_narrator "Дарья посмотрела на вывеску."
     cs_da "Я бы сначала вернулась в лагерь. А уже там записала всё, пока мы не забыли детали."
-    cs_narrator "Я кивнула."
     cs_ls "Согласна."
     cs_narrator "Мы направились к воротам."
     cs_th "На этот раз я даже не пыталась шутить."

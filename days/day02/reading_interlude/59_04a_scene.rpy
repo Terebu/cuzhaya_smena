@@ -27,8 +27,7 @@ label cs_day02_reading_04a:
     $ cs_frame_focus(["cs_zhenya"])
     with cs_sprite_change
     # cs_director_end
-    cs_narrator "Женя посмотрела на часы."
-    cs_narrator "Затем на книгу."
+    cs_narrator "Женя посмотрела на часы, затем на книгу."
     # cs_presence_keep: hide cs_darya
     # cs_presence_keep: hide cs_semen
     # cs_presence_keep: hide mz
@@ -102,10 +101,7 @@ label cs_day02_reading_04a:
     label cs_director_check_059ae39e0c:
     # cs_director_end
     cs_narrator "Я проводила её взглядом."
-    cs_th "Вот и всё."
-    cs_th "Никакого конфликта."
-    cs_th "Человек обозначил правила."
-    cs_th "Я согласилась."
+    cs_th "Вот и всё. Никакого конфликта. Человек обозначил правила. Я согласилась."
     cs_th "Оказывается, это довольно простая система."
     cs_narrator "Я вернулась к книге."
     label cs_check_reading_desk_04a:

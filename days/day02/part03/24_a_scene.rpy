@@ -36,8 +36,7 @@ label cs_day02_24a:
     $ cs_frame_focus(["sl", "cs_darya"])
     with cs_sprite_change
     # cs_director_end
-    cs_narrator "Я посмотрела на коробку."
-    cs_narrator "Потом на Славю."
+    cs_narrator "Я посмотрела на коробку, потом на Славю."
     cs_ls "Давай помогу."
     cs_narrator "Она немного удивилась."
     # cs_presence_keep: hide cs_dasha_winter
@@ -62,10 +61,7 @@ label cs_day02_24a:
     with cs_sprite_change
     cs_sl "Правда? Не обязательно, я и сама донесу."
     cs_ls "Верю. Но вдвоём будет быстрее."
-    cs_narrator "Я протянула руки."
-    cs_narrator "Славя осторожно передала мне коробку."
-    cs_narrator "Она оказалась легче, чем я ожидала."
-    cs_narrator "Впрочем, внутри что-то немедленно загремело."
+    cs_narrator "Я протянула руки. Славя осторожно передала мне коробку. Она оказалась легче, чем я ожидала. Впрочем, внутри что-то немедленно загремело."
     cs_narrator "Я посмотрела вниз."
     cs_ls "Кажется, здесь собрание мелких предметов без утверждённого порядка размещения."
     # cs_presence_keep: hide cs_dasha_winter
@@ -90,8 +86,7 @@ label cs_day02_24a:
     with cs_sprite_change
     cs_sl "Там всё лежало нормально."
     cs_ls "Тогда не будем обвинять инвентарь без доказательств."
-    cs_narrator "Дарья рассмеялась и взяла папку с бумагой."
-    cs_narrator "Семён, которому досталась катушка верёвки и ещё одна небольшая коробка, посмотрел на нас."
+    cs_narrator "Дарья рассмеялась и взяла папку с бумагой. Семён, которому досталась катушка верёвки и ещё одна небольшая коробка, посмотрел на нас."
     # cs_presence_keep: hide cs_dasha_winter
     # cs_presence_keep: hide cs_dasha_pioneer
     # cs_presence_keep: hide cs_zhenya
@@ -128,7 +123,6 @@ label cs_day02_24a:
     # cs_global_transition
     with cs_sprite_change
     cs_sy "Я правильно понимаю, что просто случайно оказался рядом?"
-    cs_narrator "Я кивнула."
     cs_ls "Именно. Добро пожаловать в трудовой коллектив."
     # cs_presence_keep: hide cs_dasha_winter
     # cs_presence_keep: hide cs_dasha_pioneer
@@ -151,10 +145,7 @@ label cs_day02_24a:
     # cs_global_transition
     with cs_sprite_change
     cs_sy "Как удобно."
-    cs_narrator "Мы направились к хозяйственному помещению возле площади."
-    cs_narrator "Славя шла впереди, показывая дорогу."
-    cs_narrator "Я несла коробку, стараясь не трясти её слишком сильно."
-    cs_narrator "Дарья держала папку обеими руками, чтобы ветер не растрепал листы."
+    cs_narrator "Мы направились к хозяйственному помещению возле площади. Славя шла впереди, показывая дорогу. Я несла коробку, стараясь не трясти её слишком сильно. Дарья держала папку обеими руками, чтобы ветер не растрепал листы."
     cs_narrator "Некоторое время мы разговаривали о предстоящем музыкальном вечере."
     # cs_presence_keep: hide cs_dasha_winter
     # cs_presence_keep: hide cs_dasha_pioneer
@@ -320,12 +311,8 @@ label cs_day02_24a:
         play ambience "sound/ambiences/int_cabin_day.ogg" fadeout 1.0 fadein 1.5
     $ renpy.music.set_volume(0.15, channel="ambience", delay=1.0)
     label cs_check_part03_storage:
-    cs_narrator "Славя открыла дверь."
-    cs_narrator "Она показала, куда поставить материалы."
-    cs_narrator "Я осторожно опустила коробку на полку."
-    cs_narrator "Дарья положила папку на стол."
-    cs_narrator "Семён пристроил свою ношу рядом."
-    cs_narrator "Славя осмотрелась."
+    cs_narrator "Славя открыла дверь. Она показала, куда поставить материалы. Я осторожно опустила коробку на полку. Дарья положила папку на стол."
+    cs_narrator "Семён пристроил свою ношу рядом. Славя осмотрелась."
     cs_sl "Всё, спасибо большое. Одна бы я дольше возилась."
     cs_ls "Не за что."
     # cs_presence_keep: hide cs_dasha_winter
@@ -349,13 +336,9 @@ label cs_day02_24a:
     # cs_global_transition
     with cs_sprite_change
     cs_da "У тебя сегодня ещё много дел?"
-    cs_narrator "Славя задумалась."
-    cs_narrator "Потом достала из кармана небольшой листок."
+    cs_narrator "Славя задумалась. Потом достала из кармана небольшой листок."
     cs_sl "Немного."
-    cs_narrator "Я заглянула в список."
-    cs_narrator "Несколько строк."
-    cs_narrator "Потом ещё несколько."
-    cs_narrator "И ещё."
+    cs_narrator "Я заглянула в список. Несколько строк. Потом ещё несколько. И ещё."
     cs_ls "Славя."
     # cs_presence_keep: hide cs_dasha_winter
     # cs_presence_keep: hide cs_dasha_pioneer
@@ -401,7 +384,6 @@ label cs_day02_24a:
     # cs_global_transition
     with cs_sprite_change
     cs_sl "Ну, часть уже сделана."
-    cs_narrator "Я кивнула."
     cs_ls "Тогда предлагаю считать сегодняшний план выполнимым."
     cs_narrator "Славя посмотрела на меня."
     # cs_presence_keep: hide cs_dasha_winter
@@ -425,7 +407,6 @@ label cs_day02_24a:
     # cs_global_transition
     with cs_sprite_change
     cs_sl "А ты действительно любишь рисовать?"
-    cs_narrator "Я улыбнулась."
     cs_ls "Да. Дома это было одним из моих основных занятий."
     # cs_presence_keep: hide cs_dasha_winter
     # cs_presence_keep: hide cs_dasha_pioneer
@@ -493,8 +474,7 @@ label cs_day02_24a:
     # cs_global_transition
     with cs_sprite_change
     cs_sl "Какой кнопки?"
-    cs_narrator "Я помолчала."
-    cs_narrator "Затем улыбнулась."
+    cs_narrator "Я помолчала. Затем улыбнулась."
     cs_ls "Долгая история. Если коротко — иногда очень хочется стереть неудачную линию одним движением."
     cs_narrator "Славя кивнула."
     # cs_presence_keep: hide cs_dasha_winter
@@ -520,8 +500,7 @@ label cs_day02_24a:
     cs_sl "Для этого есть ластик."
     cs_narrator "Я посмотрела на неё."
     cs_ls "И ведь не поспоришь."
-    cs_narrator "Все рассмеялись."
-    cs_narrator "Славя достала нужные для объявления карандаши и несколько листов и протянула нам."
+    cs_narrator "Все рассмеялись. Славя достала нужные для объявления карандаши и несколько листов и протянула нам."
     cs_sl "Держите. Для объявления этого хватит."
     $ cs_director_scene("cs_camp_path_day")
     scene cs_camp_path_day
@@ -549,8 +528,5 @@ label cs_day02_24a:
         play ambience "sound/ambiences/camp_center_day.ogg" fadeout 1.0 fadein 1.5
     $ renpy.music.set_volume(0.22, channel="ambience", delay=1.0)
     cs_narrator "Мы направились обратно к дорожке."
-    cs_th "Надо же."
-    cs_th "Никаких грандиозных открытий."
-    cs_th "Просто помогли донести коробку."
-    cs_th "И почему-то от этого было приятно."
+    cs_th "Надо же. Просто помогли Славе. И почему-то от этого было приятно."
     return

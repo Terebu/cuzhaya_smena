@@ -24,21 +24,10 @@ label cs_day02_reading_05:
     $ cs_frame_focus([])
     with cs_sprite_change
     # cs_director_end
-    cs_narrator "Я прочитала ещё несколько страниц."
-    cs_narrator "Потом остановилась на довольно длинном абзаце."
-    cs_narrator "Перечитала его."
-    cs_narrator "И неожиданно поняла, что уже некоторое время ни о чём другом не думаю."
-    cs_narrator "Не о доме."
-    cs_narrator "Не о загадочной дороге."
-    cs_narrator "Не об автобусе."
-    cs_narrator "Даже не о том, что после вчерашнего признания отношения с Дарьей оставались неопределёнными."
-    cs_th "Надо же."
-    cs_th "Оказывается, мой мозг способен заниматься чем-то одним."
-    cs_th "Без попытки одновременно решить все проблемы мироздания."
-    cs_narrator "Я перевернула страницу."
-    cs_narrator "И в этот момент снова открылась дверь."
-    cs_narrator "Послышались шаги."
-    cs_narrator "Знакомые."
+    cs_narrator "Я прочитала ещё несколько страниц. Потом остановилась на довольно длинном абзаце. Перечитала его. И неожиданно поняла, что уже некоторое время ни о чём другом не думаю."
+    cs_narrator "Не о доме. Не о загадочной дороге. Не об автобусе. Даже не о том, что после вчерашнего признания отношения с Дарьей оставались неопределёнными."
+    cs_th "Надо же. Оказывается, мой мозг способен заниматься чем-то одним. Без попытки одновременно решить все проблемы мироздания."
+    cs_narrator "Я перевернула страницу. И в этот момент снова открылась дверь. Послышались шаги. Знакомые."
     cs_narrator "Я подняла голову."
     # cs_presence_keep: hide cs_zhenya
     # cs_presence_keep: hide cs_semen
@@ -60,10 +49,7 @@ label cs_day02_reading_05:
     # cs_global_transition
     with cs_sprite_change
     label cs_check_reading_darya_returned:
-    cs_narrator "На пороге стояла Дарья."
-    cs_narrator "Она огляделась."
-    cs_narrator "Увидела Женю за рабочим столом."
-    cs_narrator "Затем меня."
+    cs_narrator "На пороге стояла Дарья. Она огляделась. Увидела Женю за рабочим столом. Затем меня."
     cs_narrator "И остановилась."
     # cs_presence_keep: hide cs_zhenya
     # cs_presence_keep: hide cs_semen
@@ -87,9 +73,7 @@ label cs_day02_reading_05:
     cs_da "Лена?"
     cs_narrator "Я подняла взгляд."
     cs_ls "Я здесь."
-    cs_narrator "Даша подошла ближе."
-    cs_narrator "Посмотрела на книгу передо мной."
-    cs_narrator "Потом на меня."
+    cs_narrator "Дарья подошла ближе. Посмотрела на книгу передо мной, потом на меня."
     # cs_presence_keep: hide cs_zhenya
     # cs_presence_keep: hide cs_semen
     # cs_presence_keep: hide mz
@@ -116,8 +100,7 @@ label cs_day02_reading_05:
     cs_da "Не знаю. После сегодняшнего дня я ожидала хотя бы небольшого расследования."
     cs_narrator "Я покачала головой."
     cs_ls "Сегодня уже хватит."
-    cs_narrator "Она села на соседний стул."
-    cs_narrator "Заметила, как я устроила повреждённую руку."
+    cs_narrator "Она села на соседний стул. Заметила, как я устроила повреждённую руку."
     # cs_presence_keep: hide cs_zhenya
     # cs_presence_keep: hide cs_semen
     # cs_presence_keep: hide mz
@@ -139,8 +122,7 @@ label cs_day02_reading_05:
     with cs_sprite_change
     cs_da "Локоть не болит?"
     cs_ls "Если не двигать лишний раз, почти нет."
-    cs_narrator "Она кивнула."
-    cs_narrator "Потом посмотрела на книгу."
+    cs_narrator "Она кивнула. Потом посмотрела на книгу."
     cs_da "Интересная?"
     cs_ls "Пока да."
     # cs_presence_keep: hide cs_zhenya
@@ -195,10 +177,7 @@ label cs_day02_reading_05:
     with cs_sprite_change
     label cs_director_check_1c69659476:
     # cs_director_end
-    cs_narrator "Даша подошла к библиотекарше."
-    cs_narrator "Я слышала их негромкий разговор."
-    cs_narrator "Женя объяснила, с каких полок можно брать книги для чтения в зале и что нужно сделать, если захочется унести книгу с собой."
-    cs_narrator "Дарья поблагодарила её."
+    cs_narrator "Дарья подошла к библиотекарше. Я слышала их негромкий разговор. Женя объяснила, с каких полок можно брать книги для чтения в зале и что нужно сделать, если захочется унести книгу с собой. Дарья поблагодарила её."
     cs_narrator "Затем выбрала небольшой том."
     # cs_presence_keep: hide cs_zhenya
     # cs_presence_keep: hide cs_semen
@@ -219,13 +198,9 @@ label cs_day02_reading_05:
     $ cs_presence_stage()
     # cs_global_transition
     with cs_sprite_change
-    cs_narrator "Вернулась ко мне."
-    cs_narrator "Устроилась рядом."
-    cs_narrator "И открыла первую страницу."
-    cs_narrator "Я посмотрела на неё."
+    cs_narrator "Вернулась ко мне. Устроилась рядом. И открыла первую страницу. Я посмотрела на неё."
     cs_narrator "Она — на меня."
     cs_da "Что?"
-    cs_narrator "Я слегка улыбнулась."
     cs_ls "Ничего."
     # cs_presence_keep: hide cs_zhenya
     # cs_presence_keep: hide cs_semen
@@ -248,17 +223,13 @@ label cs_day02_reading_05:
     with cs_sprite_change
     cs_da "Подозрительно."
     cs_narrator "Я тихо рассмеялась."
-    cs_ls "Вот видишь, уже переняла мои привычки."
+    cs_ls "Вот видишь. Подозрительно — это тоже вариант ответа."
     cs_narrator "Она улыбнулась."
     # cs_inward_beat_12: attention turns inward
     $ cs_pov_begin()
     with cs_sprite_leave
     cs_narrator "И вернулась к чтению."
-    cs_th "Вот так."
-    cs_th "Две девушки, которые ещё недавно ехали в одном автобусе сквозь зимнюю Москву."
-    cs_th "Теперь сидят рядом в советской библиотеке."
-    cs_th "И читают книги."
+    cs_th "Вот так. Две девушки, которые ещё недавно ехали в одном автобусе сквозь зимнюю Москву. Теперь сидят рядом в советской библиотеке. И читают книги."
     cs_th "Без попытки немедленно понять, почему оказались здесь."
-    cs_narrator "Невероятно обыкновенное занятие."
-    cs_narrator "Но сейчас именно этого мне и хотелось."
+    cs_narrator "Невероятно обыкновенное занятие. Но сейчас именно этого мне и хотелось."
     return

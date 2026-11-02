@@ -12,20 +12,11 @@ label cs_day01_02:
     # cs_director_end
     cs_narrator "Двери автобуса оставались открытыми."
     cs_narrator "Я остановилась перед ступеньками."
-    cs_narrator "Снаружи стрекотали насекомые."
-    cs_narrator "Где-то вдалеке раздавались детские голоса."
-    cs_narrator "В воздухе едва различимо звучала музыка."
-    cs_narrator "Негромкая, старомодная, почти растворяющаяся в шелесте листвы."
-    cs_narrator "И тут в голове что-то неприятно шевельнулось."
-    cs_narrator "Не страх."
-    cs_narrator "Пока ещё нет."
-    cs_narrator "Скорее чувство узнавания."
+    cs_narrator "Снаружи стрекотали насекомые, вдали раздавались детские голоса. В шелесте листвы растворялась негромкая старомодная музыка."
+    cs_narrator "В голове неприятно шевельнулось чувство узнавания. Не страх. Пока ещё нет."
     cs_narrator "Я посмотрела через лобовое стекло."
-    cs_narrator "Две статуи возле ворот."
-    cs_narrator "Кирпичные тумбы."
-    cs_narrator "Металлические створки."
-    cs_narrator "Дорожка, уходящая вглубь лагеря."
-    cs_narrator "Всё это выглядело слишком знакомо."
+    cs_narrator "Две статуи возле ворот, кирпичные тумбы, металлические створки. Дорожка вглубь лагеря."
+    cs_narrator "Всё выглядело слишком знакомо."
     $ cs_director_scene("bg ext_camp_entrance_day")
     scene bg ext_camp_entrance_day
     with Dissolve(1.5)
@@ -40,12 +31,8 @@ label cs_day01_02:
     $ cs_presence_stage()
     # cs_global_transition
     with cs_sprite_change
-    cs_narrator "Дарья вышла следом."
-    cs_narrator "Она, по крайней мере, выглядела менее несчастной в своей одежде."
-    cs_narrator "Хотя назвать наши наряды подходящими для такой погоды было бы довольно смелым заявлением."
-    cs_narrator "Я сделала несколько шагов к воротам."
-    cs_narrator "Остановилась."
-    cs_narrator "Прищурилась."
+    cs_narrator "Дарья вышла следом. В своей одежде она выглядела менее несчастной, хотя для такой погоды мы обе были одеты нелепо."
+    cs_narrator "Я подошла к воротам и прищурилась."
     cs_ls "Где-то я это уже видела."
     # cs_darya_stage: present in story
     show cs_dasha_winter thinking normal at cs_darya_normal_center
@@ -70,28 +57,12 @@ label cs_day01_02:
     with cs_sprite_change
     label cs_director_check_4205df3c28:
     # cs_director_end
-    cs_narrator "Я почти не услышала вопроса."
-    cs_narrator "Смотрела на ворота."
-    cs_narrator "На статуи."
-    cs_narrator "На дорогу."
-    cs_narrator "На лес за оградой."
-    cs_narrator "На сам ракурс, с которого всё это открывалось."
+    cs_narrator "Я почти не услышала вопроса. Ворота, статуи, лес за оградой — даже ракурс был знакомым."
     cs_narrator "Даже автобус позади стоял подозрительно знакомо."
     cs_narrator "В памяти начали всплывать образы."
     $ renpy.music.set_volume(0.2, delay=2.0, channel="ambience")
-    cs_narrator "Главное меню."
-    cs_narrator "Музыка."
-    cs_narrator "Фоны."
-    cs_narrator "Диалоги."
-    cs_narrator "Спрайты."
-    cs_narrator "Семён."
-    cs_narrator "Славя."
-    cs_narrator "Алиса."
-    cs_narrator "Ульяна."
-    cs_narrator "Лена."
-    cs_narrator "Женя."
-    cs_narrator "Мику."
-    cs_narrator "Ольга Дмитриевна."
+    cs_narrator "Главное меню, музыка, фоны, диалоги, спрайты."
+    cs_narrator "Семён, Славя, Алиса, Ульяна, Лена Тихонова, Женя, Мику, Ольга Дмитриевна."
     cs_narrator "Пионер."
     cs_narrator "Юля."
     cs_narrator "Я медленно повернулась к автобусу."
@@ -111,15 +82,12 @@ label cs_day01_02:
     # cs_global_transition
     with cs_sprite_change
     cs_da "Лена?"
-    cs_ls "Любопытно."
-    cs_narrator "Я вернулась к автобусу и ещё раз посмотрела на номер."
-    cs_narrator "Четыреста десять."
-    cs_narrator "Он никуда не исчез."
+    cs_ls "Подожди. Мне надо это переварить."
+    cs_narrator "Я вернулась к автобусу. Четыреста десять. Номер никуда не исчез."
     cs_narrator "Я провела ладонью по лицу."
-    cs_ls "Прекрасно. Просто замечательно."
+    cs_ls "Так. Спокойно."
     cs_da "Что случилось?"
-    cs_narrator "Я повернулась к ней."
-    cs_narrator "Объяснить происходящее нормальными словами представлялось практически невозможным."
+    cs_narrator "Как объяснить это нормальными словами?"
     cs_ls "В общем, есть одна игра."
     cs_da "Игра?"
     cs_ls "Визуальная новелла."
@@ -130,8 +98,7 @@ label cs_day01_02:
     with cs_sprite_change
     cs_da "Хорошо."
     cs_ls "Там один парень зимой садится в автобус номер четыреста десять."
-    cs_narrator "Дарья медленно посмотрела на автобус."
-    cs_narrator "Затем на меня."
+    cs_narrator "Дарья посмотрела на автобус, потом на меня."
     # cs_darya_stage: present in story
     show cs_dasha_winter shrug normal at cs_darya_normal_center
     $ cs_presence_stage()
@@ -149,9 +116,7 @@ label cs_day01_02:
     cs_narrator "Я указала на ворота."
     cs_ls "Просыпается здесь."
     pause 2.0
-    cs_narrator "Несколько секунд мы молчали."
-    cs_narrator "В траве стрекотал кузнечик."
-    cs_narrator "Где-то за воротами раздался детский смех."
+    cs_narrator "Мы помолчали. В траве стрекотал кузнечик, за воротами раздался детский смех."
     play sound "<from 0 to 3>sound/ambiences/grasshoper_clean.ogg" volume 0.25 fadein 0.5 fadeout 0.5
     cs_narrator "Дарья снова посмотрела на вывеску."
     # cs_darya_stage: present in story

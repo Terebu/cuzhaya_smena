@@ -26,7 +26,6 @@ label cs_day01_22:
     # cs_global_transition
     with cs_sprite_change
     cs_sy "Похоже. Проснулся уже здесь. Жара, лес, этот лагерь."
-    cs_narrator "Я кивнула."
     cs_ls "У нас практически то же самое. Только автобус был современный. А проснулись мы в старом «Икарусе»."
     cs_narrator "Семён перевёл взгляд на Дарью."
     show cs_semen thinking_alt pioneer normal at cs_semen_normal_right
@@ -46,8 +45,7 @@ label cs_day01_22:
     with cs_sprite_change
     cs_da "И зимой я точно не была одета в пионерскую форму."
     cs_ls "Форму нам выдали уже здесь. До этого мы ходили по лагерю в куртках."
-    cs_narrator "Семён наконец взял ложку."
-    cs_narrator "Но сразу положил обратно."
+    cs_narrator "Семён взял ложку и сразу положил обратно."
     show cs_semen tie_touch pioneer normal at cs_semen_normal_right
     $ cs_presence_stage()
     # cs_global_transition
@@ -59,16 +57,14 @@ label cs_day01_22:
     with cs_sprite_change
     cs_da "Мы тоже."
     cs_sy "Теперь так не кажется."
-    cs_narrator "Я посмотрела на тарелку."
-    cs_narrator "От еды поднимался самый обычный пар."
+    cs_narrator "От тарелки поднимался пар."
     cs_ls "Предлагаю пока исходить из того, что происходящее настоящее. Хотя бы потому, что от него можно получить настоящий солнечный удар."
     # cs_darya_variety: reaction
     show cs_darya smile pioneer normal at cs_darya_normal_left
     $ cs_presence_stage()
     # cs_global_transition
     with cs_sprite_change
-    cs_narrator "Дарья коротко усмехнулась."
-    cs_narrator "Семён — нет."
+    cs_narrator "Дарья усмехнулась. Семён — нет."
     cs_sy "Ты всё время говоришь так спокойно."
     cs_narrator "Я подняла глаза."
     cs_ls "Не путай спокойный голос с отсутствием вопросов."
@@ -83,7 +79,6 @@ label cs_day01_22:
     cs_sy "Мне сказали, что автобус обычно приезжает по расписанию."
     cs_ls "Нам тоже. Но наш водитель куда-то исчез."
     cs_da "Мы не видели, как он вышел. Когда пошли смотреть, его уже не было."
-    cs_narrator "Я чуть повернулась к ней."
     cs_ls "Да. Именно так. Не будем делать из этого больше, чем знаем."
     cs_narrator "Семён посмотрел на пустой проход между столами."
     show cs_semen thinking_alt pioneer normal at cs_semen_normal_right
@@ -93,8 +88,6 @@ label cs_day01_22:
     cs_sy "А если нас привезли специально?"
     cs_ls "Возможность есть. Доказательств пока нет."
     cs_da "И неизвестно, кто мог бы это сделать."
-    cs_narrator "Повисла короткая пауза."
-    cs_narrator "Потом я всё-таки взяла ложку."
-    cs_th "Расследование расследованием."
-    cs_th "А обед лучше съесть, пока он ещё тёплый."
+    cs_narrator "Я всё-таки взяла ложку."
+    cs_th "Расследование расследованием, а обед лучше съесть тёплым."
     return

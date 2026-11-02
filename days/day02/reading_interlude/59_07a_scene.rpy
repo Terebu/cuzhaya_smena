@@ -27,8 +27,7 @@ label cs_day02_reading_07a:
     $ cs_frame_focus(["cs_zhenya", "cs_darya"])
     with cs_sprite_change
     # cs_director_end
-    cs_narrator "Женя ещё немного посмотрела на меня."
-    cs_narrator "Затем на книгу."
+    cs_narrator "Женя ещё немного посмотрела на меня, затем на книгу."
     # cs_presence_keep: hide cs_semen
     # cs_presence_keep: hide mz
     # cs_presence_keep: hide un
@@ -49,7 +48,6 @@ label cs_day02_reading_07a:
     # cs_global_transition
     with cs_sprite_change
     cs_mz "Ладно. Если собираешься читать дальше, только не загибай страницы."
-    cs_narrator "Я кивнула."
     cs_ls "Не буду."
     cs_mz "И не оставляй её где попало."
     cs_ls "Конечно."
@@ -64,11 +62,8 @@ label cs_day02_reading_07a:
     label cs_director_check_8d8b719ab8:
     # cs_director_end
     cs_narrator "Я некоторое время смотрела ей вслед."
-    cs_th "Никакой особенной теплоты."
-    cs_th "Но и прежнего раздражения уже не было."
-    cs_th "Во всяком случае, сейчас."
-    cs_narrator "Я открыла книгу."
-    cs_narrator "И продолжила читать."
+    cs_th "Никакой особенной теплоты. Но и прежнего раздражения уже не было. Во всяком случае, сейчас."
+    cs_narrator "Я открыла книгу. И продолжила читать."
     label cs_check_reading_desk_07a:
     pause 0.5
     return

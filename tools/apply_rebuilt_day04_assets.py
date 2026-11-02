@@ -13,8 +13,8 @@ def hide():return '    hide cs_d4_document\n    with dissolve'
 def scene(name):return '    $ cs_director_scene("'+name+'")\n    scene '+name+'\n    $ cs_frame_focus([])\n    with dissolve'
 def one(s):
  s=before(s,'На стене висели фотографии.',scene('cs_d4_old_photo_room'))
- s=before(s,'На центральной фотографии стоял пионерский отряд.',overlay('photo1963'))
- s=before(s,'Потом снова на коридор.',hide())
+ # The wall photo is undated. Keep this discovery on the room background until
+ # a distinct wall-photo asset exists; photo1963 belongs only to the archive.
  return s
 def three(s):
  s=s.replace('bg int_catacombs_living','cs_d4_old_bunker')

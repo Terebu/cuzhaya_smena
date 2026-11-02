@@ -53,27 +53,12 @@ label cs_day02_17:
     $ cs_frame_focus(["mi", "cs_darya"])
     with cs_sprite_change
     # cs_director_end
-    cs_narrator "Внутри было светло."
-    cs_narrator "Через окна падали широкие полосы солнечного света, ложившиеся на деревянный пол и инструменты."
-    cs_narrator "Я остановилась у входа."
-    cs_narrator "Осмотрелась."
-    cs_narrator "Пианино."
-    cs_narrator "Гитары."
-    cs_narrator "Нотные подставки."
-    cs_narrator "Несколько стульев."
-    cs_narrator "Шкаф с папками и разными мелочами."
-    cs_narrator "Всё выглядело знакомо."
-    cs_narrator "Но теперь я могла заметить то, чего не было видно на игровом фоне."
-    cs_narrator "Потёртости на краях инструментов."
-    cs_narrator "Следы карандаша на нотных листах."
-    cs_narrator "Один неровно поставленный стул."
-    cs_narrator "И едва уловимый запах дерева и старого лака."
-    cs_th "И снова то же чувство."
-    cs_th "Вчера всё это было частью игры."
-    cs_th "А сегодня я стою посреди комнаты, в которой кто-то действительно занимается музыкой."
-    cs_narrator "Мику положила папку на стол."
-    cs_narrator "Та немедленно раскрылась."
-    cs_narrator "Несколько листов сползли к краю."
+    cs_narrator "Внутри было светло. Через окна падали широкие полосы солнечного света, ложившиеся на деревянный пол и инструменты. Я остановилась у входа. Осмотрелась."
+    cs_narrator "Пианино. Гитары. Нотные подставки. Несколько стульев."
+    cs_narrator "Шкаф с папками и разными мелочами. Всё выглядело знакомо. Но теперь я могла заметить то, чего не было видно на игровом фоне. Потёртости на краях инструментов."
+    cs_narrator "Следы карандаша на нотных листах. Один неровно поставленный стул. И едва уловимый запах дерева и старого лака."
+    cs_th "И снова то же чувство. Вчера всё это было частью игры. А сегодня я стою посреди комнаты, в которой кто-то действительно занимается музыкой."
+    cs_narrator "Мику положила папку на стол. Та немедленно раскрылась. Несколько листов сползли к краю."
     # cs_presence_keep: hide cs_dasha_pioneer
     # cs_presence_keep: hide cs_semen
     # cs_presence_keep: hide cs_zhenya
@@ -109,13 +94,10 @@ label cs_day02_17:
     with cs_sprite_change
     label cs_check_part02_miku_17:
     cs_mi "Ой!"
-    cs_narrator "Она успела поймать один."
-    cs_narrator "Второй подхватила Дарья."
-    cs_narrator "Я подняла третий с пола."
+    cs_narrator "Она успела поймать один. Второй подхватила Дарья. Я подняла третий с пола."
     cs_da "Похоже, папке действительно нужен ремонт."
     cs_mi "Я же говорила!"
-    cs_narrator "Мы рассмеялись."
-    cs_narrator "Мику забрала бумаги и аккуратно сложила их."
+    cs_narrator "Мы рассмеялись. Мику забрала бумаги и аккуратно сложила их."
     # cs_presence_keep: hide cs_dasha_pioneer
     # cs_presence_keep: hide cs_semen
     # cs_presence_keep: hide cs_zhenya
@@ -136,9 +118,7 @@ label cs_day02_17:
     # cs_global_transition
     with cs_sprite_change
     cs_mi "Спасибо. А то я потом опять буду искать нужную страницу по всему кружку."
-    cs_narrator "Я посмотрела на пианино у стены."
-    cs_narrator "Подошла ближе."
-    cs_narrator "Провела взглядом по клавишам."
+    cs_narrator "Я посмотрела на пианино у стены. Подошла ближе. Провела взглядом по клавишам."
     # cs_presence_keep: hide cs_dasha_pioneer
     # cs_presence_keep: hide cs_semen
     # cs_presence_keep: hide cs_zhenya
@@ -207,12 +187,7 @@ label cs_day02_17:
     # cs_global_transition
     with cs_sprite_change
     cs_da "Ты сама начала."
-    cs_narrator "Мику засмеялась."
-    cs_narrator "Я улыбнулась."
-    cs_th "Надо же."
-    cs_th "Она начинает подхватывать мои шутки."
-    cs_narrator "И делает это всё увереннее."
-    cs_narrator "Впрочем, теперь я уже не собиралась отвечать какой-нибудь новой колкостью."
+    cs_narrator "Мику засмеялась. Я улыбнулась. И делает это всё увереннее. Впрочем, теперь я уже не собиралась отвечать какой-нибудь новой колкостью."
     cs_narrator "Мне действительно было интересно услышать, как она играет."
     # cs_presence_keep: hide cs_dasha_pioneer
     # cs_presence_keep: hide cs_semen
@@ -278,8 +253,7 @@ label cs_day02_17:
     # cs_global_transition
     with cs_sprite_change
     cs_mi "Конечно! Только если сама хочешь."
-    cs_narrator "Даша задумалась."
-    cs_narrator "Потом посмотрела на меня."
+    cs_narrator "Дарья задумалась. Потом посмотрела на меня."
     # cs_presence_keep: hide cs_dasha_pioneer
     # cs_presence_keep: hide cs_semen
     # cs_presence_keep: hide cs_zhenya
@@ -343,8 +317,6 @@ label cs_day02_17:
     $ cs_presence_stage()
     # cs_global_transition
     with cs_sprite_change
-    cs_narrator "Подошла к инструменту и села."
-    cs_narrator "Я осталась чуть в стороне."
-    cs_th "Интересно."
-    cs_th "Кажется, сейчас узнаю о ней что-то новое."
+    cs_narrator "Подошла к инструменту и села. Я осталась чуть в стороне."
+    cs_th "Интересно. Кажется, сейчас узнаю о ней что-то новое."
     return

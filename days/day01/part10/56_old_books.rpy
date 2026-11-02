@@ -14,22 +14,9 @@ label cs_day01_56:
     with cs_sprite_change
     label cs_director_check_3ce72e702a:
     # cs_director_end
-    cs_narrator "Я медленно прошла вдоль книжных полок."
-    cs_narrator "Книги выглядели совершенно обычными."
-    cs_narrator "Потёртые обложки."
-    cs_narrator "Пожелтевшие страницы."
-    cs_narrator "Старые библиотечные штампы."
-    cs_narrator "Я осторожно вытащила одну."
-    cs_narrator "Открыла."
-    cs_narrator "Год издания — 1974."
-    cs_narrator "Другую."
-    cs_narrator "1968."
-    cs_narrator "Третью."
-    cs_narrator "1979."
-    cs_narrator "Я провела пальцем по дате."
-    cs_th "Интересно."
-    cs_narrator "Для местных жителей это были обычные книги."
-    cs_narrator "Для меня — издания, которым уже несколько десятилетий."
+    cs_narrator "Я прошла вдоль полок. Потёртые обложки, пожелтевшие страницы, библиотечные штампы."
+    cs_narrator "Проверила даты в трёх книгах: 1974, 1968, 1979."
+    cs_narrator "Для местных — обычные книги. Для меня — издания, которым несколько десятилетий."
     # cs_director_begin: Return to direct interaction: Book dates and shelf focus
     $ cs_frame_focus(["cs_darya"])
     with cs_sprite_change
@@ -37,8 +24,7 @@ label cs_day01_56:
     # cs_director_end
     cs_narrator "Я посмотрела на Дарью."
     cs_ls "Представляешь, всё это для нас уже антиквариат."
-    cs_narrator "Она взяла одну из книг."
-    cs_narrator "Прочитала дату."
+    cs_narrator "Она прочитала дату на одной из книг."
     cs_da "Странное чувство."
     cs_ls "Угу."
     cs_narrator "Я повернула страницу."
@@ -74,7 +60,6 @@ label cs_day01_56:
     # cs_global_transition
     with cs_sprite_change
     cs_mz "Вы какие-то странные."
-    cs_narrator "Я кивнула."
     cs_ls "Нам сегодня это уже говорили."
     # cs_speaker: present
     show cs_zhenya explaining pioneer normal at cs_darya_normal_left zorder 10
@@ -82,8 +67,7 @@ label cs_day01_56:
     # cs_global_transition
     with cs_sprite_change
     cs_mz "Не сомневаюсь."
-    cs_narrator "Я улыбнулась."
-    cs_narrator "Но потом снова стала серьёзной."
+    cs_narrator "Я снова стала серьёзной."
     cs_ls "Слушай, а у тебя есть свежие газеты?"
     # cs_speaker: present
     show cs_zhenya explaining pioneer normal at cs_darya_normal_left zorder 10
@@ -98,14 +82,8 @@ label cs_day01_56:
     with cs_sprite_change
     label cs_director_check_1bec142f87:
     # cs_director_end
-    cs_narrator "Я взяла верхний."
-    cs_narrator "Посмотрела на шапку."
-    cs_narrator "1980 год."
-    cs_narrator "Ещё один номер."
-    cs_narrator "То же самое."
-    cs_narrator "Я медленно выдохнула."
-    cs_th "Значит, всё действительно согласуется."
-    cs_th "По крайней мере, внешне."
+    cs_narrator "В шапке верхней газеты стоял 1980-й. В следующей — тоже."
+    cs_th "Согласуется. По крайней мере, внешне."
     # cs_darya_variety: reaction
     # cs_reflective_suppressed: show cs_darya thinking pioneer normal at cs_darya_normal_right
     $ cs_presence_stage()
@@ -119,7 +97,6 @@ label cs_day01_56:
     cs_da "Ну что?"
     cs_narrator "Я показала ей газету."
     cs_ls "Здесь тоже восьмидесятый."
-    cs_narrator "Она кивнула."
     cs_da "Получается, подтверждение?"
     cs_ls "Подтверждение того, что весь этот мир считает текущим именно этот год."
     # cs_director_begin: Librarian rejoins the conversation
@@ -157,11 +134,8 @@ label cs_day01_56:
     $ cs_presence_stage()
     # cs_global_transition
     with cs_sprite_change
-    cs_narrator "Она чуть заметно покачала головой."
-    cs_narrator "Не запрещая."
-    cs_narrator "Скорее напоминая, что мы уже однажды слишком увлеклись объяснениями."
-    cs_th "И правильно."
-    cs_th "С Шуриком и Электроником хватило."
+    cs_narrator "Она покачала головой: с объяснениями мы уже однажды увлеклись."
+    cs_th "И правильно. С Шуриком и Электроником хватило."
     cs_narrator "Я аккуратно положила газету обратно."
     cs_ls "Давай пока ограничимся тем, что мы не совсем понимаем, как сюда попали."
     cs_narrator "Женя скрестила руки."
@@ -202,7 +176,5 @@ label cs_day01_56:
     # cs_global_transition
     with cs_sprite_change
     cs_mz "Разумно. Не на улице же оставлять."
-    cs_narrator "Я кивнула."
-    cs_th "Надо же."
-    cs_th "Первое решение Ольги Дмитриевны, которое никто не пытается оспорить."
+    cs_th "Первое решение вожатой, которое никто не оспаривает."
     return

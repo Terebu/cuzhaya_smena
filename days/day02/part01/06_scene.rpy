@@ -27,14 +27,7 @@ label cs_day02_06:
     $ cs_frame_focus([])
     with cs_sprite_change
     # cs_director_end
-    cs_narrator "На обратном пути я заметила, что лагерь уже почти проснулся."
-    cs_narrator "Возле одного домика кто-то вытряхивал полотенце."
-    cs_narrator "Вдалеке разговаривали пионеры."
-    cs_narrator "На дорожке появилась девочка с ведром."
-    cs_narrator "Я невольно улыбнулась."
-    cs_th "Ну всё."
-    cs_th "Режим невидимого исследователя завершён."
-    cs_narrator "Я свернула к домику Ольги Дмитриевны."
+    cs_narrator "Возле домиков уже разговаривали пионеры. Я свернула к Ольге Дмитриевне."
     # cs_presence_keep: hide cs_darya
     # cs_presence_keep: hide cs_dasha_pioneer
     # cs_presence_keep: hide cs_zhenya
@@ -52,14 +45,9 @@ label cs_day02_06:
     $ cs_presence_stage()
     # cs_global_transition
     with cs_sprite_change
-    cs_narrator "И почти сразу увидела Семёна."
-    cs_narrator "Он стоял на крыльце."
-    cs_narrator "Волосы растрёпаны."
-    cs_narrator "Рубашка ещё не застёгнута до конца."
-    cs_narrator "Лицо человека, который определённо не давал согласия на наступление утра."
-    cs_narrator "Я замедлила шаг."
-    cs_th "О."
-    cs_th "Коллега по временному перемещению."
+    cs_narrator "И почти сразу увидела Семёна. Он стоял на крыльце. Волосы растрёпаны. Рубашка ещё не застёгнута до конца."
+    cs_narrator "Лицо человека, который определённо не давал согласия на наступление утра. Я замедлила шаг."
+    cs_th "О. Коллега по временному перемещению."
     cs_narrator "Подошла ближе."
     # cs_presence_keep: hide cs_darya
     # cs_presence_keep: hide cs_dasha_pioneer
@@ -79,9 +67,7 @@ label cs_day02_06:
     # cs_global_transition
     with cs_sprite_change
     cs_ls "Доброе утро, товарищ Семён."
-    cs_narrator "Он поднял голову."
-    cs_narrator "Посмотрел на меня."
-    cs_narrator "Потом на мою спортивную одежду."
+    cs_narrator "Он поднял голову. Посмотрел на меня, потом на мою спортивную одежду."
     # cs_presence_keep: hide cs_darya
     # cs_presence_keep: hide cs_dasha_pioneer
     # cs_presence_keep: hide cs_zhenya
@@ -102,8 +88,7 @@ label cs_day02_06:
     label cs_check_new_d2_semen:
     cs_sy "Привет. Ты откуда?"
     cs_ls "С пробежки."
-    cs_narrator "Он посмотрел на солнце."
-    cs_narrator "Затем снова на меня."
+    cs_narrator "Он посмотрел на солнце. Затем снова на меня."
     cs_sy "Сейчас?"
     cs_ls "Нет, вчера. Просто решила добежать только сегодня."
     cs_narrator "Семён недовольно усмехнулся."
@@ -190,9 +175,7 @@ label cs_day02_06:
     with cs_sprite_change
     cs_sy "Ты опять за своё?"
     cs_narrator "Я замерла."
-    cs_th "Точно."
-    cs_th "Сколько можно?"
-    cs_narrator "Вчера мы обсуждали, что он живой человек, а не персонаж, которому можно бесконечно напоминать о компьютерной игре."
+    cs_th "Точно. Мы ведь вчера уже говорили: он человек, а не роль из игры."
     cs_narrator "Я немного смутилась."
     # cs_presence_keep: hide cs_darya
     # cs_presence_keep: hide cs_dasha_pioneer
@@ -231,7 +214,6 @@ label cs_day02_06:
     # cs_global_transition
     with cs_sprite_change
     cs_sy "Да ладно. Ничего страшного."
-    cs_narrator "Я кивнула."
     cs_ls "Слушай, я кое-что заметила."
     cs_narrator "Его выражение лица изменилось."
     # cs_presence_keep: hide cs_darya
@@ -284,10 +266,8 @@ label cs_day02_06:
     cs_sy "Я после своего приезда тоже не видел его снова."
     cs_ls "Значит, пока мы даже не знаем, когда именно он исчез."
     cs_sy "И куда."
-    cs_narrator "Я кивнула."
     cs_ls "Именно."
-    cs_narrator "Он помолчал."
-    cs_narrator "Потом спросил:"
+    cs_narrator "Он помолчал. Потом спросил:"
     # cs_presence_keep: hide cs_darya
     # cs_presence_keep: hide cs_dasha_pioneer
     # cs_presence_keep: hide cs_zhenya
@@ -334,9 +314,7 @@ label cs_day02_06:
     cs_sy "Просто неожиданно услышать от тебя что-то настолько осторожное."
     cs_narrator "Я приложила ладонь к груди."
     cs_ls "Считаю это необоснованным обвинением."
-    cs_narrator "Он улыбнулся."
-    cs_narrator "Некоторое время мы молчали."
-    cs_narrator "Потом Семён посмотрел в сторону лагеря."
+    cs_narrator "Он улыбнулся. Некоторое время мы молчали. Потом Семён посмотрел в сторону лагеря."
     # cs_presence_keep: hide cs_darya
     # cs_presence_keep: hide cs_dasha_pioneer
     # cs_presence_keep: hide cs_zhenya
@@ -355,7 +333,6 @@ label cs_day02_06:
     # cs_global_transition
     with cs_sprite_change
     cs_sy "Может, после завтрака сходим втроём?"
-    cs_narrator "Я задумалась."
     cs_ls "Давай сначала обсудим это с Дашей. И не обязательно идти за ворота прямо сегодня."
     # cs_presence_keep: hide cs_darya
     # cs_presence_keep: hide cs_dasha_pioneer
@@ -375,7 +352,6 @@ label cs_day02_06:
     # cs_global_transition
     with cs_sprite_change
     cs_sy "Хорошо."
-    cs_narrator "Я кивнула."
     cs_ls "Тогда до завтрака."
     # cs_presence_keep: hide cs_darya
     # cs_presence_keep: hide cs_dasha_pioneer
@@ -395,8 +371,7 @@ label cs_day02_06:
     # cs_global_transition
     with cs_sprite_change
     cs_sy "Увидимся."
-    cs_narrator "Я развернулась к своему домику."
-    cs_narrator "За спиной он добавил:"
+    cs_narrator "Я развернулась к своему домику. За спиной он добавил:"
     # cs_presence_keep: hide cs_darya
     # cs_presence_keep: hide cs_dasha_pioneer
     # cs_presence_keep: hide cs_zhenya
@@ -418,8 +393,7 @@ label cs_day02_06:
     cs_narrator "Я обернулась."
     cs_ls "М?"
     cs_sy "Ты только не начинай всем подряд рассказывать про исчезнувший автобус."
-    cs_narrator "Я несколько секунд смотрела на него."
-    cs_narrator "Потом кивнула."
+    cs_narrator "Я несколько секунд смотрела на него. Потом кивнула."
     cs_ls "Договорились. Пока только наша рабочая группа."
     cs_narrator "Он усмехнулся."
     # cs_presence_keep: hide cs_darya
@@ -461,8 +435,5 @@ label cs_day02_06:
     label cs_director_check_519facaa9c:
     # cs_director_end
     cs_narrator "Я продолжила путь."
-    cs_th "Забавно."
-    cs_th "Ещё вчера я считала его героем чужой истории."
-    cs_th "А сегодня он уже помогает мне не принимать слишком поспешных решений."
-    cs_narrator "Пожалуй, прогресс действительно наблюдался."
+    cs_th "Забавно. Вчера я видела в нём героя игры. Сегодня он помог мне не принимать поспешных решений."
     return

@@ -15,11 +15,8 @@ label cs_day01_37:
     cs_sh "Какой процессор?"
     cs_ls "Многоядерный."
     cs_sh "Сколько транзисторов?"
-    cs_narrator "Я ненадолго задумалась."
     cs_ls "Если не ошибаюсь, в современных мобильных чипах их уже миллиарды."
-    cs_narrator "Шурик снял очки."
-    cs_narrator "Протёр их."
-    cs_narrator "Надел обратно."
+    cs_narrator "Шурик снял очки, протёр и снова надел."
     show sh surprise pioneer far at cs_actor_far_left
     $ cs_presence_stage()
     # cs_global_transition
@@ -41,16 +38,13 @@ label cs_day01_37:
     # cs_global_transition
     with cs_sprite_change
     cs_el "А сколько памяти?"
-    cs_narrator "Я назвала приблизительный объём памяти устройства."
-    cs_narrator "Шурик переспросил."
-    cs_narrator "Затем ещё раз внимательно осмотрел корпус."
+    cs_narrator "Я назвала объём памяти. Шурик переспросил и ещё раз осмотрел корпус."
     cs_sh "И всё здесь?"
     cs_ls "Всё здесь."
     cs_narrator "Он покачал головой."
     cs_sh "С такой техникой можно решать невероятно сложные задачи."
     cs_ls "Можно."
     cs_sh "Моделировать процессы. Выполнять расчёты. Обрабатывать огромные объёмы информации…"
-    cs_narrator "Я кивнула."
     cs_ls "А я чаще всего смотрю фотографии котов."
     cs_narrator "Электроник замер."
     show cs_darya amused pioneer far at cs_darya_far_center
@@ -78,9 +72,7 @@ label cs_day01_37:
     cs_ls "Я бы тоже не поверила."
     cs_narrator "Шурик всё ещё смотрел на телефон."
     cs_sh "И ведь наверняка можно было бы использовать его гораздо полезнее."
-    cs_narrator "Я немного подумала."
     cs_ls "Можно. И используют. Просто человечество не обязано постоянно заниматься великими открытиями."
-    cs_narrator "Дарья добавила:"
     show cs_darya shrug pioneer far at cs_darya_far_center
     $ cs_presence_stage()
     # cs_global_transition

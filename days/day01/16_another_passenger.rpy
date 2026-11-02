@@ -9,15 +9,12 @@ label cs_day01_16:
     # cs_director_end
     cs_narrator "Ольга Дмитриевна уже собиралась закончить разговор, но вдруг словно что-то вспомнила."
     cs_mt "Кстати, вы не первые новенькие."
-    cs_narrator "Я подняла взгляд."
-    cs_narrator "Мне казалось, что я уже знаю продолжение."
-    cs_narrator "Но услышать его всё равно оказалось неожиданно волнительно."
+    cs_narrator "Я подняла взгляд. Догадывалась, что услышу, но всё равно ждала с волнением."
     cs_ls "Да?"
     cs_mt "Вчера приехал ещё один молодой человек."
     $ renpy.music.set_volume(0.3, delay=1.0, channel="music")
     play music cs_day_music_think fadeout 1.5 fadein 2.0
-    cs_narrator "Дарья сразу посмотрела на меня."
-    cs_narrator "Я же постаралась сохранить максимально невинное выражение лица."
+    cs_narrator "Дарья посмотрела на меня. Я постаралась сохранить невинный вид."
     cs_ls "Как интересно."
     label cs_check_day01_part04_passenger:
     cs_mt "Семён."
@@ -26,7 +23,7 @@ label cs_day01_16:
     cs_th "Ну разумеется."
     label cs_check_day01_part04_silence:
     cs_narrator "Я медленно опустила взгляд."
-    cs_ls "Прекрасно."
+    cs_ls "Ну конечно."
     cs_mt "Что?"
     cs_ls "Говорю, интересное совпадение."
     # cs_darya_stage: present in story
@@ -35,7 +32,6 @@ label cs_day01_16:
     # cs_global_transition
     with cs_sprite_change
     cs_da "Это тот самый?"
-    cs_narrator "Я едва заметно кивнула."
     cs_ls "Тот самый."
     cs_narrator "Ольга Дмитриевна нахмурилась."
     # cs_camp_emotion: text reaction
@@ -93,10 +89,7 @@ label cs_day01_16:
     with cs_sprite_change
     label cs_director_check_ce7afeb1d8:
     # cs_director_end
-    cs_th "Семён."
-    cs_th "Значит, он действительно здесь."
-    cs_th "В таком случае моя теория о том, что мы прибыли вместо него, только что отправилась в архив."
-    cs_narrator "Но что означало наше появление спустя сутки после него?"
-    cs_narrator "Этого я пока не знала."
+    cs_th "Семён здесь. Значит, мы приехали не вместо него."
+    cs_narrator "Но зачем мы появились на сутки позже?"
     stop music fadeout 2.0
     return

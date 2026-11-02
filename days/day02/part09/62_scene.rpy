@@ -33,10 +33,7 @@ label cs_day02_62:
     $ cs_frame_focus(["cs_zhenya", "cs_darya"])
     with cs_sprite_change
     # cs_director_end
-    cs_narrator "Уже возле очереди Женя вдруг остановилась."
-    cs_narrator "Посмотрела на меня."
-    cs_narrator "Потом на Дарью."
-    cs_narrator "И немного понизила голос."
+    cs_narrator "Уже возле очереди Женя вдруг остановилась. Посмотрела на меня, потом на Дарью. И немного понизила голос."
     # cs_presence_keep: hide cs_dasha_winter
     # cs_presence_keep: hide cs_dasha_pioneer
     # cs_presence_keep: hide cs_semen
@@ -104,7 +101,6 @@ label cs_day02_62:
     # cs_global_transition
     with cs_sprite_change
     cs_mz "Я не говорю, что поверила тебе."
-    cs_narrator "Я кивнула."
     cs_ls "Понимаю."
     # cs_presence_keep: hide cs_dasha_winter
     # cs_presence_keep: hide cs_dasha_pioneer
@@ -192,10 +188,7 @@ label cs_day02_62:
     with cs_sprite_change
     cs_mz "Я сама давно собиралась разобрать этот угол. А тут хотя бы повод появился."
     cs_narrator "Я несколько секунд молчала."
-    cs_th "Надо же."
-    cs_th "Она действительно запомнила."
-    cs_th "И не просто запомнила."
-    cs_th "Сама подумала, где можно начать поиски."
+    cs_th "Надо же. Она действительно запомнила. И не просто запомнила. Сама подумала, где можно начать поиски."
     cs_narrator "Дарья посмотрела на Женю."
     # cs_presence_keep: hide cs_dasha_winter
     # cs_presence_keep: hide cs_dasha_pioneer
@@ -259,7 +252,6 @@ label cs_day02_62:
     # cs_global_transition
     with cs_sprite_change
     cs_mz "Но могут оказаться старые справочники, планы территории или документы, оставшиеся от предыдущих смен."
-    cs_narrator "Я кивнула."
     cs_ls "Даже это уже больше, чем у нас есть сейчас."
     cs_narrator "Женя посмотрела на меня."
     # cs_presence_keep: hide cs_dasha_winter
@@ -325,14 +317,10 @@ label cs_day02_62:
     # cs_global_transition
     with cs_sprite_change
     cs_mz "И не устраивать там научные эксперименты."
-    cs_narrator "Я задумалась."
     cs_ls "А вот это уже ограничение академической свободы."
-    cs_narrator "Она прищурилась."
-    cs_narrator "Я тут же подняла здоровую руку."
+    cs_narrator "Она прищурилась. Я тут же подняла здоровую руку."
     cs_ls "Шучу. Всё поняла."
-    cs_narrator "Дарья тихо рассмеялась."
-    cs_narrator "Женя вздохнула."
-    cs_narrator "Но на этот раз тоже улыбнулась."
+    cs_narrator "Дарья тихо рассмеялась. Женя вздохнула. Но на этот раз тоже улыбнулась."
     # cs_presence_keep: hide cs_dasha_winter
     # cs_presence_keep: hide cs_dasha_pioneer
     # cs_presence_keep: hide cs_semen
@@ -442,7 +430,6 @@ label cs_day02_62:
     # cs_global_transition
     with cs_sprite_change
     cs_mz "Будто я только что согласилась участвовать в твоей безумной экспедиции."
-    cs_narrator "Я немного подумала."
     cs_ls "А разве нет?"
     # cs_presence_keep: hide cs_dasha_winter
     # cs_presence_keep: hide cs_dasha_pioneer
@@ -466,17 +453,9 @@ label cs_day02_62:
     cs_mz "Лена."
     cs_ls "Всё, молчу."
     cs_narrator "Но внутри я уже мысленно записывала новое обстоятельство."
-    cs_th "Библиотека."
-    cs_th "Старые каталоги."
-    cs_th "Возможно, какие-нибудь планы местности."
-    cs_narrator "Это ещё не было ответом."
-    cs_narrator "Даже не обещанием ответа."
-    cs_narrator "Но впервые за день кто-то из местных сам предложил помочь нам разобраться."
-    cs_narrator "Не потому, что поверил невероятной истории."
+    cs_th "Библиотека. Старые каталоги. Возможно, какие-нибудь планы местности."
+    cs_narrator "Это ещё не было ответом. Даже не обещанием ответа. Но впервые за день кто-то из местных сам предложил помочь нам разобраться. Не потому, что поверил невероятной истории."
     cs_narrator "А потому, что мы успели немного узнать друг друга."
-    cs_th "Пожалуй, вот зачем вообще нужна дружба."
-    cs_th "Не для того, чтобы кто-то соглашался с каждой твоей теорией."
-    cs_th "А чтобы человек был готов уделить тебе время."
     $ cs_mz_map_lead = True
     label cs_check_part09_map_lead:
     pause 0.5

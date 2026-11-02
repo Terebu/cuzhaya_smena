@@ -52,7 +52,6 @@ label cs_day02_73:
     # cs_global_transition
     with cs_sprite_change
     cs_da "Что потом?"
-    cs_narrator "Я улыбнулась."
     cs_ls "Можно снова провести немного времени вместе."
     cs_narrator "Она ненадолго замолчала."
     cs_narrator "Затем тоже улыбнулась."
@@ -62,7 +61,6 @@ label cs_day02_73:
     with cs_sprite_change
     cs_da "Мы и так почти весь день вместе."
     cs_ls "Вот именно. А мне всё ещё не надоело."
-    cs_narrator "Дарья рассмеялась."
     show cs_darya shrug pioneer normal at cs_darya_normal_right
     $ cs_presence_stage()
     # cs_global_transition
@@ -71,7 +69,7 @@ label cs_day02_73:
     cs_narrator "Я задумалась."
     cs_ls "Знаешь, для меня — действительно немного удивительное."
     cs_narrator "Она посмотрела внимательнее."
-    cs_narrator "Я немного помолчала."
+    cs_narrator "Я помолчала."
     cs_ls "Обычно мне нужно немало личного пространства. Даже если человек мне нравится."
     cs_narrator "Дарья кивнула."
     cs_ls "А с тобой я почему-то вполне спокойно могу находиться рядом почти весь день."
@@ -92,7 +90,6 @@ label cs_day02_73:
     # cs_global_transition
     with cs_sprite_change
     cs_da "Что?"
-    cs_narrator "Я улыбнулась."
     cs_ls "Ничего. Просто приятно слышать."
     cs_narrator "Она кивнула."
     cs_narrator "Некоторое время мы молчали."
@@ -156,7 +153,7 @@ label cs_day02_73:
     # cs_global_transition
     with cs_sprite_change
     cs_da "Почему?"
-    cs_narrator "Я слегка пожала плечами."
+    cs_narrator "Я пожала плечами."
     cs_ls "Потому что мне и так хорошо."
     cs_narrator "Она ничего не сказала."
     cs_narrator "Только чуть крепче сжала мою ладонь."

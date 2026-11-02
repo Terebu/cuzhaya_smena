@@ -26,8 +26,7 @@ label cs_day02_51a:
     $ cs_frame_focus(["cs", "cs_darya"])
     with cs_sprite_change
     # cs_director_end
-    cs_narrator "Я уже собиралась встать, но заметила на столе Виолы большую стопку журналов."
-    cs_narrator "Рядом лежало несколько заполненных карточек."
+    cs_narrator "Я уже собиралась встать, но заметила на столе Виолы большую стопку журналов. Рядом лежало несколько заполненных карточек."
     cs_ls "Слушай, Виола, можно вопрос?"
     cs_narrator "Она подняла глаза."
     show cs custom amused medical normal at cs_viola_normal_left zorder 10
@@ -61,7 +60,6 @@ label cs_day02_51a:
     $ cs_presence_stage()
     # cs_global_transition
     with cs_sprite_change
-    cs_narrator "Дарья тихо рассмеялась."
     show cs custom thoughtful medical normal at cs_viola_normal_left zorder 10
     $ cs_part07_cast = ["cs", "cs_darya"]
     $ cs_presence_stage()
@@ -74,20 +72,16 @@ label cs_day02_51a:
     cs_vi "Бывает и такое."
     cs_narrator "Она поправила ручку на столе."
     cs_vi "Иногда человеку действительно нужна не таблетка, а чтобы его просто выслушали."
-    cs_narrator "Я замолчала."
-    cs_narrator "Почему-то её слова запомнились."
-    cs_th "Интересно."
-    cs_th "Я всё время пытаюсь искать в людях что-нибудь необычное."
-    cs_th "А у Виолы, возможно, каждый день проходит через десятки совершенно обычных человеческих неприятностей."
+    cs_narrator "Я замолчала. Почему-то её слова запомнились."
+    cs_th "Интересно. Я всё время пытаюсь искать в людях что-нибудь необычное. А у Виолы, возможно, каждый день проходит через десятки обычных человеческих неприятностей."
     cs_ls "Наверное, это сложнее, чем кажется со стороны."
-    cs_narrator "Она слегка улыбнулась."
+    cs_narrator "Она улыбнулась."
     show cs custom warm_smile medical normal at cs_viola_normal_left zorder 10
     $ cs_part07_cast = ["cs", "cs_darya"]
     $ cs_presence_stage()
     # cs_global_transition
     with cs_sprite_change
     cs_vi "Иногда. Но я свою работу люблю."
-    cs_narrator "Я кивнула."
     cs_ls "Тогда надеюсь, в следующий раз у нас получится встретиться без необходимости менять мне повязку."
     cs_narrator "Виола усмехнулась."
     cs_vi "Вот это было бы замечательно."

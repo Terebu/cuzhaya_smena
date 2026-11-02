@@ -7,8 +7,7 @@ label cs_day03_173:
     $ cs_frame_focus(["cs_zhenya"])
     with cs_sprite_change
     if cs_friend_mz >= 1:
-        cs_narrator "Женя отложила карандаш."
-        cs_narrator "Подошла ближе к моему столу."
+        cs_narrator "Женя отложила карандаш. Подошла ближе к моему столу."
         if cs_reflective_shot:
             $ cs_pov_end()
             with cs_sprite_change
@@ -52,8 +51,7 @@ label cs_day03_173:
             $ cs_pov_end()
             with cs_sprite_change
         cs_ls "Вот в этом и проблема. Не знаю."
-        cs_narrator "Она кивнула."
-        cs_narrator "Я продолжила:"
+        cs_narrator "Она кивнула. Я продолжила:"
         if cs_reflective_shot:
             $ cs_pov_end()
             with cs_sprite_change
@@ -68,7 +66,7 @@ label cs_day03_173:
             $ cs_pov_end()
             with cs_sprite_change
         cs_ls "Хотелось бы верить."
-        cs_narrator "Она слегка улыбнулась."
+        cs_narrator "Она улыбнулась."
         if cs_reflective_shot:
             $ cs_pov_end()
             with cs_sprite_change
@@ -87,8 +85,7 @@ label cs_day03_173:
             $ cs_pov_end()
             with cs_sprite_change
         cs_mz "Не привыкай."
-        cs_narrator "Я рассмеялась."
-        cs_narrator "Потом снова посмотрела на книгу."
+        cs_narrator "Я рассмеялась. Потом снова посмотрела на книгу."
         if cs_reflective_shot:
             $ cs_pov_end()
             with cs_sprite_change
@@ -190,7 +187,6 @@ label cs_day03_173:
             $ cs_pov_end()
             with cs_sprite_change
         cs_mz "Соколова, не порть момент."
-        cs_narrator "Я улыбнулась."
         if cs_reflective_shot:
             $ cs_pov_end()
             with cs_sprite_change
@@ -205,7 +201,6 @@ label cs_day03_173:
             cs_mz "Значит, я не ошиблась с выбором."
         else:
             cs_mz "Значит, ты не ошиблась с выбором."
-        cs_narrator "Я улыбнулась."
         if cs_reflective_shot:
             $ cs_pov_end()
             with cs_sprite_change
@@ -221,7 +216,6 @@ label cs_day03_173:
             $ cs_pov_end()
             with cs_sprite_change
         cs_mz "Рада, что понравилось. Но нам уже пора заканчивать."
-        cs_narrator "Я кивнула."
         if cs_reflective_shot:
             $ cs_pov_end()
             with cs_sprite_change
@@ -236,9 +230,6 @@ label cs_day03_173:
             with cs_sprite_change
         cs_ls "Понимаю."
     cs_narrator "Я ещё раз посмотрела на книгу."
-    cs_th "«Обыкновенная история»."
-    cs_th "Какое подходящее название для совершенно необычного вечера."
-    cs_narrator "Потом встала."
-    cs_narrator "Взяла роман."
-    cs_narrator "И отнесла к рабочему столу Жени."
+    cs_th "«Обыкновенная история». Какое подходящее название для совершенно необычного вечера."
+    cs_narrator "Потом встала. Взяла роман. И отнесла к рабочему столу Жени."
     return

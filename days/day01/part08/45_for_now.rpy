@@ -9,22 +9,14 @@ label cs_day01_45:
     $ cs_frame_focus(["cs_darya", "cs_semen"])
     with cs_sprite_change
     # cs_director_end
-    cs_narrator "Некоторое время мы просто сидели втроём."
-    cs_narrator "Семён смотрел на площадь."
-    cs_narrator "Дарья — на деревья, за которыми медленно опускалось солнце."
+    cs_narrator "Мы сидели втроём. Семён смотрел на площадь, Дарья — на закат за деревьями."
     # cs_director_begin: REFLECTIVE_SHOT: Private recap of the first day
     $ cs_reflective_focus()
     with cs_sprite_change
     label cs_director_check_e8872f2cc8:
     # cs_director_end
-    cs_narrator "А я пыталась понять, как умудрилась за один день пережить столько всего."
-    cs_narrator "Утром — зимняя Москва."
-    cs_narrator "Днём — автобус, неизвестный лагерь, знакомые лица и советская пионерская форма."
-    cs_narrator "После обеда — знакомство с Семёном, собственный домик и попытка вернуть к жизни смартфон."
-    cs_narrator "И вот теперь ещё этот разговор."
-    cs_th "Молодец, Соколова."
-    cs_th "Планировала купить продукты."
-    cs_th "Вместо этого решила разобраться с собственной личной жизнью."
+    cs_narrator "А я пыталась осмыслить этот день. Разговор о собственных чувствах стал последним, чего от него можно было ожидать."
+    cs_th "Собиралась за продуктами. Заодно решила разобраться с личной жизнью."
     # cs_director_begin: Return to direct interaction: Private recap of the first day
     $ cs_frame_focus(["cs_darya", "cs_semen"])
     with cs_sprite_change
@@ -73,7 +65,6 @@ label cs_day01_45:
     cs_narrator "Мы с Дарьей тоже поднялись со скамейки."
     $ renpy.music.set_volume(0.28,delay=1.0,channel="music")
     play music "sound/music/a_promise_from_distant_days.ogg" fadeout 2.0 fadein 3.0
-    cs_narrator "Я посмотрела на неё."
     cs_ls "Не слишком тебя смутила?"
     # cs_darya_variety: reaction
     show cs_darya shy_bend pioneer normal at cs_darya_normal_center
@@ -90,13 +81,9 @@ label cs_day01_45:
     $ cs_presence_stage()
     # cs_global_transition
     with cs_sprite_change
-    cs_narrator "Дарья тихо усмехнулась."
-    cs_narrator "Мы направились к дорожке."
-    cs_narrator "Через несколько шагов я осторожно коснулась её плеча."
-    cs_narrator "Она повернулась ко мне."
+    cs_narrator "Мы направились к дорожке. Я коснулась её плеча, и Дарья обернулась."
     cs_ls "Можно?"
-    cs_narrator "Дарья взглянула на мою руку."
-    cs_narrator "Затем на меня."
+    cs_narrator "Она взглянула на мою руку, потом на меня."
     # cs_darya_variety: reaction
     show cs_darya reaching pioneer normal at cs_darya_normal_center
     $ cs_presence_stage()
@@ -104,10 +91,7 @@ label cs_day01_45:
     with cs_sprite_change
     cs_da "Сейчас можно."
     label cs_check_day01_part08_hug:
-    cs_narrator "Я мягко приобняла её за плечи."
-    cs_narrator "Совсем ненадолго."
-    cs_narrator "Она не отстранилась."
-    cs_narrator "Мы прошли так несколько шагов."
+    cs_narrator "Я приобняла её за плечи. Она не отстранилась. Мы прошли так несколько шагов."
     # cs_darya_variety: reaction
     show cs_darya shy_smile pioneer normal at cs_darya_normal_center
     $ cs_presence_stage()
@@ -125,16 +109,13 @@ label cs_day01_45:
     cs_narrator "Она рассмеялась."
     cs_da "Лена!"
     cs_ls "Хорошо. Отзываю постановление."
-    cs_narrator "Я убрала руку."
-    cs_narrator "Мы снова шли рядом."
-    cs_narrator "Через некоторое время Дарья негромко произнесла:"
+    cs_narrator "Я убрала руку. Через некоторое время Дарья произнесла:"
     # cs_darya_variety: reaction
     show cs_darya arms_crossed pioneer normal at cs_darya_normal_center
     $ cs_presence_stage()
     # cs_global_transition
     with cs_sprite_change
     cs_da "И не думай, что я уже на всё согласилась."
-    cs_narrator "Я посмотрела на неё."
     cs_ls "Даже не собиралась."
     cs_da "Правда?"
     cs_ls "Даш, мне достаточно того, что мы можем об этом спокойно разговаривать."
@@ -145,18 +126,10 @@ label cs_day01_45:
     # cs_global_transition
     with cs_sprite_change
     cs_da "Тогда хорошо."
-    cs_narrator "Я тоже кивнула."
-    cs_narrator "И на этот раз не стала ничего добавлять."
-    cs_narrator "Впереди тянулась дорожка между деревьями."
-    cs_narrator "Издалека доносились голоса пионеров."
-    cs_narrator "Лагерь постепенно готовился к вечеру."
-    cs_narrator "Солнце золотило крыши домиков."
-    cs_narrator "А я шла рядом с девушкой, которую ещё утром совершенно не знала."
-    cs_narrator "И которая за несколько часов успела стать для меня неожиданно важной."
-    cs_narrator "Я не знала, что она ответит завтра."
-    cs_narrator "Не знала, что произойдёт с нами через неделю."
-    cs_narrator "И даже не была уверена, существует ли в этом лагере само понятие «через неделю» в привычном смысле."
-    cs_narrator "Но сейчас всё это могло немного подождать."
+    cs_narrator "Я кивнула и ничего не добавила. Солнце золотило крыши, лагерь готовился к вечеру."
+    cs_narrator "А рядом шла девушка, которую утром я не знала и которая уже стала важной."
+    cs_narrator "Я не знала, что она ответит завтра и что будет через неделю. Существует ли здесь вообще привычное «через неделю»?"
+    cs_narrator "Сейчас это могло подождать."
     cs_narrator "Дарья вдруг посмотрела на меня."
     # cs_darya_variety: reaction
     show cs_darya thinking pioneer normal at cs_darya_normal_center
@@ -173,12 +146,9 @@ label cs_day01_45:
     $ cs_presence_stage()
     # cs_global_transition
     with cs_sprite_change
-    cs_narrator "Она улыбнулась."
-    cs_narrator "И мы продолжили идти."
-    cs_th "Кажется, впервые за весь день мне не хотелось ничего проверять, объяснять или выяснять."
-    cs_th "Просто идти рядом."
-    cs_th "Неплохое завершение дня."
-    cs_th "Хотя до отбоя ещё далеко."
+    cs_narrator "Мы улыбнулись друг другу и пошли дальше."
+    cs_th "Впервые за день не хотелось ничего проверять или объяснять. Просто идти рядом."
+    cs_th "До отбоя ещё далеко."
     $ cs_director_scene("cs_camp_path_sunset")
     scene cs_camp_path_sunset
     show cs_darya shrug pioneer normal at cs_darya_normal_center

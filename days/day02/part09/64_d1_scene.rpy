@@ -27,8 +27,7 @@ label cs_day02_64d1:
     $ cs_frame_focus(["cs_zhenya", "cs_darya"])
     with cs_sprite_change
     # cs_director_end
-    cs_narrator "Через несколько минут Женя сама отложила ложку."
-    cs_narrator "Посмотрела на меня."
+    cs_narrator "Через несколько минут Женя сама отложила ложку. Посмотрела на меня."
     # cs_presence_keep: hide cs_semen
     # cs_presence_keep: hide mz
     # cs_presence_keep: hide un
@@ -71,7 +70,6 @@ label cs_day02_64d1:
     # cs_global_transition
     with cs_sprite_change
     cs_mz "Ты ведь завтра действительно собираешься зайти в библиотеку?"
-    cs_narrator "Я кивнула."
     cs_ls "Да. Хотела посмотреть те старые каталоги, о которых ты говорила."
     cs_narrator "Она немного помолчала."
     # cs_presence_keep: hide cs_semen
@@ -224,9 +222,7 @@ label cs_day02_64d1:
     cs_narrator "Я улыбнулась."
     cs_ls "Постараюсь."
     cs_mz "И не приходи с новыми травмами."
-    cs_narrator "Дарья тихо рассмеялась."
-    cs_narrator "Я подняла здоровую руку."
+    cs_narrator "Дарья тихо рассмеялась. Я подняла здоровую руку."
     cs_ls "Это уже значительно сложнее гарантировать."
-    cs_narrator "Женя вздохнула."
-    cs_narrator "Но теперь, кажется, даже не пыталась скрыть улыбку."
+    cs_narrator "Женя вздохнула. Но теперь, кажется, даже не пыталась скрыть улыбку."
     return

@@ -48,16 +48,9 @@ label cs_day02_64e:
     $ cs_frame_focus(["cs_zhenya", "cs_darya"] if cs_friend_mz >= 1 else ["cs_darya"])
     with cs_sprite_change
     # cs_director_end
-    cs_narrator "К тому времени мы уже почти закончили ужинать."
-    cs_narrator "Пюре действительно оказалось вкусным."
-    cs_narrator "Котлета тоже."
-    cs_narrator "И, к моему удивлению, за всё время я ни разу не почувствовала необходимости снова запеть знакомую песенку."
-    cs_th "Личностный рост."
-    cs_th "Причём совершенно без дополнительных медицинских вмешательств."
-    cs_narrator "Я взяла стакан."
-    cs_narrator "Сделала несколько глотков."
-    cs_narrator "И заметила Семёна."
-    cs_narrator "Он шёл между столами с пустым подносом."
+    cs_narrator "К тому времени мы уже почти закончили ужинать. Пюре действительно оказалось вкусным. Котлета тоже. И, к моему удивлению, за всё время я ни разу не почувствовала необходимости снова запеть знакомую песенку."
+    cs_th "Личностный рост. Причём совершенно без дополнительных медицинских вмешательств."
+    cs_narrator "Я взяла стакан. Сделала несколько глотков. И заметила Семёна. Он шёл между столами с пустым подносом."
     if cs_friend_mz >= 1:
         # cs_presence_keep: hide mz
         # cs_presence_keep: hide un
@@ -188,7 +181,6 @@ label cs_day02_64e:
     cs_da "Уже поужинал?"
     cs_narrator "Он поднял пустой поднос."
     cs_sy "Как видишь."
-    cs_narrator "Я задумчиво кивнула."
     cs_ls "Неоспоримое доказательство."
     cs_narrator "Семён посмотрел на мой локоть."
     if cs_friend_mz >= 1:
@@ -234,7 +226,7 @@ label cs_day02_64e:
     cs_sy "Рука как?"
     cs_ls "На месте."
     cs_sy "Это я вижу. Болит?"
-    cs_narrator "Я немного помолчала."
+    cs_narrator "Я помолчала."
     cs_ls "Если не трогать, почти не беспокоит."
     cs_narrator "Он кивнул."
     if cs_friend_mz >= 1:
@@ -407,9 +399,7 @@ label cs_day02_64e:
     cs_narrator "Я торжественно кивнула."
     cs_ls "Спасибо. Художественный отдел принимает положительные отзывы."
     if cs_friend_se >= 2:
-        cs_narrator "Семён немного задержался."
-        cs_narrator "Посмотрел на мою перевязанную руку."
-        cs_narrator "Потом снова на Дарью."
+        cs_narrator "Семён немного задержался. Посмотрел на мою перевязанную руку. Потом снова на Дарью."
         if cs_friend_mz >= 1:
             # cs_presence_keep: hide mz
             # cs_presence_keep: hide un
@@ -495,8 +485,7 @@ label cs_day02_64e:
             with cs_sprite_change
         cs_sy "Ну да. Чтобы не пришлось пробираться через толпу с больной рукой."
         cs_narrator "Я посмотрела на него."
-        cs_th "Надо же."
-        cs_th "А ведь он сам об этом подумал."
+        cs_th "Надо же. А ведь он сам об этом подумал."
         cs_ls "Спасибо. Только не надо специально никого пересаживать."
         cs_sy "Не собирался. Просто узнаю, где остались свободные места."
         cs_narrator "Дарья улыбнулась."
@@ -506,11 +495,8 @@ label cs_day02_64e:
     else:
         cs_narrator "Семён посмотрел на часы."
         cs_sy "Ладно, я побежал. Ещё обещал помочь с подготовкой."
-        cs_narrator "Я улыбнулась."
         cs_ls "Только внимательно смотри под ноги."
-        cs_narrator "Он посмотрел на мою руку."
-        cs_narrator "Потом на меня."
-        cs_narrator "И рассмеялся."
+        cs_narrator "Он посмотрел на мою руку, потом на меня. И рассмеялся."
         if cs_friend_mz >= 1:
             # cs_presence_keep: hide mz
             # cs_presence_keep: hide un
@@ -552,7 +538,6 @@ label cs_day02_64e:
             # cs_global_transition
             with cs_sprite_change
         cs_sy "Это ты мне говоришь?"
-        cs_narrator "Я кивнула."
         cs_ls "Исключительно из личного опыта."
     if cs_friend_mz >= 1:
         # cs_presence_keep: hide cs_semen
@@ -608,14 +593,9 @@ label cs_day02_64e:
     with cs_sprite_change
     label cs_director_check_8bd08eb62b:
     # cs_director_end
-    cs_th "Ещё вчера мы обсуждали, почему все трое оказались в этом лагере."
-    cs_th "Сегодня уже вместе рисовали объявление, проверяли дорогу и теперь собирались на концерт."
-    cs_narrator "И чем дольше я здесь находилась, тем меньше всё происходящее напоминало обычную историю из игры."
-    cs_narrator "Не потому, что знакомых событий стало меньше."
-    cs_narrator "А потому, что между ними появлялось всё больше совершенно самостоятельных разговоров."
-    cs_narrator "Поступков."
-    cs_narrator "Решений."
-    cs_narrator "Вещей, которых я никогда раньше не видела."
+    cs_th "Ещё вчера мы обсуждали, почему все трое оказались в этом лагере. Сегодня уже вместе рисовали объявление, проверяли дорогу и теперь собирались на концерт."
+    cs_narrator "И чем дольше я здесь находилась, тем меньше всё происходящее напоминало обычную историю из игры. Не потому, что знакомых событий стало меньше. А потому, что между ними появлялось всё больше совершенно самостоятельных разговоров. Поступков."
+    cs_narrator "Решений. Вещей, которых я никогда раньше не видела."
     if cs_friend_mz >= 1:
         # cs_director_begin: Return to direct interaction: Independent events beyond the known story
         $ cs_frame_focus(["cs_darya", "cs_zhenya"])
@@ -629,12 +609,10 @@ label cs_day02_64e:
         cs_mz "Нет. Хочу ещё кое-что сделать перед выступлением."
         cs_narrator "Она немного помолчала."
         cs_mz "И вообще, не обязательно же мне постоянно сидеть среди книг."
-        cs_narrator "Я улыбнулась."
         cs_ls "Разумно."
         cs_narrator "Женя посмотрела на Дарью."
         cs_mz "Хорошего вечера."
         cs_da "И тебе."
-        cs_narrator "Я кивнула."
         cs_ls "До встречи."
         # cs_presence_keep: hide cs_semen
         # cs_presence_keep: hide cs_zhenya
@@ -662,27 +640,18 @@ label cs_day02_64e:
         with cs_sprite_leave
         label cs_director_check_f7de979cc9:
         # cs_director_end
-        cs_th "Вот так."
-        cs_th "Поужинали."
-        cs_th "Поговорили."
-        cs_th "И спокойно разошлись."
+        cs_th "Вот так. Поужинали. Поговорили. И спокойно разошлись."
         cs_th "Без необходимости превращать её желание побыть одной в повод для очередной шутки."
     else:
-        cs_narrator "Мы с Дарьей закончили ужин и собрали подносы."
-        cs_narrator "В дальнем углу Женя всё ещё сидела за своим столом."
-        cs_narrator "Я мельком посмотрела в её сторону."
-        cs_narrator "Она читала."
+        cs_narrator "Мы с Дарьей закончили ужин и собрали подносы. В дальнем углу Женя всё ещё сидела за своим столом. Я мельком посмотрела в её сторону. Она читала."
         cs_narrator "Похоже, именно так и хотела провести вечер."
-        cs_th "И хорошо."
-        cs_th "Не всякому человеку нужна компания."
+        cs_th "И хорошо. Не всякому человеку нужна компания."
     # cs_director_begin: Common dialogue return after both dinner branches
     $ cs_frame_focus(["cs_darya"])
     with cs_sprite_change
     label cs_director_check_9d0dc580fc:
     # cs_director_end
-    cs_narrator "Дарья аккуратно помогла мне поднять поднос."
-    cs_narrator "Мы отнесли посуду."
-    cs_narrator "И направились к выходу."
+    cs_narrator "Дарья аккуратно помогла мне поднять поднос. Мы отнесли посуду. И направились к выходу."
     # cs_presence_keep: hide cs_semen
     # cs_presence_keep: hide cs_zhenya
     # cs_presence_keep: hide mz
@@ -703,7 +672,6 @@ label cs_day02_64e:
     # cs_global_transition
     with cs_sprite_change
     cs_da "Ну что, на площадь?"
-    cs_narrator "Я кивнула."
     cs_ls "Конечно."
     # cs_presence_keep: hide cs_semen
     # cs_presence_keep: hide cs_zhenya
@@ -726,7 +694,7 @@ label cs_day02_64e:
     with cs_sprite_change
     cs_da "Только без неожиданных экспедиций по дороге."
     cs_narrator "Я усмехнулась."
-    cs_ls "Сегодня исследовательская деятельность официально закрыта."
+    cs_ls "На сегодня с поисками всё."
     cs_narrator "Она улыбнулась."
     # cs_presence_keep: hide cs_semen
     # cs_presence_keep: hide cs_zhenya
@@ -748,7 +716,6 @@ label cs_day02_64e:
     # cs_global_transition
     with cs_sprite_change
     cs_da "До завтра?"
-    cs_narrator "Я задумалась."
     cs_ls "До особого распоряжения."
     cs_narrator "Дарья рассмеялась."
     $ sunset_time()
@@ -777,9 +744,7 @@ label cs_day02_64e:
     $ renpy.music.set_volume(0.13, channel="ambience", delay=1.0)
     play music "sound/music/lets_be_friends.ogg" fadeout 2.0 fadein 2.0
     $ renpy.music.set_volume(0.14, channel="music", delay=1.0)
-    cs_narrator "Мы вышли из столовой."
-    cs_narrator "Я посмотрела на закатное небо."
-    cs_narrator "Где-то впереди слышались звуки настройки гитары."
+    cs_narrator "Мы вышли из столовой. Я посмотрела на закатное небо. Где-то впереди слышались звуки настройки гитары."
     $ cs_director_scene("bg ext_dining_hall_near_sunset")
     scene bg ext_dining_hall_near_sunset
     # cs_presence_keep: hide cs_semen
@@ -802,7 +767,5 @@ label cs_day02_64e:
     with Dissolve(0.8)
     label cs_check_dinner64_exit:
     cs_narrator "На площади постепенно собирались зрители."
-    cs_th "Ну что ж."
-    cs_th "На сегодня действительно хватит экспериментов."
-    cs_th "Пора послушать музыку."
+    cs_th "Ну что ж. На сегодня действительно хватит экспериментов. Пора послушать музыку."
     return

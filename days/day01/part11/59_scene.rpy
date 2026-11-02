@@ -16,9 +16,8 @@ label cs_day01_59:
     $ cs_frame_focus(["cs_zhenya", "cs_darya"])
     with cs_sprite_change
     # cs_director_end
-    cs_narrator "Я села. Стул оказался ниже, чем ожидалось, и начало торжественного объяснения было испорчено необходимостью подвинуть его поближе."
-    cs_narrator "Женя терпеливо дождалась, пока я закончу борьбу с мебелью."
-    cs_narrator "Я положила ладони на край стола. Рассказывать о поездке оказалось труднее, чем вспоминать её: в памяти всё было непрерывным, а вслух получался набор вещей, которым никто не обязан верить."
+    cs_narrator "Стул оказался низким. Пришлось подвинуться к столу, испортив торжественное начало объяснения. Женя терпеливо ждала."
+    cs_narrator "Я положила ладони на стол. В памяти поездка была непрерывной; вслух получался набор вещей, которым никто не обязан верить."
     cs_ls "Если я начну путаться, поправляй меня, Даш."
     show cs_darya smile pioneer normal at cs_darya_normal_right
     $ cs_presence_stage()
@@ -58,7 +57,7 @@ label cs_day01_59:
     # cs_global_transition
     with cs_sprite_change
     cs_da "Про игру — да. Про то, что утром я была в Москве, мне чужое слово не нужно."
-    cs_narrator "Мне понравилось, как она это сказала. Спокойно, без желания выиграть спор."
+    cs_narrator "Мне понравился её спокойный ответ. Без попытки выиграть спор."
     cs_narrator "Женя придвинула лежавшую на столе газету."
     show cs_zhenya thoughtful pioneer normal at cs_darya_normal_left
     $ cs_presence_stage()
@@ -66,7 +65,7 @@ label cs_day01_59:
     with cs_sprite_change
     cs_mz "И вы считаете, что сейчас должен быть другой год."
     cs_ls "Две тысячи двадцать шестой. У нас дома."
-    cs_narrator "Она посмотрела сначала на меня, потом на Дашу."
+    cs_narrator "Она посмотрела сначала на меня, потом на Дарью."
     show cs_zhenya arms_crossed pioneer normal at cs_darya_normal_left
     $ cs_presence_stage()
     # cs_global_transition
@@ -78,7 +77,6 @@ label cs_day01_59:
     # cs_global_transition
     with cs_sprite_change
     cs_mz "А ты всё-таки попробуй без шуток."
-    cs_narrator "Я кивнула."
     cs_ls "Мы пока не знаем, что произошло. Я вижу совпадения со знакомой историей, но не могу объяснить их. Поэтому и полезла в газеты."
     cs_narrator "Женя постучала пальцем по краю стола."
     show cs_zhenya glasses_touch pioneer normal at cs_darya_normal_left

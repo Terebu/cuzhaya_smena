@@ -1,0 +1,171 @@
+init 110 python:
+    import json as cs_d5_qa_json
+    renpy.cs_d5_qa = False
+    cs_d5_qa_old_say = config.say_arguments_callback
+    cs_d5_qa_old_args = config.menu_arguments_callback
+    cs_d5_qa_old_labels = config.label_callback
+    def cs_d5_qa_say(who,*args,**kwargs):
+        if cs_d5_qa_old_say: args,kwargs=cs_d5_qa_old_say(who,*args,**kwargs)
+        if renpy.cs_d5_qa:
+            kwargs['interact']=False
+            renpy.execution.not_infinite_loop(120)
+        return args,kwargs
+    def cs_d5_qa_menu(items,*args,**kwargs):
+        values=[v for l,v in items if v is not None]
+        i=renpy.cs_d5_choice_count
+        renpy.cs_d5_choice_count+=1
+        v=values[(renpy.cs_d5_mask >> i)&1]
+        return v() if callable(v) else v
+    def cs_d5_qa_args(*args,**kwargs):
+        if cs_d5_qa_old_args: args,kwargs=cs_d5_qa_old_args(*args,**kwargs)
+        if renpy.cs_d5_qa: store.menu=cs_d5_qa_menu
+        return args,kwargs
+    def cs_d5_qa_labels(name,abnormal):
+        if cs_d5_qa_old_labels: cs_d5_qa_old_labels(name,abnormal)
+        if renpy.cs_d5_qa and name.startswith('cs_day05_'):
+            renpy.cs_d5_qa_pending=name
+    def cs_d5_qa_capture(event,**kwargs):
+        if not renpy.cs_d5_qa or event!='show_done': return
+        tags=[t for t in cs_presence_tags if renpy.showing(t)]
+        assert len(tags)<=2, tags
+        if 'cs_darya' in tags:
+            expected='sport' if cs_d5_scene in (1,2) and not cs_d5_run_finished else 'pioneer'
+            assert expected in renpy.get_attributes('cs_darya'), 'Wrong Day 5 costume'
+        if cs_d5_scene==1 and not cs_d5_dressed:
+            assert 'cs_darya' not in tags, 'Darya visible before getting dressed'
+        for tag in tags:
+            name=(tag,)+tuple(renpy.get_attributes(tag) or ())
+            assert renpy.has_image(name,exact=True),name
+        if cs_d5_scene==20: assert not renpy.music.get_playing(channel='ambience')
+        if renpy.get_screen('cs_d5_insert'): assert not tags, ('Portrait under close-up',tags)
+        node=renpy.game.script.lookup(renpy.game.context().current)
+        phrase=getattr(node,'what','')
+        if phrase==u'Пойдём потом немного прогуляемся?':renpy.cs_lit_walk=True
+        if phrase==u'Тогда останемся.':renpy.cs_lit_hug=True
+        if cs_d5_scene==20:assert not renpy.get_screen('cs_d5_notes')
+        if renpy.cs_d5_capture_route:
+            targets={u'Куда идёте?':'ulyana',u'Давай помогу.':'alisa',u'Вот здесь! Слышите? Раньше было иначе!':'miku',u'Ты не помнишь.':'voice',u'Нормально?':'run',u'Шестой.':'sixth_knock'}
+            if phrase in targets:
+                if targets[phrase]=='voice':assert not tags,tags
+                if targets[phrase]=='miku':assert 'mi' in tags,tags
+                if targets[phrase]=='run':assert 'cs_darya' in tags,tags
+                renpy.pause(0.1,hard=True)
+                renpy.screenshot(config.basedir+'/pov_'+renpy.cs_d5_route+'_'+targets[phrase]+'.png')
+        if renpy.cs_d5_capture_route and renpy.cs_d5_qa_pending:
+            renpy.pause(0.1,hard=True)
+            for tag in tags:
+                x,y,w,h=renpy.get_image_bounds(tag)
+                assert y<300 and h>500, (tag,x,y,w,h)
+                if len(tags)==1: assert abs(x+w/2.0-960)<2, (tag,x,w)
+            renpy.screenshot(config.basedir+'/day05_%s_%s.png'%(renpy.cs_d5_route,renpy.cs_d5_qa_pending))
+            renpy.cs_d5_qa_pending=None
+        if renpy.cs_d5_capture_route and cs_d5_scene==1 and cs_d5_dressed and not getattr(renpy,'cs_d5_dressed_shot',False):
+            renpy.cs_d5_dressed_shot=True
+            renpy.pause(0.1,hard=True)
+            renpy.screenshot(config.basedir+'/day05_'+renpy.cs_d5_route+'_dressed.png')
+    config.say_arguments_callback=cs_d5_qa_say
+    config.menu_arguments_callback=cs_d5_qa_args
+    config.label_callback=cs_d5_qa_labels
+    config.all_character_callbacks.append(cs_d5_qa_capture)
+
+label cs_qa_day05_matrix:
+    $ renpy.cs_d5_results=[]
+    python:
+        routes=[(0,0,False),(0,31,False),(3,0,False),(3,31,False),(4,0,False),(4,31,False),(3,2,False),(3,4,False),(3,16,False),(4,8,False),(4,0,True),(0,31,True),(0,0,False,'dasha'),(4,31,False,'alisa'),(4,0,False,'miku_only'),(4,0,False,'slavya_only')]
+    $ cs_d5_route_index=0
+    while cs_d5_route_index<len(routes):
+        $ cs_reset_state()
+        $ renpy.cs_d5_friend,renpy.cs_d5_mask,renpy.cs_d5_romantic=routes[cs_d5_route_index][:3]
+        $ renpy.cs_lit_kind=routes[cs_d5_route_index][3] if len(routes[cs_d5_route_index])>3 else 'uniform'
+        $ renpy.cs_d5_route='%s_%s_%s_%s'%(renpy.cs_d5_friend,renpy.cs_d5_mask,int(renpy.cs_d5_romantic),renpy.cs_lit_kind)
+        $ renpy.cs_d5_capture_route=cs_d5_route_index in (0,1,10,11)
+        $ cs_active=cs_day03_started=cs_darya_known=cs_slavya_known=cs_olga_seen=cs_un_name_known=cs_mi_name_known=True
+        $ cs_friend_da=cs_friend_se=cs_friend_mz=cs_friend_un=cs_friend_sl=cs_friend_dv=cs_friend_mi=cs_friend_viola=renpy.cs_d5_friend
+        if renpy.cs_lit_kind=='dasha':
+            $ cs_friend_da=4
+        if renpy.cs_lit_kind=='alisa':
+            $ cs_friend_da=0
+        if renpy.cs_lit_kind=='miku_only':
+            $ cs_friend_sl=0
+        if renpy.cs_lit_kind=='slavya_only':
+            $ cs_friend_mi=0
+        $ renpy.cs_lit_da_start=cs_friend_da
+        $ renpy.cs_lit_walk=renpy.cs_lit_hug=False
+        $ cs_da_shared_bed_day3=cs_da_love_confession_day3=renpy.cs_d5_romantic
+        $ cs_d4_od_trust_approach=bool(renpy.cs_d5_friend>=4)
+        $ cs_day04_done=cs_d5_started=True
+        $ renpy.cs_d5_choice_count=0
+        $ renpy.cs_d5_dressed_shot=False
+        $ renpy.cs_d5_qa_pending=None
+        $ set_mode_adv()
+        $ day_time()
+        call cs_day05_01
+        call cs_day05_02
+        call cs_day05_03
+        call cs_day05_04
+        call cs_day05_05
+        call cs_day05_06
+        call cs_day05_07
+        call cs_day05_08
+        $ cs_d5_address_early=cs_d5_semyon_address
+        call cs_day05_09
+        call cs_day05_10
+        call cs_day05_11
+        call cs_day05_12
+        call cs_day05_13
+        call cs_day05_14
+        call cs_day05_15
+        call cs_day05_16
+        call cs_day05_17
+        call cs_day05_18
+        call cs_day05_19
+        call cs_day05_20
+        python:
+            f=renpy.cs_d5_friend; m=renpy.cs_d5_mask
+            assert renpy.cs_d5_choice_count==5
+            assert cs_friend_da==renpy.cs_lit_da_start+(not(m&1))+(not(m&16))
+            assert cs_friend_mz==f+(not(m&2))
+            assert cs_friend_se==f+(-1 if m&4 else 1)+(not(m&16))
+            assert cs_friend_un==f+(-1 if m&8 else 1)
+            assert cs_d5_zhenya_cabinet_memory==(cs_friend_mz>=4)
+            assert not cs_d5_zhenya_address and not cs_d5_semyon_address
+            assert cs_d5_library_meeting_invited==(not(m&2))
+            assert cs_d5_address_talk_agreed==(cs_friend_se>=4)
+            assert cs_d5_lena_private_memory==(cs_friend_un>=4)
+            assert cs_d5_slavya_present==(cs_friend_sl>=4)
+            assert cs_d5_miku_present==(cs_friend_mi>=4)
+            assert not cs_d5_alisa_present
+            assert renpy.cs_lit_walk==(renpy.cs_lit_da_start+(not(m&1))>=4)
+            assert renpy.cs_lit_hug==(cs_friend_da>=4)
+            assert cs_d5_clock=='23:59' and cs_d5_clock_stopped and cs_d5_documents_location=='olga'
+            assert len(cs_d5_choice_results)==5
+            counts=(cs_friend_da,cs_friend_se,cs_friend_mz,cs_friend_un)
+            for choice,option in sorted(cs_d5_choice_results.items()):cs_d5_choose(choice,option)
+            assert counts==(cs_friend_da,cs_friend_se,cs_friend_mz,cs_friend_un),'Repeated award'
+            assert cs_da_love_confession_day3==renpy.cs_d5_romantic
+            renpy.cs_d5_results.append(dict(route=renpy.cs_d5_route,status='PASS'))
+            open(config.basedir+'/day05_progress.json','w').write(cs_d5_qa_json.dumps(renpy.cs_d5_results))
+        $ cs_d5_route_index+=1
+    $ renpy.cs_d5_qa=False
+    $ cs_d5_done=True
+    cs_narrator "Проверка загрузки пятого дня."
+    if not getattr(renpy, 'cs_d5_roundtrip', False):
+        $ renpy.take_screenshot()
+        $ renpy.save('day05_matrix_final')
+        $ renpy.cs_d5_roundtrip=True
+        $ renpy.load('day05_matrix_final')
+    $ assert cs_d5_done and cs_d5_clock=='23:59'
+    $ open(config.basedir+'/day05_matrix_PASS.json','w').write(cs_d5_qa_json.dumps(renpy.cs_d5_results))
+    $ renpy.quit()
+
+testcase cs_day05_matrix:
+    pause 0.5
+    $ persistent.font_size='small'
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps=0
+    $ _preferences.transitions=0
+    $ _test.force=True
+    $ _test.timeout=900.0
+    $ renpy.cs_d5_qa=True
+    run Start('cs_qa_day05_matrix')
+    click until label cs_check_finished

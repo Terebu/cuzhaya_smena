@@ -1,0 +1,77 @@
+init 220 python:
+    import os as cs_legacy_os
+    renpy.cs_legacy_case=cs_legacy_os.environ.get('CS_LEGACY_CASE','day1')
+    renpy.cs_legacy_check=False
+    renpy.cs_legacy_hit=False
+    cs_legacy_cases={
+        'day1':('cs_day01_14',1,5),
+        'injury':('cs_day02_45',2,13),
+        'interlude':('cs_day02_66',2,17),
+        'frozen95':('cs_day03_95',3,4),
+        'day4':('cs_day04_06',4,6),
+    }
+    def cs_legacy_expected():
+        return {'day1':(1,5),'injury':(2,13),'interlude':(2,17),'frozen95':(3,4),'day4':(4,6)}[renpy.cs_legacy_case]
+    cs_legacy_say_base=config.say_arguments_callback
+    def cs_legacy_say(who,*args,**kwargs):
+        if cs_legacy_say_base:args,kwargs=cs_legacy_say_base(who,*args,**kwargs)
+        if renpy.cs_legacy_check:
+            node=renpy.game.script.lookup(renpy.game.context().current)
+            filename=str(getattr(node,'filename','')).replace('\\','/')
+            if '/days/' in filename:
+                renpy.cs_legacy_hit=True
+        return args,kwargs
+    config.say_arguments_callback=cs_legacy_say
+    class CSLegacyReached(Action):
+        def get_sensitive(self):return renpy.cs_legacy_hit
+        def __call__(self):pass
+
+label cs_legacy_create_start:
+    $ cs_reset_state()
+    $ cs_active=cs_darya_known=cs_slavya_known=cs_olga_seen=cs_un_name_known=True
+    $ cs_day03_started=renpy.cs_legacy_case in ('frozen95','day4')
+    $ cs_day04_started=renpy.cs_legacy_case=='day4'
+    $ cs_friend_da=cs_friend_se=cs_friend_mz=cs_friend_un=cs_friend_viola=3
+    $ cs_part09_choice='meet'
+    $ cs_part10_choice='help'
+    $ cs_viola_day3_awarded=True
+    $ cs_lena_elbow_injury_day2=2
+    $ cs_lena_elbow_bandaged=True
+    $ cs_se_road_day2_awarded=True
+    $ cs_talked_viola_second_day2=True
+    $ cs_viola_second_day2_awarded=True
+    $ set_mode_adv()
+    $ renpy.cs_legacy_check=True
+    jump expression cs_legacy_cases[renpy.cs_legacy_case][0]
+
+testcase cs_global_create_legacy:
+    pause 0.3
+    $ _test.force=True
+    $ _preferences.text_cps=0
+    $ _preferences.transitions=0
+    run Start('cs_legacy_create_start')
+    pause 0.05 until run CSLegacyReached()
+    $ renpy.take_screenshot()
+    $ renpy.save('global_legacy_'+renpy.cs_legacy_case)
+    run Quit(confirm=False)
+
+testcase cs_global_load_legacy:
+    pause 0.3
+    $ _test.force=True
+    $ _preferences.transitions=0
+    $ renpy.cs_legacy_check=True
+    run Function(renpy.load,'global_legacy_'+renpy.cs_legacy_case)
+    pause 0.1 until run CSLegacyReached()
+    pause 0.2
+    assert cs_rev_active
+    assert (cs_rev_day,cs_rev_scene)==cs_legacy_expected()
+    assert (cs_friend_da,cs_friend_se,cs_friend_mz,cs_friend_un,cs_friend_viola)==(3,3,3,3,3)
+    python:
+        if renpy.cs_legacy_case=='frozen95':
+            cs_rev_award('3:3:cs_friend_viola','cs_friend_viola',1)
+            assert cs_friend_viola==3
+        if renpy.cs_legacy_case=='injury':assert cs_lena_elbow_injury_day2==2
+        if renpy.cs_legacy_case=='interlude':assert cs_lena_book_returned and cs_reading_book_location=='library_shelf'
+    $ renpy.screenshot(config.basedir+'/legacy_'+renpy.cs_legacy_case+'.png')
+    $ open(config.basedir+'/legacy_'+renpy.cs_legacy_case+'_PASS.txt','w').write('PASS')
+    run Quit(confirm=False)

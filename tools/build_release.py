@@ -53,8 +53,10 @@ def build(output, *, compiled_seed=None, source_root=None, engine_root=None, ass
         # Ren'Py merges unchanged statement names while compiling new source.
         if compiled_seed:
             seed=compiled_seed/rel.with_suffix('.rpyc')
-            if not seed.is_file():raise RuntimeError('Missing published RPYC seed: '+str(seed))
-            shutil.copy2(seed,dest.with_suffix('.rpyc'))
+            if seed.is_file():
+                shutil.copy2(seed,dest.with_suffix('.rpyc'))
+            elif rel.as_posix() not in ('new_day05_assets.rpy','revision_staging.rpy','bus_scene_audio.rpy') and not rel.as_posix().startswith('days/revision20261106/'):
+                raise RuntimeError('Missing published RPYC seed: '+str(seed))
         source_provenance[(Path(NAMESPACE)/rel.with_suffix('.rpyc')).as_posix()]=dict(source=rel.as_posix(),source_sha256=sha(p))
     for name in ('audio','bg','cg','fonts','sp','ui'):
         for p in (asset_root/name).rglob('*'):

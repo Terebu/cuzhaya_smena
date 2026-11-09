@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "document_literary_paragraphs": 1111,
+  "dialogue_paragraphs": 395,
+  "thought_paragraphs": 7,
+  "total_runtime_says": 1116,
+  "max_say_characters": 172,
+  "menus": 5,
+  "duplicate_or_missing_paragraphs": 0,
+  "multiline_says": 0
+}

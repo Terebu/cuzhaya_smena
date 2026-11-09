@@ -1,0 +1,357 @@
+# -*- coding: utf-8 -*-
+label cs_day05_01:
+    $ cs_d5_scene = 1
+    $ save_name = "Чужая смена — День 5: Раньше горна"
+    $ cs_bus_scene_enter(1)
+    $ cs_d5_room("cs_house_lena_darya_int_day")
+    with Dissolve(0.7)
+    $ day_time()
+    $ persistent.sprite_time = "day"
+    stop music fadeout 1.0
+    $ cs_d5_enter_literary()
+    cs_narrator "Проснулась я раньше горна."
+    # cs_page_anchor: 846beb9665690b8f352a
+    cs_narrator "В последнее время это происходило подозрительно часто."
+    cs_narrator "Возможно, организм наконец принял местное расписание."
+    cs_narrator "А возможно, просто решил, что нормального сна мне и так достаточно."
+    cs_narrator "Я открыла глаза и посмотрела на окно."
+    # cs_page_anchor: f7f0b15c91981e031263
+    cs_narrator "Солнечная полоска лежала поперёк подушки."
+    cs_narrator "За стеклом покачивались ветки, а где-то неподалёку скрипнула дверь соседнего домика."
+    cs_narrator "Ничего необычного."
+    cs_narrator "Даже приятно."
+    cs_narrator "Если не считать того, что ещё несколько дней назад я понятия не имела, где нахожусь и каким образом собираюсь отсюда выбираться."
+    cs_narrator "Теперь хотя бы дорогу к столовой выучила."
+    cs_narrator "Прогресс."
+    if cs_da_shared_bed_day3 and cs_da_love_confession_day3:
+        # cs_page_anchor: 41b369bc1587034dc537
+        cs_narrator "Даша спала рядом, повернувшись ко мне лицом."
+        cs_narrator "Её рыжие волосы растрепались по подушке, а ладонь лежала поверх моего одеяла."
+        cs_narrator "Я осторожно отодвинула её руку и собралась встать."
+        $ cs_d5_pajamas_visible = True
+        $ cs_d5_costume("pajamas")
+        cs_narrator "Даша сонно приоткрыла один глаз."
+        $ cs_d5_focus("da")
+        with cs_sprite_change
+        cs_da "Сбегаешь?"
+        $ cs_d5_focus("ls")
+        with cs_sprite_change
+        # cs_page_anchor: 825fb5b6460ada56390b
+        cs_ls "На пробежку."
+        cs_ls "Пока горн не начал руководить моей личной жизнью."
+        $ cs_d5_focus("da")
+        with cs_sprite_change
+        cs_da "Ты слишком рано просыпаешься для человека, который постоянно жалуется на усталость."
+        $ cs_d5_focus("ls")
+        with cs_sprite_change
+        cs_ls "Я многогранная личность."
+    else:
+        cs_narrator "На соседней кровати Даша спала, накрыв голову одеялом."
+        cs_narrator "Я осторожно опустила ноги на пол, нащупала тапок и задела ножку кровати."
+        $ cs_rev_sfx('sound/sfx/bed_squeak1.ogg',0.3)
+        cs_narrator "Раздался довольно громкий металлический стук."
+        cs_narrator "Из-под соседнего одеяла донёсся недовольный голос."
+        $ cs_d5_focus("da")
+        with cs_sprite_change
+        cs_da "Лена, что ты там делаешь?"
+        $ cs_d5_focus("ls")
+        with cs_sprite_change
+        # cs_page_anchor: a833e131a793a519cc72
+        cs_ls "Пытаюсь начать утро без жертв."
+        cs_ls "Пока получается не очень."
+        $ cs_d5_focus("da")
+        with cs_sprite_change
+        cs_da "Куда собралась?"
+        $ cs_d5_focus("ls")
+        with cs_sprite_change
+        cs_ls "Побегать."
+        $ cs_d5_pajamas_visible = True
+        $ cs_d5_costume("pajamas")
+        cs_narrator "Из-под одеяла показалось сонное лицо."
+        $ cs_d5_focus("da")
+        with cs_sprite_change
+        cs_da "Серьёзно?"
+        $ cs_d5_focus("ls")
+        with cs_sprite_change
+        # cs_page_anchor: f08ba04186bf00e4e64d
+        cs_ls "Нет, конечно."
+        cs_ls "Я просто решила переодеться ради прогулки до двери."
+    $ cs_d5_pajama_mood = "neutral"
+    cs_narrator "Даша села и посмотрела в окно."
+    $ cs_d5_focus("da")
+    with cs_sprite_change
+    cs_da "Ты вчера обещала одна далеко не уходить."
+    $ cs_d5_focus("ls")
+    with cs_sprite_change
+    # cs_page_anchor: 24799dd2bd4fee1dfc56
+    cs_ls "Я помню."
+    cs_ls "Спортплощадка, пара кругов и обратно."
+    cs_ls "Никакого старого корпуса, подземелий и других достопримечательностей."
+    $ cs_d5_focus("da")
+    with cs_sprite_change
+    cs_da "Ты говоришь так, будто собираешься туда на экскурсию."
+    $ cs_d5_focus("ls")
+    with cs_sprite_change
+    # cs_page_anchor: 3af2bdf24596f22192a2
+    cs_ls "После вчерашнего я бы предпочла экскурсию в столовую."
+    cs_ls "Желательно с завтраком."
+    cs_narrator "Я достала из шкафа форму и посмотрела на локоть."
+    # cs_page_anchor: 20f7e6231c51fcaa9fea
+    cs_narrator "Вчера Виола сняла повязку, и без белой ткани рука всё ещё казалась непривычно голой."
+    cs_narrator "Если не делать резких движений и не пытаться геройствовать, можно было почти забыть о травме."
+    cs_narrator "Почти."
+    $ cs_d5_focus("da")
+    with cs_sprite_change
+    cs_da "А локоть?"
+    $ cs_d5_focus("ls")
+    with cs_sprite_change
+    # cs_page_anchor: ac95f4a7c9a0ed71d0de
+    cs_ls "Жив."
+    cs_ls "Передаёт привет."
+    $ cs_d5_focus("da")
+    with cs_sprite_change
+    cs_da "Лена."
+    $ cs_d5_focus("ls")
+    with cs_sprite_change
+    # cs_page_anchor: 93173ca07515fdca0288
+    cs_ls "Хорошо."
+    cs_ls "Без турников и соревнований."
+    cs_ls "Просто немного пробегусь."
+    cs_narrator "Даша откинула одеяло."
+    $ cs_d5_pajama_mood = "smile"
+    $ cs_d5_focus("da")
+    with cs_sprite_change
+    # cs_page_anchor: 5775661d9752fc1612da
+    cs_da "Подожди."
+    cs_da "Я с тобой."
+    cs_narrator "Я обернулась."
+    $ cs_d5_focus("ls")
+    with cs_sprite_change
+    cs_ls "Добровольно?"
+    $ cs_d5_focus("da")
+    with cs_sprite_change
+    cs_da "А что?"
+    $ cs_d5_focus("ls")
+    with cs_sprite_change
+    # cs_page_anchor: 3afb345d0b13945fe8a1
+    cs_ls "Ничего."
+    cs_ls "Просто хочу запомнить этот исторический момент."
+    $ cs_d5_focus("da")
+    with cs_sprite_change
+    # cs_page_anchor: c5a1a25315265d0fa382
+    cs_da "Очень смешно."
+    cs_da "Отвернись, мне переодеться надо."
+    $ cs_d5_pajamas_visible = False
+    $ cs_pov_begin()
+    with cs_sprite_leave
+    cs_narrator "Я повернулась к шкафу."
+    # cs_page_anchor: e586acbbb40b03c84e70
+    cs_narrator "Пока Даша искала одежду, я пыталась привести в порядок галстук."
+    cs_narrator "За ночь он приобрёл вид вещи, пережившей несколько тяжёлых смен."
+    cs_narrator "Получалось примерно так же, как у меня с причёской."
+    cs_narrator "Сзади что-то упало."
+    $ cs_d5_focus("da")
+    with cs_sprite_change
+    cs_da "Да куда же он делся?"
+    $ cs_d5_focus("ls")
+    with cs_sprite_change
+    cs_ls "Кто?"
+    $ cs_d5_focus("da")
+    with cs_sprite_change
+    cs_da "Носок."
+    cs_narrator "Я посмотрела под кровать."
+    $ cs_d5_focus("ls")
+    with cs_sprite_change
+    cs_ls "У меня."
+    $ cs_d5_focus("da")
+    with cs_sprite_change
+    cs_da "Как?!"
+    $ cs_d5_focus("ls")
+    with cs_sprite_change
+    # cs_page_anchor: 88bbf23464a394ee2f31
+    cs_ls "Не знаю."
+    cs_ls "Видимо, решил сменить владельца."
+    cs_narrator "Я подняла носок и протянула его Даше, не оборачиваясь полностью."
+    $ cs_d5_focus("da")
+    with cs_sprite_change
+    cs_da "Спасибо."
+    $ cs_d5_focus("ls")
+    with cs_sprite_change
+    # cs_page_anchor: fba718454e7c3ff1d4e5
+    cs_ls "Обращайся."
+    cs_ls "У меня тут бюро находок."
+    $ cs_d5_dressed = True
+    $ cs_d5_costume("sport")
+    cs_narrator "Через несколько минут мы обе были одеты."
+    cs_narrator "Даша одёрнула спортивную футболку и проверила шнурки на кроссовках."
+    $ cs_d5_focus("da")
+    with cs_sprite_change
+    # cs_page_anchor: 5543bae0386dcbc993f5
+    cs_da "Только без рекордов."
+    cs_da "Не забывай про локоть."
+    $ cs_d5_focus("ls")
+    with cs_sprite_change
+    cs_ls "Тогда официально объявляем это оздоровительной прогулкой с элементами бега."
+    $ cs_d5_focus("da")
+    with cs_sprite_change
+    cs_da "Уже лучше."
+    $ cs_d5_room("cs_house_lena_darya_ext_day")
+    $ cs_rev_sfx('sound/sfx/open_door_1.ogg',0.35)
+    cs_narrator "Мы вышли из домика."
+    # cs_page_anchor: 85e8cdb96519512fb003
+    cs_narrator "Утренний воздух был прохладным, трава ещё не успела высохнуть от росы."
+    cs_narrator "На площади почти никого не было."
+    $ cs_pov_begin()
+    with cs_sprite_leave
+    cs_th "Я размяла ноги, осторожно повела плечами и посмотрела на Дашу."
+    $ cs_d5_focus("ls")
+    with cs_sprite_change
+    cs_ls "Готова?"
+    $ cs_d5_focus("da")
+    with cs_sprite_change
+    cs_da "Подожди, сначала разомнусь."
+    cs_narrator "Она сделала несколько наклонов."
+    cs_narrator "Я последовала её примеру."
+    # cs_page_anchor: 59e971ae5c91fe16bcb8
+    cs_narrator "Со стороны столовой доносился шум: кто-то уже готовился к завтраку."
+    cs_narrator "По дорожке прошёл пионер с ящиком хлеба."
+    cs_narrator "Лагерь просыпался."
+    cs_narrator "И мне неожиданно нравилось быть частью этого утра."
+    $ cs_d5_room("bg ext_square_day")
+    cs_narrator "Мы побежали вдоль площади."
+    cs_narrator "Сначала медленно, чтобы не сбивать дыхание, затем немного быстрее."
+    cs_narrator "Я уже знала, где дорожка делает поворот, где торчит корень и возле какой скамейки лучше не срезать угол."
+    cs_narrator "За несколько дней я действительно освоилась."
+    cs_narrator "Оставалось научиться не влипать в неприятности."
+    cs_narrator "С этим пока было хуже."
+    $ cs_d5_room("bg ext_playground_day")
+    cs_narrator "На втором круге Даша замедлилась."
+    $ cs_d5_focus("da")
+    with cs_sprite_change
+    cs_da "Слушай, я всё-таки больше по прогулкам."
+    $ cs_d5_focus("ls")
+    with cs_sprite_change
+    cs_ls "Уже сдаёшься?"
+    $ cs_d5_focus("da")
+    with cs_sprite_change
+    cs_da "Я не участвовала в соревновании."
+    $ cs_d5_focus("ls")
+    with cs_sprite_change
+    # cs_page_anchor: 1daa856675d9cb815455
+    cs_ls "Удобная позиция."
+    cs_ls "Надо взять на вооружение."
+    cs_narrator "Даша остановилась возле спортплощадки."
+    $ cs_d5_focus("da")
+    with cs_sprite_change
+    cs_da "А ты ещё хочешь бегать?"
+    cs_narrator "Я посмотрела на дорожку."
+    # cs_page_anchor: 55b798766b93d880741d
+    cs_narrator "В принципе, одного круга мне вполне хватило бы."
+    cs_narrator "Но с другой стороны, раз уж встала в такую рань…"
+    menu:
+        "Тогда заканчиваем и немного прогуляемся":
+            $ cs_d5_choose(1, 0)
+            cs_narrator "Я сбавила шаг."
+            $ cs_d5_focus("ls")
+            with cs_sprite_change
+            # cs_page_anchor: 60d55e595b2865431303
+            cs_ls "Ладно."
+            cs_ls "Пойдём пешком."
+            $ cs_d5_focus("da")
+            with cs_sprite_change
+            cs_da "Ты же хотела ещё пробежаться."
+            $ cs_d5_focus("ls")
+            with cs_sprite_change
+            # cs_page_anchor: 03b7d00060319ed4a4d7
+            cs_ls "Передумала."
+            cs_ls "В моём тренировочном плане есть такая функция."
+            $ cs_d5_focus("da")
+            with cs_sprite_change
+            cs_da "Очень удобная."
+            $ cs_d5_focus("ls")
+            with cs_sprite_change
+            # cs_page_anchor: 62e06826b98fd955e29c
+            cs_ls "Авторская разработка."
+            cs_ls "Между прочим, дорого стоит."
+            cs_narrator "Даша рассмеялась."
+            cs_narrator "Мы пошли вдоль спортплощадки."
+            cs_narrator "Она рассказывала, как раньше любила гулять по Москве ранним утром, когда на улицах ещё мало людей."
+            cs_narrator "Я слушала, иногда задавая вопросы."
+            cs_narrator "Забавно, что обычный разговор о прогулках теперь казался почти роскошью."
+            # cs_page_anchor: 7defdf67122f37fbc6da
+            cs_narrator "Никаких автобусов."
+            cs_narrator "Никаких старых фотографий."
+            cs_narrator "Просто две девушки, которые вышли подышать воздухом."
+        "Я закончу ещё один круг. Подождёшь у турников?":
+            $ cs_d5_choose(1, 1)
+            $ cs_d5_focus("ls")
+            with cs_sprite_change
+            cs_ls "Давай я ещё один круг закончу, а ты подождёшь возле турников."
+            $ cs_d5_focus("da")
+            with cs_sprite_change
+            cs_da "Только один?"
+            $ cs_d5_focus("ls")
+            with cs_sprite_change
+            # cs_page_anchor: 7e4490d96911610f4ff3
+            cs_ls "Даже не два."
+            cs_ls "Ты недооцениваешь мою способность останавливаться вовремя."
+            $ cs_d5_focus("da")
+            with cs_sprite_change
+            cs_da "После старого корпуса у меня есть причины сомневаться."
+            $ cs_d5_focus("ls")
+            with cs_sprite_change
+            cs_ls "Несправедливо припоминать человеку его прошлое."
+            cs_narrator "Даша села на скамейку."
+            cs_narrator "Я закончила круг, не ускоряясь, и вернулась к ней."
+            cs_narrator "Она встретила меня ленивыми аплодисментами."
+            $ cs_d5_focus("da")
+            with cs_sprite_change
+            # cs_page_anchor: 7429600515d1d238620e
+            cs_da "Поздравляю."
+            cs_da "Ты обежала спортивную площадку."
+            $ cs_d5_focus("ls")
+            with cs_sprite_change
+            # cs_page_anchor: 2a55b529dbd44042d66b
+            cs_ls "Спасибо."
+            cs_ls "Ради такого признания стоило просыпаться."
+    cs_narrator "Возле турников я остановилась."
+    cs_narrator "Перекладина висела прямо над головой."
+    $ cs_pov_begin()
+    with cs_sprite_leave
+    cs_th "Я посмотрела на неё, потом на локоть."
+    cs_narrator "Нет."
+    cs_narrator "Сегодня обойдёмся без подвигов."
+    $ cs_d5_focus("da")
+    with cs_sprite_change
+    cs_da "Даже не думай."
+    $ cs_d5_focus("ls")
+    with cs_sprite_change
+    cs_ls "Я просто смотрю."
+    $ cs_d5_focus("da")
+    with cs_sprite_change
+    cs_da "Знаю я, как ты смотришь."
+    $ cs_d5_focus("ls")
+    with cs_sprite_change
+    cs_ls "У меня с турником исключительно платонические отношения."
+    $ cs_d5_focus("da")
+    with cs_sprite_change
+    cs_da "Очень рада."
+    $ cs_d5_room("bg ext_washstand_day")
+    cs_narrator "Мы отправились к умывальникам."
+    $ cs_d5_room("bg ext_house_of_mt_day")
+    cs_narrator "Возле домика Ольги Дмитриевны показался Семён."
+    cs_narrator "Он шёл с полотенцем на плече, растрёпанный и какой-то непривычно серьёзный."
+    cs_narrator "Увидев нас, остановился."
+    $ cs_d5_focus("sy")
+    with cs_sprite_change
+    cs_sy "Хорошо, что вы здесь."
+    cs_narrator "Я сразу заметила выражение его лица."
+    $ cs_d5_focus("ls")
+    with cs_sprite_change
+    cs_ls "Доброе утро и тебе."
+    $ cs_d5_focus("sy")
+    with cs_sprite_change
+    cs_sy "Мне нужно кое-что рассказать."
+    cs_narrator "Даша перестала улыбаться."
+    cs_narrator "А я поняла, что моё спокойное утро только что закончилось."
+    return

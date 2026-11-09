@@ -1,0 +1,80 @@
+label cs_qa_native_knock:
+    $ assert renpy.loadable('sound/sfx/knocking_door_outside.ogg')
+    $ assert cs_d5_single_knock=='<from 0.0 to 0.17>sound/sfx/knocking_door_outside.ogg'
+    $ _preferences.set_volume('sfx',1.0)
+    $ _preferences.set_mute('sfx',False)
+    $ renpy.music.set_volume(1.0,channel='sound')
+    $ cs_knock_test_count=0
+    while cs_knock_test_count<7:
+        play sound cs_d5_single_knock
+        $ renpy.pause(0.07,hard=True)
+        $ assert 'knocking_door_outside.ogg' in (renpy.music.get_playing(channel='sound') or '')
+        $ renpy.pause(0.22,hard=True)
+        $ assert not renpy.music.get_playing(channel='sound')
+        $ cs_knock_test_count+=1
+    $ open(config.basedir+'/native_knock_PASS.txt','w').write('PASS: 7 native 0.17-second knocks')
+    $ renpy.quit()
+
+testcase cs_native_knock:
+    pause 0.5
+    $ _test.force=True
+    run Start('cs_qa_native_knock')
+    pause 0.1 until label cs_check_finished
+
+label cs_qa_literary_music:
+    $ cs_reset_state()
+    $ cs_active=cs_d5_started=cs_d5_literary_initialized=cs_darya_known=cs_mi_name_known=True
+    $ cs_friend_da=cs_friend_mi=cs_friend_dv=cs_friend_se=4
+    $ renpy.cs_d5_qa=True
+    $ renpy.cs_d5_capture_route=False
+    $ renpy.cs_d5_qa_pending=None
+    $ renpy.cs_lit_walk=renpy.cs_lit_hug=False
+    call cs_day05_13
+    $ assert renpy.music.get_playing()==cs_day_music_daily
+    $ assert cs_d5_miku_volunteer and renpy.cs_lit_walk
+    $ open(config.basedir+'/literary_music_PASS.txt','w').write('PASS')
+    $ renpy.quit()
+
+testcase cs_literary_music:
+    pause 0.5
+    $ _test.force=True
+    $ _preferences.transitions=0
+    $ _preferences.text_cps=0
+    run Start('cs_qa_literary_music')
+    pause 0.1 until label cs_check_finished
+init 132 python:
+    renpy.cs_lit_door_check=False
+    def cs_lit_door_capture(event,**kwargs):
+        if not renpy.cs_lit_door_check or event!='show_done':return
+        text=cs_lit_text()
+        if text in (u'Ольга Дмитриевна открыла дверь почти сразу.',u'Она впустила нас.',u'В комнате уже сидела Виола.'):
+            key=cs_director_location_key or ''
+            expected='ext_house_of_mt' if text==u'Ольга Дмитриевна открыла дверь почти сразу.' else 'int_house_of_mt'
+            assert expected in key,(text,key)
+            renpy.pause(0.1,hard=True)
+            renpy.screenshot(config.basedir+'/literary_door_%s_%s.png'%(cs_d5_scene,expected))
+    config.all_character_callbacks.append(cs_lit_door_capture)
+
+
+label cs_qa_literary_doors:
+    $ cs_reset_state()
+    $ cs_active=cs_d5_started=cs_darya_known=cs_olga_seen=True
+    $ cs_friend_da=cs_friend_se=cs_friend_viola=4
+    $ renpy.cs_d5_qa=True
+    $ renpy.cs_d5_capture_route=False
+    $ renpy.cs_d5_qa_pending=None
+    $ renpy.cs_lit_walk=renpy.cs_lit_hug=False
+    $ renpy.cs_lit_door_check=True
+    call cs_day05_04
+    call cs_day05_18
+    $ renpy.cs_lit_door_check=False
+    $ open(config.basedir+'/literary_doors_PASS.txt','w').write('PASS')
+    $ renpy.quit()
+
+testcase cs_literary_doors:
+    pause 0.5
+    $ _test.force=True
+    $ _preferences.transitions=0
+    $ _preferences.text_cps=0
+    run Start('cs_qa_literary_doors')
+    pause 0.1 until label cs_check_finished

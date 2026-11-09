@@ -86,6 +86,11 @@ def check_exact(root: Path, targets: dict[str, str]):
 
 
 def regenerate(root: Path, *, check: bool, rounds: int, scratch: Path | None = None, entry: str = "") -> dict:
+    if (root / 'source/global_revision_20261106/intake.json').is_file():
+        from global_revision_generation import regenerate_global_layer
+        return regenerate_global_layer(root, check=check, rounds=rounds, scratch=scratch, entry=entry)
+    if (root / 'source/day05/manuscript.txt').is_file():
+        return regenerate_day05_layer(root, check=check, rounds=rounds, scratch=scratch, entry=entry)
     manifest, _ = load(root)
     # A complete rollback-safe check precedes all raw generation. Partial or
     # unknown editorial files must not be treated as another baseline.
@@ -137,6 +142,32 @@ def regenerate(root: Path, *, check: bool, rounds: int, scratch: Path | None = N
     finally:
         output.write_text(json.dumps(evidence, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         print("GENERATION_EVIDENCE", output, flush=True)
+
+
+def regenerate_day05_layer(root, *, check, rounds, scratch, entry):
+    """Verify the frozen editorial base, then replay the later Day 5 layer."""
+    parent = scratch or Path(tempfile.gettempdir()) / 'chuzhaya_day05_generation'
+    parent.mkdir(parents=True, exist_ok=True)
+    probe = Path(tempfile.mkdtemp(prefix='day05-', dir=parent))
+    original = {rel: sha(p.read_bytes()) for rel,p in runtime_paths(root).items()}
+    materialize(root, probe)
+    # These are exact before-layer bytes, not an inferred reverse patch.
+    for rel, old in [('days/day04/00_flow.rpy','previous_day04_flow.rpy.txt'),('day03_location_audio.rpy','previous_location_audio.rpy.txt')]:
+        shutil.copy2(root/'source/day05'/old, probe/rel)
+    day = probe/'days/day05'
+    assert day.resolve().is_relative_to(probe.resolve())
+    shutil.rmtree(day)
+    report = regenerate(probe, check=False, rounds=rounds, scratch=parent, entry=entry)
+    shutil.copytree(root/'source/day05', probe/'source/day05')
+    for name in ('build_day05.py','day05_runtime.rpy.txt','day05_expanded_layer.py','day05_adv_layer.py','day05_pov_layer.py','day05_literary_layer.py','day05_literary_runtime.rpy.txt','day05_corrected_layer.py','day05_corrected_runtime.rpy.txt','global_revision_sfx.py','global_text_paging.py'):
+        shutil.copy2(root/'tools'/name, probe/'tools'/name)
+    subprocess.run([sys.executable, '-X', 'utf8', str(probe/'tools/build_day05.py')], check=True, cwd=probe)
+    check_exact(probe, original)
+    if {rel:sha(p.read_bytes()) for rel,p in runtime_paths(root).items()} != original:
+        raise ValueError('Runtime changed during Day 5 generation proof')
+    report.update(root=str(root), runtime_files=len(original), published_files=[], day05_layer='PASS')
+    (root/'source/day05/generation_verification.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8')
+    return report
 
 
 def main():

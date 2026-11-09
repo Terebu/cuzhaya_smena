@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "literary_paragraphs": 1680,
+  "dialogue_paragraphs": 857,
+  "source_thoughts": 39,
+  "runtime_says": 1688,
+  "menus": 5,
+  "max_say_characters": 197,
+  "missing_or_duplicate_paragraphs": 0,
+  "romance_guard": true,
+  "dasha_counter_corrected": true,
+  "old_card_removed": true
+}

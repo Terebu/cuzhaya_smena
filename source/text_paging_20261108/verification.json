@@ -1,0 +1,175 @@
+{
+  "status": "PASS",
+  "text_and_staging_unchanged": true,
+  "files": [
+    {
+      "file": "days/revision20261106/day02.rpy",
+      "before": 1105,
+      "after": 1961,
+      "max_chars": 199
+    },
+    {
+      "file": "days/revision20261106/day03.rpy",
+      "before": 647,
+      "after": 1170,
+      "max_chars": 154
+    },
+    {
+      "file": "days/revision20261106/day04.rpy",
+      "before": 1258,
+      "after": 1981,
+      "max_chars": 164
+    },
+    {
+      "file": "days/revision20261106/flows.rpy",
+      "before": 0,
+      "after": 0,
+      "max_chars": 0
+    },
+    {
+      "file": "days/revision20261106/prologue_day01.rpy",
+      "before": 810,
+      "after": 1440,
+      "max_chars": 159
+    },
+    {
+      "file": "days/day05/00_flow.rpy",
+      "before": 0,
+      "after": 0,
+      "max_chars": 0
+    },
+    {
+      "file": "days/day05/01_scene.rpy",
+      "before": 133,
+      "after": 165,
+      "max_chars": 128
+    },
+    {
+      "file": "days/day05/02_scene.rpy",
+      "before": 121,
+      "after": 154,
+      "max_chars": 89
+    },
+    {
+      "file": "days/day05/03_scene.rpy",
+      "before": 122,
+      "after": 153,
+      "max_chars": 136
+    },
+    {
+      "file": "days/day05/04_scene.rpy",
+      "before": 100,
+      "after": 132,
+      "max_chars": 87
+    },
+    {
+      "file": "days/day05/05_scene.rpy",
+      "before": 109,
+      "after": 123,
+      "max_chars": 123
+    },
+    {
+      "file": "days/day05/06_scene.rpy",
+      "before": 141,
+      "after": 148,
+      "max_chars": 121
+    },
+    {
+      "file": "days/day05/07_scene.rpy",
+      "before": 95,
+      "after": 116,
+      "max_chars": 134
+    },
+    {
+      "file": "days/day05/08_scene.rpy",
+      "before": 123,
+      "after": 144,
+      "max_chars": 99
+    },
+    {
+      "file": "days/day05/09_scene.rpy",
+      "before": 109,
+      "after": 122,
+      "max_chars": 104
+    },
+    {
+      "file": "days/day05/10_scene.rpy",
+      "before": 107,
+      "after": 130,
+      "max_chars": 117
+    },
+    {
+      "file": "days/day05/11_scene.rpy",
+      "before": 83,
+      "after": 94,
+      "max_chars": 116
+    },
+    {
+      "file": "days/day05/12_scene.rpy",
+      "before": 80,
+      "after": 95,
+      "max_chars": 77
+    },
+    {
+      "file": "days/day05/13_scene.rpy",
+      "before": 163,
+      "after": 206,
+      "max_chars": 96
+    },
+    {
+      "file": "days/day05/14_scene.rpy",
+      "before": 115,
+      "after": 129,
+      "max_chars": 128
+    },
+    {
+      "file": "days/day05/15_scene.rpy",
+      "before": 129,
+      "after": 143,
+      "max_chars": 141
+    },
+    {
+      "file": "days/day05/16_scene.rpy",
+      "before": 185,
+      "after": 215,
+      "max_chars": 102
+    },
+    {
+      "file": "days/day05/17_scene.rpy",
+      "before": 109,
+      "after": 119,
+      "max_chars": 103
+    },
+    {
+      "file": "days/day05/18_scene.rpy",
+      "before": 107,
+      "after": 122,
+      "max_chars": 110
+    },
+    {
+      "file": "days/day05/19_scene.rpy",
+      "before": 237,
+      "after": 276,
+      "max_chars": 120
+    },
+    {
+      "file": "days/day05/20_scene.rpy",
+      "before": 391,
+      "after": 412,
+      "max_chars": 107
+    },
+    {
+      "file": "days/day05/resources.rpy",
+      "before": 0,
+      "after": 0,
+      "max_chars": 0
+    }
+  ],
+  "long_single_sentences": [
+    [
+      "days/revision20261106/day02.rpy",
+      656,
+      "Мику объяснила, что вечером на площади будет музыкальный вечер, а свою мелодию — она сочинила её сама, этим летом, — она то ли играет слишком быстро, то ли нет, и перед линейкой хотела это проверить."
+    ]
+  ]
+}

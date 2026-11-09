@@ -67,7 +67,7 @@ testcase cs_asset_real_start:
     $ _test.force = True
     $ _test.timeout = 30.0
     run Start("chuzhaya_smena_start")
-    click until label cs_check_room
+    click until label cs_rev_check_room
     pause 1.0
     click
     pause 1.0
@@ -85,7 +85,7 @@ testcase cs_release_smoke:
     pause 0.5
     $ renpy.screenshot(config.basedir + "/release_menu.png")
     "Чужая смена"
-    click until label cs_check_battery7
+    click until label cs_rev_check_battery7
     pause 1.0
     $ renpy.screenshot(config.basedir + "/release_second_scene.png")
     run Jump("cs_asset_portability_demo")

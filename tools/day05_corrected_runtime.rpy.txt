@@ -1,0 +1,239 @@
+init 20 python:
+    # Short background exchanges are heard, without staging extra portraits.
+    for cs_d5_id,cs_d5_name in (('pioneer',u'Пионер'),('other_pioneer',u'Другой пионер'),('cook',u'Повариха'),('girl',u'Девочка'),('ulyana',u'Ульяна'),('pioneer_girl',u'Пионерка')):
+        setattr(store,'cs_d5_'+cs_d5_id,Character(cs_d5_name,color='#c8c4ae',what_style='normal_prolog',ctc='ctc_animation',ctc_position='fixed'))
+    cs_d5_voice = Character(u"???", color="#b8a8d8", what_style="normal_prolog", ctc="ctc_animation", ctc_position="fixed")
+    # Native ES recording: first of its six knocks, ending before the next onset.
+    cs_d5_single_knock = "<from 0.0 to 0.17>sound/sfx/knocking_door_outside.ogg"
+    cs_d5_seven_knocks = cs_d5_single_knock
+    def cs_d5_knocks(count):
+        if count not in (6,7): raise Exception("Invalid knock count")
+        renpy.music.set_volume(0.45,channel="sound")
+        sequence=[]
+        for index in range(count):
+            sequence.append(cs_d5_single_knock)
+            if index+1<count: sequence.append("<silence 0.22>")
+        renpy.music.play(sequence,channel="sound",loop=False)
+
+    def cs_d5_enter_literary():
+        store.cs_d5_literary_initialized = True
+        for screen in ('cs_d5_insert','cs_d5_notes'):
+            renpy.hide_screen(screen)
+    def cs_d5_choose(number, option):
+        # A repeated checkpoint cannot award the same choice a second time.
+        rewards={1:('cs_friend_da',1,0),2:('cs_friend_mz',1,0),3:('cs_friend_se',1,-1),4:('cs_friend_un',1,-1)}
+        previous=cs_d5_choice_results.get(number)
+        if number in rewards:
+            name,yes,no=rewards[number]
+            old=0 if previous is None else (yes if previous==0 else no)
+            new=yes if option==0 else no
+            setattr(store,name,getattr(store,name)+new-old)
+        else:
+            old=1 if previous==0 else 0
+            new=1 if option==0 else 0
+            store.cs_friend_da+=new-old
+            store.cs_friend_se+=new-old
+        ledger=dict(cs_d5_choice_results);ledger[number]=option
+        store.cs_d5_choice_results=ledger
+        flag={1:'shared_pace',2:'asked_address',3:'semyon_agency',4:'lena_respected',5:'shared_fear'}[number]
+        setattr(store,'cs_d5_'+flag,option==0)
+        if number==2:store.cs_d5_library_meeting_invited=option==0
+
+    def cs_d5_literary_after_load():
+        if not cs_active or not cs_d5_started:return
+        for screen in ('cs_d5_insert','cs_d5_notes'):
+            renpy.hide_screen(screen)
+        if cs_d5_literary_initialized:return
+        ledger=dict(cs_d5_choice_results)
+        for number,scene,flag in ((1,1,'shared_pace'),(2,3,'asked_address'),(3,7,'semyon_agency'),(4,10,'lena_respected'),(5,16,'shared_fear')):
+            value=getattr(store,'cs_d5_'+flag)
+            if cs_d5_scene>scene or (cs_d5_scene==scene and value):
+                ledger[number]=0 if value else 1
+        store.cs_d5_choice_results=ledger
+        store.cs_d5_library_meeting_invited=cs_d5_asked_address
+        if cs_d5_scene>=18:store.cs_d5_documents_location='olga'
+        store.cs_d5_literary_initialized=True
+    config.after_load_callbacks.append(cs_d5_literary_after_load)
+    def cs_d5_room(image, duration=0.45, force=False):
+        if renpy.showing(image):
+            cs_day03_location_audio(image)
+            return
+        if not renpy.has_image(tuple(image.split()), exact=True):
+            raise Exception("Missing Day 5 background: " + image)
+        cs_director_scene(image)
+        renpy.scene()
+        renpy.show(image)
+        store.cs_d5_cast = []
+        store.cs_d5_offscreen_exchange = False
+        cs_d5_costume(store.cs_d5_outfit)
+        renpy.with_statement(Dissolve(duration), always=force)
+    def cs_d5_costume(costume):
+        if costume not in ('pioneer','sport','pajamas'): raise Exception('Unsupported Day 5 outfit: '+costume)
+        store.cs_d5_outfit = costume
+        image = "cs_darya shrug " + costume + " normal"
+        if not renpy.has_image(tuple(image.split()), exact=True):
+            raise Exception("Missing Day 5 costume: " + image)
+        store.cs_director_people["cs_darya"] = (tuple(image.split()), [store.cs_darya_normal_center])
+        store.cs_director_states["cs_darya"] = "PRESENT_OFFSCREEN"
+        if renpy.showing("cs_darya"):
+            renpy.show(image, at_list=[store.cs_darya_normal_center])
+    def cs_d5_focus(speaker):
+        if speaker=="un":store.cs_un_name_known=True
+        if cs_d5_heard_offscreen:
+            store.cs_d5_heard_offscreen = False
+            store.cs_d5_offscreen_exchange = True
+            cs_frame_focus([])
+            return
+        if renpy.get_screen('cs_d5_insert'):
+            cs_frame_focus([])
+            return
+        if speaker.startswith('d5_'):
+            cs_pov_begin()
+            store.cs_d5_offscreen_exchange = True
+            return
+        if speaker == 'ls' and cs_d5_offscreen_exchange:
+            cs_frame_focus([])
+            return
+        if cs_d5_scene == 1 and not cs_d5_dressed and not cs_d5_pajamas_visible and speaker in ('da','ls'):
+            cs_frame_focus([])
+            store.cs_d5_cast = []
+            return
+        tag = {"da":"cs_darya", "sy":"cs_semen", "mz":"cs_zhenya", "vi":"cs", "un":"un", "sl":"sl", "mt":"mt", "dv":"dv", "mi":"mi", "us":"us"}.get(speaker)
+        # POV responses keep their interlocutor. Offscreen voices have no portrait.
+        if speaker == "voice":
+            cs_frame_focus([])
+            store.cs_d5_offscreen_exchange = True
+        elif tag:
+            store.cs_d5_offscreen_exchange = False
+            mood = 'normal'
+            n = store.cs_d5_scene
+            image = None
+            if tag == 'cs_darya':
+                mood = {2:'thinking',6:'worried',7:'serious',8:'neutral',9:'smile',10:'thinking',12:'thinking',13:'thinking',14:'worried',15:'worried',16:'serious',17:'neutral',18:'worried',19:'thinking',20:'worried'}.get(n,'shrug')
+                if cs_d5_outfit=='pajamas':mood=cs_d5_pajama_mood
+                image = 'cs_darya '+mood+' '+cs_d5_outfit+' normal'
+            elif tag == 'cs_semen':
+                image = 'cs_semen '+('serious' if n>=18 else 'thinking' if n in (2,4,6,7,8,14,15) else 'neutral')+' pioneer normal'
+            elif tag == 'cs_zhenya':
+                image = 'cs_zhenya '+('thinking' if n>=14 else 'glasses_touch' if n in (3,8) else 'normal')+' pioneer normal'
+            if image:
+                if not renpy.has_image(tuple(image.split()),exact=True): raise Exception('Missing Day 5 expression: '+image)
+                if renpy.showing(tag):
+                    if renpy.get_attributes(tag)!=tuple(image.split()[1:]): renpy.show(image)
+                else:
+                    position=cs_director_defaults[tag][1]
+                    store.cs_director_people[tag]=(tuple(image.split()),[getattr(store,position)])
+            cast = [tag]
+            previous = store.cs_d5_cast
+            allowed = cs_d5_present()
+            if tag not in allowed:
+                raise Exception("Day 5 absent speaker: " + speaker)
+            if previous and previous[0] != tag and previous[0] in allowed:
+                cast.append(previous[0])
+            cs_frame_focus(cast)
+            store.cs_d5_cast = cast
+        elif not store.cs_d5_cast:
+            preferred = {2:"cs_semen",3:"cs_zhenya",4:"mt",5:"cs_zhenya",7:"cs_semen",8:"cs_zhenya",10:"un",11:"cs_semen",12:"sl",13:"dv",14:"un",16:"mt",17:"cs_semen",18:"mt",19:"cs_darya"}.get(cs_d5_scene,"cs_darya")
+            store.cs_d5_cast = [preferred]
+            cs_frame_focus(store.cs_d5_cast)
+        elif cs_reflective_shot:
+            cs_frame_focus([t for t in store.cs_d5_cast if t in cs_d5_present()])
+
+    def cs_d5_present():
+        n=store.cs_d5_scene
+        key=cs_director_location_key or ''
+        pair=['cs_darya','cs_semen']
+        group=pair+['cs_zhenya']
+        five=group+['un']
+        if n==1:return pair if 'ext_house_of_mt' in key else ['cs_darya']
+        if n==2:return pair
+        if n==3:return group+(['sl'] if 'ext_dining' in key else [])
+        if n==4:return group+['mt']
+        if n==5:return group
+        if n==6:return group
+        if n==7:return group+['mt']+(['sl'] if 'ext_square' in key else [])
+        if n==8:return group
+        if n==9:return group if 'int_library' in key else ['cs_darya']
+        if n==10:return five if 'int_library' in key else ['cs_darya','un']
+        if n==11:return five+['sl']
+        if n==12:return five+['sl','dv']
+        if n==13:return pair+['mi','dv']
+        if n in (14,15):return five+['mt']
+        if n==16:return five+['mt','cs']
+        if n==17:return five
+        if n==18:return five+['mt','cs']
+        if n==19 and 'ext_house_of_mt' in key:return pair
+        base=five+['mt','cs']
+        # At arrival, low-trust helpers hand over equipment and leave.
+        if cs_d5_slavya_present or n==19:base.append('sl')
+        if cs_d5_alisa_present or n==19:base.append('dv')
+        if cs_d5_miku_present or (n==19 and cs_d5_miku_volunteer):base.append('mi')
+        return base
+
+init 80 python:
+    def cs_d5_reset_for_new_game(_base=cs_reset_state):
+        _base()
+        # Screens belong to the previous playthrough, not the next Day 5 run.
+        for screen in ('cs_d5_insert','cs_d5_clock_face','cs_d5_notes'):
+            renpy.hide_screen(screen)
+    cs_reset_state=cs_d5_reset_for_new_game
+
+    def cs_d5_loaded_costume():
+        if not cs_active or not cs_d5_started:
+            return
+        if cs_d5_scene >= 2:
+            store.cs_d5_dressed = True
+        # Old Day 5 saves used underwear/sport. Repair their visual state only.
+        if cs_d5_scene == 1 and not cs_d5_dressed and not cs_d5_pajamas_visible:
+            key=cs_director_location_key or ''
+            if 'house_lena_darya_int' not in key:
+                store.cs_d5_dressed = True
+            else:
+                renpy.hide('cs_darya')
+                return
+        desired='pajamas' if cs_d5_scene==1 and cs_d5_pajamas_visible and not cs_d5_dressed else 'sport' if cs_d5_scene in (1,2) and not cs_d5_run_finished else 'pioneer'
+        store.cs_d5_outfit=desired
+        saved=cs_director_people.get('cs_darya')
+        if saved and desired not in saved[0]:
+            store.cs_director_people['cs_darya']=(('cs_darya','shrug',desired,'normal'),saved[1])
+        if renpy.showing('cs_darya'):
+            attrs=renpy.get_attributes('cs_darya') or ()
+            if desired not in attrs:
+                cs_d5_costume(desired)
+    config.after_load_callbacks.append(cs_d5_loaded_costume)
+    config.interact_callbacks.append(cs_d5_loaded_costume)
+
+screen cs_d5_insert(content, caption):
+    zorder 80
+    if cs_d5_started and cs_active:
+        frame:
+            align (0.5, 0.35)
+            xmaximum 1150
+            padding (46, 32)
+            background Solid("#e3d6baf5")
+            vbox:
+                spacing 20
+                text caption color "#534936" size 25
+                text content color "#252018" size 39
+
+screen cs_d5_clock_face():
+    zorder 40
+    if cs_active and cs_d5_started and cs_d5_scene == 20:
+        frame:
+            align (0.94, 0.07)
+            padding (18, 12)
+            background Solid("#0b121de8")
+            text cs_d5_clock color "#ede7d9" size 34
+
+screen cs_d5_notes():
+    zorder 45
+    if cs_active and cs_d5_started and cs_d5_scene == 20:
+        frame:
+            align (0.5, 0.35)
+            padding (30, 24)
+            background Solid("#e3d6baf5")
+            vbox:
+                spacing 18
+                text "Записи на столе" color "#534936" size 28
+                text "Автобус у ворот видели втроём.\nНа остановке: «НЕ ОГЛЯДЫВАЙСЯ».\nЧасы остановились в 23:59." color "#252018" size 32
+                text "Кто сидел в автобусе?\nЧто означает: «ТЫ УЖЕ ВЫБИРАЛ»?" color "#252018" size 34

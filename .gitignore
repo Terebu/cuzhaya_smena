@@ -1,0 +1,13 @@
+# Local credentials and encrypted private backups
+.env
+.env.*
+!.env.example
+*.dpapi
+*.pem
+*.key
+# Generated local caches and temporary files
+__pycache__/
+*.pyc
+*.rpyb
+*.bak
+*.tmp

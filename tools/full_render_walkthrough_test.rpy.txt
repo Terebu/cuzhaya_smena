@@ -12,6 +12,7 @@ init 98 python:
             args,kwargs=cs_rw_original_args(who,*args,**kwargs)
         if renpy.cs_rw_enabled:
             kwargs["interact"]=False
+            renpy.execution.not_infinite_loop(120)
             renpy.game.preferences.transitions=0
         return args,kwargs
     def cs_rw_menu(items,*args,**kwargs):
@@ -33,7 +34,7 @@ init 98 python:
             cs_rw_original_labels(name,abnormal)
         if not renpy.cs_rw_enabled:
             return
-        if cs_rw_re.match(r"^cs_(scene_\d+|day0[1234]_\d+[a-z_]*)$",name):
+        if cs_rw_re.match(r"^cs_(scene_\d+|day0[12345]_\d+[a-z_]*)$",name):
             renpy.cs_rw_pending=name
             renpy.cs_rw_visited.append(name)
         elif name in ("cs_check_day03_83_underwear","cs_check_day03_83_hair_touch","cs_check_day03_83_turned_away","cs_check_day03_83_dressed","cs_check_day01_part03_phone_off"):
@@ -115,6 +116,12 @@ init 98 python:
                 assert cs_d4_sl_notice_deferred
             with open(config.basedir+"/rw_"+renpy.cs_rw_route+"_state.json","w") as f:
                 cs_rw_json.dump(dict(status="PASS",visited=renpy.cs_rw_visited,screenshots=renpy.cs_rw_count,day4=True,friendship=dict(da=cs_friend_da,mz=cs_friend_mz,se=cs_friend_se,dv=cs_friend_dv,viola=cs_friend_viola)),f)
+        if name=="cs_check_day05_complete":
+            assert cs_d5_done and cs_day04_done
+            assert cs_d5_clock=="23:59" and cs_d5_documents_location=="library"
+            assert not renpy.music.get_playing(channel="ambience")
+            with open(config.basedir+"/rw_"+renpy.cs_rw_route+"_state.json","w") as f:
+                cs_rw_json.dump(dict(status="PASS",visited=renpy.cs_rw_visited,screenshots=renpy.cs_rw_count,day5=True,friendship=dict(da=cs_friend_da,mz=cs_friend_mz,se=cs_friend_se,dv=cs_friend_dv,viola=cs_friend_viola)),f)
     def cs_rw_character(event,**kwargs):
         if not renpy.cs_rw_enabled or event!="show_done":
             return
@@ -138,6 +145,10 @@ init 98 python:
             if bg!=getattr(renpy,"cs_rw_last_bg",()):
                 pending=pending or "location"
             renpy.cs_rw_last_bg=bg
+        if pending and not renpy.cs_rw_positive:
+            if not (pending.startswith("cs_day05_") or pending in ("cs_scene_01","cs_scene_07","cs_day01_01","cs_day02_01","cs_day03_75","cs_day03_83","cs_day03_128","cs_day03_186","cs_day04_01","cs_day04_12")):
+                pending=None
+                renpy.cs_rw_pending=None
         if pending:
             renpy.cs_rw_pending=None
             renpy.cs_rw_count+=1
@@ -166,7 +177,7 @@ testcase cs_render_walk_high:
     $ renpy.cs_rw_visited = []
     $ renpy.cs_rw_count = 0
     run Start("chuzhaya_smena_start")
-    click until label cs_check_day04_complete
+    click until label cs_check_day05_complete
     pause 0.5
     assert cs_day03_part06_done and cs_day03_lunch_horn_played and cs_day03_lunch_arrived
     $ cs_p6_capture("complete")
@@ -191,7 +202,7 @@ testcase cs_render_walk_low:
     $ renpy.cs_rw_visited = []
     $ renpy.cs_rw_count = 0
     run Start("chuzhaya_smena_start")
-    click until label cs_check_day04_complete
+    click until label cs_check_day05_complete
     pause 0.5
     assert cs_day03_part06_done and cs_day03_lunch_horn_played and cs_day03_lunch_arrived
     $ cs_p6_capture("complete")

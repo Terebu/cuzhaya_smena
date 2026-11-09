@@ -1,0 +1,141 @@
+init 280 python:
+    import json as cs_pg_json
+    import os as cs_pg_os
+    renpy.cs_pg_case=cs_pg_json.load(open(config.basedir+'/paging_cases.json'))[int(cs_pg_os.environ.get('CS_PAGE_CASE','0'))]
+    renpy.cs_pg_expected=cs_pg_json.load(open(config.basedir+'/paging_expected_aliases.json'))
+    renpy.cs_pg_seen=False
+    renpy.cs_pg_loaded=False
+    renpy.cs_pg_loading=False
+    class CSPageAt(Action):
+        def get_sensitive(self):return getattr(renpy.game.script.lookup(renpy.game.context().current),'what','')==renpy.cs_pg_case['text']
+        def __call__(self):pass
+    class CSPageLoaded(Action):
+        def get_sensitive(self):return renpy.cs_pg_seen
+        def __call__(self):pass
+    def cs_pg_after_load():
+        if renpy.cs_pg_loading:renpy.cs_pg_loaded=True
+    def cs_pg_frame(event,**kwargs):
+        if event!='show_done' or not renpy.cs_pg_loading or not renpy.cs_pg_loaded:return
+        assert cs_friend_da==cs_friend_se==cs_friend_mz==4
+        text=getattr(renpy.game.script.lookup(renpy.game.context().current),'what','')
+        assert text==renpy.cs_pg_case['first'],(text,renpy.cs_pg_case)
+        assert cs_active and cs_rev_active
+        renpy.cs_pg_seen=True
+        renpy.cs_pg_loaded=False
+    config.after_load_callbacks.append(cs_pg_after_load)
+    config.all_character_callbacks.append(cs_pg_frame)
+
+label cs_pg_seed:
+    $ cs_reset_state()
+    $ cs_active=cs_rev_active=cs_darya_known=True
+    $ cs_day03_started=cs_d5_started=cs_d5_literary_initialized=(renpy.cs_pg_case['key']=='day05')
+    $ cs_friend_da=cs_friend_se=cs_friend_mz=cs_friend_un=4
+    $ set_mode_adv()
+    call expression renpy.cs_pg_case['scene'] from cs_pg_fixture_return
+    return
+
+testcase cs_page_create:
+    pause 0.3
+    $ _test.force=True
+    $ _test.timeout=120.0
+    $ _preferences.transitions=0
+    $ _preferences.text_cps=0
+    run Start('cs_pg_seed')
+    click until run CSPageAt()
+    $ renpy.take_screenshot()
+    $ renpy.save('paging_old_'+renpy.cs_pg_case['key'])
+    run Quit(confirm=False)
+
+testcase cs_page_load:
+    pause 0.3
+    $ _test.force=True
+    $ _test.timeout=120.0
+    $ renpy.cs_pg_loading=True
+    run Function(renpy.load,'paging_old_'+renpy.cs_pg_case['key'])
+    pause 0.1 until run CSPageLoaded()
+    pause 0.3
+    $ renpy.screenshot(config.basedir+'/paging_loaded_'+renpy.cs_pg_case['key']+'.png')
+    $ open(config.basedir+'/paging_loaded_'+renpy.cs_pg_case['key']+'_PASS.txt','w').write('PASS')
+    run Quit(confirm=False)
+
+label cs_pg_visuals:
+    $ cs_reset_state()
+    $ cs_active=cs_rev_active=True
+    $ set_mode_adv()
+    $ cs_rev_time('prolog')
+    $ cs_rev_costume('winter')
+    $ cs_rev_room('cs_bus_winter')
+    $ cs_frame_focus(['cs_dasha_winter'])
+    $ persistent.font_size='small'
+    $ style.normal_prolog.size=28
+    $ style.narrator_prolog.size=28
+    cs_narrator "Ситуация была идиотская."
+    $ renpy.screenshot(config.basedir+"/paging_small_0.png")
+    cs_narrator "Села неизвестно куда, разрядила телефон и еду через лес с незнакомой девушкой."
+    $ renpy.screenshot(config.basedir+"/paging_small_1.png")
+    cs_narrator "Нормальный человек давно бы начал беспокоиться."
+    $ renpy.screenshot(config.basedir+"/paging_small_2.png")
+    cs_narrator "А тревоги почему-то не было."
+    $ renpy.screenshot(config.basedir+"/paging_small_3.png")
+    cs_narrator "Совсем."
+    $ renpy.screenshot(config.basedir+"/paging_small_4.png")
+    cs_narrator "Тепло, снег за окном, гул двигателя."
+    $ renpy.screenshot(config.basedir+"/paging_small_5.png")
+    $ persistent.font_size='large'
+    $ style.normal_prolog.size=36
+    $ style.narrator_prolog.size=36
+    cs_narrator "Ситуация была идиотская."
+    $ renpy.screenshot(config.basedir+"/paging_large_0.png")
+    cs_narrator "Села неизвестно куда, разрядила телефон и еду через лес с незнакомой девушкой."
+    $ renpy.screenshot(config.basedir+"/paging_large_1.png")
+    cs_narrator "Нормальный человек давно бы начал беспокоиться."
+    $ renpy.screenshot(config.basedir+"/paging_large_2.png")
+    cs_narrator "А тревоги почему-то не было."
+    $ renpy.screenshot(config.basedir+"/paging_large_3.png")
+    cs_narrator "Совсем."
+    $ renpy.screenshot(config.basedir+"/paging_large_4.png")
+    cs_narrator "Тепло, снег за окном, гул двигателя."
+    $ renpy.screenshot(config.basedir+"/paging_large_5.png")
+    cs_narrator "Мику объяснила, что вечером на площади будет музыкальный вечер, а свою мелодию — она сочинила её сама, этим летом, — она то ли играет слишком быстро, то ли нет, и перед линейкой хотела это проверить."
+    $ renpy.screenshot(config.basedir+"/paging_long_single.png")
+    python:
+        assert cs_page_saved_addresses
+        for old,target in cs_page_saved_addresses:
+            assert renpy.game.script.lookup(old) is cs_page_live_says[target]
+            assert cs_page_live_says[target].what==renpy.cs_pg_expected[target[0]+'#'+str(target[1])]
+        open(config.basedir+'/PAGING_VISUALS_PASS.json','w').write(cs_pg_json.dumps(dict(status='PASS',aliases=len(cs_page_saved_addresses),fonts=['small','large'],pages=6)))
+    $ renpy.quit()
+
+testcase cs_page_visuals:
+    pause 0.3
+    $ _test.force=True
+    $ _test.timeout=120.0
+    $ _preferences.transitions=0
+    $ _preferences.text_cps=0
+    run Start('cs_pg_visuals')
+    pause 0.1
+    click
+    pause 0.1
+    click
+    pause 0.1
+    click
+    pause 0.1
+    click
+    pause 0.1
+    click
+    pause 0.1
+    click
+    pause 0.1
+    click
+    pause 0.1
+    click
+    pause 0.1
+    click
+    pause 0.1
+    click
+    pause 0.1
+    click
+    pause 0.1
+    click
+    pause 0.1
+    click

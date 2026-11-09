@@ -1,0 +1,76 @@
+init 110 python:
+    class CSD5OldProbe(Action):
+        def get_sensitive(self):
+            if getattr(store,'cs_d5_scene',0)!=1:return False
+            if renpy.cs_d5_probe=='awake':return renpy.showing('cs_darya')
+            return renpy.showing('bg') and 'ext_playground_day' in (renpy.get_attributes('bg') or ())
+        def __call__(self):pass
+    class CSD5NewProbe(Action):
+        def get_sensitive(self):return bool(getattr(store,'cs_d5_started',False)) and cs_d5_scene==1
+        def __call__(self):pass
+
+label cs_d5_expanded_save_start:
+    $ cs_reset_state()
+    $ cs_active=cs_day03_started=cs_day04_done=cs_darya_known=cs_olga_seen=True
+    $ cs_friend_da=cs_friend_se=cs_friend_mz=3
+    $ cs_da_shared_bed_day3=cs_da_love_confession_day3=True
+    $ set_mode_adv()
+    cs_narrator "Контрольная точка до расширения пятого дня."
+    cs_narrator "Отношения заданы в прежней версии."
+    jump cs_day05
+
+testcase cs_d5_probe_create_awake:
+    pause 0.5
+    $ renpy.cs_d5_probe='awake'
+    $ _preferences.text_cps=0
+    $ _preferences.transitions=0
+    $ _test.force=True
+    run Start('cs_d5_expanded_save_start')
+    click until run CSD5OldProbe()
+    $ renpy.take_screenshot()
+    $ renpy.save('d5_pre_expanded_awake')
+    run Quit(confirm=False)
+
+testcase cs_d5_probe_create_sport:
+    pause 0.5
+    $ renpy.cs_d5_probe='sport'
+    $ _preferences.text_cps=0
+    $ _preferences.transitions=0
+    $ _test.force=True
+    run Start('cs_d5_expanded_save_start')
+    click until run CSD5OldProbe()
+    $ renpy.take_screenshot()
+    $ renpy.save('d5_pre_expanded_sport')
+    run Quit(confirm=False)
+
+testcase cs_d5_probe_load_awake:
+    pause 0.5
+    $ _preferences.transitions=0
+    $ _test.force=True
+    run Function(renpy.load,'d5_pre_expanded_awake')
+    click until run CSD5NewProbe()
+    pause 0.3
+    assert cs_friend_da==cs_friend_se==cs_friend_mz==3
+    assert not renpy.showing('cs_darya')
+    assert cs_da_love_confession_day3
+    $ renpy.screenshot(config.basedir+'/expanded_old_awake.png')
+    $ open(config.basedir+'/expanded_old_awake_PASS.txt','w').write('PASS')
+    run Quit(confirm=False)
+
+testcase cs_d5_probe_load_sport:
+    pause 0.5
+    $ _preferences.transitions=0
+    $ _test.force=True
+    run Function(renpy.load,'d5_pre_expanded_sport')
+    click until run CSD5NewProbe()
+    pause 0.3
+    assert cs_friend_da==cs_friend_se==cs_friend_mz==3
+    assert cs_da_love_confession_day3
+    assert cs_d5_outfit=='sport' and cs_d5_dressed
+    assert not renpy.showing('cs_darya') or 'sport' in renpy.get_attributes('cs_darya')
+    click
+    pause 0.2
+    assert renpy.showing('cs_darya') and 'sport' in renpy.get_attributes('cs_darya')
+    $ renpy.screenshot(config.basedir+'/expanded_old_sport.png')
+    $ open(config.basedir+'/expanded_old_sport_PASS.txt','w').write('PASS')
+    run Quit(confirm=False)

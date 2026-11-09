@@ -1,0 +1,42 @@
+init 120 python:
+    renpy.cs_d5_visual=False
+    def cs_d5_visual_capture(event,**kwargs):
+        if not renpy.cs_d5_visual or event!='show_done':return
+        renpy.pause(0.01,hard=True)
+        sc=renpy.get_screen('cs_d5_insert')
+        content=getattr(sc,'scope',{}).get('content','') if sc else ''
+        key=(content,cs_d5_clock,bool(renpy.get_screen('cs_d5_notes')),tuple(renpy.get_attributes('bg') or ()))
+        if key!=getattr(renpy,'cs_d5_visual_key',None):
+            renpy.cs_d5_visual_key=key
+            renpy.cs_d5_visual_frame+=1
+            renpy.pause(0.3,hard=True)
+            renpy.screenshot(config.basedir+'/day05_insert_%02d.png'%renpy.cs_d5_visual_frame)
+    config.all_character_callbacks.append(cs_d5_visual_capture)
+
+label cs_qa_d5_visual:
+    $ cs_reset_state()
+    $ cs_active=cs_day03_started=cs_d5_started=cs_darya_known=cs_olga_seen=cs_un_name_known=True
+    $ cs_friend_da=cs_friend_se=cs_friend_un=4
+    $ cs_d5_scene=20
+    $ cs_d5_semyon_agency=cs_d5_lena_respected=cs_d5_lena_private_memory=True
+    $ cs_d5_room('bg int_house_of_mt_night')
+    $ night_time()
+    call cs_day05_20
+    $ assert 'int_house_of_mt_night2' in renpy.get_attributes('bg')
+    $ renpy.cs_d5_visual=False
+    $ renpy.screenshot(config.basedir+'/day05_final_notes.png')
+    $ open(config.basedir+'/day05_visual_PASS.txt','w').write('PASS')
+    $ renpy.quit()
+
+testcase cs_day05_visual:
+    pause 0.5
+    $ persistent.font_size='small'
+    $ _preferences.transitions=2
+    $ _preferences.text_cps=0
+    $ renpy.cs_d5_qa=True
+    $ renpy.cs_d5_capture_route=False
+    $ renpy.cs_d5_visual=True
+    $ renpy.cs_d5_visual_frame=0
+    $ _test.force=True
+    run Start('cs_qa_d5_visual')
+    click until label cs_check_finished

@@ -1,0 +1,20 @@
+label cs_qa_global_credits:
+    $ cs_reset_state()
+    $ cs_active=True
+    $ set_mode_adv()
+    scene cs_room
+    show screen cs_opening_credits_screen
+    pause 6.8
+    $ renpy.screenshot(config.basedir+'/global_opening_credits.png')
+    pause 6.5
+    $ renpy.screenshot(config.basedir+'/global_opening_credits_cleared.png')
+    $ open(config.basedir+'/global_credits_PASS.txt','w').write('PASS')
+    $ renpy.quit()
+
+testcase cs_global_credits:
+    pause 0.3
+    $ _test.force=True
+    $ _test.timeout=60.0
+    $ _preferences.transitions=2
+    run Start('cs_qa_global_credits')
+    pause 15.0

@@ -1,0 +1,50 @@
+init 125 python:
+    def cs_adv_text():
+        try:
+            node=renpy.game.script.lookup(renpy.game.context().current)
+            return getattr(node,'what','')
+        except Exception:
+            return ''
+    class CSAdvReady(Action):
+        def get_sensitive(self):return cs_adv_text()==u'Я проснулась от полоски солнца на подушке.'
+        def __call__(self):pass
+
+label cs_qa_day05_adv_clicks:
+    $ cs_active=cs_d5_started=True
+    $ cs_d5_scene=20
+    show screen cs_d5_notes
+    show screen cs_d5_clock_face
+    show screen cs_d5_insert('TEST','TEST')
+    $ renpy.pause(0.05,hard=True)
+    $ cs_reset_state()
+    $ renpy.pause(0.05,hard=True)
+    $ assert not any(renpy.get_screen(s) for s in ('cs_d5_notes','cs_d5_clock_face','cs_d5_insert'))
+    $ cs_active=cs_day03_started=cs_day04_done=cs_darya_known=cs_olga_seen=True
+    $ cs_friend_da=cs_friend_mz=cs_friend_se=3
+    jump cs_day05
+
+testcase cs_day05_adv_clicks:
+    pause 0.5
+    $ _preferences.text_cps=0
+    $ _preferences.transitions=0
+    $ _test.force=True
+    run Start('cs_qa_day05_adv_clicks')
+    pause 0.1 until run CSAdvReady()
+    $ renpy.screenshot(config.basedir+'/adv_click_01.png')
+    assert not renpy.showing('cs_darya')
+    click
+    assert cs_adv_text()==u'За окном скрипнула дверь соседнего домика, потом снова стало тихо.'
+    $ renpy.screenshot(config.basedir+'/adv_click_02.png')
+    click
+    assert cs_adv_text()==u'На соседней кровати Даша укуталась в одеяло с головой.'
+    click
+    assert cs_adv_text()==u'Я нащупала ногой тапок и задела металлическую ножку кровати.'
+    click
+    assert cs_adv_text()==u'Голос Даши доносился из-под одеяла.'
+    $ renpy.screenshot(config.basedir+'/adv_click_05.png')
+    click
+    assert cs_adv_text()==u'Ты куда в такую рань?'
+    assert not renpy.showing('cs_darya') and not cs_d5_dressed
+    assert cs_friend_da==cs_friend_mz==cs_friend_se==3
+    $ open(config.basedir+'/adv_clicks_PASS.txt','w').write('PASS')
+    run Quit(confirm=False)

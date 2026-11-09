@@ -68,7 +68,7 @@ label cs_scene_04:
     cs_narrator "Снова достала телефон."
     show screen cs_phone(2, "battery")
     label cs_check_battery2:
-    cs_ls "Да ладно..."
+    cs_ls "Да ладно…"
     cs_narrator "Я попыталась открыть карты. Экран задумался, показал серый прямоугольник и окончательно погас."
     show screen cs_phone(0, "off")
     play sound cs_phone_error

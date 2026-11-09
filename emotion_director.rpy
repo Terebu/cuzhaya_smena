@@ -155,7 +155,7 @@ init -5 python:
         base = list(attrs)
         def usable(pose):
             base[index] = pose
-            return renpy.has_image((tag,) + tuple(base))
+            return renpy.has_image((tag,) + tuple(base), exact=True)
         pool = [p for p in (strong_pool + mild if strong else mild) if usable(p)]
         if not pool:
             return None

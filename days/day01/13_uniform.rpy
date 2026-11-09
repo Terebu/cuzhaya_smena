@@ -143,7 +143,7 @@ label cs_day01_13:
     # cs_global_transition
     with cs_sprite_change
     cs_da "Непривычная одежда."
-    cs_ls "Ты ещё школьную форму девяностых не видела."
+    cs_ls "Ты ещё советскую школьную форму не видела."
     # cs_darya_stage: present in story
     show cs_darya shrug pioneer normal at cs_darya_normal_right
     $ cs_presence_stage()

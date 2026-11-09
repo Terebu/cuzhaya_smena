@@ -1,0 +1,31 @@
+"""Reviewed audible events, using only verified native archive resources.
+
+Indices identify events as they happen, not dialogue recalling an earlier event.
+Ordinary footsteps, birds and wind remain owned by the location ambience.
+"""
+SOUNDS={
+ 'prologue_day01':{
+  344:('dinner_horn_processed',0.6),456:('close_door_1',0.35),486:('open_door_1',0.4),502:('close_door_1',0.4),725:('dinner_horn_processed',0.6),886:('click_3',0.2),899:('<from 0.0 to 0.7>bus_idle',0.12)},
+ 'day02':{
+  107:('close_door_1',0.25),187:('dinner_horn_processed',0.6),368:('dinner_jingle_speaker',0.5),470:('medpunkt_door_open',0.4),733:('bodyfall_1',0.55),956:('close_door_1',0.35),1036:('dinner_horn_processed',0.6),1155:('concert_applause',0.4),1221:('click_3',0.2)},
+ 'day03':{
+  75:('<from 0.0 to 0.7>bus_idle',0.12),103:('dinner_horn_processed',0.6),108:('open_door_1',0.35),371:('dinner_horn_processed',0.6),553:('dinner_horn_processed',0.6),708:('knocks:2',0.45)},
+ 'day04':{
+  92:('open_door_1',0.25),99:('close_door_1',0.25),148:('door_squeak_light',0.3),150:('far_steps',0.25),173:('door_squeak_light',0.2),197:('knocks:1',0.35),214:('open_metal_door',0.45),219:('click_3',0.25),256:('metal_door_large_close_basement',0.4),281:('click_3',0.3),375:('metal_door_heavy_close',0.35),551:('knocks:1',0.45),828:('dinner_horn_processed',0.6),910:('open_door_clubs',0.35),1047:('dinner_horn_processed',0.6),1333:('close_door_1',0.3)},
+ 'day05':{
+  65:('bed_squeak1',0.3),113:('open_door_1',0.35),297:('dinner_horn_processed',0.6),313:('water_splash',0.35),453:('open_door_1',0.4),553:('close_door_1',0.35),1289:('dinner_horn_processed',0.6),1746:('campus_door_rattle',0.3),1758:('far_steps',0.25),1798:('open_door_clubs',0.35),1892:('close_door_1',0.3),2102:('dinner_horn_processed',0.6),2226:('open_door_1',0.35),2240:('close_door_1',0.35),2353:('knocks:1',0.4),2358:('open_door_1',0.35),2653:('close_door_1',0.3)},
+}
+
+def resource(token):
+    if token.startswith('<'):
+        prefix,token=token.split('>',1)
+        return prefix+'>sound/sfx/'+token+'.ogg'
+    return 'sound/sfx/'+token+'.ogg'
+
+def cues(name):
+    out={}
+    for index,(sound,volume) in SOUNDS[name].items():
+        if sound.startswith('knocks:'):
+            out[index]=['$ cs_rev_knocks(%d,%s)'%(int(sound.split(':')[1]),volume)]
+        else:out[index]=['$ cs_rev_sfx(%r,%s)'%(resource(sound),volume)]
+    return out

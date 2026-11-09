@@ -540,10 +540,15 @@ label cs_day04_03:
     cs_d4_unknown_girl "До встречи, Лена."
     cs_narrator "Пальцы Даши сжались на моей руке."
     cs_narrator "Она обернулась."
+    cs_narrator "Я тоже посмотрела вниз."
+    cs_narrator "Там, где лестница уходила в темноту, кто-то стоял."
+    cs_narrator "Девушка. Спиной к нам. Тёмные волосы, пионерская рубашка."
+    cs_narrator "Чем-то она напомнила мне Тихонову. Но лица я не видела."
+    cs_narrator "Через секунду внизу снова было пусто."
     if cs_reflective_shot:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
-    cs_da "Ты слышала?"
+    cs_da "Ты видела?"
     if cs_reflective_shot:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change

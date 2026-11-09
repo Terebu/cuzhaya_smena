@@ -82,7 +82,7 @@ label cs_scene_05:
     cs_narrator "Мой взгляд снова остановился на девушке рядом."
     cs_narrator "Она сидела, сложив руки на коленях, и смотрела куда-то вперёд."
     cs_narrator "Кажется, тоже немного устала."
-    cs_ls "Кстати..."
+    cs_ls "Кстати…"
     # cs_darya_variety: reaction
     show cs_dasha_winter shy normal at cs_darya_normal_center
     $ cs_presence_stage()
@@ -108,7 +108,7 @@ label cs_scene_05:
     $ cs_presence_stage()
     # cs_global_transition
     with cs_sprite_change
-    cs_da "А..."
+    cs_da "А…"
     cs_narrator "Девушка немного выпрямилась."
     $ cs_darya_known = True
     cs_da "Дарья."

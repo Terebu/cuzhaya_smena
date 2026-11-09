@@ -1,0 +1,67 @@
+init 133 python:
+    renpy.cs_corrected_audio_check=False
+    def cs_corrected_audio_event(event,**kwargs):
+        if not renpy.cs_corrected_audio_check or event!='show_done':return
+        text=cs_lit_text()
+        renpy.cs_corrected_seen.add(text)
+        if text==u'Мику сыграла несколько тактов.':
+            assert renpy.music.get_playing()==cs_miku_piano_track
+        if text==u'Ольга Дмитриевна открыла дверь почти сразу.':
+            assert 'ext_house_of_mt' in cs_director_location_key
+        if text==u'Вы немного рано.':
+            assert 'int_house_of_mt' in cs_director_location_key
+        if text==u'Да что ж такое!':
+            assert 'ext_musclub' in cs_director_location_key
+        if text==u'НЕ ОГЛЯДЫВАЙСЯ.':
+            assert renpy.get_screen('cs_d5_insert')
+    config.all_character_callbacks.append(cs_corrected_audio_event)
+
+label cs_qa_corrected_audio:
+    $ assert renpy.loadable('sound/sfx/knocking_door_outside.ogg')
+    $ _preferences.set_volume('sfx',1.0)
+    $ _preferences.set_mute('sfx',False)
+    python:
+        renpy.cs_corrected_sequences=[]
+        renpy.cs_corrected_original_play=renpy.music.play
+        def cs_corrected_record_play(filenames,*args,**kwargs):
+            if kwargs.get('channel')=='sound':renpy.cs_corrected_sequences.append(filenames)
+            return renpy.cs_corrected_original_play(filenames,*args,**kwargs)
+        renpy.music.play=cs_corrected_record_play
+    $ cs_corrected_count=0
+    while cs_corrected_count<3:
+        $ cs_d5_knocks((7,6,7)[cs_corrected_count])
+        $ renpy.pause(0.07,hard=True)
+        $ assert 'knocking_door_outside.ogg' in (renpy.music.get_playing(channel='sound') or '')
+        $ renpy.pause(2.7,hard=True)
+        $ assert not renpy.music.get_playing(channel='sound')
+        $ cs_corrected_count+=1
+    python:
+        renpy.music.play=renpy.cs_corrected_original_play
+        for seq,count in zip(renpy.cs_corrected_sequences,(7,6,7)):
+            assert seq.count(cs_d5_single_knock)==count
+            assert seq.count('<silence 0.22>')==count-1
+        assert len(renpy.cs_corrected_sequences)==3
+    $ cs_reset_state()
+    $ cs_active=cs_d5_started=cs_d5_literary_initialized=cs_darya_known=cs_mi_name_known=cs_olga_seen=True
+    $ cs_friend_da=cs_friend_mi=cs_friend_dv=cs_friend_se=4
+    $ cs_mi_followup_invitation_day3=True
+    $ renpy.cs_d5_qa=True
+    $ renpy.cs_d5_capture_route=False
+    $ renpy.cs_d5_qa_pending=None
+    $ renpy.cs_corrected_seen=set()
+    $ renpy.cs_corrected_audio_check=True
+    call cs_day05_13
+    $ assert cs_d5_miku_volunteer and cs_d5_miku_intro_heard and not cs_mi_followup_invitation_day3
+    call cs_day05_18
+    $ assert all(t in renpy.cs_corrected_seen for t in (u'Мику сыграла несколько тактов.',u'Ольга Дмитриевна открыла дверь почти сразу.',u'Вы немного рано.',u'Да что ж такое!'))
+    $ renpy.cs_corrected_audio_check=False
+    $ open(config.basedir+'/corrected_audio_PASS.txt','w').write('PASS: 7 + 6 + 7 isolated native knocks, piano and doors')
+    $ renpy.quit()
+
+testcase cs_corrected_audio:
+    pause 0.5
+    $ _test.force=True
+    $ _preferences.transitions=0
+    $ _preferences.text_cps=0
+    run Start('cs_qa_corrected_audio')
+    pause 0.1 until label cs_check_finished

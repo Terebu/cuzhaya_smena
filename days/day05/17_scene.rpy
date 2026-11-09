@@ -1,0 +1,229 @@
+# -*- coding: utf-8 -*-
+label cs_day05_17:
+    $ cs_d5_scene = 17
+    $ save_name = "Чужая смена — День 5: После ужина"
+    $ cs_bus_scene_enter(17)
+    $ cs_d5_room("bg int_dining_hall_sunset")
+    with Dissolve(0.7)
+    $ sunset_time()
+    $ persistent.sprite_time = "sunset"
+    cs_narrator "За ужином всё начиналось удивительно нормально."
+    cs_narrator "У раздачи спорили из-за порций."
+    cs_narrator "На соседнем столе кто-то разлил компот."
+    cs_narrator "Семёну досталась ложка с немного погнутой ручкой."
+    cs_narrator "Он посмотрел на неё."
+    cs_narrator "Потом на меня."
+    $ cs_d5_focus("sy")
+    with cs_sprite_change
+    cs_sy "Только ничего не говори."
+    cs_narrator "Я подняла руки."
+    $ cs_d5_focus("ls")
+    with cs_sprite_change
+    cs_ls "Я молчу."
+    cs_narrator "Он попытался выпрямить ложку о край стола."
+    $ cs_d5_focus("ls")
+    with cs_sprite_change
+    # cs_page_anchor: 92ea505eda2303132f5f
+    cs_ls "Хотя нет."
+    cs_ls "Смотри, не сломай исторический экспонат."
+    $ cs_d5_focus("sy")
+    with cs_sprite_change
+    cs_sy "Вот знал же."
+    cs_narrator "Даша протянула ему запасную ложку."
+    $ cs_d5_focus("da")
+    with cs_sprite_change
+    cs_da "Возьми нормальную."
+    $ cs_d5_focus("sy")
+    with cs_sprite_change
+    cs_sy "Спасибо."
+    cs_narrator "Я посмотрела на Дашу."
+    $ cs_d5_focus("ls")
+    with cs_sprite_change
+    cs_ls "Ты уничтожила целую драму."
+    $ cs_d5_focus("da")
+    with cs_sprite_change
+    # cs_page_anchor: 3e706c049dec3b2671a6
+    cs_da "Ничего."
+    cs_da "Переживёшь."
+    cs_narrator "Мы принялись за ужин."
+    cs_narrator "Несколько минут говорили о том, как прошёл день."
+    cs_narrator "Семён вспомнил, что перепутал фамилии в двух библиотечных карточках."
+    cs_narrator "Женя посмотрела на него поверх очков."
+    $ cs_d5_focus("mz")
+    with cs_sprite_change
+    cs_mz "Я заметила."
+    $ cs_d5_focus("sy")
+    with cs_sprite_change
+    cs_sy "И ничего не сказала?"
+    $ cs_d5_focus("mz")
+    with cs_sprite_change
+    cs_mz "Ты сам собирался исправить."
+    $ cs_d5_focus("sy")
+    with cs_sprite_change
+    cs_sy "Ну да."
+    $ cs_d5_focus("mz")
+    with cs_sprite_change
+    # cs_page_anchor: 5b7c26bc679082e899a1
+    cs_mz "Вот и исправим завтра."
+    cs_mz "Только не пытайся задним числом подписывать чужие формуляры."
+    cs_narrator "Семён кивнул."
+    cs_narrator "Я посмотрела на неё."
+    cs_narrator "Даже Женя сегодня была мягче обычного."
+    cs_narrator "Наверное, после всего случившегося обычные ошибки действительно перестали казаться серьёзной проблемой."
+    $ cs_d5_focus("da")
+    with cs_sprite_change
+    cs_da "А покажи свой рисунок кружки."
+    cs_narrator "Я подняла бровь."
+    $ cs_d5_focus("ls")
+    with cs_sprite_change
+    cs_ls "Ты серьёзно?"
+    $ cs_d5_focus("da")
+    with cs_sprite_change
+    cs_da "Конечно."
+    $ cs_d5_focus("ls")
+    with cs_sprite_change
+    # cs_page_anchor: 0a6fc9fb20bd000642b1
+    cs_ls "Хорошо."
+    cs_ls "Но предупреждаю: произведение ещё не прошло художественную экспертизу."
+    cs_narrator "Я достала листок."
+    cs_narrator "Тихонова посмотрела на рисунок."
+    $ cs_d5_focus("un")
+    with cs_sprite_change
+    cs_un "Теперь лучше."
+    $ cs_d5_focus("ls")
+    with cs_sprite_change
+    cs_ls "Благодаря консультанту."
+    $ cs_d5_focus("sy")
+    with cs_sprite_change
+    cs_sy "А что не так с кружкой?"
+    $ cs_d5_focus("ls")
+    with cs_sprite_change
+    # cs_page_anchor: 62d91f08c8c704a99e09
+    cs_ls "Ничего."
+    cs_ls "У неё сложная творческая биография."
+    cs_narrator "Он покачал головой."
+    $ cs_d5_focus("sy")
+    with cs_sprite_change
+    cs_sy "Ясно."
+    cs_narrator "Мы ещё немного поговорили."
+    cs_narrator "Даша рассказывала о музыкальном клубе."
+    cs_narrator "Тихонова — о книге, которую собиралась прочитать."
+    cs_narrator "Я слушала и иногда вставляла замечания."
+    cs_narrator "Всё было настолько привычно, что на несколько минут удалось забыть о предстоящем вечере."
+    if cs_d5_zhenya_address:
+        cs_narrator "Когда мы собирались уходить, Женя задержала меня."
+        $ cs_d5_focus("mz")
+        with cs_sprite_change
+        cs_mz "Лена, подожди."
+        cs_narrator "Я повернулась."
+        cs_narrator "Она протянула ещё один сложенный листок."
+        $ cs_d5_focus("ls")
+        with cs_sprite_change
+        cs_ls "Что это?"
+        $ cs_d5_focus("mz")
+        with cs_sprite_change
+        # cs_page_anchor: 57c86464abac55388447
+        cs_mz "К адресу."
+        cs_mz "На случай, если забудешь, о чём мы говорили."
+        cs_narrator "Я развернула бумагу."
+        cs_narrator "Там было написано:"
+        cs_narrator "«Ты обещала попробовать. Я согласилась. Не считай, что выдумала меня»."
+        cs_narrator "Я перечитала строки дважды."
+        cs_narrator "Потом посмотрела на Женю."
+        $ cs_d5_focus("ls")
+        with cs_sprite_change
+        cs_ls "Сохраню."
+        $ cs_d5_focus("mz")
+        with cs_sprite_change
+        cs_mz "Для этого и дала."
+        cs_narrator "Я осторожно сложила записку."
+        cs_narrator "На этот раз даже шутить не захотелось."
+        $ cs_d5_zhenya_personal_note = True
+    else:
+        cs_narrator "Женя подошла ко мне с аккуратно переписанным листом."
+        $ cs_d5_focus("mz")
+        with cs_sprite_change
+        # cs_page_anchor: d822665bab73388f519b
+        cs_mz "Держи."
+        cs_mz "Твоя копия рассказа об остановке."
+        cs_narrator "Я взяла бумагу."
+        $ cs_d5_focus("ls")
+        with cs_sprite_change
+        cs_ls "Спасибо."
+        $ cs_d5_focus("mz")
+        with cs_sprite_change
+        cs_mz "Только не потеряй."
+        $ cs_d5_focus("ls")
+        with cs_sprite_change
+        cs_ls "Сегодня постараюсь обойтись без этого достижения."
+        cs_narrator "Женя чуть улыбнулась."
+        $ cs_d5_zhenya_personal_note = False
+    $ cs_d5_room("bg ext_dining_hall_near_sunset")
+    cs_narrator "После ужина мы вышли из столовой."
+    cs_narrator "Солнце уже опускалось ниже."
+    cs_narrator "Между деревьями лежали длинные тени."
+    cs_narrator "Я посмотрела в сторону дальней дорожки."
+    cs_narrator "На мгновение мне показалось, что между стволами мелькнула красная полоса."
+    cs_narrator "Я остановилась."
+    $ cs_d5_focus("da")
+    with cs_sprite_change
+    cs_da "Что такое?"
+    $ cs_d5_focus("ls")
+    with cs_sprite_change
+    cs_ls "Показалось, автобус."
+    cs_narrator "Семён резко повернулся."
+    $ cs_d5_focus("sy")
+    with cs_sprite_change
+    cs_sy "Где?"
+    $ cs_pov_begin()
+    with cs_sprite_leave
+    cs_th "Я снова посмотрела на деревья."
+    cs_narrator "Ничего."
+    $ cs_d5_focus("ls")
+    with cs_sprite_change
+    # cs_page_anchor: c71b8055bedf4e49de50
+    cs_ls "Не уверена."
+    cs_ls "Возможно, просто свет."
+    $ cs_d5_focus("mz")
+    with cs_sprite_change
+    cs_mz "Тогда не будем делать выводов."
+    cs_narrator "Я кивнула."
+    $ cs_d5_room("cs_camp_path_sunset")
+    cs_narrator "Мы пошли дальше."
+    $ cs_d5_knocks(6)
+    $ cs_bus_cue('warning')
+    cs_narrator "Со стороны площади донёсся глухой удар."
+    cs_narrator "Потом ещё несколько."
+    cs_narrator "Я остановилась."
+    cs_narrator "Остальные тоже."
+    cs_narrator "Мы дождались конца."
+    cs_narrator "Шесть."
+    cs_narrator "Седьмого не было."
+    $ cs_d5_focus("sy")
+    with cs_sprite_change
+    cs_sy "И что теперь?"
+    cs_narrator "Я посмотрела в сторону площади."
+    $ cs_pov_begin()
+    with cs_sprite_leave
+    cs_th "Очень хотелось пойти проверить."
+    cs_narrator "Просто посмотреть."
+    cs_narrator "Убедиться, что там никого нет."
+    cs_narrator "Но я вспомнила утренний автобус."
+    cs_narrator "И библиотечную дверь."
+    $ cs_d5_focus("ls")
+    with cs_sprite_change
+    cs_ls "Идём к Ольге Дмитриевне."
+    $ cs_d5_focus("sy")
+    with cs_sprite_change
+    cs_sy "Даже не проверим?"
+    $ cs_d5_focus("ls")
+    with cs_sprite_change
+    cs_ls "Именно потому, что хочется проверить, лучше не надо."
+    cs_narrator "Даша взяла меня под руку."
+    $ cs_d5_focus("da")
+    with cs_sprite_change
+    cs_da "Пошли."
+    cs_narrator "Мы свернули к домикам."
+    cs_narrator "Я ещё некоторое время прислушивалась."
+    cs_narrator "Но с площади больше ничего не доносилось."
+    return

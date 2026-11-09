@@ -1,0 +1,319 @@
+# -*- coding: utf-8 -*-
+label cs_day05_03:
+    $ cs_d5_scene = 3
+    $ save_name = "Чужая смена — День 5: Место у окна"
+    $ cs_bus_scene_enter(3)
+    $ cs_d5_room("bg int_dining_hall_people_day")
+    with Dissolve(0.7)
+    $ cs_d5_costume("pioneer")
+    $ cs_rev_music(cs_day_music_daily)
+    cs_narrator "В столовой уже стояла очередь."
+    # cs_page_anchor: f81bfb63554c540c8777
+    cs_narrator "Кто-то пытался пробраться к раздаче без подноса."
+    cs_narrator "Двое пионеров спорили, кому достанется последний кусок хлеба с более румяной корочкой."
+    cs_narrator "Я огляделась."
+    cs_narrator "Ничего удивительного."
+    # cs_page_anchor: c105a96620a5f03081d7
+    cs_narrator "Советский пионерский лагерь."
+    cs_narrator "Обычный завтрак."
+    cs_narrator "Обычные проблемы."
+    cs_narrator "Если бы не сны, я бы даже решила, что начинаю привыкать к этой жизни."
+    cs_narrator "Даша забрала у меня поднос, пока я пыталась освободить зацепившийся за дверную ручку рукав."
+    $ cs_d5_focus("da")
+    with cs_sprite_change
+    cs_da "Ты сегодня особенно ловкая."
+    $ cs_d5_focus("ls")
+    with cs_sprite_change
+    cs_ls "Берегу лучшие качества на вечер."
+    $ cs_d5_focus("da")
+    with cs_sprite_change
+    cs_da "Надеюсь, хотя бы поешь без происшествий."
+    $ cs_d5_focus("ls")
+    with cs_sprite_change
+    # cs_page_anchor: 4759d77a8f5cc3a34442
+    cs_ls "Не обещаю."
+    cs_ls "Здесь очень опасные ложки."
+    cs_narrator "На раздаче нам достались каша, хлеб и чай."
+    cs_narrator "Семён оглядел зал."
+    $ cs_d5_focus("sy")
+    with cs_sprite_change
+    cs_sy "Куда сядем?"
+    cs_narrator "Я заметила знакомую тёмноволосую девушку в очках."
+    cs_narrator "Женя сидела возле окна и внимательно читала какой-то листок."
+    $ cs_d5_focus("ls")
+    with cs_sprite_change
+    # cs_page_anchor: a198e640ce4c15c11cbf
+    cs_ls "Давайте к Жене."
+    cs_ls "Если она нас ещё терпит."
+    $ cs_d5_focus("da")
+    with cs_sprite_change
+    cs_da "А если нет?"
+    $ cs_d5_focus("ls")
+    with cs_sprite_change
+    # cs_page_anchor: 9f8b19a8e55dc83026a6
+    cs_ls "Выставит."
+    cs_ls "Тут она опытная."
+    cs_narrator "Мы подошли к столу."
+    cs_narrator "Женя заметила нас, перевернула листок и посмотрела поверх очков."
+    $ cs_d5_focus("mz")
+    with cs_sprite_change
+    cs_mz "Только не говорите, что уже успели что-нибудь натворить."
+    $ cs_d5_focus("ls")
+    with cs_sprite_change
+    cs_ls "Доброе утро и тебе."
+    $ cs_d5_focus("mz")
+    with cs_sprite_change
+    # cs_page_anchor: c3b453e44012a7fc3258
+    cs_mz "Доброе."
+    cs_mz "Садитесь, пока не начали рассказывать стоя."
+    cs_narrator "Я поставила поднос."
+    $ cs_d5_focus("ls")
+    with cs_sprite_change
+    cs_ls "А я приготовила вступительную речь."
+    $ cs_d5_focus("mz")
+    with cs_sprite_change
+    cs_mz "Переживу без неё."
+    cs_narrator "Семён устроился напротив."
+    cs_narrator "Даша села рядом со мной."
+    cs_narrator "Женя дождалась, пока все возьмут ложки."
+    $ cs_d5_focus("mz")
+    with cs_sprite_change
+    cs_mz "Итак?"
+    $ cs_d5_focus("sy")
+    with cs_sprite_change
+    cs_sy "Мне сегодня снился автобус."
+    cs_narrator "Он рассказал всё ещё раз — теперь короче и увереннее."
+    cs_narrator "Женя слушала, не перебивая."
+    cs_narrator "Когда Семён произнёс слова «Остался один», она отложила ложку."
+    $ cs_d5_focus("mz")
+    with cs_sprite_change
+    cs_mz "У меня тоже были странные сны."
+    cs_narrator "Она перевернула листок."
+    cs_narrator "Часть записей я узнала: вчера Женя уже показывала мне эту страницу."
+    cs_narrator "«Она пришла раньше»."
+    cs_narrator "«Не буди вторую»."
+    cs_narrator "Но ниже появилась новая строка, ещё не успевшая выцвести."
+    cs_narrator "«Автобус у ворот. Двери открыты. Никто не выходит»."
+    $ cs_d5_focus("mz")
+    with cs_sprite_change
+    # cs_page_anchor: 1f51537db449e7e7a5d3
+    cs_mz "Это сегодня."
+    cs_mz "Записала сразу, как проснулась."
+    cs_mz "Как договаривались."
+    cs_narrator "Я посмотрела на её почерк."
+    cs_narrator "Даже собственные кошмары Женя умудрялась документировать аккуратнее, чем я обычные рабочие заметки."
+    $ cs_d5_focus("ls")
+    with cs_sprite_change
+    # cs_page_anchor: 8b95e6b566b7ec1b1926
+    cs_ls "После завтрака собираемся к Ольге Дмитриевне."
+    cs_ls "Пойдёшь?"
+    $ cs_d5_focus("mz")
+    with cs_sprite_change
+    # cs_page_anchor: ea879ef4ad6957816c66
+    cs_mz "Пойду."
+    cs_mz "Хочу услышать, что она помнит, прежде чем мы все начнём друг другу подсказывать."
+    cs_mz "И папку из библиотеки по дороге захвачу."
+    $ cs_d5_focus("ls")
+    with cs_sprite_change
+    cs_ls "Разумно."
+    $ cs_d5_focus("mz")
+    with cs_sprite_change
+    cs_mz "Удивлена?"
+    $ cs_d5_focus("ls")
+    with cs_sprite_change
+    # cs_page_anchor: 4f42050cc0580bc15bc5
+    cs_ls "Скорее приятно поражена."
+    cs_ls "Сегодня у нас уже два разумных предложения подряд."
+    $ cs_d5_focus("mz")
+    with cs_sprite_change
+    cs_mz "Твоё я пока не считала."
+    cs_narrator "Я засмеялась."
+    cs_narrator "Потом мы некоторое время спокойно ели."
+    cs_narrator "Мне нравилось сидеть возле окна."
+    # cs_page_anchor: 93e65fbe9f38c6568169
+    cs_narrator "Снаружи было видно, как пионеры спешат по своим делам."
+    cs_narrator "Кто-то нёс мяч, кто-то догонял товарища."
+    cs_narrator "Всё выглядело до обидного нормально."
+    cs_narrator "И именно поэтому хотелось, чтобы завтрак продолжался подольше."
+    cs_narrator "Я посмотрела на Женю."
+    # cs_page_anchor: ab6540693969edda742f
+    cs_narrator "Вчера мы довольно много разговаривали."
+    cs_narrator "Она уже не прогоняла меня из библиотеки при первом появлении, а иногда даже позволяла себе отвечать на мои шутки."
+    cs_narrator "В другой ситуации я бы просто порадовалась."
+    cs_narrator "Но после разговора с Семёном в голову пришла мысль: если мы действительно вернёмся домой, что будет с людьми, которых я здесь встретила?"
+    cs_narrator "Семён из своего времени."
+    cs_narrator "Я и Даша — из 2026 года."
+    cs_narrator "А Женя…"
+    cs_narrator "Интересно, получится ли найти её потом?"
+    menu:
+        "Спросить Женю, можно ли будет найти её после возвращения":
+            $ cs_d5_choose(2, 0)
+            $ cs_d5_focus("ls")
+            with cs_sprite_change
+            cs_ls "Жень, можно один вопрос?"
+            $ cs_d5_focus("mz")
+            with cs_sprite_change
+            cs_mz "Ты всё равно задашь."
+            $ cs_d5_focus("ls")
+            with cs_sprite_change
+            cs_ls "Справедливо."
+            cs_narrator "Я отложила ложку."
+            $ cs_d5_focus("ls")
+            with cs_sprite_change
+            cs_ls "Если я вернусь домой, ты не будешь против, если я попробую тебя найти?"
+            cs_narrator "Женя посмотрела на меня внимательнее."
+            $ cs_d5_focus("mz")
+            with cs_sprite_change
+            cs_mz "В каком смысле найти?"
+            $ cs_d5_focus("ls")
+            with cs_sprite_change
+            # cs_page_anchor: 737bf118b57c96445f27
+            cs_ls "В самом обычном."
+            cs_ls "Приехать, поздороваться."
+            cs_ls "Узнать, как у тебя дела."
+            $ cs_d5_focus("mz")
+            with cs_sprite_change
+            cs_mz "Ты понимаешь, сколько лет пройдёт?"
+            $ cs_d5_focus("ls")
+            with cs_sprite_change
+            cs_ls "Понимаю."
+            $ cs_d5_focus("mz")
+            with cs_sprite_change
+            cs_mz "В 2026 году я буду уже совсем другой."
+            $ cs_d5_focus("ls")
+            with cs_sprite_change
+            # cs_page_anchor: 25d413e5565a33bacdc8
+            cs_ls "Я в пять утра и после завтрака тоже два разных человека."
+            cs_ls "Ничего, познакомимся заново."
+            cs_narrator "Женя чуть улыбнулась, но быстро стала серьёзной."
+            $ cs_d5_focus("mz")
+            with cs_sprite_change
+            cs_mz "А если я не захочу?"
+            $ cs_d5_focus("ls")
+            with cs_sprite_change
+            # cs_page_anchor: 4c5eb2505c00e46c3863
+            cs_ls "Тогда не приеду."
+            cs_ls "Я же спрашиваю."
+            cs_narrator "Она опустила взгляд к чашке."
+            $ cs_d5_focus("mz")
+            with cs_sprite_change
+            # cs_page_anchor: ae6243f9b90ee4f40370
+            cs_mz "Давай поговорим после завтрака."
+            cs_mz "Не здесь."
+            $ cs_d5_focus("ls")
+            with cs_sprite_change
+            cs_ls "Хорошо."
+            $ cs_d5_focus("mz")
+            with cs_sprite_change
+            cs_mz "И без твоих обычных представлений."
+            $ cs_d5_focus("ls")
+            with cs_sprite_change
+            cs_ls "Постараюсь."
+            $ cs_d5_focus("mz")
+            with cs_sprite_change
+            cs_mz "Уже боюсь."
+        "Пока не поднимать личную тему":
+            $ cs_d5_choose(2, 1)
+            cs_narrator "Я решила пока оставить разговор о будущем."
+            cs_narrator "Не самое подходящее место — столовая, очередь за добавкой и несколько любопытных пионеров за соседним столом."
+            $ cs_d5_focus("ls")
+            with cs_sprite_change
+            cs_ls "Жень, библиотека сегодня после обеда открыта?"
+            $ cs_d5_focus("mz")
+            with cs_sprite_change
+            # cs_page_anchor: ab667115c9b0a2653a5a
+            cs_mz "Да."
+            cs_mz "А что?"
+            $ cs_d5_focus("ls")
+            with cs_sprite_change
+            cs_ls "Понадобится место, где можно спокойно разобрать наши записи."
+            $ cs_d5_focus("mz")
+            with cs_sprite_change
+            # cs_page_anchor: 551af25afa70096df90a
+            cs_mz "Приходите."
+            cs_mz "Только ничего не растеряйте по дороге."
+            $ cs_d5_focus("ls")
+            with cs_sprite_change
+            cs_ls "Удивительно, насколько низко ты оцениваешь мои организаторские способности."
+            $ cs_d5_focus("mz")
+            with cs_sprite_change
+            cs_mz "После вчерашнего?"
+            $ cs_d5_focus("ls")
+            with cs_sprite_change
+            cs_ls "Ладно, вопрос снимается."
+    cs_narrator "Семён наконец доел кашу."
+    $ cs_d5_focus("sy")
+    with cs_sprite_change
+    cs_sy "Так что, идём к вожатой?"
+    $ cs_d5_focus("da")
+    with cs_sprite_change
+    cs_da "Давайте сначала чай допьём."
+    $ cs_d5_focus("ls")
+    with cs_sprite_change
+    # cs_page_anchor: f56b59dfa6c89826aec8
+    cs_ls "Вот!"
+    cs_ls "Хоть один человек понимает, что расследования на пустой желудок запрещены."
+    $ cs_d5_focus("mz")
+    with cs_sprite_change
+    cs_mz "Ты пять минут назад уже собиралась."
+    $ cs_d5_focus("ls")
+    with cs_sprite_change
+    cs_ls "Это было до чая."
+    cs_narrator "Женя покачала головой."
+    $ cs_d5_room("bg ext_dining_hall_near_day")
+    cs_narrator "Мы закончили завтрак, отнесли подносы и вышли наружу."
+    cs_narrator "У двери я заметила Славю."
+    cs_narrator "Она несла какие-то бумаги и, судя по выражению лица, уже успела получить несколько поручений."
+    $ cs_d5_focus("ls")
+    with cs_sprite_change
+    # cs_page_anchor: 36efb04166e493461da1
+    cs_ls "Славя, доброе утро."
+    cs_ls "Ольга Дмитриевна у себя?"
+    $ cs_d5_focus("sl")
+    with cs_sprite_change
+    # cs_page_anchor: 5d8630b07ff869090051
+    cs_sl "Да, кажется."
+    cs_sl "Она сегодня разбирает ведомости."
+    cs_sl "Только предупредите, что пришли, а то у неё дел много."
+    $ cs_d5_focus("ls")
+    with cs_sprite_change
+    # cs_page_anchor: d0544000e79d9cf37408
+    cs_ls "Обязательно."
+    cs_ls "Вломимся максимально вежливо."
+    cs_narrator "Славя улыбнулась."
+    $ cs_d5_focus("sl")
+    with cs_sprite_change
+    cs_sl "У тебя интересное понимание вежливости."
+    $ cs_d5_focus("ls")
+    with cs_sprite_change
+    cs_ls "Я над ним работаю."
+    if cs_sl_day4_notice_offer:
+        cs_narrator "Славя приподняла верхний лист."
+        $ cs_d5_focus("sl")
+        with cs_sprite_change
+        cs_sl "Кстати, объявление я уже сама дописала."
+        cs_narrator "Я вспомнила вчерашнее «можно завтра утром?»."
+        $ cs_d5_focus("ls")
+        with cs_sprite_change
+        # cs_page_anchor: 1747ecba49d1afe2521c
+        cs_ls "Прости."
+        cs_ls "Утро пошло не по плану."
+        $ cs_d5_focus("sl")
+        with cs_sprite_change
+        cs_sl "У тебя все утра так идут?"
+        $ cs_d5_focus("ls")
+        with cs_sprite_change
+        cs_ls "Пока без исключений."
+        $ cs_d5_focus("sl")
+        with cs_sprite_change
+        # cs_page_anchor: b52c11676ef6d4a000d5
+        cs_sl "Ничего."
+        cs_sl "Буквы, правда, вышли не такие ровные, как ты обещала."
+        $ cs_sl_day4_notice_offer = False
+        $ cs_d5_notice_completed = True
+    $ cs_d5_documents_location = "zhenya"
+    cs_narrator "Мы направились к домику вожатой."
+    cs_narrator "Я уже успела заметить, что лагерь постепенно перестал казаться чужим."
+    cs_narrator "Теперь знакомые люди встречались почти на каждой дорожке."
+    cs_narrator "Оставалось надеяться, что хотя бы некоторые здешние загадки скоро станут такими же понятными, как расписание завтрака."
+    return

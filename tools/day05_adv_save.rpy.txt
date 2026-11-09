@@ -1,0 +1,83 @@
+init 126 python:
+    renpy.cs_adv_auto_menu=False
+    cs_adv_save_previous_args=config.menu_arguments_callback
+    def cs_adv_first_menu(items,*args,**kwargs):
+        choices=[v for label,v in items if v is not None]
+        value=choices[0]
+        return value() if callable(value) else value
+    def cs_adv_save_menu_args(*args,**kwargs):
+        if cs_adv_save_previous_args:args,kwargs=cs_adv_save_previous_args(*args,**kwargs)
+        if renpy.cs_adv_auto_menu:store.menu=cs_adv_first_menu
+        return args,kwargs
+    config.menu_arguments_callback=cs_adv_save_menu_args
+    class CSAdvSaveAt(Action):
+        def get_sensitive(self):
+            if renpy.cs_adv_probe=='awake':return cs_d5_scene==1 and cs_adv_text().startswith(u'Я проснулась от полоски солнца')
+            return cs_d5_scene==2 and cs_adv_text().startswith(u'Сначала он спросил, не торопимся ли мы.')
+        def __call__(self):pass
+    class CSAdvLoadAt(Action):
+        def get_sensitive(self):return cs_d5_scene==(1 if renpy.cs_adv_probe=='awake' else 2)
+        def __call__(self):pass
+
+label cs_qa_adv_old_save:
+    $ cs_reset_state()
+    $ cs_active=cs_day03_started=cs_day04_done=cs_darya_known=cs_olga_seen=True
+    $ cs_friend_da=cs_friend_se=cs_friend_mz=3
+    $ set_mode_adv()
+    cs_narrator "Проверка сохранений до разделения прямой речи и действий."
+    cs_narrator "Накопленная дружба уже задана."
+    jump cs_day05
+
+testcase cs_adv_save_awake:
+    pause 0.5
+    $ renpy.cs_adv_probe='awake'
+    $ renpy.cs_adv_auto_menu=True
+    $ _preferences.text_cps=0
+    $ _preferences.transitions=0
+    $ _test.force=True
+    run Start('cs_qa_adv_old_save')
+    click until run CSAdvSaveAt()
+    $ renpy.take_screenshot()
+    $ renpy.save('adv_previous_awake')
+    run Quit(confirm=False)
+
+testcase cs_adv_save_mid:
+    pause 0.5
+    $ renpy.cs_adv_probe='mid'
+    $ renpy.cs_adv_auto_menu=True
+    $ _preferences.text_cps=0
+    $ _preferences.transitions=0
+    $ _test.force=True
+    run Start('cs_qa_adv_old_save')
+    click until run CSAdvSaveAt()
+    assert cs_friend_da==4 and cs_friend_se==cs_friend_mz==3
+    $ renpy.take_screenshot()
+    $ renpy.save('adv_previous_mid')
+    run Quit(confirm=False)
+
+testcase cs_adv_load_awake:
+    pause 0.5
+    $ renpy.cs_adv_probe='awake'
+    $ _preferences.transitions=0
+    $ _test.force=True
+    run Function(renpy.load,'adv_previous_awake')
+    click until run CSAdvLoadAt()
+    pause 0.2
+    assert cs_friend_da==cs_friend_mz==cs_friend_se==3
+    assert not renpy.showing('cs_darya')
+    $ renpy.screenshot(config.basedir+'/adv_old_awake_loaded.png')
+    $ open(config.basedir+'/adv_old_awake_PASS.txt','w').write('PASS')
+    run Quit(confirm=False)
+
+testcase cs_adv_load_mid:
+    pause 0.5
+    $ renpy.cs_adv_probe='mid'
+    $ _preferences.transitions=0
+    $ _test.force=True
+    run Function(renpy.load,'adv_previous_mid')
+    click until run CSAdvLoadAt()
+    pause 0.2
+    assert cs_friend_da==4 and cs_friend_se==cs_friend_mz==3
+    $ renpy.screenshot(config.basedir+'/adv_old_mid_loaded.png')
+    $ open(config.basedir+'/adv_old_mid_PASS.txt','w').write('PASS')
+    run Quit(confirm=False)

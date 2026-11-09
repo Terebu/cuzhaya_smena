@@ -28,19 +28,7 @@ label cs_day04:
 
 label cs_day05_pending:
     label cs_check_day04_complete:
-    call screen cs_day05_wait_screen
-    jump cs_day05_pending
+    jump cs_day05
 
 screen cs_day05_wait_screen():
-    modal True
-    frame:
-        align (0.5,0.5)
-        padding (32,24)
-        background Solid("#142821ed")
-        vbox:
-            spacing 16
-            text "Четвёртый день завершён" size 32
-            text "Продолжение — в пятом дне." size 24
-            textbutton "Сохранить игру" action ShowMenu("save")
-            textbutton "Загрузить игру" action ShowMenu("load")
-            textbutton "Главное меню" action [Function(cs_restore_audio), MainMenu()]
+    timer 0.1 action Jump("cs_day05")

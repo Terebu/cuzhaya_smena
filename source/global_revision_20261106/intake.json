@@ -1,0 +1,32 @@
+{
+  "day04_first": {
+    "source": "C:\\Users\\Admin\\.codex\\attachments\\fd23a5ba-2f89-4c9e-858c-31eef7a47e6b\\Вставленный текст.txt",
+    "sha256": "effa53427306dbde1998d0f89fa26dbd4e7f701b21c3ea9bf9f882a88e77d9ac",
+    "paragraphs": 1398
+  },
+  "prologue_day01": {
+    "source": "C:\\Users\\Admin\\.codex\\attachments\\3ac6569d-6506-4fa1-9888-34220d44234d\\Вставленный текст.txt",
+    "sha256": "c4981fcc3ceccf0da2be6642e5e6e5259a1efa2c8a746bb424a470e92e0ae0e3",
+    "paragraphs": 1019
+  },
+  "day02": {
+    "source": "C:\\Users\\Admin\\.codex\\attachments\\d66a56ef-8709-4022-b947-9c7a5d0c6979\\Вставленный текст.txt",
+    "sha256": "793435eb61ef6d89d3b0025f01a53964d48e0d3bebd3aef3019339107db553e8",
+    "paragraphs": 1376
+  },
+  "day03": {
+    "source": "C:\\Users\\Admin\\.codex\\attachments\\176a3dcf-35fe-4e97-98e5-9bda02baadd3\\Вставленный текст.txt",
+    "sha256": "83ce4a1bcb75c883b166b84961a900d1e1943e86c09346db1feab308a6c369c8",
+    "paragraphs": 875
+  },
+  "day04": {
+    "source": "C:\\Users\\Admin\\.codex\\attachments\\71fed261-6649-4a74-871f-5fc0dbe0e0c8\\Вставленный текст.txt",
+    "sha256": "effa53427306dbde1998d0f89fa26dbd4e7f701b21c3ea9bf9f882a88e77d9ac",
+    "paragraphs": 1398
+  },
+  "staging_rules": {
+    "source": "C:\\Users\\Admin\\.codex\\attachments\\6cbd6287-c8bd-41b3-a034-9295cac8a5a7\\Вставленный текст.txt",
+    "sha256": "88fcf0968161087bc3e2912e24ba025711f3f021e7e053c63b51024d966e32c7",
+    "paragraphs": 396
+  }
+}

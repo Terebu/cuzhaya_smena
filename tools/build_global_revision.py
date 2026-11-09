@@ -1,0 +1,169 @@
+"""Append-only narrative edition; retain every published source/label contract."""
+from pathlib import Path
+import json,re,hashlib
+from global_revision_tree import tree
+from global_text_paging import page_source, compatibility
+from global_revision_staging import staging
+ROOT=Path(__file__).resolve().parent.parent
+OUT=ROOT/'days/revision20261106'
+OUT.mkdir(exist_ok=True)
+q=lambda s:json.dumps(s,ensure_ascii=False)
+NAMES={'Лена Соколова':'ls','Дарья':'da','Даша':'da','Семён':'sy','Женя':'mz','Лена Тихонова':'un','Славя':'sl','Ольга Дмитриевна':'mt','Мику':'mi','Алиса':'dv','Виола':'vi','Ульяна':'us','Шурик':'sh','Электроник':'el','Неизвестная девушка':'unknown','Неизвестный голос':'unknown','Голос':'unknown','???':'unknown','Женщина из администрации':'rev_admin','Водитель':'rev_driver','Пионер':'rev_pioneer','Повариха':'rev_cook'}
+TAGS={'da':'cs_darya','sy':'cs_semen','mz':'cs_zhenya','un':'un','sl':'sl','mt':'mt','mi':'mi','dv':'dv','vi':'cs','us':'us','sh':'sh','el':'el'}
+AWARDS={
+ '1:1:cs_friend_un':'cs_part09_choice','1:2:cs_friend_mz':'cs_part10_choice',
+ '2:1:cs_friend_mi':'cs_day02_miku_listened','2:2:cs_friend_sl':'cs_sl_day2_awarded','2:3:cs_friend_viola':'cs_viola_day2_awarded','2:4:cs_friend_se':'cs_se_day2_awarded','2:5:cs_friend_se':'cs_se_road_day2_awarded','2:6:cs_friend_viola':'cs_viola_second_day2_awarded','2:7:cs_friend_mz':'cs_mz_square_day2_awarded',
+ '3:1:cs_friend_se':'cs_se_day3_morning_awarded','3:2:cs_friend_mz':'cs_mz_day3_book_awarded','3:3:cs_friend_viola':'cs_viola_day3_awarded','3:4:cs_friend_sl':'cs_sl_day3_awarded','3:5:cs_friend_mi':'cs_mi_day3_awarded','3:5:cs_friend_dv':'cs_dv_day3_awarded','3:6:cs_friend_un':'cs_un_day3_lunch_awarded','3:7:cs_friend_mz':'cs_mz_book_talk_awarded_day3','3:8:cs_friend_se':'cs_se_day3_square_awarded','3:9:cs_friend_mz':'cs_mz_evening_help_awarded','3:10:cs_friend_sl':'cs_sl_evening_help_awarded','3:11:cs_friend_da':'cs_da_day3_night_trust_awarded','3:12:cs_friend_da':'cs_da_shared_bed_awarded_day3',
+ '4:2:cs_friend_se':'cs_d4_choice_04_done','4:4:cs_friend_viola':'cs_d4_choice_07_done','4:5:cs_friend_dv':'cs_d4_choice_08_done','4:6:cs_friend_mz':'cs_d4_choice_09_done','4:7:cs_friend_da':'cs_d4_choice_12_done',
+}
+ALL_FLAGS=set()
+EVIDENCE={}
+
+def narration_chunks(s):
+    # Keep wording and order; limit long narration to ordinary ADV window sizes.
+    pieces=re.split(r'(?<=[.!?…])\s+(?=[А-ЯЁA-Z«])',s)
+    result=[];current=''
+    for part in pieces:
+        if current and len(current)+len(part)>250:result.append(current);current=part
+        else:current=(current+' '+part).strip()
+    if current:result.append(current)
+    # A quotation split across windows: by Russian convention each continued
+    # part reopens with «, and only the last one closes it.
+    opened=0
+    for n,part in enumerate(result):
+        if opened>0 and not part.startswith('«'):result[n]='«'+part
+        opened+=part.count('«')-part.count('»')
+    return result
+
+def build(name):
+    P,B,M,art,end=tree(ROOT,name)
+    day={'prologue_day01':1,'day02':2,'day03':3,'day04':4}[name]
+    hooks,headers,special=staging(name,P)
+    dialogue={}
+    for i in sorted(art):
+        match=re.match(r'^([^:]+):\s*—\s*(.+)$',P[i])
+        if match:
+            assert match[1] in NAMES,(name,i,match[1])
+            dialogue[i]=(NAMES[match[1]],match[2])
+    actions={}
+    # Only authored instructions containing actual assignments become state.
+    # Explanatory comparisons (==), examples and prefaces are excluded.
+    for i,s in enumerate(P[:end]):
+        if not s.startswith('[') or s.startswith(('[Условие','[Иначе','[Доступен')):continue
+        found=re.findall(r'\b(cs_\w+)\s*(\+=|(?<![=<>!])=(?!=))\s*(True|False|None|-?\d+|"[^"]*"|cs_\w+)',s)
+        for var,op,value in found:
+            if var=='cs_da_waiting_outside_library_day':var,value='cs_da_waiting_outside_library_day3','True'
+            if name=='prologue_day01' and i==674 and var=='cs_un_name_known':continue
+            ALL_FLAGS.add(var)
+            if op=='+=':
+                owners=[(n,option) for start,(stop,n,options) in M.items() for option,(_,lo,hi) in enumerate(options) if lo<=i<hi]
+                assert len(owners)==1,(name,i,owners)
+                number,option=owners[0]
+                actions.setdefault(i,[]).append('$ cs_rev_award(%s,%s,%s)'%(q('%d:%d:%s'%(day,number,var)),q(var),value))
+            elif var.endswith('_before_choice') or 'friend_on_arrival' in var or var=='cs_sl_friend_before_evening_choice':
+                actions.setdefault(i,[]).append('$ cs_rev_snapshot(%s,%s)'%(q(var),q(value)))
+            else:actions.setdefault(i,[]).append('$ '+var+' = '+value)
+    for i,lines in special.items():actions.setdefault(i,[]).extend(lines)
+    emitted=[];spoken=[]
+    def emit(lo,hi,indent='    '):
+        result=[];i=lo
+        while i<hi:
+            if i in B:
+                stop,parts=B[i]
+                for n,(condition,a,b) in enumerate(parts):
+                    result.append(indent+('else:' if condition is None else ('if ' if n==0 else 'elif ')+condition+':'))
+                    block=emit(a,b,indent+'    ');result+=block or [indent+'    pass']
+                i=stop;continue
+            if i in M:
+                stop,number,options=M[i];key='%d:%d'%(day,number)
+                def option_body(option,a,b,level):
+                    body=[level+'$ cs_rev_choice(%d,%d,%d)'%(day,number,option)]
+                    body+=emit(a,b,level)
+                    body.append(level+'$ cs_rev_finish_choice(%d,%d)'%(day,number))
+                    return body
+                # A migrated save follows its recorded branch; no second award.
+                result += [indent+'if '+q(key)+' in cs_rev_choices:']
+                for option,(_,a,b) in enumerate(options):
+                    result.append(indent+'    '+('if cs_rev_choices['+q(key)+']==0:' if option==0 else 'else:'))
+                    result+=option_body(option,a,b,indent+'        ')
+                result += [indent+'else:',indent+'    menu:']
+                for option,(title,a,b) in enumerate(options):
+                    label=re.sub(r'^[АБ]\.\s*','',P[title]).strip('«» .')
+                    result.append(indent+'        '+q(label)+':')
+                    # Replay emitted content without recording duplicate source IDs.
+                    saved=len(emitted);saved_s=len(spoken)
+                    result+=option_body(option,a,b,indent+'            ')
+                    del emitted[saved:];del spoken[saved_s:]
+                i=stop;continue
+            for line in hooks.get(i,[]):result.append(indent+line)
+            for line in actions.get(i,[]):result.append(indent+line)
+            if i not in art:i+=1;continue
+            emitted.append(i)
+            text=P[i]
+            if name=='prologue_day01' and i==101:
+                # Restore the existing gallery while preserving the edited prose.
+                pieces=re.split(r'(?<=\.)\s+',text)
+                photos=['cs_instagram_studio','cs_instagram_crush','cs_instagram_evening','cs_instagram_daily']
+                for n,piece in enumerate(pieces):
+                    if n<len(photos):result.append(indent+'show screen cs_instagram_post('+q(photos[n])+')')
+                    result.append(indent+'cs_narrator '+q(piece))
+                i+=1;continue
+            if i in dialogue:
+                who,text=dialogue[i];spoken.append(i)
+                if re.search(r'[ぁ-ゟ゠-ヿ一-龯]',text):text='{font=[cs_japanese_font]}'+text+'{/font}'
+                result += [indent+'$ cs_rev_focus('+q(who)+')',indent+'with cs_sprite_change',indent+('cs_d4_unknown_girl' if who=='unknown' else 'cs_'+who)+' '+q(text)]
+            else:
+                if day==2:
+                    text=re.sub(r'\b(Даша|Даши|Даше|Дашу|Дашей)\b',lambda m:{'Даша':'Дарья','Даши':'Дарьи','Даше':'Дарье','Дашу':'Дарью','Дашей':'Дарьей'}[m[0]],text)
+                chunks=narration_chunks(text)
+                for chunk in chunks:result.append(indent+('cs_th ' if name=='day02' and i in (258,261,263,266) else 'cs_narrator ')+q(chunk))
+            i+=1
+        return result
+    outputs=[]
+    for d,num,title,lo,hi,bg,time,outfit in headers:
+        cast=sorted({TAGS[w] for i,(w,t) in dialogue.items() if lo<=i<hi and w in TAGS})
+        if name=='day04' and num==4:cast=[tag for tag in cast if tag!='cs_semen']
+        if outfit=='winter':cast=['cs_dasha_winter' if x=='cs_darya' else x for x in cast]
+        label='cs_rev_p%02d'%num if d==0 else 'cs_rev_d%d_%02d'%(d,num)
+        lines=['label '+label+':','    $ cs_rev_begin(%d,%d,%s)'%(d,num,repr(cast)),
+               '    $ save_name = '+q('Чужая смена — '+('Пролог' if d==0 else 'День %d'%d)+': '+title)]
+        if time:lines.append('    $ cs_rev_time('+q(time)+')')
+        if outfit:lines.append('    $ cs_rev_costume('+q(outfit)+')')
+        if bg:lines.append('    $ cs_rev_room('+q(bg)+')')
+        lines+=emit(lo,hi)+['    return','']
+        outputs.extend(lines)
+    assert set(emitted)==art, (name,'paragraph coverage',sorted(art-set(emitted)),sorted(set(emitted)-art))
+    assert len(emitted)==len(set(emitted)),(name,'duplicated paragraphs')
+    path=OUT/(name+'.rpy');path.write_text('# -*- coding: utf-8 -*-\n'+'\n'.join(outputs),encoding='utf-8')
+    page_source(ROOT,path)
+    EVIDENCE[name]=dict(paragraphs=len(art),dialogues=len(dialogue),menus=len(M),scenes=len(headers),source_ids=sorted(art))
+    return headers
+
+def main():
+    from global_revision_compat import write_compat
+    groups={name:build(name) for name in ('prologue_day01','day02','day03','day04')}
+    old={}
+    for p in list(ROOT.glob('*.rpy'))+list((ROOT/'days').rglob('*.rpy')):
+        if p==ROOT/'revision_staging.rpy':continue
+        for var in re.findall(r'^default (cs_\w+)\s*=',p.read_text(encoding='utf-8-sig'),re.M):old[var]=True
+    defaults={'cs_rev_active':False,'cs_rev_day':0,'cs_rev_scene':0,'cs_rev_next_scene':1,'cs_rev_resume_day':-1,'cs_rev_background':None,'cs_rev_cast':[],'cs_rev_allowed':[],'cs_rev_outfit':'pioneer','cs_rev_choices':{},'cs_rev_awards':{},'cs_rev_previous_awards':{},'cs_rev_offscreen_once':False,'cs_rev_darya_offscreen':False,'cs_rev_viola_before':None}
+    for flag in ALL_FLAGS:
+        if flag not in old:defaults[flag]=None if 'friend_' in flag and ('before' in flag or 'arrival' in flag) else False
+    head=''.join('default %s = %r\n'%(k,v) for k,v in sorted(defaults.items()))
+    head+='init -9 python:\n    cs_state_defaults.update('+', '.join('%s=%r'%(k,v) for k,v in sorted(defaults.items()))+')\n'
+    head+='init 29 python:\n    cs_rev_award_guards = '+repr(AWARDS)+'\n'
+    (ROOT/'revision_staging.rpy').write_text('# -*- coding: utf-8 -*-\n'+head+'\n'+(ROOT/'tools/global_revision_runtime.rpy.txt').read_text(encoding='utf-8'),encoding='utf-8')
+    (ROOT/'bus_scene_audio.rpy').write_text((ROOT/'tools/global_bus_audio.rpy.txt').read_text(encoding='utf-8'),encoding='utf-8')
+    (ROOT/'new_day05_assets.rpy').write_text((ROOT/'tools/global_day05_assets.rpy.txt').read_text(encoding='utf-8'),encoding='utf-8')
+    (ROOT/'opening_credits.rpy').write_text((ROOT/'tools/global_opening_credits.rpy.txt').read_text(encoding='utf-8'),encoding='utf-8')
+    write_compat(ROOT,groups)
+    # Add the new background family to the existing location audio owner.
+    p=ROOT/'day03_location_audio.rpy';s=p.read_text(encoding='utf-8')
+    if '"cs_bus410_"' not in s:s=s.replace('"cs_library_exterior_")):', '"cs_library_exterior_", "cs_bus410_")):')
+    s=s.replace('renpy.music.set_volume(0.16 if target else 0.0, channel="ambience", delay=0.5)', 'renpy.music.set_volume(cs_bus_audio_ambient_volume(target), channel="ambience", delay=0.5)')
+    p.write_text(s,encoding='utf-8')
+    (ROOT/'source/global_revision_20261106/integration.json').write_text(json.dumps(EVIDENCE,ensure_ascii=False,indent=2),encoding='utf-8')
+    compatibility(ROOT)
+    print('GLOBAL_REVISION_BUILT',json.dumps({k:{n:v for n,v in d.items() if n!='source_ids'} for k,d in EVIDENCE.items()}))
+
+if __name__=='__main__':main()

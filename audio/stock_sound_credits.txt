@@ -1,0 +1,45 @@
+ADDITIONAL SOUND RECORDINGS — CHUZHAYA SMENA
+
+door_open — 13FPanska_Sychra_Petr
+https://freesound.org/people/13FPanska_Sychra_Petr/sounds/379372/
+License: CC0 1.0 Universal
+https://creativecommons.org/publicdomain/zero/1.0/
+
+drone — shelbyshark
+https://freesound.org/people/shelbyshark/sounds/512510/
+License: CC0 1.0 Universal
+https://creativecommons.org/publicdomain/zero/1.0/
+
+engine_clean — 13FPanska_Sychra_Petr
+https://freesound.org/people/13FPanska_Sychra_Petr/sounds/379383/
+License: CC0 1.0 Universal
+https://creativecommons.org/publicdomain/zero/1.0/
+
+door_close — 13FPanska_Sychra_Petr
+https://freesound.org/people/13FPanska_Sychra_Petr/sounds/379374/
+License: CC0 1.0 Universal
+https://creativecommons.org/publicdomain/zero/1.0/
+
+air_bleed — 13FPanska_Sychra_Petr
+https://freesound.org/people/13FPanska_Sychra_Petr/sounds/379368/
+License: CC0 1.0 Universal
+https://creativecommons.org/publicdomain/zero/1.0/
+
+short - female - laugh - chuckle - giggle - AIFF 24 bits — amoyssiadis
+https://freesound.org/people/amoyssiadis/sounds/397673/
+License: CC0 1.0 Universal
+https://creativecommons.org/publicdomain/zero/1.0/
+Used as female_chuckle_behind.ogg after the bus leaves on day 5. Filtered, level-adjusted, edge-faded and converted to Ogg Vorbis; no pitch shift.
+
+SFX high school playground distant 02-01.wav — nickpursehouse
+https://freesound.org/people/nickpursehouse/sounds/132855/
+License: CC0 1.0 Universal
+https://creativecommons.org/publicdomain/zero/1.0/
+
+Soccer Ball Kick — bittermelonheart
+https://freesound.org/people/bittermelonheart/sounds/555042/
+License: CC0 1.0 Universal
+https://creativecommons.org/publicdomain/zero/1.0/
+These two recordings are combined in sports_court_day.ogg: distant schoolyard voices with spaced football kicks, filtered and level-adjusted, with a seamless overlap at the loop boundary.
+
+Public HQ MP3 previews were trimmed, denoised, filtered, level-adjusted, looped or converted to Ogg Vorbis. Authors are credited voluntarily. No endorsement is implied.

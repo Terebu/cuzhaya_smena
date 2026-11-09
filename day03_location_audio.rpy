@@ -4,6 +4,8 @@ default cs_day03_audio_location = None
 init -9 python:
     cs_state_defaults.update(cs_day03_audio_location=None)
     def cs_day03_audio_target(image):
+        if getattr(store, "cs_d5_quiet", False) and getattr(store, "cs_d5_started", False):
+            return None
         if image.startswith("cs_cg_") or image in ("cs_sleep_winter", "cs_sleep_summer", "cs_lena_pioneer_mirror"):
             return False
         if image == "black":
@@ -24,7 +26,7 @@ init -9 python:
             return "sound/ambiences/medstation_inside_day.ogg"
         if image.startswith(("bg int_library", "bg int_musclub", "cs_int_administration", "cs_library_interior")):
             return None
-        if image.startswith(("bg ext_", "cs_camp_path_", "cs_ext_administration_", "cs_house_lena_darya_ext_", "cs_library_exterior_")):
+        if image.startswith(("bg ext_", "cs_camp_path_", "cs_ext_administration_", "cs_house_lena_darya_ext_", "cs_library_exterior_", "cs_bus410_")):
             if image.endswith("night"):
                 return "sound/ambiences/camp_center_night.ogg"
             return "sound/ambiences/camp_center_evening.ogg" if image.endswith(("sunset", "night")) else "sound/ambiences/camp_center_day.ogg"
@@ -50,7 +52,7 @@ init -9 python:
                 renpy.music.stop(channel="ambience", fadeout=0.8)
         elif current != target:
             renpy.music.play(target, channel="ambience", loop=True, fadeout=0.8, fadein=0.8)
-        renpy.music.set_volume(0.16 if target else 0.0, channel="ambience", delay=0.5)
+        renpy.music.set_volume(cs_bus_audio_ambient_volume(target), channel="ambience", delay=0.5)
     def cs_day03_audio_after_load():
         if not getattr(store,"cs_active",False) or not getattr(store,"cs_day03_started",False):
             return

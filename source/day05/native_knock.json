@@ -1,0 +1,13 @@
+{
+  "source": "Everlasting Summer/game/archive.rpa",
+  "resource": "sound/sfx/knocking_door_outside.ogg",
+  "playback": "<from 0.0 to 0.17>sound/sfx/knocking_door_outside.ogg",
+  "reason": "First isolated native knock; next onset is about 0.20 seconds",
+  "events": {
+    "library": 7,
+    "after_dinner": 6,
+    "night": 7
+  },
+  "external_stock_used": false,
+  "delivery": "Queue of isolated 0.17-second native knocks, separated by 0.22-second silence"
+}

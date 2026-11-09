@@ -1,0 +1,49 @@
+init 125 python:
+    def cs_lit_text():
+        try:return getattr(renpy.game.script.lookup(renpy.game.context().current),'what','')
+        except Exception:return ''
+    class CSLitReady(Action):
+        def get_sensitive(self):return cs_lit_text()==u'Проснулась я раньше горна.'
+        def __call__(self):pass
+
+label cs_qa_literary_clicks:
+    $ cs_active=cs_d5_started=True
+    $ cs_d5_scene=20
+    show screen cs_d5_notes
+    show screen cs_d5_clock_face
+    show screen cs_d5_insert('TEST','TEST')
+    $ renpy.pause(0.05,hard=True)
+    $ cs_reset_state()
+    $ renpy.pause(0.05,hard=True)
+    $ assert not any(renpy.get_screen(s) for s in ('cs_d5_notes','cs_d5_clock_face','cs_d5_insert'))
+    $ cs_active=cs_day03_started=cs_day04_done=cs_darya_known=cs_olga_seen=True
+    $ cs_friend_da=cs_friend_se=cs_friend_mz=3
+    $ set_mode_adv()
+    jump cs_day05
+
+testcase cs_literary_clicks:
+    pause 0.5
+    $ _preferences.text_cps=0
+    $ _preferences.transitions=0
+    $ _test.force=True
+    run Start('cs_qa_literary_clicks')
+    pause 0.1 until run CSLitReady()
+    assert not renpy.showing('cs_darya')
+    $ renpy.screenshot(config.basedir+'/literary_click_01.png')
+    click
+    assert cs_lit_text()==u'В последнее время это происходило подозрительно часто. Возможно, организм наконец принял местное расписание. А возможно, просто решил, что нормального сна мне и так достаточно.'
+    click
+    assert cs_lit_text()==u'Я открыла глаза и посмотрела на окно.'
+    click
+    assert cs_lit_text()==u'Солнечная полоска лежала поперёк подушки. За стеклом покачивались ветки, а где-то неподалёку скрипнула дверь соседнего домика.'
+    click
+    assert cs_lit_text()==u'Ничего необычного.'
+    click
+    assert cs_lit_text()==u'Даже приятно.'
+    click
+    assert cs_lit_text()==u'Если не считать того, что ещё несколько дней назад я понятия не имела, где нахожусь и каким образом собираюсь отсюда выбираться.'
+    assert not renpy.showing('cs_darya') and not cs_d5_dressed
+    assert cs_friend_da==cs_friend_se==cs_friend_mz==3
+    $ renpy.screenshot(config.basedir+'/literary_click_07.png')
+    $ open(config.basedir+'/literary_clicks_PASS.txt','w').write('PASS')
+    run Quit(confirm=False)

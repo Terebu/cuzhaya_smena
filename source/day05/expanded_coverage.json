@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "literary_paragraphs": 817,
+  "script_paragraphs": 814,
+  "card_overlay_paragraphs": [
+    969,
+    970,
+    971
+  ],
+  "dialogue_paragraphs": 395,
+  "menus": 5
+}

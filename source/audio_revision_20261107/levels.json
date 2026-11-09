@@ -1,0 +1,44 @@
+[
+  {
+    "file": "air_brake_stop.ogg",
+    "seconds": 0.441,
+    "peak_db": -13.86,
+    "rms_db": -30.05
+  },
+  {
+    "file": "departure_fading.ogg",
+    "seconds": 7.685,
+    "peak_db": -11.8,
+    "rms_db": -28.39
+  },
+  {
+    "file": "engine_distant_loop.ogg",
+    "seconds": 6.75,
+    "peak_db": -11.43,
+    "rms_db": -25.08
+  },
+  {
+    "file": "engine_near_loop.ogg",
+    "seconds": 6.75,
+    "peak_db": -11.52,
+    "rms_db": -26.25
+  },
+  {
+    "file": "pneumatic_door_close.ogg",
+    "seconds": 1.935,
+    "peak_db": -4.86,
+    "rms_db": -31.17
+  },
+  {
+    "file": "pneumatic_door_open.ogg",
+    "seconds": 2.017,
+    "peak_db": -4.3,
+    "rms_db": -26.68
+  },
+  {
+    "file": "uncanny_drone_loop.ogg",
+    "seconds": 43.5,
+    "peak_db": -7.48,
+    "rms_db": -21.08
+  }
+]

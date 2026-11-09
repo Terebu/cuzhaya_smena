@@ -1,0 +1,147 @@
+init 210 python:
+    import os as cs_global_os
+    import json as cs_global_json
+    renpy.cs_global_qa=False
+    renpy.cs_global_kind=cs_global_os.environ.get('CS_GLOBAL_ROUTE','a')
+    cs_global_old_reset=cs_reset_state
+    def cs_global_reset():
+        cs_global_old_reset()
+        if renpy.cs_global_qa:
+            level=3 if renpy.cs_global_kind.startswith('high') else 0
+            for who in ('da','se','mz','un','sl','mi','dv','viola'):setattr(store,'cs_friend_'+who,level)
+    cs_reset_state=cs_global_reset
+    cs_global_native_sfx=cs_rev_sfx
+    cs_global_native_knocks=cs_rev_knocks
+    def cs_global_sfx(path,volume=0.4):
+        if renpy.cs_global_qa:renpy.cs_global_sounds.append((path,volume))
+        cs_global_native_sfx(path,volume)
+    def cs_global_knocks(count,volume=0.4):
+        if renpy.cs_global_qa:renpy.cs_global_sounds.append(('knocks',count,volume))
+        cs_global_native_knocks(count,volume)
+    cs_rev_sfx=cs_global_sfx
+    cs_rev_knocks=cs_global_knocks
+    cs_global_old_say=config.say_arguments_callback
+    cs_global_old_menu=config.menu_arguments_callback
+    cs_global_old_labels=config.label_callback
+    def cs_global_say(who,*args,**kwargs):
+        if cs_global_old_say:args,kwargs=cs_global_old_say(who,*args,**kwargs)
+        if renpy.cs_global_qa:
+            kwargs['interact']=False
+            renpy.execution.not_infinite_loop(120)
+        return args,kwargs
+    def cs_global_pick(items,*args,**kwargs):
+        options=[value for label,value in items if value is not None]
+        choice=1 if renpy.cs_global_kind.endswith('b') else 0
+        renpy.cs_global_menus+=1
+        value=options[choice]
+        return value() if callable(value) else value
+    def cs_global_args(*args,**kwargs):
+        if cs_global_old_menu:args,kwargs=cs_global_old_menu(*args,**kwargs)
+        if renpy.cs_global_qa:store.menu=cs_global_pick
+        return args,kwargs
+    def cs_global_end():
+        base=3 if renpy.cs_global_kind.startswith('high') else 0
+        all_a=not renpy.cs_global_kind.endswith('b')
+        expected={'da':base+5,'se':base+7,'mz':base+7,'un':base+3,'sl':base+3,'mi':base+2,'dv':base+1,'viola':base+4} if all_a else {'da':base,'se':base-1,'mz':base,'un':base-1,'sl':base,'mi':base,'dv':base+1,'viola':base}
+        actual={who:getattr(store,'cs_friend_'+who) for who in expected}
+        assert actual==expected,(actual,expected)
+        assert cs_day01_done and cs_day02_done and cs_day03_completed and cs_day04_done and cs_d5_done
+        assert cs_lena_book_returned and cs_reading_book_location=='library_shelf'
+        assert cs_mz_book_finished_day3 and cs_d4_elbow_bandage_removed and not cs_lena_elbow_bandaged
+        assert cs_d4_found_1971_records and cs_d4_unknown_girl_seen and cs_d4_heard_unknown_voice
+        assert cs_d4_olga_has_undated_photo and cs_d4_mz_has_1971_photo and cs_d4_mz_dream_record_written and cs_d4_dream_phrase_second
+        assert cs_da_shared_bed_day3==cs_da_love_confession_day3==all_a
+        assert cs_d5_clock_stopped and cs_d5_clock=='23:59' and cs_d5_documents_location=='olga'
+        assert renpy.cs_global_menus==(34 if all_a else 33),renpy.cs_global_menus
+        assert not any(renpy.get_screen(s) for s in ('cs_d5_insert','cs_d5_notes','cs_d5_clock_face'))
+        proof=dict(status='PASS',route=renpy.cs_global_kind,menus=renpy.cs_global_menus,friendship=actual,scenes=sorted(renpy.cs_global_seen),say_count=renpy.cs_global_says,sounds=renpy.cs_global_sounds)
+        open(config.basedir+'/global_'+renpy.cs_global_kind+'_PASS.json','w').write(cs_global_json.dumps(proof))
+        renpy.cs_global_final_proof=proof
+        renpy.cs_global_qa=False
+        renpy.jump('cs_qa_global_roundtrip')
+    def cs_global_labels(name,abnormal):
+        if cs_global_old_labels:cs_global_old_labels(name,abnormal)
+        if not renpy.cs_global_qa:return
+        if name.startswith('cs_rev_p') and len(name)==10 or name.startswith(('cs_rev_d1_','cs_rev_d2_','cs_rev_d3_','cs_rev_d4_')) or name.startswith('cs_day05_') and name[-2:].isdigit():
+            renpy.cs_global_pending=name
+            renpy.cs_global_seen.add(name)
+        if name=='cs_check_day05_complete':cs_global_end()
+    def cs_global_frame(event,**kwargs):
+        if not renpy.cs_global_qa or event!='show_done':return
+        renpy.cs_global_says+=1
+        tags=[tag for tag in cs_presence_tags if renpy.showing(tag)]
+        assert len(tags)<=2,tags
+        if cs_full_frame_cg_showing() or renpy.get_screen('cs_d5_insert') or renpy.showing('cs_d4_document'):
+            assert not tags,('Portraits over illustration',tags)
+        for tag in tags:
+            image=(tag,)+tuple(renpy.get_attributes(tag) or ())
+            assert renpy.has_image(image,exact=True),image
+        if not cs_d5_started and 'cs_darya' in tags:
+            assert cs_rev_outfit in renpy.get_attributes('cs_darya'),('Revision costume',cs_rev_day,cs_rev_scene,cs_rev_outfit,renpy.get_attributes('cs_darya'))
+        if cs_d5_started and cs_d5_scene==1 and 'cs_darya' in tags:
+            expected='sport' if cs_d5_dressed else 'pajamas'
+            assert expected in renpy.get_attributes('cs_darya'),('Morning costume',renpy.get_attributes('cs_darya'))
+        node=renpy.game.script.lookup(renpy.game.context().current)
+        text=getattr(node,'what','')
+        if not cs_d5_started and cs_rev_day==3 and cs_rev_scene==2 and cs_rev_darya_offscreen:
+            assert 'cs_darya' not in tags
+        if cs_d5_started and cs_d5_scene==20:assert not renpy.music.get_playing(channel='ambience')
+        capture=renpy.cs_global_kind in ('a','b')
+        if capture and renpy.cs_global_pending:
+            renpy.pause(0.08,hard=True)
+            renpy.screenshot(config.basedir+'/global_'+renpy.cs_global_kind+'_'+renpy.cs_global_pending+'.png')
+            renpy.cs_global_pending=None
+        key=('d5_%02d'%cs_d5_scene) if cs_d5_started else 'd%d_%02d'%(cs_rev_day,cs_rev_scene)
+        if capture and tags and key not in renpy.cs_global_portraits:
+            renpy.cs_global_portraits.add(key)
+            renpy.pause(0.08,hard=True)
+            for tag in tags:
+                x,y,w,h=renpy.get_image_bounds(tag)
+                assert y<300 and h>500,(tag,x,y,w,h)
+                if len(tags)==1:assert abs(x+w/2.0-960)<2,(tag,x,w)
+            renpy.screenshot(config.basedir+'/global_'+renpy.cs_global_kind+'_portrait_'+key+'.png')
+        targets={u'Сбегаешь?':'pajamas_sleepy',u'Ты вчера обещала одна далеко не уходить.':'pajamas_neutral',u'Подожди. Я с тобой.':'pajamas_smile',u'Автобус остановился.':'bus410',u'Ни водителя, ни пассажиров.':'bus_open',u'ОСТАТЬСЯ — ОДИН.':'card',u'ДО РАССВЕТА.':'door'}
+        if capture and cs_d5_started and text in targets:
+            renpy.pause(0.08,hard=True)
+            renpy.screenshot(config.basedir+'/global_'+renpy.cs_global_kind+'_'+targets[text]+'.png')
+    config.say_arguments_callback=cs_global_say
+    config.menu_arguments_callback=cs_global_args
+    config.label_callback=cs_global_labels
+    config.all_character_callbacks.append(cs_global_frame)
+
+testcase cs_global_revision:
+    pause 0.5
+    $ persistent.font_size='small'
+    $ _preferences.text_cps=0
+    $ _preferences.transitions=0
+    $ _test.force=True
+    $ _test.timeout=1500.0
+    $ renpy.cs_global_roundtrip=False
+    $ renpy.cs_global_says=renpy.cs_global_menus=0
+    $ renpy.cs_global_sounds=[]
+    $ renpy.cs_global_seen=set()
+    $ renpy.cs_global_portraits=set()
+    $ renpy.cs_global_pending=None
+    $ renpy.cs_global_qa=True
+    $ renpy.set_physical_size((1280,720))
+    run Start('chuzhaya_smena_start')
+    click until label cs_check_finished
+
+label cs_qa_global_roundtrip:
+    cs_narrator "Проверка сохранения новой редакции."
+    if not renpy.cs_global_roundtrip:
+        $ renpy.take_screenshot()
+        $ renpy.save('global_revision_'+renpy.cs_global_kind)
+        $ renpy.cs_global_roundtrip=True
+        $ renpy.load('global_revision_'+renpy.cs_global_kind)
+    python:
+        assert cs_d5_done and cs_d5_clock=='23:59' and cs_d5_clock_stopped
+        expected=renpy.cs_global_final_proof['friendship']
+        assert {who:getattr(store,'cs_friend_'+who) for who in expected}==expected
+        for key in cs_rev_awards:cs_rev_award(key,key.split(':',2)[-1],1)
+        for number,option in cs_d5_choice_results.items():cs_d5_choose(number,option)
+        assert {who:getattr(store,'cs_friend_'+who) for who in expected}==expected
+        proof=renpy.cs_global_final_proof
+        proof['save_roundtrip']=True
+        open(config.basedir+'/global_'+renpy.cs_global_kind+'_PASS.json','w').write(cs_global_json.dumps(proof))
+        renpy.quit()

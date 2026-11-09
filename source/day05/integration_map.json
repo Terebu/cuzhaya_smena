@@ -1,0 +1,71 @@
+{
+  "document": "day05_navigable.docx",
+  "sha256": "5bf0493205969479b228590512c48a586dbdd65c93a6a7f49814a95b99258e68",
+  "friendship": {
+    "dasha": "cs_friend_da",
+    "semyon": "cs_friend_se",
+    "zhenya": "cs_friend_mz",
+    "lena": "cs_friend_un",
+    "slavya": "cs_friend_sl",
+    "alisa": "cs_friend_dv",
+    "miku": "cs_friend_mi",
+    "viola": "cs_friend_viola",
+    "olga": "cs_d4_od_trust_approach (existing trust flag; no counter exists)"
+  },
+  "romance": "cs_da_shared_bed_day3 and cs_da_love_confession_day3",
+  "new_runtime": [
+    "days/day05/00_flow.rpy",
+    "days/day05/01_scene.rpy",
+    "days/day05/02_scene.rpy",
+    "days/day05/03_scene.rpy",
+    "days/day05/04_scene.rpy",
+    "days/day05/05_scene.rpy",
+    "days/day05/06_scene.rpy",
+    "days/day05/07_scene.rpy",
+    "days/day05/08_scene.rpy",
+    "days/day05/09_scene.rpy",
+    "days/day05/10_scene.rpy",
+    "days/day05/11_scene.rpy",
+    "days/day05/12_scene.rpy",
+    "days/day05/13_scene.rpy",
+    "days/day05/14_scene.rpy",
+    "days/day05/15_scene.rpy",
+    "days/day05/16_scene.rpy",
+    "days/day05/17_scene.rpy",
+    "days/day05/18_scene.rpy",
+    "days/day05/19_scene.rpy",
+    "days/day05/20_scene.rpy",
+    "days/day05/resources.rpy"
+  ],
+  "expanded_document": "day05_expanded.docx",
+  "expanded_sha256": "abdf97b05cefd12aa09e4255131373b8e1eacf8777356060ae00d462c202f743",
+  "darya_day05_costume": "sport during morning run, pioneer after washing/before breakfast",
+  "darya_morning_visibility": "offscreen until cs_d5_dressed",
+  "user_overrides": [
+    "Спортивная форма Даши на пробежке — уточнение пользователя после документа.",
+    "После отключения света использовать штатный bg int_house_of_mt_night2."
+  ],
+  "adv_document": "day05_adv_edited.docx",
+  "adv_sha256": "5c4aae1c46d6fece9544f2c54a79e6bb541da8d8c661769db0c7556c3efdac98",
+  "adv_contract": "one literary paragraph per say; no joins, extend, NVL, or embedded newlines",
+  "pov_document": "day05_pov_edited.docx",
+  "pov_sha256": "6b4427786368da80e9d9ca1da04116c73d0f25cda4a7752e9b47acdc2667163e",
+  "pov_contract": "Explicit character speech; actions and private thoughts are separate ADV paragraphs; preserve document order",
+  "pov_editorial_exceptions": [
+    {
+      "index": 94,
+      "speaker": "Даша",
+      "reason": "Даша сбавляет шаг и говорит, что предпочитает прогулки"
+    }
+  ],
+  "literary_document": "literary_source.txt",
+  "literary_sha256": "1370f37336fb1465b47473f39466124fa184cc0698ca1bd410b0eac572b4e8da",
+  "literary_choices": "same five rewards; guarded ledger prevents duplicate awards",
+  "literary_editorial_fixes": [
+    "Dasha friendship uses cs_friend_da in both ambiguous conditions",
+    "Shared-bed awakening is conditional on the established romance",
+    "Tikhonova returns a different book borrowed this morning",
+    "Miku receives an explicit evening invitation",
+    "Photo copies are distinguished from originals"
+  ]
+}

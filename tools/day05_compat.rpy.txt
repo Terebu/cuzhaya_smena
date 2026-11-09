@@ -1,0 +1,42 @@
+init 110 python:
+    class CSDay5Ready(Action):
+        def get_sensitive(self): return bool(getattr(store,'cs_d5_started',False))
+        def __call__(self): pass
+
+label cs_d5_compat_start:
+    $ cs_reset_state()
+    $ cs_active=cs_day03_started=cs_day04_done=cs_darya_known=cs_slavya_known=cs_olga_seen=True
+    $ cs_friend_da=cs_friend_mz=cs_friend_se=3
+    $ cs_da_shared_bed_day3=cs_da_love_confession_day3=True
+    $ set_mode_adv()
+    cs_narrator "Контрольное сохранение до установки пятого дня."
+    cs_narrator "Накопленная дружба и романтическая ветка заданы в предыдущей версии."
+    cs_narrator "Переходим к прежнему экрану ожидания продолжения."
+    jump cs_day05_pending
+
+testcase cs_d5_create_old:
+    pause 0.5
+    $ _preferences.text_cps=0
+    $ _preferences.transitions=0
+    $ _test.force=True
+    run Start('cs_d5_compat_start')
+    click until label cs_check_day04_complete
+    pause 0.5
+    assert cs_friend_mz==3 and cs_da_love_confession_day3
+    $ renpy.take_screenshot()
+    $ renpy.save('d5_old_wait')
+    run Quit(confirm=False)
+
+testcase cs_d5_load_old:
+    pause 0.5
+    $ _preferences.text_cps=0
+    $ _preferences.transitions=0
+    $ _test.force=True
+    run Function(renpy.load,'d5_old_wait')
+    click until run CSDay5Ready()
+    pause 0.3
+    assert cs_d5_scene==1 and cs_friend_da==cs_friend_mz==cs_friend_se==3
+    assert cs_da_love_confession_day3 and cs_da_shared_bed_day3
+    $ renpy.screenshot(config.basedir+'/day05_old_save_loaded.png')
+    $ open(config.basedir+'/day05_old_save_PASS.txt','w').write('PASS')
+    run Quit(confirm=False)

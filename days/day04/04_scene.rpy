@@ -18,7 +18,7 @@ label cs_day04_04:
     $ cs_director_scene("bg ext_square_day")
     scene bg ext_square_day
     show cs_darya neutral sport normal at cs_darya_normal_right
-    $ cs_d4_scene_cast = ['cs_darya', 'cs_semen']
+    $ cs_d4_scene_cast = ['cs_darya']
     $ cs_frame_focus(cs_d4_scene_cast)
     with Dissolve(0.7)
     cs_narrator "Мы вышли на площадь."
@@ -58,6 +58,9 @@ label cs_day04_04:
         with cs_sprite_change
     cs_ls "Вполне. Теперь я безоружна и исключительно дружелюбна."
     cs_narrator "И побежала к скамейке."
+    $ cs_d4_scene_cast = ['cs_darya', 'cs_semen']
+    $ cs_frame_focus(cs_d4_scene_cast)
+    with cs_sprite_enter
     if cs_reflective_shot:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
@@ -261,7 +264,7 @@ label cs_day04_04:
     if cs_reflective_shot:
         $ cs_frame_focus(cs_d4_scene_cast)
         with cs_sprite_change
-    cs_da "А когда мы уходили, кто-то сказал: «До встречи, Лена». Это мы обе слышали."
+    cs_da "А когда мы уходили, кто-то сказал: «До встречи, Лена». Это мы обе слышали. И видели её — со спины. Лица не разглядели."
     cs_narrator "Семён опустил взгляд на фотографию."
     cs_narrator "Несколько секунд молчал."
     cs_narrator "Потом неожиданно спросил:"

@@ -3,8 +3,8 @@ label cs_day01_59:
     $ save_name = "Чужая смена — День 1: Короткая версия"
     label cs_check_d1_s59:
     # cs_presence_keep: hide mz
-    $ day_time()
-    $ persistent.sprite_time = "day"
+    $ sunset_time()
+    $ persistent.sprite_time = "sunset"
     play ambience "sound/ambiences/library_day.ogg" fadeout 1.0 fadein 1.0
     show cs_zhenya normal pioneer normal at cs_darya_normal_left
     show cs_darya shrug pioneer normal at cs_darya_normal_right

@@ -1,0 +1,603 @@
+init 230 python:
+    import json as cs_bus_qa_json
+    renpy.cs_bus_qa=False
+    renpy.cs_bus_qa_loaded=False
+    renpy.cs_bus_qa_volumes=[]
+    renpy.cs_bus_qa_shots=[]
+    cs_bus_qa_base_volume=renpy.music.set_volume
+    def cs_bus_qa_volume(volume,delay=0,channel="music"):
+        if renpy.cs_bus_qa and channel=="cs_bus_engine":renpy.cs_bus_qa_volumes.append((volume,delay))
+        cs_bus_qa_base_volume(volume,delay,channel)
+    renpy.music.set_volume=cs_bus_qa_volume
+    cs_bus_qa_base_sound=cs_bus_stock_sound
+    def cs_bus_qa_sound(path,volume):
+        if renpy.cs_bus_qa:renpy.cs_bus_qa_shots.append(path)
+        cs_bus_qa_base_sound(path,volume)
+    cs_bus_stock_sound=cs_bus_qa_sound
+    def cs_bus_qa_check(phase):
+        assert cs_bus_engine_phase==phase,(cs_bus_engine_phase,phase)
+        if phase!="off":
+            expected={"distant":cs_bus_distant,"near":cs_bus_near,"idle":cs_bus_near,"depart":cs_bus_departure}[phase]
+            assert renpy.music.get_playing(channel="cs_bus_engine")==expected
+        if cs_bus_audio_mode=="hushed":assert not renpy.music.get_playing(channel="ambience")
+        if cs_bus_audio_mode=="ominous":
+            assert renpy.music.get_playing(channel="ambience")==cs_bus_drone
+            assert not renpy.music.get_playing(channel="music")
+
+label cs_qa_bus_audio:
+    $ cs_reset_state()
+    $ cs_active=cs_day03_started=cs_day04_done=cs_d5_started=cs_d5_literary_initialized=cs_rev_active=True
+    $ cs_d5_scene=5
+    $ renpy.cs_bus_qa=True
+    $ set_mode_adv()
+    $ day_time()
+    $ persistent.sprite_time="day"
+    $ cs_d5_room("bg ext_no_bus")
+    $ cs_bus_cue("warning")
+    $ assert cs_bus_location_target("cs_darya worried pioneer normal") is False
+    $ cs_bus_cue("approach")
+    pause 6.2
+    $ cs_bus_qa_check("distant")
+    $ assert (0.025,0) in renpy.cs_bus_qa_volumes and (0.12,6.0) in renpy.cs_bus_qa_volumes
+    $ renpy.screenshot(config.basedir+"/bus_audio_distant.png")
+    $ cs_bus_cue("near")
+    pause 3.2
+    $ cs_bus_qa_check("near")
+    $ renpy.cs_bus_fade_started=renpy.get_game_runtime()
+    $ cs_d5_room("cs_bus410_closed_day",duration=1.6,force=True)
+    $ assert renpy.get_game_runtime()-renpy.cs_bus_fade_started>=1.45
+    $ cs_d5_scene=6
+    $ cs_bus_cue("uncanny")
+    $ cs_bus_cue("stop")
+    pause 0.10
+    $ cs_bus_qa_check("idle")
+    $ assert renpy.music.get_playing(channel="sound")==cs_bus_brake
+    $ renpy.screenshot(config.basedir+"/bus_audio_stop.png")
+    pause 4.1
+    $ cs_bus_cue("open")
+    $ cs_d5_room("cs_bus410_open_day")
+    pause 0.2
+    $ assert renpy.music.get_playing(channel="sound")==cs_bus_door_open
+    $ renpy.screenshot(config.basedir+"/bus_audio_open.png")
+    pause 2.2
+    $ cs_bus_cue("close")
+    $ cs_d5_room("cs_bus410_closed_day")
+    pause 1.9
+    $ cs_bus_cue("depart")
+    pause 1.5
+    $ cs_bus_qa_check("depart")
+    $ cs_bus_cue("gone")
+    $ cs_d5_room("bg ext_no_bus")
+    pause 3.3
+    $ assert not renpy.music.get_playing(channel="cs_bus_engine")
+    $ cs_bus_qa_check("off")
+    $ cs_bus_cue("calm")
+    pause 1.1
+    $ assert renpy.music.get_playing(channel="ambience")=="sound/ambiences/forest_day.ogg"
+    $ cs_bus_cue("uncanny")
+    $ cs_bus_engine("idle")
+    $ cs_d5_room("cs_bus410_open_day")
+    pause 0.3
+    if not renpy.cs_bus_qa_loaded:
+        $ renpy.cs_bus_qa_shot_count=len(renpy.cs_bus_qa_shots)
+        $ renpy.take_screenshot()
+        $ renpy.save("bus_audio_mid")
+        $ renpy.cs_bus_qa_loaded=True
+        $ renpy.load("bus_audio_mid")
+    pause 0.3
+    $ cs_bus_qa_check("idle")
+    $ assert len(renpy.cs_bus_qa_shots)==renpy.cs_bus_qa_shot_count
+    $ cs_bus_audio_revision=0
+    $ renpy.music.play("sound/sfx/bus_stop.ogg",channel="sound",loop=False)
+    $ cs_bus_audio_loaded()
+    pause 0.3
+    $ cs_bus_qa_check("idle")
+    $ assert renpy.music.get_playing(channel="sound")!="sound/sfx/bus_stop.ogg"
+    $ cs_bus_cue("silence")
+    pause 1.0
+    $ assert not renpy.music.get_playing(channel="ambience")
+    $ cs_restore_audio()
+    pause 0.6
+    $ assert not renpy.music.get_playing(channel="cs_bus_engine")
+    $ open(config.basedir+"/BUS_AUDIO_PASS.json","w").write(cs_bus_qa_json.dumps(dict(status="PASS",volume_events=renpy.cs_bus_qa_volumes,one_shots=renpy.cs_bus_qa_shots,save_load=True,nature_restored=True,final_silence=True)))
+    $ renpy.cs_bus_qa=False
+    $ renpy.quit()
+
+testcase cs_bus_audio:
+    pause 0.3
+    $ _test.force=True
+    $ _test.timeout=120.0
+    $ _preferences.transitions=0
+    run Start("cs_qa_bus_audio")
+    pause 40.0
+
+label cs_qa_bus_credits:
+    $ cs_reset_state()
+    $ cs_active=True
+    scene cs_room
+    show screen cs_opening_credits_screen
+    pause 6.8
+    $ renpy.screenshot(config.basedir+"/bus_credits_early.png")
+    pause 4.0
+    $ renpy.screenshot(config.basedir+"/bus_credits_authors.png")
+    pause 3.5
+    $ renpy.screenshot(config.basedir+"/bus_credits_sports.png")
+    pause 6.0
+    $ renpy.screenshot(config.basedir+"/bus_credits_clear.png")
+    $ assert not renpy.get_screen("cs_opening_credits_screen")
+    $ open(config.basedir+"/BUS_CREDITS_PASS.txt","w").write("PASS")
+    $ renpy.quit()
+
+testcase cs_bus_credits:
+    pause 0.3
+    $ _test.force=True
+    $ _test.timeout=90.0
+    run Start("cs_qa_bus_credits")
+    pause 25.0
+init 240 python:
+    renpy.cs_chuckle_qa=False
+    renpy.cs_chuckle_loaded=False
+    cs_chuckle_old_say=config.say_arguments_callback
+    def cs_chuckle_say(who,*args,**kwargs):
+        if cs_chuckle_old_say:args,kwargs=cs_chuckle_old_say(who,*args,**kwargs)
+        if renpy.cs_chuckle_qa:
+            kwargs['interact']=False
+            renpy.execution.not_infinite_loop(120)
+        return args,kwargs
+    def cs_chuckle_frame(event,**kwargs):
+        if not renpy.cs_chuckle_qa or event!='show_done':return
+        node=renpy.game.script.lookup(renpy.game.context().current)
+        text=getattr(node,'what','')
+        if text==u'За спиной послышался тихий смешок.':
+            renpy.pause(0.1,hard=True)
+            assert renpy.music.get_playing(channel='sound')==cs_bus_chuckle
+            assert renpy.cs_bus_qa_shots.count(cs_bus_chuckle)==1
+            assert renpy.showing('bg ext_no_bus')
+            renpy.screenshot(config.basedir+'/female_chuckle_behind.png')
+            renpy.cs_chuckle_seen=True
+        elif text==u'Затем всё стихло.':
+            assert cs_bus_audio_mode=='hushed'
+            renpy.pause(1.2,hard=True)
+            assert not renpy.music.get_playing(channel='sound')
+            assert not renpy.music.get_playing(channel='ambience')
+            renpy.screenshot(config.basedir+'/female_chuckle_silence.png')
+            renpy.cs_chuckle_hush=True
+    config.say_arguments_callback=cs_chuckle_say
+    config.all_character_callbacks.append(cs_chuckle_frame)
+
+label cs_qa_female_chuckle:
+    $ cs_reset_state()
+    $ cs_active=cs_day03_started=cs_day04_done=cs_d5_started=cs_d5_literary_initialized=cs_rev_active=True
+    $ cs_d5_scene=6
+    $ renpy.cs_chuckle_qa=renpy.cs_bus_qa=True
+    $ renpy.cs_chuckle_seen=renpy.cs_chuckle_hush=False
+    $ renpy.cs_bus_qa_shots=[]
+    $ set_mode_adv()
+    $ day_time()
+    $ persistent.sprite_time='day'
+    $ cs_bus_cue('uncanny')
+    call cs_day05_06
+    $ assert renpy.cs_chuckle_seen and renpy.cs_chuckle_hush
+    $ assert cs_bus_audio_mode=='natural'
+    pause 1.1
+    $ assert renpy.music.get_playing(channel='ambience')=='sound/ambiences/forest_day.ogg'
+    if not renpy.cs_chuckle_loaded:
+        $ renpy.cs_chuckle_count=len(renpy.cs_bus_qa_shots)
+        $ renpy.take_screenshot()
+        $ renpy.save('female_chuckle_after')
+        $ renpy.cs_chuckle_loaded=True
+        $ renpy.load('female_chuckle_after')
+    pause 1.2
+    $ assert len(renpy.cs_bus_qa_shots)==renpy.cs_chuckle_count
+    $ assert renpy.cs_bus_qa_shots.count(cs_bus_chuckle)==1
+    $ assert not renpy.music.get_playing(channel='sound')
+    $ open(config.basedir+'/FEMALE_CHUCKLE_PASS.json','w').write(cs_bus_qa_json.dumps(dict(status='PASS',actual_scene='cs_day05_06',cue_count=renpy.cs_bus_qa_shots.count(cs_bus_chuckle),following_silence=True,nature_restored=True,save_load_no_replay=True,screenshots=['female_chuckle_behind.png','female_chuckle_silence.png'])))
+    $ renpy.cs_chuckle_qa=renpy.cs_bus_qa=False
+    $ cs_restore_audio()
+    $ renpy.quit()
+
+testcase cs_female_chuckle:
+    pause 0.3
+    $ _test.force=True
+    $ _test.timeout=90.0
+    $ _preferences.transitions=0
+    $ _preferences.text_cps=0
+    run Start('cs_qa_female_chuckle')
+    pause 30.0
+init 245 python:
+    renpy.cs_sports_qa=False
+    renpy.cs_sports_loaded_test=False
+    renpy.cs_sports_plays=[]
+    renpy.cs_sports_stops=[]
+    cs_sports_qa_base_play=renpy.music.play
+    def cs_sports_qa_play(filenames,*args,**kwargs):
+        if renpy.cs_sports_qa and kwargs.get('channel')=='cs_sports':
+            renpy.cs_sports_plays.append(dict(track=filenames,fadein=kwargs.get('fadein',0)))
+        return cs_sports_qa_base_play(filenames,*args,**kwargs)
+    renpy.music.play=cs_sports_qa_play
+    cs_sports_qa_base_stop=renpy.music.stop
+    def cs_sports_qa_stop(*args,**kwargs):
+        if renpy.cs_sports_qa and kwargs.get('channel')=='cs_sports':renpy.cs_sports_stops.append(kwargs.get('fadeout',0))
+        return cs_sports_qa_base_stop(*args,**kwargs)
+    renpy.music.stop=cs_sports_qa_stop
+    cs_sports_qa_old_say=config.say_arguments_callback
+    def cs_sports_qa_say(who,*args,**kwargs):
+        if cs_sports_qa_old_say:args,kwargs=cs_sports_qa_old_say(who,*args,**kwargs)
+        if renpy.cs_sports_qa:
+            kwargs['interact']=False
+            renpy.execution.not_infinite_loop(120)
+        return args,kwargs
+    config.say_arguments_callback=cs_sports_qa_say
+    def cs_sports_qa_pick(items,*args,**kwargs):
+        choice=next(value for label,value in items if value is not None)
+        return choice() if callable(choice) else choice
+    def cs_sports_qa_frame(event,**kwargs):
+        if not renpy.cs_sports_qa or event!='show_done':return
+        node=renpy.game.script.lookup(renpy.game.context().current)
+        text=getattr(node,'what','')
+        if text==u'Со стороны спортивной площадки доносились удары мяча.':
+            renpy.pause(2.7,hard=True)
+            assert renpy.music.get_playing(channel='cs_sports')==cs_sports_track
+            assert cs_sports_level==0.065
+            renpy.screenshot(config.basedir+'/sports_court_distant.png')
+            renpy.cs_sports_distant=True
+        elif text==u'На поле играли в футбол.':
+            assert cs_sports_level==0.075
+            renpy.cs_sports_approach=True
+        elif text==u'Я прислонилась к спинке.':
+            renpy.pause(1.7,hard=True)
+            assert cs_sports_level==0.16
+            assert renpy.music.get_playing(channel='cs_sports')==cs_sports_track
+            assert renpy.showing('bg ext_playground_day')
+            renpy.screenshot(config.basedir+'/sports_court_near.png')
+            renpy.cs_sports_near=True
+    config.all_character_callbacks.append(cs_sports_qa_frame)
+
+label cs_qa_sports_court:
+    $ cs_reset_state()
+    $ cs_active=cs_day03_started=cs_day04_done=cs_d5_started=cs_d5_literary_initialized=cs_rev_active=True
+    $ renpy.cs_sports_qa=True
+    $ renpy.cs_sports_distant=renpy.cs_sports_approach=renpy.cs_sports_near=False
+    $ set_mode_adv()
+    $ day_time()
+    $ persistent.sprite_time='day'
+    $ cs_d5_scene=1
+    $ cs_d5_room('bg ext_playground_day')
+    pause 0.1
+    $ assert not renpy.music.get_playing(channel='cs_sports')
+    $ renpy.cs_sports_saved_menu=store.menu
+    $ store.menu=cs_sports_qa_pick
+    call cs_day05_07
+    $ store.menu=renpy.cs_sports_saved_menu
+    $ cs_d5_room('bg int_library_day')
+    pause 1.7
+    $ assert not renpy.music.get_playing(channel='cs_sports')
+    call cs_day05_09
+    $ assert renpy.cs_sports_distant and renpy.cs_sports_approach and renpy.cs_sports_near
+    $ assert len(renpy.cs_sports_plays)==2
+    $ assert all(x['fadein']==2.5 for x in renpy.cs_sports_plays)
+    $ cs_sports_sync('bg ext_playground_day')
+    $ assert len(renpy.cs_sports_plays)==2
+    if not renpy.cs_sports_loaded_test:
+        $ renpy.take_screenshot()
+        $ renpy.save('sports_court_active')
+        $ renpy.cs_sports_loaded_test=True
+        $ renpy.load('sports_court_active')
+    pause 0.2
+    $ assert cs_sports_level==0.16 and renpy.music.get_playing(channel='cs_sports')==cs_sports_track
+    $ cs_d5_room('bg int_library_day')
+    pause 1.7
+    $ assert not renpy.music.get_playing(channel='cs_sports')
+    $ assert 1.5 in renpy.cs_sports_stops
+    $ cs_d5_room('bg ext_playground_day')
+    $ cs_restore_audio()
+    pause 0.2
+    $ assert not renpy.music.get_playing(channel='cs_sports')
+    $ open(config.basedir+'/SPORTS_COURT_PASS.json','w').write(cs_bus_qa_json.dumps(dict(status='PASS',actual_scenes=[7,9],empty_morning_silent=True,distant_near_levels=[0.065,0.075,0.16],fadein_seconds=2.5,fadeout_seconds=1.5,no_restart_on_approach=True,save_load=True,library_no_leak=True,exit_cleanup=True)))
+    $ renpy.cs_sports_qa=False
+    $ renpy.quit()
+
+testcase cs_sports_court:
+    pause 0.3
+    $ _test.force=True
+    $ _test.timeout=100.0
+    $ _preferences.transitions=0
+    $ _preferences.text_cps=0
+    run Start('cs_qa_sports_court')
+    pause 40.0
+init 250 python:
+    renpy.cs_meal_qa=False
+    renpy.cs_meal_level=0
+    renpy.cs_meal_hits=[]
+    renpy.cs_meal_seen=set()
+    cs_meal_qa_sfx=cs_rev_sfx
+    def cs_meal_sfx(path,volume=0.4):
+        if renpy.cs_meal_qa and path=='sound/sfx/dinner_horn_processed.ogg':
+            renpy.cs_meal_hits.append((renpy.cs_meal_level,cs_d5_scene,volume))
+        cs_meal_qa_sfx(path,volume)
+    cs_rev_sfx=cs_meal_sfx
+    cs_meal_qa_say=config.say_arguments_callback
+    def cs_meal_say(who,*args,**kwargs):
+        if cs_meal_qa_say:args,kwargs=cs_meal_qa_say(who,*args,**kwargs)
+        if renpy.cs_meal_qa:
+            kwargs['interact']=False
+            renpy.execution.not_infinite_loop(120)
+        return args,kwargs
+    config.say_arguments_callback=cs_meal_say
+    def cs_meal_frame(event,**kwargs):
+        if not renpy.cs_meal_qa or event!='show_done':return
+        node=renpy.game.script.lookup(renpy.game.context().current)
+        text=getattr(node,'what','')
+        names={u'С площади донёсся горн.':'breakfast',u'И когда через некоторое время снаружи прозвучал сигнал к обеду, я почувствовала неподдельное облегчение.':'lunch',u'К ужину мы отправились вместе.':'dinner'}
+        if text not in names:return
+        renpy.pause(0.15,hard=True)
+        assert renpy.music.get_playing(channel='sound')=='sound/sfx/dinner_horn_processed.ogg'
+        assert renpy.cs_meal_hits[-1]==(renpy.cs_meal_level,cs_d5_scene,0.6)
+        pair=(renpy.cs_meal_level,names[text])
+        assert pair not in renpy.cs_meal_seen
+        renpy.cs_meal_seen.add(pair)
+        if renpy.cs_meal_level==0:renpy.screenshot(config.basedir+'/meal_horn_'+names[text]+'.png')
+    config.all_character_callbacks.append(cs_meal_frame)
+
+label cs_qa_meal_horns:
+    $ cs_reset_state()
+    $ cs_active=cs_day03_started=cs_day04_done=cs_d5_started=cs_d5_literary_initialized=cs_rev_active=True
+    $ renpy.cs_meal_qa=True
+    $ set_mode_adv()
+    $ day_time()
+    $ persistent.sprite_time='day'
+    python:
+        for who in ('da','se','mz','un','sl','mi','dv','viola'):setattr(store,'cs_friend_'+who,renpy.cs_meal_level)
+    $ renpy.cs_meal_saved_menu=store.menu
+    $ store.menu=cs_sports_qa_pick
+    call cs_day05_02
+    call cs_day05_10
+    call cs_day05_16
+    $ store.menu=renpy.cs_meal_saved_menu
+    if renpy.cs_meal_level==0:
+        $ renpy.cs_meal_level=4
+        jump cs_qa_meal_horns
+    $ assert len(renpy.cs_meal_hits)==6
+    $ assert renpy.cs_meal_seen==set((level,meal) for level in (0,4) for meal in ('breakfast','lunch','dinner'))
+    $ open(config.basedir+'/MEAL_HORNS_PASS.json','w').write(cs_bus_qa_json.dumps(dict(status='PASS',actual_scenes=[2,10,16],friendship_levels=[0,4],one_shot_events=renpy.cs_meal_hits,meals=['breakfast','lunch','dinner'],native_resource='sound/sfx/dinner_horn_processed.ogg',screenshots=['meal_horn_breakfast.png','meal_horn_lunch.png','meal_horn_dinner.png'])))
+    $ renpy.cs_meal_qa=False
+    $ cs_restore_audio()
+    $ renpy.quit()
+
+testcase cs_meal_horns:
+    pause 0.3
+    $ _test.force=True
+    $ _test.timeout=120.0
+    $ _preferences.transitions=0
+    $ _preferences.text_cps=0
+    run Start('cs_qa_meal_horns')
+    pause 45.0
+init 255 python:
+    renpy.cs_cabin_qa=False
+    renpy.cs_cabin_loaded=False
+    renpy.cs_cabin_mystery_loaded=False
+    renpy.cs_cabin_plays=[]
+    renpy.cs_cabin_stops=[]
+    cs_cabin_play_base=renpy.music.play
+    def cs_cabin_play(path,*args,**kwargs):
+        if renpy.cs_cabin_qa and kwargs.get('channel')=='cs_bus_engine':renpy.cs_cabin_plays.append((path,kwargs.get('fadein',0)))
+        return cs_cabin_play_base(path,*args,**kwargs)
+    renpy.music.play=cs_cabin_play
+    cs_cabin_stop_base=renpy.music.stop
+    def cs_cabin_stop(*args,**kwargs):
+        if renpy.cs_cabin_qa and kwargs.get('channel')=='cs_bus_engine':renpy.cs_cabin_stops.append(kwargs.get('fadeout',0))
+        return cs_cabin_stop_base(*args,**kwargs)
+    renpy.music.stop=cs_cabin_stop
+    cs_cabin_say_base=config.say_arguments_callback
+    def cs_cabin_say(who,*args,**kwargs):
+        if cs_cabin_say_base:args,kwargs=cs_cabin_say_base(who,*args,**kwargs)
+        if renpy.cs_cabin_qa:
+            kwargs['interact']=False
+            renpy.execution.not_infinite_loop(120)
+        return args,kwargs
+    config.say_arguments_callback=cs_cabin_say
+    def cs_cabin_frame(event,**kwargs):
+        if not renpy.cs_cabin_qa or event!='show_done' or cs_d5_scene!=20:return
+        text=getattr(renpy.game.script.lookup(renpy.game.context().current),'what','')
+        if text==u'Издалека донёсся звук двигателя.':
+            renpy.pause(2.0,hard=True)
+            assert renpy.music.get_playing(channel='cs_bus_engine')==cs_bus_distant
+            assert renpy.cs_cabin_plays[-1]==(cs_bus_distant,1.8)
+            assert not renpy.music.get_playing(channel='sound')
+            renpy.cs_cabin_engine_seen=True
+        elif text==u'Потом оборвался.':
+            assert cs_bus_engine_phase=='off' and 1.0 in renpy.cs_cabin_stops
+            renpy.pause(1.1,hard=True)
+            assert not renpy.music.get_playing(channel='cs_bus_engine')
+        elif text==u'В дверь постучали.':
+            renpy.pause(0.1,hard=True)
+            assert renpy.music.get_playing(channel='cs_bus_mystery')==cs_bus_drone
+            assert 'knocking_door_outside' in (renpy.music.get_playing(channel='sound') or '')
+            renpy.screenshot(config.basedir+'/cabin_mysterious_knocks.png')
+            renpy.pause(8.2,hard=True)
+            assert renpy.music.get_playing(channel='cs_bus_mystery')==cs_bus_drone
+            renpy.cs_cabin_knocks_seen=True
+    config.all_character_callbacks.append(cs_cabin_frame)
+
+label cs_qa_cabin_audio:
+    $ cs_reset_state()
+    $ cs_active=cs_day03_started=cs_day04_done=cs_d5_started=cs_d5_literary_initialized=cs_rev_active=True
+    $ cs_d5_scene=20
+    $ cs_d5_quiet=True
+    $ renpy.cs_cabin_qa=True
+    $ renpy.cs_cabin_engine_seen=renpy.cs_cabin_knocks_seen=False
+    $ set_mode_adv()
+    $ night_time()
+    $ persistent.sprite_time='night'
+    $ cs_d5_room('bg int_house_of_mt_night')
+    $ cs_bus_cue('cabin_bus')
+    pause 0.3
+    if not renpy.cs_cabin_loaded:
+        $ renpy.take_screenshot()
+        $ renpy.save('cabin_bus_active')
+        $ renpy.cs_cabin_loaded=True
+        $ renpy.load('cabin_bus_active')
+    pause 0.3
+    $ assert cs_bus_engine_phase=='cabin' and renpy.music.get_playing(channel='cs_bus_engine')==cs_bus_distant
+    call cs_day05_20
+    $ assert renpy.cs_cabin_engine_seen and renpy.cs_cabin_knocks_seen
+    $ assert not renpy.music.get_playing(channel='cs_bus_engine') and not renpy.music.get_playing(channel='cs_bus_mystery')
+    $ cs_d5_room('bg int_house_of_mt_night')
+    $ cs_bus_cue('knock_warning')
+    pause 0.3
+    if not renpy.cs_cabin_mystery_loaded:
+        $ renpy.take_screenshot()
+        $ renpy.save('cabin_mystery_loop')
+        $ renpy.cs_cabin_mystery_loaded=True
+        $ renpy.load('cabin_mystery_loop')
+    pause 45.0
+    $ assert cs_bus_mystery_active and renpy.music.get_playing(channel='cs_bus_mystery')==cs_bus_drone
+    $ cs_bus_cue('mystery_end')
+    pause 1.2
+    $ assert not renpy.music.get_playing(channel='cs_bus_mystery')
+    $ cs_restore_audio()
+    $ open(config.basedir+'/CABIN_AUDIO_PASS.json','w').write(cs_bus_qa_json.dumps(dict(status='PASS',actual_scene=20,previous_bus_recording=True,fadein=1.8,fadeout=1.0,mystery_over_knocks=True,mystery_loop=True,loop_after_45_seconds=True,save_load_active_mystery=True,save_load_active_bus=True,final_channels_silent=True)))
+    $ renpy.cs_cabin_qa=False
+    $ renpy.quit()
+
+testcase cs_cabin_audio:
+    pause 0.3
+    $ _test.force=True
+    $ _test.timeout=150.0
+    $ _preferences.transitions=0
+    $ _preferences.text_cps=0
+    run Start('cs_qa_cabin_audio')
+    pause 60.0
+init 260 python:
+    renpy.cs_prologue_qa=False
+    renpy.cs_prologue_photos=set()
+    renpy.cs_prologue_da=0
+    renpy.cs_prologue_checks=set()
+    cs_prologue_old_say=config.say_arguments_callback
+    def cs_prologue_say(who,*args,**kwargs):
+        if cs_prologue_old_say:args,kwargs=cs_prologue_old_say(who,*args,**kwargs)
+        if renpy.cs_prologue_qa:
+            kwargs['interact']=False
+            renpy.execution.not_infinite_loop(120)
+        return args,kwargs
+    config.say_arguments_callback=cs_prologue_say
+    def cs_prologue_frame(event,**kwargs):
+        if not renpy.cs_prologue_qa or event!='show_done':return
+        renpy.pause(0.45,hard=True)
+        node=renpy.game.script.lookup(renpy.game.context().current)
+        text=getattr(node,'what','')
+        photo=renpy.get_screen('cs_instagram_post')
+        if photo:
+            name=photo.scope['photo']
+            assert renpy.get_screen('cs_phone') and not renpy.showing('cs_dasha_winter')
+            if name not in renpy.cs_prologue_photos:
+                renpy.cs_prologue_photos.add(name)
+                renpy.pause(0.1,hard=True)
+                renpy.screenshot(config.basedir+'/prologue_'+name+'.png')
+        if getattr(node,'who','')=='cs_da':
+            assert renpy.showing('cs_dasha_winter') and not renpy.showing('cs_darya')
+            renpy.cs_prologue_da+=1
+        key=None
+        if text==u'И только тогда обратила внимание на девушку рядом.':
+            assert renpy.showing('cs_dasha_winter');key='darya_intro'
+        if text==u'Телефон: семь процентов. Прекрасно.':
+            assert renpy.get_screen('cs_phone').scope['charge']==7;key='battery7'
+        if text==u'Гениально.':
+            assert renpy.get_screen('cs_phone').scope['charge']==2;key='battery2'
+        if text.startswith(u'Я попыталась открыть карты.'):
+            assert renpy.get_screen('cs_phone').scope['mode']=='off';key='phone_off'
+        if key:
+            renpy.cs_prologue_checks.add(key)
+            renpy.pause(0.1,hard=True)
+            renpy.screenshot(config.basedir+'/prologue_'+key+'.png')
+    config.all_character_callbacks.append(cs_prologue_frame)
+
+label cs_qa_prologue_visuals:
+    $ cs_reset_state()
+    $ cs_active=True
+    $ renpy.cs_prologue_qa=True
+    $ set_mode_adv()
+    scene cs_bus_city
+    show screen cs_phone(7, "battery")
+    pause 0.03
+    $ renpy.screenshot(config.basedir+'/phone_fade_early.png')
+    pause 0.15
+    $ renpy.screenshot(config.basedir+'/phone_fade_middle.png')
+    pause 0.3
+    $ renpy.screenshot(config.basedir+'/phone_fade_full.png')
+    hide screen cs_phone
+    pause 0.12
+    $ renpy.screenshot(config.basedir+'/phone_fade_hiding.png')
+    pause 0.25
+    $ assert not renpy.get_screen('cs_phone')
+    call cs_rev_p02
+    call cs_rev_p03
+    call cs_rev_p04
+    $ assert renpy.cs_prologue_da>=6
+    $ assert len(renpy.cs_prologue_photos)==5
+    $ assert renpy.cs_prologue_checks==set(('darya_intro','battery7','battery2','phone_off'))
+    $ assert not renpy.get_screen('cs_phone') and not renpy.get_screen('cs_instagram_post')
+    $ open(config.basedir+'/PROLOGUE_VISUALS_PASS.json','w').write(cs_bus_qa_json.dumps(dict(status='PASS',photos=sorted(renpy.cs_prologue_photos),darya_dialogue_lines=renpy.cs_prologue_da,checks=sorted(renpy.cs_prologue_checks),no_portraits_over_gallery=True,screens_closed=True)))
+    $ renpy.cs_prologue_qa=False
+    $ cs_restore_audio()
+    $ renpy.quit()
+
+testcase cs_prologue_visuals:
+    pause 0.3
+    $ _test.force=True
+    $ _test.timeout=120.0
+    $ _preferences.transitions=0
+    $ _preferences.text_cps=0
+    run Start('cs_qa_prologue_visuals')
+    pause 100.0
+
+init 270 python:
+    renpy.cs_window_qa=False
+    renpy.cs_window_started=False
+    renpy.cs_window_transitions=0
+    cs_window_test_with_base=renpy.with_statement
+    def cs_window_test_with(*args,**kwargs):
+        if renpy.cs_window_qa and renpy.cs_window_started:
+            assert store._window and not store._window_auto, 'ADV window lost between lines'
+            renpy.cs_window_transitions+=1
+        return cs_window_test_with_base(*args,**kwargs)
+    renpy.with_statement=cs_window_test_with
+    def cs_window_test_frame(event,**kwargs):
+        if renpy.cs_window_qa and event=='show_done':
+            assert store._window and not store._window_auto
+            renpy.cs_window_started=True
+    config.all_character_callbacks.append(cs_window_test_frame)
+
+label cs_qa_dialogue_window:
+    $ cs_reset_state()
+    $ cs_active=True
+    $ set_mode_adv()
+    $ renpy.cs_prologue_qa=True
+    $ renpy.cs_window_qa=True
+    call cs_rev_p03
+    $ assert renpy.cs_window_transitions>3
+    $ renpy.screenshot(config.basedir+'/dialogue_window_after_line.png')
+    with Dissolve(0.4)
+    $ assert _window and not _window_auto
+    $ renpy.cs_window_qa=False
+    $ renpy.cs_prologue_qa=False
+    $ cs_director_scene('black')
+    $ assert not _window
+    window hide
+    pause 0.2
+    $ assert not _window
+    $ cs_active=False
+    $ _window=False
+    $ cs_window_say_arguments(None,'Outside mod')
+    $ assert not _window
+    $ open(config.basedir+'/DIALOGUE_WINDOW_PASS.json','w').write(cs_bus_qa_json.dumps(dict(status='PASS',transitions_checked=renpy.cs_window_transitions,explicit_hide_preserved=True,outside_mod_unchanged=True)))
+    $ renpy.quit()
+
+testcase cs_dialogue_window:
+    pause 0.3
+    $ _test.force=True
+    $ _test.timeout=120.0
+    $ _preferences.transitions=2
+    $ _preferences.text_cps=0
+    run Start('cs_qa_dialogue_window')
+    pause 100.0

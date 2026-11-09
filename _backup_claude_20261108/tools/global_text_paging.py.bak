@@ -1,0 +1,70 @@
+"""Project ADV pacing; only Say strings change, never adjacent staging or rewards."""
+import ast,hashlib,json,re
+from pathlib import Path
+
+SAY=re.compile(r'^(\s*)(cs_\w+)\s+(u?"(?:[^"\\]|\\.)*")(\s*)$')
+END=re.compile(r'[.!?…]+[»”"\)\]]*(?=\s+[А-ЯЁA-Z0-9«“"—])')
+ABBREV=re.compile(r'(?:(?i:\b(?:тов|им|ул|стр|рис|г|д|т|е|др|пр))|\b[А-ЯЁA-Z])\.$')
+
+def chunks(text):
+    # Do not cut inside interpolation or text markup. Marked passages are audited.
+    if '{' in text or '[' in text:return [text]
+    out=[];start=0
+    for match in END.finditer(text):
+        end=match.end()
+        if ABBREV.search(text[max(0,match.start()-12):end]):continue
+        if text[match.start()] == '.' and match.start()>0 and text[match.start()-1].isdigit() and end<len(text) and text[end:end+1].isdigit():continue
+        out.append(text[start:end].strip());start=end
+    tail=text[start:].strip()
+    if tail:out.append(tail)
+    return out or [text]
+
+def page_source(root,path):
+    root=Path(root);path=Path(path);rel=path.relative_to(root).as_posix()
+    lines=path.read_text(encoding='utf-8-sig').splitlines();result=[];events=[];occ={}
+    # Raw builders call this once per output. A second direct call is harmless.
+    if any('# cs_page_anchor:' in line for line in lines):return
+    for number,line in enumerate(lines,1):
+        match=SAY.match(line)
+        if not match:result.append(line);continue
+        indent,who,quoted,_=match.groups();text=ast.literal_eval(quoted)
+        key=(who,text);n=occ.get(key,0);occ[key]=n+1
+        anchor=hashlib.sha256((rel+'\0'+who+'\0'+text+'\0'+str(n)).encode()).hexdigest()[:20]
+        pages=chunks(text)
+        assert re.sub(r'\s+',' ',text).strip()==re.sub(r'\s+',' ',' '.join(pages)).strip()
+        if len(pages)==1:result.append(line);continue
+        result.append(indent+'# cs_page_anchor: '+anchor)
+        first=len(result)+1
+        for page in pages:result.append(indent+who+' '+json.dumps(page,ensure_ascii=False))
+        events.append(dict(anchor=anchor,old_line=number,line=first,who=who,original=text,pages=pages))
+    path.write_text('\n'.join(result)+'\n',encoding='utf-8')
+    folder=root/'source/text_paging_20261108/emissions';folder.mkdir(parents=True,exist_ok=True)
+    (folder/(path.stem+'.json')).write_text(json.dumps(dict(relative=rel,events=events),ensure_ascii=False,indent=2),encoding='utf-8')
+
+def compatibility(root):
+    root=Path(root);folder=root/'source/text_paging_20261108'
+    legacy=json.loads((folder/'legacy_addresses.json').read_text(encoding='utf-8'))
+    targets={}
+    for p in (folder/'emissions').glob('*.json'):
+        data=json.loads(p.read_text(encoding='utf-8'))
+        for event in data['events']:targets[event['anchor']]=(data['relative'],event['line'])
+    records={}
+    for record in legacy:
+        if record['anchor'] in targets:
+            old=tuple(record['id']) if isinstance(record['id'],list) else record['id']
+            records[old]=targets[record['anchor']]
+    code='\n# Resume an old long Say at its first new page; do not replay its cues.\ninit 122 python:\n'
+    code+='    cs_page_saved_addresses = '+repr(list(records.items()))+'\n'
+    code+='''    cs_page_live_says={}
+    for _cs_page_node in list(renpy.game.script.namemap.values()):
+        if type(_cs_page_node).__name__ != "Say":continue
+        _cs_page_file=str(getattr(_cs_page_node,"filename","")).replace("\\\\","/")
+        if "/days/" not in _cs_page_file:continue
+        _cs_page_rel="days/"+_cs_page_file.split("/days/",1)[1]
+        cs_page_live_says[(_cs_page_rel,_cs_page_node.linenumber)]=_cs_page_node
+    for _cs_page_old,_cs_page_target in cs_page_saved_addresses:
+        if _cs_page_target in cs_page_live_says:
+            renpy.game.script.namemap[_cs_page_old]=cs_page_live_says[_cs_page_target]
+'''
+    with (root/'revision_staging.rpy').open('a',encoding='utf-8') as stream:stream.write(code)
+    return len(records)

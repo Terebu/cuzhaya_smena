@@ -1,0 +1,44 @@
+{
+  "status": "PASS",
+  "file": "audio/ambience/sports_court_day.ogg",
+  "sources": [
+    "school_playground",
+    "soccer_kick"
+  ],
+  "voices_start": 90,
+  "voices_duration": 48,
+  "kick_times": [
+    2.8,
+    6.3,
+    9.6,
+    11.5,
+    16.9,
+    20.0,
+    22.8,
+    28.6,
+    32.0,
+    36.9,
+    40.7,
+    44.2
+  ],
+  "kick_gains": [
+    0.34,
+    0.26,
+    0.31,
+    0.22,
+    0.32,
+    0.24,
+    0.3,
+    0.25,
+    0.33,
+    0.23,
+    0.28,
+    0.24
+  ],
+  "crossfade_seconds": 1.5,
+  "processing": "loudnorm=I=-24:TP=-4:LRA=8,alimiter=limit=0.60:level=false:latency=true",
+  "seconds": 46.5,
+  "peak_dbfs": -7.315277576446533,
+  "rms_dbfs": -27.130447387695312,
+  "sha256": "ab0382868449393a8187a014f04b5cc3e00068f608bc1b1fa9f2cebb8da10a10"
+}

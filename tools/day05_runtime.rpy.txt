@@ -1,0 +1,164 @@
+init 20 python:
+    # Short background exchanges are heard, without staging extra portraits.
+    for cs_d5_id,cs_d5_name in (('pioneer',u'Пионер'),('other_pioneer',u'Другой пионер'),('cook',u'Повариха'),('girl',u'Девочка'),('ulyana',u'Ульяна')):
+        setattr(store,'cs_d5_'+cs_d5_id,Character(cs_d5_name,color='#c8c4ae',what_style='normal_prolog',ctc='ctc_animation',ctc_position='fixed'))
+    cs_d5_voice = Character(u"???", color="#b8a8d8", what_style="normal_prolog", ctc="ctc_animation", ctc_position="fixed")
+    cs_d5_seven_knocks = cs_resolve_asset("audio/day05/seven_knocks.wav")
+    def cs_d5_room(image):
+        if not renpy.has_image(tuple(image.split()), exact=True):
+            raise Exception("Missing Day 5 background: " + image)
+        cs_director_scene(image)
+        renpy.scene()
+        renpy.show(image)
+        store.cs_d5_cast = []
+        store.cs_d5_offscreen_exchange = False
+        cs_d5_costume(store.cs_d5_outfit)
+        renpy.with_statement(Dissolve(0.45))
+    def cs_d5_costume(costume):
+        if costume not in ('pioneer','sport'): raise Exception('Unsupported Day 5 outfit: '+costume)
+        store.cs_d5_outfit = costume
+        image = "cs_darya shrug " + costume + " normal"
+        if not renpy.has_image(tuple(image.split()), exact=True):
+            raise Exception("Missing Day 5 costume: " + image)
+        store.cs_director_people["cs_darya"] = (tuple(image.split()), [store.cs_darya_normal_center])
+        store.cs_director_states["cs_darya"] = "PRESENT_OFFSCREEN"
+        if renpy.showing("cs_darya"):
+            renpy.show(image, at_list=[store.cs_darya_normal_center])
+    def cs_d5_focus(speaker):
+        if renpy.get_screen('cs_d5_insert'):
+            cs_frame_focus([])
+            return
+        if speaker.startswith('d5_'):
+            cs_pov_begin()
+            store.cs_d5_offscreen_exchange = True
+            return
+        if speaker == 'ls' and cs_d5_offscreen_exchange:
+            cs_frame_focus([])
+            return
+        if cs_d5_scene == 1 and not cs_d5_dressed and speaker in ('da','ls'):
+            cs_frame_focus([])
+            store.cs_d5_cast = []
+            return
+        tag = {"da":"cs_darya", "sy":"cs_semen", "mz":"cs_zhenya", "vi":"cs", "un":"un", "sl":"sl", "mt":"mt", "dv":"dv", "mi":"mi"}.get(speaker)
+        # POV responses keep their interlocutor. Offscreen voices have no portrait.
+        if speaker == "voice":
+            cs_frame_focus([])
+            store.cs_d5_offscreen_exchange = True
+        elif tag:
+            store.cs_d5_offscreen_exchange = False
+            mood = 'normal'
+            n = store.cs_d5_scene
+            image = None
+            if tag == 'cs_darya':
+                mood = {2:'thinking',6:'worried',7:'serious',8:'neutral',9:'smile',10:'thinking',12:'thinking',13:'thinking',14:'worried',15:'worried',16:'serious',17:'neutral',18:'worried',19:'thinking',20:'worried'}.get(n,'shrug')
+                image = 'cs_darya '+mood+' '+cs_d5_outfit+' normal'
+            elif tag == 'cs_semen':
+                image = 'cs_semen '+('serious' if n>=18 else 'thinking' if n in (2,4,6,7,8,14,15) else 'neutral')+' pioneer normal'
+            elif tag == 'cs_zhenya':
+                image = 'cs_zhenya '+('thinking' if n>=14 else 'glasses_touch' if n in (3,8) else 'normal')+' pioneer normal'
+            if image:
+                if not renpy.has_image(tuple(image.split()),exact=True): raise Exception('Missing Day 5 expression: '+image)
+                if renpy.showing(tag):
+                    if renpy.get_attributes(tag)!=tuple(image.split()[1:]): renpy.show(image)
+                else:
+                    position=cs_director_defaults[tag][1]
+                    store.cs_director_people[tag]=(tuple(image.split()),[getattr(store,position)])
+            cast = [tag]
+            previous = store.cs_d5_cast
+            allowed = cs_d5_present()
+            if tag not in allowed:
+                raise Exception("Day 5 absent speaker: " + speaker)
+            if previous and previous[0] != tag and previous[0] in allowed:
+                cast.append(previous[0])
+            cs_frame_focus(cast)
+            store.cs_d5_cast = cast
+        elif not store.cs_d5_cast:
+            preferred = {2:"cs_semen",3:"cs_zhenya",4:"mt",5:"cs_zhenya",7:"cs_semen",8:"cs_zhenya",10:"un",11:"cs_semen",12:"sl",13:"dv",14:"un",16:"mt",17:"cs_semen",18:"mt",19:"cs_semen"}.get(cs_d5_scene,"cs_darya")
+            store.cs_d5_cast = [preferred]
+            cs_frame_focus(store.cs_d5_cast)
+        elif cs_reflective_shot:
+            cs_frame_focus([t for t in store.cs_d5_cast if t in cs_d5_present()])
+
+    def cs_d5_present():
+        n = store.cs_d5_scene
+        if n == 9 and 'library' in (cs_director_location_key or ''):
+            return ['cs_zhenya','cs_semen','cs_darya']
+        if n == 10 and 'int_library' in (cs_director_location_key or ''):
+            return ['cs_zhenya','cs_semen','cs_darya','un']
+        casts = {1:["cs_darya","cs_semen"],2:["cs_darya","cs_semen"],3:["cs_darya","cs_semen","cs_zhenya"],4:["mt","cs_darya","cs_semen","cs_zhenya"],5:["cs_darya","cs_semen","cs_zhenya"],6:["cs_darya","cs_semen","cs_zhenya"],7:["cs_darya","cs_semen","cs_zhenya","mt"],8:["cs_darya","cs_semen","cs_zhenya"],9:["cs_darya"],10:["un","cs_darya"],11:["un","cs_darya","cs_semen","cs_zhenya","sl"],12:["sl","cs_darya","cs_semen","cs_zhenya","dv"],13:["mi","dv","cs_darya","cs_semen"]}
+        if n in casts:
+            return casts[n]
+        base = ["cs_darya","cs_semen","cs_zhenya","un","mt","cs"]
+        for tag, present in (("sl",cs_d5_slavya_present if n>=19 else cs_d5_slavya_volunteer),("mi",cs_d5_miku_present if n>=19 else cs_d5_miku_volunteer),("dv",cs_d5_alisa_present if n>=19 else cs_friend_dv>=4)):
+            if present: base.append(tag)
+        # Scene 19 includes brief handovers by helpers before their departure.
+        if n == 19: base += ["sl","mi","dv"]
+        return base
+
+init 80 python:
+    def cs_d5_reset_for_new_game(_base=cs_reset_state):
+        _base()
+        # Screens belong to the previous playthrough, not the next Day 5 run.
+        for screen in ('cs_d5_insert','cs_d5_clock_face','cs_d5_notes'):
+            renpy.hide_screen(screen)
+    cs_reset_state=cs_d5_reset_for_new_game
+
+    def cs_d5_loaded_costume():
+        if not cs_active or not cs_d5_started:
+            return
+        if cs_d5_scene >= 2:
+            store.cs_d5_dressed = True
+        # Old Day 5 saves used underwear/sport. Repair their visual state only.
+        if cs_d5_scene == 1 and not cs_d5_dressed:
+            key=cs_director_location_key or ''
+            if 'house_lena_darya_int' not in key:
+                store.cs_d5_dressed = True
+            else:
+                renpy.hide('cs_darya')
+                return
+        desired='sport' if cs_d5_scene in (1,2) and not cs_d5_run_finished else 'pioneer'
+        store.cs_d5_outfit=desired
+        saved=cs_director_people.get('cs_darya')
+        if saved and desired not in saved[0]:
+            store.cs_director_people['cs_darya']=(('cs_darya','shrug',desired,'normal'),saved[1])
+        if renpy.showing('cs_darya'):
+            attrs=renpy.get_attributes('cs_darya') or ()
+            if desired not in attrs:
+                cs_d5_costume(desired)
+    config.after_load_callbacks.append(cs_d5_loaded_costume)
+    config.interact_callbacks.append(cs_d5_loaded_costume)
+
+screen cs_d5_insert(content, caption):
+    zorder 80
+    if cs_d5_started and cs_active:
+        frame:
+            align (0.5, 0.35)
+            xmaximum 1150
+            padding (46, 32)
+            background Solid("#e3d6baf5")
+            vbox:
+                spacing 20
+                text caption color "#534936" size 25
+                text content color "#252018" size 39
+
+screen cs_d5_clock_face():
+    zorder 40
+    if cs_active and cs_d5_started and cs_d5_scene == 20:
+        frame:
+            align (0.94, 0.07)
+            padding (18, 12)
+            background Solid("#0b121de8")
+            text cs_d5_clock color "#ede7d9" size 34
+
+screen cs_d5_notes():
+    zorder 45
+    if cs_active and cs_d5_started and cs_d5_scene == 20:
+        frame:
+            align (0.5, 0.35)
+            padding (30, 24)
+            background Solid("#e3d6baf5")
+            vbox:
+                spacing 18
+                text "Записи на столе" color "#534936" size 28
+                text "Автобус у ворот видели вчетвером.\nИз салона назвали Семёна.\nСемь стуков. Голос сказал: «Сегодня»." color "#252018" size 32
+                text "Кто такой первый? Кто — вторая?\nЧто будет с остальными?" color "#252018" size 34

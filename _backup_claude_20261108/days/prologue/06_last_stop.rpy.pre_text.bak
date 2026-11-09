@@ -1,0 +1,74 @@
+# -*- coding: utf-8 -*-
+# Source: source/prologue.md. Dialogue is preserved verbatim.
+label cs_scene_06:
+    $ save_name = u"Чужая смена — Последняя остановка"
+    show cs_bus_winter at cs_bus_ride zorder -10 with Dissolve(1.5)
+    stop music fadeout 2.0
+    # cs_director_begin: entry frame; explicit scene plan
+    $ cs_frame_focus([])
+    with cs_sprite_change
+    # cs_director_end
+    cs_narrator "Автобус качнуло на повороте."
+    cs_narrator "За стеклом промелькнул дорожный знак. Прочитать надпись я не успела."
+    cs_narrator "Деревья становились плотнее, дорога — уже. Странно."
+    cs_narrator "Почему-то мне даже показалось, что по этой дороге мы уже проезжали."
+    cs_narrator "Хотя отличить один заснеженный участок леса от другого было практически невозможно."
+    cs_narrator "Водитель сидел неподвижно, только руки на руле двигались. Всё выглядело обыденно."
+    cs_narrator "И всё-таки что-то было не так. Не могла объяснить что. Наверное, устала."
+    cs_th "Нужно было вчера лечь спать раньше."
+    cs_narrator "Я зевнула."
+    cs_narrator "Рядом Дарья тоже чуть откинулась на спинку сиденья."
+    label cs_check_sleep_winter:
+    cs_narrator "Я заметила, как она прикрыла глаза."
+    cs_ls "Спать хочешь? — спросила я."
+    cs_narrator "Она чуть повернула голову."
+    # cs_darya_variety: reaction
+    show cs_dasha_winter shy normal at cs_darya_normal_center
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
+    cs_da "Немного."
+    cs_ls "Аналогично."
+    # cs_darya_stage: present in story
+    show cs_dasha_winter thinking normal at cs_darya_normal_center
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
+    cs_da "Долго ещё ехать?"
+    cs_narrator "Я посмотрела на зимний лес."
+    cs_ls "Понятия не имею."
+    # cs_darya_stage: present in story
+    show cs_dasha_winter shrug normal at cs_darya_normal_center
+    $ cs_presence_stage()
+    # cs_global_transition
+    with cs_sprite_change
+    cs_da "Обнадёживает."
+    cs_ls "Я стараюсь."
+    cs_narrator "Мы обе ненадолго замолчали."
+    cs_narrator "Я снова прислонилась к окну. От отопителя клонило в сон, веки тяжелели."
+    cs_th "Может, буквально на минутку? Ничего ведь не случится."
+    cs_narrator "Я прикрыла глаза."
+    cs_narrator "Автобус мягко покачивался, колёса шуршали по дороге. Впереди что-то звякнуло и стихло."
+    stop music fadeout 6.0
+    cs_narrator "Я слышала собственное дыхание — ровное, медленное. Рядом сидела Дарья."
+    $ cs_director_scene("cs_sleep_winter")
+    scene cs_sleep_winter
+    with Dissolve(1.5)
+    label cs_check_cg_winter:
+    cs_narrator "За окном тянулся зимний лес. Ничего страшного."
+    cs_narrator "Просто автобус. Просто дорога. Просто очень неудачная поездка в супермаркет."
+    cs_narrator "Звуки постепенно становились тише."
+    stop ambience fadeout 5.0
+    cs_narrator "Всё дальше — будто я погружалась под воду."
+    cs_narrator "Я попыталась открыть глаза. Не получилось. Или просто не захотелось."
+    cs_th "Надо будет спросить у водителя..."
+    cs_th "...где мы вообще..."
+    window hide dissolve
+    $ cs_director_scene("black")
+    scene black
+    with Dissolve(3.0)
+    stop ambience fadeout 3.0
+    pause 3.0
+    window hide dissolve
+    pause 3.0
+    return

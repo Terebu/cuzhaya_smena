@@ -1,0 +1,53 @@
+init 235 python:
+    renpy.cs_library_qa=False
+    renpy.cs_library_qa_seen=set()
+    cs_library_qa_base_say=config.say_arguments_callback
+    cs_library_qa_base_menu=config.menu_arguments_callback
+    def cs_library_qa_say(who,*args,**kwargs):
+        if cs_library_qa_base_say:args,kwargs=cs_library_qa_base_say(who,*args,**kwargs)
+        if renpy.cs_library_qa:kwargs['interact']=False
+        return args,kwargs
+    def cs_library_qa_pick(items,*args,**kwargs):
+        value=[v for label,v in items if v is not None][0]
+        return value() if callable(value) else value
+    def cs_library_qa_menu(*args,**kwargs):
+        if cs_library_qa_base_menu:args,kwargs=cs_library_qa_base_menu(*args,**kwargs)
+        if renpy.cs_library_qa:store.menu=cs_library_qa_pick
+        return args,kwargs
+    def cs_library_qa_frame(event,**kwargs):
+        if not renpy.cs_library_qa or event!='show_done':return
+        if renpy.showing('cs_library_interior_night'):
+            assert persistent.sprite_time=='night'
+            image=renpy.display.image.images[('cs_library_interior_night',)]
+            assert getattr(image,'filename',None)=='images/bg/int_library_night2.jpg'
+            if cs_rev_day not in renpy.cs_library_qa_seen:
+                renpy.cs_library_qa_seen.add(cs_rev_day)
+                renpy.pause(.1,hard=True)
+                renpy.screenshot(config.basedir+'/library_night_day%d.png'%cs_rev_day)
+    config.say_arguments_callback=cs_library_qa_say
+    config.menu_arguments_callback=cs_library_qa_menu
+    config.all_character_callbacks.append(cs_library_qa_frame)
+
+label cs_qa_library_night:
+    $ cs_reset_state()
+    $ cs_active=cs_day03_started=cs_rev_active=True
+    $ cs_friend_da=cs_friend_mz=cs_friend_se=cs_friend_un=3
+    $ cs_mz_evening_help_day3=True
+    $ set_mode_adv()
+    $ renpy.cs_library_qa=True
+    call cs_rev_d3_12
+    $ cs_d4_mz_friend_before_choice=3
+    $ cs_day04_started=True
+    call cs_rev_d4_12
+    $ assert renpy.cs_library_qa_seen==set((3,4))
+    $ open(config.basedir+'/LIBRARY_NIGHT_PASS.txt','w').write('PASS')
+    $ renpy.cs_library_qa=False
+    $ renpy.quit()
+
+testcase cs_library_night:
+    pause 0.3
+    $ _test.force=True
+    $ _test.timeout=120.0
+    $ _preferences.transitions=0
+    run Start('cs_qa_library_night')
+    click until label cs_check_finished

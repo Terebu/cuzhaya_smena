@@ -851,6 +851,7 @@ label cs_day04_12:
                     $ cs_frame_focus(cs_d4_scene_cast)
                     with cs_sprite_change
                 cs_ls "Но могу обещать, что больше не стану исчезать, ничего тебе не сказав."
+                cs_ls "И одна далеко не уйду."
                 cs_narrator "Даша смотрела на меня, потом улыбнулась."
                 if cs_reflective_shot:
                     $ cs_frame_focus(cs_d4_scene_cast)
@@ -883,6 +884,7 @@ label cs_day04_12:
                     $ cs_frame_focus(cs_d4_scene_cast)
                     with cs_sprite_change
                 cs_ls "Завтра посмотрим."
+                cs_ls "Одно могу сказать уже сейчас: одна я больше далеко не уйду. Обещаю."
                 cs_narrator "Она улыбнулась."
                 if cs_reflective_shot:
                     $ cs_frame_focus(cs_d4_scene_cast)

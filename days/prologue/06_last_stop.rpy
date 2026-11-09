@@ -61,8 +61,8 @@ label cs_scene_06:
     stop ambience fadeout 5.0
     cs_narrator "Всё дальше — будто я погружалась под воду."
     cs_narrator "Я попыталась открыть глаза. Не получилось. Или просто не захотелось."
-    cs_th "Надо будет спросить у водителя..."
-    cs_th "...где мы вообще..."
+    cs_th "Надо будет спросить у водителя…"
+    cs_th "…где мы вообще…"
     window hide dissolve
     $ cs_director_scene("black")
     scene black

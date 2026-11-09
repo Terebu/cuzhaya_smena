@@ -1,0 +1,81 @@
+init 130 python:
+    renpy.cs_lit_save_auto=False
+    renpy.cs_lit_save_fast=False
+    cs_lit_save_old_menu_args=config.menu_arguments_callback
+    cs_lit_save_old_say_args=config.say_arguments_callback
+    def cs_lit_pick_first(items,*args,**kwargs):
+        value=[v for label,v in items if v is not None][0]
+        return value() if callable(value) else value
+    def cs_lit_save_menu_args(*args,**kwargs):
+        if cs_lit_save_old_menu_args:args,kwargs=cs_lit_save_old_menu_args(*args,**kwargs)
+        if renpy.cs_lit_save_auto:store.menu=cs_lit_pick_first
+        return args,kwargs
+    def cs_lit_save_say_args(who,*args,**kwargs):
+        if cs_lit_save_old_say_args:args,kwargs=cs_lit_save_old_say_args(who,*args,**kwargs)
+        if renpy.cs_lit_save_fast and cs_d5_started and cs_d5_scene>0:
+            renpy.execution.not_infinite_loop(120)
+            if not cs_lit_save_target():kwargs['interact']=False
+        return args,kwargs
+    config.menu_arguments_callback=cs_lit_save_menu_args
+    config.say_arguments_callback=cs_lit_save_say_args
+    def cs_lit_save_target():
+        return cs_d5_scene=={'awake':1,'mid':2,'final':20}[renpy.cs_lit_save_case] and cs_lit_text()=={'awake':u'Проснулась я раньше горна.','mid':u'Мне опять снился автобус.','final':u'И впервые за весь день даже не попыталась пошутить.'}[renpy.cs_lit_save_case]
+    class CSLitSaveAt(Action):
+        def get_sensitive(self):return cs_lit_save_target()
+        def __call__(self):pass
+    class CSLitLoadAt(Action):
+        def get_sensitive(self):return cs_d5_scene=={'awake':1,'mid':2,'final':20}[renpy.cs_lit_save_case]
+        def __call__(self):pass
+
+label cs_qa_lit_previous_save:
+    $ cs_reset_state()
+    $ cs_active=cs_day03_started=cs_day04_done=cs_darya_known=cs_olga_seen=True
+    $ cs_friend_da=cs_friend_se=cs_friend_mz=3
+    $ set_mode_adv()
+    cs_narrator "Подготовка сохранения предыдущей редакции."
+    cs_narrator "Три исходных счётчика дружбы равны трём."
+    jump cs_day05
+
+testcase cs_lit_save_previous:
+    pause 0.5
+    $ _preferences.text_cps=0
+    $ _preferences.transitions=0
+    $ _test.force=True
+    $ renpy.cs_lit_save_auto=True
+    $ renpy.cs_lit_save_fast=True
+    run Start('cs_qa_lit_previous_save')
+    click until run CSLitSaveAt()
+    $ expected={'awake':(3,3,3),'mid':(4,3,3),'final':(5,5,4)}[renpy.cs_lit_save_case]
+    assert (cs_friend_da,cs_friend_se,cs_friend_mz)==expected
+    $ renpy.take_screenshot()
+    $ renpy.save('literary_previous_'+renpy.cs_lit_save_case)
+    run Quit(confirm=False)
+
+testcase cs_lit_load_previous:
+    pause 0.5
+    $ _preferences.transitions=0
+    $ _test.force=True
+    run Function(renpy.load,'literary_previous_'+renpy.cs_lit_save_case)
+    pause 0.1 until run CSLitLoadAt()
+    pause 0.2
+    $ expected={'awake':(3,3,3),'mid':(4,3,3),'final':(5,5,4)}[renpy.cs_lit_save_case]
+    assert (cs_friend_da,cs_friend_se,cs_friend_mz)==expected
+    assert cs_d5_literary_initialized
+    python:
+        if renpy.cs_lit_save_case=='mid':
+            assert cs_d5_choice_results.get(1)==0
+            cs_d5_choose(1,0)
+            assert (cs_friend_da,cs_friend_se,cs_friend_mz)==expected
+        if renpy.cs_lit_save_case=='final':
+            assert len(cs_d5_choice_results)==5
+            assert not renpy.get_screen('cs_d5_notes')
+            cs_d5_choose(5,0)
+            assert (cs_friend_da,cs_friend_se,cs_friend_mz)==expected
+    $ renpy.screenshot(config.basedir+'/literary_old_'+renpy.cs_lit_save_case+'.png')
+    $ open(config.basedir+'/literary_old_'+renpy.cs_lit_save_case+'_PASS.txt','w').write('PASS')
+    run Quit(confirm=False)
+
+init 131 python:
+    # A case selector belongs to the isolated test launch, never to a save slot.
+    import os as cs_lit_test_os
+    renpy.cs_lit_save_case=cs_lit_test_os.environ.get('CS_LIT_SAVE_CASE','awake')

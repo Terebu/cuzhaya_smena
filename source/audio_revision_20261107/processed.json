@@ -1,0 +1,83 @@
+[
+  {
+    "file": "audio/sfx/bus/engine_distant_loop.ogg",
+    "source": "engine_clean",
+    "start": 1.0,
+    "duration": 7.0,
+    "processing": "highpass=f=45,lowpass=f=420,afftdn=nr=10:nf=-45,loudnorm=I=-23:TP=-4:LRA=8",
+    "loop": true,
+    "sha256": "f9dc4bf03fa6a955d6a81f55d57c255a4dd75b2ee0bd86507bbb1e832237120d"
+  },
+  {
+    "file": "audio/sfx/bus/engine_near_loop.ogg",
+    "source": "engine_clean",
+    "start": 1.0,
+    "duration": 7.0,
+    "processing": "highpass=f=45,lowpass=f=2600,afftdn=nr=10:nf=-45,loudnorm=I=-23:TP=-4:LRA=8",
+    "loop": true,
+    "sha256": "64846bdfe38a1288d603a34cb7115aa7628cc41de321c01a4246dd1629beb28b"
+  },
+  {
+    "file": "audio/sfx/bus/air_brake_stop.ogg",
+    "source": "air_bleed",
+    "start": 0,
+    "duration": 0.38,
+    "processing": "highpass=f=90,lowpass=f=7000,atempo=0.8,loudnorm=I=-23:TP=-4:LRA=9,afade=t=in:d=0.012,afade=t=out:st=0.34:d=0.13",
+    "loop": false,
+    "sha256": "bf013fdd47bad46c0ae56b179d3c00dd5cb47d793a19f659f2776bfa6267c923"
+  },
+  {
+    "file": "audio/sfx/bus/pneumatic_door_open.ogg",
+    "source": "door_open",
+    "start": 0,
+    "duration": 2.02,
+    "processing": "highpass=f=65,lowpass=f=7000,loudnorm=I=-22:TP=-4:LRA=9,afade=t=in:d=0.015,afade=t=out:st=1.86:d=0.16",
+    "loop": false,
+    "sha256": "98862a154bf7199a2ea4e6407f21819cfd61695af92025219e3ee0ac442d1065"
+  },
+  {
+    "file": "audio/sfx/bus/pneumatic_door_close.ogg",
+    "source": "door_close",
+    "start": 0,
+    "duration": 1.94,
+    "processing": "highpass=f=65,lowpass=f=7000,loudnorm=I=-22:TP=-4:LRA=9,afade=t=in:d=0.025,afade=t=out:st=1.70:d=0.24",
+    "loop": false,
+    "sha256": "0507f736a8986a4e5e2f9d43fc6da1fe9f96ec26de2a88cf5eafa8cc2ffd76fc"
+  },
+  {
+    "file": "audio/sfx/bus/departure_fading.ogg",
+    "source": "engine_clean",
+    "start": 0.5,
+    "duration": 8.3,
+    "processing": "highpass=f=45,lowpass=f=2600,afftdn=nr=10:nf=-45,asetrate=48000*1.08,aresample=44100,loudnorm=I=-23:TP=-4:LRA=9,afade=t=in:d=0.25,afade=t=out:st=3.8:d=3.8",
+    "loop": false,
+    "sha256": "85b05a10815d311805bd1440764fcf85d126f8f143bc7c0f45997da3b9833225"
+  },
+  {
+    "file": "audio/sfx/bus/uncanny_drone_loop.ogg",
+    "source": "drone",
+    "start": 20,
+    "duration": 45,
+    "processing": "highpass=f=28,lowpass=f=1900,loudnorm=I=-24:TP=-3:LRA=8",
+    "loop": true,
+    "sha256": "2c1522038415b84505bc269d631470ffe81fdeea2902c9cd6b67f72155e00f9b"
+  },
+  {
+    "file": "audio/sfx/bus/female_chuckle_behind.ogg",
+    "source": "female_chuckle",
+    "start": 0,
+    "duration": 1.02,
+    "processing": "highpass=f=100,lowpass=f=6500,loudnorm=I=-20:TP=-3:LRA=7,afade=t=in:d=0.015,afade=t=out:st=0.88:d=0.14",
+    "loop": false,
+    "sha256": "1d5b60feb34859f43637336c5ddf720a511fe5232ad9ce4fca3c95bcaa53fdf1"
+  },
+  {
+    "file": "audio/sfx/bus/uncanny_knock_sting.ogg",
+    "source": "drone",
+    "start": 20,
+    "duration": 8,
+    "processing": "highpass=f=28,lowpass=f=1900,loudnorm=I=-24:TP=-3:LRA=8,afade=t=in:d=0.6,afade=t=out:st=5.5:d=2.5",
+    "loop": false,
+    "sha256": "877c51728be4ad4622a9c3910a3b17b72c729123f8993089f18ab886e6672583"
+  }
+]

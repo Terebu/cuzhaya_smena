@@ -1,0 +1,267 @@
+init 30 python:
+    # These voices have no standing sprite. They remain ordinary ADV speakers.
+    cs_rev_admin=Character(u"Женщина из администрации",color="#bcc6ae",what_style="normal_prolog")
+    cs_rev_driver=Character(u"Водитель",color="#aebbc9",what_style="normal_prolog")
+    cs_rev_pioneer=Character(u"Пионер",color="#b8bcaa",what_style="normal_prolog")
+    cs_rev_cook=Character(u"Повариха",color="#b8bcaa",what_style="normal_prolog")
+
+    def cs_rev_sfx(path,volume=0.4):
+        plain=path.split('>',1)[-1] if path.startswith('<') else path
+        if not renpy.loadable(plain):raise Exception('Missing native sound: '+plain)
+        renpy.music.set_volume(volume,channel='sound')
+        renpy.music.play(path,channel='sound',loop=False)
+
+    def cs_rev_knocks(count,volume=0.4):
+        if count<1:raise Exception('Invalid knock count')
+        renpy.music.set_volume(volume,channel='sound')
+        sequence=[]
+        for i in range(count):
+            sequence.append('<from 0.0 to 0.17>sound/sfx/knocking_door_outside.ogg')
+            if i+1<count:sequence.append('<silence 0.22>')
+        renpy.music.play(sequence,channel='sound',loop=False)
+
+    def cs_rev_music(track, volume=0.16, fadein=2.5):
+        if renpy.music.get_playing(channel='music')!=track:
+            renpy.music.play(track,channel='music',loop=True,fadeout=2.0,fadein=fadein)
+        renpy.music.set_volume(volume,channel='music',delay=1.0)
+
+    def cs_rev_time(value):
+        {'day':day_time,'sunset':sunset_time,'night':night_time,'prolog':prolog_time}[value]()
+        store.persistent.sprite_time='day' if value=='prolog' else value
+
+    def cs_rev_room(image):
+        if not renpy.has_image(tuple(image.split()),exact=True):raise Exception('Missing revision background: '+image)
+        if cs_rev_background==image and renpy.showing(image):return
+        cs_director_scene(image)
+        renpy.scene()
+        renpy.show(image)
+        store.cs_rev_background=image
+        store.cs_rev_cast=[]
+        # Location changes clear the shared director cache; seed the current costume afterwards.
+        cs_rev_costume(cs_rev_outfit)
+        if not cs_day03_started:
+            # Early days use the same verified map, with explicit channel ownership.
+            target=cs_day03_audio_target(image)
+            if image in ('cs_bus_city','cs_bus_winter'):target=cs_bus_moving
+            elif image in ('bg int_bus','cs_sunlight','cs_sleep_summer'):target=cs_forest
+            elif image in ('cs_street','cs_stop'):target=cs_wind
+            elif image=='cs_room':target=None
+            if target is not False:
+                store.cs_day03_audio_location=image
+                old=renpy.music.get_playing(channel='ambience')
+                if target is None:
+                    if old:renpy.music.stop(channel='ambience',fadeout=0.8)
+                elif old!=target or image in ('bg int_bus','cs_sunlight','cs_sleep_summer'):
+                    renpy.music.play(target,channel='ambience',loop=True,fadeout=0.0 if image in ('bg int_bus','cs_sunlight','cs_sleep_summer') else 0.8,fadein=1.0)
+                renpy.music.set_volume(0.16 if target else 0.0,channel='ambience',delay=0.5)
+        renpy.with_statement(Dissolve(0.7))
+
+    def cs_rev_costume(costume):
+        store.cs_rev_outfit=costume
+        newtag='cs_dasha_winter' if costume=='winter' else 'cs_darya'
+        store.cs_rev_allowed=[newtag if x in ('cs_dasha_winter','cs_darya') else x for x in cs_rev_allowed]
+        store.cs_rev_cast=[x for x in cs_rev_cast if x not in ('cs_dasha_winter','cs_darya')]
+        tag='cs_dasha_winter' if costume=='winter' else 'cs_darya'
+        other='cs_darya' if tag=='cs_dasha_winter' else 'cs_dasha_winter'
+        if renpy.showing(other):cs_actor_exit([other])
+        if tag=='cs_darya':
+            image=('cs_darya','shrug',costume,'normal')
+            assert renpy.has_image(image,exact=True),image
+            store.cs_director_people[tag]=(image,[cs_darya_normal_center])
+            if renpy.showing(tag):renpy.show(image,at_list=[cs_darya_normal_center])
+
+    def cs_rev_focus(who):
+        if cs_rev_offscreen_once:
+            store.cs_rev_offscreen_once=False
+            cs_pov_begin()
+            return
+        if who in ('unknown','rev_driver','rev_pioneer','rev_cook','rev_admin') or renpy.get_screen('cs_d5_insert') or renpy.showing('cs_d4_document'):
+            cs_pov_begin()
+            return
+        if who=='ls':
+            if cs_reflective_shot and cs_rev_cast:
+                cs_frame_focus([x for x in cs_rev_cast if x in cs_rev_allowed])
+            return
+        if who=='un' and cs_rev_day>=3:store.cs_un_name_known=True
+        tag={'da':'cs_dasha_winter' if cs_rev_outfit=='winter' else 'cs_darya','sy':'cs_semen','mz':'cs_zhenya','vi':'cs','un':'un','mt':'mt','sl':'sl','mi':'mi','dv':'dv','us':'us','sh':'sh','el':'el'}.get(who)
+        if tag is None:raise Exception('Unregistered revision speaker: '+who)
+        if who=='da' and cs_rev_darya_offscreen:
+            cs_pov_begin()
+            return
+        if tag not in cs_rev_allowed:raise Exception('Absent revision speaker: '+who)
+        cast=[tag]
+        if cs_rev_cast and cs_rev_cast[0]!=tag and cs_rev_cast[0] in cs_rev_allowed:cast.append(cs_rev_cast[0])
+        cs_frame_focus(cast)
+        store.cs_rev_cast=cast
+
+    def cs_rev_exit(tags):
+        cs_actor_exit(tags)
+        store.cs_rev_cast=[x for x in cs_rev_cast if x not in tags]
+        store.cs_rev_allowed=[x for x in cs_rev_allowed if x not in tags]
+
+    def cs_rev_choice(day, number, option):
+        values=dict(cs_rev_choices)
+        key='%d:%d'%(day,number)
+        if key not in values:
+            saved=dict(cs_rev_previous_awards)
+            for award,guard in cs_rev_award_guards.items():
+                if award.startswith(key+':'):saved[award]=bool(getattr(store,guard,None))
+            store.cs_rev_previous_awards=saved
+            values[key]=option
+        store.cs_rev_choices=values
+
+    def cs_rev_award(key, variable, amount):
+        if key in cs_rev_awards:return
+        guard=cs_rev_award_guards.get(key)
+        previous=cs_rev_previous_awards.get(key, bool(getattr(store,guard,None)) if guard else False)
+        if not previous:setattr(store,variable,getattr(store,variable)+amount)
+        store.cs_rev_awards=dict(cs_rev_awards,**{key:True})
+        if guard and isinstance(previous,bool):setattr(store,guard,True)
+
+    def cs_rev_finish_choice(day,number):
+        if day==4:
+            old={1:1,2:4,3:6,4:7,5:8,6:9,7:12}[number]
+            setattr(store,'cs_d4_choice_%02d_done'%old,True)
+
+    def cs_rev_begin(day,scene,cast):
+        store.cs_rev_active=True
+        store.cs_rev_day=day
+        store.cs_rev_scene=scene
+        store.cs_rev_allowed=list(cast)
+        store.cs_rev_cast=[x for x in cs_rev_cast if x in cast]
+        store.cs_rev_darya_offscreen=False
+        cs_frame_focus(store.cs_rev_cast)
+
+    def cs_rev_snapshot(name,source):
+        if getattr(store,name,None) is None:setattr(store,name,getattr(store,source))
+
+init 80 python:
+    cs_rev_base_reset=cs_reset_state
+    def cs_rev_reset():
+        cs_rev_base_reset()
+        for screen in ('cs_d5_insert','cs_d5_notes','cs_d5_clock_face'):
+            renpy.hide_screen(screen)
+    cs_reset_state=cs_rev_reset
+
+# Keep the last ADV window during sprite and screen transitions between lines.
+# Explicit window-hide sequences (day cards, endings) still take effect until
+# the next spoken/narrated line. This policy is local to an active mod session.
+init 95 python:
+    cs_window_base_say_arguments=config.say_arguments_callback
+    def cs_window_say_arguments(who,*args,**kwargs):
+        if cs_window_base_say_arguments:
+            args,kwargs=cs_window_base_say_arguments(who,*args,**kwargs)
+        if cs_active:
+            store._window=True
+            store._window_auto=False
+        return args,kwargs
+    config.say_arguments_callback=cs_window_say_arguments
+
+    cs_window_base_director_scene=cs_director_scene
+    def cs_window_director_scene(image):
+        if cs_active and image=="black":store._window=False
+        return cs_window_base_director_scene(image)
+    cs_director_scene=cs_window_director_scene
+
+# The summer bus is parked. Repair the ambience even when loading an older
+# save which resumes after the room statement and restores the moving loop.
+init 96 python:
+    def cs_rev_parked_bus_audio():
+        if not cs_active or not cs_rev_active or cs_day03_started:
+            return
+        if not any(renpy.showing(image) for image in ('bg int_bus','cs_sunlight','cs_sleep_summer')):
+            return
+        if renpy.music.get_playing(channel='ambience') != cs_forest:
+            renpy.music.play(cs_forest, channel='ambience', loop=True, fadeout=0.0, fadein=1.5)
+            renpy.music.set_volume(0.16, channel='ambience')
+        if renpy.music.get_playing(channel='sound') == cs_bus_moving:
+            renpy.music.stop(channel='sound', fadeout=0.6)
+    config.interact_callbacks.append(cs_rev_parked_bus_audio)
+    config.after_load_callbacks.append(cs_rev_parked_bus_audio)
+
+    def cs_rev_parked_bus_at_line(event, **kwargs):
+        if event == 'begin':cs_rev_parked_bus_audio()
+    config.all_character_callbacks.append(cs_rev_parked_bus_at_line)
+
+# Day 4 of the 6 November edition scores the old building by hand: the author's
+# remarks keep a quiet anxious theme there and stop it only at the voice. The
+# published day 4 keeps the automatic silence.
+init 97 python:
+    cs_rev_base_old_camp_silence=cs_day04_old_camp_silence
+    def cs_day04_old_camp_silence(image):
+        if getattr(store,"cs_rev_active",False) and getattr(store,"cs_rev_day",0)==4:
+            return
+        return cs_rev_base_old_camp_silence(image)
+
+# 8 November: interiors and the road get the native Everlasting Summer beds
+# instead of silence; every path is checked before use.
+init 97 python:
+    cs_rev_base_audio_target=cs_day03_audio_target
+    def cs_day03_audio_target(image):
+        base=cs_rev_base_audio_target(image)
+        if image.startswith(("bg int_library","cs_library_interior")):target="sound/ambiences/library_day.ogg"
+        elif image.startswith("bg int_musclub"):target="sound/ambiences/music_club_day.ogg"
+        elif image.startswith("bg int_clubs"):target="sound/ambiences/clubs_inside_day.ogg"
+        elif image.startswith(("cs_int_administration","cs_storage_int")):target="sound/ambiences/int_cabin_day.ogg"
+        elif image=="bg ext_camp_entrance_day":target="sound/ambiences/camp_entrance_day.ogg"
+        elif image.startswith("cs_road_"):target="sound/ambiences/forest_day.ogg"
+        elif image.startswith("cs_storage_ext_"):target="sound/ambiences/camp_center_day.ogg"
+        else:return base
+        # Apply story modes after recognising custom locations, including
+        # roads which the original base map does not know about.
+        if cs_active and getattr(store,"cs_d5_started",False):
+            mode=getattr(store,"cs_bus_audio_mode","natural")
+            if cs_d5_quiet or mode in ("hushed","silence"):return None
+            if mode=="ominous":return cs_bus_drone
+        return target if renpy.loadable(target) else base
+
+# The revised first two days use the same location beds, but have not enabled
+# the day-3 owner yet. Repair their loaded rooms as well. CGs retain the last
+# real location; the prologue sleep sequence keeps its explicitly authored cues.
+init 98 python:
+    def cs_rev_early_ambience_sync():
+        if not cs_active or not cs_rev_active or cs_day03_started or cs_rev_day not in (1,2):return
+        location=None
+        target=False
+        for tag in renpy.get_showing_tags():
+            name=' '.join((tag,)+tuple(renpy.get_attributes(tag) or ()))
+            value=cs_forest if name=='bg int_bus' else cs_day03_audio_target(name)
+            if value is not False:
+                location,target=name,value
+                break
+        if location is None and cs_day03_audio_location:
+            location=cs_day03_audio_location
+            target=cs_forest if location=='bg int_bus' else cs_day03_audio_target(location)
+        if target is False:return
+        current=renpy.music.get_playing(channel='ambience')
+        if target is None:
+            if current:renpy.music.stop(channel='ambience')
+        elif current!=target:
+            renpy.music.play(target,channel='ambience',loop=True,fadeout=0.0,fadein=0.8)
+            renpy.music.set_volume(0.16,channel='ambience')
+        if location:store.cs_day03_audio_location=location
+    def cs_rev_early_ambience_at_line(event,**kwargs):
+        if event=='begin':cs_rev_early_ambience_sync()
+    config.after_load_callbacks.append(cs_rev_early_ambience_sync)
+    config.interact_callbacks.append(cs_rev_early_ambience_sync)
+    config.all_character_callbacks.append(cs_rev_early_ambience_at_line)
+
+# Older mid-scene saves can retain the full cast before the bench encounter.
+init 99 python:
+    def cs_rev_d4_arrival_repair():
+        if not cs_active or not cs_rev_active or cs_rev_day!=4 or cs_rev_scene!=4:return
+        node=renpy.game.script.lookup(renpy.game.context().current)
+        if type(node).__name__!='Say':return
+        start=renpy.game.script.lookup('cs_rev_d4_04')
+        cursor=start.next
+        while cursor is not None:
+            if type(cursor).__name__=='Say' and getattr(cursor,'what','')==u'Семён поднял голову.':
+                if node.filename==cursor.filename and start.linenumber<node.linenumber<cursor.linenumber:
+                    cs_rev_exit(['cs_semen'])
+                return
+            if type(cursor).__name__=='Return':return
+            cursor=getattr(cursor,'next',None)
+    def cs_rev_d4_arrival_at_line(event,**kwargs):
+        if event=='begin':cs_rev_d4_arrival_repair()
+    config.after_load_callbacks.append(cs_rev_d4_arrival_repair)
+    config.all_character_callbacks.append(cs_rev_d4_arrival_at_line)

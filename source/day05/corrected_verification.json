@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "source_sha256": "415bb41888e8bf0db21257269e5b612886a5e594310b6253da6e086171ed3cf0",
+  "scenes": 20,
+  "menus": 5,
+  "indexed_paragraphs": 2755,
+  "dialogue_paragraphs": 1217,
+  "runtime_says": 2759,
+  "earlier_runtime_files_unchanged": 440,
+  "missing_or_duplicate_paragraphs": 0,
+  "cast_conditions_independent": true,
+  "explicit_speakers": true
+}

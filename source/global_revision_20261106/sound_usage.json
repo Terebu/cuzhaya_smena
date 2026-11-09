@@ -1,0 +1,581 @@
+{
+  "status": "PASS",
+  "cues": [
+    {
+      "document": "prologue_day01",
+      "paragraph": 344,
+      "cue": "dinner_horn_processed",
+      "path": "sound/sfx/dinner_horn_processed.ogg",
+      "volume": 0.6,
+      "origin": "Everlasting Summer native archive; referenced, not redistributed"
+    },
+    {
+      "document": "prologue_day01",
+      "paragraph": 456,
+      "cue": "close_door_1",
+      "path": "sound/sfx/close_door_1.ogg",
+      "volume": 0.35,
+      "origin": "Everlasting Summer native archive; referenced, not redistributed"
+    },
+    {
+      "document": "prologue_day01",
+      "paragraph": 486,
+      "cue": "open_door_1",
+      "path": "sound/sfx/open_door_1.ogg",
+      "volume": 0.4,
+      "origin": "Everlasting Summer native archive; referenced, not redistributed"
+    },
+    {
+      "document": "prologue_day01",
+      "paragraph": 502,
+      "cue": "close_door_1",
+      "path": "sound/sfx/close_door_1.ogg",
+      "volume": 0.4,
+      "origin": "Everlasting Summer native archive; referenced, not redistributed"
+    },
+    {
+      "document": "prologue_day01",
+      "paragraph": 725,
+      "cue": "dinner_horn_processed",
+      "path": "sound/sfx/dinner_horn_processed.ogg",
+      "volume": 0.6,
+      "origin": "Everlasting Summer native archive; referenced, not redistributed"
+    },
+    {
+      "document": "prologue_day01",
+      "paragraph": 886,
+      "cue": "click_3",
+      "path": "sound/sfx/click_3.ogg",
+      "volume": 0.2,
+      "origin": "Everlasting Summer native archive; referenced, not redistributed"
+    },
+    {
+      "document": "prologue_day01",
+      "paragraph": 899,
+      "cue": "<from 0.0 to 0.7>bus_idle",
+      "path": "sound/sfx/bus_idle.ogg",
+      "volume": 0.12,
+      "origin": "Everlasting Summer native archive; referenced, not redistributed"
+    },
+    {
+      "document": "day02",
+      "paragraph": 107,
+      "cue": "close_door_1",
+      "path": "sound/sfx/close_door_1.ogg",
+      "volume": 0.25,
+      "origin": "Everlasting Summer native archive; referenced, not redistributed"
+    },
+    {
+      "document": "day02",
+      "paragraph": 187,
+      "cue": "dinner_horn_processed",
+      "path": "sound/sfx/dinner_horn_processed.ogg",
+      "volume": 0.6,
+      "origin": "Everlasting Summer native archive; referenced, not redistributed"
+    },
+    {
+      "document": "day02",
+      "paragraph": 368,
+      "cue": "dinner_jingle_speaker",
+      "path": "sound/sfx/dinner_jingle_speaker.ogg",
+      "volume": 0.5,
+      "origin": "Everlasting Summer native archive; referenced, not redistributed"
+    },
+    {
+      "document": "day02",
+      "paragraph": 470,
+      "cue": "medpunkt_door_open",
+      "path": "sound/sfx/medpunkt_door_open.ogg",
+      "volume": 0.4,
+      "origin": "Everlasting Summer native archive; referenced, not redistributed"
+    },
+    {
+      "document": "day02",
+      "paragraph": 733,
+      "cue": "bodyfall_1",
+      "path": "sound/sfx/bodyfall_1.ogg",
+      "volume": 0.55,
+      "origin": "Everlasting Summer native archive; referenced, not redistributed"
+    },
+    {
+      "document": "day02",
+      "paragraph": 956,
+      "cue": "close_door_1",
+      "path": "sound/sfx/close_door_1.ogg",
+      "volume": 0.35,
+      "origin": "Everlasting Summer native archive; referenced, not redistributed"
+    },
+    {
+      "document": "day02",
+      "paragraph": 1036,
+      "cue": "dinner_horn_processed",
+      "path": "sound/sfx/dinner_horn_processed.ogg",
+      "volume": 0.6,
+      "origin": "Everlasting Summer native archive; referenced, not redistributed"
+    },
+    {
+      "document": "day02",
+      "paragraph": 1155,
+      "cue": "concert_applause",
+      "path": "sound/sfx/concert_applause.ogg",
+      "volume": 0.4,
+      "origin": "Everlasting Summer native archive; referenced, not redistributed"
+    },
+    {
+      "document": "day02",
+      "paragraph": 1221,
+      "cue": "click_3",
+      "path": "sound/sfx/click_3.ogg",
+      "volume": 0.2,
+      "origin": "Everlasting Summer native archive; referenced, not redistributed"
+    },
+    {
+      "document": "day03",
+      "paragraph": 75,
+      "cue": "<from 0.0 to 0.7>bus_idle",
+      "path": "sound/sfx/bus_idle.ogg",
+      "volume": 0.12,
+      "origin": "Everlasting Summer native archive; referenced, not redistributed"
+    },
+    {
+      "document": "day03",
+      "paragraph": 103,
+      "cue": "dinner_horn_processed",
+      "path": "sound/sfx/dinner_horn_processed.ogg",
+      "volume": 0.6,
+      "origin": "Everlasting Summer native archive; referenced, not redistributed"
+    },
+    {
+      "document": "day03",
+      "paragraph": 108,
+      "cue": "open_door_1",
+      "path": "sound/sfx/open_door_1.ogg",
+      "volume": 0.35,
+      "origin": "Everlasting Summer native archive; referenced, not redistributed"
+    },
+    {
+      "document": "day03",
+      "paragraph": 371,
+      "cue": "dinner_horn_processed",
+      "path": "sound/sfx/dinner_horn_processed.ogg",
+      "volume": 0.6,
+      "origin": "Everlasting Summer native archive; referenced, not redistributed"
+    },
+    {
+      "document": "day03",
+      "paragraph": 553,
+      "cue": "dinner_horn_processed",
+      "path": "sound/sfx/dinner_horn_processed.ogg",
+      "volume": 0.6,
+      "origin": "Everlasting Summer native archive; referenced, not redistributed"
+    },
+    {
+      "document": "day03",
+      "paragraph": 708,
+      "cue": "knocks:2",
+      "path": "sound/sfx/knocking_door_outside.ogg",
+      "volume": 0.45,
+      "origin": "Everlasting Summer native archive; referenced, not redistributed"
+    },
+    {
+      "document": "day04",
+      "paragraph": 92,
+      "cue": "open_door_1",
+      "path": "sound/sfx/open_door_1.ogg",
+      "volume": 0.25,
+      "origin": "Everlasting Summer native archive; referenced, not redistributed"
+    },
+    {
+      "document": "day04",
+      "paragraph": 99,
+      "cue": "close_door_1",
+      "path": "sound/sfx/close_door_1.ogg",
+      "volume": 0.25,
+      "origin": "Everlasting Summer native archive; referenced, not redistributed"
+    },
+    {
+      "document": "day04",
+      "paragraph": 148,
+      "cue": "door_squeak_light",
+      "path": "sound/sfx/door_squeak_light.ogg",
+      "volume": 0.3,
+      "origin": "Everlasting Summer native archive; referenced, not redistributed"
+    },
+    {
+      "document": "day04",
+      "paragraph": 150,
+      "cue": "far_steps",
+      "path": "sound/sfx/far_steps.ogg",
+      "volume": 0.25,
+      "origin": "Everlasting Summer native archive; referenced, not redistributed"
+    },
+    {
+      "document": "day04",
+      "paragraph": 173,
+      "cue": "door_squeak_light",
+      "path": "sound/sfx/door_squeak_light.ogg",
+      "volume": 0.2,
+      "origin": "Everlasting Summer native archive; referenced, not redistributed"
+    },
+    {
+      "document": "day04",
+      "paragraph": 197,
+      "cue": "knocks:1",
+      "path": "sound/sfx/knocking_door_outside.ogg",
+      "volume": 0.35,
+      "origin": "Everlasting Summer native archive; referenced, not redistributed"
+    },
+    {
+      "document": "day04",
+      "paragraph": 214,
+      "cue": "open_metal_door",
+      "path": "sound/sfx/open_metal_door.ogg",
+      "volume": 0.45,
+      "origin": "Everlasting Summer native archive; referenced, not redistributed"
+    },
+    {
+      "document": "day04",
+      "paragraph": 219,
+      "cue": "click_3",
+      "path": "sound/sfx/click_3.ogg",
+      "volume": 0.25,
+      "origin": "Everlasting Summer native archive; referenced, not redistributed"
+    },
+    {
+      "document": "day04",
+      "paragraph": 256,
+      "cue": "metal_door_large_close_basement",
+      "path": "sound/sfx/metal_door_large_close_basement.ogg",
+      "volume": 0.4,
+      "origin": "Everlasting Summer native archive; referenced, not redistributed"
+    },
+    {
+      "document": "day04",
+      "paragraph": 281,
+      "cue": "click_3",
+      "path": "sound/sfx/click_3.ogg",
+      "volume": 0.3,
+      "origin": "Everlasting Summer native archive; referenced, not redistributed"
+    },
+    {
+      "document": "day04",
+      "paragraph": 375,
+      "cue": "metal_door_heavy_close",
+      "path": "sound/sfx/metal_door_heavy_close.ogg",
+      "volume": 0.35,
+      "origin": "Everlasting Summer native archive; referenced, not redistributed"
+    },
+    {
+      "document": "day04",
+      "paragraph": 551,
+      "cue": "knocks:1",
+      "path": "sound/sfx/knocking_door_outside.ogg",
+      "volume": 0.45,
+      "origin": "Everlasting Summer native archive; referenced, not redistributed"
+    },
+    {
+      "document": "day04",
+      "paragraph": 828,
+      "cue": "dinner_horn_processed",
+      "path": "sound/sfx/dinner_horn_processed.ogg",
+      "volume": 0.6,
+      "origin": "Everlasting Summer native archive; referenced, not redistributed"
+    },
+    {
+      "document": "day04",
+      "paragraph": 910,
+      "cue": "open_door_clubs",
+      "path": "sound/sfx/open_door_clubs.ogg",
+      "volume": 0.35,
+      "origin": "Everlasting Summer native archive; referenced, not redistributed"
+    },
+    {
+      "document": "day04",
+      "paragraph": 1047,
+      "cue": "dinner_horn_processed",
+      "path": "sound/sfx/dinner_horn_processed.ogg",
+      "volume": 0.6,
+      "origin": "Everlasting Summer native archive; referenced, not redistributed"
+    },
+    {
+      "document": "day04",
+      "paragraph": 1333,
+      "cue": "close_door_1",
+      "path": "sound/sfx/close_door_1.ogg",
+      "volume": 0.3,
+      "origin": "Everlasting Summer native archive; referenced, not redistributed"
+    },
+    {
+      "document": "day05",
+      "paragraph": 65,
+      "cue": "bed_squeak1",
+      "path": "sound/sfx/bed_squeak1.ogg",
+      "volume": 0.3,
+      "origin": "Everlasting Summer native archive; referenced, not redistributed"
+    },
+    {
+      "document": "day05",
+      "paragraph": 113,
+      "cue": "open_door_1",
+      "path": "sound/sfx/open_door_1.ogg",
+      "volume": 0.35,
+      "origin": "Everlasting Summer native archive; referenced, not redistributed"
+    },
+    {
+      "document": "day05",
+      "paragraph": 297,
+      "cue": "dinner_horn_processed",
+      "path": "sound/sfx/dinner_horn_processed.ogg",
+      "volume": 0.6,
+      "origin": "Everlasting Summer native archive; referenced, not redistributed"
+    },
+    {
+      "document": "day05",
+      "paragraph": 313,
+      "cue": "water_splash",
+      "path": "sound/sfx/water_splash.ogg",
+      "volume": 0.35,
+      "origin": "Everlasting Summer native archive; referenced, not redistributed"
+    },
+    {
+      "document": "day05",
+      "paragraph": 453,
+      "cue": "open_door_1",
+      "path": "sound/sfx/open_door_1.ogg",
+      "volume": 0.4,
+      "origin": "Everlasting Summer native archive; referenced, not redistributed"
+    },
+    {
+      "document": "day05",
+      "paragraph": 553,
+      "cue": "close_door_1",
+      "path": "sound/sfx/close_door_1.ogg",
+      "volume": 0.35,
+      "origin": "Everlasting Summer native archive; referenced, not redistributed"
+    },
+    {
+      "document": "day05",
+      "paragraph": 1289,
+      "cue": "dinner_horn_processed",
+      "path": "sound/sfx/dinner_horn_processed.ogg",
+      "volume": 0.6,
+      "origin": "Everlasting Summer native archive; referenced, not redistributed"
+    },
+    {
+      "document": "day05",
+      "paragraph": 1746,
+      "cue": "campus_door_rattle",
+      "path": "sound/sfx/campus_door_rattle.ogg",
+      "volume": 0.3,
+      "origin": "Everlasting Summer native archive; referenced, not redistributed"
+    },
+    {
+      "document": "day05",
+      "paragraph": 1758,
+      "cue": "far_steps",
+      "path": "sound/sfx/far_steps.ogg",
+      "volume": 0.25,
+      "origin": "Everlasting Summer native archive; referenced, not redistributed"
+    },
+    {
+      "document": "day05",
+      "paragraph": 1798,
+      "cue": "open_door_clubs",
+      "path": "sound/sfx/open_door_clubs.ogg",
+      "volume": 0.35,
+      "origin": "Everlasting Summer native archive; referenced, not redistributed"
+    },
+    {
+      "document": "day05",
+      "paragraph": 1892,
+      "cue": "close_door_1",
+      "path": "sound/sfx/close_door_1.ogg",
+      "volume": 0.3,
+      "origin": "Everlasting Summer native archive; referenced, not redistributed"
+    },
+    {
+      "document": "day05",
+      "paragraph": 2102,
+      "cue": "dinner_horn_processed",
+      "path": "sound/sfx/dinner_horn_processed.ogg",
+      "volume": 0.6,
+      "origin": "Everlasting Summer native archive; referenced, not redistributed"
+    },
+    {
+      "document": "day05",
+      "paragraph": 2226,
+      "cue": "open_door_1",
+      "path": "sound/sfx/open_door_1.ogg",
+      "volume": 0.35,
+      "origin": "Everlasting Summer native archive; referenced, not redistributed"
+    },
+    {
+      "document": "day05",
+      "paragraph": 2240,
+      "cue": "close_door_1",
+      "path": "sound/sfx/close_door_1.ogg",
+      "volume": 0.35,
+      "origin": "Everlasting Summer native archive; referenced, not redistributed"
+    },
+    {
+      "document": "day05",
+      "paragraph": 2353,
+      "cue": "knocks:1",
+      "path": "sound/sfx/knocking_door_outside.ogg",
+      "volume": 0.4,
+      "origin": "Everlasting Summer native archive; referenced, not redistributed"
+    },
+    {
+      "document": "day05",
+      "paragraph": 2358,
+      "cue": "open_door_1",
+      "path": "sound/sfx/open_door_1.ogg",
+      "volume": 0.35,
+      "origin": "Everlasting Summer native archive; referenced, not redistributed"
+    },
+    {
+      "document": "day05",
+      "paragraph": 2653,
+      "cue": "close_door_1",
+      "path": "sound/sfx/close_door_1.ogg",
+      "volume": 0.3,
+      "origin": "Everlasting Summer native archive; referenced, not redistributed"
+    }
+  ],
+  "unique_resources": [
+    "sound/sfx/bed_squeak1.ogg",
+    "sound/sfx/bodyfall_1.ogg",
+    "sound/sfx/bus_idle.ogg",
+    "sound/sfx/campus_door_rattle.ogg",
+    "sound/sfx/click_3.ogg",
+    "sound/sfx/close_door_1.ogg",
+    "sound/sfx/concert_applause.ogg",
+    "sound/sfx/dinner_horn_processed.ogg",
+    "sound/sfx/dinner_jingle_speaker.ogg",
+    "sound/sfx/door_squeak_light.ogg",
+    "sound/sfx/far_steps.ogg",
+    "sound/sfx/knocking_door_outside.ogg",
+    "sound/sfx/medpunkt_door_open.ogg",
+    "sound/sfx/metal_door_heavy_close.ogg",
+    "sound/sfx/metal_door_large_close_basement.ogg",
+    "sound/sfx/open_door_1.ogg",
+    "sound/sfx/open_door_clubs.ogg",
+    "sound/sfx/open_metal_door.ogg",
+    "sound/sfx/water_splash.ogg"
+  ],
+  "external_downloads": [
+    {
+      "id": 379372,
+      "author": "13FPanska_Sychra_Petr",
+      "title": "door_open",
+      "url": "https://freesound.org/people/13FPanska_Sychra_Petr/sounds/379372/",
+      "download_url": "https://cdn.freesound.org/previews/379/379372_7024255-hq.mp3",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "retrieved": "2026-11-07",
+      "original": "source\\audio_revision_20261107\\originals\\door_open.mp3",
+      "sha256": "d0b012df16fe3ebb047bc69db12b7e52ab5fe31c1639febfd4ce30d5514c8e6e",
+      "bytes": 49440,
+      "used": true
+    },
+    {
+      "id": 512510,
+      "author": "shelbyshark",
+      "title": "drone",
+      "url": "https://freesound.org/people/shelbyshark/sounds/512510/",
+      "download_url": "https://cdn.freesound.org/previews/512/512510_8644110-hq.mp3",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "retrieved": "2026-11-07",
+      "original": "source\\audio_revision_20261107\\originals\\drone.mp3",
+      "sha256": "823fd855f631760fdc944db30353b4ae626d41d89ee716a0649d7695ee38230b",
+      "bytes": 6862031,
+      "used": true
+    },
+    {
+      "id": 379383,
+      "author": "13FPanska_Sychra_Petr",
+      "title": "engine_clean",
+      "url": "https://freesound.org/people/13FPanska_Sychra_Petr/sounds/379383/",
+      "download_url": "https://cdn.freesound.org/previews/379/379383_7024255-hq.mp3",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "retrieved": "2026-11-07",
+      "original": "source\\audio_revision_20261107\\originals\\engine_clean.mp3",
+      "sha256": "d889b252fb0371db8ca22e940415f25f98bcbfe183b5293aae0a845e8350010e",
+      "bytes": 220992,
+      "used": true
+    },
+    {
+      "id": 379374,
+      "author": "13FPanska_Sychra_Petr",
+      "title": "door_close",
+      "url": "https://freesound.org/people/13FPanska_Sychra_Petr/sounds/379374/",
+      "download_url": "https://cdn.freesound.org/previews/379/379374_7024255-hq.mp3",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "retrieved": "2026-11-07",
+      "original": "source\\audio_revision_20261107\\originals\\door_close.mp3",
+      "sha256": "7c6d7dea0dffec13984e589a1cdf4695131a16c6ed8d529fb859529b299aef2b",
+      "bytes": 47568,
+      "used": true
+    },
+    {
+      "id": 379368,
+      "author": "13FPanska_Sychra_Petr",
+      "title": "air_bleed",
+      "url": "https://freesound.org/people/13FPanska_Sychra_Petr/sounds/379368/",
+      "download_url": "https://cdn.freesound.org/previews/379/379368_7024255-hq.mp3",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "retrieved": "2026-11-07",
+      "original": "source\\audio_revision_20261107\\originals\\air_bleed.mp3",
+      "sha256": "d9f6c4966dfa6d03c3388b7078e420be03cd2ed9ae7dda2934ab646bbebdd10a",
+      "bytes": 12048,
+      "used": true
+    },
+    {
+      "id": 397673,
+      "author": "amoyssiadis",
+      "title": "short female laugh / chuckle",
+      "url": "https://freesound.org/people/amoyssiadis/sounds/397673/",
+      "download_url": "https://cdn.freesound.org/previews/397/397673_997090-hq.mp3",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "retrieved": "2026-11-07",
+      "original": "source\\audio_revision_20261107\\originals\\female_chuckle.mp3",
+      "sha256": "f845008bc44220317a738d4afe5aac30aafb7c67896e04168fcb90fc6b34c825",
+      "bytes": 19091,
+      "used": true
+    },
+    {
+      "id": 132855,
+      "author": "nickpursehouse",
+      "title": "SFX high school playground distant 02-01.wav",
+      "url": "https://freesound.org/people/nickpursehouse/sounds/132855/",
+      "download_url": "https://cdn.freesound.org/previews/132/132855_1665834-hq.mp3",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "retrieved": "2026-11-07",
+      "original": "source/audio_revision_20261107/originals/school_playground.mp3",
+      "sha256": "598e999634ad31dc202cf346b25fe0c0b4877522863c1407648c26d26de8e432",
+      "bytes": 8289600,
+      "used": true
+    },
+    {
+      "id": 555042,
+      "author": "bittermelonheart",
+      "title": "Soccer Ball Kick",
+      "url": "https://freesound.org/people/bittermelonheart/sounds/555042/",
+      "download_url": "https://cdn.freesound.org/previews/555/555042_11910076-hq.mp3",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "retrieved": "2026-11-07",
+      "original": "source/audio_revision_20261107/originals/soccer_kick.mp3",
+      "sha256": "7b5b6bd8f7567832c98f030e94783dba04108d74fef42fb24d5b2bbf1abb3949",
+      "bytes": 21504,
+      "used": true
+    }
+  ],
+  "credits": "SFX: Everlasting Summer; stock: 13FPanska_Sychra_Petr, amoyssiadis, bittermelonheart, nickpursehouse, shelbyshark (CC0)"
+}

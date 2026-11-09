@@ -1,0 +1,180 @@
+"""Explicit scene tree for the corrected 6 November manuscript.
+
+Paragraph indices refer to the preserved, nonempty source paragraphs. Editorial
+instructions are compiled as state/staging, never exposed as ADV dialogue.
+"""
+import json
+import re
+from day05_pov_layer import NAMES
+
+
+def apply_corrected(root, romance):
+    P = [r['text'] for r in json.loads((root/'source/day05/corrected_paragraphs.json').read_text(encoding='utf-8'))]
+    heads = [i for i, s in enumerate(P[:3010]) if re.match(r'Сцена \d\d\.', s)]
+    assert len(heads) == 20 and heads[0] == 43 and heads[-1] == 2602
+    art = {i for i in range(45, 3009) if not P[i].startswith(('[', 'Глава ', 'Сцена ', 'Выбор ', 'Вариант ', 'Общая сцена', 'А. ', 'Б. '))}
+    names = dict(NAMES, **{'Пионерка': 'd5_pioneer_girl'})
+    dialogue = {}
+    for i in sorted(art):
+        match = re.match(r'^([^:]+):\s*—\s*(.+)$', P[i])
+        if match:
+            assert match[1] in names, (i, match[1])
+            dialogue[i] = (names[match[1]], match[2])
+    speakers = {i: who for i, (who, text) in dialogue.items()}
+    B = {}
+    def branch(start, end, *parts): B[start] = (end, parts)
+    def two(start, middle, end, condition):
+        branch(start, end, (condition, start+1, middle), (None, middle+1, end))
+    two(54, 62, 74, romance)
+    branch(260,296,('cs_friend_se >= 4',261,282),('cs_friend_se >= 1',283,289),(None,290,296))
+    branch(437,446,('cs_sl_day4_notice_offer',438,446))
+    two(524,535,542,'cs_d4_od_trust_approach')
+    branch(993,1034,('cs_d5_asked_address and cs_friend_mz >= 4',994,1013),('cs_d5_asked_address',1014,1030),(None,1031,1034))
+    two(1087,1096,1103,'cs_d5_shared_pace')
+    branch(1127,1153,(romance,1128,1140),('cs_friend_da >= 4',1141,1148),(None,1149,1153))
+    two(1246,1266,1273,'cs_friend_un >= 4')
+    two(1343,1350,1356,'cs_d5_lena_dream_shared_early')
+    two(1422,1432,1437,'cs_friend_sl >= 4')
+    branch(1509,1521,('cs_mi_followup_invitation_day3',1510,1521))
+    two(1542,1557,1565,'cs_friend_dv >= 4')
+    two(1583,1599,1610,'cs_friend_mi >= 4')
+    two(1653,1655,1657,'not cs_d5_miku_volunteer')
+    two(1704,1713,1719,'cs_friend_mz >= 4')
+    two(1739,1742,1745,'cs_d5_miku_volunteer')
+    two(1849,1876,1883,'cs_friend_un >= 4')
+    two(2076,2085,2090,'cs_friend_un >= 4')
+    two(2158,2175,2184,'cs_d5_zhenya_address')
+    two(2298,2311,2317,'cs_friend_viola >= 4')
+    two(2369,2387,2395,'cs_d5_slavya_volunteer')
+    two(2395,2409,2417,'cs_friend_dv >= 4')
+    two(2417,2427,2433,'cs_friend_mi >= 4 and cs_d5_miku_volunteer')
+    two(2454,2463,2476,'cs_d5_semyon_agency')
+    branch(2495,2508,('cs_friend_se >= 4 and not cs_d5_semyon_address',2496,2508))
+    two(2508,2517,2523,'cs_friend_se >= 4')
+    two(2526,2535,2541,'cs_d5_shared_fear')
+    branch(2630,2646,(romance,2631,2635),('cs_friend_da >= 4',2636,2641),(None,2642,2646))
+    for start,end,flag in ((2647,2651,'slavya'),(2651,2657,'alisa'),(2657,2661,'miku')):
+        branch(start,end,('cs_d5_'+flag+'_present',start+1,end))
+    two(2793,2809,2822,'cs_friend_se >= 4')
+    two(2844,2855,2861,'cs_d5_lena_private_memory')
+    two(2909,2918,2925,'cs_d5_lena_respected')
+    M={
+        138:(169,[(139,142,156,['cs_d5_choose(1, 0)']),(140,157,168,['cs_d5_choose(1, 1)'])]),
+        384:(421,[(384,387,409,['cs_d5_choose(2, 0)']),(385,410,420,['cs_d5_choose(2, 1)'])]),
+        840:(878,[(841,844,857,['cs_d5_choose(3, 0)']),(842,858,877,['cs_d5_choose(3, 1)'])]),
+        1202:(1240,[(1203,1206,1224,['cs_d5_choose(4, 0)']),(1204,1225,1239,['cs_d5_choose(4, 1)'])]),
+        1970:(2026,[(1970,1973,2008,['cs_d5_choose(5, 0)']),(1971,2009,2025,['cs_d5_choose(5, 1)'])]),
+    }
+    # The choice ledger owns rewards. Metadata below contains state only.
+    A={}
+    for i,s in enumerate(P[:3010]):
+        if i in (155,167,408,419,856,876,1223,1238,2007,2024): continue
+        match = re.search(r'day05_(\w+) = (True|False)', s)
+        if match and s.startswith('[') and i not in (2581,2582,2583):
+            A[i]=['cs_d5_'+match[1]+' = '+match[2]]
+    A[445]=['cs_sl_day4_notice_offer = False','cs_d5_notice_completed = True']
+    A[1520]=['cs_mi_followup_invitation_day3 = False','cs_d5_miku_intro_heard = True']
+    replacements={109:'Даша одёрнула спортивную футболку и проверила шнурки на кроссовках.'}
+    dialogue[110]=('da','Только без рекордов. Не забывай про локоть.')
+    before={
+        45:['$ cs_d5_enter_literary()'],
+        57:['$ cs_d5_pajamas_visible = True','$ cs_d5_costume("pajamas")'],
+        71:['$ cs_d5_pajamas_visible = True','$ cs_d5_costume("pajamas")'],
+        75:['$ cs_d5_pajama_mood = "neutral"'],
+        88:['$ cs_d5_pajama_mood = "smile"'],
+        94:['$ cs_d5_pajamas_visible = False','$ cs_pov_begin()','with cs_sprite_leave'],
+        108:['$ cs_d5_dressed = True','$ cs_d5_costume("sport")'],
+        113:['$ cs_d5_room("cs_house_lena_darya_ext_day")'],
+        123:['$ cs_d5_room("bg ext_square_day")'],
+        129:['$ cs_d5_room("bg ext_playground_day")'],
+        179:['$ cs_d5_room("bg ext_washstand_day")'],
+        180:['$ cs_d5_room("bg ext_house_of_mt_day")'],
+        218:['play music cs_day_music_think fadein 1.2'],
+        310:['stop music fadeout 1.0','$ cs_d5_room("bg ext_washstand_day")'],
+        315:['$ cs_d5_room("cs_house_lena_darya_int_day")','cs_narrator "Семён подождал снаружи, пока мы с Дашей вернулись в домик. Она сменила спортивную форму на пионерскую, и мы догнали его у столовой."','$ cs_d5_run_finished = True','$ cs_d5_costume("pioneer")'],
+        428:['$ cs_d5_room("bg ext_dining_hall_near_day")'],
+        447:['$ cs_d5_documents_location = "zhenya"'],
+        464:['$ cs_d5_room("bg int_house_of_mt_day")'],
+        512:['$ cs_d5_documents_location = "olga"'],
+        553:['$ cs_d5_room("bg ext_house_of_mt_day")'],
+        572:['$ cs_d5_room("cs_camp_path_day")'],
+        578:['$ cs_d5_room("bg ext_no_bus")'],
+        627:['show screen cs_d5_insert("НЕ ОГЛЯДЫВАЙСЯ", "Надпись на остановке")'],
+        630:['hide screen cs_d5_insert'],
+        660:['$ cs_d5_room("cs_bus410_closed_day", duration=1.6, force=True)'],
+        716:['$ cs_d5_room("cs_bus410_open_day", duration=0.8, force=True)'],
+        749:['$ cs_d5_room("cs_bus410_closed_day", duration=0.8, force=True)'],
+        759:['$ cs_d5_room("bg ext_no_bus", duration=1.25, force=True)'],
+        878:['$ cs_d5_room("bg ext_square_day")'],
+        894:['$ cs_actor_exit(["sl"])','$ cs_d5_cast = []'],
+        896:['$ cs_d5_room("bg ext_no_bus")'],
+        920:['$ cs_d5_documents_location = "olga"'],
+        1065:['$ cs_d5_room("cs_camp_path_day")'],
+        1077:['$ cs_d5_room("bg ext_playground_day")'],
+        1245:['$ cs_d5_room("bg int_library_day")'],
+        1452:['$ cs_d5_room("bg ext_dining_hall_near_day")'],
+        1465:['$ cs_d5_room("cs_camp_path_day")'],
+        1468:['$ cs_d5_room("bg ext_musclub_day")'],
+        1490:['$ cs_d5_room("bg int_musclub_day")'],
+        1501:['play music cs_miku_piano_track fadein 0.5'],
+        1507:['stop music fadeout 0.5'],
+        1513:['play music cs_miku_piano_track fadein 0.5'],
+        1518:['stop music fadeout 0.5'],
+        1588:['play music cs_miku_piano_track fadein 0.5'],
+        1591:['stop music fadeout 0.5'],
+        1611:['stop music fadeout 0.5'],
+        1638:['$ cs_d5_room("cs_camp_path_day")'],
+        1651:['$ cs_d5_documents_location = "library"'],
+        1665:['$ cs_actor_exit(["mt"])','$ cs_d5_cast = []'],
+        1725:['$ cs_d5_knocks(7)'],
+        1807:['$ cs_d5_room("bg ext_library_day")'],
+        1812:['show screen cs_d5_insert("│  │  │  │  │  │  ╳", "Отметки на дверном косяке")'],
+        1814:['hide screen cs_d5_insert'],
+        1892:['$ cs_d5_room("bg int_library_day")'],
+        1909:['$ cs_d5_room("bg int_library_day")'],
+        2036:['$ cs_actor_exit(["mt", "cs"])','$ cs_d5_cast = []'],
+        2185:['$ cs_d5_room("bg ext_dining_hall_near_sunset")'],
+        2200:['$ cs_d5_room("cs_camp_path_sunset")'],
+        2201:['$ cs_d5_knocks(6)'],
+        2230:['$ cs_d5_room("bg int_house_of_mt_night")','$ cs_d5_documents_location = "olga"'],
+        2357:['$ cs_d5_heard_offscreen = True'],
+        2394:['$ cs_actor_exit(["sl"])','$ cs_d5_cast = []'],
+        2408:['$ cs_actor_exit(["dv"])','$ cs_d5_cast = []'],
+        2451:['$ cs_d5_room("bg ext_house_of_mt_night")'],
+        2542:['$ cs_d5_room("bg int_house_of_mt_night")'],
+        2594:['$ cs_pov_begin()','with cs_sprite_leave'],
+        2595:['$ cs_d5_quiet = True','stop ambience fadeout 0.5'],
+        2604:['$ cs_d5_quiet = True','$ cs_d5_clock = "23:57"','stop ambience fadeout 0.5','stop music fadeout 1.0','show screen cs_d5_clock_face'],
+        2661:['if not cs_d5_slavya_present:','    cs_narrator "Даша убрала термос подальше от края стола."','if not cs_d5_alisa_present:','    cs_narrator "Ольга Дмитриевна проверила фонарик и положила его рядом."','if not cs_d5_miku_present:','    cs_narrator "Виола придвинула будильник, чтобы видеть оба циферблата."'],
+        2677:['$ cs_d5_clock = "23:59"','$ cs_d5_clock_stopped = True'],
+        2686:['$ cs_bus_cue("cabin_bus")'],
+        2692:['$ cs_bus_cue("cabin_bus_stop")'],
+        2694:['$ cs_bus_cue("knock_warning")','$ cs_d5_knocks(7)'],
+        2696:['$ cs_d5_room("bg int_house_of_mt_night2")'],
+        2759:['show screen cs_d5_insert("Семёну", "Надпись на конверте")'],
+        2762:['hide screen cs_d5_insert'],
+        2774:['show screen cs_d5_insert("ОСТАТЬСЯ — ОДИН.\\nВЕРНУТЬСЯ — ОДИН.\\nВЫБИРАЕТ ПЕРВЫЙ.", "Карточка: лицевая сторона")'],
+        2780:['show screen cs_d5_insert("ТЫ УЖЕ ВЫБИРАЛ", "Карточка: оборот")'],
+        2781:['hide screen cs_d5_insert'],
+        2931:['show screen cs_d5_insert("ПЕРВЫЙ ИЛИ ВТОРАЯ.", "Надпись на двери")'],
+        2933:['show screen cs_d5_insert("ПЕРВЫЙ ИЛИ ВТОРАЯ.\\nДО РАССВЕТА.", "Надпись на двери")'],
+        2936:['hide screen cs_d5_insert'],
+        2994:['$ cs_pov_begin()','with cs_sprite_leave'],
+        3009:['hide screen cs_d5_insert','hide screen cs_d5_clock_face','hide screen cs_d5_notes','$ cs_bus_cue("mystery_end")','$ cs_director_scene("black")','scene black','with Dissolve(1.0)','stop ambience fadeout 0.5','stop music fadeout 1.0'],
+    }
+    from global_revision_sfx import cues
+    for i,lines in cues('day05').items():before.setdefault(i,[]).extend(lines)
+    variants={}
+    for i,flag in ((2581,'slavya'),(2582,'alisa'),(2583,'miku')):
+        art.add(i)
+        variants[i]=('cs_d5_'+flag+'_present',P[i].split(']',1)[1].strip(),None)
+    # Sustained inward passages, rather than every narrative beat, change focus.
+    thoughts={76,83,91,115,171,221,247,367,422,576,601,680,697,746,767,809,915,1110,1156,1199,1361,1440,1639,1672,1774,1843,1890,1959,2052,2115,2195,2210,2281,2324,2477,2586,2610,2683,2831,2867,2948,2981}
+    thoughts={i for i in thoughts if i in art and i not in dialogue}
+    backgrounds={0:'cs_house_lena_darya_int_day',1:'bg ext_house_of_mt_day',2:'bg int_dining_hall_people_day',3:'bg ext_house_of_mt_day',4:'bg ext_square_day',5:'cs_bus410_closed_day',6:'cs_camp_path_day',7:'bg int_library_day',9:'bg ext_library_day',10:'bg int_dining_hall_people_day',12:'bg ext_musclub_day',13:'bg int_library_day',16:'bg int_dining_hall_sunset',17:'bg ext_house_of_mt_night',18:'bg int_house_of_mt_night'}
+    scenes=[(h,h+2,heads[n+1] if n<19 else 3010,backgrounds.get(n)) for n,h in enumerate(heads)]
+    for index,event in {627:'warning',651:'approach',656:'near',669:'uncanny',672:'stop',716:'open',749:'close',755:'depart',759:'gone',787:'chuckle',788:'hush',798:'calm',1725:'warning',1792:'calm',2201:'warning',2230:'calm',2595:'silence'}.items():
+        cue='$ cs_bus_cue('+repr(event)+')'
+        if event in ('open','close'):before.setdefault(index,[]).insert(0,cue)
+        else:before.setdefault(index,[]).append(cue)
+    return P,B,M,A,set(range(45,3010))-art,before,replacements,scenes,speakers,art,thoughts,dialogue,variants

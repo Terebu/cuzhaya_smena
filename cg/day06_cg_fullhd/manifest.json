@@ -1,0 +1,110 @@
+[
+  {
+    "file": "cg/cg_day06_blank_pages_morning.png",
+    "title": "Утро без записей",
+    "size": [
+      1920,
+      1080
+    ],
+    "sha256": "4df365d946ea6af7982e7bc9d4852cd4c4c0125089e52ce07291255599157617"
+  },
+  {
+    "file": "cg/cg_day06_semen_farewell_day.png",
+    "title": "Прощание с Семёном",
+    "size": [
+      1920,
+      1080
+    ],
+    "sha256": "da0428b93496e6cfd42879e0e10d68e13b9afda9ad8c04c07b57c2a93c8799cf"
+  },
+  {
+    "file": "cg/cg_day06_archive_comparison_day.png",
+    "title": "Сверка документов в архиве",
+    "size": [
+      1920,
+      1080
+    ],
+    "sha256": "b2dd6afe389989bc7f34c2e44c8f47c825569083e74f4c5e2cc3a6f70366d015"
+  },
+  {
+    "file": "cg/cg_day06_pier_evening.png",
+    "title": "Разговор на пристани",
+    "size": [
+      1920,
+      1080
+    ],
+    "sha256": "9deba95152a2f5892ebad4812f5f7d8f7375f7e859581de2fb14c45f9b7d2958"
+  },
+  {
+    "file": "cg/cg_day06_fifth_place_intact.png",
+    "title": "Пятое место: целый хлеб",
+    "size": [
+      1920,
+      1080
+    ],
+    "sha256": "6cf6564fffa308d3119d49934d81ef2abbab610b54f292940f6983e40d5bcbf1"
+  },
+  {
+    "file": "cg/cg_day06_fifth_place_changed.png",
+    "title": "Пятое место: хлеб изменился",
+    "size": [
+      1920,
+      1080
+    ],
+    "sha256": "895446efe898d959746c3ccc78c4710f16a5044c501d9c396a4ae7eecc2f1b9a"
+  },
+  {
+    "file": "cg/cg_day06_separate_beds_night.png",
+    "title": "Ночной разговор",
+    "size": [
+      1920,
+      1080
+    ],
+    "sha256": "be8636a0050f81a223c304905575be92e4661902bc7af4e754bd790eef9a5552"
+  },
+  {
+    "file": "cg/cg_day06_drawing_by_library.png",
+    "title": "Рисование у библиотеки",
+    "size": [
+      1920,
+      1080
+    ],
+    "sha256": "75cf11b211fc3406a7db296b2beb762a8c63ddc4b86664e81ab67a76c39c7603"
+  },
+  {
+    "file": "cg/cg_day06_semen_bus_wave.png",
+    "title": "Семён машет из окна",
+    "size": [
+      1920,
+      1080
+    ],
+    "sha256": "9ca5536916f6dafdebca7ed15b6e21e836f42189c1fd88591d560456ff3ac5f6"
+  },
+  {
+    "file": "cg/cg_day06_cards_four.png",
+    "title": "Карты на четверых",
+    "size": [
+      1920,
+      1080
+    ],
+    "sha256": "6699cd45896010272356d050dbac41d6ecd7a10a502e12a0283f18ed09237fc1"
+  },
+  {
+    "file": "cg/cg_day06_fifth_place_tray.png",
+    "title": "Вымытый пятый прибор",
+    "size": [
+      1920,
+      1080
+    ],
+    "sha256": "071cb20848a0b139f705643e985f15310d5c473083950906ab37a7ca60ae552c"
+  },
+  {
+    "file": "cg/cg_day05_missing_minute.png",
+    "title": "Пропавшая минута: переход из пятого дня",
+    "size": [
+      1920,
+      1080
+    ],
+    "sha256": "ef10ddce3e746a9ce789b71b73f273f425100cf42221709c5659de83a673d8fb"
+  }
+]

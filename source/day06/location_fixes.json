@@ -1,0 +1,158 @@
+[
+  {
+    "file": "01_scene.rpy",
+    "old": "            cs_un \"Я сегодня отдельно.\"\n            cs_narrator \"Лена закрыла альбом и направилась завтракать.\"\n            cs_narrator \"Я не стала её задерживать.\"\n    $ cs_d6_room(\"bg int_dining_hall_people_day\",['cs_darya', 'cs_semen', 'mt', 'cs_zhenya', 'un', 'sl', 'dv', 'mi'])\n    play sound \"sound/sfx/dinner_horn_processed.ogg\"\n    $ cs_rev_music(cs_day_music_daily,0.12)\n    $ cs_d6_think()\n    cs_narrator \"Она кивнула, но руку с моего рукава убрала не сразу.\"\n    $ cs_d6_think()\n    cs_th \"Семён придержал дверь столовой.\"\n    cs_th \"Внутри звенела посуда, кто-то требовал ещё хлеба.\"\n    cs_th \"Я знала, где наш стол, где лежат ложки и как пройти мимо раздачи, не попав под локоть голодному пионеру.\"\n    $ cs_d6_think()\n",
+    "new": "            cs_un \"Я сегодня отдельно.\"\n            cs_narrator \"Лена закрыла альбом и направилась завтракать.\"\n            cs_narrator \"Я не стала её задерживать.\"\n    play sound \"sound/sfx/dinner_horn_processed.ogg\"\n    $ cs_rev_music(cs_day_music_daily,0.12)\n    $ cs_d6_think()\n    cs_narrator \"Она кивнула, но руку с моего рукава убрала не сразу.\"\n    $ cs_d6_think()\n    cs_th \"Семён придержал дверь столовой.\"\n    $ cs_d6_room(\"bg int_dining_hall_people_day\",['cs_darya', 'cs_semen', 'mt', 'cs_zhenya', 'un', 'sl', 'dv', 'mi'])\n    cs_th \"Внутри звенела посуда, кто-то требовал ещё хлеба.\"\n    cs_th \"Я знала, где наш стол, где лежат ложки и как пройти мимо раздачи, не попав под локоть голодному пионеру.\"\n    $ cs_d6_think()\n",
+    "count": 1
+  },
+  {
+    "file": "02_scene.rpy",
+    "old": "    cs_narrator \"Водитель знакомый.\"\n    cs_narrator \"Наш завтрашний отъезд, по её словам, уже стоял в расписании.\"\n    cs_narrator \"Я попросила показать список.\"\n    $ cs_d6_room(\"bg ext_dining_hall_near_day\",['cs_darya', 'cs_semen', 'mt'])\n    cs_narrator \"Внизу действительно значились две фамилии и завтрашняя дата.\"\n    cs_narrator \"Бумага выглядела старой, с загнутым краем.\"\n    cs_narrator \"Это ничего не доказывало, но хотя бы список не возник у меня на глазах.\"\n",
+    "new": "    cs_narrator \"Водитель знакомый.\"\n    cs_narrator \"Наш завтрашний отъезд, по её словам, уже стоял в расписании.\"\n    cs_narrator \"Я попросила показать список.\"\n    cs_narrator \"Внизу действительно значились две фамилии и завтрашняя дата.\"\n    cs_narrator \"Бумага выглядела старой, с загнутым краем.\"\n    cs_narrator \"Это ничего не доказывало, но хотя бы список не возник у меня на глазах.\"\n",
+    "count": 1
+  },
+  {
+    "file": "02_scene.rpy",
+    "old": "    menu:\n        \"Помочь Славе закончить сборы\":\n            $ cs_d6_choose(2,0)\n            cs_narrator \"Возле площади Славя пыталась пересчитать мешки с бельём и одновременно отвечала на вопросы со всех сторон.\"\n            $ cs_d6_allowed = ['cs_darya', 'sl']\n            $ cs_d6_focus(\"ls\")\n",
+    "new": "    menu:\n        \"Помочь Славе закончить сборы\":\n            $ cs_d6_choose(2,0)\n            $ cs_d6_room(\"bg ext_square_day\",['cs_darya', 'sl'])\n            cs_narrator \"Возле площади Славя пыталась пересчитать мешки с бельём и одновременно отвечала на вопросы со всех сторон.\"\n            $ cs_d6_allowed = ['cs_darya', 'sl']\n            $ cs_d6_focus(\"ls\")\n",
+    "count": 1
+  },
+  {
+    "file": "02_scene.rpy",
+    "old": "            $ cs_d6_think()\n            cs_th \"До обеда всё равно надо было чем-то заняться.\"\n            cs_th \"Смотреть на дорогу и мешать Семёну собираться — занятие увлекательное, но бесполезное.\"\n            cs_narrator \"На складе Славя обнаружила недостающую наволочку.\"\n            cs_narrator \"Мы вернулись за ней, потом помогли отнести коробку с кружками.\"\n            cs_narrator \"Работа оказалась простой и даже приятной: взяла, донесла, поставила.\"\n            cs_narrator \"Никаких неизвестных голосов в конце задания.\"\n",
+    "new": "            $ cs_d6_think()\n            cs_th \"До обеда всё равно надо было чем-то заняться.\"\n            cs_th \"Смотреть на дорогу и мешать Семёну собираться — занятие увлекательное, но бесполезное.\"\n            $ cs_d6_room(\"cs_storage_int_day\",['cs_darya', 'sl'])\n            cs_narrator \"На складе Славя обнаружила недостающую наволочку.\"\n            $ cs_d6_room(\"cs_storage_ext_day\",['cs_darya', 'sl'])\n            cs_narrator \"Мы вернулись за ней, потом помогли отнести коробку с кружками.\"\n            cs_narrator \"Работа оказалась простой и даже приятной: взяла, донесла, поставила.\"\n            cs_narrator \"Никаких неизвестных голосов в конце задания.\"\n",
+    "count": 1
+  },
+  {
+    "file": "02_scene.rpy",
+    "old": "            cs_narrator \"Она засмеялась и тут же проверила карманы.\"\n    label cs_check_d6_choice_2_done:\n    $ cs_d6_room(\"bg ext_library_day\",['cs_darya', 'un'])\n    $ cs_d6_room(\"bg ext_library_day\",['cs_darya', 'un'])\n    if cs_d6_un_private:\n        $ cs_d6_think()\n        cs_narrator \"Даша на минуту задержалась с Тихоновой.\"\n",
+    "new": "            cs_narrator \"Она засмеялась и тут же проверила карманы.\"\n    label cs_check_d6_choice_2_done:\n    $ cs_d6_room(\"bg ext_library_day\",['cs_darya', 'un'])\n    if cs_d6_un_private:\n        $ cs_d6_think()\n        cs_narrator \"Даша на минуту задержалась с Тихоновой.\"\n",
+    "count": 1
+  },
+  {
+    "file": "02_scene.rpy",
+    "old": "                cs_ls \"Конечно.\"\n                $ cs_d6_focus(\"ls\")\n                cs_ls \"Я вообще-то собиралась воспользоваться тем, что рядом есть человек с нормальными карандашами.\"\n                cs_narrator \"Мы посидели минут десять.\"\n                cs_narrator \"Я набросала её руку на обложке альбома, она — Дашу, которая делала вид, что не позирует.\"\n                cs_narrator \"Перед уходом Тихонова задержалась.\"\n                $ cs_d6_sketch_done = True\n                $ cs_d6_cg(\"cs_cg_day06_drawing_by_library\")\n            else:\n                cs_narrator \"Я спросила про вчерашнюю договорённость порисовать вместе.\"\n                cs_narrator \"Лена посмотрела на меня чуть удивлённо.\"\n",
+    "new": "                cs_ls \"Конечно.\"\n                $ cs_d6_focus(\"ls\")\n                cs_ls \"Я вообще-то собиралась воспользоваться тем, что рядом есть человек с нормальными карандашами.\"\n                $ cs_d6_cg(\"cs_cg_day06_drawing_by_library\")\n                cs_narrator \"Мы посидели минут десять.\"\n                cs_narrator \"Я набросала её руку на обложке альбома, она — Дашу, которая делала вид, что не позирует.\"\n                $ cs_d6_room(\"bg ext_library_day\",['cs_darya', 'un'])\n                cs_narrator \"Перед уходом Тихонова задержалась.\"\n                $ cs_d6_sketch_done = True\n            else:\n                cs_narrator \"Я спросила про вчерашнюю договорённость порисовать вместе.\"\n                cs_narrator \"Лена посмотрела на меня чуть удивлённо.\"\n",
+    "count": 1
+  },
+  {
+    "file": "02_scene.rpy",
+    "old": "                cs_un \"Ты всё ещё хочешь?\"\n                $ cs_d6_focus(\"ls\")\n                cs_ls \"Я вообще-то собиралась воспользоваться тем, что рядом есть человек с нормальными карандашами.\"\n                cs_narrator \"Мы посидели минут десять.\"\n                cs_narrator \"Я набросала её руку на обложке альбома, она — Дашу, которая делала вид, что не позирует.\"\n                cs_narrator \"Перед уходом Тихонова задержалась.\"\n                $ cs_d6_sketch_done = True\n                $ cs_d6_cg(\"cs_cg_day06_drawing_by_library\")\n        else:\n            cs_narrator \"Я не стала задерживать её с альбомом.\"\n            $ cs_d6_focus(\"ls\")\n",
+    "new": "                cs_un \"Ты всё ещё хочешь?\"\n                $ cs_d6_focus(\"ls\")\n                cs_ls \"Я вообще-то собиралась воспользоваться тем, что рядом есть человек с нормальными карандашами.\"\n                $ cs_d6_cg(\"cs_cg_day06_drawing_by_library\")\n                cs_narrator \"Мы посидели минут десять.\"\n                cs_narrator \"Я набросала её руку на обложке альбома, она — Дашу, которая делала вид, что не позирует.\"\n                $ cs_d6_room(\"bg ext_library_day\",['cs_darya', 'un'])\n                cs_narrator \"Перед уходом Тихонова задержалась.\"\n                $ cs_d6_sketch_done = True\n        else:\n            cs_narrator \"Я не стала задерживать её с альбомом.\"\n            $ cs_d6_focus(\"ls\")\n",
+    "count": 1
+  },
+  {
+    "file": "03_scene.rpy",
+    "old": "        cs_dv \"Пойдём, с другой стороны посмотрим.\"\n    $ cs_d6_think()\n    cs_narrator \"Семён обошёл автобус снаружи и сам заглянул внутрь.\"\n    cs_narrator \"Я осталась у ступенек.\"\n    cs_narrator \"Внутри пахло нагретыми сиденьями и пылью.\"\n    cs_narrator \"На переднем стекле лежала тряпка.\"\n    cs_narrator \"Возле водительского места дребезжала неплотно закрытая крышка.\"\n",
+    "new": "        cs_dv \"Пойдём, с другой стороны посмотрим.\"\n    $ cs_d6_think()\n    cs_narrator \"Семён обошёл автобус снаружи и сам заглянул внутрь.\"\n    $ cs_d6_room(\"bg int_bus\",['cs_darya', 'cs_semen', 'mt', 'cs_zhenya', 'un', 'sl', 'dv', 'mi'])\n    cs_narrator \"Я поднялась на первую ступеньку и заглянула в салон.\"\n    cs_narrator \"Внутри пахло нагретыми сиденьями и пылью.\"\n    cs_narrator \"На переднем стекле лежала тряпка.\"\n    cs_narrator \"Возле водительского места дребезжала неплотно закрытая крышка.\"\n",
+    "count": 1
+  },
+  {
+    "file": "03_scene.rpy",
+    "old": "    $ cs_d6_focus(\"ls\")\n    cs_ls \"Такой нормальный.\"\n    $ cs_d6_think()\n    cs_narrator \"Он решил, что я шучу, и вернулся к бумагам.\"\n    cs_narrator \"Посадка началась с обычной суматохи.\"\n    cs_narrator \"Кто-то забыл сумку, кто-то занял чужое место.\"\n",
+    "new": "    $ cs_d6_focus(\"ls\")\n    cs_ls \"Такой нормальный.\"\n    $ cs_d6_think()\n    $ cs_d6_room(\"bg ext_bus\",['cs_darya', 'cs_semen', 'mt', 'cs_zhenya', 'un', 'sl', 'dv', 'mi'])\n    cs_narrator \"Он решил, что я шучу, и вернулся к бумагам.\"\n    cs_narrator \"Посадка началась с обычной суматохи.\"\n    cs_narrator \"Кто-то забыл сумку, кто-то занял чужое место.\"\n",
+    "count": 1
+  },
+  {
+    "file": "03_scene.rpy",
+    "old": "    $ cs_d6_think()\n    cs_narrator \"Пётр закрыл двери.\"\n    cs_narrator \"Мику замахала нам из окна, Алиса что-то крикнула, но двигатель заглушил слова.\"\n    cs_narrator \"Семён сел у окна.\"\n    cs_narrator \"Я подняла руку; он ответил тем же.\"\n    $ cs_bus_cue(\"close\")\n    cs_narrator \"Автобус выехал за ворота и покатил по дороге.\"\n    cs_narrator \"Мы смотрели, пока он не скрылся за поворотом.\"\n    $ cs_d6_cg(\"cs_cg_day06_semen_bus_wave\")\n    $ cs_bus_engine(\"depart\")\n    stop music fadeout 1.5\n    cs_narrator \"Ещё немного был слышен мотор.\"\n    cs_narrator \"Потом стих и он.\"\n",
+    "new": "    $ cs_d6_think()\n    cs_narrator \"Пётр закрыл двери.\"\n    cs_narrator \"Мику замахала нам из окна, Алиса что-то крикнула, но двигатель заглушил слова.\"\n    $ cs_d6_cg(\"cs_cg_day06_semen_bus_wave\")\n    cs_narrator \"Семён сел у окна.\"\n    cs_narrator \"Я подняла руку; он ответил тем же.\"\n    $ cs_bus_cue(\"close\")\n    $ cs_bus_engine(\"depart\")\n    cs_narrator \"Автобус выехал за ворота и покатил по дороге.\"\n    cs_narrator \"Мы смотрели, пока он не скрылся за поворотом.\"\n    stop music fadeout 1.5\n    cs_narrator \"Ещё немного был слышен мотор.\"\n    cs_narrator \"Потом стих и он.\"\n",
+    "count": 1
+  },
+  {
+    "file": "03_scene.rpy",
+    "old": "        cs_da \"Пойдём к Ольге.\"\n    cs_narrator \"Семён прожил здесь на день больше нас.\"\n    cs_narrator \"Его седьмой день закончился отъездом — насколько мы могли судить с обочины.\"\n    $ cs_d6_room(\"cs_camp_path_day\",['cs_darya'])\n    cs_narrator \"Наш шестой продолжался.\"\n    $ cs_d6_think()\n    cs_th \"Я ещё раз посмотрела на пустую дорогу и пошла за Дашей.\"\n    return\n",
+    "new": "        cs_da \"Пойдём к Ольге.\"\n    cs_narrator \"Семён прожил здесь на день больше нас.\"\n    cs_narrator \"Его седьмой день закончился отъездом — насколько мы могли судить с обочины.\"\n    $ cs_d6_think()\n    cs_th \"Я ещё раз посмотрела на пустую дорогу и пошла за Дашей.\"\n    $ cs_d6_room(\"cs_camp_path_day\",['cs_darya'])\n    cs_narrator \"Наш шестой продолжался.\"\n    return\n",
+    "count": 1
+  },
+  {
+    "file": "04_scene.rpy",
+    "old": "    $ cs_d6_focus(\"da\")\n    cs_da \"Приятно иногда успеть первой.\"\n    $ cs_d6_room(\"bg int_house_of_mt_day\",['cs_darya', 'mt', 'cs'])\n    cs_narrator \"Ольга Дмитриевна встретила наш план без восторга.\"\n    cs_narrator \"Я показала ей лист с вопросами.\"\n    cs_narrator \"Даша назвала маршрут: знакомый вход, комната с документами, обратно той же дорогой.\"\n",
+    "new": "    $ cs_d6_focus(\"da\")\n    cs_da \"Приятно иногда успеть первой.\"\n    $ cs_d6_room(\"bg int_house_of_mt_day\",['cs_darya', 'mt', 'cs'])\n    cs_narrator \"Мы зашли к Ольге Дмитриевне, чтобы обсудить маршрут.\"\n    cs_narrator \"Ольга Дмитриевна встретила наш план без восторга.\"\n    cs_narrator \"Я показала ей лист с вопросами.\"\n    cs_narrator \"Даша назвала маршрут: знакомый вход, комната с документами, обратно той же дорогой.\"\n",
+    "count": 1
+  },
+  {
+    "file": "05_scene.rpy",
+    "old": "# -*- coding: utf-8 -*-\nlabel cs_day06_05:\n    $ save_name = \"Чужая смена — День 6: Бумаги под землёй\"\n    $ cs_d6_room(\"cs_camp_path_day\",['cs_darya'])\n    stop music fadeout 1.5\n    cs_narrator \"До старого лагеря дошли по знакомой тропе.\"\n    cs_narrator \"На развилке я уже не гадала, куда сворачивать.\"\n",
+    "new": "# -*- coding: utf-8 -*-\nlabel cs_day06_05:\n    $ save_name = \"Чужая смена — День 6: Бумаги под землёй\"\n    $ cs_d6_room(\"bg ext_path_day\",['cs_darya'])\n    stop music fadeout 1.5\n    cs_narrator \"До старого лагеря дошли по знакомой тропе.\"\n    cs_narrator \"На развилке я уже не гадала, куда сворачивать.\"\n",
+    "count": 1
+  },
+  {
+    "file": "05_scene.rpy",
+    "old": "    cs_narrator \"Внизу горела знакомая лампа.\"\n    cs_narrator \"Я не стала трогать выключатель.\"\n    cs_narrator \"Виолины советы пока отлично держались в памяти.\"\n    cs_narrator \"В комнате с документами всё осталось на месте.\"\n    cs_narrator \"Мы поставили рюкзак у выхода, положили фонари так, чтобы оба видели дверь, и взяли по папке.\"\n    $ cs_d6_room(\"cs_d4_old_bunker\",['cs_darya'])\n    $ cs_rev_sfx(\"sound/sfx/paper_bag.ogg\",0.22)\n    cs_narrator \"Я начала с дат.\"\n    cs_narrator \"Даша переписывала названия документов и номера страниц.\"\n    $ cs_d6_cg(\"cs_cg_day06_archive_comparison_day\")\n    cs_narrator \"В папке за 1968 год ничего знакомого не нашлось.\"\n    cs_narrator \"В бумагах за 1970-й появилась Елена Тихонова.\"\n    cs_narrator \"Я подвинула лист Даше.\"\n",
+    "new": "    cs_narrator \"Внизу горела знакомая лампа.\"\n    cs_narrator \"Я не стала трогать выключатель.\"\n    cs_narrator \"Виолины советы пока отлично держались в памяти.\"\n    $ cs_d6_room(\"cs_d4_old_bunker\",['cs_darya'])\n    cs_narrator \"В комнате с документами всё осталось на месте.\"\n    cs_narrator \"Мы поставили рюкзак у выхода, положили фонари так, чтобы оба видели дверь, и взяли по папке.\"\n    $ cs_rev_sfx(\"sound/sfx/paper_bag.ogg\",0.22)\n    cs_narrator \"Я начала с дат.\"\n    cs_narrator \"Даша переписывала названия документов и номера страниц.\"\n    cs_narrator \"В папке за 1968 год ничего знакомого не нашлось.\"\n    cs_narrator \"В бумагах за 1970-й появилась Елена Тихонова.\"\n    cs_narrator \"Я подвинула лист Даше.\"\n",
+    "count": 1
+  },
+  {
+    "file": "05_scene.rpy",
+    "old": "    $ cs_d6_focus(\"ls\")\n    cs_ls \"Попробую.\"\n    cs_ls \"Но день сильно потеряет в зрелищности.\"\n    cs_narrator \"Следующая папка содержала записи за 1971 год.\"\n    cs_narrator \"Несколько фамилий совпадали с нынешней сменой.\"\n    cs_narrator \"Я сверяла их по одной, пока Даша проверяла подпись на обложке.\"\n    cs_narrator \"Здесь стало не до шуток.\"\n    cs_narrator \"Только сегодня эти люди махали нам из окна автобуса.\"\n    cs_narrator \"На бумаге их имена соседствовали с датой, которая к сегодняшнему отъезду никак не подходила.\"\n    $ cs_d6_think()\n    cs_th \"Я записала фамилии точно, не сокращая.\"\n    cs_th \"Рядом поставила номер ведомости.\"\n    $ cs_d6_focus(\"ls\")\n    cs_ls \"Жене бы это показать.\"\n    $ cs_rev_sfx(\"sound/sfx/paper_bag.ogg\",0.22)\n",
+    "new": "    $ cs_d6_focus(\"ls\")\n    cs_ls \"Попробую.\"\n    cs_ls \"Но день сильно потеряет в зрелищности.\"\n    $ cs_d6_room(\"cs_d4_old_archive\",['cs_darya'])\n    cs_narrator \"Следующая папка содержала записи за 1971 год.\"\n    cs_narrator \"Несколько фамилий совпадали с нынешней сменой.\"\n    cs_narrator \"Я сверяла их по одной, пока Даша проверяла подпись на обложке.\"\n    $ cs_d6_cg(\"cs_cg_day06_archive_comparison_day\")\n    cs_narrator \"Здесь стало не до шуток.\"\n    cs_narrator \"Только сегодня эти люди махали нам из окна автобуса.\"\n    cs_narrator \"На бумаге их имена соседствовали с датой, которая к сегодняшнему отъезду никак не подходила.\"\n    $ cs_d6_think()\n    cs_th \"Я записала фамилии точно, не сокращая.\"\n    cs_th \"Рядом поставила номер ведомости.\"\n    $ cs_d6_room(\"cs_d4_old_bunker\",['cs_darya'])\n    $ cs_d6_focus(\"ls\")\n    cs_ls \"Жене бы это показать.\"\n    $ cs_rev_sfx(\"sound/sfx/paper_bag.ogg\",0.22)\n",
+    "count": 1
+  },
+  {
+    "file": "05_scene.rpy",
+    "old": "    cs_narrator \"Мы переписали подпись целиком, отдельно отметили, что уверенно сопоставить лица с именами не смогли.\"\n    $ cs_d6_think()\n    cs_th \"Не хотелось опять приносить красивую догадку вместо полезной вещи.\"\n    $ cs_d6_room(\"cs_d4_old_bunker\",['cs_darya'])\n    if cs_d6_archive_guide:\n        cs_narrator \"Я вернулась к памятке Жени и сравнила номера ведомостей.\"\n        cs_narrator \"У бумаг за 1970-й и 1971-й оказались разные номера смен.\"\n",
+    "new": "    cs_narrator \"Мы переписали подпись целиком, отдельно отметили, что уверенно сопоставить лица с именами не смогли.\"\n    $ cs_d6_think()\n    cs_th \"Не хотелось опять приносить красивую догадку вместо полезной вещи.\"\n    if cs_d6_archive_guide:\n        cs_narrator \"Я вернулась к памятке Жени и сравнила номера ведомостей.\"\n        cs_narrator \"У бумаг за 1970-й и 1971-й оказались разные номера смен.\"\n",
+    "count": 1
+  },
+  {
+    "file": "06_scene.rpy",
+    "old": "# -*- coding: utf-8 -*-\nlabel cs_day06_06:\n    $ save_name = \"Чужая смена — День 6: До ужина\"\n    $ cs_d6_room(\"bg ext_house_of_mt_sunset\",['cs_darya', 'mt'])\n    $ cs_rev_time(\"sunset\")\n    cs_narrator \"Ольга ждала на крыльце.\"\n    cs_narrator \"Увидела нас, посмотрела на часы и только потом спросила:\"\n    $ cs_d6_focus(\"mt\")\n",
+    "new": "# -*- coding: utf-8 -*-\nlabel cs_day06_06:\n    $ save_name = \"Чужая смена — День 6: До ужина\"\n    $ cs_rev_time(\"sunset\")\n    $ cs_d6_room(\"bg ext_house_of_mt_sunset\",['cs_darya', 'mt'])\n    cs_narrator \"Ольга ждала на крыльце.\"\n    cs_narrator \"Увидела нас, посмотрела на часы и только потом спросила:\"\n    $ cs_d6_focus(\"mt\")\n",
+    "count": 1
+  },
+  {
+    "file": "06_scene.rpy",
+    "old": "    $ cs_d6_think()\n    cs_narrator \"Вот теперь в лагере действительно оставались только четверо.\"\n    cs_narrator \"Даже на кухне больше не было привычного движения.\"\n    cs_narrator \"Я поблагодарила и вышла вслед за Дашей.\"\n    cs_narrator \"До ужина мы дошли до воды.\"\n    $ cs_d6_room(\"cs_d6_pier_sunset\",['cs_darya'])\n    cs_narrator \"На пристани я сняла обувь, села на доски и опустила ноги вниз.\"\n",
+    "new": "    $ cs_d6_think()\n    cs_narrator \"Вот теперь в лагере действительно оставались только четверо.\"\n    cs_narrator \"Даже на кухне больше не было привычного движения.\"\n    $ cs_d6_room(\"bg ext_aidpost_day\",['cs_darya'])\n    cs_narrator \"Я поблагодарила и вышла вслед за Дашей.\"\n    $ cs_d6_room(\"cs_camp_path_sunset\",['cs_darya'])\n    cs_narrator \"До ужина мы дошли до воды.\"\n    $ cs_d6_room(\"cs_d6_pier_sunset\",['cs_darya'])\n    cs_narrator \"На пристани я сняла обувь, села на доски и опустила ноги вниз.\"\n",
+    "count": 1
+  },
+  {
+    "file": "06_scene.rpy",
+    "old": "    $ cs_d6_focus(\"ls\")\n    cs_ls \"Вот.\"\n    cs_ls \"Ещё один повод вернуться к горячему душу.\"\n    cs_narrator \"Мы посидели немного и пошли обратно.\"\n    cs_narrator \"Я надела обувь, стряхнув с подошвы песок.\"\n    $ cs_d6_room(\"bg ext_house_of_mt_sunset\",['cs_darya', 'mt', 'cs'])\n",
+    "new": "    $ cs_d6_focus(\"ls\")\n    cs_ls \"Вот.\"\n    cs_ls \"Ещё один повод вернуться к горячему душу.\"\n    $ cs_d6_room(\"cs_d6_pier_sunset\",['cs_darya'])\n    cs_narrator \"Мы посидели немного и пошли обратно.\"\n    cs_narrator \"Я надела обувь, стряхнув с подошвы песок.\"\n    $ cs_d6_room(\"bg ext_house_of_mt_sunset\",['cs_darya', 'mt', 'cs'])\n",
+    "count": 1
+  },
+  {
+    "file": "06_scene.rpy",
+    "old": "    cs_ls \"Научите так же.\"\n    $ cs_d6_focus(\"vi\")\n    cs_vi \"Сначала научись смотреть, что уже вышло.\"\n    cs_narrator \"Я собрала карты в ровную стопку.\"\n    $ cs_d6_focus(\"ls\")\n    cs_ls \"Сегодня все хотят, чтобы я что-нибудь запоминала.\"\n",
+    "new": "    cs_ls \"Научите так же.\"\n    $ cs_d6_focus(\"vi\")\n    cs_vi \"Сначала научись смотреть, что уже вышло.\"\n    $ cs_d6_room(\"bg ext_house_of_mt_sunset\",['cs_darya', 'mt', 'cs'])\n    cs_narrator \"Я собрала карты в ровную стопку.\"\n    $ cs_d6_focus(\"ls\")\n    cs_ls \"Сегодня все хотят, чтобы я что-нибудь запоминала.\"\n",
+    "count": 1
+  },
+  {
+    "file": "07_scene.rpy",
+    "old": "# -*- coding: utf-8 -*-\nlabel cs_day06_07:\n    $ save_name = \"Чужая смена — День 6: Лишний прибор\"\n    cs_narrator \"Ольга ушла в столовую первой.\"\n    cs_narrator \"Мы с Дашей задержались, чтобы вернуть колоду Виоле, потом подошли все вместе.\"\n    $ cs_d6_room(\"bg int_dining_hall_sunset\",['cs_darya', 'mt', 'cs'])\n",
+    "new": "# -*- coding: utf-8 -*-\nlabel cs_day06_07:\n    $ save_name = \"Чужая смена — День 6: Лишний прибор\"\n    $ cs_d6_room(\"bg ext_house_of_mt_sunset\",['cs_darya', 'mt', 'cs'])\n    cs_narrator \"Ольга ушла в столовую первой.\"\n    cs_narrator \"Мы с Дашей задержались, чтобы вернуть колоду Виоле, потом подошли все вместе.\"\n    $ cs_d6_room(\"bg int_dining_hall_sunset\",['cs_darya', 'mt', 'cs'])\n",
+    "count": 1
+  },
+  {
+    "file": "07_scene.rpy",
+    "old": "    cs_narrator \"Я записала.\"\n    cs_narrator \"Пятую ложку положили рядом с кружкой, тарелку вымыли и поставили дном вверх.\"\n    cs_narrator \"Еду убрали.\"\n    cs_narrator \"Из пустой столовой мы вышли вместе.\"\n    cs_narrator \"Ольга заперла дверь и оставила ключ у себя.\"\n    $ cs_d6_room(\"bg ext_dining_hall_near_sunset\",['cs_darya', 'mt', 'cs'])\n    cs_narrator \"На дорожке она остановилась.\"\n    $ cs_d6_focus(\"mt\")\n    cs_mt \"Если что-то услышите.\"\n",
+    "new": "    cs_narrator \"Я записала.\"\n    cs_narrator \"Пятую ложку положили рядом с кружкой, тарелку вымыли и поставили дном вверх.\"\n    cs_narrator \"Еду убрали.\"\n    $ cs_d6_room(\"bg ext_dining_hall_near_sunset\",['cs_darya', 'mt', 'cs'])\n    cs_narrator \"Из пустой столовой мы вышли вместе.\"\n    cs_narrator \"Ольга заперла дверь и оставила ключ у себя.\"\n    cs_narrator \"На дорожке она остановилась.\"\n    $ cs_d6_focus(\"mt\")\n    cs_mt \"Если что-то услышите.\"\n",
+    "count": 1
+  },
+  {
+    "file": "08_scene.rpy",
+    "old": "# -*- coding: utf-8 -*-\nlabel cs_day06_08:\n    $ save_name = \"Чужая смена — День 6: До утра\"\n    $ cs_d6_room(\"cs_house_lena_darya_int_night\",['cs_darya'])\n    $ cs_rev_time(\"night\")\n    cs_narrator \"В домике я положила конверт на стол и проверила, закрыто ли окно.\"\n    cs_narrator \"Даша сняла обувь, села на кровать и потёрла переносицу.\"\n    $ cs_d6_focus(\"ls\")\n",
+    "new": "# -*- coding: utf-8 -*-\nlabel cs_day06_08:\n    $ save_name = \"Чужая смена — День 6: До утра\"\n    $ cs_rev_time(\"night\")\n    $ cs_d6_room(\"cs_house_lena_darya_int_night\",['cs_darya'])\n    cs_narrator \"В домике я положила конверт на стол и проверила, закрыто ли окно.\"\n    cs_narrator \"Даша сняла обувь, села на кровать и потёрла переносицу.\"\n    $ cs_d6_focus(\"ls\")\n",
+    "count": 1
+  },
+  {
+    "file": "08_scene.rpy",
+    "old": "    $ cs_d6_think()\n    cs_narrator \"Это прозвучало почти убедительно.\"\n    cs_narrator \"Я даже не стала добавлять «если ничего не случится».\"\n    cs_narrator \"Умываться пошли вместе.\"\n    cs_narrator \"По дорожке светили фонари; в окне Ольги горела лампа.\"\n    cs_narrator \"Из медпункта вышла Виола, заперла дверь и помахала нам на ходу.\"\n",
+    "new": "    $ cs_d6_think()\n    cs_narrator \"Это прозвучало почти убедительно.\"\n    cs_narrator \"Я даже не стала добавлять «если ничего не случится».\"\n    $ cs_d6_room(\"cs_camp_path_night\",['cs_darya'])\n    cs_narrator \"Умываться пошли вместе.\"\n    cs_narrator \"По дорожке светили фонари; в окне Ольги горела лампа.\"\n    cs_narrator \"Из медпункта вышла Виола, заперла дверь и помахала нам на ходу.\"\n",
+    "count": 1
+  },
+  {
+    "file": "08_scene.rpy",
+    "old": "    cs_ls \"Запомню формулировку.\"\n    cs_ls \"Очень сдержанный восторг.\"\n    $ cs_d6_think()\n    cs_narrator \"На обратном пути я задержалась у библиотеки.\"\n    cs_narrator \"Не из-за загадок — вспомнила книгу.\"\n    $ cs_d6_room(\"bg ext_library_night\",['cs_darya'])\n    cs_narrator \"Она всё ещё лежала в нашей комнате.\"\n    cs_narrator \"Сегодня можно было хотя бы открыть первую страницу.\"\n    $ cs_d6_focus(\"da\")\n",
+    "new": "    cs_ls \"Запомню формулировку.\"\n    cs_ls \"Очень сдержанный восторг.\"\n    $ cs_d6_think()\n    $ cs_d6_room(\"bg ext_library_night\",['cs_darya'])\n    cs_narrator \"На обратном пути я задержалась у библиотеки.\"\n    cs_narrator \"Не из-за загадок — вспомнила книгу.\"\n    cs_narrator \"Она всё ещё лежала в нашей комнате.\"\n    cs_narrator \"Сегодня можно было хотя бы открыть первую страницу.\"\n    $ cs_d6_focus(\"da\")\n",
+    "count": 1
+  },
+  {
+    "file": "08_scene.rpy",
+    "old": "            cs_narrator \"Полученные адреса убрала в отдельный карман.\"\n        $ cs_d6_items_packed = True\n        $ cs_d6_book_location = \"room_table\"\n    cs_narrator \"Потом я погасила лампу у стола.\"\n    $ cs_d6_think()\n    cs_th \"В темноте ещё хотелось спросить, что будет, если завтра мы опять откроем глаза в этих кроватях.\"\n",
+    "new": "            cs_narrator \"Полученные адреса убрала в отдельный карман.\"\n        $ cs_d6_items_packed = True\n        $ cs_d6_book_location = \"room_table\"\n    $ cs_d6_room(\"cs_d6_lights_out\",['cs_darya'])\n    cs_narrator \"Потом я погасила лампу у стола.\"\n    $ cs_d6_think()\n    cs_th \"В темноте ещё хотелось спросить, что будет, если завтра мы опять откроем глаза в этих кроватях.\"\n",
+    "count": 1
+  }
+]

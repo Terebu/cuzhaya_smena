@@ -85,7 +85,7 @@ init 20 python:
         if number==2:store.cs_d5_library_meeting_invited=option==0
 
     def cs_d5_literary_after_load():
-        if not cs_active or not cs_d5_started:return
+        if not cs_active or not cs_d5_started or getattr(store,"cs_d6_started",False):return
         for screen in ('cs_d5_insert','cs_d5_notes'):
             renpy.hide_screen(screen)
         if cs_d5_literary_initialized:return
@@ -224,7 +224,7 @@ init 80 python:
     cs_reset_state=cs_d5_reset_for_new_game
 
     def cs_d5_loaded_costume():
-        if not cs_active or not cs_d5_started:
+        if not cs_active or not cs_d5_started or getattr(store,"cs_d6_started",False):
             return
         if cs_d5_scene >= 2:
             store.cs_d5_dressed = True
@@ -282,3 +282,26 @@ screen cs_d5_notes():
                 text "Записи на столе" color "#534936" size 28
                 text "Автобус у ворот видели втроём.\nНа остановке: «НЕ ОГЛЯДЫВАЙСЯ».\nЧасы остановились в 23:59." color "#252018" size 32
                 text "Кто сидел в автобусе?\nЧто означает: «ТЫ УЖЕ ВЫБИРАЛ»?" color "#252018" size 34
+
+# Capture the old frame before Python show/hide calls, including early returns.
+init 75 python:
+    def cs_d5_frame_signature():
+        return tuple((tag,tuple(renpy.get_attributes(tag) or ())) for tag in cs_presence_tags if renpy.showing(tag))
+    cs_d5_focus_without_fade=cs_d5_focus
+    def cs_d5_focus(speaker):
+        before=cs_d5_frame_signature()
+        renpy.with_statement(None)
+        cs_d5_focus_without_fade(speaker)
+        if before!=cs_d5_frame_signature():
+            renpy.with_statement(Dissolve(0.35))
+    cs_d5_costume_without_fade=cs_d5_costume
+    def cs_d5_costume(costume):
+        # Day 6 owns its own costume transition.
+        fade=not getattr(store,'cs_d6_started',False) and renpy.showing('cs_darya') and costume!=cs_d5_outfit
+        if fade:renpy.with_statement(None)
+        cs_d5_costume_without_fade(costume)
+        if fade:renpy.with_statement(Dissolve(0.4))
+    cs_d5_room_without_capture=cs_d5_room
+    def cs_d5_room(image,duration=0.45,force=False):
+        if not renpy.showing(image):renpy.with_statement(None)
+        return cs_d5_room_without_capture(image,duration,force)

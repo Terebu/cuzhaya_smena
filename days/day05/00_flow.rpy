@@ -27,22 +27,13 @@ label cs_day05:
     call cs_day05_18 from cs_d5_scene_18_return
     call cs_day05_19 from cs_d5_scene_19_return
     call cs_day05_20 from cs_d5_scene_20_return
+    call cs_day05_21 from cs_d5_scene_21_return
     $ cs_d5_done = True
 label cs_day05_complete:
     label cs_check_day05_complete:
-    call screen cs_day05_end_screen
-    jump cs_day05_complete
+    if not cs_d5_missing_minute_done:
+        call cs_day05_21 from cs_d5_legacy_missing_minute_return
+    jump cs_day06
 
 screen cs_day05_end_screen():
-    modal True
-    frame:
-        align (0.5, 0.5)
-        padding (32, 24)
-        background Solid("#142821ed")
-        vbox:
-            spacing 16
-            text "Конец пятого дня" size 32
-            text "Продолжение следует" size 24
-            textbutton "Сохранить игру" action ShowMenu("save")
-            textbutton "Загрузить игру" action ShowMenu("load")
-            textbutton "Главное меню" action [Function(cs_restore_audio), MainMenu()]
+    timer 0.1 action Jump("cs_day05_complete")

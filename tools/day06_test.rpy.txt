@@ -1,0 +1,1299 @@
+init 990 python:
+    import json as cs_d6qa_json
+    import re as cs_d6qa_re
+    import __builtin__ as cs_d6qa_builtin
+    renpy.cs_d6qa_active=False
+    cs_d6qa_old_args=config.say_arguments_callback
+    cs_d6qa_old_labels=config.label_callback
+    cs_d6qa_old_menu=menu
+    cs_d6qa_old_menu_args=config.menu_arguments_callback
+
+    def cs_d6qa_args(who,*args,**kwargs):
+        if cs_d6qa_old_args:args,kwargs=cs_d6qa_old_args(who,*args,**kwargs)
+        if renpy.cs_d6qa_active:
+            kwargs['interact']=False
+            if getattr(renpy,'cs_d6qa_frozen',False):kwargs['interact']=True
+            renpy.execution.not_infinite_loop(120)
+        return args,kwargs
+    def cs_d6qa_menu(items,*args,**kwargs):
+        if not renpy.cs_d6qa_active:return cs_d6qa_old_menu(items,*args,**kwargs)
+        options=[(t,v) for t,v in items if v is not None and (not callable(v) or renpy.display.behavior.is_sensitive(v))]
+        index=renpy.cs_d6qa_options.pop(0) if cs_d6_started else (0 if renpy.cs_d6qa_high else len(options)-1)
+        assert 0<=index<len(options)
+        value=options[index][1]
+        return value() if callable(value) else value
+    def cs_d6qa_menu_args(*args,**kwargs):
+        if cs_d6qa_old_menu_args:args,kwargs=cs_d6qa_old_menu_args(*args,**kwargs)
+        if renpy.cs_d6qa_active:store.menu=cs_d6qa_menu
+        return args,kwargs
+    def cs_d6qa_labels(name,abnormal):
+        if cs_d6qa_old_labels:cs_d6qa_old_labels(name,abnormal)
+        if not renpy.cs_d6qa_active:return
+        if name=='cs_check_d6_choice_2_done' and getattr(renpy,'cs_d6qa_save_test',False):
+            renpy.cs_d6qa_frozen=True
+        if cs_d6qa_re.match(r'^cs_(scene_\d+|day0[1-6]_\d+)$',name):
+            renpy.cs_d6qa_visited.append(name)
+            if not renpy.cs_d6qa_full or name in ('cs_scene_01','cs_scene_07','cs_day01_01','cs_day01_64','cs_day02_01','cs_day02_74','cs_day03_75','cs_day03_83','cs_day03_128','cs_day03_186') or name.startswith(('cs_day04_','cs_day05_','cs_day06_')):
+                renpy.cs_d6qa_pending=name
+        if name=='cs_check_day06_complete':
+            renpy.jump('cs_d6qa_finish')
+    def cs_d6qa_frame(name):
+        renpy.pause(0.95 if renpy.cs_d6qa_case == 'audio_fades' and not cs_d6_started else 0.08,hard=True)
+        renpy.screenshot(config.basedir+'/d6qa_%s_%s.png'%(renpy.cs_d6qa_case,name))
+        with open(config.basedir+'/d6qa_frames.jsonl','a') as f:
+            cs_d6qa_json.dump(dict(case=renpy.cs_d6qa_case,name=name,music=renpy.music.get_playing(channel='music'),ambience=renpy.music.get_playing(channel='ambience'),sfx=renpy.music.get_playing(channel='sound'),tags=sorted(renpy.get_showing_tags()),bounds={t:renpy.get_image_bounds(t) for t in cs_presence_tags if renpy.showing(t)}),f);f.write('\n')
+    def cs_d6qa_line(event,**kwargs):
+        if not renpy.cs_d6qa_active or event!='show_done':return
+        tags=[t for t in cs_presence_tags if renpy.showing(t)]
+        if cs_full_frame_cg_showing():assert not tags,'Portrait over CG'
+        if cs_d6_started:
+            assert set(tags)<=set(cs_d6_allowed),(tags,cs_d6_allowed)
+            for t in tags:
+                if len(tags)==1:
+                    d=renpy.game.context().scene_lists.get_displayable_by_tag('master',t)
+                    assert d.get_placement()[0]==0.5,('Not centered',t,d.get_placement())
+            if cs_d6_bus_departed:
+                assert not set(tags)&set(('cs_semen','cs_zhenya','un','sl','dv','mi')),'Departed actor returned'
+                assert renpy.music.get_playing(channel='ambience') not in ('sound/ambiences/dining_hall_full.ogg','sound/ambiences/camp_center_day.ogg')
+                assert not renpy.music.get_playing(channel='cs_sports')
+        cg=tuple(t for t in renpy.get_showing_tags() if t.startswith('cs_cg_'))
+        if cs_d6_started and not cg and tuple(tags)!=getattr(renpy,'cs_d6qa_last_cast',()) and renpy.cs_d6qa_case in ('high_sl','low','full_high'):
+            renpy.cs_d6qa_cast_number=getattr(renpy,'cs_d6qa_cast_number',0)+1
+            renpy.cs_d6qa_pending='actors_%03d'%renpy.cs_d6qa_cast_number
+        renpy.cs_d6qa_last_cast=tuple(tags)
+        if renpy.cs_d6qa_case in ('high_sl','high_mi','low','full_high','full_low','audio_fades','d5_fades'):
+            name=renpy.cs_d6qa_pending
+            if cg and cg!=renpy.cs_d6qa_last_cg:name=cg[0]
+            if name:
+                cs_d6qa_frame(name)
+                renpy.cs_d6qa_pending=None
+        renpy.cs_d6qa_last_cg=cg
+    config.say_arguments_callback=cs_d6qa_args
+    config.menu_arguments_callback=cs_d6qa_menu_args
+    config.label_callback=cs_d6qa_labels
+    config.all_character_callbacks.append(cs_d6qa_line)
+
+label cs_d6qa_route:
+    $ cs_reset_state()
+    $ cs_active = cs_darya_known = cs_slavya_known = cs_un_name_known = cs_olga_seen = True
+    $ cs_day03_started = cs_day04_done = cs_d5_started = True
+    $ cs_d5_dressed = True
+    $ set_mode_adv()
+    $ day_time()
+    python:
+        for key in ('da','se','mz','un','sl','dv','mi','viola'):
+            setattr(store,'cs_friend_'+key,renpy.cs_d6qa_friend)
+        cs_d5_lena_respected=renpy.cs_d6qa_respected
+        cs_d5_un_day6_sketch_offer=renpy.cs_d6qa_offer
+        cs_d5_slavya_present=cs_d5_alisa_present=cs_d5_miku_present=renpy.cs_d6qa_present
+        cs_d5_miku_intro_heard=renpy.cs_d6qa_present
+        cs_da_shared_bed_day3=cs_da_love_confession_day3=renpy.cs_d6qa_romance
+        cs_d4_viola_full_trust=renpy.cs_d6qa_respected
+        cs_d5_zhenya_address=cs_d5_semyon_address=renpy.cs_d6qa_addresses
+    call cs_day05_21
+    $ cs_d5_done = True
+    jump cs_day06
+
+label cs_d6qa_old_end:
+    $ cs_reset_state()
+    $ cs_active = cs_darya_known = True
+    $ cs_day03_started = cs_d5_started = cs_d5_done = True
+    $ cs_d5_quiet = True
+    $ cs_d5_clock = '23:59'
+    $ set_mode_adv()
+    jump cs_day05_complete
+
+testcase cs_d6_old_end_create:
+    pause 0.3
+    $ _test.force = True
+    run Start('cs_d6qa_old_end')
+    pause 0.5
+    assert renpy.get_screen('cs_day05_end_screen')
+    $ renpy.take_screenshot()
+    $ renpy.save('d6_legacy_stable_end')
+    $ open(config.basedir+'/d6_old_end_created.txt','w').write('PASS')
+    run Quit(confirm=False)
+
+label cs_d6qa_pajama_scene:
+    $ cs_reset_state()
+    $ cs_active = cs_darya_known = cs_day03_started = cs_d5_started = True
+    $ set_mode_adv()
+    $ cs_d6_begin()
+    $ cs_rev_time('night')
+    $ cs_d6_costume('pajamas')
+    $ cs_d6_room('cs_house_lena_darya_int_night',['cs_darya'])
+    $ cs_d6_focus('da')
+    label cs_check_d6qa_pajama:
+    $ cs_d6_music_for_room('cs_house_lena_darya_int_night')
+    cs_da 'Спокойной ночи, Лена.'
+    return
+
+testcase cs_d6_pajama_save:
+    pause 0.3
+    $ _test.force = True
+    $ _preferences.text_cps = 0
+    run Start('cs_d6qa_pajama_scene')
+    pause 0.8
+    assert renpy.showing("cs_darya")
+    assert "pajamas" in renpy.get_attributes("cs_darya")
+    $ renpy.take_screenshot()
+    $ renpy.save('d6_pajama')
+    run Function(renpy.load,'d6_pajama')
+    pause 0.5
+    assert cs_d6_outfit == 'pajamas'
+    assert 'pajamas' in renpy.get_attributes('cs_darya')
+    $ renpy.screenshot(config.basedir+'/d6_pajamas_loaded.png')
+    $ open(config.basedir+'/d6_pajama_save_PASS.txt','w').write('PASS')
+    run Quit(confirm=False)
+
+label cs_d6qa_finish:
+    python:
+        assert cs_d6_done and cs_d6_bus_departed and cs_d6_fifth_tray_locked
+        assert cs_d5_missing_minute_done
+        assert not renpy.cs_d6qa_options
+        assert len(cs_d6_choice_results)==4
+        if not renpy.cs_d6qa_full:
+            start=renpy.cs_d6qa_friend
+            assert set(cs_d6_friend_on_arrival.values())==set((start,))
+            for key in ('mz','se','da','sl','dv','mi'):
+                expected=start+int((key=='mz' and cs_d6_mz_listened) or (key=='se' and cs_d6_se_agency) or (key=='da' and cs_d6_place_recorded) or key==cs_d6_help)
+                assert getattr(store,'cs_friend_'+key)==expected,(key,getattr(store,'cs_friend_'+key),expected)
+            assert cs_d6_mz_independent==(start>=4 and cs_d6_mz_listened)
+            assert cs_d6_un_independent==(start>=4 and renpy.cs_d6qa_respected)
+            assert cs_d6_un_sketch_received==(cs_d6_sketch_done and cs_friend_un>=4)
+            assert cs_d6_archive_compared==cs_d6_archive_guide
+            assert cs_d6_dv_pick_received==(cs_d6_help=='dv' and cs_friend_dv>=4)
+            assert cs_d6_mi_music_received==(cs_d6_help=='mi' and cs_friend_mi>=4)
+            assert cs_d6_mi_motif_tried==cs_d6_mi_music_received
+            if renpy.cs_d6qa_addresses:assert cs_d6_mz_address_received and cs_d6_se_address_received
+            # Re-entering identical decisions must not award again.
+            values={key:getattr(store,'cs_friend_'+key) for key in ('da','se','mz','un','sl','dv','mi','viola')}
+            for number,option in cs_d6_choice_results.items():cs_d6_choose(number,option)
+            assert values=={key:getattr(store,'cs_friend_'+key) for key in values}
+        result=dict(status='PASS',case=renpy.cs_d6qa_case,visited=renpy.cs_d6qa_visited,choices=dict(cs_d6_choice_results),snapshot=dict(cs_d6_friend_on_arrival),mz_memory=cs_d6_mz_independent,un_memory=cs_d6_un_independent,help=cs_d6_help,archive=cs_d6_archive_compared,recorded=cs_d6_place_recorded,addresses=[cs_d6_mz_address_received,cs_d6_se_address_received])
+        with open(config.basedir+'/d6qa_'+renpy.cs_d6qa_case+'_PASS.json','w') as f:cs_d6qa_json.dump(result,f)
+        if renpy.cs_d6qa_case=='old_end':renpy.quit()
+    label cs_check_d6qa_done:
+    cs_narrator 'Проверка завершена.'
+    return
+
+testcase cs_d6_high_sl:
+    pause 0.3
+    $ renpy.cs_d6qa_case = 'high_sl'
+    $ renpy.cs_d6qa_friend = 4
+    $ renpy.cs_d6qa_options = [0, 0, 0, 0]
+    $ renpy.cs_d6qa_respected = True
+    $ renpy.cs_d6qa_offer = True
+    $ renpy.cs_d6qa_present = True
+    $ renpy.cs_d6qa_romance = False
+    $ renpy.cs_d6qa_addresses = True
+    $ renpy.cs_d6qa_active = True
+    $ renpy.cs_d6qa_full = False
+    $ renpy.cs_d6qa_high = True
+    $ renpy.cs_d6qa_visited = []
+    $ renpy.cs_d6qa_pending = None
+    $ renpy.cs_d6qa_last_cg = ()
+    $ persistent.font_size = "large"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps = 0
+    $ _preferences.transitions = 0
+    $ _test.force = True
+    $ _test.timeout = 180.0
+    run Start("cs_d6qa_route")
+    click until label cs_check_d6qa_done
+    run Quit(confirm=False)
+
+testcase cs_d6_high_dv:
+    pause 0.3
+    $ renpy.cs_d6qa_case = 'high_dv'
+    $ renpy.cs_d6qa_friend = 4
+    $ renpy.cs_d6qa_options = [0, 1, 0, 0]
+    $ renpy.cs_d6qa_respected = True
+    $ renpy.cs_d6qa_offer = True
+    $ renpy.cs_d6qa_present = True
+    $ renpy.cs_d6qa_romance = False
+    $ renpy.cs_d6qa_addresses = True
+    $ renpy.cs_d6qa_active = True
+    $ renpy.cs_d6qa_full = False
+    $ renpy.cs_d6qa_high = True
+    $ renpy.cs_d6qa_visited = []
+    $ renpy.cs_d6qa_pending = None
+    $ renpy.cs_d6qa_last_cg = ()
+    $ persistent.font_size = "large"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps = 0
+    $ _preferences.transitions = 0
+    $ _test.force = True
+    $ _test.timeout = 180.0
+    run Start("cs_d6qa_route")
+    click until label cs_check_d6qa_done
+    run Quit(confirm=False)
+
+testcase cs_d6_high_mi:
+    pause 0.3
+    $ renpy.cs_d6qa_case = 'high_mi'
+    $ renpy.cs_d6qa_friend = 4
+    $ renpy.cs_d6qa_options = [0, 2, 0, 0]
+    $ renpy.cs_d6qa_respected = True
+    $ renpy.cs_d6qa_offer = True
+    $ renpy.cs_d6qa_present = True
+    $ renpy.cs_d6qa_romance = False
+    $ renpy.cs_d6qa_addresses = True
+    $ renpy.cs_d6qa_active = True
+    $ renpy.cs_d6qa_full = False
+    $ renpy.cs_d6qa_high = True
+    $ renpy.cs_d6qa_visited = []
+    $ renpy.cs_d6qa_pending = None
+    $ renpy.cs_d6qa_last_cg = ()
+    $ persistent.font_size = "large"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps = 0
+    $ _preferences.transitions = 0
+    $ _test.force = True
+    $ _test.timeout = 180.0
+    run Start("cs_d6qa_route")
+    click until label cs_check_d6qa_done
+    run Quit(confirm=False)
+
+testcase cs_d6_low:
+    pause 0.3
+    $ renpy.cs_d6qa_case = 'low'
+    $ renpy.cs_d6qa_friend = 0
+    $ renpy.cs_d6qa_options = [1, 2, 1, 1]
+    $ renpy.cs_d6qa_respected = False
+    $ renpy.cs_d6qa_offer = False
+    $ renpy.cs_d6qa_present = False
+    $ renpy.cs_d6qa_romance = False
+    $ renpy.cs_d6qa_addresses = False
+    $ renpy.cs_d6qa_active = True
+    $ renpy.cs_d6qa_full = False
+    $ renpy.cs_d6qa_high = True
+    $ renpy.cs_d6qa_visited = []
+    $ renpy.cs_d6qa_pending = None
+    $ renpy.cs_d6qa_last_cg = ()
+    $ persistent.font_size = "large"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps = 0
+    $ _preferences.transitions = 0
+    $ _test.force = True
+    $ _test.timeout = 180.0
+    run Start("cs_d6qa_route")
+    click until label cs_check_d6qa_done
+    run Quit(confirm=False)
+
+testcase cs_d6_medium:
+    pause 0.3
+    $ renpy.cs_d6qa_case = 'medium'
+    $ renpy.cs_d6qa_friend = 1
+    $ renpy.cs_d6qa_options = [0, 1, 0, 1]
+    $ renpy.cs_d6qa_respected = True
+    $ renpy.cs_d6qa_offer = False
+    $ renpy.cs_d6qa_present = False
+    $ renpy.cs_d6qa_romance = False
+    $ renpy.cs_d6qa_addresses = False
+    $ renpy.cs_d6qa_active = True
+    $ renpy.cs_d6qa_full = False
+    $ renpy.cs_d6qa_high = True
+    $ renpy.cs_d6qa_visited = []
+    $ renpy.cs_d6qa_pending = None
+    $ renpy.cs_d6qa_last_cg = ()
+    $ persistent.font_size = "large"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps = 0
+    $ _preferences.transitions = 0
+    $ _test.force = True
+    $ _test.timeout = 180.0
+    run Start("cs_d6qa_route")
+    click until label cs_check_d6qa_done
+    run Quit(confirm=False)
+
+testcase cs_d6_threshold:
+    pause 0.3
+    $ renpy.cs_d6qa_case = 'threshold'
+    $ renpy.cs_d6qa_friend = 3
+    $ renpy.cs_d6qa_options = [0, 0, 0, 0]
+    $ renpy.cs_d6qa_respected = True
+    $ renpy.cs_d6qa_offer = True
+    $ renpy.cs_d6qa_present = False
+    $ renpy.cs_d6qa_romance = False
+    $ renpy.cs_d6qa_addresses = False
+    $ renpy.cs_d6qa_active = True
+    $ renpy.cs_d6qa_full = False
+    $ renpy.cs_d6qa_high = True
+    $ renpy.cs_d6qa_visited = []
+    $ renpy.cs_d6qa_pending = None
+    $ renpy.cs_d6qa_last_cg = ()
+    $ persistent.font_size = "large"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps = 0
+    $ _preferences.transitions = 0
+    $ _test.force = True
+    $ _test.timeout = 180.0
+    run Start("cs_d6qa_route")
+    click until label cs_check_d6qa_done
+    run Quit(confirm=False)
+
+testcase cs_d6_boundaries:
+    pause 0.3
+    $ renpy.cs_d6qa_case = 'boundaries'
+    $ renpy.cs_d6qa_friend = 4
+    $ renpy.cs_d6qa_options = [1, 1, 1, 1]
+    $ renpy.cs_d6qa_respected = False
+    $ renpy.cs_d6qa_offer = True
+    $ renpy.cs_d6qa_present = False
+    $ renpy.cs_d6qa_romance = False
+    $ renpy.cs_d6qa_addresses = True
+    $ renpy.cs_d6qa_active = True
+    $ renpy.cs_d6qa_full = False
+    $ renpy.cs_d6qa_high = True
+    $ renpy.cs_d6qa_visited = []
+    $ renpy.cs_d6qa_pending = None
+    $ renpy.cs_d6qa_last_cg = ()
+    $ persistent.font_size = "large"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps = 0
+    $ _preferences.transitions = 0
+    $ _test.force = True
+    $ _test.timeout = 180.0
+    run Start("cs_d6qa_route")
+    click until label cs_check_d6qa_done
+    run Quit(confirm=False)
+
+testcase cs_d6_romance:
+    pause 0.3
+    $ renpy.cs_d6qa_case = 'romance'
+    $ renpy.cs_d6qa_friend = 4
+    $ renpy.cs_d6qa_options = [0, 2, 0, 0]
+    $ renpy.cs_d6qa_respected = True
+    $ renpy.cs_d6qa_offer = True
+    $ renpy.cs_d6qa_present = False
+    $ renpy.cs_d6qa_romance = True
+    $ renpy.cs_d6qa_addresses = True
+    $ renpy.cs_d6qa_active = True
+    $ renpy.cs_d6qa_full = False
+    $ renpy.cs_d6qa_high = True
+    $ renpy.cs_d6qa_visited = []
+    $ renpy.cs_d6qa_pending = None
+    $ renpy.cs_d6qa_last_cg = ()
+    $ persistent.font_size = "large"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps = 0
+    $ _preferences.transitions = 0
+    $ _test.force = True
+    $ _test.timeout = 180.0
+    run Start("cs_d6qa_route")
+    click until label cs_check_d6qa_done
+    run Quit(confirm=False)
+
+testcase cs_d6_full_high:
+    pause 0.3
+    $ renpy.cs_d6qa_case = 'full_high'
+    $ renpy.cs_d6qa_friend = 4
+    $ renpy.cs_d6qa_options = [0, 0, 0, 0]
+    $ renpy.cs_d6qa_respected = True
+    $ renpy.cs_d6qa_offer = True
+    $ renpy.cs_d6qa_present = True
+    $ renpy.cs_d6qa_romance = False
+    $ renpy.cs_d6qa_addresses = True
+    $ renpy.cs_d6qa_active = True
+    $ renpy.cs_d6qa_full = True
+    $ renpy.cs_d6qa_high = True
+    $ renpy.cs_d6qa_visited = []
+    $ renpy.cs_d6qa_pending = None
+    $ renpy.cs_d6qa_last_cg = ()
+    $ persistent.font_size = "large"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps = 0
+    $ _preferences.transitions = 0
+    $ _test.force = True
+    $ _test.timeout = 180.0
+    run Start("chuzhaya_smena_start")
+    click until label cs_check_d6qa_done
+    run Quit(confirm=False)
+
+
+testcase cs_d6_full_low:
+    pause 0.3
+    $ renpy.cs_d6qa_case = 'full_low'
+    $ renpy.cs_d6qa_friend = 4
+    $ renpy.cs_d6qa_options = [1, 2, 1, 1]
+    $ renpy.cs_d6qa_respected = True
+    $ renpy.cs_d6qa_offer = True
+    $ renpy.cs_d6qa_present = True
+    $ renpy.cs_d6qa_romance = False
+    $ renpy.cs_d6qa_addresses = True
+    $ renpy.cs_d6qa_active = True
+    $ renpy.cs_d6qa_full = True
+    $ renpy.cs_d6qa_high = False
+    $ renpy.cs_d6qa_visited = []
+    $ renpy.cs_d6qa_pending = None
+    $ renpy.cs_d6qa_last_cg = ()
+    $ persistent.font_size = "large"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps = 0
+    $ _preferences.transitions = 0
+    $ _test.force = True
+    $ _test.timeout = 180.0
+    run Start("chuzhaya_smena_start")
+    click until label cs_check_d6qa_done
+    run Quit(confirm=False)
+
+
+testcase cs_d6_save_load:
+    pause 0.3
+    $ renpy.cs_d6qa_case = 'save_load'
+    $ renpy.cs_d6qa_friend = 4
+    $ renpy.cs_d6qa_options = [0, 0, 0, 0]
+    $ renpy.cs_d6qa_respected = True
+    $ renpy.cs_d6qa_offer = True
+    $ renpy.cs_d6qa_present = True
+    $ renpy.cs_d6qa_romance = False
+    $ renpy.cs_d6qa_addresses = True
+    $ renpy.cs_d6qa_active = True
+    $ renpy.cs_d6qa_full = False
+    $ renpy.cs_d6qa_high = True
+    $ renpy.cs_d6qa_visited = []
+    $ renpy.cs_d6qa_pending = None
+    $ renpy.cs_d6qa_last_cg = ()
+    $ persistent.font_size = "large"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps = 0
+    $ _preferences.transitions = 0
+    $ _test.force = True
+    $ _test.timeout = 180.0
+    $ renpy.cs_d6qa_save_test = True
+    $ renpy.cs_d6qa_frozen = False
+    run Start("cs_d6qa_route")
+    click until label cs_check_d6_choice_2_done
+    pause 0.3
+    $ renpy.take_screenshot()
+    $ renpy.save("d6_after_choice")
+    $ renpy.cs_d6qa_saved_scores = (cs_friend_mz,cs_friend_sl,dict(cs_d6_choice_results))
+    run Function(renpy.load,"d6_after_choice")
+    pause 0.4
+    assert renpy.cs_d6qa_saved_scores == (cs_friend_mz,cs_friend_sl,dict(cs_d6_choice_results))
+    assert cs_d6_outfit == "pioneer"
+    $ renpy.cs_d6qa_save_test = False
+    $ renpy.cs_d6qa_frozen = False
+    click until label cs_check_d6qa_done
+    run Quit(confirm=False)
+
+
+testcase cs_d6_old_end_load:
+    pause 0.3
+    $ renpy.cs_d6qa_case = 'old_end'
+    $ renpy.cs_d6qa_friend = 4
+    $ renpy.cs_d6qa_options = [0, 0, 0, 0]
+    $ renpy.cs_d6qa_respected = True
+    $ renpy.cs_d6qa_offer = True
+    $ renpy.cs_d6qa_present = True
+    $ renpy.cs_d6qa_romance = False
+    $ renpy.cs_d6qa_addresses = True
+    $ renpy.cs_d6qa_active = True
+    $ renpy.cs_d6qa_full = True
+    $ renpy.cs_d6qa_high = True
+    $ renpy.cs_d6qa_visited = []
+    $ renpy.cs_d6qa_pending = None
+    $ renpy.cs_d6qa_last_cg = ()
+    $ persistent.font_size = "large"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps = 0
+    $ _preferences.transitions = 0
+    $ _test.force = True
+    $ _test.timeout = 180.0
+    run Function(renpy.load,"d6_legacy_stable_end")
+    click until label cs_check_d6qa_done
+    run Quit(confirm=False)
+
+
+testcase cs_d6_old_addresses:
+    pause 0.3
+    $ renpy.cs_d6qa_case = 'old_addresses'
+    $ renpy.cs_d6qa_friend = 0
+    $ renpy.cs_d6qa_options = [1, 2, 1, 1]
+    $ renpy.cs_d6qa_respected = False
+    $ renpy.cs_d6qa_offer = False
+    $ renpy.cs_d6qa_present = False
+    $ renpy.cs_d6qa_romance = False
+    $ renpy.cs_d6qa_addresses = True
+    $ renpy.cs_d6qa_active = True
+    $ renpy.cs_d6qa_full = False
+    $ renpy.cs_d6qa_high = True
+    $ renpy.cs_d6qa_visited = []
+    $ renpy.cs_d6qa_pending = None
+    $ renpy.cs_d6qa_last_cg = ()
+    $ persistent.font_size = "large"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps = 0
+    $ _preferences.transitions = 0
+    $ _test.force = True
+    $ _test.timeout = 180.0
+    run Start("cs_d6qa_route")
+    click until label cs_check_d6qa_done
+    run Quit(confirm=False)
+
+
+testcase cs_d6_audio_fades:
+    pause 0.3
+    $ renpy.cs_d6qa_case = 'audio_fades'
+    $ renpy.cs_d6qa_friend = 4
+    $ renpy.cs_d6qa_options = [0, 0, 0, 0]
+    $ renpy.cs_d6qa_respected = True
+    $ renpy.cs_d6qa_offer = True
+    $ renpy.cs_d6qa_present = True
+    $ renpy.cs_d6qa_romance = False
+    $ renpy.cs_d6qa_addresses = True
+    $ renpy.cs_d6qa_active = True
+    $ renpy.cs_d6qa_full = False
+    $ renpy.cs_d6qa_high = True
+    $ renpy.cs_d6qa_visited = []
+    $ renpy.cs_d6qa_pending = None
+    $ renpy.cs_d6qa_last_cg = ()
+    $ persistent.font_size = "large"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps = 0
+    $ _preferences.transitions = 2
+    $ _test.force = True
+    $ _test.timeout = 180.0
+    run Start("cs_d6qa_route")
+    click until label cs_check_d6qa_done
+    run Quit(confirm=False)
+
+
+
+testcase cs_d6_soundscape:
+    $ renpy.cs_audio_trace_on = True
+    pause 0.3
+    $ _test.force = True
+    $ _preferences.text_cps = 0
+    $ _preferences.mute['music'] = False
+    $ _preferences.mute['sfx'] = False
+    $ _preferences.volumes['music'] = 1.0
+    $ _preferences.volumes['sfx'] = 1.0
+    run Start('cs_d6qa_pajama_scene')
+    pause 2.6
+    $ open(config.basedir+'/audio_debug.txt','w').write(repr((renpy.music.get_playing(channel='music'),cs_music_After_Hours,config.main_menu_music,cs_d6_started,cs_d6_room_image,renpy.loadable(cs_music_After_Hours),renpy.audio.audio.pcm_ok,cs_d6_music_for_room.func_code.co_filename)))
+    assert renpy.music.get_playing(channel='music') == cs_music_After_Hours
+    assert renpy.music.get_playing(channel='ambience') == 'sound/ambiences/int_cabin_night.ogg'
+    $ renpy.screenshot(config.basedir+'/audio_night.png')
+    $ cs_d6_room('bg int_library_day',['cs_zhenya'])
+    pause 2.6
+    assert renpy.music.get_playing(channel='music') == cs_day_music_think
+    $ cs_d6_room('cs_d4_old_bunker',['cs_darya'])
+    pause 1.6
+    assert renpy.music.get_playing(channel='music') is None
+    assert renpy.music.get_playing(channel='ambience') == 'sound/ambiences/catacombs.ogg'
+    $ cs_d6_room('cs_d6_pier_sunset',['cs_darya'])
+    pause 2.6
+    assert renpy.music.get_playing(channel='music') == cs_music_calm
+    assert renpy.music.get_playing(channel='ambience') == 'sound/ambiences/lake_shore_evening.ogg'
+    $ cs_rev_sfx('sound/sfx/keys_rattle.ogg',0.32)
+    assert renpy.music.get_playing(channel='sound') == 'sound/sfx/keys_rattle.ogg'
+    $ open(config.basedir+'/soundscape_PASS.txt','w').write('PASS')
+    run Quit(confirm=False)
+
+init 995 python:
+    cs_audio_trace_play=renpy.music.play
+    cs_audio_trace_stop=renpy.music.stop
+    def cs_audio_trace(action,args,kwargs):
+        if not getattr(renpy,'cs_audio_trace_on',False):return
+        import traceback
+        with open(config.basedir+'/audio_calls.txt','a') as f:
+            f.write(repr((action,args,kwargs))+'\n'+''.join(traceback.format_stack(limit=5))+'\n')
+    def cs_trace_play(*args,**kwargs):
+        if getattr(renpy,'cs_audit_roomtone',False) and kwargs.get('channel') == 'ambience':
+            renpy.cs_audit_roomtone_calls.append((args,kwargs))
+        cs_audio_trace('play',args,kwargs)
+        return cs_audio_trace_play(*args,**kwargs)
+    def cs_trace_stop(*args,**kwargs):
+        cs_audio_trace('stop',args,kwargs)
+        return cs_audio_trace_stop(*args,**kwargs)
+    renpy.music.play=cs_trace_play
+    renpy.music.stop=cs_trace_stop
+
+label cs_d5qa_fades:
+    $ cs_reset_state()
+    $ cs_active = cs_darya_known = cs_slavya_known = cs_olga_seen = cs_un_name_known = True
+    $ cs_day03_started = cs_d5_started = True
+    $ set_mode_adv()
+    $ day_time()
+    call cs_day05_01
+    call cs_day05_02
+    call cs_day05_03
+    call cs_day05_10
+    call cs_day05_13
+    call cs_day05_19
+    call cs_day05_20
+    $ open(config.basedir+'/day05_fades_PASS.txt','w').write('PASS')
+    $ renpy.quit()
+
+testcase cs_day05_fades:
+    pause 0.3
+    $ renpy.cs_d6qa_case = 'd5_fades'
+    $ renpy.cs_d6qa_friend = 4
+    $ renpy.cs_d6qa_options = [0, 0, 0, 0]
+    $ renpy.cs_d6qa_respected = True
+    $ renpy.cs_d6qa_offer = True
+    $ renpy.cs_d6qa_present = True
+    $ renpy.cs_d6qa_romance = False
+    $ renpy.cs_d6qa_addresses = True
+    $ renpy.cs_d6qa_active = True
+    $ renpy.cs_d6qa_full = False
+    $ renpy.cs_d6qa_high = True
+    $ renpy.cs_d6qa_visited = []
+    $ renpy.cs_d6qa_pending = None
+    $ renpy.cs_d6qa_last_cg = ()
+    $ persistent.font_size = "large"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps = 0
+    $ _preferences.transitions = 2
+    $ _test.force = True
+    $ _test.timeout = 180.0
+    run Start("cs_d5qa_fades")
+    click until label cs_check_d6qa_done
+    run Quit(confirm=False)
+
+
+
+label cs_qa_global_dissolve:
+    $ day_time()
+    $ cs_reset_state()
+    $ cs_active = cs_darya_known = True
+    $ set_mode_adv()
+    $ cs_director_scene('bg ext_square_day')
+    scene bg ext_square_day
+    cs_narrator 'Исходный кадр.'
+    show cs_darya shrug pioneer normal at cs_darya_normal_center
+    cs_da 'Плавное появление.'
+    show cs_darya thinking pioneer normal
+    cs_da 'Плавная смена позы.'
+    show cs_semen neutral pioneer normal at cs_semen_normal_left
+    cs_sy 'Второй персонаж.'
+    hide cs_darya
+    cs_sy 'Уход собеседницы.'
+    hide cs_semen
+    label cs_check_global_dissolve_end:
+    cs_narrator 'Пустой кадр.'
+    scene bg ext_library_day
+    show cs_darya shrug pioneer normal
+    cs_da 'Появление после смены фона.'
+    hide cs_darya
+    cs_narrator 'Последний уход.'
+    return
+
+testcase cs_global_dissolve:
+    pause 0.3
+    $ persistent.font_size = 'small'
+    $ _test.force = True
+    $ _preferences.transitions = 2
+    $ _preferences.text_cps = 0
+    $ renpy.cs_sprite_fade_count = 0
+    run Start('cs_qa_global_dissolve')
+    pause 0.4
+    click
+    pause 0.12
+    $ renpy.screenshot(config.basedir+'/sprite_enter_mid.png')
+    pause 0.5
+    $ renpy.screenshot(config.basedir+'/sprite_enter_done.png')
+    click
+    pause 0.5
+    $ renpy.screenshot(config.basedir+'/sprite_expression.png')
+    click
+    pause 0.5
+    $ renpy.screenshot(config.basedir+'/sprite_pair.png')
+    click
+    pause 0.5
+    $ renpy.screenshot(config.basedir+'/sprite_leave.png')
+    click
+    pause 0.5
+    assert renpy.cs_sprite_fade_count >= 5
+    assert not renpy.showing('cs_darya') and not renpy.showing('cs_semen')
+    $ open(config.basedir+'/global_dissolve_PASS.txt','w').write(str(renpy.cs_sprite_fade_count))
+    run Quit(confirm=False)
+
+testcase cs_global_dissolve_extended:
+    pause 0.3
+    $ persistent.font_size = 'small'
+    $ _test.force = True
+    $ _preferences.transitions = 2
+    $ _preferences.text_cps = 0
+    $ renpy.cs_sprite_fade_count = 0
+    run Start('cs_qa_global_dissolve')
+    pause 0.4
+    click
+    pause 0.12
+    $ renpy.screenshot(config.basedir+'/sprite_enter_mid.png')
+    pause 0.5
+    $ renpy.screenshot(config.basedir+'/sprite_enter_done.png')
+    click
+    pause 0.5
+    $ renpy.screenshot(config.basedir+'/sprite_expression.png')
+    click
+    pause 0.5
+    $ renpy.screenshot(config.basedir+'/sprite_pair.png')
+    click
+    pause 0.5
+    $ renpy.screenshot(config.basedir+'/sprite_leave.png')
+    click
+    pause 0.5
+    click
+    pause 0.12
+    $ renpy.screenshot(config.basedir+'/sprite_scene_enter_mid.png')
+    pause 0.5
+    click
+    pause 0.12
+    $ renpy.screenshot(config.basedir+'/sprite_last_leave_mid.png')
+    pause 0.5
+    assert renpy.cs_sprite_fade_count >= 7
+    assert not renpy.showing('cs_darya') and not renpy.showing('cs_semen')
+    $ open(config.basedir+'/global_dissolve_PASS.txt','w').write(str(renpy.cs_sprite_fade_count))
+    run Quit(confirm=False)
+
+
+label cs_qa_day5_after_voice:
+    $ cs_reset_state()
+    $ cs_active = cs_darya_known = cs_d5_started = cs_day03_started = True
+    $ day_time()
+    $ set_mode_adv()
+    $ cs_d5_scene = 6
+    $ cs_d5_room('bg ext_no_bus')
+    $ cs_bus_cue('hush')
+    cs_narrator 'После ухода голоса остаётся тихая тревожная атмосфера.'
+    return
+
+testcase cs_day5_after_voice_audio:
+    pause 0.3
+    $ persistent.font_size = 'small'
+    $ _test.force = True
+    $ _preferences.text_cps = 0
+    run Start('cs_qa_day5_after_voice')
+    pause 1.4
+    assert renpy.music.get_playing(channel='cs_bus_mystery') == cs_bus_drone
+    $ cs_bus_cue('calm')
+    pause 1.1
+    assert renpy.music.get_playing(channel='cs_bus_mystery') is None
+    $ cs_d5_scene = 15
+    $ renpy.scene()
+    $ renpy.show('bg int_library_day')
+    $ renpy.cs_audit_roomtone = True
+    $ renpy.cs_audit_roomtone_calls = []
+    $ cs_day03_location_audio('bg int_library_day')
+    $ cs_day03_location_audio('bg int_library_day')
+    $ cs_day03_location_audio('bg int_library_day')
+    $ cs_day03_location_audio('bg int_library_day')
+    assert len(renpy.cs_audit_roomtone_calls) <= 1
+    pause 1.1
+    $ open(config.basedir+'/day5_audio_debug.txt','w').write(repr((cs_day03_audio_target('bg int_library_day'),cs_bus_audio_mode,cs_d5_scene,cs_d6_started,renpy.music.get_playing(channel='ambience'),cs_day03_audio_location)))
+    assert renpy.music.get_playing(channel='ambience') == 'sound/ambiences/forest_day.ogg'
+    $ renpy.scene()
+    $ renpy.show('bg int_aidpost_day')
+    $ cs_day03_location_audio('bg int_aidpost_day')
+    pause 1.1
+    assert renpy.music.get_playing(channel='ambience') == 'sound/ambiences/medstation_inside_day.ogg'
+    $ open(config.basedir+'/day5_after_voice_audio_PASS.txt','w').write('PASS')
+    run Quit(confirm=False)
+
+# Exercise the real Day 5 frame director, including explicit with statements
+# while the player's transition preference is off. No Day 3 flag is seeded.
+label cs_qa_day5_director:
+    $ cs_reset_state()
+    $ cs_active = cs_darya_known = cs_d5_started = True
+    $ day_time()
+    $ set_mode_adv()
+    $ cs_d5_scene = 2
+    $ cs_d5_room('bg ext_playground_day')
+    cs_narrator 'До появления Даши.'
+    $ cs_d5_focus('da')
+    with cs_sprite_change
+    cs_da 'Появление через обработчик пятого дня.'
+    $ cs_d5_heard_offscreen = True
+    $ cs_d5_focus('voice')
+    with cs_sprite_leave
+    cs_narrator 'Уход через обработчик пятого дня.'
+    $ cs_d5_focus('da')
+    with cs_sprite_enter
+    cs_da 'Повторное появление.'
+    return
+
+testcase cs_day5_director_disabled_transitions:
+    pause 0.3
+    $ persistent.font_size = 'small'
+    $ _test.force = True
+    $ _preferences.transitions = 0
+    $ _preferences.text_cps = 0
+    $ renpy.cs_sprite_fade_count = 0
+    run Start('cs_qa_day5_director')
+    pause 1.0
+    assert not cs_day03_started
+    assert renpy.music.get_playing(channel='ambience') == 'sound/ambiences/camp_center_day.ogg'
+    click
+    pause 0.12
+    $ renpy.screenshot(config.basedir+'/day5_director_enter_mid.png')
+    pause 0.5
+    $ renpy.screenshot(config.basedir+'/day5_director_enter_done.png')
+    assert renpy.showing('cs_darya')
+    click
+    pause 0.12
+    $ renpy.screenshot(config.basedir+'/day5_director_exit_mid.png')
+    pause 0.5
+    $ renpy.screenshot(config.basedir+'/day5_director_exit_done.png')
+    assert not renpy.showing('cs_darya')
+    click
+    pause 0.12
+    $ renpy.screenshot(config.basedir+'/day5_director_return_mid.png')
+    pause 0.5
+    assert renpy.showing('cs_darya')
+    assert renpy.cs_sprite_fade_count >= 3
+    $ open(config.basedir+'/day5_director_PASS.txt','w').write(str(renpy.cs_sprite_fade_count))
+    run Quit(confirm=False)
+
+
+label cs_day5_actual_route:
+    $ cs_reset_state()
+    $ cs_active = cs_darya_known = cs_slavya_known = cs_olga_seen = cs_un_name_known = True
+    $ cs_d5_started = True
+    $ set_mode_adv()
+    $ day_time()
+    call cs_day05_01
+    call cs_day05_02
+    call cs_day05_03
+    call cs_day05_04
+    call cs_day05_05
+    call cs_day05_06
+    call cs_day05_07
+    call cs_day05_08
+    call cs_day05_09
+    call cs_day05_10
+    call cs_day05_11
+    call cs_day05_12
+    call cs_day05_13
+    call cs_day05_14
+    call cs_day05_15
+    call cs_day05_16
+    call cs_day05_17
+    call cs_day05_18
+    call cs_day05_19
+    call cs_day05_20
+    call cs_day05_21
+    $ assert not cs_day03_started
+    $ assert renpy.audio.audio.pcm_ok
+    $ open(config.basedir+'/day5_actual_route_PASS.txt','w').write('21 scenes; direct Day 5 entry without Day 3 flag')
+    $ renpy.quit()
+
+testcase cs_day5_actual_route:
+    pause 0.3
+    $ renpy.cs_d6qa_case = 'audio_fades'
+    $ renpy.cs_d6qa_friend = 4
+    $ renpy.cs_d6qa_options = [0, 0, 0, 0]
+    $ renpy.cs_d6qa_respected = True
+    $ renpy.cs_d6qa_offer = True
+    $ renpy.cs_d6qa_present = True
+    $ renpy.cs_d6qa_romance = False
+    $ renpy.cs_d6qa_addresses = True
+    $ renpy.cs_d6qa_active = True
+    $ renpy.cs_d6qa_full = False
+    $ renpy.cs_d6qa_high = True
+    $ renpy.cs_d6qa_visited = []
+    $ renpy.cs_d6qa_pending = None
+    $ renpy.cs_d6qa_last_cg = ()
+    $ persistent.font_size = "large"
+    $ renpy.set_physical_size((1280,720))
+    $ _preferences.text_cps = 0
+    $ _preferences.transitions = 0
+    $ renpy.cs_audio_trace_on = True
+    $ _test.force = True
+    $ _test.timeout = 180.0
+    run Start("cs_day5_actual_route")
+    click until label cs_check_d6qa_done
+    run Quit(confirm=False)
+
+
+
+
+label cs_qa_day5_light_return:
+    $ cs_reset_state()
+    $ cs_active = cs_darya_known = cs_d5_started = True
+    $ cs_d5_quiet = True
+    $ cs_d5_scene = 20
+    $ cs_d5_clock = '23:59'
+    $ cs_d5_clock_stopped = True
+    $ set_mode_adv()
+    $ night_time()
+    $ cs_d5_room('bg int_house_of_mt_night2')
+    call cs_day05_21
+    return
+
+testcase cs_day5_light_return:
+    pause 0.3
+    $ persistent.font_size = 'small'
+    $ _test.force = True
+    $ _preferences.transitions = 2
+    $ _preferences.text_cps = 0
+    run Start('cs_qa_day5_light_return')
+    pause 0.6
+    assert renpy.showing('bg int_house_of_mt_night2')
+    $ renpy.screenshot(config.basedir+'/day5_light_before.png')
+    click
+    pause 0.8
+    assert renpy.showing('bg int_house_of_mt_night')
+    click
+    pause 0.4
+    click
+    pause 0.6
+    assert renpy.showing('cs_darya')
+    assert cs_d5_clock == '23:59' and cs_d5_clock_stopped
+    assert not renpy.music.get_playing(channel='ambience')
+    $ renpy.screenshot(config.basedir+'/day5_light_reaction.png')
+    $ open(config.basedir+'/day5_light_return_PASS.txt','w').write('PASS')
+    run Quit(confirm=False)
+
+label cs_qa_cg_dissolve:
+    $ cs_reset_state()
+    $ cs_active = cs_darya_known = True
+    $ set_mode_adv()
+    $ day_time()
+    $ cs_rev_room('bg int_musclub_day')
+    cs_narrator 'До иллюстрации.'
+    $ cs_rev_room('cs_cg_darya_piano_day')
+    cs_narrator 'Первая иллюстрация.'
+    $ cs_rev_room('cs_cg_miku_piano_day')
+    cs_narrator 'Смена иллюстрации.'
+    $ cs_rev_room('bg int_musclub_day')
+    cs_narrator 'Возврат в клуб.'
+    show cs_sleep_winter
+    cs_narrator 'Иллюстрация без авторского with.'
+    hide cs_sleep_winter
+    cs_narrator 'Скрытие иллюстрации без авторского with.'
+    $ cs_d6_cg('cs_cg_day06_blank_pages_morning')
+    cs_narrator 'CG через обработчик шестого дня.'
+    $ cs_d6_room('bg int_library_day', [])
+    cs_narrator 'Выход из CG шестого дня.'
+    return
+
+testcase cs_cg_dissolve:
+    pause 0.3
+    $ persistent.font_size = 'small'
+    $ renpy.set_physical_size((1280,720))
+    $ _test.force = True
+    $ _preferences.transitions = 0
+    $ _preferences.text_cps = 0
+    $ renpy.cs_cg_fade_count = 0
+    run Start('cs_qa_cg_dissolve')
+    pause 0.9
+    $ renpy.screenshot(config.basedir+'/cg_before.png')
+    click
+    pause 0.18
+    $ renpy.screenshot(config.basedir+'/cg_enter_mid.png')
+    pause 0.9
+    $ renpy.screenshot(config.basedir+'/cg_enter_done.png')
+    assert cs_full_frame_cg_showing()
+    assert not any(renpy.showing(t) for t in cs_presence_tags)
+    click
+    pause 0.18
+    $ renpy.screenshot(config.basedir+'/cg_replace_mid.png')
+    pause 0.9
+    $ renpy.screenshot(config.basedir+'/cg_replace_done.png')
+    click
+    pause 0.18
+    $ renpy.screenshot(config.basedir+'/cg_exit_mid.png')
+    pause 0.9
+    $ renpy.screenshot(config.basedir+'/cg_exit_done.png')
+    assert not cs_full_frame_cg_showing()
+    click
+    pause 0.18
+    $ renpy.screenshot(config.basedir+'/cg_plain_enter_mid.png')
+    pause 0.9
+    click
+    pause 0.18
+    $ renpy.screenshot(config.basedir+'/cg_plain_hide_mid.png')
+    pause 0.9
+    assert not cs_full_frame_cg_showing()
+    click
+    pause 0.18
+    $ renpy.screenshot(config.basedir+'/cg_day6_enter_mid.png')
+    pause 0.9
+    click
+    pause 0.18
+    $ renpy.screenshot(config.basedir+'/cg_day6_exit_mid.png')
+    pause 0.9
+    assert not cs_full_frame_cg_showing()
+    assert renpy.cs_cg_fade_count >= 7
+    $ open(config.basedir+'/cg_dissolve_PASS.txt','w').write(str(renpy.cs_cg_fade_count))
+    run Quit(confirm=False)
+
+label cs_qa_cg_inventory:
+    $ cs_reset_state()
+    $ cs_active = cs_darya_known = True
+    $ set_mode_adv()
+    $ day_time()
+    $ cs_rev_room('bg int_musclub_day')
+    cs_narrator 'Проверка всех зарегистрированных полноэкранных CG.'
+    python:
+        names=sorted(tuple(name.split()) for name in renpy.list_images() if name.split()[0].startswith('cs_cg_') or name.split()[0] in ('cs_sleep_winter','cs_sleep_summer','cs_lena_pioneer_mirror'))
+        records=[]
+        for name in names:
+            before=renpy.cs_cg_fade_count
+            renpy.show(name)
+            renpy.with_statement(None)
+            cs_narrator(u'CG: '+u' '.join(name), interact=False)
+            renpy.pause(0.8, hard=True)
+            if not cs_full_frame_cg_showing():raise Exception(('CG absent', name))
+            if any(renpy.showing(t) for t in cs_presence_tags):raise Exception(('Portrait over CG', name))
+            renpy.hide(name[0])
+            renpy.with_statement(None)
+            cs_narrator(u'Возврат к фону.', interact=False)
+            renpy.pause(0.8, hard=True)
+            if cs_full_frame_cg_showing():raise Exception(('CG remained after hide', name))
+            if renpy.cs_cg_fade_count < before+2:raise Exception(('Missing CG fades', name))
+            records.append(u' '.join(name))
+        if len(records)<25:raise Exception(('Incomplete CG inventory', len(records)))
+        with open(config.basedir+'/cg_inventory_PASS.json','w') as f:
+            cs_d6qa_json.dump(records,f)
+    $ renpy.quit()
+
+testcase cs_cg_inventory:
+    pause 0.3
+    $ _test.force = True
+    $ _preferences.transitions = 0
+    $ _preferences.text_cps = 0
+    run Start('cs_qa_cg_inventory')
+    click
+    pause 1.0
+
+init 1200 python:
+    renpy.cs_d6_attention_hits=[]
+    cs_d6_attention_cues=['Даша потянулась за формой.', 'Мы потратили несколько минут на короткие списки.', 'Ольга села.', 'У столовой мы встретили остальных.', 'Она кивнула, но руку с моего рукава убрала не сразу.', 'Я взяла лёгкую связку.', 'Я взяла чехол здоровой рукой.', 'Даша на минуту задержалась с Тихоновой.', 'Я сама разделила чистый лист на факты и предположения.', 'Семён обошёл автобус снаружи и сам заглянул внутрь.', 'Он решил, что я шучу, и вернулся к бумагам.', 'Пётр закрыл двери.', 'Я не ответила сразу.', 'Я стала записывать вопросы.', 'Мы успели переписать ещё несколько строк.', 'Я убрала записи и застегнула рюкзак.', 'Вот теперь в лагере действительно оставались только четверо.', 'Это прозвучало почти убедительно.', 'На обратном пути я задержалась у библиотеки.', 'Даша устроилась у себя с кружкой.', 'Я устроилась на подушке.']
+    def cs_d6qa_attention_check(event, **kwargs):
+        if event!='show_done' or not getattr(renpy,'cs_d6qa_active',False) or not cs_d6_started:return
+        text=getattr(store,'_last_raw_what','')
+        if text in cs_d6_attention_cues and not cs_full_frame_cg_showing():
+            tags=[t for t in cs_presence_tags if renpy.showing(t)]
+            if tags:raise Exception(('Portrait during authored background beat', text, tags))
+            renpy.cs_d6_attention_hits.append(text)
+            with open(config.basedir+'/day6_attention_hits.json','w') as f:
+                cs_d6qa_json.dump(renpy.cs_d6_attention_hits,f)
+    config.all_character_callbacks.append(cs_d6qa_attention_check)
+
+label cs_qa_day6_attention:
+    $ cs_reset_state()
+    $ cs_active = cs_darya_known = True
+    $ cs_d6_begin()
+    $ set_mode_adv()
+    $ day_time()
+    $ cs_d6_room('bg int_library_day',['cs_darya','cs_zhenya'])
+    $ cs_d6_focus('da')
+    cs_da 'Активный разговор.'
+    cs_narrator 'Короткая пауза между репликами.'
+    $ cs_d6_focus('mz')
+    cs_mz 'В разговор вступает Женя.'
+    $ cs_d6_think()
+    cs_narrator 'Лена занимается записями, не обращаясь к собеседникам.'
+    $ cs_d6_focus('ls')
+    cs_ls 'Тихая мысль вслух.'
+    $ cs_d6_focus('da')
+    cs_da 'Новый разговор только с Дашей.'
+    $ cs_d6_focus('driver')
+    cs_d6_driver 'Голос без спрайта.'
+    return
+
+testcase cs_day6_attention:
+    pause 0.3
+    $ persistent.font_size = 'small'
+    $ _test.force = True
+    $ _preferences.transitions = 0
+    $ _preferences.text_cps = 0
+    run Start('cs_qa_day6_attention')
+    pause 0.8
+    assert renpy.showing('cs_darya')
+    click
+    pause 0.4
+    assert renpy.showing('cs_darya')
+    click
+    pause 0.6
+    assert renpy.showing('cs_darya') and renpy.showing('cs_zhenya')
+    click
+    pause 0.12
+    $ renpy.screenshot(config.basedir+'/day6_attention_hide_mid.png')
+    pause 0.6
+    assert not any(renpy.showing(t) for t in cs_presence_tags)
+    assert cs_d6_cast == []
+    $ renpy.screenshot(config.basedir+'/day6_attention_empty.png')
+    click
+    pause 0.4
+    assert not any(renpy.showing(t) for t in cs_presence_tags)
+    click
+    pause 0.12
+    $ renpy.screenshot(config.basedir+'/day6_attention_return_mid.png')
+    pause 0.6
+    assert renpy.showing('cs_darya') and not renpy.showing('cs_zhenya')
+    $ renpy.screenshot(config.basedir+'/day6_attention_return_done.png')
+    click
+    pause 0.6
+    assert not any(renpy.showing(t) for t in cs_presence_tags)
+    $ open(config.basedir+'/day6_attention_PASS.txt','w').write('PASS')
+    run Quit(confirm=False)
+
+label cs_qa_background_dissolve:
+    $ cs_reset_state()
+    $ cs_active = cs_darya_known = True
+    $ set_mode_adv()
+    $ day_time()
+    scene bg ext_square_day
+    cs_narrator 'Исходная площадь.'
+    scene bg ext_library_day
+    cs_narrator 'Обычная смена фона без with.'
+    scene black
+    cs_narrator 'Переход на чёрный экран.'
+    $ cs_d5_room('cs_house_lena_darya_int_day')
+    cs_narrator 'Возвращение из чёрного через обработчик пятого дня.'
+    hide cs_house_lena_darya_int_day
+    cs_narrator 'Скрытие фона через hide.'
+    scene cs_camp_path_day
+    pause 0.9
+    cs_narrator 'Фон появился перед паузой без реплики.'
+    scene bg ext_musclub_day
+    menu:
+        'Переход перед меню.':
+            pass
+    return
+
+testcase cs_background_dissolve:
+    pause 0.3
+    $ persistent.font_size = 'small'
+    $ renpy.set_physical_size((1280,720))
+    $ _test.force = True
+    $ _preferences.transitions = 0
+    $ _preferences.text_cps = 0
+    $ renpy.cs_background_fade_count = 0
+    run Start('cs_qa_background_dissolve')
+    pause 0.9
+    $ renpy.screenshot(config.basedir+'/bg_before.png')
+    click
+    pause 0.18
+    $ renpy.screenshot(config.basedir+'/bg_replace_mid.png')
+    pause 0.9
+    $ renpy.screenshot(config.basedir+'/bg_replace_done.png')
+    click
+    pause 0.18
+    $ renpy.screenshot(config.basedir+'/bg_black_mid.png')
+    pause 0.9
+    $ renpy.screenshot(config.basedir+'/bg_black_done.png')
+    click
+    pause 0.18
+    $ renpy.screenshot(config.basedir+'/bg_from_black_mid.png')
+    pause 0.9
+    $ renpy.screenshot(config.basedir+'/bg_from_black_done.png')
+    click
+    pause 0.18
+    $ renpy.screenshot(config.basedir+'/bg_hide_mid.png')
+    pause 0.9
+    $ renpy.screenshot(config.basedir+'/bg_hide_done.png')
+    click
+    pause 0.18
+    $ renpy.screenshot(config.basedir+'/bg_pause_mid.png')
+    pause 1.2
+    $ renpy.screenshot(config.basedir+'/bg_pause_done.png')
+    assert renpy.showing('cs_camp_path_day')
+    click
+    pause 0.18
+    $ renpy.screenshot(config.basedir+'/bg_menu_mid.png')
+    pause 0.9
+    assert renpy.showing('bg ext_musclub_day')
+    assert renpy.cs_background_fade_count >= 7
+    $ open(config.basedir+'/background_dissolve_PASS.txt','w').write(str(renpy.cs_background_fade_count))
+    run Quit(confirm=False)
+
+init 1400 python:
+    renpy.cs_d6_location_hits=[]
+    cs_d6_location_expectations={'Семён придержал дверь столовой.': 'bg ext_dining_hall_near_day', 'Внутри звенела посуда, кто-то требовал ещё хлеба.': 'bg int_dining_hall_people_day', 'Я попросила показать список.': 'bg int_dining_hall_people_day', 'Внизу действительно значились две фамилии и завтрашняя дата.': 'bg int_dining_hall_people_day', 'Возле площади Славя пыталась пересчитать мешки с бельём и одновременно отвечала на вопросы со всех сторон.': 'bg ext_square_day', 'На складе Славя обнаружила недостающую наволочку.': 'cs_storage_int_day', 'Работа оказалась простой и даже приятной: взяла, донесла, поставила.': 'cs_storage_ext_day', 'Алиса пыталась одновременно удержать гитару и застегнуть сумку.': 'bg ext_musclub_day', 'Мику складывала ноты сразу в три стопки и уже путалась, какую собиралась взять.': 'bg int_musclub_day', 'Мы посидели минут десять.': 'cs_cg_day06_drawing_by_library', 'Перед уходом Тихонова задержалась.': 'bg ext_library_day', 'Женю мы нашли у библиотеки.': 'bg ext_library_day', 'На обед мы пришли вместе.': 'bg int_dining_hall_people_day', 'После обеда сумки потянулись к воротам.': 'bg ext_no_bus', 'Автобус выехал из-за деревьев, поднял пыль и остановился перед воротами.': 'bg ext_bus', 'Внутри пахло нагретыми сиденьями и пылью.': 'bg int_bus', 'Первый раз автобус видишь?': 'bg int_bus', 'Посадка началась с обычной суматохи.': 'bg ext_bus', 'Семён сел у окна.': 'cs_cg_day06_semen_bus_wave', 'Ещё немного был слышен мотор.': 'cs_cg_day06_semen_bus_wave', 'Ольга сложила список.': 'bg ext_no_bus', 'Я ещё раз посмотрела на пустую дорогу и пошла за Дашей.': 'bg ext_no_bus', 'До старого лагеря дошли по знакомой тропе.': 'bg ext_path_day', 'В комнате с документами всё осталось на месте.': 'cs_d4_old_bunker', 'Следующая папка содержала записи за 1971 год.': 'cs_d4_old_archive', 'Здесь стало не до шуток.': 'cs_cg_day06_archive_comparison_day', 'Жене бы это показать.': 'cs_d4_old_bunker', 'Поднимались той же дорогой.': 'cs_d4_old_stairs', 'На улице было тепло.': 'cs_d4_old_ext', 'Виоле мы вернули аптечку.': 'bg int_aidpost_day', 'Я поблагодарила и вышла вслед за Дашей.': 'bg ext_aidpost_day', 'На пристани я сняла обувь, села на доски и опустила ноги вниз.': 'cs_d6_pier_sunset', 'Мы посидели немного и пошли обратно.': 'cs_d6_pier_sunset', 'Вопросы появились после первой раздачи.': 'cs_cg_day06_cards_four', 'Я собрала карты в ровную стопку.': 'bg ext_house_of_mt_sunset', 'Ольга ушла в столовую первой.': 'bg ext_house_of_mt_sunset', 'На большом столе у окна стояли тарелки.': 'bg int_dining_hall_sunset', 'Из пустой столовой мы вышли вместе.': 'bg ext_dining_hall_near_sunset', 'Ольга заперла дверь и оставила ключ у себя.': 'bg ext_dining_hall_near_sunset', 'Умываться пошли вместе.': 'cs_camp_path_night', 'На обратном пути я задержалась у библиотеки.': 'bg ext_library_night', 'Потом я погасила лампу у стола.': 'cs_d6_lights_out', 'В темноте ещё хотелось спросить, что будет, если завтра мы опять откроем глаза в этих кроватях.': 'cs_d6_lights_out'}
+    cs_d6_location_shots=['На складе Славя обнаружила недостающую наволочку.', 'Мы посидели минут десять.', 'Внутри пахло нагретыми сиденьями и пылью.', 'Следующая папка содержала записи за 1971 год.', 'Ольга ушла в столовую первой.', 'Умываться пошли вместе.', 'Потом я погасила лампу у стола.']
+    def cs_d6qa_location_check(event, **kwargs):
+        if event!='show_done' or not getattr(renpy,'cs_d6qa_active',False) or not cs_d6_started:return
+        text=getattr(store,'_last_raw_what','')
+        expected=cs_d6_location_expectations.get(text)
+        if expected is None:return
+        if not renpy.showing(expected):
+            raise Exception(('Day 6 location mismatch',text,expected,sorted(renpy.get_showing_tags())))
+        record=dict(text=text,image=expected)
+        if text in cs_d6_location_shots:
+            renpy.pause(0.85, hard=True)
+            name='location_%s_%02d.png'%(renpy.cs_d6qa_case,len(renpy.cs_d6_location_hits))
+            renpy.screenshot(config.basedir+'/'+name)
+            record['screenshot']=name
+        renpy.cs_d6_location_hits.append(record)
+    config.all_character_callbacks.append(cs_d6qa_location_check)
+    cs_d6_location_old_label=config.label_callback
+    def cs_d6qa_location_label(name, abnormal):
+        if name=='cs_check_day06_complete' and getattr(renpy,'cs_d6qa_active',False):
+            if len(renpy.cs_d6_location_hits)<30:
+                raise Exception(('Incomplete Day 6 location coverage',len(renpy.cs_d6_location_hits)))
+            with open(config.basedir+'/day6_locations_'+renpy.cs_d6qa_case+'_PASS.json','w') as f:
+                cs_d6qa_json.dump(renpy.cs_d6_location_hits,f)
+        if cs_d6_location_old_label:cs_d6_location_old_label(name,abnormal)
+    config.label_callback=cs_d6qa_location_label
+
+label cs_qa_day6_location_visual:
+    $ cs_reset_state()
+    $ cs_active = cs_darya_known = True
+    $ cs_d6_begin()
+    $ set_mode_adv()
+    $ day_time()
+    $ cs_d6_room("cs_storage_int_day", ["cs_darya"])
+    cs_narrator "На складе Славя обнаружила недостающую наволочку."
+    $ cs_d6_cg("cs_cg_day06_drawing_by_library")
+    cs_narrator "Мы посидели минут десять."
+    $ cs_d6_room("bg ext_library_day", ["cs_darya"])
+    cs_narrator "Перед уходом Тихонова задержалась."
+    $ cs_d6_room("bg int_bus", ["cs_darya"])
+    cs_narrator "Внутри пахло нагретыми сиденьями и пылью."
+    $ cs_d6_room("cs_d4_old_archive", ["cs_darya"])
+    cs_narrator "Следующая папка содержала записи за 1971 год."
+    $ cs_rev_time("night")
+    $ cs_d6_room("cs_camp_path_night", ["cs_darya"])
+    cs_narrator "Умываться пошли вместе."
+    $ cs_d6_room("cs_d6_lights_out", ["cs_darya"])
+    cs_narrator "Потом я погасила лампу у стола."
+    $ cs_d6_focus("da")
+    cs_da "Спокойной, Лена."
+    return
+
+testcase cs_day6_location_visual:
+    pause 0.3
+    $ persistent.font_size = 'small'
+    $ renpy.set_physical_size((1280,720))
+    $ _test.force = True
+    $ _preferences.transitions = 0
+    $ _preferences.text_cps = 0
+    run Start('cs_qa_day6_location_visual')
+    pause 1.0
+    assert renpy.showing("cs_storage_int_day")
+    $ renpy.screenshot(config.basedir+'/day6_fixed_storage.png')
+    click
+    pause 1.0
+    assert renpy.showing("cs_cg_day06_drawing_by_library")
+    $ renpy.screenshot(config.basedir+'/day6_fixed_drawing.png')
+    click
+    pause 1.0
+    assert renpy.showing("bg ext_library_day")
+    $ renpy.screenshot(config.basedir+'/day6_fixed_drawing_done.png')
+    click
+    pause 1.0
+    assert renpy.showing("bg int_bus")
+    $ renpy.screenshot(config.basedir+'/day6_fixed_bus_inside.png')
+    click
+    pause 1.0
+    assert renpy.showing("cs_d4_old_archive")
+    $ renpy.screenshot(config.basedir+'/day6_fixed_archive.png')
+    click
+    pause 1.0
+    assert renpy.showing("cs_camp_path_night")
+    $ renpy.screenshot(config.basedir+'/day6_fixed_night_walk.png')
+    click
+    pause 1.0
+    assert renpy.showing("cs_d6_lights_out")
+    $ renpy.screenshot(config.basedir+'/day6_fixed_lights_out.png')
+    click
+    pause 0.6
+    assert not any(renpy.showing(t) for t in cs_presence_tags)
+    $ open(config.basedir+'/day6_location_visual_PASS.txt','w').write('PASS')
+    run Quit(confirm=False)

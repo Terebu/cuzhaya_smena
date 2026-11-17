@@ -8,6 +8,11 @@ init 35 python:
             return
         for channel in ("music", "ambience"):
             if renpy.music.get_playing(channel=channel) == menu_track:
+                # get_playing still reports the menu during its fadeout.
+                # Do not cancel a story track already queued behind that fade.
+                queued = renpy.audio.audio.get_channel(channel).context.last_filenames
+                if queued and any(track != menu_track for track in queued):
+                    continue
                 renpy.music.stop(channel=channel, fadeout=0.0)
     def cs_menu_audio_at_line(event, **kwargs):
         if event == "begin":

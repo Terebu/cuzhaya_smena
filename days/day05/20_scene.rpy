@@ -702,13 +702,4 @@ label cs_day05_20:
     cs_narrator "И пока у нас оставались вопросы, я не собиралась принимать чужие ответы за окончательную правду."
     cs_narrator "За дверью ждали выбора."
     cs_narrator "А мы продолжали писать."
-    hide screen cs_d5_insert
-    hide screen cs_d5_clock_face
-    hide screen cs_d5_notes
-    $ cs_bus_cue("mystery_end")
-    $ cs_director_scene("black")
-    scene black
-    with Dissolve(1.0)
-    stop ambience fadeout 0.5
-    stop music fadeout 1.0
     return

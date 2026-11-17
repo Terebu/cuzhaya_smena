@@ -39,22 +39,25 @@ init -9 python:
             renpy.music.stop(channel="music", fadeout=0.8)
 
     def cs_day03_location_audio(image):
-        if not getattr(store,"cs_active",False) or not getattr(store,"cs_day03_started",False):
+        if not getattr(store,"cs_active",False) or not (getattr(store,"cs_day03_started",False) or getattr(store,"cs_d5_started",False) or getattr(store,"cs_d6_started",False)):
             return
         cs_day04_old_camp_silence(image)
         target = cs_day03_audio_target(image)
         if target is False:
             return
         store.cs_day03_audio_location = image
-        current = renpy.music.get_playing(channel="ambience")
+        # get_playing reports the old recording during fadeout. The queued
+        # filenames describe the requested bed, so repeated interaction/load
+        # callbacks must not restart that fade or keep postponing its silence.
+        queued = renpy.audio.audio.get_channel("ambience").context.last_filenames or ()
         if target is None:
-            if current:
+            if queued:
                 renpy.music.stop(channel="ambience", fadeout=0.8)
-        elif current != target:
+        elif not queued or target not in queued:
             renpy.music.play(target, channel="ambience", loop=True, fadeout=0.8, fadein=0.8)
         renpy.music.set_volume(cs_bus_audio_ambient_volume(target), channel="ambience", delay=0.5)
     def cs_day03_audio_after_load():
-        if not getattr(store,"cs_active",False) or not getattr(store,"cs_day03_started",False):
+        if not getattr(store,"cs_active",False) or not (getattr(store,"cs_day03_started",False) or getattr(store,"cs_d5_started",False) or getattr(store,"cs_d6_started",False)):
             return
         # Prefer the frame in the save; the remembered room may predate this fix.
         for tag in renpy.get_showing_tags():

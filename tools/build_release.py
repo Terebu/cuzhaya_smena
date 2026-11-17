@@ -55,7 +55,7 @@ def build(output, *, compiled_seed=None, source_root=None, engine_root=None, ass
             seed=compiled_seed/rel.with_suffix('.rpyc')
             if seed.is_file():
                 shutil.copy2(seed,dest.with_suffix('.rpyc'))
-            elif rel.as_posix() not in ('new_day05_assets.rpy','revision_staging.rpy','bus_scene_audio.rpy') and not rel.as_posix().startswith('days/revision20261106/'):
+            elif rel.as_posix() not in ('new_day05_assets.rpy','revision_staging.rpy','bus_scene_audio.rpy','sprite_dissolve.rpy','days/day05/21_scene.rpy') and not rel.as_posix().startswith(('days/revision20261106/','days/day06/')):
                 raise RuntimeError('Missing published RPYC seed: '+str(seed))
         source_provenance[(Path(NAMESPACE)/rel.with_suffix('.rpyc')).as_posix()]=dict(source=rel.as_posix(),source_sha256=sha(p))
     for name in ('audio','bg','cg','fonts','sp','ui'):

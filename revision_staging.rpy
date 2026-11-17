@@ -235,6 +235,8 @@ init 97 python:
             mode=getattr(store,"cs_bus_audio_mode","natural")
             if cs_d5_quiet or mode in ("hushed","silence"):return None
             if mode=="ominous":return cs_bus_drone
+            if cs_d5_scene == 15 and image.startswith("bg int_library"):
+                return "sound/ambiences/forest_day.ogg"
         return target if renpy.loadable(target) else base
 
 

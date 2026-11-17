@@ -177,8 +177,16 @@ start=s.index('screen cs_day05_wait_screen():')
 s=s[:start]+'screen cs_day05_wait_screen():\n    timer 0.1 action Jump("cs_day05")\n'
 p.write_text(s,encoding='utf-8')
 p=ROOT/'day03_location_audio.rpy';s=p.read_text(encoding='utf-8')
+# Preserve late-day entry and idempotent queued ambience when replaying the editorial base.
+s=s.replace('not getattr(store,"cs_day03_started",False)','not (getattr(store,"cs_day03_started",False) or getattr(store,"cs_d5_started",False) or getattr(store,"cs_d6_started",False))')
+s=s.replace('        current = renpy.music.get_playing(channel="ambience")\n        if target is None:\n            if current:\n                renpy.music.stop(channel="ambience", fadeout=0.8)\n        elif current != target:\n            renpy.music.play(target, channel="ambience", loop=True, fadeout=0.8, fadein=0.8)\n','        # get_playing reports the old recording during fadeout. The queued\n        # filenames describe the requested bed, so repeated interaction/load\n        # callbacks must not restart that fade or keep postponing its silence.\n        queued = renpy.audio.audio.get_channel("ambience").context.last_filenames or ()\n        if target is None:\n            if queued:\n                renpy.music.stop(channel="ambience", fadeout=0.8)\n        elif not queued or target not in queued:\n            renpy.music.play(target, channel="ambience", loop=True, fadeout=0.8, fadein=0.8)\n')
 anchor='    def cs_day03_audio_target(image):\n'
 if 'getattr(store, "cs_d5_quiet", False)' not in s:
  s=s.replace(anchor,anchor+'        if getattr(store, "cs_d5_quiet", False) and getattr(store, "cs_d5_started", False):\n            return None\n')
 p.write_text(s,encoding='utf-8')
 
+
+# Preserve the reviewed transition when regenerating Day 5.
+if (ROOT/"source/day06/document.json").is_file():
+ from build_day06 import integrate_day5
+ integrate_day5()

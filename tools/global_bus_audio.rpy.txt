@@ -32,12 +32,15 @@ init 35 python:
         if cs_active and cs_d5_started:
             if cs_d5_quiet or cs_bus_audio_mode in ("silence","hushed"):return None
             if cs_bus_audio_mode == "ominous":return cs_bus_drone
+            if cs_d5_scene==15 and image.startswith("bg int_library"):
+                return "sound/ambiences/forest_day.ogg"
             if image=="bg ext_no_bus" or image.startswith("cs_bus410_"):return "sound/ambiences/forest_day.ogg"
         return original
     cs_day03_audio_target = cs_bus_location_target
 
     def cs_bus_audio_ambient_volume(target):
         if not target:return 0.0
+        if cs_active and cs_d5_started and not getattr(store,"cs_d6_started",False) and cs_d5_scene==15 and target=="sound/ambiences/forest_day.ogg":return 0.10
         return 0.22 if target == cs_bus_drone else 0.16
 
     def cs_bus_apply_bed():
@@ -86,7 +89,11 @@ init 35 python:
         elif event=="open":cs_bus_stock_sound(cs_bus_door_open,0.48)
         elif event=="close":cs_bus_stock_sound(cs_bus_door_close,0.44)
         elif event=="chuckle":cs_bus_stock_sound(cs_bus_chuckle,0.34)
-        elif event=="hush":store.cs_bus_audio_mode="hushed"
+        elif event=="hush":
+            store.cs_bus_audio_mode="hushed"
+            store.cs_bus_mystery_active=True
+            renpy.music.set_volume(0.10,channel="cs_bus_mystery")
+            renpy.music.play(cs_bus_drone,channel="cs_bus_mystery",loop=True,fadein=1.0)
         elif event=="cabin_bus":cs_bus_engine("cabin")
         elif event=="cabin_bus_stop":
             renpy.music.stop(channel="cs_bus_engine",fadeout=1.0)
@@ -126,7 +133,7 @@ init 35 python:
         if not cs_active or not cs_d5_started:return
         if cs_bus_mystery_active:
             if renpy.music.get_playing(channel="cs_bus_mystery")!=cs_bus_drone:
-                renpy.music.set_volume(0.20,channel="cs_bus_mystery")
+                renpy.music.set_volume(0.10 if cs_bus_audio_mode=="hushed" else 0.20,channel="cs_bus_mystery")
                 renpy.music.play(cs_bus_drone,channel="cs_bus_mystery",loop=True,fadein=0.6)
         if not cs_bus_audio_revision:
             # Old slots gain a bed, never a replayed braking/door one-shot.

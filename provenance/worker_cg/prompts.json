@@ -1,0 +1,150 @@
+{
+  "cg_d07_last_run.png": {
+    "prompt": "Use case: compositing, identity-preserve. Create a FINISHED game CG, a single clean widescreen16:9 frame. Requested native3840x2160 (minimum1920x1080). Direct edit original Everlasting Summer camp path; retain exact camera, path, pine trunks, rounded huts, benches, stairs and architecture; early dawn cool shadows/golden first sun. Exact adult Lena Sokolova22 from supplied sport CG, purple messy running bun, green eyes, silver necklace, white athletic tee, black shorts white piping, injured RIGHT elbow white bandage. Add only her jogging slowly alone toward right foreground, full body/sneakers,3/4 side view, gaze down path. Classic VN anime fine ink/modest cel shading harmonized with original painted background. No people, ghosts, silhouettes, text, watermark, panels.",
+    "references": [
+      "work/v2/references/bg_ext_houses_day.jpg",
+      "work/v2/references/sokolova_sport.png"
+    ]
+  },
+  "cg_d07_library_voice.png": {
+    "prompt": "Use case: compositing, identity-preserve. Make one FINISHED widescreen16:9 game CG, requested native3840x2160 or1920x1080, no collage. Direct EDIT TARGET reference1 is the ORIGINAL Everlasting Summer library exterior. KEEP exact camera, low rectangular yellow/green timber building, its doors and windows, front bench, visible EMPTY left building corner, trees and path; do not redesign location. Change daylight to dawn softly. Insert only Lena Sokolova on the existing green front bench, right half of image, seated with real support, feet on ground, hands resting naturally. Adult22, purple hair in messy running bun, green eyes, white athletic tee, black shorts with white trim, dark running sneakers, white bandage on injured RIGHT elbow, exact face identity from reference2. She quietly turns her head left toward the EMPTY building corner, listening to someone offscreen. Calm alertness, not horror expression, not looking at camera. Classic Everlasting Summer VN fine lineart and restrained cel shading for character; original painted scenery recognizable. Absolutely NO other person, no silhouette, no woman hidden behind corner, NO face in window or trees, no humanoid shadow or reflection. The third Lena must remain completely unseen. No text, watermark, frame or symbols.",
+    "references": [
+      "/workspace/scratch/5abe4a03ed6c/work/v2/references/bg_ext_library_day.jpg",
+      "/workspace/scratch/5abe4a03ed6c/work/v2/references/sokolova_sport.png"
+    ]
+  },
+  "cg_d07_breakfast_four.png": {
+    "prompt": "Finished single wide16:9 visual novel CG. Requested native3840x2160 or1920x1080. Direct scenery edit of reference1, ORIGINAL Everlasting Summer dining hall: preserve exact recognizable windows, pillars, hanging strip lamps, tiled lower walls and rows of empty tables, do not replace dining room. Stage FOUR and ONLY FOUR people at one foreground breakfast table, warmly talking with each other, never facing viewer. Reference2 Lena Sokolova22, long purple high ponytail/white bow/green eyes, white pioneer blouse red tie/dark skirt, white bandage RIGHT elbow. Reference3 Darya, red tousled shoulder-length hair/green eyes, white pioneer blouse/red tie/dark skirt. Reference4 ORIGINAL Olga Dmitrievna, long reddish-brown hair/green eyes, white pioneer blouse/red neckerchief/blue skirt. Reference5 ORIGINAL Viola, dark navy high ponytail distinctive heterochromatic red and blue eyes, white medical coat over blue blouse. Match all four supplied faces, hair silhouettes, original eye designs and fine lineart; not substitute generic anime women. Seated three-quarter side views around table, relaxed final breakfast: Darya gestures gently, Sokolova listening with quiet smile, Olga and Viola attentive. Tea glasses, modest porridge/bread as CURRENT breakfast. A SEPARATE adjacent tray holds stacked CLEAN plates and neatly arranged cutlery returned from yesterday; no old food, no rotten food. Background completely empty, no fifth person/Semyon, no ghost or odd table setting. Plain warm morning, grounded anatomy, fine classic VN ink and restrained cel shading over original painted scenery. No text or watermark.",
+    "references": [
+      "/workspace/scratch/5abe4a03ed6c/work/v2/references/bg_int_dining_hall_day.jpg",
+      "/workspace/scratch/5abe4a03ed6c/work/v2/references/sokolova_mirror.png",
+      "/workspace/scratch/5abe4a03ed6c/work/v2/references/darya_pioneer.png",
+      "/workspace/scratch/5abe4a03ed6c/work/v2/references/olga_original.png",
+      "/workspace/scratch/5abe4a03ed6c/work/v2/references/viola_original.png"
+    ]
+  },
+  "cg_d07_packing.png": {
+    "prompt": "Use case: compositing. A single finished widescreen16:9 CG for the Russian VN mod Chuzhaya Smena; requested native3840x2160 or1920x1080. Reference1 is the EXACT established shared cabin interior, direct edit target: retain camera toward rear centered window, ONE table beneath that window, two iron beds left and right, curved golden wooden walls, shelves and furniture, do not redesign or add a second table. Insert adult Lena Sokolova22 from reference2, long purple hair in high ponytail/white bow/green eyes, exact face, white pioneer shirt/red tie/dark skirt, white bandage RIGHT elbow. She is seated solidly ON the edge of the RIGHT bed, feet supported on floor, 3/4 side view looking down at her bag, never at camera. One plain brown soft travel bag open on mattress directly beside her: her hands carefully pack a closed plain paper ENVELOPE and a small NOTEBOOK among ordinary folded clothes. Only these story objects. NO library book, no loose sketch/drawing, no badge, no guitar pick, no music sheet, no other conditional gift. Darya not visible. Warm late-morning summer daylight. Classic VN fine ink/cel character matching reference identity over exact existing painted cabin background, natural anatomy/hand positions, practical respectful framing; no fashion pinup styling. No text, watermark, border, extra person or ghost.",
+    "references": [
+      "/workspace/scratch/5abe4a03ed6c/work/v2/references/house_in.png",
+      "/workspace/scratch/5abe4a03ed6c/work/v2/references/sokolova_mirror.png"
+    ]
+  },
+  "cg_d07_last_pier_friend.png": {
+    "prompt": "Precise correction to this exact CG. Change ONLY the socks on the two seated adult women's lower legs. Their shoes are already removed, now remove BOTH pairs of white knee-high socks, show their natural BARE calves, ankles and bare feet touching water. Both girls sensibly removed socks before putting feet in water. Keep completely unchanged their faces, hair, pioneer shirts/skirts, hands, elbow bandage, postures, dock, background boathouse geometry, boats, lighting, camera and framing. No other edits. Finished single16:9 VN CG, requested1920x1080 or3840x2160. No text, no border.",
+    "references": [
+      "/workspace/scratch/5abe4a03ed6c/output/Art_v2/cg/cg_d07_last_pier_friend.png"
+    ]
+  },
+  "cg_d07_last_pier_romance.png": {
+    "prompt": "Create the ROMANCE branch variation of this exact single16:9 CG. Preserve exact original boathouse/dock geometry, boats, sky, camera, framing, sunlight, both adult women's faces/hair/uniforms, their bare calves/feet touching water and shoes behind them. ONLY change their relationship gesture: move the seated women comfortably closer until Lena Sokolova on LEFT gently rests the side of her purple-haired head on Darya's shoulder on RIGHT. Lena's healthy LEFT hand loosely holds Darya's hand between them, while injured RIGHT elbow stays supported on folded cloth. Darya looks down at Lena with a small tender smile. Both women remain solidly sitting on wooden dock boards, natural anatomy, no floating, no sexual framing. Keep exact hairstyles and identities. No kissing, no new object, no other people, no text/watermark. Fine classic VN character ink/cel shading, same original painterly scenery. Requested native3840x2160 or1920x1080.",
+    "references": [
+      "/workspace/scratch/5abe4a03ed6c/output/Art_v2/cg/cg_d07_last_pier_friend.png"
+    ]
+  },
+  "cg_d07_farewell_gate.png": {
+    "prompt": "Use case compositing. A finished single wide16:9 visual novel CG, requested native3840x2160 or1920x1080. EDIT TARGET reference1 is the ORIGINAL Everlasting Summer orange Ikarus bus at camp entrance. Preserve exact original bus design, camera, open front door/steps on RIGHT, windows, left stone gate pillar, pavement/trees; no modern bus and no invented architecture. Add FOUR people only during farewell. At the right bus entrance adult Lena Sokolova22 in pioneer shirt/red tie/dark skirt, purple long ponytail/white bow/green eyes from ref2, one foot on first step, healthy LEFT hand lightly on handrail, injured RIGHT elbow whitebandaged held safely. She turns head BACK LEFT toward Olga and Viola, NOT looking at viewer. Darya from ref3 (red tousled shoulderhair greeneyes pioneeroutfit) stands on pavement immediately behind Lena with plain brown travel bag, also looks back LEFT. On LEFT near gate pillar ORIGINAL Olga ref4 (reddishbrown hair greeneyes pioneer shirt/redtie/blueskirt) and ORIGINAL Viola ref5 (dark navy ponytail heterochromatic eyes white medicalcoat blueblouse) stand together waving gently TO THE TWO GIRLS. All gazes directed between the people, no one into camera. Simple natural farewell, quiet emotion, warm summer afternoon, grounded anatomy. Classic VN fine character ink/cel shading and original painted environment, preserve all provided identities. No Semyon, no other camper, no extra women/ghosts; no readable added signs, no text or watermark.",
+    "references": [
+      "/workspace/scratch/5abe4a03ed6c/work/v2/references/bg_ext_bus.jpg",
+      "/workspace/scratch/5abe4a03ed6c/work/v2/references/sokolova_mirror.png",
+      "/workspace/scratch/5abe4a03ed6c/work/v2/references/darya_pioneer.png",
+      "/workspace/scratch/5abe4a03ed6c/work/v2/references/olga_original.png",
+      "/workspace/scratch/5abe4a03ed6c/work/v2/references/viola_original.png"
+    ]
+  },
+  "cg_d07_bus_sleep_friend.png": {
+    "prompt": "Finished single16:9 visual novel CG, requested native3840x2160 or1920x1080. Use reference1 ORIGINAL Everlasting Summer Ikarus interior as exact environment/design authority: violet patterned paired seats, peach plastic edging, purple curtains, overhead shelves, narrow aisle, small driver-area stickers; absolutely not a modern city bus. Cinematic 3/4 angle from the aisle toward two neighboring left-side seats, with original fittings and layout clearly recognizable. ONLY TWO sleeping adult female passengers, no Semyon or other campers. Window seat: Lena Sokolova22 exact face from ref2, purple long highpony/whitebow/greeneyes, pioneerblouse/redtie/darkskirt, injured RIGHT elbow whitebandage supported on folded towel at armrest. She dozes leaning gently toward sidewindow, her own hands loosely in her lap. Aisle seat: Darya22 exact face ref3, red tousled shoulderhair/greeneyes, pioneeruniform, sleeping upright against own seatback with separate hands on lap. FRIENDSHIP branch: normal space between them, no handholding, no romantic head-on-shoulder pose. Travel bags safely down by their seats, seats support bodies naturally. Moving summer trees outside, drowsy warm afternoon light. Classic fine VN anime ink/cel shading, identities faithful supplied references, original painted bus details, gentle ordinary sleep. No ghosts, no extra people, no text, watermark, panels or decorative border.",
+    "references": [
+      "/workspace/scratch/5abe4a03ed6c/work/v2/references/bg_int_bus.jpg",
+      "/workspace/scratch/5abe4a03ed6c/work/v2/references/sokolova_mirror.png",
+      "/workspace/scratch/5abe4a03ed6c/work/v2/references/darya_pioneer.png"
+    ]
+  },
+  "cg_d07_bus_sleep_romance.png": {
+    "prompt": "Make the ROMANCE branch variation of this exact widescreen VN bus CG. Change ONLY their sleeping gesture: DARYA, the RED-haired adult woman on RIGHT/AISLE, gently leans her head LEFT onto the shoulder of PURPLE-haired Lena Sokolova at LEFT/WINDOW. Both still sleeping peacefully. Lena's healthy LEFT hand loosely holds Darya's hand between them on their laps; Lena's bandaged RIGHT elbow remains supported on the folded towel at outside armrest. Preserve faces/hairstyles/uniforms/identities and calm mood, original Ikarus purple seat fabric, curtains, shelves, aisle, front area, sunlight/camera. Natural anatomy, no extra hand/arm, bodies properly seated, no kiss. Only two girls, no new person, no ghosts. Single full frame16:9, requested native3840x2160 or1920x1080. No text, watermark or border.",
+    "references": [
+      "/workspace/scratch/5abe4a03ed6c/output/Art_v2/cg/cg_d07_bus_sleep_friend.png"
+    ]
+  },
+  "bg_semen_room_2026_dirty.png": {
+    "prompt": "Precise environment adaptation, finished VN BACKGROUND, single widescreen16:9, requested native3840x2160/min1920x1080. DIRECT EDIT TARGET is the ORIGINAL Everlasting Summer Semyon bedroom in reference. Preserve EXACT CAMERA and floorplan: centered rear window, desk and green officechair in front of window, tall shelving at LEFT, low cabinets and old hand-me-down TV at farleft, narrow bed along RIGHT wall, right hanging shelves, fridge/cabinet right of desk, rug and worn wallpaper. It must still be unmistakably the ORIGINAL ROOM, not a new apartment, no added door/window and no furniture redesign. Adapt only ordinary technology to January2026: replace old CRT computer monitor on desk with one simple modern flat monitor; normal black PC tower/keyboard/headphones, smartphone charging cable, small discreet WiFi router. Retain old TV as hand-me-down. Cold winter daylight and snow on distant roofs through window, lamp unlit, no summer night blue glow. BEFORE CLEANING state: clothes over chair/bed/floor, a few delivery boxes and food wrappers, used mugs and papers, comfortable believable bachelor clutter, not severe filth. Original Everlasting Summer hand-painted anime background look, clear fine lines, matte texture, no photoreal/gamer-luxury redesign. Absolutely EMPTY ROOM, no person, no face/reflection, no ghost. No readable text, watermark or border.",
+    "references": [
+      "/workspace/scratch/5abe4a03ed6c/work/v2/references/bg_semen_room.jpg"
+    ]
+  },
+  "bg_semen_room_2026_partial.png": {
+    "prompt": "Precise edit of THIS EXACT VN room background into its PARTLY TIDIED intermediate state. Preserve EXACT camera, geometry, lighting, furniture, window, walls, curtains, bed frame/BLUE bedding, TV, shelves, desk/chair and ALL2026 electronics. Change ONLY a small fraction of the clutter: align books on left shelving and put scattered DESK papers into a neat pile, remove one used mug and one small food wrapper from desk. Most floor clothes, delivery boxes, floor papers and unmade bed remain plainly messy. It must visibly be an intermediate step, not clean. Absolutely no renovation/newfurniture/windowshift, no recoloring bed or wallpaper. Original Everlasting Summer matte hand-painted background, empty no people/ghosts, single16:9 requested native3840x2160/1920x1080. No text or watermark.",
+    "references": [
+      "/workspace/scratch/5abe4a03ed6c/output/Art_v2/bg/bg_semen_room_2026_dirty.png"
+    ]
+  },
+  "bg_semen_room_2026_clean.png": {
+    "prompt": "Precise edit of this EXACT room background into AFTER CLEANING. Preserve EXACT camera, perspective, all permanent furniture, proportions, wallpaper, window, curtains, winter daylight, lamp, green chair, original TV, modern flatmonitor/PC/router/smartphone, rug, wooden bed frame and BLUE blanket/pillows. Change ONLY tidiness: remove delivery boxes/packaging, floor trash, loose clothes on bed/floor/chair; arrange papers/books neatly; wash/remove used mugs; make bed neatly USING THE SAME BLUE bedding, not a new plaidcover. No expensive redesign, no renovation, no plants or new furniture, no added or shifted door/window. Modest worn bachelor apartment remains the ORIGINAL Everlasting Summer Semyon room in January2026. Empty room no humans/ghosts/faces, classic hand-painted VN background, matte color, single16:9 requested native3840x2160/1920x1080. No text, watermark or border.",
+    "references": [
+      "/workspace/scratch/5abe4a03ed6c/output/Art_v2/bg/bg_semen_room_2026_dirty.png"
+    ]
+  },
+  "bg_darya_room_winter.png": {
+    "prompt": "Finish this established Darya bedroom as one game-ready16:9 visual novel BACKGROUND, requested native3840x2160/min1920x1080. Reference1 gives EXACT APPROVED room geometry, preserve camera and furnishings: bed and tall wardrobe LEFT, small bedside cabinet, plain desk center-left under two wall shelves, winter window on RIGHT with radiator beneath, room door at extreme right. Orange duvet/pale pillow, modest warm beige walls, wooden parquet, simple rug, books, potted plant, laptop, phone charging at desk, ordinary January2026 Russian apartment. Her black winter jacket hanging near door must be plain black like established Darya's outfit. Reference2 is STYLE ONLY, original Everlasting Summer painted background: match clear lines/matte paint and soft light, do NOT import reference2's geometry or Semyon's furniture. Keep this a different room. Fine polished original VN environment with gentle winter morning sunlight, snowy apartment blocks outside. EMPTY no people/ghosts/faces/reflections. No readable text, watermark or border, no luxury renovation, no extra bed or desk.",
+    "references": [
+      "/workspace/scratch/5abe4a03ed6c/work/old_art/bg/epilogue/bg_darya_room_winter.png",
+      "/workspace/scratch/5abe4a03ed6c/work/v2/references/bg_semen_room.jpg"
+    ]
+  },
+  "cg_ep_lena_wakes.png": {
+    "prompt": "Create a finished single16:9 VN CG, requested native3840x2160/min1920x1080. Direct edit target ref1 is the EXACT mod background of Lena Sokolova's own Moscow artist bedroom. Preserve exact camera/layout/window centered/desk with drawing tablet/left shelving/plants/right bed/art supplies/wall sketches/lamp, absolutely no room redesign. Insert ONLY adult22 Lena Sokolova, exact face/purple longhair/greeneyes from ref2, just awakened sitting firmly on the edge of her RIGHT-side bed, feet lowered toward floor. Change clothing from winter source to a plain loose white T-SHIRT and gray soft long lounge TROUSERS, no winter parka/scarf/boots, no uniform, no lingerie. Hair loose/messy after sleep, white bow casually attached near back. White bandage remains on injured RIGHT elbow. She looks at her own hand and bandage, quiet startled realization she is home; a plain brown travel bag safely beside bed contains her carried belongings. Winter January2026 pale sun/snow outside same window, warm subdued room. Fine classic visual-novel anime face/linework faithfully matching source, matte painted room. No Darya, no third Lena, no face/reflection/ghost, no additional people, no text or watermark. Natural seated anatomy, actual body support on mattress, respectful framing.",
+    "references": [
+      "/workspace/scratch/5abe4a03ed6c/work/v2/references/room_sokolova.png",
+      "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/sokolova/winter/neutral.png"
+    ]
+  },
+  "cg_ep_darya_wakes.png": {
+    "prompt": "Use case compositing identity-preserve. Finished single16:9 visual novel CG, requested native3840x2160/min1920x1080. Direct EDIT TARGET ref1 is Darya's exact established winter home bedroom, preserve all geometry/camera: bed/wardrobeLEFT, desk/bookshelvescenter, window/radiatorRIGHT, orange blanket, laptop/phonecable, plain walls/parquet. Insert ONLY adult22 Darya Eretikova from ref2, exact red tousled shoulder-length hair, green eyes, small ear piercings, same face and slim natural proportions. She wears her established ORANGE long-sleeved buttoned pajamas with white piping and orange pajama trousers, not a coat/uniform/underwear. Just awakened sitting firmly on left bed edge, looks at a dark smartphone held naturally in one hand, other hand rests on duvet. Her expression quietly bewildered/relieved at being home after camp, no dramatic horror. Feet on floor or sensibly beneath duvet, natural supported anatomy. Fine classic VN character ink/cel shading faithful to source, warm winter morning light, snowy roofs outside exact same window. No Lena Sokolova, no third Lena, no new person/ghost/reflection. No text, watermark, border or layout change.",
+    "references": [
+      "/workspace/scratch/5abe4a03ed6c/output/Art_v2/bg/bg_darya_room_winter.png",
+      "/workspace/scratch/5abe4a03ed6c/work/v2/references/darya_home.png"
+    ]
+  },
+  "bg_semen_landing.png": {
+    "prompt": "Finished single16:9 visual novel background, requested native3840x2160 or1920x1080. Reference1 is the APPROVED staging geometry of Semyon's apartment stairwell landing: retain exact camera/perspective, closed brown flat door on RIGHT, peephole/simple doorbell, plain doormat, window on LEFT, descending stairs/metal rail foregroundLEFT, exposed pipe on right, worn beige plaster above faded green lower wall, modest tiled floor. January2026 daytime, snow on roofs visible through left window, simple warm ceiling light. Re-render in faithful ORIGINAL Everlasting Summer background look as STYLE reference2: clear fine lines and matte painted texture, not photoreal architecture render. Do NOT import ref2's room layout/furniture. Empty landing no humans, no ghost, no faces/reflection, no motion, no readable apartment number/address/text. No watermark, border or panel. Nothing luxurious or threatening, ordinary lived-in Soviet apartment block.",
+    "references": [
+      "/workspace/scratch/5abe4a03ed6c/work/old_art/bg/epilogue/bg_semen_landing.png",
+      "/workspace/scratch/5abe4a03ed6c/work/v2/references/bg_semen_room.jpg"
+    ]
+  },
+  "bg_moscow_meeting_winter.png": {
+    "prompt": "Finished game BACKGROUND, single16:9 requested native3840x2160/min1920x1080. Direct edit target reference1 is the ACTUAL ESTABLISHED modern Moscow bus stop of Chuzhaya Smena mod, itself adapted from ORIGINAL Everlasting Summer reference2. Keep reference1 EXACT camera/geometry: modern glass shelter middle-right, bench inside, dark bin at right, tall snow-coated tree behind/right, curving streetlamps left, snowy path foreground, apartment blocks and small shop in distance. Change ONLY time/light from night to pale January DAYTIME, early afternoon winter sky, soft warm low sunlight, ordinary cold white snow, no fantastical sparkling glow. January2026 city infrastructure stays modern; keep lighted routeboard shapes but no legible gibberish wording, don't invent a new cafe street or fancy architecture. Preserve original VN painted style, matte fine lines, readable depth, usable open foreground for sprites. COMPLETELY EMPTY: no people/faces/reflections/ghosts, no bus. No watermark/panel/border. Faithfully recognizable actual mod stop, not a generic redesign.",
+    "references": [
+      "/workspace/scratch/5abe4a03ed6c/work/v2/references/mod_bus_stop.png",
+      "/workspace/scratch/5abe4a03ed6c/work/v2/references/original_bus_stop.jpg"
+    ]
+  },
+  "cg_ep_reunion_friend.png": {
+    "prompt": "Finished single16:9 visual novel CG, requested native3840x2160/min1920x1080. Direct scenery edit target ref1, the actual established modern Moscow winter bus stop of the mod. Preserve exact shelter/window/tree/lamps/apartments/snow/path geometry and January daylight. Add ONLY TWO adult women in clear foreground, full-body to winter boots, facing each other in relieved friendly reunion, looking at one another NEVER viewer. Exact Sokolova design/clothes from reference2 on LEFT:22,162cm, long purple highpony/whitebow/greeneyes, BEIGE fur-trimmed parka, RED CHECK scarf, black cargo trousers, black lace-up winterboots. Exact Darya design/clothes ref3 on RIGHT:22,168cm, red tousled shoulderhair/greeneyes/earpiercings, BLACK winterjacket over WHITE BLOUSE, black belted trousers, chunky black lace-up boots. Preserve each face and exact clothes, no new wardrobe or bags. Darya smiles softly with one open hand in normal conversation; Sokolova has relief in face and shoulders, small genuine smile, normal comfortable FRIENDSHIP distance. NO kiss, no handholding, no romantic embrace. Sokolova's injured right elbow stays safely inside parka, no arm lifting/strain. Match faithful classic VN fine ink/cel shading to their actual sprites, winter background original painted style. No other people/ghosts/faces/silhouettes, no text, watermark or panels.",
+    "references": [
+      "/workspace/scratch/5abe4a03ed6c/output/Art_v2/bg/bg_moscow_meeting_winter.png",
+      "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/sokolova/winter/neutral.png",
+      "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/darya/winter/neutral.png"
+    ]
+  },
+  "cg_ep_reunion_romance.png": {
+    "prompt": "ROMANCE branch variation of this exact16:9 winter reunion CG. Keep exact SAME two adult22 women, their faces/hairstyles/colors/accessories and exact winter clothes, boots, snowy Moscow stop background geometry, daylight and camera. Change ONLY body gesture: they step close and share a relieved tender embrace, Sokolova with PURPLE hair/BEIGE parka on LEFT leans into taller Darya with RED hair/BLACK jacket on RIGHT. Darya wraps arms naturally around her upper back without squeezing Sokolova's injured RIGHT elbow; Sokolova's healthy LEFT hand rests at Darya's waist, right arm kept safely low between them. Heads close, eyes gently closed, Darya gives a brief light kiss to Sokolova's forehead/temple. Warm reunion, fully winter-clothed, grounded feet, natural four arms/hands total, no sexual posing. Height162versus168cm maintained. No one looks at viewer. No other people, no third Lena, no ghosts, no text, watermark or border. Requested native3840x2160/min1920x1080, faithful classic VN fine ink/cel shading.",
+    "references": [
+      "/workspace/scratch/5abe4a03ed6c/output/Art_v2/cg/cg_ep_reunion_friend.png"
+    ]
+  },
+  "cg_ep_normal_route_friend.png": {
+    "prompt": "Finished single16:9 visual novel CG, requested native3840x2160/min1920x1080. Reference1 is the EXACT ACTUAL MODERN MOSCOW BUS interior used in Chuzhaya Smena: preserve its recognisable blue patterned seats, yellow poles, gray trim, handles, ceiling lights, front display and winter evening street outside. Do not change to old Ikarus or invent luxury/touristbus. Route display shows ONLY clear number410, not M2 and no gibberish text. Stage TWO adult22 women in neighboring seats on LEFT/window row, natural 3/4 angle from aisle making their faces visible while recognizable original layout remains. Window passenger Lena Sokolova exactly ref2: purple long ponytail/whitebow/greeneyes, beige furtrim parka/redcheckscarf/blacktrousers/boots. Aisle passenger Darya exactly ref3: red tousled shoulderhair/greeneyes/piercings, black jacket/white blouse/blacktrousers/blackboots. Outer coats slightly unzipped in heated bus but SAME clothes. FRIENDSHIP branch: separate relaxed hands, no handholding or romantic lean. Lena shows a smartphone map in healthy LEFT hand near her lap; Darya smiles looking at it and then Lena, quiet friendly conversation. Injured right elbow comfortably supported, no new bandage visible through coat. Authentic exact faces, classic fine VN ink/cel shading integrated with mod painted background. Snowy ordinary Moscow road through windows, peaceful evening. No Semyon, no other people, no ghost/third Lena, no text beyond410, no watermark/border/panels.",
+    "references": [
+      "/workspace/scratch/5abe4a03ed6c/work/v2/references/mod_city_bus.png",
+      "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/sokolova/winter/neutral.png",
+      "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/darya/winter/neutral.png"
+    ]
+  },
+  "cg_ep_normal_route_romance.png": {
+    "prompt": "ROMANCE branch variation of this exact finished16:9 city-bus CG. Preserve exact original modern Moscow bus background blue patterned seats/yellowpoles/graytrim/route410 display/window winter road, exact camera/light and identities, hairstyles and winter clothes of the two adult22 women. ONLY change their small gesture: smartphone with map now rests safely on purple-haired Sokolova's lap; her healthy LEFT hand loosely interlaces fingers with red-haired Darya's hand between them. Sokolova on LEFT leans slightly right and gives Darya a brief affectionate kiss on the temple; Darya smiles softly with eyes gently closed. Sokolova's injured RIGHT elbow remains relaxed/supported, no strain, no squeezing. Natural seated anatomy and hands, no extra limbs, no sexual pose; ordinary warm homeward journey, not a new dream or supernatural sign. Both remain fully winter-clothed, coats slightly open as before. No other people/faces/ghosts, no added text except unchanged410, no watermark or border. Fine classic VN ink/cel shading matching exact source, requested native3840x2160/min1920x1080.",
+    "references": [
+      "/workspace/scratch/5abe4a03ed6c/output/Art_v2/cg/cg_ep_normal_route_friend.png"
+    ]
+  }
+}

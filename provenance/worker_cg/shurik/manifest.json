@@ -1,0 +1,495 @@
+{
+  "winter_neutral": {
+    "source": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-5ba3a4a9-4869-4f35-8050-612d383b93e6.png",
+    "character": "shurik",
+    "outfit": "winter",
+    "emotion": "neutral",
+    "prompt": "Use case: identity-preserve REDRESS of the EXACT ORIGINAL EVERLASTING SUMMER SHURIK sprite in reference. One SINGLE full-body game sprite on truly TRANSPARENT background, portrait9:16, requested native2160x3840/min1080x1920. Preserve original face SHAPE, square dark-rim glasses, blue eyes, short parted BLOND hair with swept bangs, thin ink lines, simple original cel shading and original masculine proportions. No generic new handsome anime redesign, no painterly or realistic rendering. Extend cropped lower legs naturally into full length. Same upperbody standing3/4 pose as original: head turned slightly toward camera-left, both elbows bent and BOTH HANDS lightly resting at waist/hips, feet planted slightly apart, no action. Neutral calm facial expression, small closed relaxed mouth, eyes open. Replace ONLY pioneer clothing with WINTER STREET outfit: CHARCOAL practical winter PARKA, GRAY knit SCARF, dark straight trousers, black sturdy winter BOOTS, warm fully covered body. No pioneer tie, uniform patch or summer shirt. Watch can remain partly visible near cuff. Exactly one person head-to-toes with visible shoe soles, about5% empty top and bottom margin, all hands/hair/glasses fully in frame. No ground shadow, no background/gradient, no labels/text/border, not an atlas or sheet.",
+    "references": [
+      "/workspace/scratch/5abe4a03ed6c/work/v2/references/shurik_original.png"
+    ],
+    "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_cg/shurik/native/winter_neutral.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "output_path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/shurik/winter/neutral.png",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "visible_bbox": [
+      252,
+      70,
+      829,
+      1850
+    ],
+    "transform": {
+      "scale": 1.0967344423906347,
+      "x": 24.53481207640172,
+      "y": 39.291435613062276,
+      "reference_native_size": [
+        941,
+        1672
+      ],
+      "visible_reference_bbox": [
+        207,
+        28,
+        733,
+        1651
+      ]
+    }
+  },
+  "winter_soft_smile": {
+    "source": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-2cf1e28c-7bc1-4a29-bef7-1acad6cd9d79.png",
+    "character": "shurik",
+    "outfit": "winter",
+    "emotion": "soft_smile",
+    "prompt": "Use case: identity-preserve. Asset: SINGLE full-body transparent visual-novel sprite of original Everlasting Summer Shurik. Input image is the exact neutral winter sprite to edit. Make one highly localized FACIAL EXPRESSION EDIT ONLY: soft_smile — a small gentle CLOSED-mouth smile, very slightly softened eyebrows and warm eyes, subtle expression only; do not move the head. All other pixels, geometry and composition should remain as close to this source as possible. Preserve exact full-body standing pose, head angle and placement, blond side-parted hair outline, original face shape, square dark glasses, blue irises, both bent elbows and hands resting at waist/hips, watch, charcoal parka, gray scarf, dark straight trousers, black winter boots, thin ink lines and simple classic original ES cel shading. Do not redesign or change clothing, glasses, hands, feet, height or body silhouette. Same source portrait 9:16 framing, requested high-resolution 1080x1920 or 2160x3840, one character fully visible from top of hair to BOTH shoe soles. Keep source empty margins so common export leaves approximately 60-80 pixels above hair and below soles. Real RGBA transparent background, zero ground shadow, no scenery, no border, no text. Output one individual full-frame image, never a contact sheet, atlas, cropped face or miniature.",
+    "references": [
+      "/workspace/scratch/5abe4a03ed6c/work/v2/worker_cg/shurik/native/winter_neutral.png"
+    ],
+    "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_cg/shurik/native/winter_soft_smile.png",
+    "native_size": [
+      941,
+      1671
+    ],
+    "output_path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/shurik/winter/soft_smile.png",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "visible_bbox": [
+      252,
+      68,
+      829,
+      1852
+    ],
+    "transform": {
+      "scale": 1.0967344423906347,
+      "x": 24.53481207640172,
+      "y": 39.291435613062276,
+      "reference_native_size": [
+        941,
+        1672
+      ],
+      "visible_reference_bbox": [
+        207,
+        28,
+        733,
+        1651
+      ]
+    }
+  },
+  "winter_thoughtful": {
+    "source": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-e147ae95-e6b7-4d6e-a027-62071d879dfa.png",
+    "character": "shurik",
+    "outfit": "winter",
+    "emotion": "thoughtful",
+    "prompt": "Use case: identity-preserve. Asset: SINGLE full-body transparent visual-novel sprite of original Everlasting Summer Shurik. Input image is the exact neutral winter sprite to edit. Make one highly localized FACIAL EXPRESSION EDIT ONLY: thoughtful — a thoughtful contemplative face, mildly drawn-together brows, eyes glancing slightly to the side within unchanged eye sockets, lips gently pressed CLOSED, no smile. Only eyebrows, eyelids, pupils and mouth may change; head absolutely fixed. All other pixels, geometry and composition should remain as close to this source as possible. Preserve exact full-body standing pose, head angle and placement, blond side-parted hair outline, original face shape, square dark glasses, blue irises, both bent elbows and hands resting at waist/hips, watch, charcoal parka, gray scarf, dark straight trousers, black winter boots, thin ink lines and simple classic original ES cel shading. Do not redesign or change clothing, glasses, hands, feet, height or body silhouette. Same source portrait 9:16 framing, requested high-resolution 1080x1920 or 2160x3840, one character fully visible from top of hair to BOTH shoe soles. Keep source empty margins so common export leaves approximately 60-80 pixels above hair and below soles. Real RGBA transparent background, zero ground shadow, no scenery, no border, no text. Output one individual full-frame image, never a contact sheet, atlas, cropped face or miniature.",
+    "references": [
+      "/workspace/scratch/5abe4a03ed6c/work/v2/worker_cg/shurik/native/winter_neutral.png"
+    ],
+    "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_cg/shurik/native/winter_thoughtful.png",
+    "native_size": [
+      941,
+      1671
+    ],
+    "output_path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/shurik/winter/thoughtful.png",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "visible_bbox": [
+      252,
+      70,
+      829,
+      1853
+    ],
+    "transform": {
+      "scale": 1.0967344423906347,
+      "x": 24.53481207640172,
+      "y": 39.291435613062276,
+      "reference_native_size": [
+        941,
+        1672
+      ],
+      "visible_reference_bbox": [
+        207,
+        28,
+        733,
+        1651
+      ]
+    }
+  },
+  "winter_sad": {
+    "source": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-9bc7ca94-390a-4abf-9703-76b082eff69d.png",
+    "character": "shurik",
+    "outfit": "winter",
+    "emotion": "sad",
+    "prompt": "Use case: identity-preserve. Asset: SINGLE full-body transparent visual-novel sprite of original Everlasting Summer Shurik. Input image is the exact neutral winter sprite to edit. Make one highly localized FACIAL EXPRESSION EDIT ONLY: sad — restrained sorrow, inner eyebrows lifted and drawn together, eyelids slightly lowered with blue eyes visible, corners of CLOSED mouth turned down. No tears, no head tilt, no posture change. All other pixels, geometry and composition should remain as close to this source as possible. Preserve exact full-body standing pose, head angle and placement, blond side-parted hair outline, original face shape, square dark glasses, blue irises, both bent elbows and hands resting at waist/hips, watch, charcoal parka, gray scarf, dark straight trousers, black winter boots, thin ink lines and simple classic original ES cel shading. Do not redesign or change clothing, glasses, hands, feet, height or body silhouette. Same source portrait 9:16 framing, requested high-resolution 1080x1920 or 2160x3840, one character fully visible from top of hair to BOTH shoe soles. Keep source empty margins so common export leaves approximately 60-80 pixels above hair and below soles. Real RGBA transparent background, zero ground shadow, no scenery, no border, no text. Output one individual full-frame image, never a contact sheet, atlas, cropped face or miniature.",
+    "references": [
+      "/workspace/scratch/5abe4a03ed6c/work/v2/worker_cg/shurik/native/winter_neutral.png"
+    ],
+    "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_cg/shurik/native/winter_sad.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "output_path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/shurik/winter/sad.png",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "visible_bbox": [
+      252,
+      69,
+      829,
+      1850
+    ],
+    "transform": {
+      "scale": 1.0967344423906347,
+      "x": 24.53481207640172,
+      "y": 39.291435613062276,
+      "reference_native_size": [
+        941,
+        1672
+      ],
+      "visible_reference_bbox": [
+        207,
+        28,
+        733,
+        1651
+      ]
+    }
+  },
+  "winter_surprised": {
+    "source": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-27ffa109-4340-4961-a5ab-4acb77a04a8b.png",
+    "character": "shurik",
+    "outfit": "winter",
+    "emotion": "surprised",
+    "prompt": "Use case: identity-preserve. Asset: SINGLE full-body transparent visual-novel sprite of original Everlasting Summer Shurik. Input image is the exact neutral winter sprite to edit. Make one highly localized FACIAL EXPRESSION EDIT ONLY: surprised — visibly raised eyebrows, both blue eyes opened wider without moving the glasses or enlarging the head, small naturally parted O-shaped mouth. Restrained believable surprise in classic ES style, no cartoon symbols, no head tilt. All other pixels, geometry and composition should remain as close to this source as possible. Preserve exact full-body standing pose, head angle and placement, blond side-parted hair outline, original face shape, square dark glasses, blue irises, both bent elbows and hands resting at waist/hips, watch, charcoal parka, gray scarf, dark straight trousers, black winter boots, thin ink lines and simple classic original ES cel shading. Do not redesign or change clothing, glasses, hands, feet, height or body silhouette. Same source portrait 9:16 framing, requested high-resolution 1080x1920 or 2160x3840, one character fully visible from top of hair to BOTH shoe soles. Keep source empty margins so common export leaves approximately 60-80 pixels above hair and below soles. Real RGBA transparent background, zero ground shadow, no scenery, no border, no text. Output one individual full-frame image, never a contact sheet, atlas, cropped face or miniature.",
+    "references": [
+      "/workspace/scratch/5abe4a03ed6c/work/v2/worker_cg/shurik/native/winter_neutral.png"
+    ],
+    "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_cg/shurik/native/winter_surprised.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "output_path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/shurik/winter/surprised.png",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "visible_bbox": [
+      252,
+      69,
+      829,
+      1851
+    ],
+    "transform": {
+      "scale": 1.0967344423906347,
+      "x": 24.53481207640172,
+      "y": 39.291435613062276,
+      "reference_native_size": [
+        941,
+        1672
+      ],
+      "visible_reference_bbox": [
+        207,
+        28,
+        733,
+        1651
+      ]
+    }
+  },
+  "winter_angry": {
+    "source": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-1687078c-030e-4a32-8000-43ad9a28958c.png",
+    "character": "shurik",
+    "outfit": "winter",
+    "emotion": "angry",
+    "prompt": "Use case: identity-preserve. Asset: SINGLE full-body transparent visual-novel sprite of original Everlasting Summer Shurik. Input image is the exact neutral winter sprite to edit. Make one highly localized FACIAL EXPRESSION EDIT ONLY: angry — distinctly stern angry face, eyebrows lowered sharply toward nose, narrowed focused blue eyes, tense CLOSED mouth with corners down, no shouting, no symbols or special effects. Only face expression changes, head and pose absolutely fixed. All other pixels, geometry and composition should remain as close to this source as possible. Preserve exact full-body standing pose, head angle and placement, blond side-parted hair outline, original face shape, square dark glasses, blue irises, both bent elbows and hands resting at waist/hips, watch, charcoal parka, gray scarf, dark straight trousers, black winter boots, thin ink lines and simple classic original ES cel shading. Do not redesign or change clothing, glasses, hands, feet, height or body silhouette. Same source portrait 9:16 framing, requested high-resolution 1080x1920 or 2160x3840, one character fully visible from top of hair to BOTH shoe soles. Keep source empty margins so common export leaves approximately 60-80 pixels above hair and below soles. Real RGBA transparent background, zero ground shadow, no scenery, no border, no text. Output one individual full-frame image, never a contact sheet, atlas, cropped face or miniature.",
+    "references": [
+      "/workspace/scratch/5abe4a03ed6c/work/v2/worker_cg/shurik/native/winter_neutral.png"
+    ],
+    "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_cg/shurik/native/winter_angry.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "output_path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/shurik/winter/angry.png",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "visible_bbox": [
+      251,
+      67,
+      830,
+      1851
+    ],
+    "transform": {
+      "scale": 1.0967344423906347,
+      "x": 24.53481207640172,
+      "y": 39.291435613062276,
+      "reference_native_size": [
+        941,
+        1672
+      ],
+      "visible_reference_bbox": [
+        207,
+        28,
+        733,
+        1651
+      ]
+    }
+  },
+  "indoor_neutral": {
+    "source": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-8558664e-64ee-4c8d-bea0-aa03b37ecddf.png",
+    "character": "shurik",
+    "outfit": "indoor",
+    "emotion": "neutral",
+    "prompt": "Use case: identity-preserve REDRESS. Asset type: one individual full-frame visual-novel sprite on TRUE RGBA transparent background. Reference1 is the exact fullbody neutral WINTER Shurik edit target and framing/pose guide. Reference2 is ORIGINAL Everlasting Summer Shurik, identity and classic original thin-line simple cel-shading guide. Replace ONLY winter clothes of reference1 with ordinary INDOOR clothing: muted warm brown plain long-sleeved sweater over a pale collared shirt with collar visible at neckline, dark charcoal straight trousers, plain dark low indoor shoes. Remove parka, fur hood, scarf, heavy boots. Preserve the original ES Shurik face identity, square dark glasses, bright blue eyes, side-parted blond hair, small closed neutral relaxed mouth. Keep head angle, hair outline/position, overall adult male proportions, body height, leg spacing and feet placement unchanged. BOTH elbows remain bent with BOTH hands resting lightly at waist/hips in exactly the existing locations; hands must be visible naturally at hips, watch visible at cuff. The same stationary standing three-quarter pose throughout; do not introduce action or crossed arms. Classic original ES artwork, thin clean ink and simple flat cel shading, not a new generic handsome anime design, not painterly or photorealistic, no texture-heavy rendering. Portrait9:16 high-resolution requested2160x3840 or1080x1920. SINGLE full body from hair top to BOTH shoe soles visible, maintain source vertical placement and empty top/bottom margin, so common export has about60–80px above head and below soles. No background, no ground shadow, no floor, no text, no border, no panels, not an atlas or contact sheet.",
+    "references": [
+      "/workspace/scratch/5abe4a03ed6c/work/v2/worker_cg/shurik/native/winter_neutral.png",
+      "/workspace/scratch/5abe4a03ed6c/work/v2/references/shurik_original.png"
+    ],
+    "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_cg/shurik/native/indoor_neutral.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "output_path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/shurik/indoor/neutral.png",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "visible_bbox": [
+      252,
+      70,
+      826,
+      1844
+    ],
+    "transform": {
+      "scale": 1.0967344423906347,
+      "x": 24.53481207640172,
+      "y": 39.291435613062276,
+      "reference_native_size": [
+        941,
+        1672
+      ],
+      "visible_reference_bbox": [
+        207,
+        28,
+        733,
+        1651
+      ]
+    }
+  },
+  "indoor_soft_smile": {
+    "source": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-fc3c2549-d8fd-43c7-9967-86dbfa670b62.png",
+    "character": "shurik",
+    "outfit": "indoor",
+    "emotion": "soft_smile",
+    "prompt": "Use case: identity-preserve. Asset: SINGLE full-body transparent visual-novel sprite of original Everlasting Summer Shurik. Input image is the exact neutral INDOOR sprite to edit. Make one highly localized FACIAL EXPRESSION EDIT ONLY: soft_smile — a small gentle CLOSED-mouth smile, very slightly softened eyebrows and warm eyes, subtle expression only; do not move the head. All other pixels, geometry and composition should remain as close to this source as possible. Preserve exact full-body standing pose, head angle and placement, blond side-parted hair outline, original face shape, square dark glasses, blue irises, both bent elbows and hands resting at waist/hips, watch, muted brown sweater, pale shirt collar, dark straight trousers and plain dark low indoor shoes, thin ink lines and simple classic original ES cel shading. Do not redesign or change clothing, glasses, hands, feet, height or body silhouette. Same source portrait 9:16 framing, requested high-resolution 1080x1920 or 2160x3840, one character fully visible from top of hair to BOTH shoe soles. Keep source empty margins so common export leaves approximately 60-80 pixels above hair and below soles. Real RGBA transparent background, zero ground shadow, no scenery, no border, no text. Output one individual full-frame image, never a contact sheet, atlas, cropped face or miniature.",
+    "references": [
+      "/workspace/scratch/5abe4a03ed6c/work/v2/worker_cg/shurik/native/indoor_neutral.png"
+    ],
+    "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_cg/shurik/native/indoor_soft_smile.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "output_path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/shurik/indoor/soft_smile.png",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "visible_bbox": [
+      251,
+      69,
+      826,
+      1847
+    ],
+    "transform": {
+      "scale": 1.0967344423906347,
+      "x": 24.53481207640172,
+      "y": 39.291435613062276,
+      "reference_native_size": [
+        941,
+        1672
+      ],
+      "visible_reference_bbox": [
+        207,
+        28,
+        733,
+        1651
+      ]
+    }
+  },
+  "indoor_thoughtful": {
+    "source": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-3a582ba9-3cf2-4a78-97b6-8f5de5477377.png",
+    "character": "shurik",
+    "outfit": "indoor",
+    "emotion": "thoughtful",
+    "prompt": "Use case: identity-preserve. Asset: SINGLE full-body transparent visual-novel sprite of original Everlasting Summer Shurik. Input image is the exact neutral INDOOR sprite to edit. Make one highly localized FACIAL EXPRESSION EDIT ONLY: thoughtful — a thoughtful contemplative face, mildly drawn-together brows, eyes glancing slightly to the side within unchanged eye sockets, lips gently pressed CLOSED, no smile. Only eyebrows, eyelids, pupils and mouth may change; head absolutely fixed. All other pixels, geometry and composition should remain as close to this source as possible. Preserve exact full-body standing pose, head angle and placement, blond side-parted hair outline, original face shape, square dark glasses, blue irises, both bent elbows and hands resting at waist/hips, watch, muted brown sweater, pale shirt collar, dark straight trousers and plain dark low indoor shoes, thin ink lines and simple classic original ES cel shading. Do not redesign or change clothing, glasses, hands, feet, height or body silhouette. Same source portrait 9:16 framing, requested high-resolution 1080x1920 or 2160x3840, one character fully visible from top of hair to BOTH shoe soles. Keep source empty margins so common export leaves approximately 60-80 pixels above hair and below soles. Real RGBA transparent background, zero ground shadow, no scenery, no border, no text. Output one individual full-frame image, never a contact sheet, atlas, cropped face or miniature.",
+    "references": [
+      "/workspace/scratch/5abe4a03ed6c/work/v2/worker_cg/shurik/native/indoor_neutral.png"
+    ],
+    "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_cg/shurik/native/indoor_thoughtful.png",
+    "native_size": [
+      941,
+      1671
+    ],
+    "output_path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/shurik/indoor/thoughtful.png",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "visible_bbox": [
+      251,
+      69,
+      829,
+      1846
+    ],
+    "transform": {
+      "scale": 1.0967344423906347,
+      "x": 24.53481207640172,
+      "y": 39.291435613062276,
+      "reference_native_size": [
+        941,
+        1672
+      ],
+      "visible_reference_bbox": [
+        207,
+        28,
+        733,
+        1651
+      ]
+    }
+  },
+  "indoor_sad": {
+    "source": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-a897dd2e-3a70-461d-955a-742f91468182.png",
+    "character": "shurik",
+    "outfit": "indoor",
+    "emotion": "sad",
+    "prompt": "Use case: identity-preserve. Asset: SINGLE full-body transparent visual-novel sprite of original Everlasting Summer Shurik. Input image is the exact neutral INDOOR sprite to edit. Make one highly localized FACIAL EXPRESSION EDIT ONLY: sad — restrained sorrow, inner eyebrows lifted and drawn together, eyelids slightly lowered with blue eyes visible, corners of CLOSED mouth turned down. No tears, no head tilt, no posture change. All other pixels, geometry and composition should remain as close to this source as possible. Preserve exact full-body standing pose, head angle and placement, blond side-parted hair outline, original face shape, square dark glasses, blue irises, both bent elbows and hands resting at waist/hips, watch, muted brown sweater, pale shirt collar, dark straight trousers and plain dark low indoor shoes, thin ink lines and simple classic original ES cel shading. Do not redesign or change clothing, glasses, hands, feet, height or body silhouette. Same source portrait 9:16 framing, requested high-resolution 1080x1920 or 2160x3840, one character fully visible from top of hair to BOTH shoe soles. Keep source empty margins so common export leaves approximately 60-80 pixels above hair and below soles. Real RGBA transparent background, zero ground shadow, no scenery, no border, no text. Output one individual full-frame image, never a contact sheet, atlas, cropped face or miniature.",
+    "references": [
+      "/workspace/scratch/5abe4a03ed6c/work/v2/worker_cg/shurik/native/indoor_neutral.png"
+    ],
+    "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_cg/shurik/native/indoor_sad.png",
+    "native_size": [
+      941,
+      1671
+    ],
+    "output_path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/shurik/indoor/sad.png",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "visible_bbox": [
+      251,
+      70,
+      828,
+      1845
+    ],
+    "transform": {
+      "scale": 1.0967344423906347,
+      "x": 24.53481207640172,
+      "y": 39.291435613062276,
+      "reference_native_size": [
+        941,
+        1672
+      ],
+      "visible_reference_bbox": [
+        207,
+        28,
+        733,
+        1651
+      ]
+    }
+  },
+  "indoor_surprised": {
+    "source": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-972d65ed-c802-494b-8461-9bcadcba9864.png",
+    "character": "shurik",
+    "outfit": "indoor",
+    "emotion": "surprised",
+    "prompt": "Use case: identity-preserve. Asset: SINGLE full-body transparent visual-novel sprite of original Everlasting Summer Shurik. Input image is the exact neutral INDOOR sprite to edit. Make one highly localized FACIAL EXPRESSION EDIT ONLY: surprised — visibly raised eyebrows, both blue eyes opened wider without moving the glasses or enlarging the head, small naturally parted O-shaped mouth. Restrained believable surprise in classic ES style, no cartoon symbols, no head tilt. All other pixels, geometry and composition should remain as close to this source as possible. Preserve exact full-body standing pose, head angle and placement, blond side-parted hair outline, original face shape, square dark glasses, blue irises, both bent elbows and hands resting at waist/hips, watch, muted brown sweater, pale shirt collar, dark straight trousers and plain dark low indoor shoes, thin ink lines and simple classic original ES cel shading. Do not redesign or change clothing, glasses, hands, feet, height or body silhouette. Same source portrait 9:16 framing, requested high-resolution 1080x1920 or 2160x3840, one character fully visible from top of hair to BOTH shoe soles. Keep source empty margins so common export leaves approximately 60-80 pixels above hair and below soles. Real RGBA transparent background, zero ground shadow, no scenery, no border, no text. Output one individual full-frame image, never a contact sheet, atlas, cropped face or miniature.",
+    "references": [
+      "/workspace/scratch/5abe4a03ed6c/work/v2/worker_cg/shurik/native/indoor_neutral.png"
+    ],
+    "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_cg/shurik/native/indoor_surprised.png",
+    "native_size": [
+      941,
+      1671
+    ],
+    "output_path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/shurik/indoor/surprised.png",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "visible_bbox": [
+      252,
+      70,
+      827,
+      1847
+    ],
+    "transform": {
+      "scale": 1.0967344423906347,
+      "x": 24.53481207640172,
+      "y": 39.291435613062276,
+      "reference_native_size": [
+        941,
+        1672
+      ],
+      "visible_reference_bbox": [
+        207,
+        28,
+        733,
+        1651
+      ]
+    }
+  },
+  "indoor_angry": {
+    "source": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-400aec35-73d9-4121-b263-047c6709a6b1.png",
+    "character": "shurik",
+    "outfit": "indoor",
+    "emotion": "angry",
+    "prompt": "Use case: identity-preserve. Asset: SINGLE full-body transparent visual-novel sprite of original Everlasting Summer Shurik. Input image is the exact neutral INDOOR sprite to edit. Make one highly localized FACIAL EXPRESSION EDIT ONLY: angry — distinctly stern angry face, eyebrows lowered sharply toward nose, narrowed focused blue eyes, tense CLOSED mouth with corners down, no shouting, no symbols or special effects. Only face expression changes, head and pose absolutely fixed. All other pixels, geometry and composition should remain as close to this source as possible. Preserve exact full-body standing pose, head angle and placement, blond side-parted hair outline, original face shape, square dark glasses, blue irises, both bent elbows and hands resting at waist/hips, watch, muted brown sweater, pale shirt collar, dark straight trousers and plain dark low indoor shoes, thin ink lines and simple classic original ES cel shading. Do not redesign or change clothing, glasses, hands, feet, height or body silhouette. Same source portrait 9:16 framing, requested high-resolution 1080x1920 or 2160x3840, one character fully visible from top of hair to BOTH shoe soles. Keep source empty margins so common export leaves approximately 60-80 pixels above hair and below soles. Real RGBA transparent background, zero ground shadow, no scenery, no border, no text. Output one individual full-frame image, never a contact sheet, atlas, cropped face or miniature.",
+    "references": [
+      "/workspace/scratch/5abe4a03ed6c/work/v2/worker_cg/shurik/native/indoor_neutral.png"
+    ],
+    "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_cg/shurik/native/indoor_angry.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "output_path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/shurik/indoor/angry.png",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "visible_bbox": [
+      250,
+      68,
+      827,
+      1846
+    ],
+    "transform": {
+      "scale": 1.0967344423906347,
+      "x": 24.53481207640172,
+      "y": 39.291435613062276,
+      "reference_native_size": [
+        941,
+        1672
+      ],
+      "visible_reference_bbox": [
+        207,
+        28,
+        733,
+        1651
+      ]
+    }
+  }
+}

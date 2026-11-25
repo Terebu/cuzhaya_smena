@@ -1,0 +1,38 @@
+{
+  "character": "sokolova",
+  "outfit": "winter",
+  "emotion": "neutral",
+  "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-197e888d-259b-401b-a2b2-103646ca4f34.png",
+  "reference": [
+    "/workspace/scratch/5abe4a03ed6c/work/v2/references/sokolova_mirror.png",
+    "/workspace/scratch/5abe4a03ed6c/work/v2/references/sokolova_winter_cg.png"
+  ],
+  "prompt": "Use case: identity-preserve. Create one full-body standalone transparent sprite of LENA SOKOLOVA from this EXACT visual novel mod, using reference1 ONLY as her facial/hair identity and reference2 as her established WINTER clothing. This is adult22 Lena Sokolova, not Lena Tikhonova. Keep her exact slim petite adult build, green eyes, face with delicate slightly sharp features, long wavy purple hair half gathered with white bow, bangs as shown. Outfit exactly from winter bus CG: beige padded winter parka with pale fur-trim hood, red/cream checked scarf around neck, black trousers, chunky closed black lace-up winter boots. No pioneer uniform. Standing easy three-quarter pose facing viewer a little toward the left, head upright with neutral calm closed-mouth expression, both arms relaxed naturally at sides, hands visible beside thighs, feet resting naturally on same baseline, no dramatic contrapposto. This pose will be reused identically for every expression and indoor outfit. Full figure from ALL hair to soles, 4% transparent margins at top and bottom, no cropped feet/hair. Portrait9:16 high resolution1080x1920 or2160x3840. Match mod's existing anime illustration design, clean detailed linework, no generic redesign, no new accessories or necklace. Real transparent alpha, no background/scenery/shadow/text/panel, single character only.",
+  "native_size": [
+    941,
+    1672
+  ],
+  "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/sokolova/winter/neutral.png",
+  "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/sokolova_winter_neutral.png",
+  "size": [
+    1080,
+    1920
+  ],
+  "alpha_extrema": [
+    0,
+    255
+  ],
+  "export_method": "single full-frame image uniformly projected into 1080x1920 using fixed neutral-pose bounding box/scale/baseline1840 for every emotion; no atlas extraction",
+  "pose": "one fixed pose",
+  "export_anchor_bbox": [
+    214,
+    7,
+    768,
+    1660
+  ],
+  "export_position": [
+    17,
+    73
+  ],
+  "export_scale": 1.0647307924984877
+}

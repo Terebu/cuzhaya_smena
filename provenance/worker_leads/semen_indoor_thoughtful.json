@@ -1,0 +1,37 @@
+{
+  "character": "semen",
+  "outfit": "indoor",
+  "emotion": "thoughtful",
+  "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-27f5858a-69b2-4cb8-a2f0-e9cf5e358162.png",
+  "reference": [
+    "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/semen_indoor_neutral.png"
+  ],
+  "prompt": "Use case: identity-preserve. Change ONLY facial expression of exact SEMYON INDOOR NEUTRAL full-body sprite to quietly thoughtful with mildly knit brows, relaxed closed mouth, eyes slightly aside without moving the head. Keep exact original face identity/brown eyes/brown spiky hair and all outer hair, head angle, masculine anatomy and body proportions, same standing pose, arms and hands/fingers, feet, charcoal worn short-sleeve T-shirt, blue jeans and plain closed dark house shoes, clothing folds, outline, colors/light and complete framing/scale unchanged. A Ren'Py one-pose emotion variant: no shifting or redrawing anything outside eyes/brows/mouth/cheeks. One character entirely head-to-soles, portrait9:16 high-res1080x1920 or2160x3840, real transparent alpha, no scenery, groundshadow, extra person, grid or text.",
+  "native_size": [
+    941,
+    1672
+  ],
+  "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/semen/indoor/thoughtful.png",
+  "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/semen_indoor_thoughtful.png",
+  "size": [
+    1080,
+    1920
+  ],
+  "alpha_extrema": [
+    0,
+    255
+  ],
+  "export_method": "single full-frame image uniformly projected into 1080x1920 using fixed neutral-pose bounding box/scale/baseline1840 for every emotion; no atlas extraction",
+  "pose": "one fixed pose",
+  "export_anchor_bbox": [
+    250,
+    2,
+    713,
+    1646
+  ],
+  "export_position": [
+    25,
+    78
+  ],
+  "export_scale": 1.0705596107055961
+}

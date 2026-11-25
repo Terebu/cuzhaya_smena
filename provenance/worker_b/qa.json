@@ -1,0 +1,530 @@
+[
+  {
+    "character": "zhenya",
+    "outfit": "winter",
+    "emotion": "neutral",
+    "bbox_alpha64": [
+      293,
+      77,
+      742,
+      1846
+    ]
+  },
+  {
+    "character": "zhenya",
+    "outfit": "winter",
+    "emotion": "soft_smile",
+    "bbox_alpha64": [
+      293,
+      78,
+      743,
+      1844
+    ]
+  },
+  {
+    "character": "zhenya",
+    "outfit": "winter",
+    "emotion": "thoughtful",
+    "bbox_alpha64": [
+      291,
+      81,
+      741,
+      1845
+    ]
+  },
+  {
+    "character": "zhenya",
+    "outfit": "winter",
+    "emotion": "sad",
+    "bbox_alpha64": [
+      292,
+      77,
+      744,
+      1845
+    ]
+  },
+  {
+    "character": "zhenya",
+    "outfit": "winter",
+    "emotion": "surprised",
+    "bbox_alpha64": [
+      291,
+      75,
+      743,
+      1846
+    ]
+  },
+  {
+    "character": "zhenya",
+    "outfit": "winter",
+    "emotion": "angry",
+    "bbox_alpha64": [
+      291,
+      75,
+      743,
+      1846
+    ]
+  },
+  {
+    "character": "zhenya",
+    "outfit": "indoor",
+    "emotion": "neutral",
+    "bbox_alpha64": [
+      292,
+      75,
+      701,
+      1840
+    ]
+  },
+  {
+    "character": "zhenya",
+    "outfit": "indoor",
+    "emotion": "soft_smile",
+    "bbox_alpha64": [
+      290,
+      73,
+      702,
+      1840
+    ]
+  },
+  {
+    "character": "zhenya",
+    "outfit": "indoor",
+    "emotion": "thoughtful",
+    "bbox_alpha64": [
+      290,
+      73,
+      703,
+      1840
+    ]
+  },
+  {
+    "character": "zhenya",
+    "outfit": "indoor",
+    "emotion": "sad",
+    "bbox_alpha64": [
+      290,
+      73,
+      703,
+      1842
+    ]
+  },
+  {
+    "character": "zhenya",
+    "outfit": "indoor",
+    "emotion": "surprised",
+    "bbox_alpha64": [
+      290,
+      73,
+      703,
+      1839
+    ]
+  },
+  {
+    "character": "zhenya",
+    "outfit": "indoor",
+    "emotion": "angry",
+    "bbox_alpha64": [
+      291,
+      73,
+      704,
+      1840
+    ]
+  },
+  {
+    "character": "olga",
+    "outfit": "winter",
+    "emotion": "neutral",
+    "bbox_alpha64": [
+      266,
+      92,
+      770,
+      1844
+    ]
+  },
+  {
+    "character": "olga",
+    "outfit": "winter",
+    "emotion": "soft_smile",
+    "bbox_alpha64": [
+      264,
+      91,
+      773,
+      1844
+    ]
+  },
+  {
+    "character": "olga",
+    "outfit": "winter",
+    "emotion": "thoughtful",
+    "bbox_alpha64": [
+      264,
+      92,
+      772,
+      1844
+    ]
+  },
+  {
+    "character": "olga",
+    "outfit": "winter",
+    "emotion": "sad",
+    "bbox_alpha64": [
+      266,
+      91,
+      772,
+      1846
+    ]
+  },
+  {
+    "character": "olga",
+    "outfit": "winter",
+    "emotion": "surprised",
+    "bbox_alpha64": [
+      265,
+      88,
+      771,
+      1844
+    ]
+  },
+  {
+    "character": "olga",
+    "outfit": "winter",
+    "emotion": "angry",
+    "bbox_alpha64": [
+      265,
+      88,
+      771,
+      1844
+    ]
+  },
+  {
+    "character": "olga",
+    "outfit": "indoor",
+    "emotion": "neutral",
+    "bbox_alpha64": [
+      268,
+      87,
+      762,
+      1841
+    ]
+  },
+  {
+    "character": "olga",
+    "outfit": "indoor",
+    "emotion": "soft_smile",
+    "bbox_alpha64": [
+      267,
+      85,
+      763,
+      1841
+    ]
+  },
+  {
+    "character": "olga",
+    "outfit": "indoor",
+    "emotion": "thoughtful",
+    "bbox_alpha64": [
+      267,
+      85,
+      764,
+      1841
+    ]
+  },
+  {
+    "character": "olga",
+    "outfit": "indoor",
+    "emotion": "sad",
+    "bbox_alpha64": [
+      266,
+      86,
+      763,
+      1839
+    ]
+  },
+  {
+    "character": "olga",
+    "outfit": "indoor",
+    "emotion": "surprised",
+    "bbox_alpha64": [
+      267,
+      85,
+      763,
+      1842
+    ]
+  },
+  {
+    "character": "olga",
+    "outfit": "indoor",
+    "emotion": "angry",
+    "bbox_alpha64": [
+      267,
+      86,
+      764,
+      1841
+    ]
+  },
+  {
+    "character": "viola",
+    "outfit": "winter",
+    "emotion": "neutral",
+    "bbox_alpha64": [
+      314,
+      75,
+      768,
+      1851
+    ]
+  },
+  {
+    "character": "viola",
+    "outfit": "winter",
+    "emotion": "soft_smile",
+    "bbox_alpha64": [
+      313,
+      73,
+      768,
+      1850
+    ]
+  },
+  {
+    "character": "viola",
+    "outfit": "winter",
+    "emotion": "thoughtful",
+    "bbox_alpha64": [
+      312,
+      70,
+      771,
+      1853
+    ]
+  },
+  {
+    "character": "viola",
+    "outfit": "winter",
+    "emotion": "sad",
+    "bbox_alpha64": [
+      313,
+      72,
+      769,
+      1850
+    ]
+  },
+  {
+    "character": "viola",
+    "outfit": "winter",
+    "emotion": "surprised",
+    "bbox_alpha64": [
+      313,
+      73,
+      769,
+      1851
+    ]
+  },
+  {
+    "character": "viola",
+    "outfit": "winter",
+    "emotion": "angry",
+    "bbox_alpha64": [
+      312,
+      72,
+      769,
+      1850
+    ]
+  },
+  {
+    "character": "viola",
+    "outfit": "indoor",
+    "emotion": "neutral",
+    "bbox_alpha64": [
+      316,
+      73,
+      767,
+      1847
+    ]
+  },
+  {
+    "character": "viola",
+    "outfit": "indoor",
+    "emotion": "soft_smile",
+    "bbox_alpha64": [
+      316,
+      71,
+      768,
+      1846
+    ]
+  },
+  {
+    "character": "viola",
+    "outfit": "indoor",
+    "emotion": "thoughtful",
+    "bbox_alpha64": [
+      315,
+      69,
+      768,
+      1847
+    ]
+  },
+  {
+    "character": "viola",
+    "outfit": "indoor",
+    "emotion": "sad",
+    "bbox_alpha64": [
+      315,
+      72,
+      768,
+      1848
+    ]
+  },
+  {
+    "character": "viola",
+    "outfit": "indoor",
+    "emotion": "surprised",
+    "bbox_alpha64": [
+      315,
+      71,
+      767,
+      1846
+    ]
+  },
+  {
+    "character": "viola",
+    "outfit": "indoor",
+    "emotion": "angry",
+    "bbox_alpha64": [
+      315,
+      69,
+      768,
+      1847
+    ]
+  },
+  {
+    "character": "ulyana",
+    "outfit": "winter",
+    "emotion": "neutral",
+    "bbox_alpha64": [
+      183,
+      77,
+      889,
+      1836
+    ]
+  },
+  {
+    "character": "ulyana",
+    "outfit": "winter",
+    "emotion": "soft_smile",
+    "bbox_alpha64": [
+      180,
+      75,
+      890,
+      1836
+    ]
+  },
+  {
+    "character": "ulyana",
+    "outfit": "winter",
+    "emotion": "thoughtful",
+    "bbox_alpha64": [
+      180,
+      75,
+      890,
+      1834
+    ]
+  },
+  {
+    "character": "ulyana",
+    "outfit": "winter",
+    "emotion": "sad",
+    "bbox_alpha64": [
+      180,
+      73,
+      890,
+      1836
+    ]
+  },
+  {
+    "character": "ulyana",
+    "outfit": "winter",
+    "emotion": "surprised",
+    "bbox_alpha64": [
+      181,
+      74,
+      888,
+      1836
+    ]
+  },
+  {
+    "character": "ulyana",
+    "outfit": "winter",
+    "emotion": "angry",
+    "bbox_alpha64": [
+      180,
+      74,
+      891,
+      1839
+    ]
+  },
+  {
+    "character": "ulyana",
+    "outfit": "indoor",
+    "emotion": "neutral",
+    "bbox_alpha64": [
+      179,
+      180,
+      889,
+      1829
+    ]
+  },
+  {
+    "character": "ulyana",
+    "outfit": "indoor",
+    "emotion": "soft_smile",
+    "bbox_alpha64": [
+      177,
+      179,
+      889,
+      1829
+    ]
+  },
+  {
+    "character": "ulyana",
+    "outfit": "indoor",
+    "emotion": "thoughtful",
+    "bbox_alpha64": [
+      178,
+      178,
+      889,
+      1829
+    ]
+  },
+  {
+    "character": "ulyana",
+    "outfit": "indoor",
+    "emotion": "sad",
+    "bbox_alpha64": [
+      180,
+      178,
+      889,
+      1828
+    ]
+  },
+  {
+    "character": "ulyana",
+    "outfit": "indoor",
+    "emotion": "surprised",
+    "bbox_alpha64": [
+      179,
+      178,
+      889,
+      1829
+    ]
+  },
+  {
+    "character": "ulyana",
+    "outfit": "indoor",
+    "emotion": "angry",
+    "bbox_alpha64": [
+      179,
+      180,
+      889,
+      1829
+    ]
+  }
+]

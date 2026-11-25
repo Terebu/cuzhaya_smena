@@ -1,0 +1,1491 @@
+[
+  {
+    "character": "slavya",
+    "outfit": "winter",
+    "emotion": "neutral",
+    "native": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_a/slavya/winter/neutral.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/slavya/winter/neutral.png",
+    "source": "/workspace/scratch/5abe4a03ed6c/work/v2/references/slavya_original.png",
+    "pose": "original_1_extended_full_body",
+    "export_bbox": [
+      0,
+      15,
+      917,
+      1672
+    ],
+    "export_scale": 1.025081788440567,
+    "prompt": "Use case: identity-preserve edit / costume redress. Asset: a single full-body visual novel sprite of SLAVYA from Everlasting Summer, transparent PNG, portrait 9:16 canvas, request high native resolution 2160x3840 (minimum 1080x1920). Edit the original sprite reference directly. Preserve her EXACT original face design, large blue eyes, golden blonde hair and twin braids, bangs, original slight head tilt and three-quarter standing angle, original thin clean outline, simple cel-shading and saturated original Soviet Games sprite palette. This must look like the SAME ORIGINAL sprite redressed, not a generic anime person or painterly redesign. Change pioneer uniform into winter outdoor clothes: cream padded down coat, soft ivory scarf below chin, blue jeans, brown warm winter boots. Extend the original cropped lower body naturally so both complete legs and both boots are visible. Keep original relaxed arms down and hands visible, original slim proportions. Neutral gentle expression, closed mouth. Exactly ONE character, ONE sprite, ONE standing pose. Center figure, entire head, both braids, hands and boots inside frame, 4% transparent space above hair and below soles. Transparent alpha background, no backdrop or ground shadow, no text, no labels, no frame, no extra people.",
+    "reference": "/workspace/scratch/5abe4a03ed6c/work/v2/references/slavya_original.png",
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "canvas": [
+      1080,
+      1920
+    ],
+    "visible_bbox_alpha128": [
+      267,
+      80,
+      812,
+      1840
+    ],
+    "sha256": "01c3b8d7718047272427c10818ebb3ce57ac11eddb1fb2836b56117611eae865"
+  },
+  {
+    "character": "slavya",
+    "outfit": "winter",
+    "emotion": "soft_smile",
+    "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-de4eb23f-40ac-4825-982a-03b2e29a642e.png",
+    "reference": "output/Art_v2/sprites/slavya/winter/neutral.png",
+    "prompt": "Use case: identity-preserve, expression-only edit. Edit the supplied full-body SLAVYA winter sprite. Change ONLY her facial expression to a gentle happy soft closed-mouth smile, warm relaxed blue eyes. Preserve EXACT original character identity, head angle, hair and braids, eyebrows' placement, original Everlasting Summer face shape and lineart. Everything outside eyes/eyebrows/mouth/cheeks must remain identical: same pose, head position, hair silhouette, arms, hands, cream down coat, ivory scarf, blue jeans, brown boots, scale, anchor and transparent margins. Do not redraw her body, shift feet, change clothing, add props, or change camera. One full-body character on real transparent alpha background. Keep 9:16 frame and ideally native 1080x1920, entire head and soles visible. No text, no backdrop, no floor shadow, no atlas.",
+    "native": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_a/slavya/winter/soft_smile.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/slavya/winter/soft_smile.png",
+    "pose": "original_extended_full_body",
+    "canvas": [
+      1080,
+      1920
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "visible_bbox_alpha128": [
+      266,
+      80,
+      814,
+      1841
+    ],
+    "sha256": "f4d7988718027561c0539cc40e073a5c37532de14142a45124e90746d1217358"
+  },
+  {
+    "character": "slavya",
+    "outfit": "winter",
+    "emotion": "thoughtful",
+    "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-21dfe8bb-f11d-46fd-b3b8-efe3f34ebe76.png",
+    "reference": "output/Art_v2/sprites/slavya/winter/neutral.png",
+    "prompt": "Expression-only edit of the supplied SLAVYA winter sprite. Change ONLY eyes, eyebrows and mouth to a quiet thoughtful expression, slightly focused eyebrows and attentive blue eyes, closed relaxed mouth. Preserve every other feature exactly: original Everlasting Summer face identity, head tilt and placement, blonde braids and bangs, skin palette, pose, body, arms, hands, coat seams and folds, scarf, jeans, boots, scale and transparent margins. NO new hand gestures, no head movement, no leaning change, no props. Entire full body remains framed identically. One single portrait 9:16 sprite at high resolution, ideally native 1080x1920; actual transparent background, no text, no ground shadow, no atlas.",
+    "native": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_a/slavya/winter/thoughtful.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/slavya/winter/thoughtful.png",
+    "pose": "original_extended_full_body",
+    "canvas": [
+      1080,
+      1920
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "visible_bbox_alpha128": [
+      267,
+      80,
+      813,
+      1842
+    ],
+    "sha256": "57c6c350e81e1b081aa6c0d291b775efe5098ba42625ba8a8a8d44caa12adf34"
+  },
+  {
+    "character": "slavya",
+    "outfit": "winter",
+    "emotion": "sad",
+    "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-22d4a2d1-f127-4363-ba93-4eb6a56e9160.png",
+    "reference": "output/Art_v2/sprites/slavya/winter/neutral.png",
+    "prompt": "Expression-only edit of the supplied SLAVYA winter sprite. Change ONLY eyes, eyebrows and mouth to a subdued sad expression, gently downturned mouth and concerned eyebrows, moist but not crying blue eyes. Preserve every other feature exactly: original Everlasting Summer face identity, head tilt and placement, blonde braids and bangs, skin palette, pose, body, arms, hands, coat seams and folds, scarf, jeans, boots, scale and transparent margins. NO new hand gestures, no head movement, no leaning change, no props. Entire full body remains framed identically. One single portrait 9:16 sprite at high resolution, ideally native 1080x1920; actual transparent background, no text, no ground shadow, no atlas.",
+    "native": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_a/slavya/winter/sad.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/slavya/winter/sad.png",
+    "pose": "original_extended_full_body",
+    "canvas": [
+      1080,
+      1920
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "visible_bbox_alpha128": [
+      265,
+      79,
+      815,
+      1842
+    ],
+    "sha256": "f3d62f8a024542e785388bb17a4688408171c27017319a14400cf4720ed5ab41"
+  },
+  {
+    "character": "slavya",
+    "outfit": "winter",
+    "emotion": "surprised",
+    "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-2dd949b9-89ab-4f92-927f-6ae617f71c5b.png",
+    "reference": "output/Art_v2/sprites/slavya/winter/neutral.png",
+    "prompt": "Expression-only edit of this SLAVYA winter sprite. Change ONLY facial muscles, eyes, eyebrows and mouth to a naturally surprised expression with widened blue eyes, raised eyebrows and a small open mouth. Match original Everlasting Summer sprite facial construction. Preserve absolutely identical pose, head angle and location, hair and braids silhouette, hands, all clothing seams/folds, ivory scarf, cream coat, blue jeans, brown boots and figure scale/anchor. No bodily gesture, head movement or wardrobe change. Keep the entire character head to soles, exact original framing and transparent margins. One single full-body portrait 9:16 transparent-alpha sprite, high native resolution ideally 1080x1920, no text, no shadow, no extra elements, no atlas.",
+    "native": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_a/slavya/winter/surprised.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/slavya/winter/surprised.png",
+    "pose": "original_extended_full_body",
+    "canvas": [
+      1080,
+      1920
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "visible_bbox_alpha128": [
+      264,
+      78,
+      815,
+      1842
+    ],
+    "sha256": "c27ba41102629293f2012ec1f80b6bfd6e831b72cccde0279bf7c5689255a81a"
+  },
+  {
+    "character": "slavya",
+    "outfit": "winter",
+    "emotion": "angry",
+    "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-a7e6cad5-c382-470f-a74f-89bb841c1f99.png",
+    "reference": "output/Art_v2/sprites/slavya/winter/neutral.png",
+    "prompt": "Expression-only edit of this SLAVYA winter sprite. Change ONLY facial muscles, eyes, eyebrows and mouth to a restrained angry serious expression, eyebrows drawn inward, firm closed mouth, still recognizably kind Slavia rather than an exaggerated villain. Match original Everlasting Summer sprite facial construction. Preserve absolutely identical pose, head angle and location, hair and braids silhouette, hands, all clothing seams/folds, ivory scarf, cream coat, blue jeans, brown boots and figure scale/anchor. No bodily gesture, head movement or wardrobe change. Keep the entire character head to soles, exact original framing and transparent margins. One single full-body portrait 9:16 transparent-alpha sprite, high native resolution ideally 1080x1920, no text, no shadow, no extra elements, no atlas.",
+    "native": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_a/slavya/winter/angry.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/slavya/winter/angry.png",
+    "pose": "original_extended_full_body",
+    "canvas": [
+      1080,
+      1920
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "visible_bbox_alpha128": [
+      264,
+      77,
+      816,
+      1842
+    ],
+    "sha256": "79e45e3d00c498531c5ff484c40827c60212cac22f6ff73b5d7c9bab170a07b5"
+  },
+  {
+    "character": "slavya",
+    "outfit": "indoor",
+    "emotion": "neutral",
+    "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-17d2b118-1124-447c-86fa-47579706b65c.png",
+    "reference": "output/Art_v2/sprites/slavya/winter/neutral.png",
+    "prompt": "Identity-preserve clothing-only edit of supplied SLAVYA sprite. Remove her winter coat and scarf; replace with a warm ivory cable-knit crewneck sweater, same blue straight jeans, and simple dark brown closed indoor shoes (not winter boots). Keep EXACTLY her original Everlasting Summer face, neutral expression, blue eyes, blonde twin braids/bangs, slight head tilt, body proportions and SAME relaxed standing pose with both arms down, hand positions and feet positions. Keep head at the same place, same camera, same full-body scale and margins. Do not redesign her identity, do not alter pose or hair. This is the indoor outfit version of the exact same character sprite. One full body from top of hair to soles on genuine transparent alpha background. Portrait9:16 high native resolution ideally1080x1920. No uniform, no tie, no jewelry additions, no background, no floor shadow, no text, no atlas.",
+    "native": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_a/slavya/indoor/neutral.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/slavya/indoor/neutral.png",
+    "pose": "original_extended_full_body",
+    "canvas": [
+      1080,
+      1920
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "visible_bbox_alpha128": [
+      267,
+      80,
+      813,
+      1839
+    ],
+    "sha256": "0f7167f42c73c67d1f27ca82b3afa93146c4a72a183f162e81a212eda5f092c6"
+  },
+  {
+    "character": "slavya",
+    "outfit": "indoor",
+    "emotion": "soft_smile",
+    "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-911605ba-6699-4522-8f38-42275727af03.png",
+    "reference": "output/Art_v2/sprites/slavya/indoor/neutral.png",
+    "prompt": "Expression-only edit of supplied SLAVYA indoor sprite. Change ONLY facial expression: gentle warm closed-mouth smile and relaxed blue eyes. Preserve her EXACT original Everlasting Summer identity and thin cel-shaded linework. Keep head angle/placement and face shape, blonde bangs and both braids, sweater cable pattern, body pose, hands, jeans, shoes, full-body scale and all transparent margins completely identical. Do not add gestures, head movement, props or wardrobe changes. A single full-body 9:16 transparent-alpha PNG, ideally native1080x1920, no text, no backdrop or ground shadow, no atlas.",
+    "native": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_a/slavya/indoor/soft_smile.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/slavya/indoor/soft_smile.png",
+    "pose": "original_extended_full_body",
+    "canvas": [
+      1080,
+      1920
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "visible_bbox_alpha128": [
+      265,
+      77,
+      816,
+      1839
+    ],
+    "sha256": "40bed8e0415106a063b96b9f1fe015b5b59d37ae5c1a0edac7e37e5d3c362e98"
+  },
+  {
+    "character": "slavya",
+    "outfit": "indoor",
+    "emotion": "thoughtful",
+    "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-e38de4a1-470e-488e-bc3a-a17d767e2af6.png",
+    "reference": "output/Art_v2/sprites/slavya/indoor/neutral.png",
+    "prompt": "Expression-only edit of supplied SLAVYA indoor sprite. Change ONLY facial expression: quiet thoughtful focused expression, slightly thoughtful eyebrows, closed mouth. Preserve her EXACT original Everlasting Summer identity and thin cel-shaded linework. Keep head angle/placement and face shape, blonde bangs and both braids, sweater cable pattern, body pose, hands, jeans, shoes, full-body scale and all transparent margins completely identical. Do not add gestures, head movement, props or wardrobe changes. A single full-body 9:16 transparent-alpha PNG, ideally native1080x1920, no text, no backdrop or ground shadow, no atlas.",
+    "native": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_a/slavya/indoor/thoughtful.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/slavya/indoor/thoughtful.png",
+    "pose": "original_extended_full_body",
+    "canvas": [
+      1080,
+      1920
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "visible_bbox_alpha128": [
+      267,
+      80,
+      814,
+      1839
+    ],
+    "sha256": "423442031a70da83ce5597ad6474ce24d13f7e47a210d3172da67070854960f5"
+  },
+  {
+    "character": "slavya",
+    "outfit": "indoor",
+    "emotion": "sad",
+    "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-5be68d51-b423-4fe7-a0ae-f290d9d70fbf.png",
+    "reference": "output/Art_v2/sprites/slavya/indoor/neutral.png",
+    "prompt": "Expression-only edit of supplied SLAVYA indoor sprite. Change ONLY facial expression: subdued sadness, raised inner brows and gently downturned mouth, no tears. Preserve her EXACT original Everlasting Summer identity and thin cel-shaded linework. Keep head angle/placement and face shape, blonde bangs and both braids, sweater cable pattern, body pose, hands, jeans, shoes, full-body scale and all transparent margins completely identical. Do not add gestures, head movement, props or wardrobe changes. A single full-body 9:16 transparent-alpha PNG, ideally native1080x1920, no text, no backdrop or ground shadow, no atlas.",
+    "native": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_a/slavya/indoor/sad.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/slavya/indoor/sad.png",
+    "pose": "original_extended_full_body",
+    "canvas": [
+      1080,
+      1920
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "visible_bbox_alpha128": [
+      268,
+      80,
+      814,
+      1840
+    ],
+    "sha256": "40d597aaa1c79ae070ac6b0100c9bb9084108020ff7d7f94b071b644d243bb79"
+  },
+  {
+    "character": "slavya",
+    "outfit": "indoor",
+    "emotion": "surprised",
+    "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-62a58e5b-9350-4d41-9ca8-0b6321c50275.png",
+    "reference": "output/Art_v2/sprites/slavya/indoor/neutral.png",
+    "prompt": "Expression-only edit of supplied SLAVYA indoor sprite. Change ONLY facial expression: widened blue eyes, lifted eyebrows, small open mouth of surprise. Preserve her EXACT original Everlasting Summer identity and thin cel-shaded linework. Keep head angle/placement and face shape, blonde bangs and both braids, sweater cable pattern, body pose, hands, jeans, shoes, full-body scale and all transparent margins completely identical. Do not add gestures, head movement, props or wardrobe changes. A single full-body 9:16 transparent-alpha PNG, ideally native1080x1920, no text, no backdrop or ground shadow, no atlas.",
+    "native": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_a/slavya/indoor/surprised.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/slavya/indoor/surprised.png",
+    "pose": "original_extended_full_body",
+    "canvas": [
+      1080,
+      1920
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "visible_bbox_alpha128": [
+      266,
+      78,
+      817,
+      1840
+    ],
+    "sha256": "45f0924aa1962ceb152a3b2999f7895e43021655daacae96c78583af17a3ee38"
+  },
+  {
+    "character": "slavya",
+    "outfit": "indoor",
+    "emotion": "angry",
+    "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-46251570-c2a3-45a4-87f0-ab2985dbd164.png",
+    "reference": "output/Art_v2/sprites/slavya/indoor/neutral.png",
+    "prompt": "Expression-only edit of supplied SLAVYA indoor sprite. Change ONLY facial expression: restrained anger, brows drawn inward and firm mouth, no exaggerated snarling. Preserve her EXACT original Everlasting Summer identity and thin cel-shaded linework. Keep head angle/placement and face shape, blonde bangs and both braids, sweater cable pattern, body pose, hands, jeans, shoes, full-body scale and all transparent margins completely identical. Do not add gestures, head movement, props or wardrobe changes. A single full-body 9:16 transparent-alpha PNG, ideally native1080x1920, no text, no backdrop or ground shadow, no atlas.",
+    "native": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_a/slavya/indoor/angry.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/slavya/indoor/angry.png",
+    "pose": "original_extended_full_body",
+    "canvas": [
+      1080,
+      1920
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "visible_bbox_alpha128": [
+      266,
+      77,
+      817,
+      1841
+    ],
+    "sha256": "3f345d762f58d28142b08c8f57fbbb08cc98a955db9268087fc398477fc6a96a"
+  },
+  {
+    "character": "alisa",
+    "outfit": "winter",
+    "emotion": "neutral",
+    "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-579a293d-40e0-4fdc-a1a4-99f2d00d9026.png",
+    "reference": "work/v2/references/alisa_original.png",
+    "prompt": "Use case: identity-preserve costume redress. A single full-body transparent sprite of ALISA Dvachevskaya from Everlasting Summer. EDIT THE ORIGINAL reference. Preserve her exact original face, sharp golden amber eyes, orange bangs and spiky twin short ponytails with round green hair ornaments, the recognizable long angular face and original Soviet Games cel-shaded outline/color style. Keep her exact original head tilt and casual three-quarter pose: one hand planted at hip, opposite arm relaxed down. Change only pioneer uniform into warm winter outdoor clothing: charcoal padded down jacket, burgundy scarf, full-length blue jeans, black winter ankle boots. Naturally extend original cropped legs to show both complete boots. No visible summer skin on legs. Neutral expression, closed mouth. Same original heroine redressed, no modern generic anime redesign, no realistic or painterly face. One character only on real transparent alpha, no scene, no text, no floor shadow, no props or atlas. Full body head to soles with transparent top/bottom margins, portrait9:16 high native resolution request2160x3840 or at least1080x1920.",
+    "normalize": true,
+    "export_transform": {
+      "scale": 1.057057057057057,
+      "offset": [
+        98,
+        76
+      ],
+      "opaque_bbox": [
+        199,
+        4,
+        638,
+        1669
+      ]
+    },
+    "native": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_a/alisa/winter/neutral.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/alisa/winter/neutral.png",
+    "pose": "original_extended_full_body",
+    "canvas": [
+      1080,
+      1920
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "visible_bbox_alpha128": [
+      308,
+      80,
+      772,
+      1840
+    ],
+    "sha256": "debfc69b38632cdb72b5180a7885636bb9cf09e6e142567c4ed75666978db90c"
+  },
+  {
+    "character": "alisa",
+    "outfit": "winter",
+    "emotion": "soft_smile",
+    "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-e08411cf-285b-49c3-a509-8176b081c20f.png",
+    "reference": "output/Art_v2/sprites/alisa/winter/neutral.png",
+    "prompt": "Expression-only edit of ALISA's supplied winter sprite. Change ONLY eyes/eyebrows/mouth/cheeks to a confident friendly soft smile, slightly playful amber eyes, closed mouth. Preserve her exact ORIGINAL Everlasting Summer identity: long angular face, orange bangs and twin short spiky ponytails with lime circular hairclips, amber eyes and original clean cel-shaded linework. Keep everything outside her facial expression absolutely identical: head angle and placement, hair silhouette, one arm bent at hip/pocket, other arm down, jacket quilt seams/folds, burgundy scarf, jeans, black boots, full-body scale, camera and transparent margins. No new pose, hand gestures, props or clothing changes. Single full-body portrait9:16 transparent-alpha sprite, native1080x1920 if supported. No backdrop, no text, no floor shadow, no atlas.",
+    "native": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_a/alisa/winter/soft_smile.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/alisa/winter/soft_smile.png",
+    "pose": "original_extended_full_body",
+    "canvas": [
+      1080,
+      1920
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "visible_bbox_alpha128": [
+      308,
+      78,
+      773,
+      1842
+    ],
+    "sha256": "45a057322dceccbc78393d0420ee92965aeca7e1dd304d38b75bf0ce1bdc9aed"
+  },
+  {
+    "character": "alisa",
+    "outfit": "winter",
+    "emotion": "thoughtful",
+    "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-4d38ac87-1812-4192-a9e8-f6e8bcf6b1d1.png",
+    "reference": "output/Art_v2/sprites/alisa/winter/neutral.png",
+    "prompt": "Expression-only edit of ALISA's supplied winter sprite. Change ONLY eyes/eyebrows/mouth/cheeks to a quiet thinking expression, focused amber eyes and slightly knit brows, mouth relaxed closed. Preserve her exact ORIGINAL Everlasting Summer identity: long angular face, orange bangs and twin short spiky ponytails with lime circular hairclips, amber eyes and original clean cel-shaded linework. Keep everything outside her facial expression absolutely identical: head angle and placement, hair silhouette, one arm bent at hip/pocket, other arm down, jacket quilt seams/folds, burgundy scarf, jeans, black boots, full-body scale, camera and transparent margins. No new pose, hand gestures, props or clothing changes. Single full-body portrait9:16 transparent-alpha sprite, native1080x1920 if supported. No backdrop, no text, no floor shadow, no atlas.",
+    "native": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_a/alisa/winter/thoughtful.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/alisa/winter/thoughtful.png",
+    "pose": "original_extended_full_body",
+    "canvas": [
+      1080,
+      1920
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "visible_bbox_alpha128": [
+      308,
+      78,
+      774,
+      1841
+    ],
+    "sha256": "abadc22ecddd24cb3e54f366edf1370b6d82af2f3bdb89da47939a64fd42f6bd"
+  },
+  {
+    "character": "alisa",
+    "outfit": "winter",
+    "emotion": "sad",
+    "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-73a905c0-0956-4a19-9907-40e3e8585bca.png",
+    "reference": "output/Art_v2/sprites/alisa/winter/neutral.png",
+    "prompt": "Expression-only edit of ALISA's supplied winter sprite. Change ONLY eyes/eyebrows/mouth/cheeks to subdued sadness with softly lowered eyes, worried inner brows and a downturned closed mouth. Preserve her exact ORIGINAL Everlasting Summer identity: long angular face, orange bangs and twin short spiky ponytails with lime circular hairclips, amber eyes and original clean cel-shaded linework. Keep everything outside her facial expression absolutely identical: head angle and placement, hair silhouette, one arm bent at hip/pocket, other arm down, jacket quilt seams/folds, burgundy scarf, jeans, black boots, full-body scale, camera and transparent margins. No new pose, hand gestures, props or clothing changes. Single full-body portrait9:16 transparent-alpha sprite, native1080x1920 if supported. No backdrop, no text, no floor shadow, no atlas.",
+    "native": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_a/alisa/winter/sad.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/alisa/winter/sad.png",
+    "pose": "original_extended_full_body",
+    "canvas": [
+      1080,
+      1920
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "visible_bbox_alpha128": [
+      308,
+      76,
+      774,
+      1840
+    ],
+    "sha256": "e09e7ecfe52b89c39705bfcbc176a578a40642c8fac6c9cb217c7773c150244d"
+  },
+  {
+    "character": "alisa",
+    "outfit": "winter",
+    "emotion": "surprised",
+    "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-41a05429-2bb9-4352-a5fa-052d9bff0522.png",
+    "reference": "output/Art_v2/sprites/alisa/winter/neutral.png",
+    "prompt": "Expression-only edit of ALISA's supplied winter sprite. Change ONLY eyes/eyebrows/mouth/cheeks to widened amber eyes, raised eyebrows and slightly open mouth of surprise. Preserve her exact ORIGINAL Everlasting Summer identity: long angular face, orange bangs and twin short spiky ponytails with lime circular hairclips, amber eyes and original clean cel-shaded linework. Keep everything outside her facial expression absolutely identical: head angle and placement, hair silhouette, one arm bent at hip/pocket, other arm down, jacket quilt seams/folds, burgundy scarf, jeans, black boots, full-body scale, camera and transparent margins. No new pose, hand gestures, props or clothing changes. Single full-body portrait9:16 transparent-alpha sprite, native1080x1920 if supported. No backdrop, no text, no floor shadow, no atlas.",
+    "native": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_a/alisa/winter/surprised.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/alisa/winter/surprised.png",
+    "pose": "original_extended_full_body",
+    "canvas": [
+      1080,
+      1920
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "visible_bbox_alpha128": [
+      308,
+      79,
+      773,
+      1841
+    ],
+    "sha256": "d645471d67cc1d13f153d2f3e6002536cb40c41040b9e4bed2962a477aa79ecc"
+  },
+  {
+    "character": "alisa",
+    "outfit": "winter",
+    "emotion": "angry",
+    "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-629d7984-0b79-4172-8605-ed17fee17a5a.png",
+    "reference": "output/Art_v2/sprites/alisa/winter/neutral.png",
+    "prompt": "Expression-only edit of ALISA's supplied winter sprite. Change ONLY eyes/eyebrows/mouth/cheeks to clear irritation, sharply drawn-in eyebrows and tense closed mouth, not a monstrous snarl. Preserve her exact ORIGINAL Everlasting Summer identity: long angular face, orange bangs and twin short spiky ponytails with lime circular hairclips, amber eyes and original clean cel-shaded linework. Keep everything outside her facial expression absolutely identical: head angle and placement, hair silhouette, one arm bent at hip/pocket, other arm down, jacket quilt seams/folds, burgundy scarf, jeans, black boots, full-body scale, camera and transparent margins. No new pose, hand gestures, props or clothing changes. Single full-body portrait9:16 transparent-alpha sprite, native1080x1920 if supported. No backdrop, no text, no floor shadow, no atlas.",
+    "native": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_a/alisa/winter/angry.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/alisa/winter/angry.png",
+    "pose": "original_extended_full_body",
+    "canvas": [
+      1080,
+      1920
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "visible_bbox_alpha128": [
+      308,
+      79,
+      773,
+      1842
+    ],
+    "sha256": "3077aa13c0fd16697fada1e18abbab6bedba9955749983e6f7df95578bed85e4"
+  },
+  {
+    "character": "alisa",
+    "outfit": "indoor",
+    "emotion": "neutral",
+    "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-b03398b2-e230-43b5-a0de-6d8e8e9c057f.png",
+    "reference": "output/Art_v2/sprites/alisa/winter/neutral.png",
+    "prompt": "Costume-only edit of supplied ALISA full-body winter sprite. Replace charcoal down jacket and scarf with an ordinary indoor outfit: open burgundy-and-dark-red plaid flannel overshirt over a black T-shirt with a small simple guitar silhouette graphic (no lettering), same full-length blue jeans and black casual trainers. Keep same original one-arm-bent-at-hip/pocket pose and opposite relaxed arm, exact hand and foot positions, head tilt and placement, body scale, orange short spiky twin tails and lime circular hairclips, amber eyes, long original face and neutral expression. Preserve original Everlasting Summer clean lineart/cel-shaded rendering, identity and original hair silhouette. No jacket/scarf, no uniform/tie, no extra props. One entire character head to shoes on genuine transparent alpha background, portrait9:16 ideally1080x1920, same margins. No text, no shadow, no background, no atlas.",
+    "native": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_a/alisa/indoor/neutral.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/alisa/indoor/neutral.png",
+    "pose": "original_extended_full_body",
+    "canvas": [
+      1080,
+      1920
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "visible_bbox_alpha128": [
+      308,
+      78,
+      771,
+      1840
+    ],
+    "sha256": "b6a8d90a36b791b2128561a72067d43650858f877bdc419735ab6e32342d5e10"
+  },
+  {
+    "character": "alisa",
+    "outfit": "indoor",
+    "emotion": "soft_smile",
+    "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-be748a8e-f3fb-47c7-996c-593ab8b19734.png",
+    "reference": "output/Art_v2/sprites/alisa/indoor/neutral.png",
+    "prompt": "Expression-only edit of supplied ALISA indoor sprite. Change ONLY her facial expression to a friendly confident smile, playful amber eyes, closed mouth. Keep EXACT original Everlasting Summer face construction/identity, orange spiky ponytails with lime hairclips, head position/tilt, identical pose and hand/foot locations. Keep burgundy plaid overshirt and all checks/folds, black guitar T-shirt, blue jeans, black shoes unchanged. No head or body movement, no props, no wardrobe change. One full-body 9:16 transparent-alpha PNG, ideally1080x1920, same exact framing and margins. No labels, text, backdrop, floor shadow, or atlas.",
+    "native": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_a/alisa/indoor/soft_smile.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/alisa/indoor/soft_smile.png",
+    "pose": "original_extended_full_body",
+    "canvas": [
+      1080,
+      1920
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "visible_bbox_alpha128": [
+      306,
+      76,
+      772,
+      1841
+    ],
+    "sha256": "1e03683f623d53b16c4d74763016d46969d87909df03f87be4b8ff2031105849"
+  },
+  {
+    "character": "alisa",
+    "outfit": "indoor",
+    "emotion": "thoughtful",
+    "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-6bacb3d4-defb-4862-8f90-2bd840d310d4.png",
+    "reference": "output/Art_v2/sprites/alisa/indoor/neutral.png",
+    "prompt": "Expression-only edit of supplied ALISA indoor sprite. Change ONLY her facial expression to a thoughtful attentive expression, one eyebrow slightly raised, relaxed closed mouth, eyes focused. Keep EXACT original Everlasting Summer face construction/identity, orange spiky ponytails with lime hairclips, head position/tilt, identical pose and hand/foot locations. Keep burgundy plaid overshirt and all checks/folds, black guitar T-shirt, blue jeans, black shoes unchanged. No head or body movement, no props, no wardrobe change. One full-body 9:16 transparent-alpha PNG, ideally1080x1920, same exact framing and margins. No labels, text, backdrop, floor shadow, or atlas.",
+    "native": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_a/alisa/indoor/thoughtful.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/alisa/indoor/thoughtful.png",
+    "pose": "original_extended_full_body",
+    "canvas": [
+      1080,
+      1920
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "visible_bbox_alpha128": [
+      307,
+      78,
+      771,
+      1840
+    ],
+    "sha256": "f4f95bbb99651555c6d31aef8ce7633b76f59467e5b37a175c0afa253dee2db7"
+  },
+  {
+    "character": "alisa",
+    "outfit": "indoor",
+    "emotion": "sad",
+    "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-a38374f0-2be8-43a0-88b4-5ea79b2e0f7f.png",
+    "reference": "output/Art_v2/sprites/alisa/indoor/neutral.png",
+    "prompt": "Expression-only edit of supplied ALISA indoor sprite. Change ONLY her facial expression to a subdued sad expression, inner brows slightly lifted and mouth downturned, no tears. Keep EXACT original Everlasting Summer face construction/identity, orange spiky ponytails with lime hairclips, head position/tilt, identical pose and hand/foot locations. Keep burgundy plaid overshirt and all checks/folds, black guitar T-shirt, blue jeans, black shoes unchanged. No head or body movement, no props, no wardrobe change. One full-body 9:16 transparent-alpha PNG, ideally1080x1920, same exact framing and margins. No labels, text, backdrop, floor shadow, or atlas.",
+    "native": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_a/alisa/indoor/sad.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/alisa/indoor/sad.png",
+    "pose": "original_extended_full_body",
+    "canvas": [
+      1080,
+      1920
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "visible_bbox_alpha128": [
+      307,
+      76,
+      772,
+      1840
+    ],
+    "sha256": "9010794146b6adf4993196763a1dc2f57003855a198cb3cf9b90db6c544ed7f7"
+  },
+  {
+    "character": "alisa",
+    "outfit": "indoor",
+    "emotion": "surprised",
+    "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-b89ad3a7-b1f6-4f29-a05f-828b75103cb6.png",
+    "reference": "output/Art_v2/sprites/alisa/indoor/neutral.png",
+    "prompt": "Expression-only edit of supplied ALISA indoor sprite. Change ONLY her facial expression to wide amber eyes, lifted brows and a small open mouth of surprise. Keep EXACT original Everlasting Summer face construction/identity, orange spiky ponytails with lime hairclips, head position/tilt, identical pose and hand/foot locations. Keep burgundy plaid overshirt and all checks/folds, black guitar T-shirt, blue jeans, black shoes unchanged. No head or body movement, no props, no wardrobe change. One full-body 9:16 transparent-alpha PNG, ideally1080x1920, same exact framing and margins. No labels, text, backdrop, floor shadow, or atlas.",
+    "native": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_a/alisa/indoor/surprised.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/alisa/indoor/surprised.png",
+    "pose": "original_extended_full_body",
+    "canvas": [
+      1080,
+      1920
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "visible_bbox_alpha128": [
+      306,
+      77,
+      772,
+      1840
+    ],
+    "sha256": "4dd2498068cd73bb1b4b344d2c20804a6f0afd78e5e70c210b59998b3248b26b"
+  },
+  {
+    "character": "alisa",
+    "outfit": "indoor",
+    "emotion": "angry",
+    "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-7a86c6a9-f167-42b2-a331-28eda798f914.png",
+    "reference": "output/Art_v2/sprites/alisa/indoor/neutral.png",
+    "prompt": "Expression-only edit of supplied ALISA indoor sprite. Change ONLY her facial expression to irritated angry expression, narrow amber eyes, knitted brows and firm mouth. Keep EXACT original Everlasting Summer face construction/identity, orange spiky ponytails with lime hairclips, head position/tilt, identical pose and hand/foot locations. Keep burgundy plaid overshirt and all checks/folds, black guitar T-shirt, blue jeans, black shoes unchanged. No head or body movement, no props, no wardrobe change. One full-body 9:16 transparent-alpha PNG, ideally1080x1920, same exact framing and margins. No labels, text, backdrop, floor shadow, or atlas.",
+    "native": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_a/alisa/indoor/angry.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/alisa/indoor/angry.png",
+    "pose": "original_extended_full_body",
+    "canvas": [
+      1080,
+      1920
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "visible_bbox_alpha128": [
+      307,
+      77,
+      771,
+      1841
+    ],
+    "sha256": "b0cdd8897702dbde473bdf0102932e90122721299adfe75537914441eabe24e8"
+  },
+  {
+    "character": "miku",
+    "outfit": "winter",
+    "emotion": "neutral",
+    "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-e38f1334-b2ed-41fb-935c-ba3912398a05.png",
+    "reference": "work/v2/references/miku_original.png",
+    "prompt": "Identity-preserve direct costume edit of the ORIGINAL MIKU sprite from Everlasting Summer supplied. Keep her EXACT original face design, teal eyes, turquoise side-swept bangs and very long twin ponytails tied with dark red bands, exact gentle head tilt and original relaxed standing pose with both arms slightly out and open hands. Preserve original thin clean lineart and simple saturated cel-shaded Soviet Games sprite style. Change only pioneer uniform into warm winter street clothes: teal padded down coat, ivory scarf, dark full-length jeans and dark warm winter boots. Naturally extend original cropped legs to show complete legs and both boot soles, preserve slender proportions. Neutral closed-mouth expression. Entire full body, no cropped hair, hands or toes, centered with transparent margins. One single character, actual transparent-alpha background, portrait9:16 high native resolution request2160x3840 or minimum1080x1920. No new generic anime face, no painterly skin, no headset or accessories, no text, no background/shadow, no atlas.",
+    "normalize": true,
+    "export_transform": {
+      "scale": 1.0705596107055961,
+      "offset": [
+        54,
+        62
+      ],
+      "opaque_bbox": [
+        103,
+        17,
+        805,
+        1661
+      ]
+    },
+    "native": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_a/miku/winter/neutral.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/miku/winter/neutral.png",
+    "pose": "original_extended_full_body",
+    "canvas": [
+      1080,
+      1920
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "visible_bbox_alpha128": [
+      165,
+      80,
+      916,
+      1840
+    ],
+    "sha256": "dbe2b894fd4efc8812870a29b65221caf10d8c6049e13cc49cb46348c18f4c80"
+  },
+  {
+    "character": "miku",
+    "outfit": "winter",
+    "emotion": "soft_smile",
+    "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-5a224dbe-bdfc-427f-add4-0f6d42971111.png",
+    "reference": "output/Art_v2/sprites/miku/winter/neutral.png",
+    "prompt": "Expression-only edit of the supplied MIKU winter sprite. Change ONLY facial expression to a cheerful gentle smile and warm bright teal eyes, mouth closed. Preserve EXACT original Everlasting Summer Miku identity, face construction, teal eye color, turquoise bangs and twin tails with red bands, original head tilt/location, and clean cel-shaded style. Everything outside eyes/brows/mouth/cheeks must stay identical: hair silhouette, open hand positions, arms, teal coat quilting/folds, ivory scarf, dark jeans/boots, full-body anchor/scale and transparent margins. No head movement, new pose, gestures, props or wardrobe changes. One complete full-body portrait9:16 transparent-alpha PNG, ideally1080x1920, no backdrop/text/ground shadow/atlas.",
+    "native": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_a/miku/winter/soft_smile.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/miku/winter/soft_smile.png",
+    "pose": "original_extended_full_body",
+    "canvas": [
+      1080,
+      1920
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "visible_bbox_alpha128": [
+      163,
+      79,
+      919,
+      1841
+    ],
+    "sha256": "6b5be35b29e94827d8cbcf3c266412b953c7ea708668739c9fe0801d506da89f"
+  },
+  {
+    "character": "miku",
+    "outfit": "winter",
+    "emotion": "thoughtful",
+    "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-ff74b09f-c53a-44bf-9a99-5fa6f1ce849f.png",
+    "reference": "output/Art_v2/sprites/miku/winter/neutral.png",
+    "prompt": "Expression-only edit of the supplied MIKU winter sprite. Change ONLY facial expression to a focused thoughtful expression, eyebrows slightly thoughtful and lips closed. Preserve EXACT original Everlasting Summer Miku identity, face construction, teal eye color, turquoise bangs and twin tails with red bands, original head tilt/location, and clean cel-shaded style. Everything outside eyes/brows/mouth/cheeks must stay identical: hair silhouette, open hand positions, arms, teal coat quilting/folds, ivory scarf, dark jeans/boots, full-body anchor/scale and transparent margins. No head movement, new pose, gestures, props or wardrobe changes. One complete full-body portrait9:16 transparent-alpha PNG, ideally1080x1920, no backdrop/text/ground shadow/atlas.",
+    "native": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_a/miku/winter/thoughtful.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/miku/winter/thoughtful.png",
+    "pose": "original_extended_full_body",
+    "canvas": [
+      1080,
+      1920
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "visible_bbox_alpha128": [
+      162,
+      79,
+      919,
+      1842
+    ],
+    "sha256": "f813306d7f013df4658b79b000d78f032268ac1995188f757efce374ab025bf9"
+  },
+  {
+    "character": "miku",
+    "outfit": "winter",
+    "emotion": "sad",
+    "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-e60177b8-b394-4cc9-b663-92a536f15e09.png",
+    "reference": "output/Art_v2/sprites/miku/winter/neutral.png",
+    "prompt": "Expression-only edit of the supplied MIKU winter sprite. Change ONLY facial expression to a subdued sad expression with worried inner eyebrows and downturned mouth, no crying. Preserve EXACT original Everlasting Summer Miku identity, face construction, teal eye color, turquoise bangs and twin tails with red bands, original head tilt/location, and clean cel-shaded style. Everything outside eyes/brows/mouth/cheeks must stay identical: hair silhouette, open hand positions, arms, teal coat quilting/folds, ivory scarf, dark jeans/boots, full-body anchor/scale and transparent margins. No head movement, new pose, gestures, props or wardrobe changes. One complete full-body portrait9:16 transparent-alpha PNG, ideally1080x1920, no backdrop/text/ground shadow/atlas.",
+    "native": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_a/miku/winter/sad.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/miku/winter/sad.png",
+    "pose": "original_extended_full_body",
+    "canvas": [
+      1080,
+      1920
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "visible_bbox_alpha128": [
+      164,
+      79,
+      918,
+      1842
+    ],
+    "sha256": "37f2ccf3d5ebf243247d65dd51a2684c7dc9bd601da3e7868e11da49a13adf5f"
+  },
+  {
+    "character": "miku",
+    "outfit": "winter",
+    "emotion": "surprised",
+    "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-f7e65705-25b9-42c1-a6b1-136e48b32f2b.png",
+    "reference": "output/Art_v2/sprites/miku/winter/neutral.png",
+    "prompt": "Expression-only edit of the supplied MIKU winter sprite. Change ONLY facial expression to wide teal eyes, lifted eyebrows and small open mouth of surprise. Preserve EXACT original Everlasting Summer Miku identity, face construction, teal eye color, turquoise bangs and twin tails with red bands, original head tilt/location, and clean cel-shaded style. Everything outside eyes/brows/mouth/cheeks must stay identical: hair silhouette, open hand positions, arms, teal coat quilting/folds, ivory scarf, dark jeans/boots, full-body anchor/scale and transparent margins. No head movement, new pose, gestures, props or wardrobe changes. One complete full-body portrait9:16 transparent-alpha PNG, ideally1080x1920, no backdrop/text/ground shadow/atlas.",
+    "native": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_a/miku/winter/surprised.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/miku/winter/surprised.png",
+    "pose": "original_extended_full_body",
+    "canvas": [
+      1080,
+      1920
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "visible_bbox_alpha128": [
+      163,
+      77,
+      918,
+      1841
+    ],
+    "sha256": "eaacaf765e3cea4861a2cda1c26a99272139744f62a5d61d659d0d3e3b7eb67f"
+  },
+  {
+    "character": "miku",
+    "outfit": "winter",
+    "emotion": "angry",
+    "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-6f8fcbd5-fdc5-490c-8b0d-04210774fe25.png",
+    "reference": "output/Art_v2/sprites/miku/winter/neutral.png",
+    "prompt": "Expression-only edit of the supplied MIKU winter sprite. Change ONLY facial expression to a serious irritated expression, knitted eyebrows and firm closed mouth. Preserve EXACT original Everlasting Summer Miku identity, face construction, teal eye color, turquoise bangs and twin tails with red bands, original head tilt/location, and clean cel-shaded style. Everything outside eyes/brows/mouth/cheeks must stay identical: hair silhouette, open hand positions, arms, teal coat quilting/folds, ivory scarf, dark jeans/boots, full-body anchor/scale and transparent margins. No head movement, new pose, gestures, props or wardrobe changes. One complete full-body portrait9:16 transparent-alpha PNG, ideally1080x1920, no backdrop/text/ground shadow/atlas.",
+    "native": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_a/miku/winter/angry.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/miku/winter/angry.png",
+    "pose": "original_extended_full_body",
+    "canvas": [
+      1080,
+      1920
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "visible_bbox_alpha128": [
+      163,
+      77,
+      919,
+      1842
+    ],
+    "sha256": "6e9ab7d3ae967ecc8691c5a7c083a63356a7d5911f82896fbacf8d67a4d6289a"
+  },
+  {
+    "character": "miku",
+    "outfit": "indoor",
+    "emotion": "neutral",
+    "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-adc4a6b0-ff77-4a6c-80b9-447eaf14dc0e.png",
+    "reference": "output/Art_v2/sprites/miku/winter/neutral.png",
+    "prompt": "Clothing-only edit of supplied MIKU winter sprite. Keep her EXACT original Everlasting Summer identity, head angle/position, teal eyes/neutral expression, turquoise bangs and long twin tails with red bands. Preserve SAME original open-handed standing pose, hand positions, feet positions, slender body proportions and framing. Replace coat/scarf/jeans/winter boots with warm ordinary indoor clothes: simple ivory knitted crewneck sweater, dark navy knee-length skirt, fully opaque black tights and dark flat closed shoes. No pioneer uniform or tie, no outdoor jacket/scarf, no new accessories. Keep original clean cel-shaded lineart and original face shape, no generic anime redesign. One complete full-body portrait9:16 transparent-alpha sprite, high native resolution ideally1080x1920. Same transparent top/bottom margins, no props, no backdrop, no floor shadow, no text or atlas.",
+    "native": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_a/miku/indoor/neutral.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/miku/indoor/neutral.png",
+    "pose": "original_extended_full_body",
+    "canvas": [
+      1080,
+      1920
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "visible_bbox_alpha128": [
+      163,
+      79,
+      918,
+      1840
+    ],
+    "sha256": "4fb21cc2e14e5600a3ba770d7dff6b8c4f630711efe600f6e2e8dff40c826354"
+  },
+  {
+    "character": "miku",
+    "outfit": "indoor",
+    "emotion": "soft_smile",
+    "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-fcc07ea5-2689-41aa-bafa-7bd0fb79d27a.png",
+    "reference": "output/Art_v2/sprites/miku/indoor/neutral.png",
+    "prompt": "Expression-only edit of MIKU's supplied full-body indoor sprite. Change ONLY facial expression to a warm cheerful closed-mouth smile with friendly teal eyes. Preserve the exact original Everlasting Summer Miku identity/face shape and color palette, same head tilt and location, same turquoise twin tails and red ties, same open-hand body pose and hand positions, ivory cable sweater pattern, navy skirt folds, opaque tights, shoes, scale and transparent margins. Everything outside her facial expression remains identical. No head movement, body gesture, new props or wardrobe changes. One entire character head to soles on genuine transparent alpha, portrait9:16 ideally1080x1920, no text/backdrop/shadow/atlas.",
+    "native": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_a/miku/indoor/soft_smile.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/miku/indoor/soft_smile.png",
+    "pose": "original_extended_full_body",
+    "canvas": [
+      1080,
+      1920
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "visible_bbox_alpha128": [
+      161,
+      77,
+      921,
+      1841
+    ],
+    "sha256": "a97ad8e31015b297d3cc7f5c7540524198100f1e407b54afcd2ae2e616836650"
+  },
+  {
+    "character": "miku",
+    "outfit": "indoor",
+    "emotion": "thoughtful",
+    "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-4c0b7f54-8574-48dd-9f0c-a7d36c706ab9.png",
+    "reference": "output/Art_v2/sprites/miku/indoor/neutral.png",
+    "prompt": "Expression-only edit of MIKU's supplied full-body indoor sprite. Change ONLY facial expression to a quiet thoughtful focused look, slightly thoughtful brows and closed mouth. Preserve the exact original Everlasting Summer Miku identity/face shape and color palette, same head tilt and location, same turquoise twin tails and red ties, same open-hand body pose and hand positions, ivory cable sweater pattern, navy skirt folds, opaque tights, shoes, scale and transparent margins. Everything outside her facial expression remains identical. No head movement, body gesture, new props or wardrobe changes. One entire character head to soles on genuine transparent alpha, portrait9:16 ideally1080x1920, no text/backdrop/shadow/atlas.",
+    "native": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_a/miku/indoor/thoughtful.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/miku/indoor/thoughtful.png",
+    "pose": "original_extended_full_body",
+    "canvas": [
+      1080,
+      1920
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "visible_bbox_alpha128": [
+      162,
+      79,
+      920,
+      1841
+    ],
+    "sha256": "8550e4ad5a855ad9f4add5e65a3dbbccceafe9ffe68eb4681ba9588c6b0195a9"
+  },
+  {
+    "character": "miku",
+    "outfit": "indoor",
+    "emotion": "sad",
+    "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-c22a6051-b2f5-4fd6-bfa3-37bb14c1f2fc.png",
+    "reference": "output/Art_v2/sprites/miku/indoor/neutral.png",
+    "prompt": "Expression-only edit of MIKU's supplied full-body indoor sprite. Change ONLY facial expression to a sad downcast expression, raised inner eyebrows and gently downturned lips, no tears. Preserve the exact original Everlasting Summer Miku identity/face shape and color palette, same head tilt and location, same turquoise twin tails and red ties, same open-hand body pose and hand positions, ivory cable sweater pattern, navy skirt folds, opaque tights, shoes, scale and transparent margins. Everything outside her facial expression remains identical. No head movement, body gesture, new props or wardrobe changes. One entire character head to soles on genuine transparent alpha, portrait9:16 ideally1080x1920, no text/backdrop/shadow/atlas.",
+    "native": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_a/miku/indoor/sad.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/miku/indoor/sad.png",
+    "pose": "original_extended_full_body",
+    "canvas": [
+      1080,
+      1920
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "visible_bbox_alpha128": [
+      161,
+      79,
+      920,
+      1843
+    ],
+    "sha256": "17e4c5c7614fd4a8887f31f7415e1e236250d9eff2c4c95f7a31f51175e7a185"
+  },
+  {
+    "character": "miku",
+    "outfit": "indoor",
+    "emotion": "surprised",
+    "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-9e54a0ce-22c6-4b88-825d-5bc2715d309d.png",
+    "reference": "output/Art_v2/sprites/miku/indoor/neutral.png",
+    "prompt": "Expression-only edit of MIKU's supplied full-body indoor sprite. Change ONLY facial expression to wide teal eyes, raised eyebrows and small open mouth of surprise. Preserve the exact original Everlasting Summer Miku identity/face shape and color palette, same head tilt and location, same turquoise twin tails and red ties, same open-hand body pose and hand positions, ivory cable sweater pattern, navy skirt folds, opaque tights, shoes, scale and transparent margins. Everything outside her facial expression remains identical. No head movement, body gesture, new props or wardrobe changes. One entire character head to soles on genuine transparent alpha, portrait9:16 ideally1080x1920, no text/backdrop/shadow/atlas.",
+    "native": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_a/miku/indoor/surprised.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/miku/indoor/surprised.png",
+    "pose": "original_extended_full_body",
+    "canvas": [
+      1080,
+      1920
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "visible_bbox_alpha128": [
+      161,
+      76,
+      922,
+      1843
+    ],
+    "sha256": "b7ca0067382d4b2797e57efa7ef61f5bcd4cac24725765510aa4f7cdd0d563c1"
+  },
+  {
+    "character": "miku",
+    "outfit": "indoor",
+    "emotion": "angry",
+    "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-524a1dbf-13e3-40f6-920f-9848051531ba.png",
+    "reference": "output/Art_v2/sprites/miku/indoor/neutral.png",
+    "prompt": "Expression-only edit of MIKU's supplied full-body indoor sprite. Change ONLY facial expression to clear irritation with narrowed teal eyes, knitted eyebrows and firm mouth. Preserve the exact original Everlasting Summer Miku identity/face shape and color palette, same head tilt and location, same turquoise twin tails and red ties, same open-hand body pose and hand positions, ivory cable sweater pattern, navy skirt folds, opaque tights, shoes, scale and transparent margins. Everything outside her facial expression remains identical. No head movement, body gesture, new props or wardrobe changes. One entire character head to soles on genuine transparent alpha, portrait9:16 ideally1080x1920, no text/backdrop/shadow/atlas.",
+    "native": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_a/miku/indoor/angry.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/miku/indoor/angry.png",
+    "pose": "original_extended_full_body",
+    "canvas": [
+      1080,
+      1920
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "visible_bbox_alpha128": [
+      161,
+      77,
+      920,
+      1842
+    ],
+    "sha256": "d2427e710e9924c19f630b139a743794d494b66da716853144997320f414bf08"
+  },
+  {
+    "character": "tikhonova",
+    "outfit": "winter",
+    "emotion": "neutral",
+    "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-546eb15a-cac4-459f-a650-e4a3499c2030.png",
+    "reference": "work/v2/references/tikhonova_original.png",
+    "prompt": "Identity-preserve costume-only edit of the supplied ORIGINAL LENA TIKHONOVA from Everlasting Summer. Keep her EXACT original face design and green eyes, purple short bob with two upward side tufts held by yellow-green hair bands, original bangs, gentle head tilt and slightly shy standing pose with both hands together in front. Preserve the ORIGINAL game's thin clean linework, saturated cel-shaded colors, original facial proportions, not a generic modern anime redesign. Replace pioneer uniform with warm winter street clothes: olive green knee-length wool coat, soft plum scarf, opaque black tights and dark brown warm winter boots. Extend original cropped lower legs naturally to show both complete boots. Entire full body with margins above hair/below soles, portrait9:16 high native resolution request2160x3840 or minimum1080x1920. Neutral expression, closed lips. Exactly one sprite on real transparent alpha background, no text, no props, no backdrop, no floor shadow or atlas. No bare summer legs outdoors.",
+    "normalize": true,
+    "export_transform": {
+      "scale": 1.0673135233474833,
+      "offset": [
+        57,
+        69
+      ],
+      "opaque_bbox": [
+        249,
+        10,
+        656,
+        1659
+      ]
+    },
+    "native": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_a/tikhonova/winter/neutral.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/tikhonova/winter/neutral.png",
+    "pose": "original_extended_full_body",
+    "canvas": [
+      1080,
+      1920
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "visible_bbox_alpha128": [
+      323,
+      79,
+      757,
+      1840
+    ],
+    "sha256": "bfdbc46270aae96b9fdd15f941ac8b0146d9b3d6ada3c76c571599cc924c3c6f"
+  },
+  {
+    "character": "tikhonova",
+    "outfit": "winter",
+    "emotion": "soft_smile",
+    "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-3ca03296-52de-4d21-885a-89b429f19e44.png",
+    "reference": "output/Art_v2/sprites/tikhonova/winter/neutral.png",
+    "prompt": "Expression-only edit of supplied LENA TIKHONOVA winter sprite. Change ONLY facial muscles/eyes/brows/mouth to a shy gentle closed-mouth smile, relaxed warm green eyes. Preserve her EXACT original Everlasting Summer face design and green eyes, purple short bob and raised pigtail tufts/yellow-green bands, same head tilt/location and cel shading. Entire body remains identical: shy hands together in front, arm/foot positions, olive coat buttons/seams/folds, plum scarf, black tights, brown boots, figure scale/anchor and transparent margins. No head movement, new gestures or props, no clothing change. One full-body portrait9:16 transparent-alpha PNG ideally1080x1920, no backdrop/text/shadow/atlas.",
+    "native": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_a/tikhonova/winter/soft_smile.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/tikhonova/winter/soft_smile.png",
+    "pose": "original_extended_full_body",
+    "canvas": [
+      1080,
+      1920
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "visible_bbox_alpha128": [
+      318,
+      74,
+      758,
+      1840
+    ],
+    "sha256": "54c384c22aa7bf611e3cb4982a8890f0ca000b636f71d1801f350e7b9ea64f3c"
+  },
+  {
+    "character": "tikhonova",
+    "outfit": "winter",
+    "emotion": "thoughtful",
+    "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-b518bf2d-3424-43c9-ba8d-0efb1cffce0e.png",
+    "reference": "output/Art_v2/sprites/tikhonova/winter/neutral.png",
+    "prompt": "Expression-only edit of supplied LENA TIKHONOVA winter sprite. Change ONLY facial muscles/eyes/brows/mouth to a thoughtful attentive expression with mildly focused eyebrows and closed mouth. Preserve her EXACT original Everlasting Summer face design and green eyes, purple short bob and raised pigtail tufts/yellow-green bands, same head tilt/location and cel shading. Entire body remains identical: shy hands together in front, arm/foot positions, olive coat buttons/seams/folds, plum scarf, black tights, brown boots, figure scale/anchor and transparent margins. No head movement, new gestures or props, no clothing change. One full-body portrait9:16 transparent-alpha PNG ideally1080x1920, no backdrop/text/shadow/atlas.",
+    "native": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_a/tikhonova/winter/thoughtful.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/tikhonova/winter/thoughtful.png",
+    "pose": "original_extended_full_body",
+    "canvas": [
+      1080,
+      1920
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "visible_bbox_alpha128": [
+      320,
+      76,
+      758,
+      1841
+    ],
+    "sha256": "76779792d834b34d753789a2b9ff2a78231a42acf25932dafa767536cdcf77b0"
+  },
+  {
+    "character": "tikhonova",
+    "outfit": "winter",
+    "emotion": "sad",
+    "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-7a55e503-69e3-48a3-aae8-68547f86e9ba.png",
+    "reference": "output/Art_v2/sprites/tikhonova/winter/neutral.png",
+    "prompt": "Expression-only edit of supplied LENA TIKHONOVA winter sprite. Change ONLY facial muscles/eyes/brows/mouth to quiet sadness, raised inner brows, soft downturned mouth, no tears. Preserve her EXACT original Everlasting Summer face design and green eyes, purple short bob and raised pigtail tufts/yellow-green bands, same head tilt/location and cel shading. Entire body remains identical: shy hands together in front, arm/foot positions, olive coat buttons/seams/folds, plum scarf, black tights, brown boots, figure scale/anchor and transparent margins. No head movement, new gestures or props, no clothing change. One full-body portrait9:16 transparent-alpha PNG ideally1080x1920, no backdrop/text/shadow/atlas.",
+    "native": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_a/tikhonova/winter/sad.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/tikhonova/winter/sad.png",
+    "pose": "original_extended_full_body",
+    "canvas": [
+      1080,
+      1920
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "visible_bbox_alpha128": [
+      319,
+      75,
+      758,
+      1841
+    ],
+    "sha256": "887c09259ca1ddd563fbe757536213834cb198651a847be2f4f8331cc68d0264"
+  },
+  {
+    "character": "tikhonova",
+    "outfit": "winter",
+    "emotion": "surprised",
+    "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-eea2a76e-4719-4a4f-9497-8e19a1f07a1c.png",
+    "reference": "output/Art_v2/sprites/tikhonova/winter/neutral.png",
+    "prompt": "Expression-only edit of supplied LENA TIKHONOVA winter sprite. Change ONLY facial muscles/eyes/brows/mouth to wide green eyes, lifted brows and small open mouth of surprise. Preserve her EXACT original Everlasting Summer face design and green eyes, purple short bob and raised pigtail tufts/yellow-green bands, same head tilt/location and cel shading. Entire body remains identical: shy hands together in front, arm/foot positions, olive coat buttons/seams/folds, plum scarf, black tights, brown boots, figure scale/anchor and transparent margins. No head movement, new gestures or props, no clothing change. One full-body portrait9:16 transparent-alpha PNG ideally1080x1920, no backdrop/text/shadow/atlas.",
+    "native": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_a/tikhonova/winter/surprised.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/tikhonova/winter/surprised.png",
+    "pose": "original_extended_full_body",
+    "canvas": [
+      1080,
+      1920
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "visible_bbox_alpha128": [
+      320,
+      76,
+      758,
+      1840
+    ],
+    "sha256": "cb572ca21ddadc7ae6c7385fa1dc35c1ef8fd084faa3f742d986c3a0e26f87d5"
+  },
+  {
+    "character": "tikhonova",
+    "outfit": "winter",
+    "emotion": "angry",
+    "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-aa6fdb98-1882-4b46-818b-2ca65595d77a.png",
+    "reference": "output/Art_v2/sprites/tikhonova/winter/neutral.png",
+    "prompt": "Expression-only edit of supplied LENA TIKHONOVA winter sprite. Change ONLY facial muscles/eyes/brows/mouth to restrained upset anger, knitted eyebrows and firm mouth, no exaggerated snarl. Preserve her EXACT original Everlasting Summer face design and green eyes, purple short bob and raised pigtail tufts/yellow-green bands, same head tilt/location and cel shading. Entire body remains identical: shy hands together in front, arm/foot positions, olive coat buttons/seams/folds, plum scarf, black tights, brown boots, figure scale/anchor and transparent margins. No head movement, new gestures or props, no clothing change. One full-body portrait9:16 transparent-alpha PNG ideally1080x1920, no backdrop/text/shadow/atlas.",
+    "native": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_a/tikhonova/winter/angry.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/tikhonova/winter/angry.png",
+    "pose": "original_extended_full_body",
+    "canvas": [
+      1080,
+      1920
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "visible_bbox_alpha128": [
+      320,
+      76,
+      759,
+      1840
+    ],
+    "sha256": "32349d4d50cc410693bfc988abce5f023d5a1a47e7111f3d0f9b8045c1b5acf2"
+  },
+  {
+    "character": "tikhonova",
+    "outfit": "indoor",
+    "emotion": "neutral",
+    "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-cabfaa3d-ea70-4056-94e1-0655823ab00a.png",
+    "reference": "output/Art_v2/sprites/tikhonova/winter/neutral.png",
+    "prompt": "Clothing-only edit of supplied LENA TIKHONOVA winter sprite. Replace olive winter coat/plum scarf/boots with ordinary warm indoor clothes: olive knitted cardigan over a white modest collared blouse, deep plum knee-length skirt, fully opaque black tights and simple dark flat closed shoes. Preserve EXACT original Everlasting Summer face/green eyes/neutral expression, purple short bob with two raised side tufts/yellow-green bands, head angle/location, original shy standing pose with both hands together in front, same hand and foot positions, same body proportions and full-body scale. Keep original thin clean lineart and cel shading. No pioneer uniform/tie, no scarf or outdoor coat, no added accessories. One entire character from top of hair to soles on real transparent alpha, portrait9:16 ideally1080x1920, same margins, no text/props/backdrop/floor shadow/atlas.",
+    "native": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_a/tikhonova/indoor/neutral.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/tikhonova/indoor/neutral.png",
+    "pose": "original_extended_full_body",
+    "canvas": [
+      1080,
+      1920
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "visible_bbox_alpha128": [
+      319,
+      77,
+      743,
+      1837
+    ],
+    "sha256": "bd80e155f1acf7684290a6a9395ffec18ff9f59d765ef1bb2b5a5bf9e991c9ba"
+  },
+  {
+    "character": "tikhonova",
+    "outfit": "indoor",
+    "emotion": "soft_smile",
+    "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-7aaa885b-d54a-4fbb-98a9-9ff6ac5d7069.png",
+    "reference": "output/Art_v2/sprites/tikhonova/indoor/neutral.png",
+    "prompt": "Expression-only edit of supplied LENA TIKHONOVA indoor sprite. Change ONLY her facial expression to a gentle shy warm closed-mouth smile and relaxed green eyes. Preserve EXACT original Everlasting Summer identity, original green eyes/face design, purple short bob/raised pigtail tufts/yellow-green bands, original thin cel-shaded lineart. Same head tilt/location, same body pose and hands together in front, identical olive cardigan knit/buttons/folds, white collar, plum skirt, black tights and flat shoes, same figure scale/anchor and transparent margins. No new pose, head movement, hand gesture, wardrobe drift or props. Single full-body portrait9:16 transparent-alpha PNG ideally1080x1920; no background, no text, no ground shadow, no atlas.",
+    "native": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_a/tikhonova/indoor/soft_smile.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/tikhonova/indoor/soft_smile.png",
+    "pose": "original_extended_full_body",
+    "canvas": [
+      1080,
+      1920
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "visible_bbox_alpha128": [
+      320,
+      73,
+      745,
+      1838
+    ],
+    "sha256": "c8b3906cc50d5241530e3100036a3c26d7bc8f420207753c0e285e53ac73bd07"
+  },
+  {
+    "character": "tikhonova",
+    "outfit": "indoor",
+    "emotion": "thoughtful",
+    "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-c43b361e-c127-436c-996a-294aad9ed191.png",
+    "reference": "output/Art_v2/sprites/tikhonova/indoor/neutral.png",
+    "prompt": "Expression-only edit of supplied LENA TIKHONOVA indoor sprite. Change ONLY her facial expression to a quiet focused thoughtful expression with slightly concentrated eyebrows and closed mouth. Preserve EXACT original Everlasting Summer identity, original green eyes/face design, purple short bob/raised pigtail tufts/yellow-green bands, original thin cel-shaded lineart. Same head tilt/location, same body pose and hands together in front, identical olive cardigan knit/buttons/folds, white collar, plum skirt, black tights and flat shoes, same figure scale/anchor and transparent margins. No new pose, head movement, hand gesture, wardrobe drift or props. Single full-body portrait9:16 transparent-alpha PNG ideally1080x1920; no background, no text, no ground shadow, no atlas.",
+    "native": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_a/tikhonova/indoor/thoughtful.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/tikhonova/indoor/thoughtful.png",
+    "pose": "original_extended_full_body",
+    "canvas": [
+      1080,
+      1920
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "visible_bbox_alpha128": [
+      319,
+      75,
+      744,
+      1838
+    ],
+    "sha256": "73d91e78726b70c0feb239511afc40258ce66ce8178a75441215f52742d07e4b"
+  },
+  {
+    "character": "tikhonova",
+    "outfit": "indoor",
+    "emotion": "sad",
+    "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-0c3b6eb9-c5df-4b0b-9306-160d9851dfb6.png",
+    "reference": "output/Art_v2/sprites/tikhonova/indoor/neutral.png",
+    "prompt": "Expression-only edit of supplied LENA TIKHONOVA indoor sprite. Change ONLY her facial expression to subdued sadness with raised inner brows and downturned lips, no tears. Preserve EXACT original Everlasting Summer identity, original green eyes/face design, purple short bob/raised pigtail tufts/yellow-green bands, original thin cel-shaded lineart. Same head tilt/location, same body pose and hands together in front, identical olive cardigan knit/buttons/folds, white collar, plum skirt, black tights and flat shoes, same figure scale/anchor and transparent margins. No new pose, head movement, hand gesture, wardrobe drift or props. Single full-body portrait9:16 transparent-alpha PNG ideally1080x1920; no background, no text, no ground shadow, no atlas.",
+    "native": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_a/tikhonova/indoor/sad.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/tikhonova/indoor/sad.png",
+    "pose": "original_extended_full_body",
+    "canvas": [
+      1080,
+      1920
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "visible_bbox_alpha128": [
+      318,
+      74,
+      745,
+      1839
+    ],
+    "sha256": "2f7d649d0d233946337bc7f3741dc97ee90e1eaada84f0f249d31cbe50436cc4"
+  },
+  {
+    "character": "tikhonova",
+    "outfit": "indoor",
+    "emotion": "surprised",
+    "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-8f24eca7-629d-4f4d-aa87-26d3a5ab5138.png",
+    "reference": "output/Art_v2/sprites/tikhonova/indoor/neutral.png",
+    "prompt": "Expression-only edit of supplied LENA TIKHONOVA indoor sprite. Change ONLY her facial expression to widened green eyes, raised brows and a small open mouth of surprise. Preserve EXACT original Everlasting Summer identity, original green eyes/face design, purple short bob/raised pigtail tufts/yellow-green bands, original thin cel-shaded lineart. Same head tilt/location, same body pose and hands together in front, identical olive cardigan knit/buttons/folds, white collar, plum skirt, black tights and flat shoes, same figure scale/anchor and transparent margins. No new pose, head movement, hand gesture, wardrobe drift or props. Single full-body portrait9:16 transparent-alpha PNG ideally1080x1920; no background, no text, no ground shadow, no atlas.",
+    "native": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_a/tikhonova/indoor/surprised.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/tikhonova/indoor/surprised.png",
+    "pose": "original_extended_full_body",
+    "canvas": [
+      1080,
+      1920
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "visible_bbox_alpha128": [
+      319,
+      75,
+      744,
+      1838
+    ],
+    "sha256": "26217e8e5903438c74af15b8c2a708a86164d2d98ea6828dc6d981e59d90c6c4"
+  },
+  {
+    "character": "tikhonova",
+    "outfit": "indoor",
+    "emotion": "angry",
+    "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-51bb975b-1acb-47b5-8aa5-58b08be82093.png",
+    "reference": "output/Art_v2/sprites/tikhonova/indoor/neutral.png",
+    "prompt": "Expression-only edit of supplied LENA TIKHONOVA indoor sprite. Change ONLY her facial expression to restrained irritated anger, drawn-in eyebrows and firm mouth. Preserve EXACT original Everlasting Summer identity, original green eyes/face design, purple short bob/raised pigtail tufts/yellow-green bands, original thin cel-shaded lineart. Same head tilt/location, same body pose and hands together in front, identical olive cardigan knit/buttons/folds, white collar, plum skirt, black tights and flat shoes, same figure scale/anchor and transparent margins. No new pose, head movement, hand gesture, wardrobe drift or props. Single full-body portrait9:16 transparent-alpha PNG ideally1080x1920; no background, no text, no ground shadow, no atlas.",
+    "native": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_a/tikhonova/indoor/angry.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/tikhonova/indoor/angry.png",
+    "pose": "original_extended_full_body",
+    "canvas": [
+      1080,
+      1920
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "visible_bbox_alpha128": [
+      318,
+      75,
+      745,
+      1838
+    ],
+    "sha256": "fd9461baa01511df50e3206f32a371a21c8aca28378ec6c5216f679e89b68994"
+  }
+]

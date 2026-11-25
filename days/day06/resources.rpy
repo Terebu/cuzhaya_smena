@@ -193,6 +193,7 @@ init 60 python:
 
     cs_d6_original_audio_target=cs_day03_audio_target
     def cs_d6_audio_target(image):
+        if cs_d7_started:return False
         if cs_d6_started:
             if image=='cs_d6_lights_out':return 'sound/ambiences/int_cabin_night.ogg'
             if image.startswith('cs_house_lena_darya_int'):
@@ -211,7 +212,7 @@ init 60 python:
     cs_day03_audio_target=cs_d6_audio_target
 
     def cs_d6_loaded():
-        if not cs_active or not cs_d6_started:return
+        if not cs_active or not cs_d6_started or cs_d7_started:return
         store.cs_d5_quiet=False
         store.cs_d5_scene=0
         store.cs_bus_audio_mode='natural'
@@ -230,7 +231,7 @@ screen cs_day06_end_screen():
         vbox:
             spacing 16
             text 'Конец шестого дня' size 32
-            text 'Продолжение следует' size 24
+            textbutton 'День 7' action Jump('cs_day07')
             textbutton 'Сохранить игру' action ShowMenu('save')
             textbutton 'Загрузить игру' action ShowMenu('load')
             textbutton 'Главное меню' action [Function(cs_restore_audio),MainMenu()]

@@ -1,0 +1,4192 @@
+{
+  "version": "2.0",
+  "sprite_canvas": [
+    1080,
+    1920
+  ],
+  "image_canvas": [
+    1920,
+    1080
+  ],
+  "pose_count": 1,
+  "outfits": [
+    "winter",
+    "indoor"
+  ],
+  "emotions": [
+    "neutral",
+    "soft_smile",
+    "thoughtful",
+    "sad",
+    "surprised",
+    "angry"
+  ],
+  "sprites": [
+    {
+      "character": "sokolova",
+      "tag": "cs_epi_sokolova",
+      "outfit": "winter",
+      "pose": "idle",
+      "emotion": "neutral",
+      "path": "sp/sokolova/winter/neutral.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        246,
+        73,
+        836,
+        1840
+      ],
+      "sha256": "1bfdaad16e869f2214cfab36e878b9b3ffb1678fa5d65a56d444b9bf35ca2526",
+      "visible_bbox": [
+        247,
+        85,
+        832,
+        1840
+      ]
+    },
+    {
+      "character": "sokolova",
+      "tag": "cs_epi_sokolova",
+      "outfit": "winter",
+      "pose": "idle",
+      "emotion": "soft_smile",
+      "path": "sp/sokolova/winter/soft_smile.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        246,
+        73,
+        836,
+        1840
+      ],
+      "sha256": "e1a5a4071f26e534bbdc23db7087591ea5b8c2aa866e504d3ccbcaf853336f72",
+      "visible_bbox": [
+        246,
+        78,
+        836,
+        1838
+      ]
+    },
+    {
+      "character": "sokolova",
+      "tag": "cs_epi_sokolova",
+      "outfit": "winter",
+      "pose": "idle",
+      "emotion": "thoughtful",
+      "path": "sp/sokolova/winter/thoughtful.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        246,
+        73,
+        836,
+        1840
+      ],
+      "sha256": "755162139c3f5efc5578f3ac669f87c16ed0f0912d0b8812b8f716f3e985bbad",
+      "visible_bbox": [
+        246,
+        73,
+        835,
+        1838
+      ]
+    },
+    {
+      "character": "sokolova",
+      "tag": "cs_epi_sokolova",
+      "outfit": "winter",
+      "pose": "idle",
+      "emotion": "sad",
+      "path": "sp/sokolova/winter/sad.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        246,
+        73,
+        836,
+        1840
+      ],
+      "sha256": "f78909874b15e1457c616060ace16b97b12ce9bf15b9546c384cec97e1e277c5",
+      "visible_bbox": [
+        246,
+        74,
+        836,
+        1838
+      ]
+    },
+    {
+      "character": "sokolova",
+      "tag": "cs_epi_sokolova",
+      "outfit": "winter",
+      "pose": "idle",
+      "emotion": "surprised",
+      "path": "sp/sokolova/winter/surprised.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        246,
+        73,
+        836,
+        1840
+      ],
+      "sha256": "db8969904122275126622eb29726f7ba342cf5513d529d71c6e2c00ecc439b2a",
+      "visible_bbox": [
+        246,
+        74,
+        836,
+        1839
+      ]
+    },
+    {
+      "character": "sokolova",
+      "tag": "cs_epi_sokolova",
+      "outfit": "winter",
+      "pose": "idle",
+      "emotion": "angry",
+      "path": "sp/sokolova/winter/angry.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        246,
+        73,
+        836,
+        1840
+      ],
+      "sha256": "348c051a9a9dffdf6440cc3b9c11c3bb0dc1bde834e3540fcaf6bc3f353350ad",
+      "visible_bbox": [
+        247,
+        73,
+        835,
+        1839
+      ]
+    },
+    {
+      "character": "sokolova",
+      "tag": "cs_epi_sokolova",
+      "outfit": "indoor",
+      "pose": "idle",
+      "emotion": "neutral",
+      "path": "sp/sokolova/indoor/neutral.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        247,
+        80,
+        836,
+        1839
+      ],
+      "sha256": "72ce1d6a50e43a03e26ab3c88d2618a26e0f4d52661441f9fa10aeb787a77b42",
+      "visible_bbox": [
+        248,
+        81,
+        832,
+        1839
+      ]
+    },
+    {
+      "character": "sokolova",
+      "tag": "cs_epi_sokolova",
+      "outfit": "indoor",
+      "pose": "idle",
+      "emotion": "soft_smile",
+      "path": "sp/sokolova/indoor/soft_smile.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        247,
+        80,
+        836,
+        1839
+      ],
+      "sha256": "1eeb3f729f77d379884c4410a13b077630b19f6f8aaa200a722821c5e4605e6f",
+      "visible_bbox": [
+        247,
+        80,
+        836,
+        1838
+      ]
+    },
+    {
+      "character": "sokolova",
+      "tag": "cs_epi_sokolova",
+      "outfit": "indoor",
+      "pose": "idle",
+      "emotion": "thoughtful",
+      "path": "sp/sokolova/indoor/thoughtful.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        247,
+        80,
+        836,
+        1839
+      ],
+      "sha256": "ed56e019d6a896eea200257c03b5e6b5742f614af3d9a269a5bbefa97fa68a38",
+      "visible_bbox": [
+        247,
+        80,
+        835,
+        1838
+      ]
+    },
+    {
+      "character": "sokolova",
+      "tag": "cs_epi_sokolova",
+      "outfit": "indoor",
+      "pose": "idle",
+      "emotion": "sad",
+      "path": "sp/sokolova/indoor/sad.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        247,
+        80,
+        836,
+        1839
+      ],
+      "sha256": "0e3f4f3ab5fa2d79ef3db855023230a32188640605fd80014f6e7d0bd0ac2591",
+      "visible_bbox": [
+        247,
+        80,
+        832,
+        1837
+      ]
+    },
+    {
+      "character": "sokolova",
+      "tag": "cs_epi_sokolova",
+      "outfit": "indoor",
+      "pose": "idle",
+      "emotion": "surprised",
+      "path": "sp/sokolova/indoor/surprised.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        247,
+        80,
+        836,
+        1839
+      ],
+      "sha256": "1eb5dff84a86e6b641110cb8c8a9294bc59b5f7e9dfc3af1b5d4b93b672f8308",
+      "visible_bbox": [
+        248,
+        80,
+        831,
+        1837
+      ]
+    },
+    {
+      "character": "sokolova",
+      "tag": "cs_epi_sokolova",
+      "outfit": "indoor",
+      "pose": "idle",
+      "emotion": "angry",
+      "path": "sp/sokolova/indoor/angry.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        247,
+        80,
+        836,
+        1839
+      ],
+      "sha256": "d1f512dce0b9b9e3f186a3308e83f9ba2bcc91fb9b4f4ac9cd8716040cf42ed0",
+      "visible_bbox": [
+        247,
+        80,
+        836,
+        1838
+      ]
+    },
+    {
+      "character": "darya",
+      "tag": "cs_epi_darya",
+      "outfit": "winter",
+      "pose": "idle",
+      "emotion": "neutral",
+      "path": "sp/darya/winter/neutral.png",
+      "dimensions": [
+        941,
+        1672
+      ],
+      "bbox": [
+        286,
+        62,
+        673,
+        1608
+      ],
+      "sha256": "9a1b28237ac9d372de3f4677d61717af65f22a1212c685da7b0fe2aaba38b7dd",
+      "visible_bbox": [
+        287,
+        68,
+        670,
+        1605
+      ]
+    },
+    {
+      "character": "darya",
+      "tag": "cs_epi_darya",
+      "outfit": "winter",
+      "pose": "idle",
+      "emotion": "soft_smile",
+      "path": "sp/darya/winter/soft_smile.png",
+      "dimensions": [
+        941,
+        1672
+      ],
+      "bbox": [
+        286,
+        62,
+        673,
+        1608
+      ],
+      "sha256": "68fbab6ec1ffaf2927ff9ae0f0b53e3e2dd96d5ca8b74307c33c5e9789ba52ed",
+      "visible_bbox": [
+        286,
+        68,
+        673,
+        1607
+      ]
+    },
+    {
+      "character": "darya",
+      "tag": "cs_epi_darya",
+      "outfit": "winter",
+      "pose": "idle",
+      "emotion": "thoughtful",
+      "path": "sp/darya/winter/thoughtful.png",
+      "dimensions": [
+        941,
+        1672
+      ],
+      "bbox": [
+        286,
+        62,
+        673,
+        1608
+      ],
+      "sha256": "c78b425cf808bd9c12551735a65b89661fd3b2dc097e721a81a0815208252da8",
+      "visible_bbox": [
+        286,
+        62,
+        672,
+        1607
+      ]
+    },
+    {
+      "character": "darya",
+      "tag": "cs_epi_darya",
+      "outfit": "winter",
+      "pose": "idle",
+      "emotion": "sad",
+      "path": "sp/darya/winter/sad.png",
+      "dimensions": [
+        941,
+        1672
+      ],
+      "bbox": [
+        286,
+        62,
+        673,
+        1608
+      ],
+      "sha256": "decbe758a8daf38a953b17b926f8fa16653faa218bee3744630990abaac7cb45",
+      "visible_bbox": [
+        287,
+        64,
+        671,
+        1606
+      ]
+    },
+    {
+      "character": "darya",
+      "tag": "cs_epi_darya",
+      "outfit": "winter",
+      "pose": "idle",
+      "emotion": "surprised",
+      "path": "sp/darya/winter/surprised.png",
+      "dimensions": [
+        941,
+        1672
+      ],
+      "bbox": [
+        286,
+        62,
+        673,
+        1608
+      ],
+      "sha256": "51b5b0ae419a37dbeb325f5e041f86c568ef1a583af014c82e52f1d1d5f1363c",
+      "visible_bbox": [
+        288,
+        63,
+        672,
+        1607
+      ]
+    },
+    {
+      "character": "darya",
+      "tag": "cs_epi_darya",
+      "outfit": "winter",
+      "pose": "idle",
+      "emotion": "angry",
+      "path": "sp/darya/winter/angry.png",
+      "dimensions": [
+        941,
+        1672
+      ],
+      "bbox": [
+        286,
+        62,
+        673,
+        1608
+      ],
+      "sha256": "6824c332a40932ad66ccfdff8a86811f55ab8389afa848ee875114f564a54d78",
+      "visible_bbox": [
+        286,
+        65,
+        670,
+        1608
+      ]
+    },
+    {
+      "character": "darya",
+      "tag": "cs_epi_darya",
+      "outfit": "indoor",
+      "pose": "idle",
+      "emotion": "neutral",
+      "path": "sp/darya/indoor/neutral.png",
+      "dimensions": [
+        941,
+        1672
+      ],
+      "bbox": [
+        294,
+        57,
+        669,
+        1608
+      ],
+      "sha256": "65bcf7b571b341c9b7508b2dac19c7d84875dc37b0ea16c2a4f0f249ff76da90",
+      "visible_bbox": [
+        300,
+        63,
+        665,
+        1604
+      ]
+    },
+    {
+      "character": "darya",
+      "tag": "cs_epi_darya",
+      "outfit": "indoor",
+      "pose": "idle",
+      "emotion": "soft_smile",
+      "path": "sp/darya/indoor/soft_smile.png",
+      "dimensions": [
+        941,
+        1672
+      ],
+      "bbox": [
+        294,
+        57,
+        669,
+        1608
+      ],
+      "sha256": "a4cfe69c93088cb06073cdee0959499ab7d39ef82fea2bc2b498f35f3a146e1c",
+      "visible_bbox": [
+        295,
+        67,
+        668,
+        1608
+      ]
+    },
+    {
+      "character": "darya",
+      "tag": "cs_epi_darya",
+      "outfit": "indoor",
+      "pose": "idle",
+      "emotion": "thoughtful",
+      "path": "sp/darya/indoor/thoughtful.png",
+      "dimensions": [
+        941,
+        1672
+      ],
+      "bbox": [
+        294,
+        57,
+        669,
+        1608
+      ],
+      "sha256": "0b4af15fd9068fa85e465148281474723999c9f710e4ab3f3539bd29a8b2547b",
+      "visible_bbox": [
+        294,
+        69,
+        665,
+        1604
+      ]
+    },
+    {
+      "character": "darya",
+      "tag": "cs_epi_darya",
+      "outfit": "indoor",
+      "pose": "idle",
+      "emotion": "sad",
+      "path": "sp/darya/indoor/sad.png",
+      "dimensions": [
+        941,
+        1672
+      ],
+      "bbox": [
+        294,
+        57,
+        669,
+        1608
+      ],
+      "sha256": "d092e5895304b130c1eb9d59d5c6562e6e34e1a91a7b1f709ca02865bae03e0a",
+      "visible_bbox": [
+        300,
+        69,
+        667,
+        1605
+      ]
+    },
+    {
+      "character": "darya",
+      "tag": "cs_epi_darya",
+      "outfit": "indoor",
+      "pose": "idle",
+      "emotion": "surprised",
+      "path": "sp/darya/indoor/surprised.png",
+      "dimensions": [
+        941,
+        1672
+      ],
+      "bbox": [
+        294,
+        57,
+        669,
+        1608
+      ],
+      "sha256": "267fb6658feabf0b1071a37826c5e540d1bee3034ead350ce4addce4fbcb1300",
+      "visible_bbox": [
+        296,
+        57,
+        669,
+        1604
+      ]
+    },
+    {
+      "character": "darya",
+      "tag": "cs_epi_darya",
+      "outfit": "indoor",
+      "pose": "idle",
+      "emotion": "angry",
+      "path": "sp/darya/indoor/angry.png",
+      "dimensions": [
+        941,
+        1672
+      ],
+      "bbox": [
+        294,
+        57,
+        669,
+        1608
+      ],
+      "sha256": "2867c172e507bccdc451ad7ce874986cf56a6960bcd1943b9ed1429d7022a9be",
+      "visible_bbox": [
+        298,
+        69,
+        669,
+        1604
+      ]
+    },
+    {
+      "character": "semen",
+      "tag": "cs_epi_semen",
+      "outfit": "winter",
+      "pose": "idle",
+      "emotion": "neutral",
+      "path": "sp/semen/winter/neutral.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        286,
+        80,
+        796,
+        1839
+      ],
+      "sha256": "6e42da24cd4a2637ed4d5f94f45b459a764f1762713ffc80b7430cecc0ff929c",
+      "visible_bbox": [
+        286,
+        84,
+        792,
+        1839
+      ]
+    },
+    {
+      "character": "semen",
+      "tag": "cs_epi_semen",
+      "outfit": "winter",
+      "pose": "idle",
+      "emotion": "soft_smile",
+      "path": "sp/semen/winter/soft_smile.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        286,
+        80,
+        796,
+        1839
+      ],
+      "sha256": "65c21974841373f2c33577efd42b12f2e57b5b09af0c962262c5c7468e83c206",
+      "visible_bbox": [
+        287,
+        81,
+        794,
+        1839
+      ]
+    },
+    {
+      "character": "semen",
+      "tag": "cs_epi_semen",
+      "outfit": "winter",
+      "pose": "idle",
+      "emotion": "thoughtful",
+      "path": "sp/semen/winter/thoughtful.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        286,
+        80,
+        796,
+        1839
+      ],
+      "sha256": "ccada366f12c9bf7350cd1f79e50dfe34604ed97cbc0a71c47fe5638f5c1fa98",
+      "visible_bbox": [
+        286,
+        80,
+        794,
+        1838
+      ]
+    },
+    {
+      "character": "semen",
+      "tag": "cs_epi_semen",
+      "outfit": "winter",
+      "pose": "idle",
+      "emotion": "sad",
+      "path": "sp/semen/winter/sad.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        286,
+        80,
+        796,
+        1839
+      ],
+      "sha256": "67cf8c5e7c11eecac783d0e753567e8fc96cf0757d288b4f50fd861d919d73fe",
+      "visible_bbox": [
+        287,
+        80,
+        793,
+        1839
+      ]
+    },
+    {
+      "character": "semen",
+      "tag": "cs_epi_semen",
+      "outfit": "winter",
+      "pose": "idle",
+      "emotion": "surprised",
+      "path": "sp/semen/winter/surprised.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        286,
+        80,
+        796,
+        1839
+      ],
+      "sha256": "1785dfa2614242a7b5bebc783884ad4afb2ab664aa0a5ebb9f5c6d2754d20c5d",
+      "visible_bbox": [
+        286,
+        81,
+        796,
+        1839
+      ]
+    },
+    {
+      "character": "semen",
+      "tag": "cs_epi_semen",
+      "outfit": "winter",
+      "pose": "idle",
+      "emotion": "angry",
+      "path": "sp/semen/winter/angry.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        286,
+        80,
+        796,
+        1839
+      ],
+      "sha256": "52595d002d616167a449985bfabf96d8fce7e98f4f2278147b03cccdf864931f",
+      "visible_bbox": [
+        286,
+        81,
+        793,
+        1839
+      ]
+    },
+    {
+      "character": "semen",
+      "tag": "cs_epi_semen",
+      "outfit": "indoor",
+      "pose": "idle",
+      "emotion": "neutral",
+      "path": "sp/semen/indoor/neutral.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        293,
+        79,
+        789,
+        1843
+      ],
+      "sha256": "15c1b4c3fb898266c3d4bd0d620139508c29865c5ae99b64dbca000f02a9721a",
+      "visible_bbox": [
+        294,
+        83,
+        787,
+        1840
+      ]
+    },
+    {
+      "character": "semen",
+      "tag": "cs_epi_semen",
+      "outfit": "indoor",
+      "pose": "idle",
+      "emotion": "soft_smile",
+      "path": "sp/semen/indoor/soft_smile.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        293,
+        79,
+        789,
+        1843
+      ],
+      "sha256": "098abf1696fe15e4b0c9f0b6f2c7a019a7978ab568e37ffc7aa73f4c0c714e95",
+      "visible_bbox": [
+        293,
+        80,
+        788,
+        1842
+      ]
+    },
+    {
+      "character": "semen",
+      "tag": "cs_epi_semen",
+      "outfit": "indoor",
+      "pose": "idle",
+      "emotion": "thoughtful",
+      "path": "sp/semen/indoor/thoughtful.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        293,
+        79,
+        789,
+        1843
+      ],
+      "sha256": "95e34ba1ea0cd2eea43872b7a69e17a8581b53e304a7543cb4ea4112c847ff80",
+      "visible_bbox": [
+        294,
+        80,
+        789,
+        1839
+      ]
+    },
+    {
+      "character": "semen",
+      "tag": "cs_epi_semen",
+      "outfit": "indoor",
+      "pose": "idle",
+      "emotion": "sad",
+      "path": "sp/semen/indoor/sad.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        293,
+        79,
+        789,
+        1843
+      ],
+      "sha256": "cd0a00ba1b321ac31d40b0cd7c985657640010030d5cc0bd710b2a48d9a82c9d",
+      "visible_bbox": [
+        293,
+        79,
+        787,
+        1843
+      ]
+    },
+    {
+      "character": "semen",
+      "tag": "cs_epi_semen",
+      "outfit": "indoor",
+      "pose": "idle",
+      "emotion": "surprised",
+      "path": "sp/semen/indoor/surprised.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        293,
+        79,
+        789,
+        1843
+      ],
+      "sha256": "64e81b4cff0da2f7dff52a6e4d0a4e655f20960aaf91958d3d0420d7ce303677",
+      "visible_bbox": [
+        293,
+        80,
+        789,
+        1842
+      ]
+    },
+    {
+      "character": "semen",
+      "tag": "cs_epi_semen",
+      "outfit": "indoor",
+      "pose": "idle",
+      "emotion": "angry",
+      "path": "sp/semen/indoor/angry.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        293,
+        79,
+        789,
+        1843
+      ],
+      "sha256": "3b9ae29905117bc4bc58cbdb9882a95934979ed14d3c9bdf0ce6633b0b8d2263",
+      "visible_bbox": [
+        293,
+        80,
+        788,
+        1842
+      ]
+    },
+    {
+      "character": "slavya",
+      "tag": "cs_epi_slavya",
+      "outfit": "winter",
+      "pose": "idle",
+      "emotion": "neutral",
+      "path": "sp/slavya/winter/neutral.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        264,
+        77,
+        816,
+        1842
+      ],
+      "sha256": "01c3b8d7718047272427c10818ebb3ce57ac11eddb1fb2836b56117611eae865",
+      "visible_bbox": [
+        267,
+        80,
+        812,
+        1840
+      ]
+    },
+    {
+      "character": "slavya",
+      "tag": "cs_epi_slavya",
+      "outfit": "winter",
+      "pose": "idle",
+      "emotion": "soft_smile",
+      "path": "sp/slavya/winter/soft_smile.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        264,
+        77,
+        816,
+        1842
+      ],
+      "sha256": "f4d7988718027561c0539cc40e073a5c37532de14142a45124e90746d1217358",
+      "visible_bbox": [
+        266,
+        80,
+        814,
+        1841
+      ]
+    },
+    {
+      "character": "slavya",
+      "tag": "cs_epi_slavya",
+      "outfit": "winter",
+      "pose": "idle",
+      "emotion": "thoughtful",
+      "path": "sp/slavya/winter/thoughtful.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        264,
+        77,
+        816,
+        1842
+      ],
+      "sha256": "57c6c350e81e1b081aa6c0d291b775efe5098ba42625ba8a8a8d44caa12adf34",
+      "visible_bbox": [
+        267,
+        80,
+        813,
+        1842
+      ]
+    },
+    {
+      "character": "slavya",
+      "tag": "cs_epi_slavya",
+      "outfit": "winter",
+      "pose": "idle",
+      "emotion": "sad",
+      "path": "sp/slavya/winter/sad.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        264,
+        77,
+        816,
+        1842
+      ],
+      "sha256": "f3d62f8a024542e785388bb17a4688408171c27017319a14400cf4720ed5ab41",
+      "visible_bbox": [
+        265,
+        79,
+        815,
+        1842
+      ]
+    },
+    {
+      "character": "slavya",
+      "tag": "cs_epi_slavya",
+      "outfit": "winter",
+      "pose": "idle",
+      "emotion": "surprised",
+      "path": "sp/slavya/winter/surprised.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        264,
+        77,
+        816,
+        1842
+      ],
+      "sha256": "c27ba41102629293f2012ec1f80b6bfd6e831b72cccde0279bf7c5689255a81a",
+      "visible_bbox": [
+        264,
+        78,
+        815,
+        1842
+      ]
+    },
+    {
+      "character": "slavya",
+      "tag": "cs_epi_slavya",
+      "outfit": "winter",
+      "pose": "idle",
+      "emotion": "angry",
+      "path": "sp/slavya/winter/angry.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        264,
+        77,
+        816,
+        1842
+      ],
+      "sha256": "79e45e3d00c498531c5ff484c40827c60212cac22f6ff73b5d7c9bab170a07b5",
+      "visible_bbox": [
+        264,
+        77,
+        816,
+        1842
+      ]
+    },
+    {
+      "character": "slavya",
+      "tag": "cs_epi_slavya",
+      "outfit": "indoor",
+      "pose": "idle",
+      "emotion": "neutral",
+      "path": "sp/slavya/indoor/neutral.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        265,
+        77,
+        817,
+        1841
+      ],
+      "sha256": "0f7167f42c73c67d1f27ca82b3afa93146c4a72a183f162e81a212eda5f092c6",
+      "visible_bbox": [
+        267,
+        80,
+        813,
+        1839
+      ]
+    },
+    {
+      "character": "slavya",
+      "tag": "cs_epi_slavya",
+      "outfit": "indoor",
+      "pose": "idle",
+      "emotion": "soft_smile",
+      "path": "sp/slavya/indoor/soft_smile.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        265,
+        77,
+        817,
+        1841
+      ],
+      "sha256": "40bed8e0415106a063b96b9f1fe015b5b59d37ae5c1a0edac7e37e5d3c362e98",
+      "visible_bbox": [
+        265,
+        77,
+        816,
+        1839
+      ]
+    },
+    {
+      "character": "slavya",
+      "tag": "cs_epi_slavya",
+      "outfit": "indoor",
+      "pose": "idle",
+      "emotion": "thoughtful",
+      "path": "sp/slavya/indoor/thoughtful.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        265,
+        77,
+        817,
+        1841
+      ],
+      "sha256": "423442031a70da83ce5597ad6474ce24d13f7e47a210d3172da67070854960f5",
+      "visible_bbox": [
+        267,
+        80,
+        814,
+        1839
+      ]
+    },
+    {
+      "character": "slavya",
+      "tag": "cs_epi_slavya",
+      "outfit": "indoor",
+      "pose": "idle",
+      "emotion": "sad",
+      "path": "sp/slavya/indoor/sad.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        265,
+        77,
+        817,
+        1841
+      ],
+      "sha256": "40d597aaa1c79ae070ac6b0100c9bb9084108020ff7d7f94b071b644d243bb79",
+      "visible_bbox": [
+        268,
+        80,
+        814,
+        1840
+      ]
+    },
+    {
+      "character": "slavya",
+      "tag": "cs_epi_slavya",
+      "outfit": "indoor",
+      "pose": "idle",
+      "emotion": "surprised",
+      "path": "sp/slavya/indoor/surprised.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        265,
+        77,
+        817,
+        1841
+      ],
+      "sha256": "45f0924aa1962ceb152a3b2999f7895e43021655daacae96c78583af17a3ee38",
+      "visible_bbox": [
+        266,
+        78,
+        817,
+        1840
+      ]
+    },
+    {
+      "character": "slavya",
+      "tag": "cs_epi_slavya",
+      "outfit": "indoor",
+      "pose": "idle",
+      "emotion": "angry",
+      "path": "sp/slavya/indoor/angry.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        265,
+        77,
+        817,
+        1841
+      ],
+      "sha256": "3f345d762f58d28142b08c8f57fbbb08cc98a955db9268087fc398477fc6a96a",
+      "visible_bbox": [
+        266,
+        77,
+        817,
+        1841
+      ]
+    },
+    {
+      "character": "alisa",
+      "tag": "cs_epi_alisa",
+      "outfit": "winter",
+      "pose": "idle",
+      "emotion": "neutral",
+      "path": "sp/alisa/winter/neutral.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        308,
+        76,
+        774,
+        1842
+      ],
+      "sha256": "debfc69b38632cdb72b5180a7885636bb9cf09e6e142567c4ed75666978db90c",
+      "visible_bbox": [
+        308,
+        80,
+        772,
+        1840
+      ]
+    },
+    {
+      "character": "alisa",
+      "tag": "cs_epi_alisa",
+      "outfit": "winter",
+      "pose": "idle",
+      "emotion": "soft_smile",
+      "path": "sp/alisa/winter/soft_smile.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        308,
+        76,
+        774,
+        1842
+      ],
+      "sha256": "45a057322dceccbc78393d0420ee92965aeca7e1dd304d38b75bf0ce1bdc9aed",
+      "visible_bbox": [
+        308,
+        78,
+        773,
+        1842
+      ]
+    },
+    {
+      "character": "alisa",
+      "tag": "cs_epi_alisa",
+      "outfit": "winter",
+      "pose": "idle",
+      "emotion": "thoughtful",
+      "path": "sp/alisa/winter/thoughtful.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        308,
+        76,
+        774,
+        1842
+      ],
+      "sha256": "abadc22ecddd24cb3e54f366edf1370b6d82af2f3bdb89da47939a64fd42f6bd",
+      "visible_bbox": [
+        308,
+        78,
+        774,
+        1841
+      ]
+    },
+    {
+      "character": "alisa",
+      "tag": "cs_epi_alisa",
+      "outfit": "winter",
+      "pose": "idle",
+      "emotion": "sad",
+      "path": "sp/alisa/winter/sad.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        308,
+        76,
+        774,
+        1842
+      ],
+      "sha256": "e09e7ecfe52b89c39705bfcbc176a578a40642c8fac6c9cb217c7773c150244d",
+      "visible_bbox": [
+        308,
+        76,
+        774,
+        1840
+      ]
+    },
+    {
+      "character": "alisa",
+      "tag": "cs_epi_alisa",
+      "outfit": "winter",
+      "pose": "idle",
+      "emotion": "surprised",
+      "path": "sp/alisa/winter/surprised.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        308,
+        76,
+        774,
+        1842
+      ],
+      "sha256": "d645471d67cc1d13f153d2f3e6002536cb40c41040b9e4bed2962a477aa79ecc",
+      "visible_bbox": [
+        308,
+        79,
+        773,
+        1841
+      ]
+    },
+    {
+      "character": "alisa",
+      "tag": "cs_epi_alisa",
+      "outfit": "winter",
+      "pose": "idle",
+      "emotion": "angry",
+      "path": "sp/alisa/winter/angry.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        308,
+        76,
+        774,
+        1842
+      ],
+      "sha256": "3077aa13c0fd16697fada1e18abbab6bedba9955749983e6f7df95578bed85e4",
+      "visible_bbox": [
+        308,
+        79,
+        773,
+        1842
+      ]
+    },
+    {
+      "character": "alisa",
+      "tag": "cs_epi_alisa",
+      "outfit": "indoor",
+      "pose": "idle",
+      "emotion": "neutral",
+      "path": "sp/alisa/indoor/neutral.png",
+      "dimensions": [
+        941,
+        1672
+      ],
+      "bbox": [
+        258,
+        57,
+        689,
+        1607
+      ],
+      "sha256": "45e56cc2f96abcec040de50b26a52c948301564d0aa31e7a382cd0775eb5ddef",
+      "visible_bbox": [
+        259,
+        65,
+        681,
+        1606
+      ]
+    },
+    {
+      "character": "alisa",
+      "tag": "cs_epi_alisa",
+      "outfit": "indoor",
+      "pose": "idle",
+      "emotion": "soft_smile",
+      "path": "sp/alisa/indoor/soft_smile.png",
+      "dimensions": [
+        941,
+        1672
+      ],
+      "bbox": [
+        258,
+        57,
+        689,
+        1607
+      ],
+      "sha256": "e41431f7a76f0a084f1c9e4122e39cb449c689e43882ef9e75a8df3487b5f073",
+      "visible_bbox": [
+        259,
+        65,
+        678,
+        1605
+      ]
+    },
+    {
+      "character": "alisa",
+      "tag": "cs_epi_alisa",
+      "outfit": "indoor",
+      "pose": "idle",
+      "emotion": "thoughtful",
+      "path": "sp/alisa/indoor/thoughtful.png",
+      "dimensions": [
+        941,
+        1672
+      ],
+      "bbox": [
+        258,
+        57,
+        689,
+        1607
+      ],
+      "sha256": "32625894db3e1753090d121bc295d032b656407cebdbdc441cfba4ff913b7563",
+      "visible_bbox": [
+        260,
+        62,
+        689,
+        1607
+      ]
+    },
+    {
+      "character": "alisa",
+      "tag": "cs_epi_alisa",
+      "outfit": "indoor",
+      "pose": "idle",
+      "emotion": "sad",
+      "path": "sp/alisa/indoor/sad.png",
+      "dimensions": [
+        941,
+        1672
+      ],
+      "bbox": [
+        258,
+        57,
+        689,
+        1607
+      ],
+      "sha256": "281aaa3eb48673bfc0dd4b50ed3f66ceea9770356d93d997fe423c0f693eb1b1",
+      "visible_bbox": [
+        261,
+        58,
+        684,
+        1607
+      ]
+    },
+    {
+      "character": "alisa",
+      "tag": "cs_epi_alisa",
+      "outfit": "indoor",
+      "pose": "idle",
+      "emotion": "surprised",
+      "path": "sp/alisa/indoor/surprised.png",
+      "dimensions": [
+        941,
+        1672
+      ],
+      "bbox": [
+        258,
+        57,
+        689,
+        1607
+      ],
+      "sha256": "1d6400a526632dfebcf07c1e98e98161ebce2269aa7e6240d26374c1997e52c8",
+      "visible_bbox": [
+        258,
+        57,
+        684,
+        1605
+      ]
+    },
+    {
+      "character": "alisa",
+      "tag": "cs_epi_alisa",
+      "outfit": "indoor",
+      "pose": "idle",
+      "emotion": "angry",
+      "path": "sp/alisa/indoor/angry.png",
+      "dimensions": [
+        941,
+        1672
+      ],
+      "bbox": [
+        258,
+        57,
+        689,
+        1607
+      ],
+      "sha256": "e51afe9cfe16d54680d784576e14953067204abbcac3c1c015f945b756c89d44",
+      "visible_bbox": [
+        260,
+        64,
+        678,
+        1606
+      ]
+    },
+    {
+      "character": "miku",
+      "tag": "cs_epi_miku",
+      "outfit": "winter",
+      "pose": "idle",
+      "emotion": "neutral",
+      "path": "sp/miku/winter/neutral.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        162,
+        77,
+        919,
+        1842
+      ],
+      "sha256": "dbe2b894fd4efc8812870a29b65221caf10d8c6049e13cc49cb46348c18f4c80",
+      "visible_bbox": [
+        165,
+        80,
+        916,
+        1840
+      ]
+    },
+    {
+      "character": "miku",
+      "tag": "cs_epi_miku",
+      "outfit": "winter",
+      "pose": "idle",
+      "emotion": "soft_smile",
+      "path": "sp/miku/winter/soft_smile.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        162,
+        77,
+        919,
+        1842
+      ],
+      "sha256": "6b5be35b29e94827d8cbcf3c266412b953c7ea708668739c9fe0801d506da89f",
+      "visible_bbox": [
+        163,
+        79,
+        919,
+        1841
+      ]
+    },
+    {
+      "character": "miku",
+      "tag": "cs_epi_miku",
+      "outfit": "winter",
+      "pose": "idle",
+      "emotion": "thoughtful",
+      "path": "sp/miku/winter/thoughtful.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        162,
+        77,
+        919,
+        1842
+      ],
+      "sha256": "f813306d7f013df4658b79b000d78f032268ac1995188f757efce374ab025bf9",
+      "visible_bbox": [
+        162,
+        79,
+        919,
+        1842
+      ]
+    },
+    {
+      "character": "miku",
+      "tag": "cs_epi_miku",
+      "outfit": "winter",
+      "pose": "idle",
+      "emotion": "sad",
+      "path": "sp/miku/winter/sad.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        162,
+        77,
+        919,
+        1842
+      ],
+      "sha256": "37f2ccf3d5ebf243247d65dd51a2684c7dc9bd601da3e7868e11da49a13adf5f",
+      "visible_bbox": [
+        164,
+        79,
+        918,
+        1842
+      ]
+    },
+    {
+      "character": "miku",
+      "tag": "cs_epi_miku",
+      "outfit": "winter",
+      "pose": "idle",
+      "emotion": "surprised",
+      "path": "sp/miku/winter/surprised.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        162,
+        77,
+        919,
+        1842
+      ],
+      "sha256": "eaacaf765e3cea4861a2cda1c26a99272139744f62a5d61d659d0d3e3b7eb67f",
+      "visible_bbox": [
+        163,
+        77,
+        918,
+        1841
+      ]
+    },
+    {
+      "character": "miku",
+      "tag": "cs_epi_miku",
+      "outfit": "winter",
+      "pose": "idle",
+      "emotion": "angry",
+      "path": "sp/miku/winter/angry.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        162,
+        77,
+        919,
+        1842
+      ],
+      "sha256": "6e9ab7d3ae967ecc8691c5a7c083a63356a7d5911f82896fbacf8d67a4d6289a",
+      "visible_bbox": [
+        163,
+        77,
+        919,
+        1842
+      ]
+    },
+    {
+      "character": "miku",
+      "tag": "cs_epi_miku",
+      "outfit": "indoor",
+      "pose": "idle",
+      "emotion": "neutral",
+      "path": "sp/miku/indoor/neutral.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        161,
+        76,
+        922,
+        1843
+      ],
+      "sha256": "038ed5668181bcfbbb5ade103c7dbb3990aa3564ecde2c28068cbd41280d10a8",
+      "visible_bbox": [
+        163,
+        79,
+        918,
+        1840
+      ]
+    },
+    {
+      "character": "miku",
+      "tag": "cs_epi_miku",
+      "outfit": "indoor",
+      "pose": "idle",
+      "emotion": "soft_smile",
+      "path": "sp/miku/indoor/soft_smile.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        161,
+        76,
+        922,
+        1843
+      ],
+      "sha256": "3ed83019b2f55f3624df0ec8b89fa865db23efb31f7960ee180c8628d5ecc4c9",
+      "visible_bbox": [
+        161,
+        77,
+        921,
+        1841
+      ]
+    },
+    {
+      "character": "miku",
+      "tag": "cs_epi_miku",
+      "outfit": "indoor",
+      "pose": "idle",
+      "emotion": "thoughtful",
+      "path": "sp/miku/indoor/thoughtful.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        161,
+        76,
+        922,
+        1843
+      ],
+      "sha256": "f6361c51260e21979bba7f9204521f8fbe70a07f40855110181838f59d8226ed",
+      "visible_bbox": [
+        162,
+        79,
+        920,
+        1841
+      ]
+    },
+    {
+      "character": "miku",
+      "tag": "cs_epi_miku",
+      "outfit": "indoor",
+      "pose": "idle",
+      "emotion": "sad",
+      "path": "sp/miku/indoor/sad.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        161,
+        76,
+        922,
+        1843
+      ],
+      "sha256": "bf12a9ae79095820f0b1cac146c8bde46025ef280c522f53cb0930776f9b72af",
+      "visible_bbox": [
+        161,
+        79,
+        920,
+        1842
+      ]
+    },
+    {
+      "character": "miku",
+      "tag": "cs_epi_miku",
+      "outfit": "indoor",
+      "pose": "idle",
+      "emotion": "surprised",
+      "path": "sp/miku/indoor/surprised.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        161,
+        76,
+        922,
+        1843
+      ],
+      "sha256": "c5f1957d32cf221f47ec6bb68047b7a65fc5d4e53997bc011c14abd2c0b8f71e",
+      "visible_bbox": [
+        161,
+        76,
+        922,
+        1843
+      ]
+    },
+    {
+      "character": "miku",
+      "tag": "cs_epi_miku",
+      "outfit": "indoor",
+      "pose": "idle",
+      "emotion": "angry",
+      "path": "sp/miku/indoor/angry.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        161,
+        76,
+        922,
+        1843
+      ],
+      "sha256": "76f72adf72e91c907bd4fe983a849e36ab51c61c6dfe73eefd15436ec98f9d2b",
+      "visible_bbox": [
+        161,
+        77,
+        920,
+        1842
+      ]
+    },
+    {
+      "character": "zhenya",
+      "tag": "cs_epi_zhenya",
+      "outfit": "winter",
+      "pose": "idle",
+      "emotion": "neutral",
+      "path": "sp/zhenya/winter/neutral.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        292,
+        75,
+        744,
+        1846
+      ],
+      "sha256": "d75f9efb8e4106126680ed3c33811c2b1bd154e7aaae61242b85fe94f31caef4",
+      "visible_bbox": [
+        293,
+        78,
+        741,
+        1846
+      ]
+    },
+    {
+      "character": "zhenya",
+      "tag": "cs_epi_zhenya",
+      "outfit": "winter",
+      "pose": "idle",
+      "emotion": "soft_smile",
+      "path": "sp/zhenya/winter/soft_smile.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        292,
+        75,
+        744,
+        1846
+      ],
+      "sha256": "d055ec2739ca4edc17791d3679742c3209b083db2d840bf2f1e8d569fbad6528",
+      "visible_bbox": [
+        293,
+        78,
+        742,
+        1844
+      ]
+    },
+    {
+      "character": "zhenya",
+      "tag": "cs_epi_zhenya",
+      "outfit": "winter",
+      "pose": "idle",
+      "emotion": "thoughtful",
+      "path": "sp/zhenya/winter/thoughtful.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        292,
+        75,
+        744,
+        1846
+      ],
+      "sha256": "5ab768cb13fc37679aab9e6ad60868394cbb8cb4d368101f42c49ab28983fc52",
+      "visible_bbox": [
+        292,
+        81,
+        741,
+        1845
+      ]
+    },
+    {
+      "character": "zhenya",
+      "tag": "cs_epi_zhenya",
+      "outfit": "winter",
+      "pose": "idle",
+      "emotion": "sad",
+      "path": "sp/zhenya/winter/sad.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        292,
+        75,
+        744,
+        1846
+      ],
+      "sha256": "e28ef376c645e181607dd0a804d6e3ccac4e12ef94f7b90d0d0ccbab1b0ae4c0",
+      "visible_bbox": [
+        292,
+        77,
+        744,
+        1845
+      ]
+    },
+    {
+      "character": "zhenya",
+      "tag": "cs_epi_zhenya",
+      "outfit": "winter",
+      "pose": "idle",
+      "emotion": "surprised",
+      "path": "sp/zhenya/winter/surprised.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        292,
+        75,
+        744,
+        1846
+      ],
+      "sha256": "9f9e2f30914bf68ca5f313cff7a402b4ff9a7bd91ff540ffb1ac2f9fdc3c9fa2",
+      "visible_bbox": [
+        292,
+        76,
+        743,
+        1846
+      ]
+    },
+    {
+      "character": "zhenya",
+      "tag": "cs_epi_zhenya",
+      "outfit": "winter",
+      "pose": "idle",
+      "emotion": "angry",
+      "path": "sp/zhenya/winter/angry.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        292,
+        75,
+        744,
+        1846
+      ],
+      "sha256": "9dc8837766966e9ff9730e63055b98a5b0158c13314e7905510d7054ce7e55b6",
+      "visible_bbox": [
+        292,
+        75,
+        743,
+        1846
+      ]
+    },
+    {
+      "character": "zhenya",
+      "tag": "cs_epi_zhenya",
+      "outfit": "indoor",
+      "pose": "idle",
+      "emotion": "neutral",
+      "path": "sp/zhenya/indoor/neutral.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        290,
+        73,
+        703,
+        1842
+      ],
+      "sha256": "b87a1c17a715ffe5357b4e44c9c566739acf979a1bd17d1ed80408c2685ef18e",
+      "visible_bbox": [
+        293,
+        75,
+        701,
+        1840
+      ]
+    },
+    {
+      "character": "zhenya",
+      "tag": "cs_epi_zhenya",
+      "outfit": "indoor",
+      "pose": "idle",
+      "emotion": "soft_smile",
+      "path": "sp/zhenya/indoor/soft_smile.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        290,
+        73,
+        703,
+        1842
+      ],
+      "sha256": "19137f01f64afdcc5135c5b913741fdbfb65942a3570c7df26fb165ac0506f7b",
+      "visible_bbox": [
+        291,
+        73,
+        702,
+        1839
+      ]
+    },
+    {
+      "character": "zhenya",
+      "tag": "cs_epi_zhenya",
+      "outfit": "indoor",
+      "pose": "idle",
+      "emotion": "thoughtful",
+      "path": "sp/zhenya/indoor/thoughtful.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        290,
+        73,
+        703,
+        1842
+      ],
+      "sha256": "d60ba3ee583ff9d44717854b8ee8506290c7d62d58b94a77185df54abe978cbf",
+      "visible_bbox": [
+        290,
+        73,
+        703,
+        1839
+      ]
+    },
+    {
+      "character": "zhenya",
+      "tag": "cs_epi_zhenya",
+      "outfit": "indoor",
+      "pose": "idle",
+      "emotion": "sad",
+      "path": "sp/zhenya/indoor/sad.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        290,
+        73,
+        703,
+        1842
+      ],
+      "sha256": "f9d659f97eeebf1ae138acde246c21b5b1fe43e2696398315c62aa9b0c2ba8d4",
+      "visible_bbox": [
+        291,
+        73,
+        703,
+        1842
+      ]
+    },
+    {
+      "character": "zhenya",
+      "tag": "cs_epi_zhenya",
+      "outfit": "indoor",
+      "pose": "idle",
+      "emotion": "surprised",
+      "path": "sp/zhenya/indoor/surprised.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        290,
+        73,
+        703,
+        1842
+      ],
+      "sha256": "64e3308dbf94cf7df0b6e96e4568ac5c8038ad9ccbd319c26853b6a78155f2ba",
+      "visible_bbox": [
+        290,
+        73,
+        702,
+        1838
+      ]
+    },
+    {
+      "character": "zhenya",
+      "tag": "cs_epi_zhenya",
+      "outfit": "indoor",
+      "pose": "idle",
+      "emotion": "angry",
+      "path": "sp/zhenya/indoor/angry.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        290,
+        73,
+        703,
+        1842
+      ],
+      "sha256": "2c27cd56f8d9eaeef448c843628386e80a4e354a0c260f2a9395e9c30edc0d8d",
+      "visible_bbox": [
+        291,
+        73,
+        703,
+        1840
+      ]
+    },
+    {
+      "character": "tikhonova",
+      "tag": "cs_epi_lena_tikhonova",
+      "outfit": "winter",
+      "pose": "idle",
+      "emotion": "neutral",
+      "path": "sp/tikhonova/winter/neutral.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        318,
+        74,
+        759,
+        1841
+      ],
+      "sha256": "bfdbc46270aae96b9fdd15f941ac8b0146d9b3d6ada3c76c571599cc924c3c6f",
+      "visible_bbox": [
+        323,
+        79,
+        757,
+        1840
+      ]
+    },
+    {
+      "character": "tikhonova",
+      "tag": "cs_epi_lena_tikhonova",
+      "outfit": "winter",
+      "pose": "idle",
+      "emotion": "soft_smile",
+      "path": "sp/tikhonova/winter/soft_smile.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        318,
+        74,
+        759,
+        1841
+      ],
+      "sha256": "54c384c22aa7bf611e3cb4982a8890f0ca000b636f71d1801f350e7b9ea64f3c",
+      "visible_bbox": [
+        318,
+        74,
+        758,
+        1840
+      ]
+    },
+    {
+      "character": "tikhonova",
+      "tag": "cs_epi_lena_tikhonova",
+      "outfit": "winter",
+      "pose": "idle",
+      "emotion": "thoughtful",
+      "path": "sp/tikhonova/winter/thoughtful.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        318,
+        74,
+        759,
+        1841
+      ],
+      "sha256": "76779792d834b34d753789a2b9ff2a78231a42acf25932dafa767536cdcf77b0",
+      "visible_bbox": [
+        320,
+        76,
+        758,
+        1841
+      ]
+    },
+    {
+      "character": "tikhonova",
+      "tag": "cs_epi_lena_tikhonova",
+      "outfit": "winter",
+      "pose": "idle",
+      "emotion": "sad",
+      "path": "sp/tikhonova/winter/sad.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        318,
+        74,
+        759,
+        1841
+      ],
+      "sha256": "887c09259ca1ddd563fbe757536213834cb198651a847be2f4f8331cc68d0264",
+      "visible_bbox": [
+        319,
+        75,
+        758,
+        1841
+      ]
+    },
+    {
+      "character": "tikhonova",
+      "tag": "cs_epi_lena_tikhonova",
+      "outfit": "winter",
+      "pose": "idle",
+      "emotion": "surprised",
+      "path": "sp/tikhonova/winter/surprised.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        318,
+        74,
+        759,
+        1841
+      ],
+      "sha256": "cb572ca21ddadc7ae6c7385fa1dc35c1ef8fd084faa3f742d986c3a0e26f87d5",
+      "visible_bbox": [
+        320,
+        76,
+        758,
+        1840
+      ]
+    },
+    {
+      "character": "tikhonova",
+      "tag": "cs_epi_lena_tikhonova",
+      "outfit": "winter",
+      "pose": "idle",
+      "emotion": "angry",
+      "path": "sp/tikhonova/winter/angry.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        318,
+        74,
+        759,
+        1841
+      ],
+      "sha256": "32349d4d50cc410693bfc988abce5f023d5a1a47e7111f3d0f9b8045c1b5acf2",
+      "visible_bbox": [
+        320,
+        76,
+        759,
+        1840
+      ]
+    },
+    {
+      "character": "tikhonova",
+      "tag": "cs_epi_lena_tikhonova",
+      "outfit": "indoor",
+      "pose": "idle",
+      "emotion": "neutral",
+      "path": "sp/tikhonova/indoor/neutral.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        318,
+        73,
+        745,
+        1839
+      ],
+      "sha256": "bd80e155f1acf7684290a6a9395ffec18ff9f59d765ef1bb2b5a5bf9e991c9ba",
+      "visible_bbox": [
+        319,
+        77,
+        743,
+        1837
+      ]
+    },
+    {
+      "character": "tikhonova",
+      "tag": "cs_epi_lena_tikhonova",
+      "outfit": "indoor",
+      "pose": "idle",
+      "emotion": "soft_smile",
+      "path": "sp/tikhonova/indoor/soft_smile.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        318,
+        73,
+        745,
+        1839
+      ],
+      "sha256": "c8b3906cc50d5241530e3100036a3c26d7bc8f420207753c0e285e53ac73bd07",
+      "visible_bbox": [
+        320,
+        73,
+        745,
+        1838
+      ]
+    },
+    {
+      "character": "tikhonova",
+      "tag": "cs_epi_lena_tikhonova",
+      "outfit": "indoor",
+      "pose": "idle",
+      "emotion": "thoughtful",
+      "path": "sp/tikhonova/indoor/thoughtful.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        318,
+        73,
+        745,
+        1839
+      ],
+      "sha256": "73d91e78726b70c0feb239511afc40258ce66ce8178a75441215f52742d07e4b",
+      "visible_bbox": [
+        319,
+        75,
+        744,
+        1838
+      ]
+    },
+    {
+      "character": "tikhonova",
+      "tag": "cs_epi_lena_tikhonova",
+      "outfit": "indoor",
+      "pose": "idle",
+      "emotion": "sad",
+      "path": "sp/tikhonova/indoor/sad.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        318,
+        73,
+        745,
+        1839
+      ],
+      "sha256": "2f7d649d0d233946337bc7f3741dc97ee90e1eaada84f0f249d31cbe50436cc4",
+      "visible_bbox": [
+        318,
+        74,
+        745,
+        1839
+      ]
+    },
+    {
+      "character": "tikhonova",
+      "tag": "cs_epi_lena_tikhonova",
+      "outfit": "indoor",
+      "pose": "idle",
+      "emotion": "surprised",
+      "path": "sp/tikhonova/indoor/surprised.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        318,
+        73,
+        745,
+        1839
+      ],
+      "sha256": "26217e8e5903438c74af15b8c2a708a86164d2d98ea6828dc6d981e59d90c6c4",
+      "visible_bbox": [
+        319,
+        75,
+        744,
+        1838
+      ]
+    },
+    {
+      "character": "tikhonova",
+      "tag": "cs_epi_lena_tikhonova",
+      "outfit": "indoor",
+      "pose": "idle",
+      "emotion": "angry",
+      "path": "sp/tikhonova/indoor/angry.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        318,
+        73,
+        745,
+        1839
+      ],
+      "sha256": "fd9461baa01511df50e3206f32a371a21c8aca28378ec6c5216f679e89b68994",
+      "visible_bbox": [
+        318,
+        75,
+        745,
+        1838
+      ]
+    },
+    {
+      "character": "olga",
+      "tag": "cs_epi_olga",
+      "outfit": "winter",
+      "pose": "idle",
+      "emotion": "neutral",
+      "path": "sp/olga/winter/neutral.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        264,
+        89,
+        772,
+        1846
+      ],
+      "sha256": "efdcddc38c85d96f0f72e2ca8a17bf5fe3194bfa94ed9fe8cb724cb5454d5e39",
+      "visible_bbox": [
+        267,
+        92,
+        769,
+        1844
+      ]
+    },
+    {
+      "character": "olga",
+      "tag": "cs_epi_olga",
+      "outfit": "winter",
+      "pose": "idle",
+      "emotion": "soft_smile",
+      "path": "sp/olga/winter/soft_smile.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        264,
+        89,
+        772,
+        1846
+      ],
+      "sha256": "4ea25ff1b6235823e59a5cb0ff0e5da1fb206dc947ee743fc0116c02d4863d1c",
+      "visible_bbox": [
+        264,
+        91,
+        772,
+        1844
+      ]
+    },
+    {
+      "character": "olga",
+      "tag": "cs_epi_olga",
+      "outfit": "winter",
+      "pose": "idle",
+      "emotion": "thoughtful",
+      "path": "sp/olga/winter/thoughtful.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        264,
+        89,
+        772,
+        1846
+      ],
+      "sha256": "3ba7a579f77092e607379cdf0b0648c7561f4878e7526b79809a42c3b0cdee9f",
+      "visible_bbox": [
+        265,
+        92,
+        771,
+        1844
+      ]
+    },
+    {
+      "character": "olga",
+      "tag": "cs_epi_olga",
+      "outfit": "winter",
+      "pose": "idle",
+      "emotion": "sad",
+      "path": "sp/olga/winter/sad.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        264,
+        89,
+        772,
+        1846
+      ],
+      "sha256": "7a411da9a54f7ed57c681f1639b388df77fbb489b275da75adf3998f723b6097",
+      "visible_bbox": [
+        267,
+        91,
+        771,
+        1846
+      ]
+    },
+    {
+      "character": "olga",
+      "tag": "cs_epi_olga",
+      "outfit": "winter",
+      "pose": "idle",
+      "emotion": "surprised",
+      "path": "sp/olga/winter/surprised.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        264,
+        89,
+        772,
+        1846
+      ],
+      "sha256": "643535b82c467444c9d831ee6bca70ffe2c2b5f858918c3faf39b15460df7691",
+      "visible_bbox": [
+        265,
+        89,
+        771,
+        1843
+      ]
+    },
+    {
+      "character": "olga",
+      "tag": "cs_epi_olga",
+      "outfit": "winter",
+      "pose": "idle",
+      "emotion": "angry",
+      "path": "sp/olga/winter/angry.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        264,
+        89,
+        772,
+        1846
+      ],
+      "sha256": "ec0204fcbbdb17bb13d8243e135f4ab4f4f693b8411cbb18cb5a45552e0b3ea9",
+      "visible_bbox": [
+        265,
+        89,
+        771,
+        1844
+      ]
+    },
+    {
+      "character": "olga",
+      "tag": "cs_epi_olga",
+      "outfit": "indoor",
+      "pose": "idle",
+      "emotion": "neutral",
+      "path": "sp/olga/indoor/neutral.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        266,
+        85,
+        763,
+        1841
+      ],
+      "sha256": "e8ef24dc3a5546273de4bd625f5f4b9d045ba25700b5025ddba1ea076168501b",
+      "visible_bbox": [
+        268,
+        88,
+        762,
+        1841
+      ]
+    },
+    {
+      "character": "olga",
+      "tag": "cs_epi_olga",
+      "outfit": "indoor",
+      "pose": "idle",
+      "emotion": "soft_smile",
+      "path": "sp/olga/indoor/soft_smile.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        266,
+        85,
+        763,
+        1841
+      ],
+      "sha256": "2bb8521532a1527a960b38350da9a33b0882ba8b5d808782376cf1d8dcd68677",
+      "visible_bbox": [
+        268,
+        85,
+        763,
+        1841
+      ]
+    },
+    {
+      "character": "olga",
+      "tag": "cs_epi_olga",
+      "outfit": "indoor",
+      "pose": "idle",
+      "emotion": "thoughtful",
+      "path": "sp/olga/indoor/thoughtful.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        266,
+        85,
+        763,
+        1841
+      ],
+      "sha256": "ce6f19a3c7f1d40ea45d39f6dcafec97739f088f12de6d522fbcc0969dd44e2f",
+      "visible_bbox": [
+        268,
+        86,
+        763,
+        1840
+      ]
+    },
+    {
+      "character": "olga",
+      "tag": "cs_epi_olga",
+      "outfit": "indoor",
+      "pose": "idle",
+      "emotion": "sad",
+      "path": "sp/olga/indoor/sad.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        266,
+        85,
+        763,
+        1841
+      ],
+      "sha256": "7702b1a932754744f8cf1d37e7afcf76a1a0e4ced6342da7b0579156bfc88a41",
+      "visible_bbox": [
+        266,
+        86,
+        763,
+        1838
+      ]
+    },
+    {
+      "character": "olga",
+      "tag": "cs_epi_olga",
+      "outfit": "indoor",
+      "pose": "idle",
+      "emotion": "surprised",
+      "path": "sp/olga/indoor/surprised.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        266,
+        85,
+        763,
+        1841
+      ],
+      "sha256": "570b5bf6753dd5a76bc7e5dfc88018194a845ee0b31413be9448f399806480f3",
+      "visible_bbox": [
+        267,
+        85,
+        763,
+        1841
+      ]
+    },
+    {
+      "character": "olga",
+      "tag": "cs_epi_olga",
+      "outfit": "indoor",
+      "pose": "idle",
+      "emotion": "angry",
+      "path": "sp/olga/indoor/angry.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        266,
+        85,
+        763,
+        1841
+      ],
+      "sha256": "68c142d97802bcdb98154c21db63cdf629ced51589a36466de6fe63e1e513e51",
+      "visible_bbox": [
+        268,
+        86,
+        763,
+        1841
+      ]
+    },
+    {
+      "character": "viola",
+      "tag": "cs_epi_viola",
+      "outfit": "winter",
+      "pose": "idle",
+      "emotion": "neutral",
+      "path": "sp/viola/winter/neutral.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        313,
+        70,
+        770,
+        1852
+      ],
+      "sha256": "d09fe4ecd5f472234bd7755b23f13fa2239db2dcc38643f6906d7a35151df448",
+      "visible_bbox": [
+        314,
+        75,
+        768,
+        1851
+      ]
+    },
+    {
+      "character": "viola",
+      "tag": "cs_epi_viola",
+      "outfit": "winter",
+      "pose": "idle",
+      "emotion": "soft_smile",
+      "path": "sp/viola/winter/soft_smile.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        313,
+        70,
+        770,
+        1852
+      ],
+      "sha256": "1254d29b4dc84504d79a4a9f8a0265b5b6ff4d58bd0a8ed8f7a59ad1871fc5d5",
+      "visible_bbox": [
+        314,
+        74,
+        768,
+        1849
+      ]
+    },
+    {
+      "character": "viola",
+      "tag": "cs_epi_viola",
+      "outfit": "winter",
+      "pose": "idle",
+      "emotion": "thoughtful",
+      "path": "sp/viola/winter/thoughtful.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        313,
+        70,
+        770,
+        1852
+      ],
+      "sha256": "2895c11b0f1c56f1d270a6979543a5a37d0c3f016bf3349fa821db09be2309cc",
+      "visible_bbox": [
+        313,
+        70,
+        770,
+        1852
+      ]
+    },
+    {
+      "character": "viola",
+      "tag": "cs_epi_viola",
+      "outfit": "winter",
+      "pose": "idle",
+      "emotion": "sad",
+      "path": "sp/viola/winter/sad.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        313,
+        70,
+        770,
+        1852
+      ],
+      "sha256": "f9b5e9ebc74c2e08f04b29e95e5491ad39f575d75a9488c846292bca2ed80e32",
+      "visible_bbox": [
+        313,
+        72,
+        769,
+        1850
+      ]
+    },
+    {
+      "character": "viola",
+      "tag": "cs_epi_viola",
+      "outfit": "winter",
+      "pose": "idle",
+      "emotion": "surprised",
+      "path": "sp/viola/winter/surprised.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        313,
+        70,
+        770,
+        1852
+      ],
+      "sha256": "1fdefc54ac2d1358e5dc3122b5c2e787a9c055785866a25d1aa87a3812ca0486",
+      "visible_bbox": [
+        313,
+        73,
+        768,
+        1850
+      ]
+    },
+    {
+      "character": "viola",
+      "tag": "cs_epi_viola",
+      "outfit": "winter",
+      "pose": "idle",
+      "emotion": "angry",
+      "path": "sp/viola/winter/angry.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        313,
+        70,
+        770,
+        1852
+      ],
+      "sha256": "e614cc27c6ee2b9454a9495eb67fd9ba21acbde0afb0ad38e69026b3337cfecf",
+      "visible_bbox": [
+        313,
+        72,
+        769,
+        1850
+      ]
+    },
+    {
+      "character": "viola",
+      "tag": "cs_epi_viola",
+      "outfit": "indoor",
+      "pose": "idle",
+      "emotion": "neutral",
+      "path": "sp/viola/indoor/neutral.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        315,
+        70,
+        768,
+        1847
+      ],
+      "sha256": "c141f52e060f1340c81294f9778ff775282ead2a8b9caa1507eb05a34b6b6a19",
+      "visible_bbox": [
+        317,
+        73,
+        766,
+        1847
+      ]
+    },
+    {
+      "character": "viola",
+      "tag": "cs_epi_viola",
+      "outfit": "indoor",
+      "pose": "idle",
+      "emotion": "soft_smile",
+      "path": "sp/viola/indoor/soft_smile.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        315,
+        70,
+        768,
+        1847
+      ],
+      "sha256": "85422acba680fbbc120e263318fa44c9531250750ad93d43a4a701646ac76611",
+      "visible_bbox": [
+        316,
+        71,
+        768,
+        1846
+      ]
+    },
+    {
+      "character": "viola",
+      "tag": "cs_epi_viola",
+      "outfit": "indoor",
+      "pose": "idle",
+      "emotion": "thoughtful",
+      "path": "sp/viola/indoor/thoughtful.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        315,
+        70,
+        768,
+        1847
+      ],
+      "sha256": "5590d9c3a1847164c62528968bde4821f762efbd0bca30cbef1c901624bd555f",
+      "visible_bbox": [
+        315,
+        70,
+        768,
+        1846
+      ]
+    },
+    {
+      "character": "viola",
+      "tag": "cs_epi_viola",
+      "outfit": "indoor",
+      "pose": "idle",
+      "emotion": "sad",
+      "path": "sp/viola/indoor/sad.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        315,
+        70,
+        768,
+        1847
+      ],
+      "sha256": "ef8dc02a8a5fe65dfd2af54bce2a56d26be7fdd3721e1a0fddb8d1f14996fd3d",
+      "visible_bbox": [
+        315,
+        72,
+        767,
+        1847
+      ]
+    },
+    {
+      "character": "viola",
+      "tag": "cs_epi_viola",
+      "outfit": "indoor",
+      "pose": "idle",
+      "emotion": "surprised",
+      "path": "sp/viola/indoor/surprised.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        315,
+        70,
+        768,
+        1847
+      ],
+      "sha256": "28b92bb2bf1f53d643a1b5c107858bcde0a29f6b25f1d0387455bcc41f31f3e9",
+      "visible_bbox": [
+        316,
+        71,
+        767,
+        1846
+      ]
+    },
+    {
+      "character": "viola",
+      "tag": "cs_epi_viola",
+      "outfit": "indoor",
+      "pose": "idle",
+      "emotion": "angry",
+      "path": "sp/viola/indoor/angry.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        315,
+        70,
+        768,
+        1847
+      ],
+      "sha256": "40ee576b2b6bc94d4935d6ce0a8e3083914ff1e0de4ee3d8b1fd748fa0a57b09",
+      "visible_bbox": [
+        316,
+        70,
+        768,
+        1847
+      ]
+    },
+    {
+      "character": "ulyana",
+      "tag": "cs_epi_ulyana",
+      "outfit": "winter",
+      "pose": "idle",
+      "emotion": "neutral",
+      "path": "sp/ulyana/winter/neutral.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        180,
+        73,
+        890,
+        1838
+      ],
+      "sha256": "2d915886dccb0d9a1e3b902b255f2604bd4e012a28497ce49b9116dd5f33d2bd",
+      "visible_bbox": [
+        183,
+        77,
+        888,
+        1836
+      ]
+    },
+    {
+      "character": "ulyana",
+      "tag": "cs_epi_ulyana",
+      "outfit": "winter",
+      "pose": "idle",
+      "emotion": "soft_smile",
+      "path": "sp/ulyana/winter/soft_smile.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        180,
+        73,
+        890,
+        1838
+      ],
+      "sha256": "94586d7cd865172433d3eb67eb1c1520600c04d84902abe78d721344e17349d2",
+      "visible_bbox": [
+        181,
+        76,
+        889,
+        1835
+      ]
+    },
+    {
+      "character": "ulyana",
+      "tag": "cs_epi_ulyana",
+      "outfit": "winter",
+      "pose": "idle",
+      "emotion": "thoughtful",
+      "path": "sp/ulyana/winter/thoughtful.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        180,
+        73,
+        890,
+        1838
+      ],
+      "sha256": "efc05e4457ddb5ee2b3dd91e96201a3c938758dcde23786eaa9e9d9c964835f3",
+      "visible_bbox": [
+        181,
+        76,
+        890,
+        1834
+      ]
+    },
+    {
+      "character": "ulyana",
+      "tag": "cs_epi_ulyana",
+      "outfit": "winter",
+      "pose": "idle",
+      "emotion": "sad",
+      "path": "sp/ulyana/winter/sad.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        180,
+        73,
+        890,
+        1838
+      ],
+      "sha256": "b43f2066a10d6c6d71ad8c1103553d414b7bf01b270d8efe99828201dac15eb2",
+      "visible_bbox": [
+        181,
+        73,
+        889,
+        1836
+      ]
+    },
+    {
+      "character": "ulyana",
+      "tag": "cs_epi_ulyana",
+      "outfit": "winter",
+      "pose": "idle",
+      "emotion": "surprised",
+      "path": "sp/ulyana/winter/surprised.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        180,
+        73,
+        890,
+        1838
+      ],
+      "sha256": "968a362108f6fe72ff887bb7bc0850f500cfd22dfbdc702c1969ab874976bc93",
+      "visible_bbox": [
+        182,
+        75,
+        888,
+        1836
+      ]
+    },
+    {
+      "character": "ulyana",
+      "tag": "cs_epi_ulyana",
+      "outfit": "winter",
+      "pose": "idle",
+      "emotion": "angry",
+      "path": "sp/ulyana/winter/angry.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        180,
+        73,
+        890,
+        1838
+      ],
+      "sha256": "f502253bec1ee3a87ad57d9db4c01bafe5cc741f8cb9fed0513f57b192cb9d8a",
+      "visible_bbox": [
+        180,
+        75,
+        890,
+        1838
+      ]
+    },
+    {
+      "character": "ulyana",
+      "tag": "cs_epi_ulyana",
+      "outfit": "indoor",
+      "pose": "idle",
+      "emotion": "neutral",
+      "path": "sp/ulyana/indoor/neutral.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        177,
+        178,
+        889,
+        1829
+      ],
+      "sha256": "acbce105b356b0918a62a7f8898776555bca403f5cbf1881601fcc78a04851e3",
+      "visible_bbox": [
+        180,
+        180,
+        888,
+        1828
+      ]
+    },
+    {
+      "character": "ulyana",
+      "tag": "cs_epi_ulyana",
+      "outfit": "indoor",
+      "pose": "idle",
+      "emotion": "soft_smile",
+      "path": "sp/ulyana/indoor/soft_smile.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        177,
+        178,
+        889,
+        1829
+      ],
+      "sha256": "815a65708d5c058d81f4e58f571b2399aeac493a6ffc2b6d935ba3ee747b48a9",
+      "visible_bbox": [
+        177,
+        179,
+        889,
+        1828
+      ]
+    },
+    {
+      "character": "ulyana",
+      "tag": "cs_epi_ulyana",
+      "outfit": "indoor",
+      "pose": "idle",
+      "emotion": "thoughtful",
+      "path": "sp/ulyana/indoor/thoughtful.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        177,
+        178,
+        889,
+        1829
+      ],
+      "sha256": "8d66d973826c09234bc162f2077b9c2d5c0d22487c099da40c752e4c78069b9b",
+      "visible_bbox": [
+        179,
+        178,
+        888,
+        1829
+      ]
+    },
+    {
+      "character": "ulyana",
+      "tag": "cs_epi_ulyana",
+      "outfit": "indoor",
+      "pose": "idle",
+      "emotion": "sad",
+      "path": "sp/ulyana/indoor/sad.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        177,
+        178,
+        889,
+        1829
+      ],
+      "sha256": "751ec43b11e02536f9ad3932fafc0c46cc34a79648faa3265ed2485149c02502",
+      "visible_bbox": [
+        180,
+        179,
+        889,
+        1828
+      ]
+    },
+    {
+      "character": "ulyana",
+      "tag": "cs_epi_ulyana",
+      "outfit": "indoor",
+      "pose": "idle",
+      "emotion": "surprised",
+      "path": "sp/ulyana/indoor/surprised.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        177,
+        178,
+        889,
+        1829
+      ],
+      "sha256": "ed3619db0f9bc0592e2062b7e5304f51ee0c1c5f80629cc72410db8341220589",
+      "visible_bbox": [
+        179,
+        179,
+        889,
+        1828
+      ]
+    },
+    {
+      "character": "ulyana",
+      "tag": "cs_epi_ulyana",
+      "outfit": "indoor",
+      "pose": "idle",
+      "emotion": "angry",
+      "path": "sp/ulyana/indoor/angry.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        177,
+        178,
+        889,
+        1829
+      ],
+      "sha256": "e20a0a61be480dae87295c2a06cd22282a1b95f4e89b555ff2f2d00080578069",
+      "visible_bbox": [
+        180,
+        180,
+        889,
+        1829
+      ]
+    },
+    {
+      "character": "elektronik",
+      "tag": "cs_epi_elektronik",
+      "outfit": "winter",
+      "pose": "idle",
+      "emotion": "neutral",
+      "path": "sp/elektronik/winter/neutral.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        250,
+        79,
+        829,
+        1841
+      ],
+      "sha256": "5740a48de2c891033662f05d2c3f1a074f0be8505a45374dda48bcd2aa294933",
+      "visible_bbox": [
+        252,
+        82,
+        828,
+        1840
+      ]
+    },
+    {
+      "character": "elektronik",
+      "tag": "cs_epi_elektronik",
+      "outfit": "winter",
+      "pose": "idle",
+      "emotion": "soft_smile",
+      "path": "sp/elektronik/winter/soft_smile.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        250,
+        79,
+        829,
+        1841
+      ],
+      "sha256": "a569ee510a251cc1f74b257aac6075b5da6b8daf7415e2b36ee2c30986ed9756",
+      "visible_bbox": [
+        250,
+        79,
+        829,
+        1840
+      ]
+    },
+    {
+      "character": "elektronik",
+      "tag": "cs_epi_elektronik",
+      "outfit": "winter",
+      "pose": "idle",
+      "emotion": "thoughtful",
+      "path": "sp/elektronik/winter/thoughtful.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        250,
+        79,
+        829,
+        1841
+      ],
+      "sha256": "1ef81e2ebf77f700a0cc8435336a0002f73960bac6696e6f54640f0efee165d7",
+      "visible_bbox": [
+        251,
+        81,
+        829,
+        1840
+      ]
+    },
+    {
+      "character": "elektronik",
+      "tag": "cs_epi_elektronik",
+      "outfit": "winter",
+      "pose": "idle",
+      "emotion": "sad",
+      "path": "sp/elektronik/winter/sad.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        250,
+        79,
+        829,
+        1841
+      ],
+      "sha256": "8670d8eab63e19a2e2ae8f25b9a4d20c88a57b5dff6585ad2b66982f8299f780",
+      "visible_bbox": [
+        252,
+        82,
+        828,
+        1840
+      ]
+    },
+    {
+      "character": "elektronik",
+      "tag": "cs_epi_elektronik",
+      "outfit": "winter",
+      "pose": "idle",
+      "emotion": "surprised",
+      "path": "sp/elektronik/winter/surprised.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        250,
+        79,
+        829,
+        1841
+      ],
+      "sha256": "b5940db1e65f589b3a20e7205d01560d627410b14c54e9671c766abeb4fb1096",
+      "visible_bbox": [
+        251,
+        81,
+        829,
+        1841
+      ]
+    },
+    {
+      "character": "elektronik",
+      "tag": "cs_epi_elektronik",
+      "outfit": "winter",
+      "pose": "idle",
+      "emotion": "angry",
+      "path": "sp/elektronik/winter/angry.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        250,
+        79,
+        829,
+        1841
+      ],
+      "sha256": "92e7ba81bf9176574ca3167ee54ca0560ea67b603eca68e4dfc3bdbbbc6e1f6f",
+      "visible_bbox": [
+        251,
+        79,
+        828,
+        1840
+      ]
+    },
+    {
+      "character": "elektronik",
+      "tag": "cs_epi_elektronik",
+      "outfit": "indoor",
+      "pose": "idle",
+      "emotion": "neutral",
+      "path": "sp/elektronik/indoor/neutral.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        249,
+        79,
+        830,
+        1838
+      ],
+      "sha256": "f248abab10b492d28182aff0a015995b68fe80f50385ab2703efc7246853927d",
+      "visible_bbox": [
+        252,
+        81,
+        829,
+        1838
+      ]
+    },
+    {
+      "character": "elektronik",
+      "tag": "cs_epi_elektronik",
+      "outfit": "indoor",
+      "pose": "idle",
+      "emotion": "soft_smile",
+      "path": "sp/elektronik/indoor/soft_smile.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        249,
+        79,
+        830,
+        1838
+      ],
+      "sha256": "3252ad1c6944004b905e2020e29037f0cb6b1413dd0e70ebfa6a2b8d39867738",
+      "visible_bbox": [
+        251,
+        79,
+        830,
+        1838
+      ]
+    },
+    {
+      "character": "elektronik",
+      "tag": "cs_epi_elektronik",
+      "outfit": "indoor",
+      "pose": "idle",
+      "emotion": "thoughtful",
+      "path": "sp/elektronik/indoor/thoughtful.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        249,
+        79,
+        830,
+        1838
+      ],
+      "sha256": "a7e6f0a74994b885c875416aa3e983c842cdeca95e8914eed0232512672b8adc",
+      "visible_bbox": [
+        249,
+        82,
+        830,
+        1837
+      ]
+    },
+    {
+      "character": "elektronik",
+      "tag": "cs_epi_elektronik",
+      "outfit": "indoor",
+      "pose": "idle",
+      "emotion": "sad",
+      "path": "sp/elektronik/indoor/sad.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        249,
+        79,
+        830,
+        1838
+      ],
+      "sha256": "41888ca47d46b41ebf2cf2ff3f4382389741c4bcd5c02d91c45f2815cc9bab68",
+      "visible_bbox": [
+        251,
+        79,
+        829,
+        1837
+      ]
+    },
+    {
+      "character": "elektronik",
+      "tag": "cs_epi_elektronik",
+      "outfit": "indoor",
+      "pose": "idle",
+      "emotion": "surprised",
+      "path": "sp/elektronik/indoor/surprised.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        249,
+        79,
+        830,
+        1838
+      ],
+      "sha256": "70c01f7777ab9d6b806c1fd414dde4f116ac808cdc06b37053995204fae7f360",
+      "visible_bbox": [
+        251,
+        80,
+        829,
+        1837
+      ]
+    },
+    {
+      "character": "elektronik",
+      "tag": "cs_epi_elektronik",
+      "outfit": "indoor",
+      "pose": "idle",
+      "emotion": "angry",
+      "path": "sp/elektronik/indoor/angry.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        249,
+        79,
+        830,
+        1838
+      ],
+      "sha256": "ae050deb42b3b8583f5ea8d74d97aa98424b381baf7091873415f4ee7df203b7",
+      "visible_bbox": [
+        251,
+        80,
+        830,
+        1838
+      ]
+    },
+    {
+      "character": "shurik",
+      "tag": "cs_epi_shurik",
+      "outfit": "winter",
+      "pose": "idle",
+      "emotion": "neutral",
+      "path": "sp/shurik/winter/neutral.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        252,
+        68,
+        829,
+        1852
+      ],
+      "sha256": "6d36731607c26536bd785d609039676493a799507d2ababf390a459f23322f6f",
+      "visible_bbox": [
+        253,
+        70,
+        828,
+        1850
+      ]
+    },
+    {
+      "character": "shurik",
+      "tag": "cs_epi_shurik",
+      "outfit": "winter",
+      "pose": "idle",
+      "emotion": "soft_smile",
+      "path": "sp/shurik/winter/soft_smile.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        252,
+        68,
+        829,
+        1852
+      ],
+      "sha256": "5889d2f6f68332dfaab4f51a171a42fb256eda6f3dea5baf3d079582acaf17ee",
+      "visible_bbox": [
+        253,
+        69,
+        828,
+        1851
+      ]
+    },
+    {
+      "character": "shurik",
+      "tag": "cs_epi_shurik",
+      "outfit": "winter",
+      "pose": "idle",
+      "emotion": "thoughtful",
+      "path": "sp/shurik/winter/thoughtful.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        252,
+        68,
+        829,
+        1852
+      ],
+      "sha256": "45c2a50b6651a7257b82842fc422adc95737c9ec5e26852ce80fc7d9ebd68dbe",
+      "visible_bbox": [
+        252,
+        71,
+        828,
+        1852
+      ]
+    },
+    {
+      "character": "shurik",
+      "tag": "cs_epi_shurik",
+      "outfit": "winter",
+      "pose": "idle",
+      "emotion": "sad",
+      "path": "sp/shurik/winter/sad.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        252,
+        68,
+        829,
+        1852
+      ],
+      "sha256": "a7c973cd85f8ed4ceada8ac36376801c7378dca1e16d806cef89b0492613fcad",
+      "visible_bbox": [
+        252,
+        70,
+        828,
+        1849
+      ]
+    },
+    {
+      "character": "shurik",
+      "tag": "cs_epi_shurik",
+      "outfit": "winter",
+      "pose": "idle",
+      "emotion": "surprised",
+      "path": "sp/shurik/winter/surprised.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        252,
+        68,
+        829,
+        1852
+      ],
+      "sha256": "20acf32d0e6cada9c55a9e16506d3e53c82fdf95dc20c9a6051d916f642b74a2",
+      "visible_bbox": [
+        252,
+        70,
+        829,
+        1851
+      ]
+    },
+    {
+      "character": "shurik",
+      "tag": "cs_epi_shurik",
+      "outfit": "winter",
+      "pose": "idle",
+      "emotion": "angry",
+      "path": "sp/shurik/winter/angry.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        252,
+        68,
+        829,
+        1852
+      ],
+      "sha256": "810ba301781c3dc2c1051133a8e176be82878d32aae5d814792a6f5c893a1c1f",
+      "visible_bbox": [
+        252,
+        68,
+        829,
+        1851
+      ]
+    },
+    {
+      "character": "shurik",
+      "tag": "cs_epi_shurik",
+      "outfit": "indoor",
+      "pose": "idle",
+      "emotion": "neutral",
+      "path": "sp/shurik/indoor/neutral.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        251,
+        69,
+        828,
+        1846
+      ],
+      "sha256": "26dd8ac991f6beba1bf60c5d203ad2bb1fbafe0cc6705a3d32dfc5dcb6873962",
+      "visible_bbox": [
+        253,
+        71,
+        825,
+        1843
+      ]
+    },
+    {
+      "character": "shurik",
+      "tag": "cs_epi_shurik",
+      "outfit": "indoor",
+      "pose": "idle",
+      "emotion": "soft_smile",
+      "path": "sp/shurik/indoor/soft_smile.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        251,
+        69,
+        828,
+        1846
+      ],
+      "sha256": "cb15c2420b8e3e95752b56cd3e3a536377693c56e24976545dd988f5a79568c2",
+      "visible_bbox": [
+        252,
+        70,
+        826,
+        1846
+      ]
+    },
+    {
+      "character": "shurik",
+      "tag": "cs_epi_shurik",
+      "outfit": "indoor",
+      "pose": "idle",
+      "emotion": "thoughtful",
+      "path": "sp/shurik/indoor/thoughtful.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        251,
+        69,
+        828,
+        1846
+      ],
+      "sha256": "e1f57fdac5d649814bea09f64ac317d2015e595be76b2a62c3f4259426bf3c7e",
+      "visible_bbox": [
+        251,
+        70,
+        828,
+        1845
+      ]
+    },
+    {
+      "character": "shurik",
+      "tag": "cs_epi_shurik",
+      "outfit": "indoor",
+      "pose": "idle",
+      "emotion": "sad",
+      "path": "sp/shurik/indoor/sad.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        251,
+        69,
+        828,
+        1846
+      ],
+      "sha256": "c58358410adbe71aebc6ae1a7e687553ec50d81d0c32b75996cb02926b0a4aa6",
+      "visible_bbox": [
+        252,
+        71,
+        827,
+        1845
+      ]
+    },
+    {
+      "character": "shurik",
+      "tag": "cs_epi_shurik",
+      "outfit": "indoor",
+      "pose": "idle",
+      "emotion": "surprised",
+      "path": "sp/shurik/indoor/surprised.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        251,
+        69,
+        828,
+        1846
+      ],
+      "sha256": "31e37913e756bae15608823c4f12cfef7d2fb50a14b472842b589dedd86557cc",
+      "visible_bbox": [
+        252,
+        71,
+        827,
+        1846
+      ]
+    },
+    {
+      "character": "shurik",
+      "tag": "cs_epi_shurik",
+      "outfit": "indoor",
+      "pose": "idle",
+      "emotion": "angry",
+      "path": "sp/shurik/indoor/angry.png",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bbox": [
+        251,
+        69,
+        828,
+        1846
+      ],
+      "sha256": "39b4c10d88d05f66a2823cfcb83492531afa70cfa3ea48f858c777250bf2565e",
+      "visible_bbox": [
+        251,
+        69,
+        827,
+        1846
+      ]
+    }
+  ],
+  "images": [
+    {
+      "id": "cs_cg_d7_run",
+      "path": "cg/cg/cg_d07_last_run.png",
+      "title": "Последняя пробежка",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "sha256": "16b08601147bc126addcd9db922d4f280e0b5a258ba1a525a70ef15e08b5272c"
+    },
+    {
+      "id": "cs_cg_d7_library_corner",
+      "path": "cg/cg/cg_d07_library_voice.png",
+      "title": "За углом библиотеки",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "sha256": "81976cb290ae819e97fa2455be2c4d0ec854eaa8d7decd80280d5f314dfeb8f2"
+    },
+    {
+      "id": "cs_cg_d7_breakfast",
+      "path": "cg/cg/cg_d07_breakfast_four.png",
+      "title": "Четверо на завтрак",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "sha256": "6718de34d2afbf1d2b8c0e951b2bb6402a946b77c197d9490c003088bd613a77"
+    },
+    {
+      "id": "cs_cg_d7_packing",
+      "path": "cg/cg/cg_d07_packing.png",
+      "title": "Собрать остатки лета",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "sha256": "10fe19639b5c65744d132d53f3a0cb2d433ae1e19a486249225970d231bcfbf4"
+    },
+    {
+      "id": "cs_cg_d7_pier_friendship",
+      "path": "cg/cg/cg_d07_last_pier_friend.png",
+      "title": "Последний берег Дружба",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "sha256": "7980ccb84a5a580fd240e8642b61ac56ba313bb5fd0d28901fa6bcbbbb5c1991"
+    },
+    {
+      "id": "cs_cg_d7_pier_romance",
+      "path": "cg/cg/cg_d07_last_pier_romance.png",
+      "title": "Последний берег Романтика",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "sha256": "80e1f9e7902925021391903f74b4446da4a6caa63e2bcc67c6828bec873f44ed"
+    },
+    {
+      "id": "cs_cg_d7_farewell",
+      "path": "cg/cg/cg_d07_farewell_gate.png",
+      "title": "Прощание у автобуса",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "sha256": "40c0b4eaa9d21296a8c1b1b82d59c1d8c2191442b81e81b4ef6298134dbd4d5b"
+    },
+    {
+      "id": "cs_cg_d7_bus_sleep_friendship",
+      "path": "cg/cg/cg_d07_bus_sleep_friend.png",
+      "title": "Две пассажирки Дружба",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "sha256": "e672010dc8e8db81ef3f7733e7301b0e5dc916a15066d36bdf156d6c17f5eb8d"
+    },
+    {
+      "id": "cs_cg_d7_bus_sleep_romance",
+      "path": "cg/cg/cg_d07_bus_sleep_romance.png",
+      "title": "Две пассажирки Романтика",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "sha256": "b9f5957581424064db0f2897784c0e57f22e0cc48fd91ba28a88e2a4f13f8994"
+    },
+    {
+      "id": "cs_cg_epi_lena_wake",
+      "path": "cg/cg/cg_ep_lena_wakes.png",
+      "title": "Пробуждение Соколовой",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "sha256": "0c4be80e2b2e6ee6e889bf6dc1c87694c443aee5e52f4827e2383c3932838b20"
+    },
+    {
+      "id": "cs_cg_epi_darya_wake",
+      "path": "cg/cg/cg_ep_darya_wakes.png",
+      "title": "Пробуждение Даши",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "sha256": "d12a7078db1492d157c372c0ccdc2654bc8ee4caab16c81f80e3dabef3119562"
+    },
+    {
+      "id": "cs_cg_epi_reunion_friendship",
+      "path": "cg/cg/cg_ep_reunion_friend.png",
+      "title": "Нашлись Дружба",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "sha256": "2ade2430771a3685baab0d957a4ec7ff1e8a59633048bf4a5ad0cea6b45ae397"
+    },
+    {
+      "id": "cs_cg_epi_reunion_romance",
+      "path": "cg/cg/cg_ep_reunion_romance.png",
+      "title": "Нашлись Романтика",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "sha256": "72a76a61ca0f87465787756ce1084eaeef5cd7fa3a67d111e5e8cda4d268edcc"
+    },
+    {
+      "id": "cs_cg_epi_city_bus_friendship",
+      "path": "cg/cg/cg_ep_normal_route_friend.png",
+      "title": "Нормальный маршрут Дружба",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "56c7563a538e2b9da24df4b388c966025e4f956b9ddaeba3d384c9d02a1648e8"
+    },
+    {
+      "id": "cs_cg_epi_city_bus_romance",
+      "path": "cg/cg/cg_ep_normal_route_romance.png",
+      "title": "Нормальный маршрут Романтика",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "sha256": "a09d228f7ed3ec3c7309cfd81a6418954cd80678917343c092ecb6409caea4fa"
+    },
+    {
+      "id": "cs_bg_epi_semen_dirty",
+      "path": "bg/bg/bg_semen_room_2026_dirty.png",
+      "title": "Квартира Семёна До уборки",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "sha256": "616c6f9b11eab55114edbc2bc619186f0bc428de4efd6a9dc029ecb3e6d4bf63"
+    },
+    {
+      "id": "cs_bg_epi_semen_partial",
+      "path": "bg/bg/bg_semen_room_2026_partial.png",
+      "title": "Квартира Семёна Во время уборки",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "sha256": "0e63a3abb8f893e563bdfb8f092f5bed45daac3bc12d2e7fb2b82474d8c2629c"
+    },
+    {
+      "id": "cs_bg_epi_semen_clean",
+      "path": "bg/bg/bg_semen_room_2026_clean.png",
+      "title": "Квартира Семёна После уборки",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "sha256": "80959d1023a60b24beb9417a1bd1739965376aa743611b32c2c619955ddd8268"
+    },
+    {
+      "id": "cs_bg_epi_darya_room",
+      "path": "bg/bg/bg_darya_room_winter.png",
+      "title": "Комната Даши",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "sha256": "627e3a85f2e4586a14b75188bef4d5805d9626c4e574dc0ad6ef8f590973c9ab"
+    },
+    {
+      "id": "cs_bg_epi_landing",
+      "path": "bg/bg/bg_semen_landing.png",
+      "title": "Площадка у квартиры Семёна",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "sha256": "c66ad2b0c96ac661caf6f589e8112bfae64ca557d4ce9fee175cc9209a5aa561"
+    },
+    {
+      "id": "cs_bg_epi_winter_meeting",
+      "path": "bg/bg/bg_moscow_meeting_winter.png",
+      "title": "Зимняя встреча",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "sha256": "848e813d578dbd2dfc23a56c7d37547da23a4967d302ab6279115ea82a394a19"
+    },
+    {
+      "id": "cs_cg_epi_guest_slavya",
+      "path": "cg/epilogue_new/cg_epi_guest_slavya.png",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "b03852c4ab5d60e8f9fd7134a1da569ff35118bbc313029fc658ece4bb37702a"
+    },
+    {
+      "id": "cs_cg_epi_guest_alisa",
+      "path": "cg/epilogue_new/cg_epi_guest_alisa.png",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "43abe6ae1ebab74889dcb21412ba86c09792d18cb7b5a378d029fbfff9c25a08"
+    },
+    {
+      "id": "cs_cg_epi_guest_miku",
+      "path": "cg/epilogue_new/cg_epi_guest_miku.png",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "58cff4d0745d5f90f3e60dbc6ced8c16bbb5875fa7815c690dbc6762f7807a5f"
+    },
+    {
+      "id": "cs_cg_epi_guest_zhenya",
+      "path": "cg/epilogue_new/cg_epi_guest_zhenya.png",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "2824be01046909f7740d7c147c91c496c342a43073223ed3bf002f23725de55a"
+    },
+    {
+      "id": "cs_cg_epi_guest_tikhonova",
+      "path": "cg/epilogue_new/cg_epi_guest_tikhonova.png",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "c2ede6fa81f4c8e4f864aaea02211c8852525e1bd623465eaa587eab694c9c9f"
+    },
+    {
+      "id": "cs_cg_epi_guest_none",
+      "path": "cg/epilogue_new/cg_epi_guest_none.png",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "sha256": "d0e45ab6cc17f84af3fc0c6da4fca83412568a7a234d24c57c2d5f35332fc18f"
+    }
+  ]
+}

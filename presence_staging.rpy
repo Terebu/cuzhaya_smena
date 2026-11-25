@@ -146,8 +146,8 @@ init -10 python:
             store.cs_director_states[tag] = "ABSENT"
         cs_presence_stage()
 
-    def cs_director_scene(image):
-        if hasattr(store, "cs_day03_location_audio"):
+    def cs_director_scene(image, location_audio=True):
+        if location_audio and hasattr(store, "cs_day03_location_audio"):
             cs_day03_location_audio(image)
         store.cs_reflective_shot = False
         store.cs_pov_return_cast = []

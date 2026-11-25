@@ -1,0 +1,37 @@
+{
+  "character": "sokolova",
+  "outfit": "indoor",
+  "emotion": "angry",
+  "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-93d0437a-095b-4b23-9f04-8892dc6ab7b6.png",
+  "reference": [
+    "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/sokolova_indoor_neutral.png"
+  ],
+  "prompt": "Use case: identity-preserve. Change ONLY Lena Sokolova's facial expression in this exact INDOOR NEUTRAL sprite to restrained irritation/anger, eyebrows slightly lowered, eyes narrowed, lips pressed. Keep precise face identity/green eyes, identical head angle, purple long wavy hair, white bow and every outer hair strand, body anatomy/pose, shoulders/arms/visible hands/fingers and feet in identical positions. Preserve exact purple hoodie with hood down, black jeans, plain dark closed shoes, fabric folds, outline, color/light, full-body framing/scale. Ren'Py one-pose expression variant: do not shift or redraw body, hair or clothes; only eyes/brows/mouth/cheeks change. One complete figure from hair to both soles, genuine transparent alpha, portrait9:16 high resolution1080x1920 or2160x3840. No other people, props, scenery, shadow, grid or text.",
+  "native_size": [
+    941,
+    1672
+  ],
+  "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/sokolova/indoor/angry.png",
+  "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/sokolova_indoor_angry.png",
+  "size": [
+    1080,
+    1920
+  ],
+  "alpha_extrema": [
+    0,
+    255
+  ],
+  "export_method": "single full-frame image uniformly projected into 1080x1920 using fixed neutral-pose bounding box/scale/baseline1840 for every emotion; no atlas extraction",
+  "pose": "one fixed pose",
+  "export_anchor_bbox": [
+    222,
+    0,
+    772,
+    1647
+  ],
+  "export_position": [
+    9,
+    80
+  ],
+  "export_scale": 1.0686095931997572
+}

@@ -22,17 +22,18 @@ EVIDENCE={}
 def narration_chunks(s):
     # Keep wording and order; limit long narration to ordinary ADV window sizes.
     pieces=re.split(r'(?<=[.!?…])\s+(?=[А-ЯЁA-Z«])',s)
-    result=[];current=''
+    result = []
+    current = ""
+    quote_depth = 0
     for part in pieces:
-        if current and len(current)+len(part)>250:result.append(current);current=part
-        else:current=(current+' '+part).strip()
-    if current:result.append(current)
-    # A quotation split across windows: by Russian convention each continued
-    # part reopens with «, and only the last one closes it.
-    opened=0
-    for n,part in enumerate(result):
-        if opened>0 and not part.startswith('«'):result[n]='«'+part
-        opened+=part.count('«')-part.count('»')
+        if current and not quote_depth and len(current) + len(part) > 250:
+            result.append(current)
+            current = part
+        else:
+            current = (current + " " + part).strip()
+        quote_depth += part.count("«") - part.count("»")
+    if current:
+        result.append(current)
     return result
 
 def build(name):

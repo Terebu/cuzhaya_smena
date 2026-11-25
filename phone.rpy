@@ -9,12 +9,13 @@ transform cs_phone_fade:
     on replace:
         alpha 1.0
 
-screen cs_phone_status(charge, width):
+screen cs_phone_status(charge, width, clock="22:37"):
     fixed:
         xysize (width, 34)
         add Solid("#1d2939")
-        text "22:37" xpos 12 ypos 6 size 19 color "#e9eef5" font "fonts/calibri.ttf"
-        text ("%d%%" % charge) xpos (width - 70) ypos 6 size 19 color "#ee968b" font "fonts/calibri.ttf"
+        if clock:
+            text clock xpos 12 ypos 6 size 19 color "#e9eef5" font "fonts/calibri.ttf"
+        text ("%d%%" % charge) xpos (width - 70) ypos 6 size 19 color ("#ee968b" if charge <= 10 else "#b9e6c4") font "fonts/calibri.ttf"
         add Solid("#bbc7d5") xpos (width - 25) ypos 12 xysize (12, 9)
 
 screen cs_instagram_post(photo, phone_x=100, phone_width=380):
@@ -50,7 +51,7 @@ screen cs_powered_off_phone(phone_x, phone_width):
             add Solid("#677280") xpos int(phone_width * 0.39) ypos 15 xysize (int(phone_width * 0.20), 4)
             add Solid("#394451") xpos int(phone_width * 0.40) ypos (cs_phone_height - 20) xysize (int(phone_width * 0.18), 4)
 
-screen cs_phone(charge=7, mode="battery", phone_x=100, phone_width=380):
+screen cs_phone(charge=7, mode="battery", phone_x=100, phone_width=380, clock="22:37"):
     zorder 10
     $ cs_phone_w = phone_width - 24
     $ cs_phone_h = int(phone_width * 1.75) - 67
@@ -64,8 +65,16 @@ screen cs_phone(charge=7, mode="battery", phone_x=100, phone_width=380):
                 xysize (cs_phone_w, cs_phone_h)
                 clipping True
                 add Solid("#111b28")
-                use cs_phone_status(charge, cs_phone_w)
-                if mode == "profile":
+                use cs_phone_status(charge, cs_phone_w, clock)
+                if mode == "lock":
+                    text "Январь" xalign 0.5 ypos 188 size 56 color "#f5f7fb" font "fonts/calibri.ttf"
+                    text "2026" xalign 0.5 ypos 260 size 36 color "#c3d8ee" font "fonts/calibri.ttf"
+                    text "Подключён к зарядке" xalign 0.5 ypos 468 size 21 color "#b9e6c4" font "fonts/calibri.ttf"
+                elif mode == "notes":
+                    text "Заметки" xpos 20 ypos 60 size 34 color "#f5f7fb" font "fonts/calibri.ttf"
+                    add Solid("#3b5064") xpos 20 ypos 118 xysize (cs_phone_w - 40, 1)
+                    text "Дарья Еретикова" xpos 20 ypos 148 size 27 color "#f5f7fb" font "fonts/calibri.ttf"
+                elif mode == "profile":
                     text "Instagram" xpos 16 ypos 48 size 30 color "#ffffff" font "fonts/calibri.ttf"
                     text "Lena Sokolova" xpos 16 ypos 116 size 27 color "#dfc9f4" font "fonts/calibri.ttf"
                     text "247 813" xpos 16 ypos 170 size 43 color "#ffffff" font "fonts/calibri.ttf"

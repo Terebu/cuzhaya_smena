@@ -6,6 +6,10 @@ init 55 python:
         if cs_previous_menu_arguments is not None:
             args, kwargs = cs_previous_menu_arguments(*args, **kwargs)
         if cs_active:
+            # The mod keeps the empty ADV window between Say statements.
+            # Menus replace it until the next line opens it again.
+            store._window = False
+            renpy.hide_screen("say")
             kwargs["screen"] = "cs_mod_choice"
         return args, kwargs
     config.menu_arguments_callback = cs_menu_arguments

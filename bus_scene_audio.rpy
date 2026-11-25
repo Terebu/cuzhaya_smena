@@ -44,7 +44,7 @@ init 35 python:
         return 0.22 if target == cs_bus_drone else 0.16
 
     def cs_bus_apply_bed():
-        if cs_day03_audio_location:
+        if not cs_d7_started and cs_day03_audio_location:
             cs_day03_location_audio(cs_day03_audio_location)
 
     def cs_bus_engine(phase, restoring=False):
@@ -162,7 +162,7 @@ init 36 python:
     renpy.music.register_channel("cs_sports",mixer="sfx",loop=True)
     cs_sports_track=cs_path("audio/ambience/sports_court_day.ogg")
     def cs_sports_level_for(image):
-        if not cs_active or not cs_d5_started or cs_d5_quiet or getattr(store,"main_menu",False) or getattr(store,"_main_menu",False):return 0.0
+        if not cs_active or not cs_d5_started or cs_d5_quiet or cs_d7_started or getattr(store,"main_menu",False) or getattr(store,"_main_menu",False):return 0.0
         # The early-morning running scene explicitly describes an empty court.
         if cs_d5_scene==7 and image=="cs_camp_path_day":return 0.065
         if cs_d5_scene==9:
@@ -188,7 +188,7 @@ init 36 python:
     def cs_sports_loaded():
         cs_sports_sync(cs_day03_audio_location)
     def cs_sports_watch():
-        if not cs_active or cs_d5_quiet or getattr(store,"main_menu",False) or getattr(store,"_main_menu",False):
+        if not cs_active or cs_d5_quiet or cs_d7_started or getattr(store,"main_menu",False) or getattr(store,"_main_menu",False):
             cs_sports_sync(None)
     config.after_load_callbacks.append(cs_sports_loaded)
     config.interact_callbacks.append(cs_sports_watch)

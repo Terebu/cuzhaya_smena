@@ -1,0 +1,493 @@
+{
+  "verified_images": 48,
+  "visible_bbox_threshold": 128,
+  "checks": [
+    "RGBA",
+    "1080x1920",
+    "alpha0and255",
+    "6distinctfilesperoutfit",
+    "fullbodymargins"
+  ],
+  "images": [
+    {
+      "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/slavya/winter/soft_smile.png",
+      "visible_bbox_alpha128": [
+        266,
+        80,
+        814,
+        1841
+      ],
+      "sha256": "f4d7988718027561c0539cc40e073a5c37532de14142a45124e90746d1217358"
+    },
+    {
+      "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/slavya/winter/sad.png",
+      "visible_bbox_alpha128": [
+        265,
+        79,
+        815,
+        1842
+      ],
+      "sha256": "f3d62f8a024542e785388bb17a4688408171c27017319a14400cf4720ed5ab41"
+    },
+    {
+      "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/slavya/winter/angry.png",
+      "visible_bbox_alpha128": [
+        264,
+        77,
+        816,
+        1842
+      ],
+      "sha256": "79e45e3d00c498531c5ff484c40827c60212cac22f6ff73b5d7c9bab170a07b5"
+    },
+    {
+      "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/slavya/winter/surprised.png",
+      "visible_bbox_alpha128": [
+        264,
+        78,
+        815,
+        1842
+      ],
+      "sha256": "c27ba41102629293f2012ec1f80b6bfd6e831b72cccde0279bf7c5689255a81a"
+    },
+    {
+      "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/slavya/winter/neutral.png",
+      "visible_bbox_alpha128": [
+        267,
+        80,
+        812,
+        1840
+      ],
+      "sha256": "01c3b8d7718047272427c10818ebb3ce57ac11eddb1fb2836b56117611eae865"
+    },
+    {
+      "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/slavya/winter/thoughtful.png",
+      "visible_bbox_alpha128": [
+        267,
+        80,
+        813,
+        1842
+      ],
+      "sha256": "57c6c350e81e1b081aa6c0d291b775efe5098ba42625ba8a8a8d44caa12adf34"
+    },
+    {
+      "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/slavya/indoor/soft_smile.png",
+      "visible_bbox_alpha128": [
+        265,
+        77,
+        816,
+        1839
+      ],
+      "sha256": "40bed8e0415106a063b96b9f1fe015b5b59d37ae5c1a0edac7e37e5d3c362e98"
+    },
+    {
+      "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/slavya/indoor/sad.png",
+      "visible_bbox_alpha128": [
+        268,
+        80,
+        814,
+        1840
+      ],
+      "sha256": "40d597aaa1c79ae070ac6b0100c9bb9084108020ff7d7f94b071b644d243bb79"
+    },
+    {
+      "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/slavya/indoor/angry.png",
+      "visible_bbox_alpha128": [
+        266,
+        77,
+        817,
+        1841
+      ],
+      "sha256": "3f345d762f58d28142b08c8f57fbbb08cc98a955db9268087fc398477fc6a96a"
+    },
+    {
+      "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/slavya/indoor/surprised.png",
+      "visible_bbox_alpha128": [
+        266,
+        78,
+        817,
+        1840
+      ],
+      "sha256": "45f0924aa1962ceb152a3b2999f7895e43021655daacae96c78583af17a3ee38"
+    },
+    {
+      "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/slavya/indoor/neutral.png",
+      "visible_bbox_alpha128": [
+        267,
+        80,
+        813,
+        1839
+      ],
+      "sha256": "0f7167f42c73c67d1f27ca82b3afa93146c4a72a183f162e81a212eda5f092c6"
+    },
+    {
+      "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/slavya/indoor/thoughtful.png",
+      "visible_bbox_alpha128": [
+        267,
+        80,
+        814,
+        1839
+      ],
+      "sha256": "423442031a70da83ce5597ad6474ce24d13f7e47a210d3172da67070854960f5"
+    },
+    {
+      "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/alisa/winter/soft_smile.png",
+      "visible_bbox_alpha128": [
+        308,
+        78,
+        773,
+        1842
+      ],
+      "sha256": "45a057322dceccbc78393d0420ee92965aeca7e1dd304d38b75bf0ce1bdc9aed"
+    },
+    {
+      "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/alisa/winter/sad.png",
+      "visible_bbox_alpha128": [
+        308,
+        76,
+        774,
+        1840
+      ],
+      "sha256": "e09e7ecfe52b89c39705bfcbc176a578a40642c8fac6c9cb217c7773c150244d"
+    },
+    {
+      "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/alisa/winter/angry.png",
+      "visible_bbox_alpha128": [
+        308,
+        79,
+        773,
+        1842
+      ],
+      "sha256": "3077aa13c0fd16697fada1e18abbab6bedba9955749983e6f7df95578bed85e4"
+    },
+    {
+      "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/alisa/winter/surprised.png",
+      "visible_bbox_alpha128": [
+        308,
+        79,
+        773,
+        1841
+      ],
+      "sha256": "d645471d67cc1d13f153d2f3e6002536cb40c41040b9e4bed2962a477aa79ecc"
+    },
+    {
+      "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/alisa/winter/neutral.png",
+      "visible_bbox_alpha128": [
+        308,
+        80,
+        772,
+        1840
+      ],
+      "sha256": "debfc69b38632cdb72b5180a7885636bb9cf09e6e142567c4ed75666978db90c"
+    },
+    {
+      "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/alisa/winter/thoughtful.png",
+      "visible_bbox_alpha128": [
+        308,
+        78,
+        774,
+        1841
+      ],
+      "sha256": "abadc22ecddd24cb3e54f366edf1370b6d82af2f3bdb89da47939a64fd42f6bd"
+    },
+    {
+      "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/alisa/indoor/soft_smile.png",
+      "visible_bbox_alpha128": [
+        306,
+        76,
+        772,
+        1841
+      ],
+      "sha256": "1e03683f623d53b16c4d74763016d46969d87909df03f87be4b8ff2031105849"
+    },
+    {
+      "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/alisa/indoor/sad.png",
+      "visible_bbox_alpha128": [
+        307,
+        76,
+        772,
+        1840
+      ],
+      "sha256": "9010794146b6adf4993196763a1dc2f57003855a198cb3cf9b90db6c544ed7f7"
+    },
+    {
+      "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/alisa/indoor/angry.png",
+      "visible_bbox_alpha128": [
+        307,
+        77,
+        771,
+        1841
+      ],
+      "sha256": "b0cdd8897702dbde473bdf0102932e90122721299adfe75537914441eabe24e8"
+    },
+    {
+      "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/alisa/indoor/surprised.png",
+      "visible_bbox_alpha128": [
+        306,
+        77,
+        772,
+        1840
+      ],
+      "sha256": "4dd2498068cd73bb1b4b344d2c20804a6f0afd78e5e70c210b59998b3248b26b"
+    },
+    {
+      "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/alisa/indoor/neutral.png",
+      "visible_bbox_alpha128": [
+        308,
+        78,
+        771,
+        1840
+      ],
+      "sha256": "b6a8d90a36b791b2128561a72067d43650858f877bdc419735ab6e32342d5e10"
+    },
+    {
+      "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/alisa/indoor/thoughtful.png",
+      "visible_bbox_alpha128": [
+        307,
+        78,
+        771,
+        1840
+      ],
+      "sha256": "f4f95bbb99651555c6d31aef8ce7633b76f59467e5b37a175c0afa253dee2db7"
+    },
+    {
+      "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/miku/winter/soft_smile.png",
+      "visible_bbox_alpha128": [
+        163,
+        79,
+        919,
+        1841
+      ],
+      "sha256": "6b5be35b29e94827d8cbcf3c266412b953c7ea708668739c9fe0801d506da89f"
+    },
+    {
+      "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/miku/winter/sad.png",
+      "visible_bbox_alpha128": [
+        164,
+        79,
+        918,
+        1842
+      ],
+      "sha256": "37f2ccf3d5ebf243247d65dd51a2684c7dc9bd601da3e7868e11da49a13adf5f"
+    },
+    {
+      "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/miku/winter/angry.png",
+      "visible_bbox_alpha128": [
+        163,
+        77,
+        919,
+        1842
+      ],
+      "sha256": "6e9ab7d3ae967ecc8691c5a7c083a63356a7d5911f82896fbacf8d67a4d6289a"
+    },
+    {
+      "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/miku/winter/surprised.png",
+      "visible_bbox_alpha128": [
+        163,
+        77,
+        918,
+        1841
+      ],
+      "sha256": "eaacaf765e3cea4861a2cda1c26a99272139744f62a5d61d659d0d3e3b7eb67f"
+    },
+    {
+      "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/miku/winter/neutral.png",
+      "visible_bbox_alpha128": [
+        165,
+        80,
+        916,
+        1840
+      ],
+      "sha256": "dbe2b894fd4efc8812870a29b65221caf10d8c6049e13cc49cb46348c18f4c80"
+    },
+    {
+      "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/miku/winter/thoughtful.png",
+      "visible_bbox_alpha128": [
+        162,
+        79,
+        919,
+        1842
+      ],
+      "sha256": "f813306d7f013df4658b79b000d78f032268ac1995188f757efce374ab025bf9"
+    },
+    {
+      "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/miku/indoor/soft_smile.png",
+      "visible_bbox_alpha128": [
+        161,
+        77,
+        921,
+        1841
+      ],
+      "sha256": "a97ad8e31015b297d3cc7f5c7540524198100f1e407b54afcd2ae2e616836650"
+    },
+    {
+      "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/miku/indoor/sad.png",
+      "visible_bbox_alpha128": [
+        161,
+        79,
+        920,
+        1843
+      ],
+      "sha256": "17e4c5c7614fd4a8887f31f7415e1e236250d9eff2c4c95f7a31f51175e7a185"
+    },
+    {
+      "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/miku/indoor/angry.png",
+      "visible_bbox_alpha128": [
+        161,
+        77,
+        920,
+        1842
+      ],
+      "sha256": "d2427e710e9924c19f630b139a743794d494b66da716853144997320f414bf08"
+    },
+    {
+      "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/miku/indoor/surprised.png",
+      "visible_bbox_alpha128": [
+        161,
+        76,
+        922,
+        1843
+      ],
+      "sha256": "b7ca0067382d4b2797e57efa7ef61f5bcd4cac24725765510aa4f7cdd0d563c1"
+    },
+    {
+      "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/miku/indoor/neutral.png",
+      "visible_bbox_alpha128": [
+        163,
+        79,
+        918,
+        1840
+      ],
+      "sha256": "4fb21cc2e14e5600a3ba770d7dff6b8c4f630711efe600f6e2e8dff40c826354"
+    },
+    {
+      "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/miku/indoor/thoughtful.png",
+      "visible_bbox_alpha128": [
+        162,
+        79,
+        920,
+        1841
+      ],
+      "sha256": "8550e4ad5a855ad9f4add5e65a3dbbccceafe9ffe68eb4681ba9588c6b0195a9"
+    },
+    {
+      "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/tikhonova/winter/soft_smile.png",
+      "visible_bbox_alpha128": [
+        318,
+        74,
+        758,
+        1840
+      ],
+      "sha256": "54c384c22aa7bf611e3cb4982a8890f0ca000b636f71d1801f350e7b9ea64f3c"
+    },
+    {
+      "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/tikhonova/winter/sad.png",
+      "visible_bbox_alpha128": [
+        319,
+        75,
+        758,
+        1841
+      ],
+      "sha256": "887c09259ca1ddd563fbe757536213834cb198651a847be2f4f8331cc68d0264"
+    },
+    {
+      "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/tikhonova/winter/angry.png",
+      "visible_bbox_alpha128": [
+        320,
+        76,
+        759,
+        1840
+      ],
+      "sha256": "32349d4d50cc410693bfc988abce5f023d5a1a47e7111f3d0f9b8045c1b5acf2"
+    },
+    {
+      "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/tikhonova/winter/surprised.png",
+      "visible_bbox_alpha128": [
+        320,
+        76,
+        758,
+        1840
+      ],
+      "sha256": "cb572ca21ddadc7ae6c7385fa1dc35c1ef8fd084faa3f742d986c3a0e26f87d5"
+    },
+    {
+      "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/tikhonova/winter/neutral.png",
+      "visible_bbox_alpha128": [
+        323,
+        79,
+        757,
+        1840
+      ],
+      "sha256": "bfdbc46270aae96b9fdd15f941ac8b0146d9b3d6ada3c76c571599cc924c3c6f"
+    },
+    {
+      "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/tikhonova/winter/thoughtful.png",
+      "visible_bbox_alpha128": [
+        320,
+        76,
+        758,
+        1841
+      ],
+      "sha256": "76779792d834b34d753789a2b9ff2a78231a42acf25932dafa767536cdcf77b0"
+    },
+    {
+      "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/tikhonova/indoor/soft_smile.png",
+      "visible_bbox_alpha128": [
+        320,
+        73,
+        745,
+        1838
+      ],
+      "sha256": "c8b3906cc50d5241530e3100036a3c26d7bc8f420207753c0e285e53ac73bd07"
+    },
+    {
+      "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/tikhonova/indoor/sad.png",
+      "visible_bbox_alpha128": [
+        318,
+        74,
+        745,
+        1839
+      ],
+      "sha256": "2f7d649d0d233946337bc7f3741dc97ee90e1eaada84f0f249d31cbe50436cc4"
+    },
+    {
+      "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/tikhonova/indoor/angry.png",
+      "visible_bbox_alpha128": [
+        318,
+        75,
+        745,
+        1838
+      ],
+      "sha256": "fd9461baa01511df50e3206f32a371a21c8aca28378ec6c5216f679e89b68994"
+    },
+    {
+      "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/tikhonova/indoor/surprised.png",
+      "visible_bbox_alpha128": [
+        319,
+        75,
+        744,
+        1838
+      ],
+      "sha256": "26217e8e5903438c74af15b8c2a708a86164d2d98ea6828dc6d981e59d90c6c4"
+    },
+    {
+      "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/tikhonova/indoor/neutral.png",
+      "visible_bbox_alpha128": [
+        319,
+        77,
+        743,
+        1837
+      ],
+      "sha256": "bd80e155f1acf7684290a6a9395ffec18ff9f59d765ef1bb2b5a5bf9e991c9ba"
+    },
+    {
+      "file": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/tikhonova/indoor/thoughtful.png",
+      "visible_bbox_alpha128": [
+        319,
+        75,
+        744,
+        1838
+      ],
+      "sha256": "73d91e78726b70c0feb239511afc40258ce66ce8178a75441215f52742d07e4b"
+    }
+  ]
+}

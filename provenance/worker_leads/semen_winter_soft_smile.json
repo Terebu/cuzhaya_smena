@@ -1,0 +1,37 @@
+{
+  "character": "semen",
+  "outfit": "winter",
+  "emotion": "soft_smile",
+  "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-eea09d63-0fe1-421d-aaca-209a08f60508.png",
+  "reference": [
+    "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/semen_winter_neutral.png"
+  ],
+  "prompt": "Use case: identity-preserve. Edit ONLY facial expression of this exact SEMYON WINTER NEUTRAL sprite to small genuine warm closed-mouth smile, eyes softened. Preserve exact face identity, brown eyes, original brown spiky side-parted hair and all hair contour, original masculine proportions, identical head angle, standing pose, shoulders/arms/hands/fingers/feet, black quilted jacket, gray scarf, blue jeans, dark winter boots, all folds, silhouette, colors and lighting. Ren'Py same-pose expression variation: DO NOT redraw or shift body, hands, hair, clothes or feet. Only eyes/eyebrows/mouth/cheeks may change. Full head-to-soles framing and same scale. Single complete isolated male sprite with genuine transparent alpha, portrait9:16 high-resolution1080x1920 or2160x3840. No background, extra person, ground shadow, grid or text.",
+  "native_size": [
+    941,
+    1672
+  ],
+  "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/semen/winter/soft_smile.png",
+  "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/semen_winter_soft_smile.png",
+  "size": [
+    1080,
+    1920
+  ],
+  "alpha_extrema": [
+    0,
+    255
+  ],
+  "export_method": "single full-frame image uniformly projected into 1080x1920 using fixed neutral-pose bounding box/scale/baseline1840 for every emotion; no atlas extraction",
+  "pose": "one fixed pose",
+  "export_anchor_bbox": [
+    236,
+    5,
+    713,
+    1659
+  ],
+  "export_position": [
+    35,
+    75
+  ],
+  "export_scale": 1.064087061668682
+}

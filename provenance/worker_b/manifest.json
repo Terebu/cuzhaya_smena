@@ -1,0 +1,1442 @@
+[
+  {
+    "character": "zhenya",
+    "outfit": "winter",
+    "emotion": "neutral",
+    "pose": "original_fixed",
+    "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/zhenya/winter/neutral.png",
+    "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/zhenya_winter_neutral_native.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "export_size": [
+      1080,
+      1920
+    ],
+    "mode": "RGBA",
+    "reference": "work/v2/references/zhenya_original.png",
+    "generation": "built_in_imagegen",
+    "export": "single full-frame fit into 1040x1800 at y60; no atlas",
+    "export_transform": {
+      "size": [
+        1013,
+        1800
+      ],
+      "position": [
+        33,
+        60
+      ]
+    }
+  },
+  {
+    "character": "zhenya",
+    "outfit": "winter",
+    "emotion": "soft_smile",
+    "pose": "original_fixed",
+    "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/zhenya/winter/soft_smile.png",
+    "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/zhenya_winter_soft_smile_native.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "export_size": [
+      1080,
+      1920
+    ],
+    "mode": "RGBA",
+    "reference": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/zhenya_winter_neutral_native.png",
+    "generation": "built_in_imagegen",
+    "export": "single full-frame fit into 1040x1800 at y60; no atlas",
+    "export_transform": {
+      "size": [
+        1013,
+        1800
+      ],
+      "position": [
+        33,
+        60
+      ]
+    }
+  },
+  {
+    "character": "zhenya",
+    "outfit": "winter",
+    "emotion": "thoughtful",
+    "pose": "original_fixed",
+    "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/zhenya/winter/thoughtful.png",
+    "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/zhenya_winter_thoughtful_native.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "export_size": [
+      1080,
+      1920
+    ],
+    "mode": "RGBA",
+    "reference": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/zhenya_winter_neutral_native.png",
+    "generation": "built_in_imagegen",
+    "export": "single full-frame fit into 1040x1800 at y60; no atlas",
+    "export_transform": {
+      "size": [
+        1013,
+        1800
+      ],
+      "position": [
+        33,
+        60
+      ]
+    }
+  },
+  {
+    "character": "zhenya",
+    "outfit": "winter",
+    "emotion": "sad",
+    "pose": "original_fixed",
+    "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/zhenya/winter/sad.png",
+    "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/zhenya_winter_sad_native.png",
+    "native_size": [
+      940,
+      1672
+    ],
+    "export_size": [
+      1080,
+      1920
+    ],
+    "mode": "RGBA",
+    "reference": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/zhenya_winter_neutral_native.png",
+    "generation": "built_in_imagegen",
+    "export": "single full-frame fit into 1040x1800 at y60; no atlas",
+    "export_transform": {
+      "size": [
+        1012,
+        1800
+      ],
+      "position": [
+        34,
+        60
+      ]
+    }
+  },
+  {
+    "character": "zhenya",
+    "outfit": "winter",
+    "emotion": "surprised",
+    "pose": "original_fixed",
+    "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/zhenya/winter/surprised.png",
+    "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/zhenya_winter_surprised_native.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "export_size": [
+      1080,
+      1920
+    ],
+    "mode": "RGBA",
+    "reference": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/zhenya_winter_neutral_native.png",
+    "generation": "built_in_imagegen",
+    "export": "single full-frame fit into 1040x1800 at y60; no atlas",
+    "export_transform": {
+      "size": [
+        1013,
+        1800
+      ],
+      "position": [
+        33,
+        60
+      ]
+    }
+  },
+  {
+    "character": "zhenya",
+    "outfit": "winter",
+    "emotion": "angry",
+    "pose": "original_fixed",
+    "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/zhenya/winter/angry.png",
+    "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/zhenya_winter_angry_native.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "export_size": [
+      1080,
+      1920
+    ],
+    "mode": "RGBA",
+    "reference": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/zhenya_winter_neutral_native.png",
+    "generation": "built_in_imagegen",
+    "export": "single full-frame fit into 1040x1800 at y60; no atlas",
+    "export_transform": {
+      "size": [
+        1013,
+        1800
+      ],
+      "position": [
+        33,
+        60
+      ]
+    }
+  },
+  {
+    "character": "zhenya",
+    "outfit": "indoor",
+    "emotion": "neutral",
+    "pose": "original_fixed",
+    "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/zhenya/indoor/neutral.png",
+    "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/zhenya_indoor_neutral_native.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "export_size": [
+      1080,
+      1920
+    ],
+    "mode": "RGBA",
+    "reference": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/zhenya_winter_neutral_native.png",
+    "generation": "built_in_imagegen",
+    "export": "single full-frame fit into 1040x1800 at y60; no atlas",
+    "export_transform": {
+      "size": [
+        1013,
+        1800
+      ],
+      "position": [
+        33,
+        60
+      ]
+    }
+  },
+  {
+    "character": "zhenya",
+    "outfit": "indoor",
+    "emotion": "soft_smile",
+    "pose": "original_fixed",
+    "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/zhenya/indoor/soft_smile.png",
+    "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/zhenya_indoor_soft_smile_native.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "export_size": [
+      1080,
+      1920
+    ],
+    "mode": "RGBA",
+    "reference": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/zhenya_indoor_neutral_native.png",
+    "generation": "built_in_imagegen",
+    "export": "single full-frame fit into 1040x1800 at y60; no atlas",
+    "export_transform": {
+      "size": [
+        1013,
+        1800
+      ],
+      "position": [
+        33,
+        60
+      ]
+    }
+  },
+  {
+    "character": "zhenya",
+    "outfit": "indoor",
+    "emotion": "thoughtful",
+    "pose": "original_fixed",
+    "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/zhenya/indoor/thoughtful.png",
+    "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/zhenya_indoor_thoughtful_native.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "export_size": [
+      1080,
+      1920
+    ],
+    "mode": "RGBA",
+    "reference": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/zhenya_indoor_neutral_native.png",
+    "generation": "built_in_imagegen",
+    "export": "single full-frame fit into 1040x1800 at y60; no atlas",
+    "export_transform": {
+      "size": [
+        1013,
+        1800
+      ],
+      "position": [
+        33,
+        60
+      ]
+    }
+  },
+  {
+    "character": "zhenya",
+    "outfit": "indoor",
+    "emotion": "sad",
+    "pose": "original_fixed",
+    "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/zhenya/indoor/sad.png",
+    "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/zhenya_indoor_sad_native.png",
+    "native_size": [
+      941,
+      1671
+    ],
+    "export_size": [
+      1080,
+      1920
+    ],
+    "mode": "RGBA",
+    "reference": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/zhenya_indoor_neutral_native.png",
+    "generation": "built_in_imagegen",
+    "export": "single full-frame fit into 1040x1800 at y60; no atlas",
+    "export_transform": {
+      "size": [
+        1014,
+        1800
+      ],
+      "position": [
+        33,
+        60
+      ]
+    }
+  },
+  {
+    "character": "zhenya",
+    "outfit": "indoor",
+    "emotion": "surprised",
+    "pose": "original_fixed",
+    "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/zhenya/indoor/surprised.png",
+    "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/zhenya_indoor_surprised_native.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "export_size": [
+      1080,
+      1920
+    ],
+    "mode": "RGBA",
+    "reference": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/zhenya_indoor_neutral_native.png",
+    "generation": "built_in_imagegen",
+    "export": "single full-frame fit into 1040x1800 at y60; no atlas",
+    "export_transform": {
+      "size": [
+        1013,
+        1800
+      ],
+      "position": [
+        33,
+        60
+      ]
+    }
+  },
+  {
+    "character": "zhenya",
+    "outfit": "indoor",
+    "emotion": "angry",
+    "pose": "original_fixed",
+    "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/zhenya/indoor/angry.png",
+    "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/zhenya_indoor_angry_native.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "export_size": [
+      1080,
+      1920
+    ],
+    "mode": "RGBA",
+    "reference": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/zhenya_indoor_neutral_native.png",
+    "generation": "built_in_imagegen",
+    "export": "single full-frame fit into 1040x1800 at y60; no atlas",
+    "export_transform": {
+      "size": [
+        1013,
+        1800
+      ],
+      "position": [
+        33,
+        60
+      ]
+    }
+  },
+  {
+    "character": "olga",
+    "outfit": "winter",
+    "emotion": "neutral",
+    "pose": "original_fixed",
+    "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/olga/winter/neutral.png",
+    "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/olga_winter_neutral_native.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "export_size": [
+      1080,
+      1920
+    ],
+    "mode": "RGBA",
+    "reference": "/workspace/scratch/5abe4a03ed6c/work/v2/references/olga_original.png",
+    "generation": "built_in_imagegen",
+    "export": "single full-frame fit into 1040x1800 at y60; no atlas",
+    "export_transform": {
+      "size": [
+        1013,
+        1800
+      ],
+      "position": [
+        33,
+        60
+      ]
+    }
+  },
+  {
+    "character": "olga",
+    "outfit": "winter",
+    "emotion": "soft_smile",
+    "pose": "original_fixed",
+    "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/olga/winter/soft_smile.png",
+    "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/olga_winter_soft_smile_native.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "export_size": [
+      1080,
+      1920
+    ],
+    "mode": "RGBA",
+    "reference": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/olga_winter_neutral_native.png",
+    "generation": "built_in_imagegen",
+    "export": "single full-frame fit into 1040x1800 at y60; no atlas",
+    "export_transform": {
+      "size": [
+        1013,
+        1800
+      ],
+      "position": [
+        33,
+        60
+      ]
+    }
+  },
+  {
+    "character": "olga",
+    "outfit": "winter",
+    "emotion": "thoughtful",
+    "pose": "original_fixed",
+    "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/olga/winter/thoughtful.png",
+    "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/olga_winter_thoughtful_native.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "export_size": [
+      1080,
+      1920
+    ],
+    "mode": "RGBA",
+    "reference": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/olga_winter_neutral_native.png",
+    "generation": "built_in_imagegen",
+    "export": "single full-frame fit into 1040x1800 at y60; no atlas",
+    "export_transform": {
+      "size": [
+        1013,
+        1800
+      ],
+      "position": [
+        33,
+        60
+      ]
+    }
+  },
+  {
+    "character": "olga",
+    "outfit": "winter",
+    "emotion": "sad",
+    "pose": "original_fixed",
+    "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/olga/winter/sad.png",
+    "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/olga_winter_sad_native.png",
+    "native_size": [
+      941,
+      1671
+    ],
+    "export_size": [
+      1080,
+      1920
+    ],
+    "mode": "RGBA",
+    "reference": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/olga_winter_neutral_native.png",
+    "generation": "built_in_imagegen",
+    "export": "single full-frame fit into 1040x1800 at y60; no atlas",
+    "export_transform": {
+      "size": [
+        1014,
+        1800
+      ],
+      "position": [
+        33,
+        60
+      ]
+    }
+  },
+  {
+    "character": "olga",
+    "outfit": "winter",
+    "emotion": "surprised",
+    "pose": "original_fixed",
+    "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/olga/winter/surprised.png",
+    "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/olga_winter_surprised_native.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "export_size": [
+      1080,
+      1920
+    ],
+    "mode": "RGBA",
+    "reference": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/olga_winter_neutral_native.png",
+    "generation": "built_in_imagegen",
+    "export": "single full-frame fit into 1040x1800 at y60; no atlas",
+    "export_transform": {
+      "size": [
+        1013,
+        1800
+      ],
+      "position": [
+        33,
+        60
+      ]
+    }
+  },
+  {
+    "character": "olga",
+    "outfit": "winter",
+    "emotion": "angry",
+    "pose": "original_fixed",
+    "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/olga/winter/angry.png",
+    "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/olga_winter_angry_native.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "export_size": [
+      1080,
+      1920
+    ],
+    "mode": "RGBA",
+    "reference": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/olga_winter_neutral_native.png",
+    "generation": "built_in_imagegen",
+    "export": "single full-frame fit into 1040x1800 at y60; no atlas",
+    "export_transform": {
+      "size": [
+        1013,
+        1800
+      ],
+      "position": [
+        33,
+        60
+      ]
+    }
+  },
+  {
+    "character": "olga",
+    "outfit": "indoor",
+    "emotion": "neutral",
+    "pose": "original_fixed",
+    "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/olga/indoor/neutral.png",
+    "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/olga_indoor_neutral_native.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "export_size": [
+      1080,
+      1920
+    ],
+    "mode": "RGBA",
+    "reference": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/olga_winter_neutral_native.png",
+    "generation": "built_in_imagegen",
+    "export": "single full-frame fit into 1040x1800 at y60; no atlas",
+    "export_transform": {
+      "size": [
+        1013,
+        1800
+      ],
+      "position": [
+        33,
+        60
+      ]
+    }
+  },
+  {
+    "character": "olga",
+    "outfit": "indoor",
+    "emotion": "soft_smile",
+    "pose": "original_fixed",
+    "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/olga/indoor/soft_smile.png",
+    "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/olga_indoor_soft_smile_native.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "export_size": [
+      1080,
+      1920
+    ],
+    "mode": "RGBA",
+    "reference": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/olga_indoor_neutral_native.png",
+    "generation": "built_in_imagegen",
+    "export": "single full-frame fit into 1040x1800 at y60; no atlas",
+    "export_transform": {
+      "size": [
+        1013,
+        1800
+      ],
+      "position": [
+        33,
+        60
+      ]
+    }
+  },
+  {
+    "character": "olga",
+    "outfit": "indoor",
+    "emotion": "thoughtful",
+    "pose": "original_fixed",
+    "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/olga/indoor/thoughtful.png",
+    "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/olga_indoor_thoughtful_native.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "export_size": [
+      1080,
+      1920
+    ],
+    "mode": "RGBA",
+    "reference": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/olga_indoor_neutral_native.png",
+    "generation": "built_in_imagegen",
+    "export": "single full-frame fit into 1040x1800 at y60; no atlas",
+    "export_transform": {
+      "size": [
+        1013,
+        1800
+      ],
+      "position": [
+        33,
+        60
+      ]
+    }
+  },
+  {
+    "character": "olga",
+    "outfit": "indoor",
+    "emotion": "sad",
+    "pose": "original_fixed",
+    "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/olga/indoor/sad.png",
+    "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/olga_indoor_sad_native.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "export_size": [
+      1080,
+      1920
+    ],
+    "mode": "RGBA",
+    "reference": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/olga_indoor_neutral_native.png",
+    "generation": "built_in_imagegen",
+    "export": "single full-frame fit into 1040x1800 at y60; no atlas",
+    "export_transform": {
+      "size": [
+        1013,
+        1800
+      ],
+      "position": [
+        33,
+        60
+      ]
+    }
+  },
+  {
+    "character": "olga",
+    "outfit": "indoor",
+    "emotion": "surprised",
+    "pose": "original_fixed",
+    "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/olga/indoor/surprised.png",
+    "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/olga_indoor_surprised_native.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "export_size": [
+      1080,
+      1920
+    ],
+    "mode": "RGBA",
+    "reference": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/olga_indoor_neutral_native.png",
+    "generation": "built_in_imagegen",
+    "export": "single full-frame fit into 1040x1800 at y60; no atlas",
+    "export_transform": {
+      "size": [
+        1013,
+        1800
+      ],
+      "position": [
+        33,
+        60
+      ]
+    }
+  },
+  {
+    "character": "olga",
+    "outfit": "indoor",
+    "emotion": "angry",
+    "pose": "original_fixed",
+    "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/olga/indoor/angry.png",
+    "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/olga_indoor_angry_native.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "export_size": [
+      1080,
+      1920
+    ],
+    "mode": "RGBA",
+    "reference": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/olga_indoor_neutral_native.png",
+    "generation": "built_in_imagegen",
+    "export": "single full-frame fit into 1040x1800 at y60; no atlas",
+    "export_transform": {
+      "size": [
+        1013,
+        1800
+      ],
+      "position": [
+        33,
+        60
+      ]
+    }
+  },
+  {
+    "character": "viola",
+    "outfit": "winter",
+    "emotion": "neutral",
+    "pose": "original_fixed",
+    "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/viola/winter/neutral.png",
+    "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/viola_winter_neutral_native.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "export_size": [
+      1080,
+      1920
+    ],
+    "mode": "RGBA",
+    "reference": "/workspace/scratch/5abe4a03ed6c/work/v2/references/viola_original.png",
+    "generation": "built_in_imagegen",
+    "export": "single full-frame fit into 1040x1800 at y60; no atlas",
+    "export_transform": {
+      "size": [
+        1013,
+        1800
+      ],
+      "position": [
+        33,
+        60
+      ]
+    }
+  },
+  {
+    "character": "viola",
+    "outfit": "winter",
+    "emotion": "soft_smile",
+    "pose": "original_fixed",
+    "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/viola/winter/soft_smile.png",
+    "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/viola_winter_soft_smile_native.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "export_size": [
+      1080,
+      1920
+    ],
+    "mode": "RGBA",
+    "reference": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/viola_winter_neutral_native.png",
+    "generation": "built_in_imagegen",
+    "export": "single full-frame fit into 1040x1800 at y60; no atlas",
+    "export_transform": {
+      "size": [
+        1013,
+        1800
+      ],
+      "position": [
+        33,
+        60
+      ]
+    }
+  },
+  {
+    "character": "viola",
+    "outfit": "winter",
+    "emotion": "thoughtful",
+    "pose": "original_fixed",
+    "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/viola/winter/thoughtful.png",
+    "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/viola_winter_thoughtful_native.png",
+    "native_size": [
+      941,
+      1671
+    ],
+    "export_size": [
+      1080,
+      1920
+    ],
+    "mode": "RGBA",
+    "reference": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/viola_winter_neutral_native.png",
+    "generation": "built_in_imagegen",
+    "export": "single full-frame fit into 1040x1800 at y60; no atlas",
+    "export_transform": {
+      "size": [
+        1014,
+        1800
+      ],
+      "position": [
+        33,
+        60
+      ]
+    }
+  },
+  {
+    "character": "viola",
+    "outfit": "winter",
+    "emotion": "sad",
+    "pose": "original_fixed",
+    "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/viola/winter/sad.png",
+    "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/viola_winter_sad_native.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "export_size": [
+      1080,
+      1920
+    ],
+    "mode": "RGBA",
+    "reference": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/viola_winter_neutral_native.png",
+    "generation": "built_in_imagegen",
+    "export": "single full-frame fit into 1040x1800 at y60; no atlas",
+    "export_transform": {
+      "size": [
+        1013,
+        1800
+      ],
+      "position": [
+        33,
+        60
+      ]
+    }
+  },
+  {
+    "character": "viola",
+    "outfit": "winter",
+    "emotion": "surprised",
+    "pose": "original_fixed",
+    "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/viola/winter/surprised.png",
+    "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/viola_winter_surprised_native.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "export_size": [
+      1080,
+      1920
+    ],
+    "mode": "RGBA",
+    "reference": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/viola_winter_neutral_native.png",
+    "generation": "built_in_imagegen",
+    "export": "single full-frame fit into 1040x1800 at y60; no atlas",
+    "export_transform": {
+      "size": [
+        1013,
+        1800
+      ],
+      "position": [
+        33,
+        60
+      ]
+    }
+  },
+  {
+    "character": "viola",
+    "outfit": "winter",
+    "emotion": "angry",
+    "pose": "original_fixed",
+    "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/viola/winter/angry.png",
+    "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/viola_winter_angry_native.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "export_size": [
+      1080,
+      1920
+    ],
+    "mode": "RGBA",
+    "reference": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/viola_winter_neutral_native.png",
+    "generation": "built_in_imagegen",
+    "export": "single full-frame fit into 1040x1800 at y60; no atlas",
+    "export_transform": {
+      "size": [
+        1013,
+        1800
+      ],
+      "position": [
+        33,
+        60
+      ]
+    }
+  },
+  {
+    "character": "viola",
+    "outfit": "indoor",
+    "emotion": "neutral",
+    "pose": "original_fixed",
+    "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/viola/indoor/neutral.png",
+    "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/viola_indoor_neutral_native.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "export_size": [
+      1080,
+      1920
+    ],
+    "mode": "RGBA",
+    "reference": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/viola_winter_neutral_native.png",
+    "generation": "built_in_imagegen",
+    "export": "single full-frame fit into 1040x1800 at y60; no atlas",
+    "export_transform": {
+      "size": [
+        1013,
+        1800
+      ],
+      "position": [
+        33,
+        60
+      ]
+    }
+  },
+  {
+    "character": "viola",
+    "outfit": "indoor",
+    "emotion": "soft_smile",
+    "pose": "original_fixed",
+    "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/viola/indoor/soft_smile.png",
+    "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/viola_indoor_soft_smile_native.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "export_size": [
+      1080,
+      1920
+    ],
+    "mode": "RGBA",
+    "reference": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/viola_indoor_neutral_native.png",
+    "generation": "built_in_imagegen",
+    "export": "single full-frame fit into 1040x1800 at y60; no atlas",
+    "export_transform": {
+      "size": [
+        1013,
+        1800
+      ],
+      "position": [
+        33,
+        60
+      ]
+    }
+  },
+  {
+    "character": "viola",
+    "outfit": "indoor",
+    "emotion": "thoughtful",
+    "pose": "original_fixed",
+    "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/viola/indoor/thoughtful.png",
+    "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/viola_indoor_thoughtful_native.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "export_size": [
+      1080,
+      1920
+    ],
+    "mode": "RGBA",
+    "reference": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/viola_indoor_neutral_native.png",
+    "generation": "built_in_imagegen",
+    "export": "single full-frame fit into 1040x1800 at y60; no atlas",
+    "export_transform": {
+      "size": [
+        1013,
+        1800
+      ],
+      "position": [
+        33,
+        60
+      ]
+    }
+  },
+  {
+    "character": "viola",
+    "outfit": "indoor",
+    "emotion": "sad",
+    "pose": "original_fixed",
+    "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/viola/indoor/sad.png",
+    "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/viola_indoor_sad_native.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "export_size": [
+      1080,
+      1920
+    ],
+    "mode": "RGBA",
+    "reference": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/viola_indoor_neutral_native.png",
+    "generation": "built_in_imagegen",
+    "export": "single full-frame fit into 1040x1800 at y60; no atlas",
+    "export_transform": {
+      "size": [
+        1013,
+        1800
+      ],
+      "position": [
+        33,
+        60
+      ]
+    }
+  },
+  {
+    "character": "viola",
+    "outfit": "indoor",
+    "emotion": "surprised",
+    "pose": "original_fixed",
+    "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/viola/indoor/surprised.png",
+    "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/viola_indoor_surprised_native.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "export_size": [
+      1080,
+      1920
+    ],
+    "mode": "RGBA",
+    "reference": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/viola_indoor_neutral_native.png",
+    "generation": "built_in_imagegen",
+    "export": "single full-frame fit into 1040x1800 at y60; no atlas",
+    "export_transform": {
+      "size": [
+        1013,
+        1800
+      ],
+      "position": [
+        33,
+        60
+      ]
+    }
+  },
+  {
+    "character": "viola",
+    "outfit": "indoor",
+    "emotion": "angry",
+    "pose": "original_fixed",
+    "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/viola/indoor/angry.png",
+    "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/viola_indoor_angry_native.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "export_size": [
+      1080,
+      1920
+    ],
+    "mode": "RGBA",
+    "reference": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/viola_indoor_neutral_native.png",
+    "generation": "built_in_imagegen",
+    "export": "single full-frame fit into 1040x1800 at y60; no atlas",
+    "export_transform": {
+      "size": [
+        1013,
+        1800
+      ],
+      "position": [
+        33,
+        60
+      ]
+    }
+  },
+  {
+    "character": "ulyana",
+    "outfit": "winter",
+    "emotion": "neutral",
+    "pose": "original_fixed",
+    "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/ulyana/winter/neutral.png",
+    "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/ulyana_winter_neutral_native.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "export_size": [
+      1080,
+      1920
+    ],
+    "mode": "RGBA",
+    "reference": "/workspace/scratch/5abe4a03ed6c/work/v2/references/ulyana_original.png",
+    "generation": "built_in_imagegen",
+    "export": "single full-frame fit into 1040x1800 at y60; no atlas",
+    "export_transform": {
+      "size": [
+        1013,
+        1800
+      ],
+      "position": [
+        33,
+        60
+      ]
+    }
+  },
+  {
+    "character": "ulyana",
+    "outfit": "winter",
+    "emotion": "soft_smile",
+    "pose": "original_fixed",
+    "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/ulyana/winter/soft_smile.png",
+    "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/ulyana_winter_soft_smile_native.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "export_size": [
+      1080,
+      1920
+    ],
+    "mode": "RGBA",
+    "reference": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/ulyana_winter_neutral_native.png",
+    "generation": "built_in_imagegen",
+    "export": "single full-frame fit into 1040x1800 at y60; no atlas",
+    "export_transform": {
+      "size": [
+        1013,
+        1800
+      ],
+      "position": [
+        33,
+        60
+      ]
+    }
+  },
+  {
+    "character": "ulyana",
+    "outfit": "winter",
+    "emotion": "thoughtful",
+    "pose": "original_fixed",
+    "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/ulyana/winter/thoughtful.png",
+    "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/ulyana_winter_thoughtful_native.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "export_size": [
+      1080,
+      1920
+    ],
+    "mode": "RGBA",
+    "reference": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/ulyana_winter_neutral_native.png",
+    "generation": "built_in_imagegen",
+    "export": "single full-frame fit into 1040x1800 at y60; no atlas",
+    "export_transform": {
+      "size": [
+        1013,
+        1800
+      ],
+      "position": [
+        33,
+        60
+      ]
+    }
+  },
+  {
+    "character": "ulyana",
+    "outfit": "winter",
+    "emotion": "sad",
+    "pose": "original_fixed",
+    "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/ulyana/winter/sad.png",
+    "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/ulyana_winter_sad_native.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "export_size": [
+      1080,
+      1920
+    ],
+    "mode": "RGBA",
+    "reference": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/ulyana_winter_neutral_native.png",
+    "generation": "built_in_imagegen",
+    "export": "single full-frame fit into 1040x1800 at y60; no atlas",
+    "export_transform": {
+      "size": [
+        1013,
+        1800
+      ],
+      "position": [
+        33,
+        60
+      ]
+    }
+  },
+  {
+    "character": "ulyana",
+    "outfit": "winter",
+    "emotion": "surprised",
+    "pose": "original_fixed",
+    "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/ulyana/winter/surprised.png",
+    "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/ulyana_winter_surprised_native.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "export_size": [
+      1080,
+      1920
+    ],
+    "mode": "RGBA",
+    "reference": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/ulyana_winter_neutral_native.png",
+    "generation": "built_in_imagegen",
+    "export": "single full-frame fit into 1040x1800 at y60; no atlas",
+    "export_transform": {
+      "size": [
+        1013,
+        1800
+      ],
+      "position": [
+        33,
+        60
+      ]
+    }
+  },
+  {
+    "character": "ulyana",
+    "outfit": "winter",
+    "emotion": "angry",
+    "pose": "original_fixed",
+    "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/ulyana/winter/angry.png",
+    "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/ulyana_winter_angry_native.png",
+    "native_size": [
+      941,
+      1671
+    ],
+    "export_size": [
+      1080,
+      1920
+    ],
+    "mode": "RGBA",
+    "reference": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/ulyana_winter_neutral_native.png",
+    "generation": "built_in_imagegen",
+    "export": "single full-frame fit into 1040x1800 at y60; no atlas",
+    "export_transform": {
+      "size": [
+        1014,
+        1800
+      ],
+      "position": [
+        33,
+        60
+      ]
+    }
+  },
+  {
+    "character": "ulyana",
+    "outfit": "indoor",
+    "emotion": "neutral",
+    "pose": "original_fixed",
+    "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/ulyana/indoor/neutral.png",
+    "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/ulyana_indoor_neutral_native.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "export_size": [
+      1080,
+      1920
+    ],
+    "mode": "RGBA",
+    "reference": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/ulyana_winter_neutral_native.png",
+    "generation": "built_in_imagegen",
+    "export": "single full-frame fit into 1040x1800 at y60; no atlas",
+    "export_transform": {
+      "size": [
+        1013,
+        1800
+      ],
+      "position": [
+        33,
+        60
+      ]
+    }
+  },
+  {
+    "character": "ulyana",
+    "outfit": "indoor",
+    "emotion": "soft_smile",
+    "pose": "original_fixed",
+    "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/ulyana/indoor/soft_smile.png",
+    "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/ulyana_indoor_soft_smile_native.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "export_size": [
+      1080,
+      1920
+    ],
+    "mode": "RGBA",
+    "reference": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/ulyana_indoor_neutral_native.png",
+    "generation": "built_in_imagegen",
+    "export": "single full-frame fit into 1040x1800 at y60; no atlas",
+    "export_transform": {
+      "size": [
+        1013,
+        1800
+      ],
+      "position": [
+        33,
+        60
+      ]
+    }
+  },
+  {
+    "character": "ulyana",
+    "outfit": "indoor",
+    "emotion": "thoughtful",
+    "pose": "original_fixed",
+    "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/ulyana/indoor/thoughtful.png",
+    "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/ulyana_indoor_thoughtful_native.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "export_size": [
+      1080,
+      1920
+    ],
+    "mode": "RGBA",
+    "reference": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/ulyana_indoor_neutral_native.png",
+    "generation": "built_in_imagegen",
+    "export": "single full-frame fit into 1040x1800 at y60; no atlas",
+    "export_transform": {
+      "size": [
+        1013,
+        1800
+      ],
+      "position": [
+        33,
+        60
+      ]
+    }
+  },
+  {
+    "character": "ulyana",
+    "outfit": "indoor",
+    "emotion": "sad",
+    "pose": "original_fixed",
+    "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/ulyana/indoor/sad.png",
+    "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/ulyana_indoor_sad_native.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "export_size": [
+      1080,
+      1920
+    ],
+    "mode": "RGBA",
+    "reference": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/ulyana_indoor_neutral_native.png",
+    "generation": "built_in_imagegen",
+    "export": "single full-frame fit into 1040x1800 at y60; no atlas",
+    "export_transform": {
+      "size": [
+        1013,
+        1800
+      ],
+      "position": [
+        33,
+        60
+      ]
+    }
+  },
+  {
+    "character": "ulyana",
+    "outfit": "indoor",
+    "emotion": "surprised",
+    "pose": "original_fixed",
+    "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/ulyana/indoor/surprised.png",
+    "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/ulyana_indoor_surprised_native.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "export_size": [
+      1080,
+      1920
+    ],
+    "mode": "RGBA",
+    "reference": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/ulyana_indoor_neutral_native.png",
+    "generation": "built_in_imagegen",
+    "export": "single full-frame fit into 1040x1800 at y60; no atlas",
+    "export_transform": {
+      "size": [
+        1013,
+        1800
+      ],
+      "position": [
+        33,
+        60
+      ]
+    }
+  },
+  {
+    "character": "ulyana",
+    "outfit": "indoor",
+    "emotion": "angry",
+    "pose": "original_fixed",
+    "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/ulyana/indoor/angry.png",
+    "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/ulyana_indoor_angry_native.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "export_size": [
+      1080,
+      1920
+    ],
+    "mode": "RGBA",
+    "reference": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_b/ulyana_indoor_neutral_native.png",
+    "generation": "built_in_imagegen",
+    "export": "single full-frame fit into 1040x1800 at y60; no atlas",
+    "export_transform": {
+      "size": [
+        1013,
+        1800
+      ],
+      "position": [
+        33,
+        60
+      ]
+    }
+  }
+]

@@ -1,0 +1,38 @@
+{
+  "character": "elektronik",
+  "outfit": "indoor",
+  "emotion": "surprised",
+  "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-493d45ce-984a-492f-b398-919606cee593.png",
+  "reference": [
+    "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/elektronik_indoor_neutral.png"
+  ],
+  "prompt": null,
+  "recovery_note": "Recovered cached ImageGen result after interruption; exact original prompt was lost and is unavailable. Inspected result shows Elektronik indoor surprised: raised brows, open eyes and open mouth, same full-body pose and outfit.",
+  "native_size": [
+    941,
+    1672
+  ],
+  "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/elektronik/indoor/surprised.png",
+  "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/elektronik_indoor_surprised.png",
+  "size": [
+    1080,
+    1920
+  ],
+  "alpha_extrema": [
+    0,
+    255
+  ],
+  "export_method": "single full-frame image uniformly projected into 1080x1920 using fixed neutral-pose bounding box/scale/baseline1840 for every emotion; no atlas extraction",
+  "export_anchor_bbox": [
+    206,
+    30,
+    736,
+    1643
+  ],
+  "export_position": [
+    26,
+    47
+  ],
+  "export_scale": 1.0911345319280843,
+  "pose": "one fixed pose"
+}

@@ -1,0 +1,268 @@
+{
+  "sprite_count": 156,
+  "image_count": 21,
+  "missing": [],
+  "issues": [],
+  "pose_spans": [
+    {
+      "character": "sokolova",
+      "outfit": "winter",
+      "bbox_span_pixels": [
+        1,
+        12,
+        4,
+        2
+      ]
+    },
+    {
+      "character": "sokolova",
+      "outfit": "indoor",
+      "bbox_span_pixels": [
+        1,
+        1,
+        5,
+        2
+      ]
+    },
+    {
+      "character": "darya",
+      "outfit": "winter",
+      "bbox_span_pixels": [
+        3,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "character": "darya",
+      "outfit": "indoor",
+      "bbox_span_pixels": [
+        6,
+        12,
+        2,
+        3
+      ]
+    },
+    {
+      "character": "semen",
+      "outfit": "winter",
+      "bbox_span_pixels": [
+        1,
+        4,
+        4,
+        1
+      ]
+    },
+    {
+      "character": "semen",
+      "outfit": "indoor",
+      "bbox_span_pixels": [
+        1,
+        4,
+        2,
+        4
+      ]
+    },
+    {
+      "character": "slavya",
+      "outfit": "winter",
+      "bbox_span_pixels": [
+        3,
+        3,
+        4,
+        2
+      ]
+    },
+    {
+      "character": "slavya",
+      "outfit": "indoor",
+      "bbox_span_pixels": [
+        3,
+        3,
+        4,
+        2
+      ]
+    },
+    {
+      "character": "alisa",
+      "outfit": "winter",
+      "bbox_span_pixels": [
+        0,
+        4,
+        2,
+        2
+      ]
+    },
+    {
+      "character": "alisa",
+      "outfit": "indoor",
+      "bbox_span_pixels": [
+        2,
+        2,
+        1,
+        1
+      ]
+    },
+    {
+      "character": "miku",
+      "outfit": "winter",
+      "bbox_span_pixels": [
+        3,
+        3,
+        3,
+        2
+      ]
+    },
+    {
+      "character": "miku",
+      "outfit": "indoor",
+      "bbox_span_pixels": [
+        2,
+        3,
+        4,
+        3
+      ]
+    },
+    {
+      "character": "zhenya",
+      "outfit": "winter",
+      "bbox_span_pixels": [
+        1,
+        6,
+        3,
+        2
+      ]
+    },
+    {
+      "character": "zhenya",
+      "outfit": "indoor",
+      "bbox_span_pixels": [
+        3,
+        2,
+        2,
+        4
+      ]
+    },
+    {
+      "character": "tikhonova",
+      "outfit": "winter",
+      "bbox_span_pixels": [
+        5,
+        5,
+        2,
+        1
+      ]
+    },
+    {
+      "character": "tikhonova",
+      "outfit": "indoor",
+      "bbox_span_pixels": [
+        2,
+        4,
+        2,
+        2
+      ]
+    },
+    {
+      "character": "olga",
+      "outfit": "winter",
+      "bbox_span_pixels": [
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "character": "olga",
+      "outfit": "indoor",
+      "bbox_span_pixels": [
+        2,
+        3,
+        1,
+        3
+      ]
+    },
+    {
+      "character": "viola",
+      "outfit": "winter",
+      "bbox_span_pixels": [
+        1,
+        5,
+        2,
+        3
+      ]
+    },
+    {
+      "character": "viola",
+      "outfit": "indoor",
+      "bbox_span_pixels": [
+        2,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "character": "ulyana",
+      "outfit": "winter",
+      "bbox_span_pixels": [
+        3,
+        4,
+        2,
+        4
+      ]
+    },
+    {
+      "character": "ulyana",
+      "outfit": "indoor",
+      "bbox_span_pixels": [
+        3,
+        2,
+        1,
+        1
+      ]
+    },
+    {
+      "character": "elektronik",
+      "outfit": "winter",
+      "bbox_span_pixels": [
+        2,
+        3,
+        1,
+        1
+      ]
+    },
+    {
+      "character": "elektronik",
+      "outfit": "indoor",
+      "bbox_span_pixels": [
+        3,
+        3,
+        1,
+        1
+      ]
+    },
+    {
+      "character": "shurik",
+      "outfit": "winter",
+      "bbox_span_pixels": [
+        1,
+        3,
+        1,
+        3
+      ]
+    },
+    {
+      "character": "shurik",
+      "outfit": "indoor",
+      "bbox_span_pixels": [
+        2,
+        2,
+        3,
+        3
+      ]
+    }
+  ]
+}

@@ -1,0 +1,942 @@
+{
+  "tool": "built-in image_gen",
+  "sprites": [
+    {
+      "character": "darya",
+      "outfit": "indoor",
+      "emotion": "angry",
+      "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-2fb4ed1f-f4a7-4e23-954d-aff88aeab819.png",
+      "reference": [
+        "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/darya_indoor_neutral.png"
+      ],
+      "prompt": "Use case: identity-preserve facial-expression edit. Edit target is Darya INDOOR NEUTRAL full-body transparent sprite. Change ONLY facial expression to restrained anger/annoyance, eyebrows slightly lowered, eyes narrowed, lips pressed. Preserve everything else exactly: same red tousled hair strands and silhouette, green eyes, face identity and head angle, identical body anatomy/standing pose, one hand loosely across opposite forearm, identical finger positions, white opaque long sleeve button blouse, black trousers and belt, simple black loafers, their folds and contours, and same complete head-to-soles framing. Only eyebrows/eyes/mouth/cheeks may change. Don't move or redraw body, hair, hands, feet, clothing, no new accessories. Match existing polished anime mod art. One single character full-body, portrait9:16 high resolution1080x1920 or2160x3840, true transparent alpha, no ground shadow, no scenery, no text/grid.",
+      "native_size": [
+        941,
+        1672
+      ],
+      "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/darya/indoor/angry.png",
+      "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/darya_indoor_angry.png",
+      "size": [
+        1080,
+        1920
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "export_method": "single full-frame image scaled uniformly into transparent 1080x1920 canvas; no atlas extraction",
+      "pose": "one fixed pose"
+    },
+    {
+      "character": "darya",
+      "outfit": "indoor",
+      "emotion": "neutral",
+      "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-cf3ec255-ad4e-4c66-82fd-712ac93dbb40.png",
+      "reference": [
+        "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/darya_winter_neutral.png"
+      ],
+      "prompt": "Use case: identity-preserve redressing. The supplied image is the exact existing Darya Eretikova character sprite. Change ONLY her clothing into her INDOOR outfit by removing the black winter jacket and replacing the heavy lace-up winter boots with plain closed black indoor loafers. Keep the white long-sleeved button blouse and black trousers/belt visible beneath, now fully exposed; blouse is modest and opaque. Keep SAME exact standing pose: tilted head, one hand loosely resting across opposite forearm, legs and feet in identical positions. Her red tousled shoulder-length hair, green eyes, pale face shape, ear piercings, slim adult22 anatomy, body proportions, head angle and facial expression remain exact. Neutral relaxed closed mouth. Do not change hair contour, don't add accessories. Full-length figure entirely visible including all hair and both soles, same frame scale, real transparent alpha. Single isolated sprite, no background, no ground shadow, no text/grid. Portrait9:16 1080x1920 or2160x3840, crisp polished anime matching edit target, no redesign.",
+      "native_size": [
+        941,
+        1672
+      ],
+      "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/darya/indoor/neutral.png",
+      "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/darya_indoor_neutral.png",
+      "size": [
+        1080,
+        1920
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "export_method": "single full-frame image scaled uniformly into transparent 1080x1920 canvas; no atlas extraction",
+      "pose": "one fixed pose"
+    },
+    {
+      "character": "darya",
+      "outfit": "indoor",
+      "emotion": "sad",
+      "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-7702ad58-efbf-4193-a562-502d82e13a1e.png",
+      "reference": [
+        "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/darya_indoor_neutral.png"
+      ],
+      "prompt": "Use case: identity-preserve facial-expression edit. Edit target is Darya INDOOR NEUTRAL full-body transparent sprite. Change ONLY facial expression to quietly sad, inner brows gently lifted and closed mouth subtly downturned, no tears. Preserve everything else exactly: same red tousled hair strands and silhouette, green eyes, face identity and head angle, identical body anatomy/standing pose, one hand loosely across opposite forearm, identical finger positions, white opaque long sleeve button blouse, black trousers and belt, simple black loafers, their folds and contours, and same complete head-to-soles framing. Only eyebrows/eyes/mouth/cheeks may change. Don't move or redraw body, hair, hands, feet, clothing, no new accessories. Match existing polished anime mod art. One single character full-body, portrait9:16 high resolution1080x1920 or2160x3840, true transparent alpha, no ground shadow, no scenery, no text/grid.",
+      "native_size": [
+        941,
+        1672
+      ],
+      "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/darya/indoor/sad.png",
+      "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/darya_indoor_sad.png",
+      "size": [
+        1080,
+        1920
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "export_method": "single full-frame image scaled uniformly into transparent 1080x1920 canvas; no atlas extraction",
+      "pose": "one fixed pose"
+    },
+    {
+      "character": "darya",
+      "outfit": "indoor",
+      "emotion": "soft_smile",
+      "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-b5aadac6-3ccf-4d3a-9b6a-c3f2c29dcba7.png",
+      "reference": [
+        "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/darya_indoor_neutral.png"
+      ],
+      "prompt": "Use case: identity-preserve facial-expression edit. Edit target is Darya INDOOR NEUTRAL full-body transparent sprite. Change ONLY facial expression to a subtle gentle closed-mouth smile, warm softened green eyes. Preserve everything else exactly: same red tousled hair strands and silhouette, green eyes, face identity and head angle, identical body anatomy/standing pose, one hand loosely across opposite forearm, identical finger positions, white opaque long sleeve button blouse, black trousers and belt, simple black loafers, their folds and contours, and same complete head-to-soles framing. Only eyebrows/eyes/mouth/cheeks may change. Don't move or redraw body, hair, hands, feet, clothing, no new accessories. Match existing polished anime mod art. One single character full-body, portrait9:16 high resolution1080x1920 or2160x3840, true transparent alpha, no ground shadow, no scenery, no text/grid.",
+      "native_size": [
+        941,
+        1671
+      ],
+      "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/darya/indoor/soft_smile.png",
+      "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/darya_indoor_soft_smile.png",
+      "size": [
+        1080,
+        1920
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "export_method": "single full-frame image scaled uniformly into transparent 1080x1920 canvas; no atlas extraction",
+      "pose": "one fixed pose"
+    },
+    {
+      "character": "darya",
+      "outfit": "indoor",
+      "emotion": "surprised",
+      "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-f2bc8beb-2837-4d9c-81f7-901ca4f95609.png",
+      "reference": [
+        "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/darya_indoor_neutral.png"
+      ],
+      "prompt": "Use case: identity-preserve facial-expression edit. Edit target is Darya INDOOR NEUTRAL full-body transparent sprite. Change ONLY facial expression to mildly surprised, green eyes slightly wider and lips a little parted. Preserve everything else exactly: same red tousled hair strands and silhouette, green eyes, face identity and head angle, identical body anatomy/standing pose, one hand loosely across opposite forearm, identical finger positions, white opaque long sleeve button blouse, black trousers and belt, simple black loafers, their folds and contours, and same complete head-to-soles framing. Only eyebrows/eyes/mouth/cheeks may change. Don't move or redraw body, hair, hands, feet, clothing, no new accessories. Match existing polished anime mod art. One single character full-body, portrait9:16 high resolution1080x1920 or2160x3840, true transparent alpha, no ground shadow, no scenery, no text/grid.",
+      "native_size": [
+        941,
+        1672
+      ],
+      "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/darya/indoor/surprised.png",
+      "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/darya_indoor_surprised.png",
+      "size": [
+        1080,
+        1920
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "export_method": "single full-frame image scaled uniformly into transparent 1080x1920 canvas; no atlas extraction",
+      "pose": "one fixed pose"
+    },
+    {
+      "character": "darya",
+      "outfit": "indoor",
+      "emotion": "thoughtful",
+      "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-d536adc2-6523-44c9-9dfd-62d01da120b0.png",
+      "reference": [
+        "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/darya_indoor_neutral.png"
+      ],
+      "prompt": "Use case: identity-preserve facial-expression edit. Edit target is Darya INDOOR NEUTRAL full-body transparent sprite. Change ONLY facial expression to quietly thoughtful, brows slightly knitted, relaxed mouth, eyes looking slightly aside without turning head. Preserve everything else exactly: same red tousled hair strands and silhouette, green eyes, face identity and head angle, identical body anatomy/standing pose, one hand loosely across opposite forearm, identical finger positions, white opaque long sleeve button blouse, black trousers and belt, simple black loafers, their folds and contours, and same complete head-to-soles framing. Only eyebrows/eyes/mouth/cheeks may change. Don't move or redraw body, hair, hands, feet, clothing, no new accessories. Match existing polished anime mod art. One single character full-body, portrait9:16 high resolution1080x1920 or2160x3840, true transparent alpha, no ground shadow, no scenery, no text/grid.",
+      "native_size": [
+        941,
+        1672
+      ],
+      "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/darya/indoor/thoughtful.png",
+      "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/darya_indoor_thoughtful.png",
+      "size": [
+        1080,
+        1920
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "export_method": "single full-frame image scaled uniformly into transparent 1080x1920 canvas; no atlas extraction",
+      "pose": "one fixed pose"
+    },
+    {
+      "character": "darya",
+      "outfit": "winter",
+      "emotion": "angry",
+      "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-a6e10ed8-7ae2-424f-ac83-a4903ab31b00.png",
+      "reference": [
+        "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/darya_winter_neutral.png"
+      ],
+      "prompt": "Use case: identity-preserve. Edit target is the supplied Darya WINTER NEUTRAL full-body transparent sprite. Make ONLY the facial expression restrained annoyance/anger, eyebrows lowered slightly, narrowed green eyes and pressed lips, no aggressive gesture. This is an expression layer variation for a Ren'Py visual novel: the head angle, face identity, green eye colour, red hair strand placement, outer silhouette, exact body pose, crossed forearms and fingers, black jacket, white blouse, belt, black trousers, chunky black boots and every object must stay in the SAME positions and same scale as input. Do not redraw the body, do not move feet, hands, hips or hair, do not change clothing folds. The ONLY change is eyes/eyebrows/mouth/cheeks of her face. Keep original art and lighting. One character full-length visible including all hair and both soles, same transparent margin. High-resolution portrait9:16 1080x1920 or2160x3840, real transparent alpha. No text, no grid, no scenery or ground shadow.",
+      "native_size": [
+        941,
+        1671
+      ],
+      "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/darya/winter/angry.png",
+      "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/darya_winter_angry.png",
+      "size": [
+        1080,
+        1920
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "export_method": "single full-frame image scaled uniformly into transparent 1080x1920 canvas; no atlas extraction",
+      "pose": "one fixed pose"
+    },
+    {
+      "character": "darya",
+      "outfit": "winter",
+      "emotion": "neutral",
+      "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-64aedff3-e64a-45c4-98b7-5be1a6b4a092.png",
+      "reference": [
+        "/workspace/scratch/5abe4a03ed6c/work/v2/references/darya_winter.png"
+      ],
+      "prompt": "Use case: identity-preserve. Edit target: the supplied EXISTING Darya Eretikova winter sprite from the visual novel mod. Produce ONE single full-body portrait sprite with true transparent alpha, portrait 9:16, 1080x1920 or2160x3840 high resolution. Keep her exact red tousled shoulder-length hair, green eyes, face shape, ear piercings, slim adult22 anatomy, tilted head, asymmetrical standing pose, one hand loosely resting across opposite forearm. Preserve her exact existing black winter jacket over white buttoned blouse, black fitted trousers, chunky lace-up black winter boots. Only correct presentation: add 4% transparent clearance above entire hair and below both boot soles, no cropped tips, center complete figure. Expression calmly neutral, closed relaxed mouth. Match existing polished anime mod art without any redesign, no new accessories, no scenery, no shadow on floor, no checkerboard pixels, no text, no label. Single character only. Do not exaggerate face or body; maintain anatomy and exact pose.",
+      "native_size": [
+        941,
+        1672
+      ],
+      "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/darya/winter/neutral.png",
+      "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/darya_winter_neutral.png",
+      "size": [
+        1080,
+        1920
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "export_method": "single full-frame image scaled uniformly into transparent 1080x1920 canvas; no atlas extraction",
+      "pose": "one fixed pose"
+    },
+    {
+      "character": "darya",
+      "outfit": "winter",
+      "emotion": "sad",
+      "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-e0c0cfc3-6c0c-4ffb-a984-785f91ebf381.png",
+      "reference": [
+        "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/darya_winter_neutral.png"
+      ],
+      "prompt": "Use case: identity-preserve. Edit target is the supplied Darya WINTER NEUTRAL full-body transparent sprite. Make ONLY the facial expression quiet sadness, inner brows gently raised and closed mouth subtly downturned, no tears. This is an expression layer variation for a Ren'Py visual novel: the head angle, face identity, green eye colour, red hair strand placement, outer silhouette, exact body pose, crossed forearms and fingers, black jacket, white blouse, belt, black trousers, chunky black boots and every object must stay in the SAME positions and same scale as input. Do not redraw the body, do not move feet, hands, hips or hair, do not change clothing folds. The ONLY change is eyes/eyebrows/mouth/cheeks of her face. Keep original art and lighting. One character full-length visible including all hair and both soles, same transparent margin. High-resolution portrait9:16 1080x1920 or2160x3840, real transparent alpha. No text, no grid, no scenery or ground shadow.",
+      "native_size": [
+        941,
+        1671
+      ],
+      "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/darya/winter/sad.png",
+      "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/darya_winter_sad.png",
+      "size": [
+        1080,
+        1920
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "export_method": "single full-frame image scaled uniformly into transparent 1080x1920 canvas; no atlas extraction",
+      "pose": "one fixed pose"
+    },
+    {
+      "character": "darya",
+      "outfit": "winter",
+      "emotion": "soft_smile",
+      "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-bab983d9-aa1c-49bd-9304-87d6291bef63.png",
+      "reference": [
+        "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/darya_winter_neutral.png"
+      ],
+      "prompt": "Use case: identity-preserve. Edit target is the supplied Darya WINTER NEUTRAL full-body transparent sprite. Make ONLY the facial expression a subtle genuine gentle smile, lips closed, softened green eyes. This is an expression layer variation for a Ren'Py visual novel: the head angle, face identity, green eye colour, red hair strand placement, outer silhouette, exact body pose, crossed forearms and fingers, black jacket, white blouse, belt, black trousers, chunky black boots and every object must stay in the SAME positions and same scale as input. Do not redraw the body, do not move feet, hands, hips or hair, do not change clothing folds. The ONLY change is eyes/eyebrows/mouth/cheeks of her face. Keep original art and lighting. One character full-length visible including all hair and both soles, same transparent margin. High-resolution portrait9:16 1080x1920 or2160x3840, real transparent alpha. No text, no grid, no scenery or ground shadow.",
+      "native_size": [
+        941,
+        1671
+      ],
+      "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/darya/winter/soft_smile.png",
+      "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/darya_winter_soft_smile.png",
+      "size": [
+        1080,
+        1920
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "export_method": "single full-frame image scaled uniformly into transparent 1080x1920 canvas; no atlas extraction",
+      "pose": "one fixed pose"
+    },
+    {
+      "character": "darya",
+      "outfit": "winter",
+      "emotion": "surprised",
+      "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-bd2464f3-f452-4ff2-b250-e7ff5920722c.png",
+      "reference": [
+        "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/darya_winter_neutral.png"
+      ],
+      "prompt": "Use case: identity-preserve. Edit target is the supplied Darya WINTER NEUTRAL full-body transparent sprite. Make ONLY the facial expression mild surprise, green eyes a little widened and lips slightly parted, no raised hands. This is an expression layer variation for a Ren'Py visual novel: the head angle, face identity, green eye colour, red hair strand placement, outer silhouette, exact body pose, crossed forearms and fingers, black jacket, white blouse, belt, black trousers, chunky black boots and every object must stay in the SAME positions and same scale as input. Do not redraw the body, do not move feet, hands, hips or hair, do not change clothing folds. The ONLY change is eyes/eyebrows/mouth/cheeks of her face. Keep original art and lighting. One character full-length visible including all hair and both soles, same transparent margin. High-resolution portrait9:16 1080x1920 or2160x3840, real transparent alpha. No text, no grid, no scenery or ground shadow.",
+      "native_size": [
+        941,
+        1671
+      ],
+      "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/darya/winter/surprised.png",
+      "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/darya_winter_surprised.png",
+      "size": [
+        1080,
+        1920
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "export_method": "single full-frame image scaled uniformly into transparent 1080x1920 canvas; no atlas extraction",
+      "pose": "one fixed pose"
+    },
+    {
+      "character": "darya",
+      "outfit": "winter",
+      "emotion": "thoughtful",
+      "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-400d3bf2-9b21-4e56-b60e-89604f793961.png",
+      "reference": [
+        "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/darya_winter_neutral.png"
+      ],
+      "prompt": "Use case: identity-preserve. Edit target is the supplied Darya WINTER NEUTRAL full-body transparent sprite. Make ONLY the facial expression quietly thoughtful, brows slightly knit and mouth neutral, eyes looking slightly aside without turning the head. This is an expression layer variation for a Ren'Py visual novel: the head angle, face identity, green eye colour, red hair strand placement, outer silhouette, exact body pose, crossed forearms and fingers, black jacket, white blouse, belt, black trousers, chunky black boots and every object must stay in the SAME positions and same scale as input. Do not redraw the body, do not move feet, hands, hips or hair, do not change clothing folds. The ONLY change is eyes/eyebrows/mouth/cheeks of her face. Keep original art and lighting. One character full-length visible including all hair and both soles, same transparent margin. High-resolution portrait9:16 1080x1920 or2160x3840, real transparent alpha. No text, no grid, no scenery or ground shadow.",
+      "native_size": [
+        941,
+        1671
+      ],
+      "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/darya/winter/thoughtful.png",
+      "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/darya_winter_thoughtful.png",
+      "size": [
+        1080,
+        1920
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "export_method": "single full-frame image scaled uniformly into transparent 1080x1920 canvas; no atlas extraction",
+      "pose": "one fixed pose"
+    },
+    {
+      "character": "semen",
+      "outfit": "indoor",
+      "emotion": "angry",
+      "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-7a7476fa-425b-43fd-9b5b-3d08823944d6.png",
+      "reference": [
+        "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/semen_indoor_neutral.png"
+      ],
+      "prompt": "Use case: identity-preserve. Change ONLY facial expression of exact SEMYON INDOOR NEUTRAL full-body sprite to restrained irritation/anger, brows lowered and brown eyes narrowed slightly, lips pressed. Keep exact original face identity/brown eyes/brown spiky hair and all outer hair, head angle, masculine anatomy and body proportions, same standing pose, arms and hands/fingers, feet, charcoal worn short-sleeve T-shirt, blue jeans and plain closed dark house shoes, clothing folds, outline, colors/light and complete framing/scale unchanged. A Ren'Py one-pose emotion variant: no shifting or redrawing anything outside eyes/brows/mouth/cheeks. One character entirely head-to-soles, portrait9:16 high-res1080x1920 or2160x3840, real transparent alpha, no scenery, groundshadow, extra person, grid or text.",
+      "native_size": [
+        941,
+        1672
+      ],
+      "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/semen/indoor/angry.png",
+      "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/semen_indoor_angry.png",
+      "size": [
+        1080,
+        1920
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "export_method": "single full-frame image scaled uniformly into transparent 1080x1920 canvas; no atlas extraction",
+      "pose": "one fixed pose"
+    },
+    {
+      "character": "semen",
+      "outfit": "indoor",
+      "emotion": "neutral",
+      "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-d9001057-9ae1-4f32-b62c-98b3dc6114fa.png",
+      "reference": [
+        "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/semen_winter_neutral.png"
+      ],
+      "prompt": "Use case: identity-preserve redressing. Edit exact supplied SEMYON winter neutral sprite into his ordinary INDOOR/home outfit by changing ONLY clothing. Remove the black winter jacket/scarf, replace with a plain slightly worn charcoal dark-gray short-sleeved T-shirt; keep dark blue jeans, replace winter boots with simple closed dark house shoes. Preserve his exact original face identity, brown eyes, brown spiky side-parted hair, head angle, neutral relaxed closed-mouth expression, masculine adult anatomy/proportions, EXACT standing pose with both arms relaxed at sides, hand/finger/feet positions. Keep camera/framing/scale and full hair-to-soles outline identical. No necklaces, no watches, no new accessories. Match original mod crisp anime lineart/cel coloring, no redesign. ONE full body isolated character, genuine transparent alpha, portrait9:16 high-resolution1080x1920 or2160x3840, safe margins, no scenery, groundshadow, labels, text or grid.",
+      "native_size": [
+        941,
+        1672
+      ],
+      "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/semen/indoor/neutral.png",
+      "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/semen_indoor_neutral.png",
+      "size": [
+        1080,
+        1920
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "export_method": "single full-frame image scaled uniformly into transparent 1080x1920 canvas; no atlas extraction",
+      "pose": "one fixed pose"
+    },
+    {
+      "character": "semen",
+      "outfit": "indoor",
+      "emotion": "sad",
+      "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-049503e1-a93d-4b39-ba86-22af2645b40c.png",
+      "reference": [
+        "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/semen_indoor_neutral.png"
+      ],
+      "prompt": "Use case: identity-preserve. Change ONLY facial expression of exact SEMYON INDOOR NEUTRAL full-body sprite to subdued sadness, inner brows slightly raised and mouth subtly downturned, no tears. Keep exact original face identity/brown eyes/brown spiky hair and all outer hair, head angle, masculine anatomy and body proportions, same standing pose, arms and hands/fingers, feet, charcoal worn short-sleeve T-shirt, blue jeans and plain closed dark house shoes, clothing folds, outline, colors/light and complete framing/scale unchanged. A Ren'Py one-pose emotion variant: no shifting or redrawing anything outside eyes/brows/mouth/cheeks. One character entirely head-to-soles, portrait9:16 high-res1080x1920 or2160x3840, real transparent alpha, no scenery, groundshadow, extra person, grid or text.",
+      "native_size": [
+        941,
+        1671
+      ],
+      "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/semen/indoor/sad.png",
+      "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/semen_indoor_sad.png",
+      "size": [
+        1080,
+        1920
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "export_method": "single full-frame image scaled uniformly into transparent 1080x1920 canvas; no atlas extraction",
+      "pose": "one fixed pose"
+    },
+    {
+      "character": "semen",
+      "outfit": "indoor",
+      "emotion": "soft_smile",
+      "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-a9f0f232-4a58-438e-9c47-2f6b162ac308.png",
+      "reference": [
+        "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/semen_indoor_neutral.png"
+      ],
+      "prompt": "Use case: identity-preserve. Change ONLY facial expression of exact SEMYON INDOOR NEUTRAL full-body sprite to small warm closed-mouth smile, eyes softened. Keep exact original face identity/brown eyes/brown spiky hair and all outer hair, head angle, masculine anatomy and body proportions, same standing pose, arms and hands/fingers, feet, charcoal worn short-sleeve T-shirt, blue jeans and plain closed dark house shoes, clothing folds, outline, colors/light and complete framing/scale unchanged. A Ren'Py one-pose emotion variant: no shifting or redrawing anything outside eyes/brows/mouth/cheeks. One character entirely head-to-soles, portrait9:16 high-res1080x1920 or2160x3840, real transparent alpha, no scenery, groundshadow, extra person, grid or text.",
+      "native_size": [
+        941,
+        1671
+      ],
+      "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/semen/indoor/soft_smile.png",
+      "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/semen_indoor_soft_smile.png",
+      "size": [
+        1080,
+        1920
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "export_method": "single full-frame image scaled uniformly into transparent 1080x1920 canvas; no atlas extraction",
+      "pose": "one fixed pose"
+    },
+    {
+      "character": "semen",
+      "outfit": "indoor",
+      "emotion": "surprised",
+      "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-1f85d6b6-dddc-4fc0-bd45-58b84f21df7a.png",
+      "reference": [
+        "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/semen_indoor_neutral.png"
+      ],
+      "prompt": "Use case: identity-preserve. Change ONLY facial expression of exact SEMYON INDOOR NEUTRAL full-body sprite to mild surprise with brown eyes slightly wider and lips a little parted, no body gesture. Keep exact original face identity/brown eyes/brown spiky hair and all outer hair, head angle, masculine anatomy and body proportions, same standing pose, arms and hands/fingers, feet, charcoal worn short-sleeve T-shirt, blue jeans and plain closed dark house shoes, clothing folds, outline, colors/light and complete framing/scale unchanged. A Ren'Py one-pose emotion variant: no shifting or redrawing anything outside eyes/brows/mouth/cheeks. One character entirely head-to-soles, portrait9:16 high-res1080x1920 or2160x3840, real transparent alpha, no scenery, groundshadow, extra person, grid or text.",
+      "native_size": [
+        941,
+        1672
+      ],
+      "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/semen/indoor/surprised.png",
+      "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/semen_indoor_surprised.png",
+      "size": [
+        1080,
+        1920
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "export_method": "single full-frame image scaled uniformly into transparent 1080x1920 canvas; no atlas extraction",
+      "pose": "one fixed pose"
+    },
+    {
+      "character": "semen",
+      "outfit": "indoor",
+      "emotion": "thoughtful",
+      "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-27f5858a-69b2-4cb8-a2f0-e9cf5e358162.png",
+      "reference": [
+        "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/semen_indoor_neutral.png"
+      ],
+      "prompt": "Use case: identity-preserve. Change ONLY facial expression of exact SEMYON INDOOR NEUTRAL full-body sprite to quietly thoughtful with mildly knit brows, relaxed closed mouth, eyes slightly aside without moving the head. Keep exact original face identity/brown eyes/brown spiky hair and all outer hair, head angle, masculine anatomy and body proportions, same standing pose, arms and hands/fingers, feet, charcoal worn short-sleeve T-shirt, blue jeans and plain closed dark house shoes, clothing folds, outline, colors/light and complete framing/scale unchanged. A Ren'Py one-pose emotion variant: no shifting or redrawing anything outside eyes/brows/mouth/cheeks. One character entirely head-to-soles, portrait9:16 high-res1080x1920 or2160x3840, real transparent alpha, no scenery, groundshadow, extra person, grid or text.",
+      "native_size": [
+        941,
+        1672
+      ],
+      "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/semen/indoor/thoughtful.png",
+      "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/semen_indoor_thoughtful.png",
+      "size": [
+        1080,
+        1920
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "export_method": "single full-frame image scaled uniformly into transparent 1080x1920 canvas; no atlas extraction",
+      "pose": "one fixed pose"
+    },
+    {
+      "character": "semen",
+      "outfit": "winter",
+      "emotion": "angry",
+      "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-e547a2db-4a62-4aaa-aa77-4c77067bb2e3.png",
+      "reference": [
+        "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/semen_winter_neutral.png"
+      ],
+      "prompt": "Use case: identity-preserve. Edit ONLY facial expression of this exact SEMYON WINTER NEUTRAL sprite to restrained annoyance/anger, brows lowered and eyes narrowed slightly, mouth pressed. Preserve exact face identity, brown eyes, original brown spiky side-parted hair and all hair contour, original masculine proportions, identical head angle, standing pose, shoulders/arms/hands/fingers/feet, black quilted jacket, gray scarf, blue jeans, dark winter boots, all folds, silhouette, colors and lighting. Ren'Py same-pose expression variation: DO NOT redraw or shift body, hands, hair, clothes or feet. Only eyes/eyebrows/mouth/cheeks may change. Full head-to-soles framing and same scale. Single complete isolated male sprite with genuine transparent alpha, portrait9:16 high-resolution1080x1920 or2160x3840. No background, extra person, ground shadow, grid or text.",
+      "native_size": [
+        941,
+        1672
+      ],
+      "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/semen/winter/angry.png",
+      "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/semen_winter_angry.png",
+      "size": [
+        1080,
+        1920
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "export_method": "single full-frame image scaled uniformly into transparent 1080x1920 canvas; no atlas extraction",
+      "pose": "one fixed pose"
+    },
+    {
+      "character": "semen",
+      "outfit": "winter",
+      "emotion": "neutral",
+      "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-6791929a-03e8-4572-bd32-a14dba6fd02e.png",
+      "reference": [
+        "/workspace/scratch/5abe4a03ed6c/work/v2/references/semen.png"
+      ],
+      "prompt": "Use case: identity-preserve redressing. Edit this exact existing MOD sprite of SEMYON into his WINTER street outfit. Keep exact original face identity, brown eyes, brown side-parted spiky hair, original masculine young adult proportions and lineart/cel-style. Keep EXACT standing neutral pose, head angle, arms relaxed at sides, hands and fingers/feet positions. Change ONLY clothing: ordinary black quilted winter jacket, gray scarf, dark blue full-length jeans, closed plain dark lace-up winter boots. No pioneer neckerchief, no badges, no shorts, no exposed legs, no new accessories. Expression calmly neutral with relaxed closed mouth, no big grin. One full-body head-to-toes figure, all hair and both soles completely visible, same scale/frame, safe transparent margins. True transparent alpha, portrait9:16 high resolution1080x1920 or2160x3840. Faithful mod character sprite, preserve same face, no new generic anime male, no painterly redesign. No scenery, ground shadow, grid, extra people or text.",
+      "native_size": [
+        941,
+        1672
+      ],
+      "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/semen/winter/neutral.png",
+      "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/semen_winter_neutral.png",
+      "size": [
+        1080,
+        1920
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "export_method": "single full-frame image scaled uniformly into transparent 1080x1920 canvas; no atlas extraction",
+      "pose": "one fixed pose"
+    },
+    {
+      "character": "semen",
+      "outfit": "winter",
+      "emotion": "sad",
+      "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-a68d7869-0de2-495d-9c5c-57b57a38f0e7.png",
+      "reference": [
+        "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/semen_winter_neutral.png"
+      ],
+      "prompt": "Use case: identity-preserve. Edit ONLY facial expression of this exact SEMYON WINTER NEUTRAL sprite to subdued sadness, inner brows gently raised and mouth slightly downturned, no tears. Preserve exact face identity, brown eyes, original brown spiky side-parted hair and all hair contour, original masculine proportions, identical head angle, standing pose, shoulders/arms/hands/fingers/feet, black quilted jacket, gray scarf, blue jeans, dark winter boots, all folds, silhouette, colors and lighting. Ren'Py same-pose expression variation: DO NOT redraw or shift body, hands, hair, clothes or feet. Only eyes/eyebrows/mouth/cheeks may change. Full head-to-soles framing and same scale. Single complete isolated male sprite with genuine transparent alpha, portrait9:16 high-resolution1080x1920 or2160x3840. No background, extra person, ground shadow, grid or text.",
+      "native_size": [
+        941,
+        1672
+      ],
+      "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/semen/winter/sad.png",
+      "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/semen_winter_sad.png",
+      "size": [
+        1080,
+        1920
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "export_method": "single full-frame image scaled uniformly into transparent 1080x1920 canvas; no atlas extraction",
+      "pose": "one fixed pose"
+    },
+    {
+      "character": "semen",
+      "outfit": "winter",
+      "emotion": "soft_smile",
+      "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-eea09d63-0fe1-421d-aaca-209a08f60508.png",
+      "reference": [
+        "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/semen_winter_neutral.png"
+      ],
+      "prompt": "Use case: identity-preserve. Edit ONLY facial expression of this exact SEMYON WINTER NEUTRAL sprite to small genuine warm closed-mouth smile, eyes softened. Preserve exact face identity, brown eyes, original brown spiky side-parted hair and all hair contour, original masculine proportions, identical head angle, standing pose, shoulders/arms/hands/fingers/feet, black quilted jacket, gray scarf, blue jeans, dark winter boots, all folds, silhouette, colors and lighting. Ren'Py same-pose expression variation: DO NOT redraw or shift body, hands, hair, clothes or feet. Only eyes/eyebrows/mouth/cheeks may change. Full head-to-soles framing and same scale. Single complete isolated male sprite with genuine transparent alpha, portrait9:16 high-resolution1080x1920 or2160x3840. No background, extra person, ground shadow, grid or text.",
+      "native_size": [
+        941,
+        1672
+      ],
+      "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/semen/winter/soft_smile.png",
+      "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/semen_winter_soft_smile.png",
+      "size": [
+        1080,
+        1920
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "export_method": "single full-frame image scaled uniformly into transparent 1080x1920 canvas; no atlas extraction",
+      "pose": "one fixed pose"
+    },
+    {
+      "character": "semen",
+      "outfit": "winter",
+      "emotion": "surprised",
+      "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-2aa689a0-91bd-474c-a33c-658195875a17.png",
+      "reference": [
+        "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/semen_winter_neutral.png"
+      ],
+      "prompt": "Use case: identity-preserve. Edit ONLY facial expression of this exact SEMYON WINTER NEUTRAL sprite to mild surprise, brown eyes wider and lips a little parted, no body gesture. Preserve exact face identity, brown eyes, original brown spiky side-parted hair and all hair contour, original masculine proportions, identical head angle, standing pose, shoulders/arms/hands/fingers/feet, black quilted jacket, gray scarf, blue jeans, dark winter boots, all folds, silhouette, colors and lighting. Ren'Py same-pose expression variation: DO NOT redraw or shift body, hands, hair, clothes or feet. Only eyes/eyebrows/mouth/cheeks may change. Full head-to-soles framing and same scale. Single complete isolated male sprite with genuine transparent alpha, portrait9:16 high-resolution1080x1920 or2160x3840. No background, extra person, ground shadow, grid or text.",
+      "native_size": [
+        941,
+        1672
+      ],
+      "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/semen/winter/surprised.png",
+      "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/semen_winter_surprised.png",
+      "size": [
+        1080,
+        1920
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "export_method": "single full-frame image scaled uniformly into transparent 1080x1920 canvas; no atlas extraction",
+      "pose": "one fixed pose"
+    },
+    {
+      "character": "semen",
+      "outfit": "winter",
+      "emotion": "thoughtful",
+      "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-f91173d6-5b76-4615-9295-a029a1e81d31.png",
+      "reference": [
+        "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/semen_winter_neutral.png"
+      ],
+      "prompt": "Use case: identity-preserve. Edit ONLY facial expression of this exact SEMYON WINTER NEUTRAL sprite to quietly thoughtful, brows gently knitted and relaxed closed mouth, eyes slightly aside without head movement. Preserve exact face identity, brown eyes, original brown spiky side-parted hair and all hair contour, original masculine proportions, identical head angle, standing pose, shoulders/arms/hands/fingers/feet, black quilted jacket, gray scarf, blue jeans, dark winter boots, all folds, silhouette, colors and lighting. Ren'Py same-pose expression variation: DO NOT redraw or shift body, hands, hair, clothes or feet. Only eyes/eyebrows/mouth/cheeks may change. Full head-to-soles framing and same scale. Single complete isolated male sprite with genuine transparent alpha, portrait9:16 high-resolution1080x1920 or2160x3840. No background, extra person, ground shadow, grid or text.",
+      "native_size": [
+        941,
+        1672
+      ],
+      "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/semen/winter/thoughtful.png",
+      "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/semen_winter_thoughtful.png",
+      "size": [
+        1080,
+        1920
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "export_method": "single full-frame image scaled uniformly into transparent 1080x1920 canvas; no atlas extraction",
+      "pose": "one fixed pose"
+    },
+    {
+      "character": "sokolova",
+      "outfit": "indoor",
+      "emotion": "angry",
+      "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-93d0437a-095b-4b23-9f04-8892dc6ab7b6.png",
+      "reference": [
+        "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/sokolova_indoor_neutral.png"
+      ],
+      "prompt": "Use case: identity-preserve. Change ONLY Lena Sokolova's facial expression in this exact INDOOR NEUTRAL sprite to restrained irritation/anger, eyebrows slightly lowered, eyes narrowed, lips pressed. Keep precise face identity/green eyes, identical head angle, purple long wavy hair, white bow and every outer hair strand, body anatomy/pose, shoulders/arms/visible hands/fingers and feet in identical positions. Preserve exact purple hoodie with hood down, black jeans, plain dark closed shoes, fabric folds, outline, color/light, full-body framing/scale. Ren'Py one-pose expression variant: do not shift or redraw body, hair or clothes; only eyes/brows/mouth/cheeks change. One complete figure from hair to both soles, genuine transparent alpha, portrait9:16 high resolution1080x1920 or2160x3840. No other people, props, scenery, shadow, grid or text.",
+      "native_size": [
+        941,
+        1672
+      ],
+      "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/sokolova/indoor/angry.png",
+      "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/sokolova_indoor_angry.png",
+      "size": [
+        1080,
+        1920
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "export_method": "single full-frame image scaled uniformly into transparent 1080x1920 canvas; no atlas extraction",
+      "pose": "one fixed pose"
+    },
+    {
+      "character": "sokolova",
+      "outfit": "indoor",
+      "emotion": "neutral",
+      "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-21a57f81-9900-456e-ae08-6966ab5e3b2e.png",
+      "reference": [
+        "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/sokolova_winter_neutral.png"
+      ],
+      "prompt": "Use case: identity-preserve redressing. Edit this exact supplied Lena Sokolova full-body neutral winter sprite into her INDOOR everyday outfit. Change ONLY clothes: remove parka and scarf, put on a comfortable muted purple hoodie with hood down, plain black jeans, simple closed dark indoor shoes. Keep her SAME exact standing three-quarter pose with both arms/hands relaxed at her sides, identical head/face angle, feet placements, body proportions and complete hair-to-soles frame scale. Preserve exact purple long wavy hair with white bow, green eyes and neutral closed-mouth face, slim petite adult22 anatomy; she is Sokolova, not Lena Tikhonova. No new accessories. Mod's exact existing art, crisp detailed anime, not new generic character. ONE complete isolated head-to-toes sprite, true transparent alpha, portrait9:16 high-res1080x1920 or2160x3840, same outer transparent frame margins, no ground shadow/scenery/text/grid. No extra pose or figure. Hands must stay same position as in supplied sprite.",
+      "native_size": [
+        941,
+        1671
+      ],
+      "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/sokolova/indoor/neutral.png",
+      "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/sokolova_indoor_neutral.png",
+      "size": [
+        1080,
+        1920
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "export_method": "single full-frame image scaled uniformly into transparent 1080x1920 canvas; no atlas extraction",
+      "pose": "one fixed pose"
+    },
+    {
+      "character": "sokolova",
+      "outfit": "indoor",
+      "emotion": "sad",
+      "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-4c56b75b-f768-4944-8d61-03174460743b.png",
+      "reference": [
+        "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/sokolova_indoor_neutral.png"
+      ],
+      "prompt": "Use case: identity-preserve. Change ONLY Lena Sokolova's facial expression in this exact INDOOR NEUTRAL sprite to quiet sadness, inner eyebrows subtly raised and mouth gently downturned, no tears. Keep precise face identity/green eyes, identical head angle, purple long wavy hair, white bow and every outer hair strand, body anatomy/pose, shoulders/arms/visible hands/fingers and feet in identical positions. Preserve exact purple hoodie with hood down, black jeans, plain dark closed shoes, fabric folds, outline, color/light, full-body framing/scale. Ren'Py one-pose expression variant: do not shift or redraw body, hair or clothes; only eyes/brows/mouth/cheeks change. One complete figure from hair to both soles, genuine transparent alpha, portrait9:16 high resolution1080x1920 or2160x3840. No other people, props, scenery, shadow, grid or text.",
+      "native_size": [
+        941,
+        1672
+      ],
+      "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/sokolova/indoor/sad.png",
+      "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/sokolova_indoor_sad.png",
+      "size": [
+        1080,
+        1920
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "export_method": "single full-frame image scaled uniformly into transparent 1080x1920 canvas; no atlas extraction",
+      "pose": "one fixed pose"
+    },
+    {
+      "character": "sokolova",
+      "outfit": "indoor",
+      "emotion": "soft_smile",
+      "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-b71d6087-2bc4-4fc1-bf8a-0a2edbde5a4f.png",
+      "reference": [
+        "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/sokolova_indoor_neutral.png"
+      ],
+      "prompt": "Use case: identity-preserve. Change ONLY Lena Sokolova's facial expression in this exact INDOOR NEUTRAL sprite to gentle genuine closed-mouth smile, eyes softly warm. Keep precise face identity/green eyes, identical head angle, purple long wavy hair, white bow and every outer hair strand, body anatomy/pose, shoulders/arms/visible hands/fingers and feet in identical positions. Preserve exact purple hoodie with hood down, black jeans, plain dark closed shoes, fabric folds, outline, color/light, full-body framing/scale. Ren'Py one-pose expression variant: do not shift or redraw body, hair or clothes; only eyes/brows/mouth/cheeks change. One complete figure from hair to both soles, genuine transparent alpha, portrait9:16 high resolution1080x1920 or2160x3840. No other people, props, scenery, shadow, grid or text.",
+      "native_size": [
+        941,
+        1672
+      ],
+      "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/sokolova/indoor/soft_smile.png",
+      "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/sokolova_indoor_soft_smile.png",
+      "size": [
+        1080,
+        1920
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "export_method": "single full-frame image scaled uniformly into transparent 1080x1920 canvas; no atlas extraction",
+      "pose": "one fixed pose"
+    },
+    {
+      "character": "sokolova",
+      "outfit": "indoor",
+      "emotion": "surprised",
+      "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-8a3e2ea0-22df-46ad-a9fc-b9e4c0d4a170.png",
+      "reference": [
+        "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/sokolova_indoor_neutral.png"
+      ],
+      "prompt": "Use case: identity-preserve. Change ONLY Lena Sokolova's facial expression in this exact INDOOR NEUTRAL sprite to mild surprise, green eyes wider and lips just a little parted, no bodily gesture. Keep precise face identity/green eyes, identical head angle, purple long wavy hair, white bow and every outer hair strand, body anatomy/pose, shoulders/arms/visible hands/fingers and feet in identical positions. Preserve exact purple hoodie with hood down, black jeans, plain dark closed shoes, fabric folds, outline, color/light, full-body framing/scale. Ren'Py one-pose expression variant: do not shift or redraw body, hair or clothes; only eyes/brows/mouth/cheeks change. One complete figure from hair to both soles, genuine transparent alpha, portrait9:16 high resolution1080x1920 or2160x3840. No other people, props, scenery, shadow, grid or text.",
+      "native_size": [
+        941,
+        1672
+      ],
+      "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/sokolova/indoor/surprised.png",
+      "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/sokolova_indoor_surprised.png",
+      "size": [
+        1080,
+        1920
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "export_method": "single full-frame image scaled uniformly into transparent 1080x1920 canvas; no atlas extraction",
+      "pose": "one fixed pose"
+    },
+    {
+      "character": "sokolova",
+      "outfit": "indoor",
+      "emotion": "thoughtful",
+      "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-deeec2f2-18dc-4af4-8d2b-6c65edd3a678.png",
+      "reference": [
+        "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/sokolova_indoor_neutral.png"
+      ],
+      "prompt": "Use case: identity-preserve. Change ONLY Lena Sokolova's facial expression in this exact INDOOR NEUTRAL sprite to thoughtful and slightly skeptical, brows gently knit, mouth relaxed, eyes looking a little aside without head movement. Keep precise face identity/green eyes, identical head angle, purple long wavy hair, white bow and every outer hair strand, body anatomy/pose, shoulders/arms/visible hands/fingers and feet in identical positions. Preserve exact purple hoodie with hood down, black jeans, plain dark closed shoes, fabric folds, outline, color/light, full-body framing/scale. Ren'Py one-pose expression variant: do not shift or redraw body, hair or clothes; only eyes/brows/mouth/cheeks change. One complete figure from hair to both soles, genuine transparent alpha, portrait9:16 high resolution1080x1920 or2160x3840. No other people, props, scenery, shadow, grid or text.",
+      "native_size": [
+        941,
+        1672
+      ],
+      "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/sokolova/indoor/thoughtful.png",
+      "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/sokolova_indoor_thoughtful.png",
+      "size": [
+        1080,
+        1920
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "export_method": "single full-frame image scaled uniformly into transparent 1080x1920 canvas; no atlas extraction",
+      "pose": "one fixed pose"
+    },
+    {
+      "character": "sokolova",
+      "outfit": "winter",
+      "emotion": "angry",
+      "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-dcec771b-ccb2-4f34-b0f9-092da1b14f87.png",
+      "reference": [
+        "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/sokolova_winter_neutral.png"
+      ],
+      "prompt": "Use case: identity-preserve. Edit only Lena Sokolova's FACIAL EXPRESSION in this exact supplied WINTER NEUTRAL sprite to restrained anger/annoyance, brows lowered slightly, green eyes narrowed, lips pressed. Preserve exact character identity, face shape, green iris colors, head angle, purple long hair and every outer hair strand/white bow, standing pose, body and limb positions, fingers, feet, beige fur-trim parka, checked red scarf, black cargo trousers and black boots, clothing folds, color and light. This is one-pose expression variation for Ren'Py: no redrawing or shifting the body, hair, clothes, hands or feet. Only eyes/eyebrows/mouth/cheeks change. Same complete head-to-soles framing and scale. Real transparent alpha, ONE full-body character, portrait9:16 high resolution1080x1920 or2160x3840, no scenery/groundshadow/text/grid.",
+      "native_size": [
+        941,
+        1672
+      ],
+      "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/sokolova/winter/angry.png",
+      "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/sokolova_winter_angry.png",
+      "size": [
+        1080,
+        1920
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "export_method": "single full-frame image scaled uniformly into transparent 1080x1920 canvas; no atlas extraction",
+      "pose": "one fixed pose"
+    },
+    {
+      "character": "sokolova",
+      "outfit": "winter",
+      "emotion": "neutral",
+      "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-197e888d-259b-401b-a2b2-103646ca4f34.png",
+      "reference": [
+        "/workspace/scratch/5abe4a03ed6c/work/v2/references/sokolova_mirror.png",
+        "/workspace/scratch/5abe4a03ed6c/work/v2/references/sokolova_winter_cg.png"
+      ],
+      "prompt": "Use case: identity-preserve. Create one full-body standalone transparent sprite of LENA SOKOLOVA from this EXACT visual novel mod, using reference1 ONLY as her facial/hair identity and reference2 as her established WINTER clothing. This is adult22 Lena Sokolova, not Lena Tikhonova. Keep her exact slim petite adult build, green eyes, face with delicate slightly sharp features, long wavy purple hair half gathered with white bow, bangs as shown. Outfit exactly from winter bus CG: beige padded winter parka with pale fur-trim hood, red/cream checked scarf around neck, black trousers, chunky closed black lace-up winter boots. No pioneer uniform. Standing easy three-quarter pose facing viewer a little toward the left, head upright with neutral calm closed-mouth expression, both arms relaxed naturally at sides, hands visible beside thighs, feet resting naturally on same baseline, no dramatic contrapposto. This pose will be reused identically for every expression and indoor outfit. Full figure from ALL hair to soles, 4% transparent margins at top and bottom, no cropped feet/hair. Portrait9:16 high resolution1080x1920 or2160x3840. Match mod's existing anime illustration design, clean detailed linework, no generic redesign, no new accessories or necklace. Real transparent alpha, no background/scenery/shadow/text/panel, single character only.",
+      "native_size": [
+        941,
+        1672
+      ],
+      "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/sokolova/winter/neutral.png",
+      "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/sokolova_winter_neutral.png",
+      "size": [
+        1080,
+        1920
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "export_method": "single full-frame image scaled uniformly into transparent 1080x1920 canvas; no atlas extraction",
+      "pose": "one fixed pose"
+    },
+    {
+      "character": "sokolova",
+      "outfit": "winter",
+      "emotion": "sad",
+      "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-0099071f-2001-4735-a6b4-8e8e04bb9bcb.png",
+      "reference": [
+        "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/sokolova_winter_neutral.png"
+      ],
+      "prompt": "Use case: identity-preserve. Edit only Lena Sokolova's FACIAL EXPRESSION in this exact supplied WINTER NEUTRAL sprite to quiet sadness, inner eyebrows subtly raised and mouth gently downturned, no tears. Preserve exact character identity, face shape, green iris colors, head angle, purple long hair and every outer hair strand/white bow, standing pose, body and limb positions, fingers, feet, beige fur-trim parka, checked red scarf, black cargo trousers and black boots, clothing folds, color and light. This is one-pose expression variation for Ren'Py: no redrawing or shifting the body, hair, clothes, hands or feet. Only eyes/eyebrows/mouth/cheeks change. Same complete head-to-soles framing and scale. Real transparent alpha, ONE full-body character, portrait9:16 high resolution1080x1920 or2160x3840, no scenery/groundshadow/text/grid.",
+      "native_size": [
+        941,
+        1672
+      ],
+      "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/sokolova/winter/sad.png",
+      "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/sokolova_winter_sad.png",
+      "size": [
+        1080,
+        1920
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "export_method": "single full-frame image scaled uniformly into transparent 1080x1920 canvas; no atlas extraction",
+      "pose": "one fixed pose"
+    },
+    {
+      "character": "sokolova",
+      "outfit": "winter",
+      "emotion": "soft_smile",
+      "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-9a7dcfa3-1b55-4548-9679-ac4a819371d2.png",
+      "reference": [
+        "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/sokolova_winter_neutral.png"
+      ],
+      "prompt": "Use case: identity-preserve. Edit only Lena Sokolova's FACIAL EXPRESSION in this exact supplied WINTER NEUTRAL sprite to small warm closed-mouth smile, softened eyes. Preserve exact character identity, face shape, green iris colors, head angle, purple long hair and every outer hair strand/white bow, standing pose, body and limb positions, fingers, feet, beige fur-trim parka, checked red scarf, black cargo trousers and black boots, clothing folds, color and light. This is one-pose expression variation for Ren'Py: no redrawing or shifting the body, hair, clothes, hands or feet. Only eyes/eyebrows/mouth/cheeks change. Same complete head-to-soles framing and scale. Real transparent alpha, ONE full-body character, portrait9:16 high resolution1080x1920 or2160x3840, no scenery/groundshadow/text/grid.",
+      "native_size": [
+        941,
+        1672
+      ],
+      "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/sokolova/winter/soft_smile.png",
+      "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/sokolova_winter_soft_smile.png",
+      "size": [
+        1080,
+        1920
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "export_method": "single full-frame image scaled uniformly into transparent 1080x1920 canvas; no atlas extraction",
+      "pose": "one fixed pose"
+    },
+    {
+      "character": "sokolova",
+      "outfit": "winter",
+      "emotion": "surprised",
+      "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-68707cd4-33a6-49e5-a8ed-9ae8a5be28df.png",
+      "reference": [
+        "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/sokolova_winter_neutral.png"
+      ],
+      "prompt": "Use case: identity-preserve. Edit only Lena Sokolova's FACIAL EXPRESSION in this exact supplied WINTER NEUTRAL sprite to mild surprise, green eyes slightly wider and lips a little parted, no body gesture. Preserve exact character identity, face shape, green iris colors, head angle, purple long hair and every outer hair strand/white bow, standing pose, body and limb positions, fingers, feet, beige fur-trim parka, checked red scarf, black cargo trousers and black boots, clothing folds, color and light. This is one-pose expression variation for Ren'Py: no redrawing or shifting the body, hair, clothes, hands or feet. Only eyes/eyebrows/mouth/cheeks change. Same complete head-to-soles framing and scale. Real transparent alpha, ONE full-body character, portrait9:16 high resolution1080x1920 or2160x3840, no scenery/groundshadow/text/grid.",
+      "native_size": [
+        941,
+        1672
+      ],
+      "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/sokolova/winter/surprised.png",
+      "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/sokolova_winter_surprised.png",
+      "size": [
+        1080,
+        1920
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "export_method": "single full-frame image scaled uniformly into transparent 1080x1920 canvas; no atlas extraction",
+      "pose": "one fixed pose"
+    },
+    {
+      "character": "sokolova",
+      "outfit": "winter",
+      "emotion": "thoughtful",
+      "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-e9e2ba49-b288-4992-a8c8-34d840fa5947.png",
+      "reference": [
+        "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/sokolova_winter_neutral.png"
+      ],
+      "prompt": "Use case: identity-preserve. Edit only Lena Sokolova's FACIAL EXPRESSION in this exact supplied WINTER NEUTRAL sprite to thoughtful and slightly skeptical, inner brows gently furrowed, mouth relaxed, eyes looking a little aside without moving head. Preserve exact character identity, face shape, green iris colors, head angle, purple long hair and every outer hair strand/white bow, standing pose, body and limb positions, fingers, feet, beige fur-trim parka, checked red scarf, black cargo trousers and black boots, clothing folds, color and light. This is one-pose expression variation for Ren'Py: no redrawing or shifting the body, hair, clothes, hands or feet. Only eyes/eyebrows/mouth/cheeks change. Same complete head-to-soles framing and scale. Real transparent alpha, ONE full-body character, portrait9:16 high resolution1080x1920 or2160x3840, no scenery/groundshadow/text/grid.",
+      "native_size": [
+        941,
+        1672
+      ],
+      "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/sokolova/winter/thoughtful.png",
+      "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/sokolova_winter_thoughtful.png",
+      "size": [
+        1080,
+        1920
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "export_method": "single full-frame image scaled uniformly into transparent 1080x1920 canvas; no atlas extraction",
+      "pose": "one fixed pose"
+    }
+  ]
+}

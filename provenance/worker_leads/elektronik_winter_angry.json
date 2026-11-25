@@ -1,0 +1,37 @@
+{
+  "character": "elektronik",
+  "outfit": "winter",
+  "emotion": "angry",
+  "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-f1e85e79-b7a4-4c39-a551-4a6dfd2476b9.png",
+  "reference": [
+    "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/elektronik_winter_neutral.png"
+  ],
+  "prompt": "Use case: identity-preserve facial-expression edit. Direct target is this exact ELEKTRONIK WINTER NEUTRAL sprite from ORIGINAL Everlasting Summer design. Change ONLY facial expression to restrained irritation, brows lowered, blue eyes narrowed slightly, lips pressed. Preserve exact long face/nose shape, blue eyes, blond swept wavy hair and all outer strands, mole below right eye(viewerleft), head angle, original thin ink/cel style and colors. Keep identical single pose, LEFT hand behind his head and RIGHT hand in pocket, arms/elbow/legs/feet positions, blue padded jacket/navy scarf/blue jeans/dark boots, folds, silhouette and full-body scale/framing. No shifting or redrawing body/hair/clothes/hands/feet; only eyes/brows/mouth/cheeks change. One full head-to-soles isolated sprite, true transparent alpha, portrait9:16 high resolution1080x1920 or2160x3840, safe margins. No background, groundshadow, extra people, text or grid.",
+  "native_size": [
+    941,
+    1672
+  ],
+  "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/elektronik/winter/angry.png",
+  "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/elektronik_winter_angry.png",
+  "size": [
+    1080,
+    1920
+  ],
+  "alpha_extrema": [
+    0,
+    255
+  ],
+  "export_method": "single full-frame image uniformly projected into 1080x1920 using fixed neutral-pose bounding box/scale/baseline1840 for every emotion; no atlas extraction",
+  "export_anchor_bbox": [
+    204,
+    30,
+    738,
+    1656
+  ],
+  "export_position": [
+    30,
+    48
+  ],
+  "export_scale": 1.082410824108241,
+  "pose": "one fixed pose"
+}

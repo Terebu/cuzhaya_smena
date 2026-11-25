@@ -1,0 +1,37 @@
+{
+  "character": "semen",
+  "outfit": "indoor",
+  "emotion": "neutral",
+  "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-d9001057-9ae1-4f32-b62c-98b3dc6114fa.png",
+  "reference": [
+    "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/semen_winter_neutral.png"
+  ],
+  "prompt": "Use case: identity-preserve redressing. Edit exact supplied SEMYON winter neutral sprite into his ordinary INDOOR/home outfit by changing ONLY clothing. Remove the black winter jacket/scarf, replace with a plain slightly worn charcoal dark-gray short-sleeved T-shirt; keep dark blue jeans, replace winter boots with simple closed dark house shoes. Preserve his exact original face identity, brown eyes, brown spiky side-parted hair, head angle, neutral relaxed closed-mouth expression, masculine adult anatomy/proportions, EXACT standing pose with both arms relaxed at sides, hand/finger/feet positions. Keep camera/framing/scale and full hair-to-soles outline identical. No necklaces, no watches, no new accessories. Match original mod crisp anime lineart/cel coloring, no redesign. ONE full body isolated character, genuine transparent alpha, portrait9:16 high-resolution1080x1920 or2160x3840, safe margins, no scenery, groundshadow, labels, text or grid.",
+  "native_size": [
+    941,
+    1672
+  ],
+  "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/semen/indoor/neutral.png",
+  "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/semen_indoor_neutral.png",
+  "size": [
+    1080,
+    1920
+  ],
+  "alpha_extrema": [
+    0,
+    255
+  ],
+  "export_method": "single full-frame image uniformly projected into 1080x1920 using fixed neutral-pose bounding box/scale/baseline1840 for every emotion; no atlas extraction",
+  "pose": "one fixed pose",
+  "export_anchor_bbox": [
+    250,
+    2,
+    713,
+    1646
+  ],
+  "export_position": [
+    25,
+    78
+  ],
+  "export_scale": 1.0705596107055961
+}

@@ -24,5 +24,4 @@ label cs_day06:
     scene black with Dissolve(1.0)
 label cs_day06_complete:
     label cs_check_day06_complete:
-    call screen cs_day06_end_screen
-    jump cs_day06_complete
+    jump cs_day07

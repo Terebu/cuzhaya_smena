@@ -42,9 +42,9 @@ init 30 python:
             if i+1<count:sequence.append('<silence 0.22>')
         renpy.music.play(sequence,channel='sound',loop=False)
 
-    def cs_rev_music(track, volume=0.16, fadein=2.5):
-        if renpy.music.get_playing(channel='music')!=track:
-            renpy.music.play(track,channel='music',loop=True,fadeout=2.0,fadein=fadein)
+    def cs_rev_music(track, volume=0.16, fadein=2.5, loop=True):
+        if not loop or renpy.music.get_playing(channel='music') != track:
+            renpy.music.play(track, channel='music', loop=loop, fadeout=2.0, fadein=fadein)
         renpy.music.set_volume(volume,channel='music',delay=1.0)
 
     def cs_rev_time(value):
@@ -180,16 +180,16 @@ init 95 python:
     config.say_arguments_callback=cs_window_say_arguments
 
     cs_window_base_director_scene=cs_director_scene
-    def cs_window_director_scene(image):
+    def cs_window_director_scene(image, location_audio=True):
         if cs_active and image=="black":store._window=False
-        return cs_window_base_director_scene(image)
+        return cs_window_base_director_scene(image, location_audio=location_audio)
     cs_director_scene=cs_window_director_scene
 
 # The summer bus is parked. Repair the ambience even when loading an older
 # save which resumes after the room statement and restores the moving loop.
 init 96 python:
     def cs_rev_parked_bus_audio():
-        if not cs_active or not cs_rev_active or cs_day03_started:
+        if not cs_active or not cs_rev_active or cs_day03_started or cs_d7_started:
             return
         if not any(renpy.showing(image) for image in ('bg int_bus','cs_sunlight','cs_sleep_summer')):
             return

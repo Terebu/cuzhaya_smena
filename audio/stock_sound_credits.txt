@@ -42,4 +42,22 @@ License: CC0 1.0 Universal
 https://creativecommons.org/publicdomain/zero/1.0/
 These two recordings are combined in sports_court_day.ogg: distant schoolyard voices with spaced football kicks, filtered and level-adjusted, with a seamless overlap at the loop boundary.
 
+Traffic heard from apartment interior — AlexLane
+https://freesound.org/people/AlexLane/sounds/459842/
+License: CC0 1.0 Universal
+https://creativecommons.org/publicdomain/zero/1.0/
+The public HQ recording is included as ambience/lena_apartment_winter.mp3. For the apartment scenes, a clean excerpt was trimmed, crossfaded at the repeat point and converted to Ogg Vorbis as ambience/lena_apartment_winter_loop.ogg.
+
 Public HQ MP3 previews were trimmed, denoised, filtered, level-adjusted, looped or converted to Ogg Vorbis. Authors are credited voluntarily. No endorsement is implied.
+
+Forest run (audio/sfx/day07/forest_run.ogg) — Snudio_Records
+Footsteps on Forest Ground, public Ogg preview, unchanged.
+https://freesound.org/people/Snudio_Records/sounds/267492/
+License: CC0 1.0 Universal
+https://creativecommons.org/publicdomain/zero/1.0/
+
+Washstand drips (audio/sfx/day07/washstand_drips.ogg) — ZooFari
+Water drops dripping.ogg, original audio, unchanged.
+https://commons.wikimedia.org/wiki/File:Water_drops_dripping.ogg
+License: CC BY-SA 3.0 Unported
+https://creativecommons.org/licenses/by-sa/3.0/

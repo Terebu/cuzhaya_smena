@@ -1,0 +1,37 @@
+{
+  "character": "elektronik",
+  "outfit": "indoor",
+  "emotion": "thoughtful",
+  "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-0dab7fc7-ac70-4ade-a206-7047c4ef812b.png",
+  "reference": [
+    "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/elektronik_indoor_neutral.png"
+  ],
+  "prompt": "Use case: identity-preserve. Direct edit target is ELEKTRONIK INDOOR NEUTRAL full-body sprite in ORIGINAL Everlasting Summer design. Change ONLY facial expression to pensive, eyebrows gently furrowed, relaxed closed mouth, eyes a little aside without turning head. Keep exact long face/nose identity, blue eyes, blond swept wavy hair/all outer strands, small cheek mole below right eye(viewer left), same head angle, original thin ink/cel coloring. Preserve identical pose: LEFT hand behind head and RIGHT hand in pocket; same raised elbow, shoulders, limbs/hands/fingers/feet, exact blue plaid open shirt/white T-shirt/blue jeans/dark trainers, folds, colors/light, silhouette and full-body framing/scale. Do not redraw or move body, hair, clothes or feet. Only eyes/brows/mouth/cheeks may change. One isolated head-to-both-soles sprite, real transparent alpha, portrait9:16 high-resolution1080x1920 or2160x3840, safe margins. No scenery, groundshadow, extras, text or grid.",
+  "native_size": [
+    941,
+    1672
+  ],
+  "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/elektronik/indoor/thoughtful.png",
+  "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/elektronik_indoor_thoughtful.png",
+  "size": [
+    1080,
+    1920
+  ],
+  "alpha_extrema": [
+    0,
+    255
+  ],
+  "export_method": "single full-frame image uniformly projected into 1080x1920 using fixed neutral-pose bounding box/scale/baseline1840 for every emotion; no atlas extraction",
+  "export_anchor_bbox": [
+    206,
+    30,
+    736,
+    1643
+  ],
+  "export_position": [
+    26,
+    47
+  ],
+  "export_scale": 1.0911345319280843,
+  "pose": "one fixed pose"
+}

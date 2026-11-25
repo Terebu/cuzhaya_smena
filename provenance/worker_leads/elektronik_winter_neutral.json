@@ -1,0 +1,37 @@
+{
+  "character": "elektronik",
+  "outfit": "winter",
+  "emotion": "neutral",
+  "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-eae96c40-093f-49d5-9c73-fa03bf5a50c5.png",
+  "reference": [
+    "/workspace/scratch/5abe4a03ed6c/work/v2/references/elektronik_original.png"
+  ],
+  "prompt": "Use case: identity-preserve redressing of ORIGINAL Everlasting Summer sprite. Direct edit target is Elektronik's original sprite, with distinctive swept wavy BLOND hair, BLUE eyes, long slim face/nose and small dark mole on cheek below his right eye (viewer left). Keep EXACT original head angle, facial identity, proportions, thin lineart and clean simple cel shading, NOT a generic modern anime male and not painterly. Keep his original pose: his LEFT arm lifted so hand rests behind back of head (viewer right), his RIGHT hand tucked into pocket (viewer left); keep shoulder and elbow positions. Change ONLY clothes to everyday WINTER street: muted blue padded winter jacket, dark navy knitted scarf, blue full-length jeans, ordinary dark closed lace-up winter boots. No pioneer tie or insignia, no shorts or bare legs. Extend original cropped lower legs naturally to show his complete full body including boots while keeping upper body exactly recognizable. Calm neutral closed-mouth expression, slightly awkward as original. One isolated single character on genuinely transparent alpha, portrait9:16 high-res1080x1920 or2160x3840. Full hair-to-both-soles with4% safe margins, lifted elbow entirely within canvas, no cropping. No new pose, no sunglasses/hat, no props, no scenery/groundshadow/text/grid.",
+  "native_size": [
+    941,
+    1672
+  ],
+  "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/elektronik/winter/neutral.png",
+  "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/elektronik_winter_neutral.png",
+  "size": [
+    1080,
+    1920
+  ],
+  "alpha_extrema": [
+    0,
+    255
+  ],
+  "export_method": "single full-frame image uniformly projected into 1080x1920 using fixed neutral-pose bounding box/scale/baseline1840 for every emotion; no atlas extraction",
+  "pose": "one fixed pose",
+  "export_anchor_bbox": [
+    204,
+    30,
+    738,
+    1656
+  ],
+  "export_position": [
+    30,
+    48
+  ],
+  "export_scale": 1.082410824108241
+}

@@ -1,0 +1,2834 @@
+[
+  {
+    "path": "sprites/sokolova/winter/neutral.png",
+    "native_path": "masters/sprites/sokolova/winter/neutral.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "4a8ba68bbd7d711cd6cd46541d307d2effa3ba7a4f8fc273a64ea9b270e4458d",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "1bfdaad16e869f2214cfab36e878b9b3ffb1678fa5d65a56d444b9bf35ca2526",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_leads/sokolova_winter_neutral.json"
+  },
+  {
+    "path": "sprites/sokolova/winter/soft_smile.png",
+    "native_path": "masters/sprites/sokolova/winter/soft_smile.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "79d4183d96b10286ee6ef1a45c73e8733ae502cb4700a3ce9eac38d7935c1c28",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "e1a5a4071f26e534bbdc23db7087591ea5b8c2aa866e504d3ccbcaf853336f72",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_leads/sokolova_winter_soft_smile.json"
+  },
+  {
+    "path": "sprites/sokolova/winter/thoughtful.png",
+    "native_path": "masters/sprites/sokolova/winter/thoughtful.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "e9b8d691ca9bfaa2d1e0ae06cf180d14a71715847e0c4be2b413bf676a6378a6",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "755162139c3f5efc5578f3ac669f87c16ed0f0912d0b8812b8f716f3e985bbad",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_leads/sokolova_winter_thoughtful.json"
+  },
+  {
+    "path": "sprites/sokolova/winter/sad.png",
+    "native_path": "masters/sprites/sokolova/winter/sad.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "2ac6d00a9659dd58fbc044d14701c579bba55c5479d4e9e1d9148b5a31f4d132",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "f78909874b15e1457c616060ace16b97b12ce9bf15b9546c384cec97e1e277c5",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_leads/sokolova_winter_sad.json"
+  },
+  {
+    "path": "sprites/sokolova/winter/surprised.png",
+    "native_path": "masters/sprites/sokolova/winter/surprised.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "eb6ed1e77dbbbcd44da313974d0570b22c939fe4a6bec4bffb4f9ef40788fc78",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "db8969904122275126622eb29726f7ba342cf5513d529d71c6e2c00ecc439b2a",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_leads/sokolova_winter_surprised.json"
+  },
+  {
+    "path": "sprites/sokolova/winter/angry.png",
+    "native_path": "masters/sprites/sokolova/winter/angry.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "92b06f65d29ed745d3b0bff5cf2b3a69da55a15cb45533a74ffd84f16613c528",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "348c051a9a9dffdf6440cc3b9c11c3bb0dc1bde834e3540fcaf6bc3f353350ad",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_leads/sokolova_winter_angry.json"
+  },
+  {
+    "path": "sprites/sokolova/indoor/neutral.png",
+    "native_path": "masters/sprites/sokolova/indoor/neutral.png",
+    "native_size": [
+      941,
+      1671
+    ],
+    "native_sha256": "eaa46b6cafcaf4c9b37b1b93ee39c4e417c95c325798d47d19c6d85be3659956",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "72ce1d6a50e43a03e26ab3c88d2618a26e0f4d52661441f9fa10aeb787a77b42",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_leads/sokolova_indoor_neutral.json"
+  },
+  {
+    "path": "sprites/sokolova/indoor/soft_smile.png",
+    "native_path": "masters/sprites/sokolova/indoor/soft_smile.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "b505ec566c7ecc4ab9e0ef55a907c192152e89b0846a6ec4290d169e8e37e945",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "1eeb3f729f77d379884c4410a13b077630b19f6f8aaa200a722821c5e4605e6f",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_leads/sokolova_indoor_soft_smile.json"
+  },
+  {
+    "path": "sprites/sokolova/indoor/thoughtful.png",
+    "native_path": "masters/sprites/sokolova/indoor/thoughtful.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "20339dad2d33640d8a556e55e5f652a894bee6515f78dfed04ae5c2e8c8952ae",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "ed56e019d6a896eea200257c03b5e6b5742f614af3d9a269a5bbefa97fa68a38",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_leads/sokolova_indoor_thoughtful.json"
+  },
+  {
+    "path": "sprites/sokolova/indoor/sad.png",
+    "native_path": "masters/sprites/sokolova/indoor/sad.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "c0c1cf1abbff1fd6e2fe3a35125b9e4153131572bee8453792cb34578fdc4a79",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "0e3f4f3ab5fa2d79ef3db855023230a32188640605fd80014f6e7d0bd0ac2591",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_leads/sokolova_indoor_sad.json"
+  },
+  {
+    "path": "sprites/sokolova/indoor/surprised.png",
+    "native_path": "masters/sprites/sokolova/indoor/surprised.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "8a9eb6fbb98ce0cb6ac2e7d4946d25ebcbd29ba8dc92cb5111bf2a620883194b",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "1eb5dff84a86e6b641110cb8c8a9294bc59b5f7e9dfc3af1b5d4b93b672f8308",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_leads/sokolova_indoor_surprised.json"
+  },
+  {
+    "path": "sprites/sokolova/indoor/angry.png",
+    "native_path": "masters/sprites/sokolova/indoor/angry.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "75824388d67d0f6cc1c9115a2f1d305969199ed14d3cf5fcec5af6476a84e795",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "d1f512dce0b9b9e3f186a3308e83f9ba2bcc91fb9b4f4ac9cd8716040cf42ed0",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_leads/sokolova_indoor_angry.json"
+  },
+  {
+    "path": "sprites/darya/winter/neutral.png",
+    "native_path": "masters/sprites/darya/winter/neutral.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "8d18fc908e64bfa04d4efc0b974fdde4eb7b7ce82abd43e89c9387c83eb2c4ad",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "22181e27ad417b362fdd90dd497ab8f792d30938dc50d68e8672305ceadf1a62",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_leads/manifest.json"
+  },
+  {
+    "path": "sprites/darya/winter/soft_smile.png",
+    "native_path": "masters/sprites/darya/winter/soft_smile.png",
+    "native_size": [
+      941,
+      1671
+    ],
+    "native_sha256": "1b4feade72c83c9c1d4dfee519faeb882e7dd3b8239656f38addc7bcbe8b04f9",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "e119060f4eed31723a6a97404864c445a53517ce7fb86f6d3d7b0002a41b5b30",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_leads/manifest.json"
+  },
+  {
+    "path": "sprites/darya/winter/thoughtful.png",
+    "native_path": "masters/sprites/darya/winter/thoughtful.png",
+    "native_size": [
+      941,
+      1671
+    ],
+    "native_sha256": "12b261cee7476c52186bad12204cda50f4a0b410704198b3029cef89e3673e52",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "1a644c3b2910ab1816177d10814e58f276c9b8f3500bec760730f5b80d5a905c",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_leads/manifest.json"
+  },
+  {
+    "path": "sprites/darya/winter/sad.png",
+    "native_path": "masters/sprites/darya/winter/sad.png",
+    "native_size": [
+      941,
+      1671
+    ],
+    "native_sha256": "1c214c2c190c23a455671cbf0e747f13d502b39d50e9265a62aa1afd963c5877",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "91203791a877710cb35588b20e2845503876a28e4dbfed6e6fbe93695de3717c",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_leads/manifest.json"
+  },
+  {
+    "path": "sprites/darya/winter/surprised.png",
+    "native_path": "masters/sprites/darya/winter/surprised.png",
+    "native_size": [
+      941,
+      1671
+    ],
+    "native_sha256": "af0912cfbb526b84a456dc109099271c3ad3835add514e6ff18844ad416e889d",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "48181e73de3ad313a3455ba1075ae1d7b119ffa9d9791eaea84e8b007bd6e561",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_leads/manifest.json"
+  },
+  {
+    "path": "sprites/darya/winter/angry.png",
+    "native_path": "masters/sprites/darya/winter/angry.png",
+    "native_size": [
+      941,
+      1671
+    ],
+    "native_sha256": "83b8383f9d24d995e036924460556fb8652246a1deb1837eae9d13e3b7020043",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "7bc682ab14dfbed25569f877f9227bd1751ac6d3848cc07070bdbb5b99d11a14",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_leads/manifest.json"
+  },
+  {
+    "path": "sprites/darya/indoor/neutral.png",
+    "native_path": "masters/sprites/darya/indoor/neutral.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "cce6e455ec16fa51526745798a48c00b25dbdd695bc7505e622b5603dc8684cb",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "39dfc9cb61a874db5a6390572935a4f3928f57b1037b3ae20aec2514bde111c3",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_leads/manifest.json"
+  },
+  {
+    "path": "sprites/darya/indoor/soft_smile.png",
+    "native_path": "masters/sprites/darya/indoor/soft_smile.png",
+    "native_size": [
+      941,
+      1671
+    ],
+    "native_sha256": "3439a5f4ebf41f12de66991b0f878472f24803acc20e98b51fd2657ef684c955",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "4c3333f7c8b39cb9bf661e7496ad701db6152dd88b4cff07392e6ef435c8fec9",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_leads/manifest.json"
+  },
+  {
+    "path": "sprites/darya/indoor/thoughtful.png",
+    "native_path": "masters/sprites/darya/indoor/thoughtful.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "e783cb1e23a2ea7cbca977b3ed00284789ee03de08f1107e10b726cda7df3402",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "9381ac2d01f9403bfdc58aeef282a9a1624e061abcff2008bd8e8842b9a05155",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_leads/manifest.json"
+  },
+  {
+    "path": "sprites/darya/indoor/sad.png",
+    "native_path": "masters/sprites/darya/indoor/sad.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "c842785be9972a76433fb26246208c76a5f48caf4a290859f3651adb162997b3",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "0fd09c6cfe5d755a54c5ea76f680088f8dd773094892daa51892c2c46c80d59c",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_leads/manifest.json"
+  },
+  {
+    "path": "sprites/darya/indoor/surprised.png",
+    "native_path": "masters/sprites/darya/indoor/surprised.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "03589679b081a899ec0a76a9a0be27dfd7c48bcf672c159179df4ae79b1c3bab",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "47c533303a20974f0c1112c8c3b4ed4acc79ffb47e68658ad9b21135a2eea2ec",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_leads/manifest.json"
+  },
+  {
+    "path": "sprites/darya/indoor/angry.png",
+    "native_path": "masters/sprites/darya/indoor/angry.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "6a4417f64f39428f2437fef9424a25dc738474f649c5e5c03da346fdb3c50055",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "4ebf40ec09365a75aba3ed7e38c47d90a0421cf6228f88e725924f44222e4398",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_leads/manifest.json"
+  },
+  {
+    "path": "sprites/semen/winter/neutral.png",
+    "native_path": "masters/sprites/semen/winter/neutral.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "0659a61928eba76f8089a95d765e2ca555bde085944fb5df719059145ef04d39",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "6e42da24cd4a2637ed4d5f94f45b459a764f1762713ffc80b7430cecc0ff929c",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_leads/semen_winter_neutral.json"
+  },
+  {
+    "path": "sprites/semen/winter/soft_smile.png",
+    "native_path": "masters/sprites/semen/winter/soft_smile.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "3bc20e6ee6d0b8e7d4fb49c353b4bb73e255382cad0495b02d2c273c27a757f0",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "65c21974841373f2c33577efd42b12f2e57b5b09af0c962262c5c7468e83c206",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_leads/semen_winter_soft_smile.json"
+  },
+  {
+    "path": "sprites/semen/winter/thoughtful.png",
+    "native_path": "masters/sprites/semen/winter/thoughtful.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "5f551f3f9fcb9279a26bbb96eed2f15dc61b0485bf569e38db5c80aa35eb4051",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "ccada366f12c9bf7350cd1f79e50dfe34604ed97cbc0a71c47fe5638f5c1fa98",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_leads/semen_winter_thoughtful.json"
+  },
+  {
+    "path": "sprites/semen/winter/sad.png",
+    "native_path": "masters/sprites/semen/winter/sad.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "19547d99ac180b80fcf3b8f1b88badfdd7310081187046bda446e27e674628b5",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "67cf8c5e7c11eecac783d0e753567e8fc96cf0757d288b4f50fd861d919d73fe",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_leads/semen_winter_sad.json"
+  },
+  {
+    "path": "sprites/semen/winter/surprised.png",
+    "native_path": "masters/sprites/semen/winter/surprised.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "c109039494e9f1010b2e9df8e99b64be3cdb40f454ec7c2e5a55e55451ec8936",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "1785dfa2614242a7b5bebc783884ad4afb2ab664aa0a5ebb9f5c6d2754d20c5d",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_leads/semen_winter_surprised.json"
+  },
+  {
+    "path": "sprites/semen/winter/angry.png",
+    "native_path": "masters/sprites/semen/winter/angry.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "3ba65247780c6406d75dbc63df0a605191e61b0f08032ae8e1bc4e2109be8c0d",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "52595d002d616167a449985bfabf96d8fce7e98f4f2278147b03cccdf864931f",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_leads/semen_winter_angry.json"
+  },
+  {
+    "path": "sprites/semen/indoor/neutral.png",
+    "native_path": "masters/sprites/semen/indoor/neutral.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "525693d0c0f89947dd90c6d7b97416ff73be332272b131786c6b0355e62ee104",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "15c1b4c3fb898266c3d4bd0d620139508c29865c5ae99b64dbca000f02a9721a",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_leads/semen_indoor_neutral.json"
+  },
+  {
+    "path": "sprites/semen/indoor/soft_smile.png",
+    "native_path": "masters/sprites/semen/indoor/soft_smile.png",
+    "native_size": [
+      941,
+      1671
+    ],
+    "native_sha256": "d27d810a1df4e96a53797c6a1aea2a7c3657a0102be8b367a5887070d0ad7729",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "098abf1696fe15e4b0c9f0b6f2c7a019a7978ab568e37ffc7aa73f4c0c714e95",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_leads/semen_indoor_soft_smile.json"
+  },
+  {
+    "path": "sprites/semen/indoor/thoughtful.png",
+    "native_path": "masters/sprites/semen/indoor/thoughtful.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "6f66dea006c541c2fb997e4f83a3651babfd850ce3493f805886dc9bb2c45be1",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "95e34ba1ea0cd2eea43872b7a69e17a8581b53e304a7543cb4ea4112c847ff80",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_leads/semen_indoor_thoughtful.json"
+  },
+  {
+    "path": "sprites/semen/indoor/sad.png",
+    "native_path": "masters/sprites/semen/indoor/sad.png",
+    "native_size": [
+      941,
+      1671
+    ],
+    "native_sha256": "9cfdb2741395f6c6ec52543acfbb86f377a6000ec601541f5c0d7ba2077541dd",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "cd0a00ba1b321ac31d40b0cd7c985657640010030d5cc0bd710b2a48d9a82c9d",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_leads/semen_indoor_sad.json"
+  },
+  {
+    "path": "sprites/semen/indoor/surprised.png",
+    "native_path": "masters/sprites/semen/indoor/surprised.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "aa248649821381e4a76afae9417f634c20ca0281bcbef6190d5b2462e603292d",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "64e81b4cff0da2f7dff52a6e4d0a4e655f20960aaf91958d3d0420d7ce303677",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_leads/semen_indoor_surprised.json"
+  },
+  {
+    "path": "sprites/semen/indoor/angry.png",
+    "native_path": "masters/sprites/semen/indoor/angry.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "668c3ac9dbd8e42819120172724feb3c189cad6f4bb1b3224e245d34a666214c",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "3b9ae29905117bc4bc58cbdb9882a95934979ed14d3c9bdf0ce6633b0b8d2263",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_leads/semen_indoor_angry.json"
+  },
+  {
+    "path": "sprites/slavya/winter/neutral.png",
+    "native_path": "masters/sprites/slavya/winter/neutral.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "bd2a5e3780cdfee108dbd9735cad69b4801fcf8930eb583862682d97d28d7fbc",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "01c3b8d7718047272427c10818ebb3ce57ac11eddb1fb2836b56117611eae865",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_a/native_log.json"
+  },
+  {
+    "path": "sprites/slavya/winter/soft_smile.png",
+    "native_path": "masters/sprites/slavya/winter/soft_smile.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "4166cfeba73a7bcb7b0b1747f31fce428c32e13e5402aebaccdbc9233424b9dc",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "f4d7988718027561c0539cc40e073a5c37532de14142a45124e90746d1217358",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_a/native_log.json"
+  },
+  {
+    "path": "sprites/slavya/winter/thoughtful.png",
+    "native_path": "masters/sprites/slavya/winter/thoughtful.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "0dbaf5ee76d11e88e9c99356a9e115bf8d032d157ca36e9c78019f693f3a46c6",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "57c6c350e81e1b081aa6c0d291b775efe5098ba42625ba8a8a8d44caa12adf34",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_a/native_log.json"
+  },
+  {
+    "path": "sprites/slavya/winter/sad.png",
+    "native_path": "masters/sprites/slavya/winter/sad.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "2635ef7e5cfdcbb8e509a5979ee8d6ed18b67ddcffc13295b6d5ade955b8001a",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "f3d62f8a024542e785388bb17a4688408171c27017319a14400cf4720ed5ab41",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_a/native_log.json"
+  },
+  {
+    "path": "sprites/slavya/winter/surprised.png",
+    "native_path": "masters/sprites/slavya/winter/surprised.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "19a37d70ce77fa48d7a0e6a4477975e8e3d2b65b5418383f927b899a48a27e81",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "c27ba41102629293f2012ec1f80b6bfd6e831b72cccde0279bf7c5689255a81a",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_a/native_log.json"
+  },
+  {
+    "path": "sprites/slavya/winter/angry.png",
+    "native_path": "masters/sprites/slavya/winter/angry.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "9f8a935f2ec93b6e5964b71089851cdb9e54f4998b7b15c97b77cf16c3a652c5",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "79e45e3d00c498531c5ff484c40827c60212cac22f6ff73b5d7c9bab170a07b5",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_a/native_log.json"
+  },
+  {
+    "path": "sprites/slavya/indoor/neutral.png",
+    "native_path": "masters/sprites/slavya/indoor/neutral.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "630377de06b4b6037ac488f1c7945e225251bb1cd9cb4f11590f96ff7372a75e",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "0f7167f42c73c67d1f27ca82b3afa93146c4a72a183f162e81a212eda5f092c6",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_a/native_log.json"
+  },
+  {
+    "path": "sprites/slavya/indoor/soft_smile.png",
+    "native_path": "masters/sprites/slavya/indoor/soft_smile.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "9296ef1a8a9f40f8e0d27ae672f3bb8c58ee1a8361877c659e686facef61f101",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "40bed8e0415106a063b96b9f1fe015b5b59d37ae5c1a0edac7e37e5d3c362e98",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_a/native_log.json"
+  },
+  {
+    "path": "sprites/slavya/indoor/thoughtful.png",
+    "native_path": "masters/sprites/slavya/indoor/thoughtful.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "65c526001a3f9b4389bfabb927bbfce74e9993de9ea5daed23aced1f28f86190",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "423442031a70da83ce5597ad6474ce24d13f7e47a210d3172da67070854960f5",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_a/native_log.json"
+  },
+  {
+    "path": "sprites/slavya/indoor/sad.png",
+    "native_path": "masters/sprites/slavya/indoor/sad.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "a183a5f709697659a8b8d6f7a753408df3e3a2e69116012322c0ef3876ca951b",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "40d597aaa1c79ae070ac6b0100c9bb9084108020ff7d7f94b071b644d243bb79",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_a/native_log.json"
+  },
+  {
+    "path": "sprites/slavya/indoor/surprised.png",
+    "native_path": "masters/sprites/slavya/indoor/surprised.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "a2730e052c58db64937c6270d67cedfdd5221b05bcf1a1e6d1e64cae1996cc43",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "45f0924aa1962ceb152a3b2999f7895e43021655daacae96c78583af17a3ee38",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_a/native_log.json"
+  },
+  {
+    "path": "sprites/slavya/indoor/angry.png",
+    "native_path": "masters/sprites/slavya/indoor/angry.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "043169f52389cb4524b0542c5f965646c31e0e84cebff595aa6041960f07c1f9",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "3f345d762f58d28142b08c8f57fbbb08cc98a955db9268087fc398477fc6a96a",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_a/native_log.json"
+  },
+  {
+    "path": "sprites/alisa/winter/neutral.png",
+    "native_path": "masters/sprites/alisa/winter/neutral.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "1c72c587201acfb9a53a50c5e780a1b040469e38a5d6a41c202713f5ae9caa66",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "debfc69b38632cdb72b5180a7885636bb9cf09e6e142567c4ed75666978db90c",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_a/native_log.json"
+  },
+  {
+    "path": "sprites/alisa/winter/soft_smile.png",
+    "native_path": "masters/sprites/alisa/winter/soft_smile.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "96b5aa41cb46f552d367ae2c2d5d23627bd3ca45d2ddc7f0044354764722d3c4",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "45a057322dceccbc78393d0420ee92965aeca7e1dd304d38b75bf0ce1bdc9aed",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_a/native_log.json"
+  },
+  {
+    "path": "sprites/alisa/winter/thoughtful.png",
+    "native_path": "masters/sprites/alisa/winter/thoughtful.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "68175899cefae5959474be4654013412fbea7316a14acf734d6810fe805fcef1",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "abadc22ecddd24cb3e54f366edf1370b6d82af2f3bdb89da47939a64fd42f6bd",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_a/native_log.json"
+  },
+  {
+    "path": "sprites/alisa/winter/sad.png",
+    "native_path": "masters/sprites/alisa/winter/sad.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "24b306b94fb7beb94107339cfb7e7e3b1ea713b64aefef57e86e54e08eefe0eb",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "e09e7ecfe52b89c39705bfcbc176a578a40642c8fac6c9cb217c7773c150244d",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_a/native_log.json"
+  },
+  {
+    "path": "sprites/alisa/winter/surprised.png",
+    "native_path": "masters/sprites/alisa/winter/surprised.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "8c953d27cda1e636d6c4a16854fd822880dc272cc2617e177212479cd2278ea3",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "d645471d67cc1d13f153d2f3e6002536cb40c41040b9e4bed2962a477aa79ecc",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_a/native_log.json"
+  },
+  {
+    "path": "sprites/alisa/winter/angry.png",
+    "native_path": "masters/sprites/alisa/winter/angry.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "230a1869c18515c3c98aba61cd2d71cf4762b0b05cd749f43f03b7be4df62528",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "3077aa13c0fd16697fada1e18abbab6bedba9955749983e6f7df95578bed85e4",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_a/native_log.json"
+  },
+  {
+    "path": "sprites/alisa/indoor/neutral.png",
+    "native_path": "masters/sprites/alisa/indoor/neutral.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "62a90240d770cfcd4e408864727c9e90204989a0dcd648377d4ef3f279fdf47b",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "b6a8d90a36b791b2128561a72067d43650858f877bdc419735ab6e32342d5e10",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_a/native_log.json"
+  },
+  {
+    "path": "sprites/alisa/indoor/soft_smile.png",
+    "native_path": "masters/sprites/alisa/indoor/soft_smile.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "315a3091cd241af2ae1647153718bf45409e3b7190b9787a206774432fd5626c",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "1e03683f623d53b16c4d74763016d46969d87909df03f87be4b8ff2031105849",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_a/native_log.json"
+  },
+  {
+    "path": "sprites/alisa/indoor/thoughtful.png",
+    "native_path": "masters/sprites/alisa/indoor/thoughtful.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "9ed29eb79e79b835a78b496e6aeb2b1694ecaaa2983b2095cf1b3a308dbdd0a9",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "f4f95bbb99651555c6d31aef8ce7633b76f59467e5b37a175c0afa253dee2db7",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_a/native_log.json"
+  },
+  {
+    "path": "sprites/alisa/indoor/sad.png",
+    "native_path": "masters/sprites/alisa/indoor/sad.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "f6ea7b56c88dfdb8511084e68e5ed872461dd4bb28aee588855b66ce9e065988",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "9010794146b6adf4993196763a1dc2f57003855a198cb3cf9b90db6c544ed7f7",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_a/native_log.json"
+  },
+  {
+    "path": "sprites/alisa/indoor/surprised.png",
+    "native_path": "masters/sprites/alisa/indoor/surprised.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "95b1c28c807e11e914c4aca04a92609226399926975dbfc5bd530b9963a0d448",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "4dd2498068cd73bb1b4b344d2c20804a6f0afd78e5e70c210b59998b3248b26b",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_a/native_log.json"
+  },
+  {
+    "path": "sprites/alisa/indoor/angry.png",
+    "native_path": "masters/sprites/alisa/indoor/angry.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "e8a1b08b40d2e26483b665e4d2eba5888e6c14711a15d13649c2eb21661dea3c",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "b0cdd8897702dbde473bdf0102932e90122721299adfe75537914441eabe24e8",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_a/native_log.json"
+  },
+  {
+    "path": "sprites/miku/winter/neutral.png",
+    "native_path": "masters/sprites/miku/winter/neutral.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "d5d65b29bc2cae9f2af1822fe189fe71c771a904d0852a0996fe64a3e862c4c7",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "dbe2b894fd4efc8812870a29b65221caf10d8c6049e13cc49cb46348c18f4c80",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_a/native_log.json"
+  },
+  {
+    "path": "sprites/miku/winter/soft_smile.png",
+    "native_path": "masters/sprites/miku/winter/soft_smile.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "0d6365e2d9343485bcb7b4a2e6867968ad8e8971515a63a7e7490734c05911f0",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "6b5be35b29e94827d8cbcf3c266412b953c7ea708668739c9fe0801d506da89f",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_a/native_log.json"
+  },
+  {
+    "path": "sprites/miku/winter/thoughtful.png",
+    "native_path": "masters/sprites/miku/winter/thoughtful.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "40454e6307efd7ca9fb482683bde7681c432056df3a03269ec0370c5de12fd47",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "f813306d7f013df4658b79b000d78f032268ac1995188f757efce374ab025bf9",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_a/native_log.json"
+  },
+  {
+    "path": "sprites/miku/winter/sad.png",
+    "native_path": "masters/sprites/miku/winter/sad.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "a4142a3409ad4dd64a77b538f7fcc4474b0ae9e1ae6b6590f53052f1f0959ea1",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "37f2ccf3d5ebf243247d65dd51a2684c7dc9bd601da3e7868e11da49a13adf5f",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_a/native_log.json"
+  },
+  {
+    "path": "sprites/miku/winter/surprised.png",
+    "native_path": "masters/sprites/miku/winter/surprised.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "91156bdcf124d3b5aa4cc0def638124ba5c0ed005f3c1447a7a0475cc89f84a8",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "eaacaf765e3cea4861a2cda1c26a99272139744f62a5d61d659d0d3e3b7eb67f",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_a/native_log.json"
+  },
+  {
+    "path": "sprites/miku/winter/angry.png",
+    "native_path": "masters/sprites/miku/winter/angry.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "7a24d0edfaae3022a1818b97884ac691826fad124c4001746172c5dc67e990ee",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "6e9ab7d3ae967ecc8691c5a7c083a63356a7d5911f82896fbacf8d67a4d6289a",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_a/native_log.json"
+  },
+  {
+    "path": "sprites/miku/indoor/neutral.png",
+    "native_path": "masters/sprites/miku/indoor/neutral.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "1599084e26859de943a32abab8dc79d586912a131ac7f2f65a60bd667a8b6a22",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "4fb21cc2e14e5600a3ba770d7dff6b8c4f630711efe600f6e2e8dff40c826354",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_a/native_log.json"
+  },
+  {
+    "path": "sprites/miku/indoor/soft_smile.png",
+    "native_path": "masters/sprites/miku/indoor/soft_smile.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "25eda8048b6678b78ec7f9ad1cd5464b63aa6e6d278c31cc0d65821d0012c478",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "a97ad8e31015b297d3cc7f5c7540524198100f1e407b54afcd2ae2e616836650",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_a/native_log.json"
+  },
+  {
+    "path": "sprites/miku/indoor/thoughtful.png",
+    "native_path": "masters/sprites/miku/indoor/thoughtful.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "4897293ce9cbdf1c25887aed0e62e12747aa2efee0c3afbf04ae85549adb511f",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "8550e4ad5a855ad9f4add5e65a3dbbccceafe9ffe68eb4681ba9588c6b0195a9",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_a/native_log.json"
+  },
+  {
+    "path": "sprites/miku/indoor/sad.png",
+    "native_path": "masters/sprites/miku/indoor/sad.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "dd059a0e37d5befe542bb98073fd16514960f84154112908b79cb98585b97fad",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "17e4c5c7614fd4a8887f31f7415e1e236250d9eff2c4c95f7a31f51175e7a185",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_a/native_log.json"
+  },
+  {
+    "path": "sprites/miku/indoor/surprised.png",
+    "native_path": "masters/sprites/miku/indoor/surprised.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "2e451077070d016011276aaa9647686db14640d5be35c59666face516d99c648",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "b7ca0067382d4b2797e57efa7ef61f5bcd4cac24725765510aa4f7cdd0d563c1",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_a/native_log.json"
+  },
+  {
+    "path": "sprites/miku/indoor/angry.png",
+    "native_path": "masters/sprites/miku/indoor/angry.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "23bd341ac5e679a4565adf0147860a74e1f9f28a908e9d014d16e8fda185c5f5",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "d2427e710e9924c19f630b139a743794d494b66da716853144997320f414bf08",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_a/native_log.json"
+  },
+  {
+    "path": "sprites/zhenya/winter/neutral.png",
+    "native_path": "masters/sprites/zhenya/winter/neutral.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "2a1145d1f338ebaccadb8ca21911121e44c4a20bc933276229a5c6c8ca0af8aa",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "d75f9efb8e4106126680ed3c33811c2b1bd154e7aaae61242b85fe94f31caef4",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_b/manifest.json"
+  },
+  {
+    "path": "sprites/zhenya/winter/soft_smile.png",
+    "native_path": "masters/sprites/zhenya/winter/soft_smile.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "d11e2d3f3a829107c3133a5c808cebfdd9212121b64829e7e41340d925f53631",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "d055ec2739ca4edc17791d3679742c3209b083db2d840bf2f1e8d569fbad6528",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_b/manifest.json"
+  },
+  {
+    "path": "sprites/zhenya/winter/thoughtful.png",
+    "native_path": "masters/sprites/zhenya/winter/thoughtful.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "177e14f10433b0e41a1d46d5bc67bd11ac8b986bf5aa805c9dc46fd455762bcd",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "5ab768cb13fc37679aab9e6ad60868394cbb8cb4d368101f42c49ab28983fc52",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_b/manifest.json"
+  },
+  {
+    "path": "sprites/zhenya/winter/sad.png",
+    "native_path": "masters/sprites/zhenya/winter/sad.png",
+    "native_size": [
+      940,
+      1672
+    ],
+    "native_sha256": "21127805a19bdd5c0681dc1b08d115d1c30243601a9faa4b8b6e83061e7cc8fb",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "e28ef376c645e181607dd0a804d6e3ccac4e12ef94f7b90d0d0ccbab1b0ae4c0",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_b/manifest.json"
+  },
+  {
+    "path": "sprites/zhenya/winter/surprised.png",
+    "native_path": "masters/sprites/zhenya/winter/surprised.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "8c0d818e3bde85fb00b48b9c0412c7698ce8e4e373b6656fe3467bee76756395",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "9f9e2f30914bf68ca5f313cff7a402b4ff9a7bd91ff540ffb1ac2f9fdc3c9fa2",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_b/manifest.json"
+  },
+  {
+    "path": "sprites/zhenya/winter/angry.png",
+    "native_path": "masters/sprites/zhenya/winter/angry.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "cc2e7abd3be0ba2582e0630d12078cf9d58150c61ad0aecfe65afd2806fc5b87",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "9dc8837766966e9ff9730e63055b98a5b0158c13314e7905510d7054ce7e55b6",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_b/manifest.json"
+  },
+  {
+    "path": "sprites/zhenya/indoor/neutral.png",
+    "native_path": "masters/sprites/zhenya/indoor/neutral.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "e6e1761be38c2f86109d863e0046c4f9cdf43a8b92e8f26a8a31470bf8ef837a",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "b87a1c17a715ffe5357b4e44c9c566739acf979a1bd17d1ed80408c2685ef18e",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_b/manifest.json"
+  },
+  {
+    "path": "sprites/zhenya/indoor/soft_smile.png",
+    "native_path": "masters/sprites/zhenya/indoor/soft_smile.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "429520f820147329b6ce8f069cba737c4789fa59ca950c975400b1a3fcbc57ce",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "19137f01f64afdcc5135c5b913741fdbfb65942a3570c7df26fb165ac0506f7b",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_b/manifest.json"
+  },
+  {
+    "path": "sprites/zhenya/indoor/thoughtful.png",
+    "native_path": "masters/sprites/zhenya/indoor/thoughtful.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "c099fda7e18cbb0f1870d4839b072a965f954be11bcf1456a794953d7161ce52",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "d60ba3ee583ff9d44717854b8ee8506290c7d62d58b94a77185df54abe978cbf",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_b/manifest.json"
+  },
+  {
+    "path": "sprites/zhenya/indoor/sad.png",
+    "native_path": "masters/sprites/zhenya/indoor/sad.png",
+    "native_size": [
+      941,
+      1671
+    ],
+    "native_sha256": "ce28bd333cb5e7cdb3f5785386a527e6665720b92f054e5e27e2ade193db4839",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "f9d659f97eeebf1ae138acde246c21b5b1fe43e2696398315c62aa9b0c2ba8d4",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_b/manifest.json"
+  },
+  {
+    "path": "sprites/zhenya/indoor/surprised.png",
+    "native_path": "masters/sprites/zhenya/indoor/surprised.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "58bf1e9720d7f2bfd6a19adcdf76c0183400f02804df3b526c9d0f0f3ad1b626",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "64e3308dbf94cf7df0b6e96e4568ac5c8038ad9ccbd319c26853b6a78155f2ba",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_b/manifest.json"
+  },
+  {
+    "path": "sprites/zhenya/indoor/angry.png",
+    "native_path": "masters/sprites/zhenya/indoor/angry.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "facbb9fe716037b3603533e4d8a46c6c3efa88f9e3106995380c2216cd17e26a",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "2c27cd56f8d9eaeef448c843628386e80a4e354a0c260f2a9395e9c30edc0d8d",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_b/manifest.json"
+  },
+  {
+    "path": "sprites/tikhonova/winter/neutral.png",
+    "native_path": "masters/sprites/tikhonova/winter/neutral.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "8f212375f934e5b17215210cbd7253a2bae7ff416758c5a3ad39308b124a2889",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "bfdbc46270aae96b9fdd15f941ac8b0146d9b3d6ada3c76c571599cc924c3c6f",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_a/native_log.json"
+  },
+  {
+    "path": "sprites/tikhonova/winter/soft_smile.png",
+    "native_path": "masters/sprites/tikhonova/winter/soft_smile.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "5b1146e8af3585dce712834d8d5809cceca504e622cffee2a7bbb54eafd39fb0",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "54c384c22aa7bf611e3cb4982a8890f0ca000b636f71d1801f350e7b9ea64f3c",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_a/native_log.json"
+  },
+  {
+    "path": "sprites/tikhonova/winter/thoughtful.png",
+    "native_path": "masters/sprites/tikhonova/winter/thoughtful.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "be693efc6068b74228df461038b70a001d383cb519b3f7f90f3cd0da387555ed",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "76779792d834b34d753789a2b9ff2a78231a42acf25932dafa767536cdcf77b0",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_a/native_log.json"
+  },
+  {
+    "path": "sprites/tikhonova/winter/sad.png",
+    "native_path": "masters/sprites/tikhonova/winter/sad.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "fc02e88ecfc358df949c1033f39a301b6307f1b1492029f7dec904456951b1ea",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "887c09259ca1ddd563fbe757536213834cb198651a847be2f4f8331cc68d0264",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_a/native_log.json"
+  },
+  {
+    "path": "sprites/tikhonova/winter/surprised.png",
+    "native_path": "masters/sprites/tikhonova/winter/surprised.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "495548675e40e7658424ff716892f1a35e0597df0d3fde72d7eb1b281197cc6e",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "cb572ca21ddadc7ae6c7385fa1dc35c1ef8fd084faa3f742d986c3a0e26f87d5",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_a/native_log.json"
+  },
+  {
+    "path": "sprites/tikhonova/winter/angry.png",
+    "native_path": "masters/sprites/tikhonova/winter/angry.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "f538b8058b6600d5d6947392790969c75c410eb8ad62d91f23d047a85a3bee62",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "32349d4d50cc410693bfc988abce5f023d5a1a47e7111f3d0f9b8045c1b5acf2",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_a/native_log.json"
+  },
+  {
+    "path": "sprites/tikhonova/indoor/neutral.png",
+    "native_path": "masters/sprites/tikhonova/indoor/neutral.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "f905666e8f7fd455e40ae64fe8c326ca95976610b780c73230480839b3ed641c",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "bd80e155f1acf7684290a6a9395ffec18ff9f59d765ef1bb2b5a5bf9e991c9ba",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_a/native_log.json"
+  },
+  {
+    "path": "sprites/tikhonova/indoor/soft_smile.png",
+    "native_path": "masters/sprites/tikhonova/indoor/soft_smile.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "e6b81f98e9339f951807ee49d58df59bf46ad7e0840b05f45438c417ba8bbd1e",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "c8b3906cc50d5241530e3100036a3c26d7bc8f420207753c0e285e53ac73bd07",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_a/native_log.json"
+  },
+  {
+    "path": "sprites/tikhonova/indoor/thoughtful.png",
+    "native_path": "masters/sprites/tikhonova/indoor/thoughtful.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "71a0bd04faace27c4c055ee20668b6a325c134b4befc8c6d468db5291ed410b8",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "73d91e78726b70c0feb239511afc40258ce66ce8178a75441215f52742d07e4b",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_a/native_log.json"
+  },
+  {
+    "path": "sprites/tikhonova/indoor/sad.png",
+    "native_path": "masters/sprites/tikhonova/indoor/sad.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "5a69cb291e8ff81288ceffc312ee411d3fb86031966a7e5cf58102713cc8502e",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "2f7d649d0d233946337bc7f3741dc97ee90e1eaada84f0f249d31cbe50436cc4",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_a/native_log.json"
+  },
+  {
+    "path": "sprites/tikhonova/indoor/surprised.png",
+    "native_path": "masters/sprites/tikhonova/indoor/surprised.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "f0e4d2c14d1a55b8c7d0e9799e0c707eaf7d28a9745a00a0a75a545ccc197d64",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "26217e8e5903438c74af15b8c2a708a86164d2d98ea6828dc6d981e59d90c6c4",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_a/native_log.json"
+  },
+  {
+    "path": "sprites/tikhonova/indoor/angry.png",
+    "native_path": "masters/sprites/tikhonova/indoor/angry.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "fb006cb309ad29f6184e2926032ae8563e039f6be609860999f549c8a8bd45ec",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "fd9461baa01511df50e3206f32a371a21c8aca28378ec6c5216f679e89b68994",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_a/native_log.json"
+  },
+  {
+    "path": "sprites/olga/winter/neutral.png",
+    "native_path": "masters/sprites/olga/winter/neutral.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "96b34c47d5da02cba07a8764fd18a214dc292a075d8d96496fad6fa9424d5253",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "efdcddc38c85d96f0f72e2ca8a17bf5fe3194bfa94ed9fe8cb724cb5454d5e39",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_b/manifest.json"
+  },
+  {
+    "path": "sprites/olga/winter/soft_smile.png",
+    "native_path": "masters/sprites/olga/winter/soft_smile.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "8530e3ee30cfd2c1b19d5ef0f9407d1ec82db705cfd19d708d4a730c7ddcf931",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "4ea25ff1b6235823e59a5cb0ff0e5da1fb206dc947ee743fc0116c02d4863d1c",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_b/manifest.json"
+  },
+  {
+    "path": "sprites/olga/winter/thoughtful.png",
+    "native_path": "masters/sprites/olga/winter/thoughtful.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "c33ce259e692918473a0f1d11cab437c99789a384cf288bddd792a90e467327f",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "3ba7a579f77092e607379cdf0b0648c7561f4878e7526b79809a42c3b0cdee9f",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_b/manifest.json"
+  },
+  {
+    "path": "sprites/olga/winter/sad.png",
+    "native_path": "masters/sprites/olga/winter/sad.png",
+    "native_size": [
+      941,
+      1671
+    ],
+    "native_sha256": "13c47683658e148c8eb6fc6fd23a0b4b00739f344fc53941115e403518f636f4",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "7a411da9a54f7ed57c681f1639b388df77fbb489b275da75adf3998f723b6097",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_b/manifest.json"
+  },
+  {
+    "path": "sprites/olga/winter/surprised.png",
+    "native_path": "masters/sprites/olga/winter/surprised.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "c43df50451455cfc787c38bb27add565eb686007f4f6764b3033f4473870d0cc",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "643535b82c467444c9d831ee6bca70ffe2c2b5f858918c3faf39b15460df7691",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_b/manifest.json"
+  },
+  {
+    "path": "sprites/olga/winter/angry.png",
+    "native_path": "masters/sprites/olga/winter/angry.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "095cb5f3ef2649b5bc1cb02ac3d2045751f73c9396b961fddd62dab0b49e70b6",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "ec0204fcbbdb17bb13d8243e135f4ab4f4f693b8411cbb18cb5a45552e0b3ea9",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_b/manifest.json"
+  },
+  {
+    "path": "sprites/olga/indoor/neutral.png",
+    "native_path": "masters/sprites/olga/indoor/neutral.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "a163612bc62faa5baefb6492851a9f1d2a97e38aacf2b7f446ce989904b86ce3",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "e8ef24dc3a5546273de4bd625f5f4b9d045ba25700b5025ddba1ea076168501b",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_b/manifest.json"
+  },
+  {
+    "path": "sprites/olga/indoor/soft_smile.png",
+    "native_path": "masters/sprites/olga/indoor/soft_smile.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "e041dca0ffe6158eeabaa191d00a53cf55e0a31ba82afe558efdb54e3103b918",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "2bb8521532a1527a960b38350da9a33b0882ba8b5d808782376cf1d8dcd68677",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_b/manifest.json"
+  },
+  {
+    "path": "sprites/olga/indoor/thoughtful.png",
+    "native_path": "masters/sprites/olga/indoor/thoughtful.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "10f7ce8079e7167997ddb613c24882c4439fe1ef9e46c2bb4f669a8fa3c7e1a0",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "ce6f19a3c7f1d40ea45d39f6dcafec97739f088f12de6d522fbcc0969dd44e2f",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_b/manifest.json"
+  },
+  {
+    "path": "sprites/olga/indoor/sad.png",
+    "native_path": "masters/sprites/olga/indoor/sad.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "b2e830cba646aee8edcab5dbe775665a9fc94261594b9aee426873c8fc7a9b8f",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "7702b1a932754744f8cf1d37e7afcf76a1a0e4ced6342da7b0579156bfc88a41",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_b/manifest.json"
+  },
+  {
+    "path": "sprites/olga/indoor/surprised.png",
+    "native_path": "masters/sprites/olga/indoor/surprised.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "cfca737c315a6430984c90eb299c824cfece801260eb4c728920825b3bb36ed7",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "570b5bf6753dd5a76bc7e5dfc88018194a845ee0b31413be9448f399806480f3",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_b/manifest.json"
+  },
+  {
+    "path": "sprites/olga/indoor/angry.png",
+    "native_path": "masters/sprites/olga/indoor/angry.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "4aab1b8619e036052f952406387bb640c3e67117021c8f79be42e7aebeff3d0e",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "68c142d97802bcdb98154c21db63cdf629ced51589a36466de6fe63e1e513e51",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_b/manifest.json"
+  },
+  {
+    "path": "sprites/viola/winter/neutral.png",
+    "native_path": "masters/sprites/viola/winter/neutral.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "dd32f2ea0ddbe00a991aca16d99d499b3d27d0a088270d446df87022cba385ce",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "d09fe4ecd5f472234bd7755b23f13fa2239db2dcc38643f6906d7a35151df448",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_b/manifest.json"
+  },
+  {
+    "path": "sprites/viola/winter/soft_smile.png",
+    "native_path": "masters/sprites/viola/winter/soft_smile.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "e6793e4a31ea38717d5f18823e41d81aae48348ad511a639f2d10e5c3a440ddd",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "1254d29b4dc84504d79a4a9f8a0265b5b6ff4d58bd0a8ed8f7a59ad1871fc5d5",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_b/manifest.json"
+  },
+  {
+    "path": "sprites/viola/winter/thoughtful.png",
+    "native_path": "masters/sprites/viola/winter/thoughtful.png",
+    "native_size": [
+      941,
+      1671
+    ],
+    "native_sha256": "fca742f8655ffa478bfe0004c3fce7458b18ac4f251977fb061471ae2263e5fe",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "2895c11b0f1c56f1d270a6979543a5a37d0c3f016bf3349fa821db09be2309cc",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_b/manifest.json"
+  },
+  {
+    "path": "sprites/viola/winter/sad.png",
+    "native_path": "masters/sprites/viola/winter/sad.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "158c44a3eada6f80abd35835985f879ba2c930006ae879a19d4619732a13d623",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "f9b5e9ebc74c2e08f04b29e95e5491ad39f575d75a9488c846292bca2ed80e32",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_b/manifest.json"
+  },
+  {
+    "path": "sprites/viola/winter/surprised.png",
+    "native_path": "masters/sprites/viola/winter/surprised.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "29d99499a2a6e0d46a27c9d368d8285582dc32f8ba614c36bc5680a88853519f",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "1fdefc54ac2d1358e5dc3122b5c2e787a9c055785866a25d1aa87a3812ca0486",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_b/manifest.json"
+  },
+  {
+    "path": "sprites/viola/winter/angry.png",
+    "native_path": "masters/sprites/viola/winter/angry.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "1eb83debcc6569c3a7805a0288d20dfea6ed8f69dc87a2985346af97be52d9e1",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "e614cc27c6ee2b9454a9495eb67fd9ba21acbde0afb0ad38e69026b3337cfecf",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_b/manifest.json"
+  },
+  {
+    "path": "sprites/viola/indoor/neutral.png",
+    "native_path": "masters/sprites/viola/indoor/neutral.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "0c76e5398baba33ebffecc3fbede3a02a01de901a7081ca85e4cde0e8cefdfb3",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "c141f52e060f1340c81294f9778ff775282ead2a8b9caa1507eb05a34b6b6a19",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_b/manifest.json"
+  },
+  {
+    "path": "sprites/viola/indoor/soft_smile.png",
+    "native_path": "masters/sprites/viola/indoor/soft_smile.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "f94757877d666c16adce9aaff69e71df028ffa75bb99c86a6e9898c752dbf8e9",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "85422acba680fbbc120e263318fa44c9531250750ad93d43a4a701646ac76611",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_b/manifest.json"
+  },
+  {
+    "path": "sprites/viola/indoor/thoughtful.png",
+    "native_path": "masters/sprites/viola/indoor/thoughtful.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "c58ea25a65ac8556549978fb5d301cadf2896707c4e4dba65ae973bf84c53b73",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "5590d9c3a1847164c62528968bde4821f762efbd0bca30cbef1c901624bd555f",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_b/manifest.json"
+  },
+  {
+    "path": "sprites/viola/indoor/sad.png",
+    "native_path": "masters/sprites/viola/indoor/sad.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "8fa9b0eb1807c54b66e92398284d9e32d5f8b579259b6c0157f3414d8bbd09ea",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "ef8dc02a8a5fe65dfd2af54bce2a56d26be7fdd3721e1a0fddb8d1f14996fd3d",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_b/manifest.json"
+  },
+  {
+    "path": "sprites/viola/indoor/surprised.png",
+    "native_path": "masters/sprites/viola/indoor/surprised.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "12bad3bc84470c88697960aaae81b0f10030bb3501eef0d997464cd2623699c3",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "28b92bb2bf1f53d643a1b5c107858bcde0a29f6b25f1d0387455bcc41f31f3e9",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_b/manifest.json"
+  },
+  {
+    "path": "sprites/viola/indoor/angry.png",
+    "native_path": "masters/sprites/viola/indoor/angry.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "32176b547c71e083aabbd7c4a89e0684dfc5c82e1aa810427262ca769e502a11",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "40ee576b2b6bc94d4935d6ce0a8e3083914ff1e0de4ee3d8b1fd748fa0a57b09",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_b/manifest.json"
+  },
+  {
+    "path": "sprites/ulyana/winter/neutral.png",
+    "native_path": "masters/sprites/ulyana/winter/neutral.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "3a38a866565fd8390e93b350be99b57bcac3c8bbff65e0c70c5ac9e055b83fd1",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "2d915886dccb0d9a1e3b902b255f2604bd4e012a28497ce49b9116dd5f33d2bd",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_b/manifest.json"
+  },
+  {
+    "path": "sprites/ulyana/winter/soft_smile.png",
+    "native_path": "masters/sprites/ulyana/winter/soft_smile.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "e955c5255a206747c65c9573bc1d9f100b82ef2407c4baa80bcc4c42d9e232c0",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "94586d7cd865172433d3eb67eb1c1520600c04d84902abe78d721344e17349d2",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_b/manifest.json"
+  },
+  {
+    "path": "sprites/ulyana/winter/thoughtful.png",
+    "native_path": "masters/sprites/ulyana/winter/thoughtful.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "93cd34ff6336d71679385ab135b8324aa8ef5d65de48d24ea3f4401a1dc884bc",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "efc05e4457ddb5ee2b3dd91e96201a3c938758dcde23786eaa9e9d9c964835f3",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_b/manifest.json"
+  },
+  {
+    "path": "sprites/ulyana/winter/sad.png",
+    "native_path": "masters/sprites/ulyana/winter/sad.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "b47f3c476fa7e6d3e9a4f45580516fdf3da853136a7902bb3119348b453f2838",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "b43f2066a10d6c6d71ad8c1103553d414b7bf01b270d8efe99828201dac15eb2",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_b/manifest.json"
+  },
+  {
+    "path": "sprites/ulyana/winter/surprised.png",
+    "native_path": "masters/sprites/ulyana/winter/surprised.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "567a125649c52ce4b42157bcabfc9ccf89d0f5137717431d6db8168b54954bca",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "968a362108f6fe72ff887bb7bc0850f500cfd22dfbdc702c1969ab874976bc93",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_b/manifest.json"
+  },
+  {
+    "path": "sprites/ulyana/winter/angry.png",
+    "native_path": "masters/sprites/ulyana/winter/angry.png",
+    "native_size": [
+      941,
+      1671
+    ],
+    "native_sha256": "f32eed71e0c9a803fd0553d8f68fe42be071370daacc2ae29f934f400fb75de9",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "f502253bec1ee3a87ad57d9db4c01bafe5cc741f8cb9fed0513f57b192cb9d8a",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_b/manifest.json"
+  },
+  {
+    "path": "sprites/ulyana/indoor/neutral.png",
+    "native_path": "masters/sprites/ulyana/indoor/neutral.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "e0747746a5a434b85fef137f71f7d9b1e6a6174a84cefb56a19db2e85c163ab8",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "acbce105b356b0918a62a7f8898776555bca403f5cbf1881601fcc78a04851e3",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_b/manifest.json"
+  },
+  {
+    "path": "sprites/ulyana/indoor/soft_smile.png",
+    "native_path": "masters/sprites/ulyana/indoor/soft_smile.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "60e622693acedf4cf6d70fdba18943c4bac20c12a067899d39bab9c30799506e",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "815a65708d5c058d81f4e58f571b2399aeac493a6ffc2b6d935ba3ee747b48a9",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_b/manifest.json"
+  },
+  {
+    "path": "sprites/ulyana/indoor/thoughtful.png",
+    "native_path": "masters/sprites/ulyana/indoor/thoughtful.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "662e18431d4fa761a1655b425001ef98c8a1223aa505e6cafd883cd7bfe815fe",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "8d66d973826c09234bc162f2077b9c2d5c0d22487c099da40c752e4c78069b9b",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_b/manifest.json"
+  },
+  {
+    "path": "sprites/ulyana/indoor/sad.png",
+    "native_path": "masters/sprites/ulyana/indoor/sad.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "3addf659849705981f0f1596840c5bf7ba8bad853675b18d8a561106e8737a10",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "751ec43b11e02536f9ad3932fafc0c46cc34a79648faa3265ed2485149c02502",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_b/manifest.json"
+  },
+  {
+    "path": "sprites/ulyana/indoor/surprised.png",
+    "native_path": "masters/sprites/ulyana/indoor/surprised.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "6d803c2664ff3afa9a6c577b96078dba56155975c4c030edb10f7d72cddc02ba",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "ed3619db0f9bc0592e2062b7e5304f51ee0c1c5f80629cc72410db8341220589",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_b/manifest.json"
+  },
+  {
+    "path": "sprites/ulyana/indoor/angry.png",
+    "native_path": "masters/sprites/ulyana/indoor/angry.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "052b96cf8e8117640589b1b1e4becb4fc82c9078e457fa31221d387e5b76e58f",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "e20a0a61be480dae87295c2a06cd22282a1b95f4e89b555ff2f2d00080578069",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_b/manifest.json"
+  },
+  {
+    "path": "sprites/elektronik/winter/neutral.png",
+    "native_path": "masters/sprites/elektronik/winter/neutral.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "70aafc02238713a1afdf20e673952306fbf1a5ba756c3c9c5656c0a21b258885",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "5740a48de2c891033662f05d2c3f1a074f0be8505a45374dda48bcd2aa294933",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_leads/elektronik_winter_neutral.json"
+  },
+  {
+    "path": "sprites/elektronik/winter/soft_smile.png",
+    "native_path": "masters/sprites/elektronik/winter/soft_smile.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "3ff008fd68cfe895f19ee7bdd51f68213de1d2495f54eae054d8067e5bfc5759",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "a569ee510a251cc1f74b257aac6075b5da6b8daf7415e2b36ee2c30986ed9756",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_leads/elektronik_winter_soft_smile.json"
+  },
+  {
+    "path": "sprites/elektronik/winter/thoughtful.png",
+    "native_path": "masters/sprites/elektronik/winter/thoughtful.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "e5c747503bfdc9945b7b390281594b21e6ffe083f59306cad98cae7c1c2ebd76",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "1ef81e2ebf77f700a0cc8435336a0002f73960bac6696e6f54640f0efee165d7",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_leads/elektronik_winter_thoughtful.json"
+  },
+  {
+    "path": "sprites/elektronik/winter/sad.png",
+    "native_path": "masters/sprites/elektronik/winter/sad.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "9fed19eb526b63a0d586649b509c397a87a4822b2ef30e5c3f8d49201e447815",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "8670d8eab63e19a2e2ae8f25b9a4d20c88a57b5dff6585ad2b66982f8299f780",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_leads/elektronik_winter_sad.json"
+  },
+  {
+    "path": "sprites/elektronik/winter/surprised.png",
+    "native_path": "masters/sprites/elektronik/winter/surprised.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "29b65742f052aafec3499178c4e79e14e0e255b736bcb0ea9590011c328b6d1e",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "b5940db1e65f589b3a20e7205d01560d627410b14c54e9671c766abeb4fb1096",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_leads/elektronik_winter_surprised.json"
+  },
+  {
+    "path": "sprites/elektronik/winter/angry.png",
+    "native_path": "masters/sprites/elektronik/winter/angry.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "84bdb3f7f47911362bf3e48768c92668829b09617d7418e92777f8ca45977b0f",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "92e7ba81bf9176574ca3167ee54ca0560ea67b603eca68e4dfc3bdbbbc6e1f6f",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_leads/elektronik_winter_angry.json"
+  },
+  {
+    "path": "sprites/elektronik/indoor/neutral.png",
+    "native_path": "masters/sprites/elektronik/indoor/neutral.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "63b05b4a93f898127c8eb6b494bef5dbfe3dcf9f19ff9e698d5bcb811bc1ee53",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "f248abab10b492d28182aff0a015995b68fe80f50385ab2703efc7246853927d",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_leads/elektronik_indoor_neutral.json"
+  },
+  {
+    "path": "sprites/elektronik/indoor/soft_smile.png",
+    "native_path": "masters/sprites/elektronik/indoor/soft_smile.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "1c6c46f2b0b0ee0689ef3146a4294bd1adb1705b9315b019e004befb75b991ca",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "3252ad1c6944004b905e2020e29037f0cb6b1413dd0e70ebfa6a2b8d39867738",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_leads/elektronik_indoor_soft_smile.json"
+  },
+  {
+    "path": "sprites/elektronik/indoor/thoughtful.png",
+    "native_path": "masters/sprites/elektronik/indoor/thoughtful.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "8f554336d7d1e5628a7e3f099f5fd2ecace7a13d1fa2086d658fe8aeb5fb801b",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "a7e6f0a74994b885c875416aa3e983c842cdeca95e8914eed0232512672b8adc",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_leads/elektronik_indoor_thoughtful.json"
+  },
+  {
+    "path": "sprites/elektronik/indoor/sad.png",
+    "native_path": "masters/sprites/elektronik/indoor/sad.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "f986b3f25fcd84978d64a678942dffb69e290b0dd00922ea5e6914675469955b",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "41888ca47d46b41ebf2cf2ff3f4382389741c4bcd5c02d91c45f2815cc9bab68",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_leads/elektronik_indoor_sad.json"
+  },
+  {
+    "path": "sprites/elektronik/indoor/surprised.png",
+    "native_path": "masters/sprites/elektronik/indoor/surprised.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "8c1f775d0fe72f937a6c1474de337c0e3e275bf2aadfbbca58b98890e2eb4c39",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "70c01f7777ab9d6b806c1fd414dde4f116ac808cdc06b37053995204fae7f360",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_leads/elektronik_indoor_surprised.json"
+  },
+  {
+    "path": "sprites/elektronik/indoor/angry.png",
+    "native_path": "masters/sprites/elektronik/indoor/angry.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "67b885130766f68bf1c95d67145971b9c5f45d446652e502902e4ad584667690",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "ae050deb42b3b8583f5ea8d74d97aa98424b381baf7091873415f4ee7df203b7",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_leads/elektronik_indoor_angry.json"
+  },
+  {
+    "path": "sprites/shurik/winter/neutral.png",
+    "native_path": "masters/sprites/shurik/winter/neutral.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "4a4185c8d7ce57b90d1348309dfc7a02b435a83188c95aa2cf32d33a9ee1a2c4",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "6d36731607c26536bd785d609039676493a799507d2ababf390a459f23322f6f",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_cg/shurik/manifest.json"
+  },
+  {
+    "path": "sprites/shurik/winter/soft_smile.png",
+    "native_path": "masters/sprites/shurik/winter/soft_smile.png",
+    "native_size": [
+      941,
+      1671
+    ],
+    "native_sha256": "7e8e2c68f43e80f57934e87a1f290059daad3e0dafd9db9fafd7d4a0d86a3022",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "5889d2f6f68332dfaab4f51a171a42fb256eda6f3dea5baf3d079582acaf17ee",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_cg/shurik/manifest.json"
+  },
+  {
+    "path": "sprites/shurik/winter/thoughtful.png",
+    "native_path": "masters/sprites/shurik/winter/thoughtful.png",
+    "native_size": [
+      941,
+      1671
+    ],
+    "native_sha256": "a55d8fd6c44166d52d56fdcb8ba3f07449a56f689fdb1652169676420d370708",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "45c2a50b6651a7257b82842fc422adc95737c9ec5e26852ce80fc7d9ebd68dbe",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_cg/shurik/manifest.json"
+  },
+  {
+    "path": "sprites/shurik/winter/sad.png",
+    "native_path": "masters/sprites/shurik/winter/sad.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "b3663adec2391b2f2e19a2a8612d27294d284458765f34c669b1e16a9a67ddaf",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "a7c973cd85f8ed4ceada8ac36376801c7378dca1e16d806cef89b0492613fcad",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_cg/shurik/manifest.json"
+  },
+  {
+    "path": "sprites/shurik/winter/surprised.png",
+    "native_path": "masters/sprites/shurik/winter/surprised.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "6ce90b44182ffc51d5683bde7fbef35a3a54e21bcc3df0bb04e1ccb791361ecf",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "20acf32d0e6cada9c55a9e16506d3e53c82fdf95dc20c9a6051d916f642b74a2",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_cg/shurik/manifest.json"
+  },
+  {
+    "path": "sprites/shurik/winter/angry.png",
+    "native_path": "masters/sprites/shurik/winter/angry.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "2b0f8bf48b58afc72421d4b8bbf472fb1a9cc28a06632b3adada3111b048ceef",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "810ba301781c3dc2c1051133a8e176be82878d32aae5d814792a6f5c893a1c1f",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_cg/shurik/manifest.json"
+  },
+  {
+    "path": "sprites/shurik/indoor/neutral.png",
+    "native_path": "masters/sprites/shurik/indoor/neutral.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "8829c09753cd7b6477e674873587d248fd4ad398b4cde6022e7044fb28d3ebba",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "26dd8ac991f6beba1bf60c5d203ad2bb1fbafe0cc6705a3d32dfc5dcb6873962",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_cg/shurik/manifest.json"
+  },
+  {
+    "path": "sprites/shurik/indoor/soft_smile.png",
+    "native_path": "masters/sprites/shurik/indoor/soft_smile.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "ec205138a201378e36190001641abd05dfbf10492b1dfc007cf5a4bd1266fcbd",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "cb15c2420b8e3e95752b56cd3e3a536377693c56e24976545dd988f5a79568c2",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_cg/shurik/manifest.json"
+  },
+  {
+    "path": "sprites/shurik/indoor/thoughtful.png",
+    "native_path": "masters/sprites/shurik/indoor/thoughtful.png",
+    "native_size": [
+      941,
+      1671
+    ],
+    "native_sha256": "c189140482625c98d4e2b22a91e852c060e30c9d3533e11f2710fd54bfc0cd43",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "e1f57fdac5d649814bea09f64ac317d2015e595be76b2a62c3f4259426bf3c7e",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_cg/shurik/manifest.json"
+  },
+  {
+    "path": "sprites/shurik/indoor/sad.png",
+    "native_path": "masters/sprites/shurik/indoor/sad.png",
+    "native_size": [
+      941,
+      1671
+    ],
+    "native_sha256": "29eafbef12690dce0c628e4a369f1acc20463b0ef741cbfbcd6ce9653895934d",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "c58358410adbe71aebc6ae1a7e687553ec50d81d0c32b75996cb02926b0a4aa6",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_cg/shurik/manifest.json"
+  },
+  {
+    "path": "sprites/shurik/indoor/surprised.png",
+    "native_path": "masters/sprites/shurik/indoor/surprised.png",
+    "native_size": [
+      941,
+      1671
+    ],
+    "native_sha256": "481ef82c42743498d06d31e4502a62c040bac2367d4e7f978854ef7d7032e7d6",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "31e37913e756bae15608823c4f12cfef7d2fb50a14b472842b589dedd86557cc",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_cg/shurik/manifest.json"
+  },
+  {
+    "path": "sprites/shurik/indoor/angry.png",
+    "native_path": "masters/sprites/shurik/indoor/angry.png",
+    "native_size": [
+      941,
+      1672
+    ],
+    "native_sha256": "5e397ed580a31e69af891729bb779a95a947b0989e1d95b72a4cd1644e664703",
+    "export_size": [
+      1080,
+      1920
+    ],
+    "export_sha256": "39b4c10d88d05f66a2823cfcb83492531afa70cfa3ea48f858c777250bf2565e",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_cg/shurik/manifest.json"
+  },
+  {
+    "path": "cg/cg_d07_last_run.png",
+    "native_path": "masters/cg/cg_d07_last_run.png",
+    "native_size": [
+      1672,
+      941
+    ],
+    "native_sha256": "c9da0fadead735d5258e985e1cbd1b57a37bf1d410f268ce54d7f3828a84ede3",
+    "export_size": [
+      1920,
+      1080
+    ],
+    "export_sha256": "8b197c89e97e1e2df3823db0cf4738c2d1049811b1be07bc0798babe83a277b1",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_cg/manifest.json"
+  },
+  {
+    "path": "cg/cg_d07_library_voice.png",
+    "native_path": "masters/cg/cg_d07_library_voice.png",
+    "native_size": [
+      1672,
+      941
+    ],
+    "native_sha256": "f2b30029cf5854c6d931dee410ad25650e99dc33cb97c4a38efc1b5a7224970f",
+    "export_size": [
+      1920,
+      1080
+    ],
+    "export_sha256": "1c4806744d00484daab0e0ad25c9b6779de0eb47ced21aa8326777fb8a689150",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_cg/manifest.json"
+  },
+  {
+    "path": "cg/cg_d07_breakfast_four.png",
+    "native_path": "masters/cg/cg_d07_breakfast_four.png",
+    "native_size": [
+      1672,
+      941
+    ],
+    "native_sha256": "a3ae05391bf23cba9ec1b784a362e01a14c6fdf7ceb574295083f60173130e6a",
+    "export_size": [
+      1920,
+      1080
+    ],
+    "export_sha256": "8bf13ea2b6d719b3b48eaae722ea41f6468dac7b890b69784047fa61da608383",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_cg/manifest.json"
+  },
+  {
+    "path": "cg/cg_d07_packing.png",
+    "native_path": "masters/cg/cg_d07_packing.png",
+    "native_size": [
+      1672,
+      941
+    ],
+    "native_sha256": "3dbbbb419eaca522a77b7e66c64945d09d6f1fad68055e81f6917ad5ddc97c02",
+    "export_size": [
+      1920,
+      1080
+    ],
+    "export_sha256": "71b0bcc9c2b424e9f00beba4b1afd54213a20a108d71d18013089b811b804eb9",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_cg/manifest.json"
+  },
+  {
+    "path": "cg/cg_d07_last_pier_friend.png",
+    "native_path": "masters/cg/cg_d07_last_pier_friend.png",
+    "native_size": [
+      1672,
+      941
+    ],
+    "native_sha256": "76772cb5287093aacb788de3a9084d3515736334fb9c1a856cc36efb192e1738",
+    "export_size": [
+      1920,
+      1080
+    ],
+    "export_sha256": "7ba7a230b45768347c5136da83d877b10e789bba745e9806bd548d75dc8dfcfe",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_cg/manifest.json"
+  },
+  {
+    "path": "cg/cg_d07_last_pier_romance.png",
+    "native_path": "masters/cg/cg_d07_last_pier_romance.png",
+    "native_size": [
+      1672,
+      941
+    ],
+    "native_sha256": "ea2b3e76372b7f26600144fc196d0db7c24a8ddeb510911580470bb16d1eaadd",
+    "export_size": [
+      1920,
+      1080
+    ],
+    "export_sha256": "3994b31b5e57189edd41a1143941d97564a10225952773a41ab94f9f2cd8b75e",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_cg/manifest.json"
+  },
+  {
+    "path": "cg/cg_d07_farewell_gate.png",
+    "native_path": "masters/cg/cg_d07_farewell_gate.png",
+    "native_size": [
+      1672,
+      941
+    ],
+    "native_sha256": "180cce176b1f43dc87e8cc3862ca764045f670efabe155772e9fea5cd2eddc11",
+    "export_size": [
+      1920,
+      1080
+    ],
+    "export_sha256": "37b602ab1400bbebf110c34247890f04607d878a358a8f7b3d0511632a2762b7",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_cg/manifest.json"
+  },
+  {
+    "path": "cg/cg_d07_bus_sleep_friend.png",
+    "native_path": "masters/cg/cg_d07_bus_sleep_friend.png",
+    "native_size": [
+      1672,
+      941
+    ],
+    "native_sha256": "1eb23ad08b7678313cd9883f5c157ec31bc6bf1e4156c0e5cdbacb36dbd446cc",
+    "export_size": [
+      1920,
+      1080
+    ],
+    "export_sha256": "afc982bf170b57626af25a2d764ec6ac602f502080cca0d9bac2b65af0119ccb",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_cg/manifest.json"
+  },
+  {
+    "path": "cg/cg_d07_bus_sleep_romance.png",
+    "native_path": "masters/cg/cg_d07_bus_sleep_romance.png",
+    "native_size": [
+      1672,
+      941
+    ],
+    "native_sha256": "6f7898cb56e8cf6be3696fa2109fe4bcb9bca4cd0b091d7e2656aaede9792855",
+    "export_size": [
+      1920,
+      1080
+    ],
+    "export_sha256": "3194af4394eb231393e09613c504f8f340deed3b0777c964785e8ee52c1426ad",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_cg/manifest.json"
+  },
+  {
+    "path": "cg/cg_ep_lena_wakes.png",
+    "native_path": "masters/cg/cg_ep_lena_wakes.png",
+    "native_size": [
+      1672,
+      941
+    ],
+    "native_sha256": "9618204e04feafaab05ccfadd7ad5f215cd6e71b7bdd70890cb14ee665e49e4f",
+    "export_size": [
+      1920,
+      1080
+    ],
+    "export_sha256": "834bc9319faff18fe4e39f4a67da4b77041879ed8e13807adf5971be62822240",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_cg/manifest.json"
+  },
+  {
+    "path": "cg/cg_ep_darya_wakes.png",
+    "native_path": "masters/cg/cg_ep_darya_wakes.png",
+    "native_size": [
+      1672,
+      941
+    ],
+    "native_sha256": "960d879a7350e6dd02b10e0e37699a6e5ccf3a0d7e445cd4f6b681193691ab13",
+    "export_size": [
+      1920,
+      1080
+    ],
+    "export_sha256": "a487a7b0084edf013bba85327c0fa01ecebe64fbb55c04f3d274cbedc3f3649a",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_cg/manifest.json"
+  },
+  {
+    "path": "cg/cg_ep_reunion_friend.png",
+    "native_path": "masters/cg/cg_ep_reunion_friend.png",
+    "native_size": [
+      1672,
+      941
+    ],
+    "native_sha256": "53ab2f6ee8faa052c40f3ff1023584f3e724d40baafe45ff3727eee15886837d",
+    "export_size": [
+      1920,
+      1080
+    ],
+    "export_sha256": "7ef9ba5c9b672929733fe0fb9809a4e9bf8b0cab2acbbe6b03997be3cb5b50b8",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_cg/manifest.json"
+  },
+  {
+    "path": "cg/cg_ep_reunion_romance.png",
+    "native_path": "masters/cg/cg_ep_reunion_romance.png",
+    "native_size": [
+      1672,
+      941
+    ],
+    "native_sha256": "5e1ba14a91e92890d1a4640c9b9f0647ecba3bfa279df840545b2c15a98cd3e2",
+    "export_size": [
+      1920,
+      1080
+    ],
+    "export_sha256": "4c049ccf90afe192652ef5583397908ff2ab39f878678b8b6863fd7211f1ed20",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_cg/manifest.json"
+  },
+  {
+    "path": "cg/cg_ep_normal_route_friend.png",
+    "native_path": "masters/cg/cg_ep_normal_route_friend.png",
+    "native_size": [
+      1672,
+      941
+    ],
+    "native_sha256": "7f56d131637165ab4c89cad23bc954fdcd492e24e64b8f53536a5c2522b864d8",
+    "export_size": [
+      1920,
+      1080
+    ],
+    "export_sha256": "a942fa96ab02b687c8b2f4d5f330cc78aa1de7a6e73657395ab398ca70da9952",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_cg/manifest.json"
+  },
+  {
+    "path": "cg/cg_ep_normal_route_romance.png",
+    "native_path": "masters/cg/cg_ep_normal_route_romance.png",
+    "native_size": [
+      1672,
+      941
+    ],
+    "native_sha256": "c194f3e13a5f65075ceff399ac40909c32972e7baa7373df54648ae7111a91bc",
+    "export_size": [
+      1920,
+      1080
+    ],
+    "export_sha256": "2619d4bb2522314f16ce48be0488df0111e4a143f3548697c5e2d19f40ae76a4",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_cg/manifest.json"
+  },
+  {
+    "path": "bg/bg_semen_room_2026_dirty.png",
+    "native_path": "masters/bg/bg_semen_room_2026_dirty.png",
+    "native_size": [
+      1672,
+      941
+    ],
+    "native_sha256": "351ef4bb01d2ccf35053ef4eebf73109a776cd5e93aed9f891502a7235bbac38",
+    "export_size": [
+      1920,
+      1080
+    ],
+    "export_sha256": "616c6f9b11eab55114edbc2bc619186f0bc428de4efd6a9dc029ecb3e6d4bf63",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_cg/manifest.json"
+  },
+  {
+    "path": "bg/bg_semen_room_2026_partial.png",
+    "native_path": "masters/bg/bg_semen_room_2026_partial.png",
+    "native_size": [
+      1672,
+      941
+    ],
+    "native_sha256": "99b1ba7d9a14dc01831331ca78df41f5ea38748c1c8af1f7d09c08d395178699",
+    "export_size": [
+      1920,
+      1080
+    ],
+    "export_sha256": "0e63a3abb8f893e563bdfb8f092f5bed45daac3bc12d2e7fb2b82474d8c2629c",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_cg/manifest.json"
+  },
+  {
+    "path": "bg/bg_semen_room_2026_clean.png",
+    "native_path": "masters/bg/bg_semen_room_2026_clean.png",
+    "native_size": [
+      1672,
+      941
+    ],
+    "native_sha256": "4d8f3067efd69788d4bfbc140c42106189fa4696238c336e5e7fb54d319731a6",
+    "export_size": [
+      1920,
+      1080
+    ],
+    "export_sha256": "80959d1023a60b24beb9417a1bd1739965376aa743611b32c2c619955ddd8268",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_cg/manifest.json"
+  },
+  {
+    "path": "bg/bg_darya_room_winter.png",
+    "native_path": "masters/bg/bg_darya_room_winter.png",
+    "native_size": [
+      1672,
+      941
+    ],
+    "native_sha256": "04e92e691ede7b668cbd0ce8fe5748b9513d98e1c7192836418d636f239d0502",
+    "export_size": [
+      1920,
+      1080
+    ],
+    "export_sha256": "627e3a85f2e4586a14b75188bef4d5805d9626c4e574dc0ad6ef8f590973c9ab",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_cg/manifest.json"
+  },
+  {
+    "path": "bg/bg_semen_landing.png",
+    "native_path": "masters/bg/bg_semen_landing.png",
+    "native_size": [
+      1672,
+      941
+    ],
+    "native_sha256": "01d5df3a9480568ed362d7ccb8c3e425f4ce6fd4dda256dcfcbff841d9e93896",
+    "export_size": [
+      1920,
+      1080
+    ],
+    "export_sha256": "c66ad2b0c96ac661caf6f589e8112bfae64ca557d4ce9fee175cc9209a5aa561",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_cg/manifest.json"
+  },
+  {
+    "path": "bg/bg_moscow_meeting_winter.png",
+    "native_path": "masters/bg/bg_moscow_meeting_winter.png",
+    "native_size": [
+      1672,
+      941
+    ],
+    "native_sha256": "f2fbb8e094509a9c80e75a80f4117ff80997029ad79b3a43ddec1f91b34861d3",
+    "export_size": [
+      1920,
+      1080
+    ],
+    "export_sha256": "848e813d578dbd2dfc23a56c7d37547da23a4967d302ab6279115ea82a394a19",
+    "generation": "built-in image_gen; individual full frame",
+    "metadata_file": "worker_cg/manifest.json"
+  }
+]

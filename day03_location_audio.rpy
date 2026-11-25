@@ -57,6 +57,8 @@ init -9 python:
             renpy.music.play(target, channel="ambience", loop=True, fadeout=0.8, fadein=0.8)
         renpy.music.set_volume(cs_bus_audio_ambient_volume(target), channel="ambience", delay=0.5)
     def cs_day03_audio_after_load():
+        if getattr(store, "cs_d7_started", False):
+            return
         if not getattr(store,"cs_active",False) or not (getattr(store,"cs_day03_started",False) or getattr(store,"cs_d5_started",False) or getattr(store,"cs_d6_started",False)):
             return
         # Prefer the frame in the save; the remembered room may predate this fix.

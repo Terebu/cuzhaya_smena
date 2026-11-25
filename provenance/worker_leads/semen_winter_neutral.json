@@ -1,0 +1,37 @@
+{
+  "character": "semen",
+  "outfit": "winter",
+  "emotion": "neutral",
+  "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-6791929a-03e8-4572-bd32-a14dba6fd02e.png",
+  "reference": [
+    "/workspace/scratch/5abe4a03ed6c/work/v2/references/semen.png"
+  ],
+  "prompt": "Use case: identity-preserve redressing. Edit this exact existing MOD sprite of SEMYON into his WINTER street outfit. Keep exact original face identity, brown eyes, brown side-parted spiky hair, original masculine young adult proportions and lineart/cel-style. Keep EXACT standing neutral pose, head angle, arms relaxed at sides, hands and fingers/feet positions. Change ONLY clothing: ordinary black quilted winter jacket, gray scarf, dark blue full-length jeans, closed plain dark lace-up winter boots. No pioneer neckerchief, no badges, no shorts, no exposed legs, no new accessories. Expression calmly neutral with relaxed closed mouth, no big grin. One full-body head-to-toes figure, all hair and both soles completely visible, same scale/frame, safe transparent margins. True transparent alpha, portrait9:16 high resolution1080x1920 or2160x3840. Faithful mod character sprite, preserve same face, no new generic anime male, no painterly redesign. No scenery, ground shadow, grid, extra people or text.",
+  "native_size": [
+    941,
+    1672
+  ],
+  "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/semen/winter/neutral.png",
+  "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/semen_winter_neutral.png",
+  "size": [
+    1080,
+    1920
+  ],
+  "alpha_extrema": [
+    0,
+    255
+  ],
+  "export_method": "single full-frame image uniformly projected into 1080x1920 using fixed neutral-pose bounding box/scale/baseline1840 for every emotion; no atlas extraction",
+  "pose": "one fixed pose",
+  "export_anchor_bbox": [
+    236,
+    5,
+    713,
+    1659
+  ],
+  "export_position": [
+    35,
+    75
+  ],
+  "export_scale": 1.064087061668682
+}

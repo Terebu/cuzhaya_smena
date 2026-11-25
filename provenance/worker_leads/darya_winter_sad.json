@@ -1,0 +1,37 @@
+{
+  "character": "darya",
+  "outfit": "winter",
+  "emotion": "sad",
+  "generated_path": "/workspace/scratch/5abe4a03ed6c/generated_images/exec-e0c0cfc3-6c0c-4ffb-a984-785f91ebf381.png",
+  "reference": [
+    "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/darya_winter_neutral.png"
+  ],
+  "prompt": "Use case: identity-preserve. Edit target is the supplied Darya WINTER NEUTRAL full-body transparent sprite. Make ONLY the facial expression quiet sadness, inner brows gently raised and closed mouth subtly downturned, no tears. This is an expression layer variation for a Ren'Py visual novel: the head angle, face identity, green eye colour, red hair strand placement, outer silhouette, exact body pose, crossed forearms and fingers, black jacket, white blouse, belt, black trousers, chunky black boots and every object must stay in the SAME positions and same scale as input. Do not redraw the body, do not move feet, hands, hips or hair, do not change clothing folds. The ONLY change is eyes/eyebrows/mouth/cheeks of her face. Keep original art and lighting. One character full-length visible including all hair and both soles, same transparent margin. High-resolution portrait9:16 1080x1920 or2160x3840, real transparent alpha. No text, no grid, no scenery or ground shadow.",
+  "native_size": [
+    941,
+    1671
+  ],
+  "path": "/workspace/scratch/5abe4a03ed6c/output/Art_v2/sprites/darya/winter/sad.png",
+  "native_path": "/workspace/scratch/5abe4a03ed6c/work/v2/worker_leads/native/darya_winter_sad.png",
+  "size": [
+    1080,
+    1920
+  ],
+  "alpha_extrema": [
+    0,
+    255
+  ],
+  "export_method": "single full-frame image uniformly projected into 1080x1920 using fixed neutral-pose bounding box/scale/baseline1840 for every emotion; no atlas extraction",
+  "pose": "one fixed pose",
+  "export_anchor_bbox": [
+    279,
+    11,
+    706,
+    1659
+  ],
+  "export_position": [
+    14,
+    68
+  ],
+  "export_scale": 1.0679611650485437
+}

@@ -2,45 +2,51 @@
   "winter": [
     {
       "number": 1,
-      "path": "mods/chuzaya_smena/sp/winter/1.png",
+      "path": "sp/darya/winter/neutral.png",
       "size": [
         941,
         1672
       ],
       "bbox": [
-        33,
-        0,
-        901,
-        1672
-      ]
+        286,
+        62,
+        673,
+        1608
+      ],
+      "sha256": "9a1b28237ac9d372de3f4677d61717af65f22a1212c685da7b0fe2aaba38b7dd",
+      "original_name": "Изображение ChatGPT 23 нояб. 2026 г., 11_34_59-12.png"
     },
     {
       "number": 2,
-      "path": "mods/chuzaya_smena/sp/winter/2.png",
+      "path": "sp/darya/winter/soft_smile.png",
       "size": [
         941,
         1672
       ],
       "bbox": [
-        0,
-        0,
-        917,
-        1672
-      ]
+        286,
+        62,
+        673,
+        1608
+      ],
+      "sha256": "68fbab6ec1ffaf2927ff9ae0f0b53e3e2dd96d5ca8b74307c33c5e9789ba52ed",
+      "original_name": "Изображение ChatGPT 23 нояб. 2026 г., 11_34_56-8.png"
     },
     {
       "number": 3,
-      "path": "mods/chuzaya_smena/sp/winter/3.png",
+      "path": "sp/darya/winter/surprised.png",
       "size": [
         941,
         1672
       ],
       "bbox": [
-        50,
-        0,
-        931,
-        1672
-      ]
+        286,
+        62,
+        673,
+        1608
+      ],
+      "sha256": "51b5b0ae419a37dbeb325f5e041f86c568ef1a583af014c82e52f1d1d5f1363c",
+      "original_name": "Изображение ChatGPT 23 нояб. 2026 г., 11_34_56-9.png"
     },
     {
       "number": 4,
@@ -59,171 +65,171 @@
     {
       "number": 5,
       "pose": "neutral_alt",
-      "path": "mods/chuzaya_smena/sp/winter/darya_winter_neutral_alt.png",
-      "original_name": "Изображение ChatGPT 11 окт. 2026 г., 15_04_08-1.png",
-      "sha256": "1174a13c46a898bcf191c2fddd88927808d887ba4acfad2dce45b3129c22155e",
+      "path": "sp/darya/winter/neutral.png",
+      "original_name": "Изображение ChatGPT 23 нояб. 2026 г., 11_34_59-12.png",
+      "sha256": "9a1b28237ac9d372de3f4677d61717af65f22a1212c685da7b0fe2aaba38b7dd",
       "size": [
         941,
         1672
       ],
       "bbox": [
-        0,
-        0,
-        925,
-        1672
+        286,
+        62,
+        673,
+        1608
       ]
     },
     {
       "number": 6,
       "pose": "wave",
-      "path": "mods/chuzaya_smena/sp/winter/darya_winter_wave.png",
-      "original_name": "Изображение ChatGPT 11 окт. 2026 г., 15_04_08-2.png",
-      "sha256": "38a7dca99f71b75c684d673ea51c535f873c8353b73fa3b4797a1fc89c57e2e5",
+      "path": "sp/darya/winter/soft_smile.png",
+      "original_name": "Изображение ChatGPT 23 нояб. 2026 г., 11_34_56-8.png",
+      "sha256": "68fbab6ec1ffaf2927ff9ae0f0b53e3e2dd96d5ca8b74307c33c5e9789ba52ed",
       "size": [
         941,
         1672
       ],
       "bbox": [
-        82,
-        0,
-        923,
-        1656
+        286,
+        62,
+        673,
+        1608
       ]
     },
     {
       "number": 7,
       "pose": "arms_crossed",
-      "path": "mods/chuzaya_smena/sp/winter/darya_winter_arms_crossed.png",
-      "original_name": "Изображение ChatGPT 11 окт. 2026 г., 15_04_09-3.png",
-      "sha256": "0db73a6ead3f841cbdfda910e213830a7879459bc9daea29861fa6ad0875da21",
+      "path": "sp/darya/winter/angry.png",
+      "original_name": "Изображение ChatGPT 23 нояб. 2026 г., 11_34_58-11.png",
+      "sha256": "6824c332a40932ad66ccfdff8a86811f55ab8389afa848ee875114f564a54d78",
       "size": [
         941,
         1672
       ],
       "bbox": [
-        0,
-        0,
-        925,
-        1672
+        286,
+        62,
+        673,
+        1608
       ]
     },
     {
       "number": 8,
       "pose": "shy",
-      "path": "mods/chuzaya_smena/sp/winter/darya_winter_shy.png",
-      "original_name": "Изображение ChatGPT 11 окт. 2026 г., 15_04_10-4.png",
-      "sha256": "eeefc841b4a403f2f26c8dd79ccf8108ba4a8d4cb39fdb240a11ee7518d4b4cd",
+      "path": "sp/darya/winter/sad.png",
+      "original_name": "Изображение ChatGPT 23 нояб. 2026 г., 11_34_55-7.png",
+      "sha256": "decbe758a8daf38a953b17b926f8fa16653faa218bee3744630990abaac7cb45",
       "size": [
         941,
         1672
       ],
       "bbox": [
-        58,
-        0,
-        919,
-        1672
+        286,
+        62,
+        673,
+        1608
       ]
     },
     {
       "number": 9,
       "pose": "explaining",
-      "path": "mods/chuzaya_smena/sp/winter/darya_winter_explaining.png",
-      "original_name": "Изображение ChatGPT 11 окт. 2026 г., 15_04_11-5.png",
-      "sha256": "0cced4f232be076b40c7455b3f071dd1f8a573ea86cb4b63c7291a5ddd0ec2f9",
+      "path": "sp/darya/winter/surprised.png",
+      "original_name": "Изображение ChatGPT 23 нояб. 2026 г., 11_34_56-9.png",
+      "sha256": "51b5b0ae419a37dbeb325f5e041f86c568ef1a583af014c82e52f1d1d5f1363c",
       "size": [
         941,
         1672
       ],
       "bbox": [
-        33,
-        0,
-        886,
-        1672
+        286,
+        62,
+        673,
+        1608
       ]
     },
     {
       "number": 10,
       "pose": "thinking",
-      "path": "mods/chuzaya_smena/sp/winter/darya_winter_thinking.png",
-      "original_name": "Изображение ChatGPT 11 окт. 2026 г., 15_04_12-6.png",
-      "sha256": "7f216430d3c530fe47207fd0ba9ebfaad42c9a246f167bcf306bc8a123bb8d43",
+      "path": "sp/darya/winter/thoughtful.png",
+      "original_name": "Изображение ChatGPT 23 нояб. 2026 г., 11_34_57-10.png",
+      "sha256": "c78b425cf808bd9c12551735a65b89661fd3b2dc097e721a81a0815208252da8",
       "size": [
         941,
         1672
       ],
       "bbox": [
-        33,
-        0,
-        909,
-        1659
+        286,
+        62,
+        673,
+        1608
       ]
     },
     {
       "number": 11,
       "pose": "shrug",
-      "path": "mods/chuzaya_smena/sp/winter/darya_winter_shrug.png",
-      "original_name": "Изображение ChatGPT 11 окт. 2026 г., 15_04_13-7.png",
-      "sha256": "7ec41f55d8106889e68e6d77a6c500c44b07a1d1031aa766411d490596bff51a",
+      "path": "sp/darya/winter/thoughtful.png",
+      "original_name": "Изображение ChatGPT 23 нояб. 2026 г., 11_34_57-10.png",
+      "sha256": "c78b425cf808bd9c12551735a65b89661fd3b2dc097e721a81a0815208252da8",
       "size": [
         941,
         1672
       ],
       "bbox": [
-        56,
-        0,
-        919,
-        1672
+        286,
+        62,
+        673,
+        1608
       ]
     },
     {
       "number": 12,
       "pose": "hands_on_hips",
-      "path": "mods/chuzaya_smena/sp/winter/darya_winter_hands_on_hips.png",
-      "original_name": "Изображение ChatGPT 11 окт. 2026 г., 15_04_14-8.png",
-      "sha256": "ecc5f03cabc1a033b76de2a35160851232f9a023077fefb272a2c6b54ed79cf4",
+      "path": "sp/darya/winter/angry.png",
+      "original_name": "Изображение ChatGPT 23 нояб. 2026 г., 11_34_58-11.png",
+      "sha256": "6824c332a40932ad66ccfdff8a86811f55ab8389afa848ee875114f564a54d78",
       "size": [
         941,
         1672
       ],
       "bbox": [
-        29,
-        0,
-        927,
-        1672
+        286,
+        62,
+        673,
+        1608
       ]
     },
     {
       "number": 13,
       "pose": "worried",
-      "path": "mods/chuzaya_smena/sp/winter/darya_winter_worried.png",
-      "original_name": "Изображение ChatGPT 11 окт. 2026 г., 15_04_15-9.png",
-      "sha256": "4ac64cec8abfaebb8af374c4ce14adeebbab9f7063af558b2444dee7e7dd0bcf",
+      "path": "sp/darya/winter/sad.png",
+      "original_name": "Изображение ChatGPT 23 нояб. 2026 г., 11_34_55-7.png",
+      "sha256": "decbe758a8daf38a953b17b926f8fa16653faa218bee3744630990abaac7cb45",
       "size": [
         941,
         1672
       ],
       "bbox": [
-        50,
-        0,
-        905,
-        1672
+        286,
+        62,
+        673,
+        1608
       ]
     },
     {
       "number": 14,
       "pose": "walking",
-      "path": "mods/chuzaya_smena/sp/winter/darya_winter_walking.png",
-      "original_name": "Изображение ChatGPT 11 окт. 2026 г., 15_04_16-10.png",
-      "sha256": "8badba1428776b8a40d11918ba0a85a9b711a8413d12151a79d379b2ee7ad3e0",
+      "path": "sp/darya/winter/neutral.png",
+      "original_name": "Изображение ChatGPT 23 нояб. 2026 г., 11_34_59-12.png",
+      "sha256": "9a1b28237ac9d372de3f4677d61717af65f22a1212c685da7b0fe2aaba38b7dd",
       "size": [
         941,
         1672
       ],
       "bbox": [
-        0,
-        5,
-        909,
-        1672
+        286,
+        62,
+        673,
+        1608
       ]
     }
   ],
